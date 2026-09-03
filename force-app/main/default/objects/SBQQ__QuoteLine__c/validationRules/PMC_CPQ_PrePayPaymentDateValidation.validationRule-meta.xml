@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_PrePayPaymentDateValidation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c )),
+    AND(
+            $Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+            $Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+            ISPICKVAL($User.LocaleSidKey, &apos;pt_BR&apos;)
+    ),
+    AND(
+        NOT(ISBLANK(PMC_CPQ_PaymentDate__c)),
+        OR(
+                WEEKDAY(PMC_CPQ_PaymentDate__c) = 1,
+                WEEKDAY(PMC_CPQ_PaymentDate__c) = 7
+        )
+    )
+    
+)</errorConditionFormula>
+    <errorMessage>Please ensure that the Payment Date falls on a business day</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_TotalQuoteValue__c</fullName>
+    <description>This field is used to populate the Total Quote value for the Quote</description>
+    <inlineHelpText>Sum of Quote line</inlineHelpText>
+    <label>Total Quote Value</label>
+    <summarizedField>SBQQ__QuoteLine__c.PMC_CPQ_LineTotalPrice__c</summarizedField>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

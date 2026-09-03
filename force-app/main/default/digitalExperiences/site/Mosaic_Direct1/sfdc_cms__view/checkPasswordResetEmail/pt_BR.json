@@ -1,0 +1,22 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Check Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "checkEmailMessage" : "Verifique a conta de e-mail associada ao seu nome de usuário para obter o link para redefinir sua senha. Se você não recebeu um e-mail, verifique sua pasta de Spam. Ou entre em contato com seu administrador.",
+          "returnButtonLabel" : "Volte ao login",
+          "titleLabel" : "Agora cheque seu email"
+        },
+        "id" : "352a5747-ef7d-493e-832c-847a83ab4dad"
+      }, {
+        "attributes" : {
+          "pageTitle" : "Verifique a senha"
+        },
+        "id" : "7aa3b122-7680-4945-aa54-48c31c0463a7"
+      } ]
+    }
+  },
+  "urlName" : "change-password"
+}

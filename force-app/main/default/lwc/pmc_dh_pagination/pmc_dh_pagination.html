@@ -1,0 +1,49 @@
+<template>
+  <template if:true={showPagination}>
+    <template if:true={_genericData}>
+      <lightning-layout-item size="12">
+        <div class={themeClass}>
+          <div class="slds-align_absolute-center pagination-list slds-m-bottom_medium">
+            <ul class="slds-list_horizontal slds-has-inline-block-links_space">
+              <li class="navigation-list-item">
+                <a class="paginationlink label-text prev-link" onclick={onPrev}>
+                  <lightning-icon icon-name="utility:chevronleft" size="x-small"
+                    alternative-text={labels.pmc_pagination_previous} title="chevronright"
+                    class="chevron-container-left"></lightning-icon>
+                </a>
+              </li>
+              <template for:each={paginationProps.pageListFirst} for:item="pageNumber" for:index="index">
+                <li key={index.index}>
+                  <a class="paginationlink" data-id={pageNumber} onclick={displayPageDetails}>{pageNumber} </a>
+                </li>
+              </template>
+              <template if:true={paginationProps.showFirstDot}>
+                <li><a class="paginationlink dots-text">. . .</a></li>
+              </template>
+              <template for:each={paginationProps.pageListToShow} for:item="pageNumber" for:index="index">
+                <li key={index.index}>
+                  <a class="paginationlink" data-id={pageNumber} onclick={displayPageDetails}>{pageNumber} </a>
+                </li>
+              </template>
+              <template if:true={paginationProps.showNextDot}>
+                <li><a class="paginationlink dots-text">. . .</a></li>
+              </template>
+              <template for:each={paginationProps.pageListLast} for:item="pageNumber" for:index="index">
+                <li key={index.index}>
+                  <a class="paginationlink" data-id={pageNumber} onclick={displayPageDetails}>{pageNumber}</a>
+                </li>
+              </template>
+              <li class="navigation-list-item">
+                <a class="paginationlink label-text next-link" onclick={onNext}>
+                  <lightning-icon icon-name="utility:chevronright" size="x-small"
+                    alternative-text={labels.pmc_pagination_next} title="chevronright"
+                    class="chevron-container-right"></lightning-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </lightning-layout-item>
+    </template>
+  </template>
+</template>

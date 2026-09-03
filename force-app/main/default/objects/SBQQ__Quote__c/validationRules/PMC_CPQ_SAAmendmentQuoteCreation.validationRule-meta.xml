@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SAAmendmentQuoteCreation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+$UserRole.DeveloperName &lt;&gt; &quot;PMC_SS_SASalesServiceRepresentativeSSR&quot;,
+ISPICKVAL( PMC_CPQ_Region__c , &apos;Brazil&apos;),
+Text(SBQQ__Type__c) = &quot;Amendment&quot;,
+ISNEW()
+)</errorConditionFormula>
+    <errorMessage>Insufficient privilege to create Amendment Quotes. Only SSA is allowed to perform amendments.</errorMessage>
+</ValidationRule>

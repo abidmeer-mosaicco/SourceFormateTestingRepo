@@ -1,0 +1,63 @@
+.price-summary-header {
+  padding: 8px;
+}
+
+.price-summary-details,
+.price-summary-total {
+  border-top: 1px solid #d4dfde;
+  padding: 8px;
+}
+
+.price-summary-header div,
+.price-summary-total div {
+  font-family: 'Barlow-Medium';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #093532;
+  padding: 8px;
+}
+
+.price-summary div {
+  color: #093532;
+  font-size: 16px;
+  line-height: 19.2px;
+  padding: 8px;
+}
+
+.legal-message {
+  display: flex;
+  align-items: baseline;
+  padding: 0px 16px;
+  background-color: transparent;
+  padding-bottom: 16px;
+  font-size: var(--x-small-font-size);
+  line-height: 14px;
+}
+
+.error-msg {
+  display: flex;
+  align-items: baseline;
+  padding: 0px 16px;
+  background-color: transparent;
+  padding-bottom: 16px;
+  font-size: var(--x-small-font-size);
+  line-height: 14px;
+}
+
+@media (max-width: 767px) {
+  .price-summary div {
+    font-size: 14px;
+    line-height: 16.8px;
+    word-wrap: break-word;
+  }
+
+  .price-summary-header div,
+  .price-summary-total div {
+    font-family: 'Barlow-Semibold';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #093532;
+  }
+}

@@ -1,0 +1,387 @@
+<template>
+  <template if:true={pageLoaded}>
+    <div class="scrollable-container" tabindex="0">
+      <div class="scrollable-content">
+        <div class="slds-grid slds-gutters slds-wrap slds-m-top_large order-review-section">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-p-around_none">
+            <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-size_1-of-1">
+                <div class="custom-card product-info-card">
+                  <div class="card-header">
+                    {labels.pmc_requestForQuote_productsInformation}
+                  </div>
+                  <div class="card-body">
+                    <template for:each={_shipmentInfoObj} for:item="ship" for:index="indexProduct">
+                      <div key={ship.strProductId} class="slds-p-around_medium slds-p-top_medium product-section">
+                        <div class="slds-grid slds-wrap">
+                          <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-p-left_none content-info">
+                            <div class="product-col">
+                              <div class="product-image slds-m-right_medium">
+                                <a href={ship.href} target="_self">
+                                  <img src={ship.strImgSrc} alt={ship.strProductName} onerror={handleImageError} />
+                                </a>
+                              </div>
+                              <div class="product-info">
+                                <div class="slds-m-bottom_xx-small product-name">
+                                  <a href={ship.href} target="_self">
+                                    {ship.strProductName}
+                                  </a>
+                                </div>
+                                <div>{ship.strSku}</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="slds-col slds-size_1-of-1 slds-medium-size_7-of-12 slds-p-left_none item-section">
+                            <div class="slds-grid slds-wrap">
+                              <template if:true={isLocationBrazil}>
+                                <div
+                                  class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-p-left_none item-header">
+                                  <div class="lbl-field-name">
+                                    {labels.pmc_contractDetails_itemNumber}
+                                  </div>
+                                  <div class="lbl-field-value">
+                                    {ship.strItemNumber}
+                                  </div>
+                                </div>
+                              </template>
+                              <div
+                                class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-p-left_none item-header">
+                                <div class="lbl-field-name">
+                                  {labels.pmc_quoteHistory_totalQty}
+                                </div>
+                                <div class="lbl-field-value">
+                                  {ship.intSelectedQuantity}
+                                </div>
+                              </div>
+                              <template if:true={isContractTypeFPD}>
+                                <div
+                                  class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-left_none item-header">
+                                  <template lwc:if={ship.isCallPriceButton}>
+                                    <div class="mobile-button btn-style">
+                                      <lightning-button variant="brand" label={labels.pmc_fpd_callPrice}
+                                        onclick={openCallPriceModalHandler} data-product-index={indexProduct}
+                                        data-product-sku={ship.strSku}>
+                                      </lightning-button>
+                                    </div>
+                                  </template>
+                                  <template lwc:if={ship.isCancelCalledPriceButton}>
+                                    <div class="mobile-button btn-style">
+                                      <lightning-button label={labels.pmc_orderReview_cancelCalledPrice}
+                                        onclick={openCancelCalledPriceModalHandler} data-product-index={indexProduct}
+                                        data-product-sku={ship.strSku}>
+                                      </lightning-button>
+                                    </div>
+                                  </template>
+                                </div>
+                              </template>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="scrollable-wrapper-table" tabindex="0">
+                          <table class="slds-table slds-no-row-hover slds-m-vertical_medium">
+                            <thead>
+                              <tr class="slds-line-height_reset">
+                                <th scope="col">
+                                  <div title={labels.pmc_requestToDeliver_qty}>
+                                    {labels.pmc_requestToDeliver_qty}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                    {labels.pmc_quoteCheckoutFlow_shipTo}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                    {labels.pmc_quoteCheckoutFlow_incoterms}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                    {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestToDeliver_expectedShipmentDate}>
+                                    {labels.pmc_requestToDeliver_expectedShipmentDate}
+                                  </div>
+                                </th>
+                                <template if:true={isLocationBrazil}>
+                                  <th scope="col">
+                                    <div title={labels.pmc_requestForQuote_packType}>
+                                      {labels.pmc_requestForQuote_packType}
+                                    </div>
+                                  </th>
+                                  <template if:true={ship.boolThirdParty}>
+                                    <th scope="col">
+                                      <div title={labels.pmc_requestForQuote_packagingType}>
+                                        {labels.pmc_requestForQuote_packagingType}
+                                      </div>
+                                    </th>
+                                    <th scope="col">
+                                      <div title={labels.pmc_requestToDeliverShippingInformation_sellOutPrice}>
+                                        {labels.pmc_requestToDeliverShippingInformation_sellOutPrice}
+                                      </div>
+                                    </th>
+                                    <th scope="col">
+                                      <div title={labels.pmc_requestToDeliver_notaFiscal}>
+                                        {labels.pmc_requestToDeliver_notaFiscal}</div>
+                                    </th>
+                                    <th scope="col">
+                                      <div title={labels.pmc_requestToDeliverShippingInformation_notaFiscalBillingDate}>
+                                        {labels.pmc_requestToDeliverShippingInformation_notaFiscalBillingDate}</div>
+                                    </th>
+                                  </template>
+                                </template>
+                                <template if:true={isContractTypeFPD}>
+                                  <th scope="col">
+                                    <div title={labels.pmc_orderReview_calledPrice}
+                                      class="slds-grid slds-grid_vertical-align-center slds-is-relative">
+                                      {labels.pmc_orderReview_calledPrice}
+                                      <lightning-icon size="xx-small"
+                                        class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default slds-p-left--xx-small"
+                                        icon-name="utility:info" onmouseenter={handleMouseEnter}
+                                        onmouseleave={handleMouseLeave} data-product-index={indexProduct}>
+                                      </lightning-icon>
+                                      <template if:true={ship.isMouseOver}>
+                                        <div
+                                          class="slds-popover slds-popover_tooltip slds-nubbin_top-right slds-slide-from-top-to-bottom btn-tooltip"
+                                          role="tooltip" id="help">
+                                          <div class="slds-popover__body tooltip-text">
+                                            {labels.pmc_orderReview_tooltipMsg}
+                                          </div>
+                                        </div>
+                                      </template>
+                                    </div>
+                                  </th>
+                                </template>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <template for:each={ship.lstCartItems} for:item="product">
+                                <tr key={product.strCartItemId}>
+                                  <td scope="row" class="numeric-info">
+                                    {product.intQuantity}
+                                  </td>
+                                  <td scope="row">{product.strShipTo}</td>
+                                  <td scope="row">{product.strIncoterms}</td>
+                                  <td scope="row">{product.strDeliveryMode}</td>
+                                  <template if:false={product.boolShipmentPlan}>
+                                    <td scope="row">
+                                      <p>
+                                        {product.datRequestedShipmentDate} -
+                                        {product.intQuantity}
+                                        {labels.pmc_quoteCheckoutFlow_tons}
+                                      </p>
+                                    </td>
+                                  </template>
+                                  <template if:true={product.boolShipmentPlan}>
+                                    <td scope="row">
+                                      <template for:each={product.lstShipmentPlan} for:item="date">
+                                        <p key={date.strCartItemId}>
+                                          {date.datRequestedShipmentDate} -
+                                          {date.intQuantity}
+                                          {labels.pmc_quoteCheckoutFlow_tons}
+                                        </p>
+                                      </template>
+                                    </td>
+                                  </template>
+                                  <template if:true={isLocationBrazil}>
+                                    <td scope="row">
+                                      {product.strPackType}
+                                    </td>
+                                    <template if:true={ship.boolThirdParty}>
+                                      <td scope="row">
+                                        {product.strPackageType}
+                                      </td>
+                                      <td scope="row" class="numeric-info">
+                                        {currencyCode}{product.decSellOutPrice}
+                                      </td>
+                                      <td scope="row" class="numeric-info">
+                                        {product.intFiscalNumber}
+                                      </td>
+                                      <td scope="row" class="numeric-info">
+                                        {product.datNotaFiscalDate}
+                                      </td>
+                                    </template>
+                                  </template>
+                                  <template if:true={isContractTypeFPD}>
+                                    <template lwc:if={ship.isCallPriceButton}>
+                                      <td scope="row">-</td>
+                                    </template>
+                                    <template lwc:if={ship.isCancelCalledPriceButton}>
+                                      <td scope="row">{labels.pmc_orderReview_priceRequested}</td>
+                                    </template>
+                                  </template>
+                                </tr>
+                                <!--<template if:true={ship.boolThirdParty}>-->
+                                  <template if:true={product.strDeliveryInstructions}>
+                                    <tr key={product.strCartItemId} style="border-top: none">
+                                      <td colspan={columnCount} class="slds-p-top_none">
+                                        <span
+                                          class="del-instructions">{labels.pmc_requestToDeliverShippingInformation_deliveryInstructions}</span>:&nbsp;{product.strDeliveryInstructions}
+                                      </td>
+                                    </tr>
+                                  </template>
+                                <!--</template>-->
+                              </template>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_none">
+            <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+              <div class="custom-card quote-origin-card">
+                <div class="card-header">
+                  {labels.pmc_requestToDeliver_contractInformation}
+                </div>
+                <div class="card-body">
+                  <template for:each={contractInfo} for:item="contract">
+                    <div key={contract.strPoNumber} class="slds-grid slds-wrap">
+                      <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_requestToDeliver_contractNumber}
+                        </div>
+                        <div class="lbl-field-value">
+                          {contract.strContractNumber}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_contractDetails_poNumber}
+                        </div>
+                        <div class="lbl-field-value">
+                          {contract.strPoNumber}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_contractDetails_validityPeriod}
+                        </div>
+                        <div class="lbl-field-value validity">
+                          {contract.validityPeriod}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_contractDetails_contractType}
+                        </div>
+                        <div class="lbl-field-value">
+                          {contract.strContractType}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                        </div>
+                        <div class="lbl-field-value">
+                          {contract.strPaymentTermSelected}
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+              <c-pmc_dh_price-summary-section price-summary-data={priceSummaryData}>
+              </c-pmc_dh_price-summary-section>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+              <div class="note-message">
+                <lightning-icon size="xx-small"
+                  class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+                  icon-name="utility:info">
+                </lightning-icon>
+                <div class="slds-m-left_x-small">
+                  <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_requestForQuote_legalInfo}>
+                  </lightning-formatted-rich-text>
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-grid slds-wrap slds-gutters action-items">
+              <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 back-btn slds-m-bottom_medium">
+                <button class="slds-button slds-button_neutral slds-button_stretch" onclick={goBack}>
+                  {labels.pmc_quoteCheckoutFlow_back}
+                </button>
+              </div>
+              <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 submit-btn slds-m-bottom_medium">
+                <button class="slds-button slds-button_brand slds-button_stretch" onclick={submitOrderHandler}>
+                  {labels.pmc_requestToDeliver_submitOrder}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <c-pmc_dh_custom-modal open-modal={isCallPriceModal} modal-heading={labels.pmc_fpd_callPrice} modal-width="578px"
+      onclosemodalevent={handleCloseCallPriceModal}>
+      <div class="call-price-modal-wrapper">
+        <div class="modal-message slds-m-bottom_small modal-msg-dark">
+          {labels.pmc_orderReview_calledPriceModalText1}
+        </div>
+
+        <div class="modal-message slds-m-bottom_small modal-msg-light">
+          {labels.pmc_orderReview_calledPriceModalText2}
+        </div>
+
+        <div class="modal-message slds-m-bottom_small modal-msg-dark">
+          {labels.pmc_orderReview_calledPriceModalText3}
+        </div>
+
+        <div class="button-section">
+          <div class="mobile-button slds-m-around--none">
+            <lightning-button variant="neutral" label={labels.pmc_orderReview_noCallPriceBtn}
+              title={labels.pmc_orderReview_noCallPriceBtn} onclick={handleCloseCallPriceModal}>
+            </lightning-button>
+          </div>
+          <div class="mobile-button slds-m-around--none">
+            <lightning-button variant="brand" label={labels.pmc_orderReview_yesCallPriceBtn}
+              title={labels.pmc_orderReview_yesCallPriceBtn} onclick={callPriceNowHandler}>
+            </lightning-button>
+          </div>
+        </div>
+      </div>
+    </c-pmc_dh_custom-modal>
+
+    <c-pmc_dh_custom-modal open-modal={isCancelCalledPriceModal}
+      modal-heading={labels.pmc_orderReview_cancelCalledPrice} modal-width="450px"
+      onclosemodalevent={handleCloseCancelCalledPriceModal}>
+      <div class="cancel-call-price-modal-wrapper">
+        <div class="modal-message slds-m-bottom_small modal-msg-dark">
+          {labels.pmc_orderReview_cancelCalledPriceModalText}
+        </div>
+        <div class="button-section">
+          <div class="mobile-button slds-m-around--none">
+            <lightning-button variant="neutral" label={labels.pmc_deleteAddress_no} title={labels.pmc_deleteAddress_no}
+              onclick={handleCloseCancelCalledPriceModal}>
+            </lightning-button>
+          </div>
+          <div class="mobile-button slds-m-around--none">
+            <lightning-button variant="brand" label={labels.pmc_orderReview_cancelCalledPriceBtn}
+              title={labels.pmc_orderReview_cancelCalledPriceBtn} onclick={cancelCalledPriceNowHandler}>
+            </lightning-button>
+          </div>
+        </div>
+      </div>
+    </c-pmc_dh_custom-modal>
+
+  </template>
+
+  <template if:false={pageLoaded}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

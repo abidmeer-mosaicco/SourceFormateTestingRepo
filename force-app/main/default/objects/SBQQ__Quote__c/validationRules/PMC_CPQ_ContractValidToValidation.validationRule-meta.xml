@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ContractValidToValidation</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+  NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+  NOT(ISBLANK(PMC_CPQ_ContractStart__c)),
+  NOT(ISBLANK(PMC_CPQ_ContractEnd__c)),
+  (PMC_CPQ_ContractEnd__c - PMC_CPQ_ContractStart__c) &gt; 547
+)</errorConditionFormula>
+    <errorMessage>The Contract Valid To date should not be more than 1 year and 6 months from the created date of the quote</errorMessage>
+</ValidationRule>

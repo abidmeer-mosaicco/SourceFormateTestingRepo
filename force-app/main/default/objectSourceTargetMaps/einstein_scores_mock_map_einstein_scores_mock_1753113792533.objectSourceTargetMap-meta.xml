@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>UploadedFiles</sourceFormula>
+        <targetField>einstein_scores_mock__dll.DataSource__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&apos;einstein_scores_mock.csv&apos;</sourceFormula>
+        <targetField>einstein_scores_mock__dll.DataSourceObject__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>einstein_scores_mock.Confidence__c</sourceField>
+        <sourceFormula>Confidence</sourceFormula>
+        <targetField>einstein_scores_mock__dll.Confidence__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>einstein_scores_mock.LastUpdated__c</sourceField>
+        <sourceFormula>LastUpdated</sourceFormula>
+        <targetField>einstein_scores_mock__dll.LastUpdated__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>einstein_scores_mock.ScoreType__c</sourceField>
+        <sourceFormula>ScoreType</sourceFormula>
+        <targetField>einstein_scores_mock__dll.ScoreType__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <targetField>einstein_scores_mock__dll.InternalOrganization__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>einstein_scores_mock.EmailAddress__c</sourceField>
+        <sourceFormula>EmailAddress</sourceFormula>
+        <targetField>einstein_scores_mock__dll.EmailAddress__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>einstein_scores_mock.Score__c</sourceField>
+        <sourceFormula>Score</sourceFormula>
+        <targetField>einstein_scores_mock__dll.Score__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>einstein_scores_mock_map_einstein_scores_mock_1753113792533</masterLabel>
+    <sourceObjectName>einstein_scores_mock</sourceObjectName>
+    <targetObjectName>einstein_scores_mock__dll</targetObjectName>
+</ObjectSourceTargetMap>

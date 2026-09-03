@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Created this record triggered (scheduled path) flow that waits for a minute after a change in the Contract Document Status to set the Contract Created checkbox to True, which then will act as a trigger for 061/062 interface callout.</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC CPQ AmendmentQuote Update Contract Created checkbox {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ AmendmentQuote Update Contract Created checkbox</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CreateErrorLog</name>
+        <label>Create Error Log</label>
+        <locationX>572</locationX>
+        <locationY>384</locationY>
+        <inputAssignments>
+            <field>PMC_ExternalId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <stringValue>PMC CPQ AmendmentQuote Update Contract Created checkbox</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Update the checkbox to true, during Amendments scenario</description>
+        <name>UpdateContractCreatedcheckbox</name>
+        <label>Update Contract Created checkbox</label>
+        <locationX>308</locationX>
+        <locationY>276</locationY>
+        <faultConnector>
+            <targetReference>CreateErrorLog</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_CLM_ContractCreated__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_CLM_ContractCreated__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND({!$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c} = FALSE, TEXT({!$Record.SBQQ__Type__c}) = &apos;Amendment&apos;, ISPICKVAL({!$Record.PMC_CPQ_ContractStageName__c}, &apos;Accepted&apos;), !ISNULL({!$Record.SBQQ__MasterContract__c}))</filterFormula>
+        <object>SBQQ__Quote__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>WaitForaMinutetoSettheContractCreatedFlag</name>
+            <connector>
+                <targetReference>UpdateContractCreatedcheckbox</targetReference>
+            </connector>
+            <label>Wait For a Minute to Set the Contract Created Flag</label>
+            <offsetNumber>3</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

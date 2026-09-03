@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ShipToAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to reference Shipping account.</description>
+    <inlineHelpText>Ship To Account for the order.</inlineHelpText>
+    <label>Ship To Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (Ship To Account)</relationshipLabel>
+    <relationshipName>Orders1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

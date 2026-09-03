@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defaults to 10 unless set here. Set the number to gradually lower than 10 if encountering an apex side issue on User lens load (e.g. CPU time limit exceeded). Controls how many objects are sent to apex per batch to retrieve fields. --></help>
+    <label><!-- WSW getFields --></label>
+    <name>sc_ext__WSW_getFields__c</name>
+</CustomFieldTranslation>

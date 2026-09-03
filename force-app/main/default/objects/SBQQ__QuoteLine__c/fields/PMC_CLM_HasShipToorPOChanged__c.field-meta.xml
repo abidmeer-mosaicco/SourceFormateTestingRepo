@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_HasShipToorPOChanged__c</fullName>
+    <description>This field will be used to indicate if the Ship To or Line PO Number fields of Quote Lines in an Amendment Quote has been changed from what they were in the Original Quote Lines</description>
+    <formula>IF(
+AND(
+TEXT(SBQQ__Quote__r.SBQQ__Type__c) = &apos;Amendment&apos;,
+OR(
+SBQQ__UpgradedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_LinePONumber__c  &lt;&gt; PMC_CPQ_LinePONumber__c,
+SBQQ__UpgradedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_ShipTo__c &lt;&gt; PMC_CPQ_ShipTo__c   
+)
+),
+true,
+false
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has Ship-To or PO Changed</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

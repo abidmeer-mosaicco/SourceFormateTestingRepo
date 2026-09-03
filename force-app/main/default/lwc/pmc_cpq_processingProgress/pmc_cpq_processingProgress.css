@@ -1,0 +1,31 @@
+.center-container {
+	/* Using utility classes in markup keeps this light; only custom sizing here */
+	min-height: 260px;
+}
+
+ul.progress-list {
+	list-style: none;
+}
+
+ul.progress-list li strong {
+	/* Slight right spacing */
+	margin-right: 4px;
+}
+
+.status-icon lightning-icon {
+	margin: 0 0.5rem;
+}
+
+.modal-width {
+	max-width: 520px;
+}
+
+.spinner-area {
+	height: 10rem;
+}
+
+.modal-bordered {
+	border: 1px solid #d4d4d4; /* Approximate SLDS container border */
+	border-radius: 0.25rem;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}

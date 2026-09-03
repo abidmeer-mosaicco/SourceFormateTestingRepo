@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Mesa de Partes --></label>
+        <name>Mesa_de_Partes</name>
+    </fieldSets>
+    <recordTypes>
+        <label><!-- Consulta --></label>
+        <name>Consulta</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Service --></label>
+        <name>CustomerService</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Case Geral</label>
+        <name>PMC_SS_CaseGeneral</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Product Master --></label>
+        <name>Product_Master</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Qualidade</label>
+        <name>Quality</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reclamo --></label>
+        <name>Reclamo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Solicitud --></label>
+        <name>Solicitud</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Transactions --></label>
+        <name>Transactions</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- At Fault Party is required to close out your case. --></errorMessage>
+        <name>AtFaultPartyRequiredForNotSouthAmerican</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cost Provision is mandatory when opening/creating the case --></errorMessage>
+        <name>Cost_Provision_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Location is required when At Fault Party is &apos;Plant / Operations&apos; or &apos;Warehouse&apos;. --></errorMessage>
+        <name>LocationRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Location is required to close out your case. --></errorMessage>
+        <name>LocationRequiredWhenStatusClosed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Solo los administradores pueden editar el tipo de caso o el estado. --></errorMessage>
+        <name>Miski_Mayo_External_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot modify the details of this case while it is pending approval. --></errorMessage>
+        <name>Non_Editable_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O usuário não pode atualizar o campo Status do caso.</errorMessage>
+        <name>PMC_DH_StatusNotEditable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não há gerente de contas para este caso. Adicione o gerente da conta para enviar o caso para aprovação</errorMessage>
+        <name>PMC_SS_AccountMangerCannotbeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Campo Aditivo aguardando assinatura do cliente precisa estar preenchido para fechar o case</errorMessage>
+        <name>PMC_SS_AmendmentWaitingForCustomer</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;O campo &quot;Contract Amendment Justification&quot; deve ser necessário para fechar o caso&quot;</errorMessage>
+        <name>PMC_SS_CheckAmendmentValuesOnCaseClosed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>As informações de contato no site não podem estar vazias</errorMessage>
+        <name>PMC_SS_ContactInfoOnSiteToCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Selecione o contato</errorMessage>
+        <name>PMC_SS_ContactMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O peso corrigido não pode estar vazio</errorMessage>
+        <name>PMC_SS_CorrectedWeightCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cost Center is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_CostCenterBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O custo por dia não pode estar vazio</errorMessage>
+        <name>PMC_SS_CostPerDayCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Credit Cost is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_CreditCostBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Você só pode preencher um deles, Local de destino atual ou Destino atual para envio&quot;</errorMessage>
+        <name>PMC_SS_CurrentDestinationSelectOneValue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O cliente afetado não pode estar vazio</errorMessage>
+        <name>PMC_SS_CustomerImpactedCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Dias de sobrestadia não podem estar vazios</errorMessage>
+        <name>PMC_SS_DaysOfDemurrageCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Evidence Confirmed is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_EvidenceConfirmedBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A parte responsável é obrigatória para encerrar o caso</errorMessage>
+        <name>PMC_SS_FaultPartyCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Freight Cost is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_FreightCostBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O número da fatura não pode estar vazio</errorMessage>
+        <name>PMC_SS_InvoiceNumberCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A localização não pode ficar em branco</errorMessage>
+        <name>PMC_SS_LocationCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O modo de transporte não pode ficar em branco</errorMessage>
+        <name>PMC_SS_MOTCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não há membros da National Director Team para esta conta. Adicione os membros para enviar o caso para aprovação</errorMessage>
+        <name>PMC_SS_NationalDirectorCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Você só pode preencher um deles, Novo local de destino ou Novo destino enviado para&quot;</errorMessage>
+        <name>PMC_SS_NewDestinationSelectOneValue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Por favor, indique quantos contratos você cumpriu.</errorMessage>
+        <name>PMC_SS_NumberOfContractsServed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>As operações reportáveis não podem estar vazias</errorMessage>
+        <name>PMC_SS_OperationsReportableCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O número do pedido não pode estar vazio.</errorMessage>
+        <name>PMC_SS_OrderNumberCannotBeEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O número da fatura original não pode estar vazio</errorMessage>
+        <name>PMC_SS_OriginaInvoiceNumberCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O usuário recém-selecionado está fora do escritório. Selecione um usuário diferente.</errorMessage>
+        <name>PMC_SS_OwnerChange</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A causa pós-investigação não pode estar vazia</errorMessage>
+        <name>PMC_SS_PostInvestigationCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Post Investigation Quantity is required in order to Closed a Case. --></errorMessage>
+        <name>PMC_SS_PostInvestigationQuantityBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O número do produto é necessário ao fechar esse tipo de caso</errorMessage>
+        <name>PMC_SS_ProdNumCaseStatusValidationRule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O produto não pode estar vazio.</errorMessage>
+        <name>PMC_SS_ProductCannotBeEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Product Cost is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_ProductCostBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A localização do produto não pode estar vazia</errorMessage>
+        <name>PMC_SS_ProductLocationCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quality Committee’s Tech Analysis is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_QualityCommitTech_AnalysisBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O motivo de reabertura é necessário para reabrir um case.</errorMessage>
+        <name>PMC_SS_ReOpenReasonBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O número da fatura refaturada não pode estar vazio</errorMessage>
+        <name>PMC_SS_RebilleInvoiceNumberCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não há membros da equipe de diretores regionais para esta conta. Adicione os membros para enviar o caso para aprovação</errorMessage>
+        <name>PMC_SS_RegionalDirectorCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não há gerente regional para este caso. Adicione o gerente regional para enviar o caso para aprovação</errorMessage>
+        <name>PMC_SS_RegionalManagerCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Insira o número da fatura SAP</errorMessage>
+        <name>PMC_SS_SAPInvoicenumberCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the SAP Number before closing the Case --></errorMessage>
+        <name>PMC_SS_SAPNumberCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não há membros da equipe do Segment Manager para esta conta. Adicione os membros para enviar o caso para aprovação</errorMessage>
+        <name>PMC_SS_SegmentManagerCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A data de envio não pode estar vazia.</errorMessage>
+        <name>PMC_SS_ShipmentDateCannotBeEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Solution Given to Customer is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_SolutionGiventoCustomerBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O tipo de solução não pode estar vazio</errorMessage>
+        <name>PMC_SS_SolutionTypeCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Total Cost to Satisfy is required in order to close a Case. --></errorMessage>
+        <name>PMC_SS_TotalCosttoSatisfyBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A tonelagem total afetada não pode estar vazia</errorMessage>
+        <name>PMC_SS_TotalTonnageImpactedCannotBeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível reabrir um caso que não tenha sido encerrado.</errorMessage>
+        <name>PMC_SS_ValidateCaseStatusBeforeReOpen</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Preencha o número de cliente SAP antes de encerrar o caso.</errorMessage>
+        <name>PMC_SS_ValidateSAPNumberOnCaseClose</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A ID do veículo não pode estar vazia.</errorMessage>
+        <name>PMC_SS_VehicleIDCannotBeEmpty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Antes de fechar este caso, você deve enviar esta investigação para o Atendimento ao Cliente. Por favor, indique a data em que enviou a investigação para a equipe.</errorMessage>
+        <name>Require_Date_Investigation_For_Closed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Por favor indicar se a embalagem foi enviada para analise</errorMessage>
+        <name>Require_Packing_Sent_to_Analysis</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quality Status is required when changing Case Status. --></errorMessage>
+        <name>Require_QualityStatus_On_Status_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This picklist value is not available for users in South America. --></errorMessage>
+        <name>Restrict_Picklist_Values_By_Region</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sample Post Office Code field is required when Sample Available field is &quot;YES&quot; --></errorMessage>
+        <name>Sample_Post_Office_Code_is_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Vehicle ID is required to close your case. --></errorMessage>
+        <name>VehicleIdRequiredWhenStatusClosed</name>
+    </validationRules>
+    <webLinks>
+        <label>Gerar RoC</label>
+        <name>PMC_CLM_GenerateRoC</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Preview_Approval --></label>
+        <name>Preview_Approval</name>
+    </webLinks>
+</CustomObjectTranslation>

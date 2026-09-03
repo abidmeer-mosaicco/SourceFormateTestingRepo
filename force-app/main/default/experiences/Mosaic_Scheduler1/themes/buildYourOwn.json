@@ -1,0 +1,126 @@
+{
+  "activeBrandingSetId" : "fc015aba-2f75-48d7-a17e-6e20f107272b",
+  "customCSS" : ".cCenterPanel {\npadding: none !important;\nmargin: 0px;\n   \n}\n.siteforceStarterBody .cCenterPanel {\n    padding: none !important;\n\n}\n.siteforceStarterBody {\nbackground: white !important;\n    padding: none !important;\n\n}\n\n.siteforceContentArea{\n   padding: none !important;\n\n}\n\n.comm-content-header{\n padding: 0px !important;   \n}\n\n.comm-content-footer{\n padding: 0px !important;   \n}\n\n/* Forçar cor do botão Next */\n.slds-button_brand,\nbutton.slds-button.brand,\nbutton.slds-button.slds-button_brand {\n    background-color: #0070d2 !important; /* Azul padrão Salesforce */\n    color: #ffffff !important;            /* Texto branco */\n    border: none !important;\n}\n\n/* Opcional: hover */\n.slds-button_brand:hover,\nbutton.slds-button.brand:hover,\nbutton.slds-button.slds-button_brand:hover {\n    background-color: #005fb2 !important; /* Azul mais escuro no hover */\n    color: #ffffff !important;\n}\n\n.runtime_appointmentbookingResourceSlot:first-of-type {\n    font-size: 0 !important;  /* oculta só o primeiro texto */\n    border-bottom: none !important;\n}\n\n/* Aplica Salesforce Sans em toda a página */\nhtml, body, * {\n    font-family: \"Arial\", sans-serif !important;\n}\n\n.slds-text-heading_large[aria-label=\"Select Service Appointment Time\"] {\n    font-size: 0 !important; /* some com o texto original */\n}\n\n.slds-text-heading_large[aria-label=\"Select Service Appointment Time\"]::after {\n    content: \"Select a Time with a Mosaic Representative\";\n    font-size: 1.5rem;   /* volta ao tamanho original */\n    color: #000;         /* cor do texto */\n}\n\n.slds-radio input[type=\"radio\"]:checked + .slds-radio_faux,\n.slds-radio input[type=\"radio\"]:checked + .slds-radio_faux span {\n    background-color: #ffffff !important;\n    color: #000000 !important;\n}\n\n\n/* Esconde o texto original */\nh2.slds-text-heading_large.slds-text-align_center.slds-p-around_x-large {\n    font-size: 0 !important;   /* deixa o texto invisível */\n    border: none !important;   /* se tiver borda */\n}\n\n/* Insere o novo texto */\nh2.slds-text-heading_large.slds-text-align_center.slds-p-around_x-large::after {\n    content: \"Thanks for scheduling time with a Mosaic representative. Be on the lookout for the meeting invite in your email inbox\";\n    font-size: 1.25rem; /* ajusta o tamanho */\n    color: #000;        /* cor da fonte */\n}",
+  "developerName" : "starter",
+  "id" : "6a74e2df-728f-4873-b71b-72287954a392",
+  "label" : "Build Your Own",
+  "layouts" : {
+    "Inner" : "3388f8d1-4fd3-4de8-94f5-7199fa6d5320",
+    "Login" : "d94e9211-aa66-4f2b-bfa1-397abd1e43ab",
+    "ServiceNotAvailable" : "3a3c52f4-41e5-44dc-bd06-62dfb6d14750"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "salesforceIdentity:loginBody2",
+    "id" : "d94e9211-aa66-4f2b-bfa1-397abd1e43ab",
+    "label" : "Login",
+    "regions" : [ {
+      "id" : "783c270d-9286-4571-9275-acb8f3810d5e",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "a9a520ad-7f20-48bb-8352-dc2838615b04",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "b87cb278-beb0-47d0-aa9c-f11ce502a6e1",
+      "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "isPageWidthFixed" : true
+    },
+    "componentName" : "siteforce:starterBody",
+    "id" : "3388f8d1-4fd3-4de8-94f5-7199fa6d5320",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "c7b03d69-ed96-4c25-8dc0-394940870239",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c4b86449-6af8-4013-bdb4-9541ddec8239",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "fd9cd262-546e-4f2e-8348-800b5659c086",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "f87cfa0a-2c81-4e55-8c9b-1860984814c5",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "15ddef8d-d925-4883-8159-e0d9343d531b",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c515ebe4-b535-4aa0-8bb8-da9f018602df",
+      "regionName" : "navBar",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "3a3c52f4-41e5-44dc-bd06-62dfb6d14750",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "bf601059-ab4c-4e2f-ad6c-a2629acb14c3",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "e370ea83-d776-4ae9-9e24-a91fdc37d0e4",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

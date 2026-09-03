@@ -1,0 +1,55 @@
+.slds-tabs_default {
+    height: 44px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slds-tabs_default div,
+.slds-tabs_default__nav,
+.slds-tabs_default__item {
+    height: inherit;
+}
+
+.slds-tabs_default__nav {
+    background: #D4DFDE;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.slds-tabs_default__item {
+    color: #1D625C;
+    display: flex;
+    align-items: center;
+}
+
+.slds-tabs_default__item[data-state="active"] {
+    background-color: #fff;
+    border-bottom: 3px solid #1D625C;
+    pointer-events: none;
+}
+.fullWidth{
+    width: inherit;
+}
+@media(max-width: 768px) {
+    .hide-small {
+        display: none !important;
+    }
+}
+
+@media(min-width: 1180px) {
+    .showArrowSmall {
+        display: none;
+    }
+}
+
+@media(max-width: 1180px) {
+    .slds-tabs_default__item {
+        width: inherit;
+        overflow-x: auto;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1180px) {
+    .hide-medium {
+        display: none !important;
+    }
+}

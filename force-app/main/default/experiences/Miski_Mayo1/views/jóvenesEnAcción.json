@@ -1,0 +1,564 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "765a7f1e-3a77-4afc-9b82-8a3b60078dcc",
+  "label" : "Jóvenes en acción",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b6eaf425-18fa-4984-9551-bead5bb5bcf0",
+          "columns" : [ {
+            "UUID" : "5058cdce-43b4-4017-8873-046be754672e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b6eaf425-18fa-4984-9551-bead5bb5bcf0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "a4dc0492-7ac4-4c62-964c-1f8b31ed1f9c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5058cdce-43b4-4017-8873-046be754672e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b09f294c-5fc6-48cd-8dcb-8c3dd5c907de",
+          "columns" : [ {
+            "UUID" : "f0db33ab-50ce-4016-9b47-e6bd2d45f437",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b09f294c-5fc6-48cd-8dcb-8c3dd5c907de",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "7",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP12"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "d69ae00f-15bd-4d16-bdb6-f9ad0ab9983e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f0db33ab-50ce-4016-9b47-e6bd2d45f437",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "a4737c93-7db0-4c18-9731-37f5379fdac8",
+          "columns" : [ {
+            "UUID" : "1cc8dcff-8709-4d0a-bd04-4a157f213155",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a4737c93-7db0-4c18-9731-37f5379fdac8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a\n  href=\"https://www.miskimayo.com/s/gestion-social?#programas-sociales\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n \n\n  VOLVER"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "1d458f62-f73c-4eaa-ac73-380fcb8fc7bf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1cc8dcff-8709-4d0a-bd04-4a157f213155",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 92,
+        "sectionConfig" : {
+          "UUID" : "24e0635e-35a1-427f-926a-cd3b57d7362b",
+          "columns" : [ {
+            "UUID" : "95e5a98f-dbf0-4d1b-86d9-4b262e0cf52d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "14c27c78-eb98-4866-b1cb-31cf181f4dbe",
+            "columnKey" : "31248",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3e2a06c3-4e65-4690-bdb8-e08390c1d2b2",
+            "columnKey" : "9d678",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "24e0635e-35a1-427f-926a-cd3b57d7362b",
+      "regions" : [ {
+        "id" : "95e5a98f-dbf0-4d1b-86d9-4b262e0cf52d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.logojovenesenaccion23q7or1xsl6bp0qf.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "25990892-8971-4e93-9f42-a839e1c43bd4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "14c27c78-eb98-4866-b1cb-31cf181f4dbe",
+        "regionLabel" : "Column 2",
+        "regionName" : "31248",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3e2a06c3-4e65-4690-bdb8-e08390c1d2b2",
+        "regionLabel" : "Column 3",
+        "regionName" : "9d678",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "cac43f15-0bd3-4a85-b3cd-a0b7aedb2054",
+          "columns" : [ {
+            "UUID" : "d6953f79-bb91-4ffd-8e13-9371a76ebccd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4851541d-6551-4724-902d-1494c8eaacf6",
+            "columnKey" : "c36f2",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f9beea17-4f53-492c-901b-4014b98bdff5",
+            "columnKey" : "6e7cb",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5a9ab2b8-eac0-4672-afe9-d7b6d9e9df42",
+            "columnKey" : "08c12",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "40803ab7-6f7f-4ec3-93cf-a8da7cb80b58",
+            "columnKey" : "8b0a6",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c84dd9e4-3a3b-4e24-8e6c-a6018e3a3629",
+            "columnKey" : "c0dd2",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cac43f15-0bd3-4a85-b3cd-a0b7aedb2054",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "2ced75fe-8fbd-455d-a736-5317180a1443",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d6953f79-bb91-4ffd-8e13-9371a76ebccd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4851541d-6551-4724-902d-1494c8eaacf6",
+        "regionLabel" : "Column 2",
+        "regionName" : "c36f2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f9beea17-4f53-492c-901b-4014b98bdff5",
+        "regionLabel" : "Column 3",
+        "regionName" : "6e7cb",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5a9ab2b8-eac0-4672-afe9-d7b6d9e9df42",
+        "regionLabel" : "Column 4",
+        "regionName" : "08c12",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "40803ab7-6f7f-4ec3-93cf-a8da7cb80b58",
+        "regionLabel" : "Column 5",
+        "regionName" : "8b0a6",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c84dd9e4-3a3b-4e24-8e6c-a6018e3a3629",
+        "regionLabel" : "Column 6",
+        "regionName" : "c0dd2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "3da083da-b05b-4deb-a4a3-0b950925381c",
+          "columns" : [ {
+            "UUID" : "6c012286-987a-43fc-a1eb-836104553fc8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 150
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3da083da-b05b-4deb-a4a3-0b950925381c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e9e7e7f3-bea4-4b96-88ba-b392e1615191",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Formar jóvenes líderes y agentes de cambio.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "4f31ee9a-df29-476f-b1d8-bdf9d466ac01",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6c012286-987a-43fc-a1eb-836104553fc8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "956360b1-4777-47c1-a80b-36074de56bb0",
+          "columns" : [ {
+            "UUID" : "b436e3a2-47b3-48c7-ae18-a4a955fde507",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2584e068-ddff-47cb-969e-2b51832150cf",
+            "columnKey" : "1f41f",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b00996c8-369f-40b9-8088-8f2c315f95cb",
+            "columnKey" : "9e7b5",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b6c00aa8-6216-43e3-9ef1-1e8230f45457",
+            "columnKey" : "9451e",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1b9c8673-cda8-4e11-a099-d6f49138ef50",
+            "columnKey" : "c8c1f",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "873f2e81-d86a-4937-8dfb-ee91ef60ca4e",
+            "columnKey" : "711b5",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 47
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "956360b1-4777-47c1-a80b-36074de56bb0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Clipboard2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "f95fe72e-e135-4735-a0be-f01525de2877",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b436e3a2-47b3-48c7-ae18-a4a955fde507",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2584e068-ddff-47cb-969e-2b51832150cf",
+        "regionLabel" : "Column 2",
+        "regionName" : "1f41f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b00996c8-369f-40b9-8088-8f2c315f95cb",
+        "regionLabel" : "Column 3",
+        "regionName" : "9e7b5",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b6c00aa8-6216-43e3-9ef1-1e8230f45457",
+        "regionLabel" : "Column 4",
+        "regionName" : "9451e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1b9c8673-cda8-4e11-a099-d6f49138ef50",
+        "regionLabel" : "Column 5",
+        "regionName" : "c8c1f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "873f2e81-d86a-4937-8dfb-ee91ef60ca4e",
+        "regionLabel" : "Column 6",
+        "regionName" : "711b5",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "4d6828db-41a3-4586-8923-7c4d44459831",
+          "columns" : [ {
+            "UUID" : "76ae68c3-a8da-4abb-a31c-e9e95e35c951",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4d6828db-41a3-4586-8923-7c4d44459831",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Acciones:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6040abe1-853f-44c5-8563-93b533f44840",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Ejecución de talleres para fortalecer habilidades blandas.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Talleres de deporte, Educación ambiental y/o danza folklórica.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Fortalecimiento de civismo y patriotismo.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Organización de actividades de orientación vocacional para estudiantes de nivel secundario.</span>\n  </div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "6adb66f1-7080-4ebb-9288-8e62ae3c8af8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "76ae68c3-a8da-4abb-a31c-e9e95e35c951",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e06a0b2b-e965-4d13-99b9-499e0944d18c",
+          "columns" : [ {
+            "UUID" : "21a5c9a0-cb75-47b8-828a-e818443a55f4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e06a0b2b-e965-4d13-99b9-499e0944d18c",
+      "regions" : [ {
+        "id" : "21a5c9a0-cb75-47b8-828a-e818443a55f4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6339c54d-9848-4643-a4f4-1657f76bbff2",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Jóvenes en acción"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8def1b6d-dfa0-44c5-8899-b8c25a506698",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6561e4eb-24ba-4bcd-8b6e-a87548d8c3ee",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-jvenes-en-accin"
+}

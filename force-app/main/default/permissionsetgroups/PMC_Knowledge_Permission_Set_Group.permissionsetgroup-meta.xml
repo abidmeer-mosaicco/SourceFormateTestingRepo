@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set group is assigned to the Knowledge Users so that the Knowledge User can publish and maintain Knowledge Articles.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Knowledge Permission Set Group</label>
+    <permissionSets>PMC_CRECase</permissionSets>
+    <permissionSets>PMC_CREErrorLog</permissionSets>
+    <permissionSets>PMC_CREKnowledge</permissionSets>
+    <permissionSets>PMC_RCampaign</permissionSets>
+    <permissionSets>PMC_REEvent</permissionSets>
+    <permissionSets>PMC_RETask</permissionSets>
+    <permissionSets>PMC_RKnowledge</permissionSets>
+    <permissionSets>PMC_RunFlows</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

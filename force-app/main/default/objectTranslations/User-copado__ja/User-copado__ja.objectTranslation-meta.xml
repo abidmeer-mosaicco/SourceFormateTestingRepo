@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- PersonalInfo_EPIM --></label>
+        <name>PersonalInfo_EPIM</name>
+    </fieldSets>
+    <fieldSets>
+        <label>コパードライセンスマネージャー</label>
+        <name>copado__License_Manager</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage><!-- The user you selected is already Out Of Office. Please select another user to delegate. --></errorMessage>
+        <name>PMC_SS_DelegatedUserOOORule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter Out Off Office start date and end date when entering delegated user --></errorMessage>
+        <name>PMC_SS_EnterDatesForOutOfOffice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Delegate User while entering Out Of Office start date and end date. --></errorMessage>
+        <name>PMC_SS_EnterDelegateUser</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill the mandatory fields, Mobile No., Federation ID &amp; Sales Region in order to save the record. --></errorMessage>
+        <name>PMC_SS_MandatoryUserFields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Previous date cannot be selected as a Out Of Office start date --></errorMessage>
+        <name>PMC_SS_OOOStartDateGreaterOrEqualToToday</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Out Of Office Start Date cannot be after the Out of Office End Date --></errorMessage>
+        <name>PMC_SS_OOOStartDateIsGreaterThanEndDate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Select_Theme --></label>
+        <name>SBQQ__Select_Theme</name>
+    </webLinks>
+</CustomObjectTranslation>

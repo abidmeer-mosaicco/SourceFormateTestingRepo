@@ -1,0 +1,102 @@
+<template>
+    <lightning-card title={cardTitle}>
+        <template if:true={isLoading}>
+            <lightning-spinner size="small"></lightning-spinner>
+        </template>
+
+        <template if:true={hasData}>
+            <div class="slds-p-horizontal_small slds-p-bottom_small">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"><div class="slds-truncate">Approval #</div></th>
+                            <th scope="col"><div class="slds-truncate">Case</div></th>
+                            <th scope="col"><div class="slds-truncate">Submitted On</div></th>
+                            <th scope="col"><div class="slds-truncate">Status</div></th>
+                            <th scope="col"><div class="slds-truncate">Actions</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={rows} for:item="row">
+                            <tr key={row.id}>
+                                <td>
+                                    <lightning-formatted-url value={row.recordUrl} label={row.recordName} target="_self"></lightning-formatted-url>
+                                </td>
+                                <td>
+                                    <lightning-formatted-url value={row.caseUrl} label={row.caseNumber} target="_self"></lightning-formatted-url>
+                                </td>
+                                <td>
+                                    <lightning-formatted-date-time
+                                        value={row.createdDate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric"
+                                        hour="2-digit"
+                                        minute="2-digit"
+                                        hour12>
+                                    </lightning-formatted-date-time>
+                                </td>
+                                <td>
+                                    <div class="slds-truncate">{row.status}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-button-group" role="group">
+                                        <lightning-button
+                                            variant="success"
+                                            label="Approve"
+                                            data-id={row.id}
+                                            data-action="Approve"
+                                            onclick={openActionModal}
+                                            disabled={isBusy}>
+                                        </lightning-button>&nbsp;
+                                        <lightning-button
+                                            variant="destructive"
+                                            label="Reject"
+                                            data-id={row.id}
+                                            data-action="Reject"
+                                            onclick={openActionModal}
+                                            disabled={isBusy}>
+                                        </lightning-button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+        <template if:false={hasData}>
+            <div class="slds-p-around_medium slds-text-body_regular">
+                {noDataMessage}
+            </div>
+        </template>
+
+        <template if:true={isModalOpen}>
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium">{modalAction}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-textarea
+                            label={commentsLabel}
+                            required={isCommentsRequired}
+                            value={commentText}
+                            onchange={handleModalCommentChange}
+                            placeholder={commentsPlaceholder}>
+                        </lightning-textarea>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning-button variant="neutral" label={cancelButtonLabel} onclick={closeModal} disabled={isModalBusy}></lightning-button>&nbsp;
+                        <lightning-button variant="brand" label={modalAction} onclick={confirmModalAction} disabled={isModalBusy}></lightning-button>
+                        <template if:true={isModalBusy}>
+                            <lightning-spinner size="x-small" alternative-text="Processing"></lightning-spinner>
+                        </template>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </lightning-card>
+</template>

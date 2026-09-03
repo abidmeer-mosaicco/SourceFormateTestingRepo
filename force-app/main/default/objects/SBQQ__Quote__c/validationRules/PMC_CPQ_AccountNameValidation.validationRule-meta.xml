@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_AccountNameValidation</fullName>
+    <active>true</active>
+    <description>This validation rule has been created as part of user story to throw error when an Account on Quote is changed.</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+ISCHANGED( SBQQ__Account__c ),
+ISBLANK(PMC_CPQ_LegacyQuoteID__c) 
+)</errorConditionFormula>
+    <errorDisplayField>SBQQ__Account__c</errorDisplayField>
+    <errorMessage>You cannot change account value on quote</errorMessage>
+</ValidationRule>

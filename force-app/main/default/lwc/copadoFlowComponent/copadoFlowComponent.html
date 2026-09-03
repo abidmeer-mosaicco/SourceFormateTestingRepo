@@ -1,0 +1,15 @@
+<template>
+  <section class="flow-section">
+    <h2 class="flow-title">🔁 Copado + Salesforce DevOps Flow</h2>
+
+    <div class="flow-container">
+      <template for:each={flowSteps} for:item="step">
+        <div key={step.id} class="flow-card animate-card">
+          <div class="step-icon">{step.icon}</div>
+          <h3 class="step-title">{step.title}</h3>
+          <p class="step-description">{step.description}</p>
+        </div>
+      </template>
+    </div>
+  </section>
+</template>

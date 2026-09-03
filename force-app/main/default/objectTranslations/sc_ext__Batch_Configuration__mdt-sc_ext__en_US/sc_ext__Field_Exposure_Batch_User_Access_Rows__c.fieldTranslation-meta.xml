@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This controls the number of User Access rows which are processed in a single batch for the Field Exposure Batch. Higher the number, the faster the batch will run. The max is 50,000, but depending on data volume in your org, you may need to lower this in order to avoid CPU Timeout errors in the batch. Default is set at 30,000. --></help>
+    <label><!-- Field Exposure Batch User Access Rows --></label>
+    <name>sc_ext__Field_Exposure_Batch_User_Access_Rows__c</name>
+</CustomFieldTranslation>

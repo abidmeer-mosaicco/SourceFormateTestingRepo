@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductFamily__c</fullName>
+    <description>Captures Product Family to cater towards the SAP integration</description>
+    <label>Product Family</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PMC_SS_ProductFamilies</valueSetName>
+    </valueSet>
+</CustomField>

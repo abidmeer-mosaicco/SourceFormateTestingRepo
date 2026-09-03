@@ -1,0 +1,60 @@
+<template>
+  <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">
+        {labels.pmc_breadcrumb_myAccount}
+      </p>
+    </div>
+    <div class="slds-col">
+      <template if:true={isActiveTabAddress}>
+        <c-pmc_dh_add-new-address is-add-new-address-modal={isAddNewAddressModal}></c-pmc_dh_add-new-address>
+      </template>
+      <template if:true={isActiveTabUserManagement}>
+        <c-pmc_dh_add-new-user></c-pmc_dh_add-new-user>
+      </template>
+    </div>
+  </div>
+  <template if:true={isActiveTabLeadsManagement}>
+    <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+      <div class="message-container">
+        <div class="info-message">
+          <img src={iconUrlObj.infoIconUrl} alt={labels.pmc_leadManagement_moreInformation} />
+          <span class="dxp-text-body">
+            {labels.pmc_leadManagement_switchAccMsg}&nbsp;
+            <a onclick={openSwitchAccountModal}>{labels.pmc_leadManagement_switchAcc}</a>.
+          </span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template if:true={isActiveTabRebates}>
+    <div>
+      <c-pmc_dh_message-banner type="info" message={labels.pmc_rebates_rebateInfoMsg}
+        hyperlink={labels.pmc_rebates_openACase} show-rebates-banner oncreatecase={createCaseHandler}>
+      </c-pmc_dh_message-banner>
+      <template lwc:if={isCreateCaseEnabled}>
+        <c-pmc_dh_create-case is-create-case-enabled={isCreateCaseEnabled}
+          onclosecreatecasepopup={closeCreateCaseModal}>
+        </c-pmc_dh_create-case>
+      </template>
+    </div>
+  </template>
+
+  <div class="menu-wrapper">
+    <lightning-button-icon icon-name="utility:chevronleft" alternative-text={labels.pmc_customTabs_previous}
+      size="small" disabled={prevDisabled} class="left-arrow arrow" if:true={isArrowNeeded}></lightning-button-icon>
+    <ul class="menu">
+      <li class="item dxp-text-body" for:each={tabsArray} for:item="item" for:index="index" key={item.id}
+        data-state={item.state} data-value={item.strTabValue} data-id={item.id} onclick={handleItemClickEvent}>
+        {item.strTabLabel}
+      </li>
+    </ul>
+    <lightning-button-icon icon-name="utility:chevronright" alternative-text={labels.pmc_customTabs_next} size="small"
+      disabled={nextDisabled} class="right-arrow arrow" if:true={isArrowNeeded}></lightning-button-icon>
+  </div>
+
+  <c-pmc_dh_switch-account-modal open-switch-account-modal={isShowSwitchAccountModal}
+    oncloseswitchaccount={closeSwitchAccountModal}></c-pmc_dh_switch-account-modal>
+</template>

@@ -1,0 +1,29 @@
+/* Layout wrapper */
+.selector-wrapper {
+    display: flex;
+    min-height: 420px;
+    height: auto;
+}
+
+/* Sidebar */
+.left-panel {
+    width: 300px;
+    transition: width 0.2s ease;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+}
+.left-panel.closed { width: 0; overflow: hidden; }
+.left-panel .filters-scroll {
+    max-height: none;
+    padding-right: .5rem;
+}
+.left-panel.closed .filters-scroll { display: none; }
+
+/* Toggle bar between panels */
+.toggle-bar { width: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: #f3f3f3 }
+.toggle-bar:hover { background: #e0e0e0; }
+
+/* Main content */
+.main-panel { flex: 1 1 auto; min-width: 0; overflow: clip; }

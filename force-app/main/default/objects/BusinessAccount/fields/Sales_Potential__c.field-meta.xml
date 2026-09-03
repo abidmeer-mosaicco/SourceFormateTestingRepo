@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Potential__c</fullName>
+    <label>Sales Potential</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_SS_Channel__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 to 2 thousand Tons</fullName>
+                <default>false</default>
+                <label>0 to 2 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>2 to 4 thousand Tons</fullName>
+                <default>false</default>
+                <label>2 to 4 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>4 to 9 thousand Tons</fullName>
+                <default>false</default>
+                <label>4 to 9 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>9 to 15 thousand Tons</fullName>
+                <default>false</default>
+                <label>9 to 15 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>More than 15 thousand Tons</fullName>
+                <default>false</default>
+                <label>More than 15 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>0 to 1 thousand Tons</fullName>
+                <default>false</default>
+                <label>0 to 1 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>1 to 10 thousand Tons</fullName>
+                <default>false</default>
+                <label>1 to 10 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>More than 10 thousand Tons</fullName>
+                <default>false</default>
+                <label>More than 10 thousand Tons</label>
+            </value>
+            <value>
+                <fullName>0 a 2 thousand tons</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>0 a 2 thousand tons</label>
+            </value>
+            <value>
+                <fullName>2 a 4 thousand tons</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2 a 4 thousand tons</label>
+            </value>
+            <value>
+                <fullName>4 a 9 thousand tons</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4 a 9 thousand tons</label>
+            </value>
+            <value>
+                <fullName>9 a 15 thousand tons</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>9 a 15 thousand tons</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Agriculture/Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Retailers</controllingFieldValue>
+            <controllingFieldValue>Seller</controllingFieldValue>
+            <controllingFieldValue>Cooperative</controllingFieldValue>
+            <controllingFieldValue>Specialty/Co-Products</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>End-Users</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>International Sales</controllingFieldValue>
+            <valueName>0 to 2 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture/Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Retailers</controllingFieldValue>
+            <controllingFieldValue>Seller</controllingFieldValue>
+            <controllingFieldValue>Cooperative</controllingFieldValue>
+            <controllingFieldValue>Specialty/Co-Products</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>End-Users</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>International Sales</controllingFieldValue>
+            <valueName>2 to 4 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture/Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Retailers</controllingFieldValue>
+            <controllingFieldValue>Seller</controllingFieldValue>
+            <controllingFieldValue>Cooperative</controllingFieldValue>
+            <controllingFieldValue>Specialty/Co-Products</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>End-Users</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>International Sales</controllingFieldValue>
+            <valueName>4 to 9 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture/Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Retailers</controllingFieldValue>
+            <controllingFieldValue>Seller</controllingFieldValue>
+            <controllingFieldValue>Cooperative</controllingFieldValue>
+            <controllingFieldValue>Specialty/Co-Products</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>End-Users</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>International Sales</controllingFieldValue>
+            <valueName>9 to 15 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture/Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Retailers</controllingFieldValue>
+            <controllingFieldValue>Seller</controllingFieldValue>
+            <controllingFieldValue>Cooperative</controllingFieldValue>
+            <controllingFieldValue>Specialty/Co-Products</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>End-Users</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>International Sales</controllingFieldValue>
+            <valueName>More than 15 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <valueName>0 to 1 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <valueName>1 to 10 thousand Tons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <valueName>More than 10 thousand Tons</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

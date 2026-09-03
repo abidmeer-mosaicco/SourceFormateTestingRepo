@@ -1,0 +1,365 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "bdef499d-07a3-43dd-ab4f-dd05dd95cc21",
+  "label" : "Otras Publicaciones",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "24401022-754c-4e9d-a342-445802b16294",
+          "columns" : [ {
+            "UUID" : "aa4a275d-ab9a-4995-adfd-4af2f94c81ce",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "24401022-754c-4e9d-a342-445802b16294",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "50882c74-bf59-41dd-97b0-ab4296af0331",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "aa4a275d-ab9a-4995-adfd-4af2f94c81ce",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2e32ce54-3d7f-44ed-b615-6b6d336a994c",
+          "columns" : [ {
+            "UUID" : "d44b4ff4-167e-42c1-89f9-703a75e78d09",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2e32ce54-3d7f-44ed-b615-6b6d336a994c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Notas De Prensa</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "27b34c39-4235-4ce0-923d-d2b61257366a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d44b4ff4-167e-42c1-89f9-703a75e78d09",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "3e73b2b7-2dc9-4820-9b7b-418ad34e1a17",
+          "columns" : [ {
+            "UUID" : "386cf19d-d48b-4ae2-baa7-1130233ce783",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bf8ab042-25c6-4299-83a1-b88123ef21bf",
+            "columnKey" : "02668",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "aa7c6ed9-8e61-4f91-90fa-3a32b2473700",
+            "columnKey" : "b6bbd",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "09a4517a-d5e9-459f-a788-f3641fd42bb6",
+            "columnKey" : "f5fbb",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6d73695d-76f5-4d77-95e6-a163f09dc07c",
+            "columnKey" : "34624",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "70838104-acb7-4eaf-88f2-9d0463c0d58b",
+            "columnKey" : "e9790",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3e73b2b7-2dc9-4820-9b7b-418ad34e1a17",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(226, 35, 26)",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "REGRESAR",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/notas-de-prensa"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "73a9b792-da52-4829-ba44-378b8ddc9e5f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "386cf19d-d48b-4ae2-baa7-1130233ce783",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "bf8ab042-25c6-4299-83a1-b88123ef21bf",
+        "regionLabel" : "Column 2",
+        "regionName" : "02668",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "aa7c6ed9-8e61-4f91-90fa-3a32b2473700",
+        "regionLabel" : "Column 3",
+        "regionName" : "b6bbd",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "09a4517a-d5e9-459f-a788-f3641fd42bb6",
+        "regionLabel" : "Column 4",
+        "regionName" : "f5fbb",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6d73695d-76f5-4d77-95e6-a163f09dc07c",
+        "regionLabel" : "Column 5",
+        "regionName" : "34624",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "70838104-acb7-4eaf-88f2-9d0463c0d58b",
+        "regionLabel" : "Column 6",
+        "regionName" : "e9790",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "0a9cd1e5-3e70-46df-aa39-5e36659fe97d",
+          "columns" : [ {
+            "UUID" : "6e6d8c65-63af-4824-be13-c5ad27df6add",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0a9cd1e5-3e70-46df-aa39-5e36659fe97d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "collectionLayoutDefinition" : {
+                "attributes" : {
+                  "collectionTitle" : "",
+                  "collectionTitleHeadingTag" : "h2",
+                  "columns" : "1",
+                  "rows" : "10",
+                  "showCollectionTitle" : true,
+                  "showViewMoreButton" : true,
+                  "spacing" : "small",
+                  "viewMoreButtonBackgroundColor" : "rgb(226, 35, 26)",
+                  "viewMoreButtonBackgroundColorHover" : "",
+                  "viewMoreButtonBorderColor" : "",
+                  "viewMoreButtonBorderColorHover" : "",
+                  "viewMoreButtonLabel" : "VER MÁS",
+                  "viewMoreButtonPlacement" : "center",
+                  "viewMoreButtonRadius" : 4,
+                  "viewMoreButtonTextColor" : "",
+                  "viewMoreButtonTextColorHover" : ""
+                },
+                "componentName" : "forceCommunity:dynamicCollectionGrid"
+              },
+              "dataProviderDefinition" : {
+                "attributes" : {
+                  "dataProviderInfo" : {
+                    "apiName" : "Notacias"
+                  },
+                  "dataProviderType" : "NamedCollection"
+                },
+                "componentName" : "forceCommunity:managedContentCollectionDataProvider"
+              },
+              "itemLayoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "cover",
+                  "borderColor" : "",
+                  "componentBorderStyles" : "",
+                  "componentHoverEffect" : "zoomIn",
+                  "componentPadding" : "none",
+                  "contentBackgroundColor" : "#ffffff",
+                  "contentOffset" : "0",
+                  "contentOffsetBackgroundColor" : "rgba(0, 0, 0, 0.03)",
+                  "contentOffsetPadding" : "0",
+                  "contentVerticalAlignment" : "center",
+                  "dateFormat" : "none",
+                  "datetime" : "{!CurrentItem.date}",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "",
+                  "datetimeTextDecoration" : "{\"bold\":true}",
+                  "defaultLinksOverrides" : "{\"title\":{\"linkURL\":\"{!CurrentItem.URL}\"}}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagConstraints" : "media",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "imageAlignment" : "left",
+                  "imageAltText" : "",
+                  "imageBorderColor" : "#ffffff",
+                  "imageBorderStyles" : "",
+                  "imageUrl" : "{!CurrentItem.bannerImage.url}",
+                  "imageWidth" : "40",
+                  "mediaAspectRatio" : "16:9",
+                  "mediaHeight" : "241",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "",
+                  "metadataTextDecoration" : "",
+                  "showDateTime" : true,
+                  "showExcerpt" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFeaturedMedia" : true,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "{!CurrentItem.excerpt}",
+                  "subTitleFontSize" : "regular",
+                  "subTitleTextColor" : "",
+                  "textAlignment" : "left",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "{!CurrentItem.title}",
+                  "titleFontSize" : "medium",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextColor" : "rgb(0, 0, 0)",
+                  "titleTextDecoration" : "{\"bold\":true}",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:cardLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:dynamicCollection",
+          "id" : "c73b40e5-8734-4f5a-bc8a-3ab06dd621b9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6e6d8c65-63af-4824-be13-c5ad27df6add",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c8ba5c67-137c-4426-91f8-062aa3d2ff0a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Otras Publicaciones"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5f5c3587-b94d-4c14-b53b-b8d1cc020341",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "00071200-0f52-49b8-9381-6c18ca0d9518",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-otras-publicaciones"
+}

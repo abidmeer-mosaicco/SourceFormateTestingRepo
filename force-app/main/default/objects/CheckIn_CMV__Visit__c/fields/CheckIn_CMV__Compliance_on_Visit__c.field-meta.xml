@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckIn_CMV__Compliance_on_Visit__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(
+    CheckIn_CMV__Check_in_Distance__c &gt; CheckIn_CMV__Check_in_Max_Distance_Compliance__c
+    ||
+    CheckIn_CMV__Check_out_Distance__c &gt; CheckIn_CMV__Check_out_Max_Distance_Compliance__c,
+    IMAGE(&quot;/resource/CheckIn_CMV__error_icon_non_compliant&quot;, &quot;Error red X&quot;, 25, 25),
+    IMAGE(&quot;/resource/CheckIn_CMV__success_icon_compliant&quot;, &quot;Green Check&quot;, 25, 25)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Shows if visit is under compliance considering the compliance rules when the visit was done.</inlineHelpText>
+    <label>Compliance on Visit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

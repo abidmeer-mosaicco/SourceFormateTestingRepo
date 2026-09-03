@@ -1,0 +1,69 @@
+<template>
+	<template if:true={open}>
+		<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-modal="true" aria-label="Processing Status">
+			<div class="slds-modal__container modal-width">
+				<header class="slds-modal__header slds-text-align_center modal-bordered">
+					<h2 class="slds-text-heading_medium">Submission Progress</h2>
+				</header>
+				<div
+					class="slds-modal__content modal-bordered center-container slds-grid slds-grid_vertical slds-grid_align-center slds-text-align_center slds-p-around_medium"
+				>
+					<ul class="progress-list slds-m-bottom_medium">
+						<li class="slds-item" if:true={approvalTotal}>
+							<strong>Submitted for Approval:</strong>
+							<span>{approvalProcessed}/{approvalTotal}</span>
+						</li>
+						<li class="slds-item" if:true={sapTotal}>
+							<strong>Sent To SAP:</strong>
+							<span>{sapProcessed}/{sapTotal}</span>
+						</li>
+						<li class="slds-item">
+							<strong>Total Selected:</strong>
+							<span>{totalRows}</span>
+						</li>
+					</ul>
+
+					<template if:true={isWorking}>
+						<div
+							class="spinner-area slds-size_full slds-grid slds-grid_align-center slds-grid_vertical-align-center slds-p-around_medium"
+						>
+							<div class="slds-spinner slds-spinner_medium" role="status">
+								<span class="slds-assistive-text">Processing</span>
+								<div class="slds-spinner__dot-a"></div>
+								<div class="slds-spinner__dot-b"></div>
+							</div>
+						</div>
+					</template>
+
+					<template if:false={isWorking}>
+						<div class="status-icon">
+							<lightning-icon
+								if:true={isSuccess}
+								icon-name="utility:success"
+								variant="success"
+								alternative-text="Success"
+								size="large"
+							></lightning-icon>
+							<lightning-icon
+								if:true={isError}
+								icon-name="utility:error"
+								variant="error"
+								alternative-text="Error"
+								size="large"
+							></lightning-icon>
+							<lightning-icon
+								if:true={isPartial}
+								icon-name="utility:warning"
+								alternative-text="Partial"
+								size="large"
+							></lightning-icon>
+						</div>
+					</template>
+				</div>
+				<footer class="slds-modal__footer modal-bordered">
+					<lightning-button label="Close" onclick={handleClose} disabled={isWorking}></lightning-button>
+				</footer>
+			</div>
+		</section>
+	</template>
+</template>

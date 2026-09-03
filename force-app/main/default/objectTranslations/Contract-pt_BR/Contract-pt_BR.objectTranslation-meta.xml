@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label>Pesquisa de contratos ativos</label>
+        <name>SBQQ__ActiveContractLookup</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage>A cotação de renovação só pode ser criada antes de 30 dias ou menos da data de término do contrato</errorMessage>
+        <name>PMC_CLM_ContractRenewalValidation</name>
+    </validationRules>
+    <webLinks>
+        <label>Alterar contrato</label>
+        <name>Amend_M</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Block_Replace_Contract --></label>
+        <name>Block_Replace_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label>Alterar</label>
+        <name>SBQQ__Amend</name>
+    </webLinks>
+    <webLinks>
+        <label>Renovação de contratos</label>
+        <name>SBQQ__RenewContracts</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,86 @@
+<template>
+  <div class="slds-grid slds-wrap slds-grid_align-center">
+    <div class="slds-col slds-grow-none slds-m-bottom_medium">
+      <h3>{labels.pmc_registration_registerTitle}</h3>
+    </div>
+    <template if:true={errorMessage}>
+      <div class="slds-size_1-of-1 slds-m-bottom_medium">
+        <c-pmc_dh_message-banner type="error" message={errorMessage}>
+        </c-pmc_dh_message-banner>
+      </div>
+    </template>
+    <div class="slds-grid slds-wrap slds-gutters_direct">
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_firstName} data-id="strFirstName"
+          parent-name="strFirstName" default-value={pageObject.strFirstName} is-required
+          oninputdatachange={handleDataChange} pattern="[A-Za-z]*"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_lastName} data-id="strLastName"
+          parent-name="strLastName" default-value={pageObject.strLastName} is-required
+          oninputdatachange={handleDataChange} pattern="[A-Za-z]*"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_workEmail} data-id="strEmail" parent-name="strEmail"
+          default-value={pageObject.strEmail} is-required oninputdatachange={handleDataChange}
+          type="email"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_userDetails_country} if:true={countryOption} combobox-list-json={countryOption}
+          data-id="strCountry" parent-name="strCountry" default-value={pageObject.strCountry} is-required
+          oninputdatachange={handleDataChange}></c-pmc_dh_selection-picklist>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_registration_countryCode}
+          combobox-list-json={countryCodeOption} data-id="strCountryCode" parent-name="strCountryCode"
+          default-value={pageObject.strCountryCode} is-required
+          oninputdatachange={handleDataChange}></c-pmc_dh_selection-picklist>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_telephone} data-id="strPhoneNumber"
+          parent-name="strPhoneNumber" default-value={pageObject.strPhoneNumber} is-required is-number
+          oninputdatachange={handleDataChange} oninputdatablur={handleDataBlur} oninputfocus={handleInputFocus}
+          maxlength={phoneMaxLength} is-disabled={phoneStrDisabled} type="text"
+          pattern="[0-9]+"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_registration_state} combobox-list-json={stateOptions}
+          data-id="strState" parent-name="strState" default-value={pageObject.strState} is-required
+          oninputdatachange={handleDataChange} is-disabled={strStateDisabled}></c-pmc_dh_selection-picklist>
+      </div>
+      <div class="slds-col slds-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_city} data-id="strCity" parent-name="strCity"
+          default-value={pageObject.strCity} is-required oninputdatachange={handleDataChange} pattern="[A-Za-z\s]*"
+          type="text"></c-pmc_dh_input-element>
+      </div>
+      <template if:true={isCpf}>
+        <div class="slds-col slds-size_1-of-1">
+          <c-pmc_dh_input-element text-label={labels.pmc_registration_cpf} text-placeholder={labels.pmc_registration_cpfPlaceholder} data-id="strBrazilCpf" parent-name="strBrazilCpf"
+            default-value={pageObject.strBrazilCpf} max-length=14 oninputdatachange={handleDataChange}
+            type="text"></c-pmc_dh_input-element>
+        </div>
+      </template>
+      <div class="slds-col slds-size_1-of-1">
+        <lightning-input class="consent-checkbox" type="checkbox" label={labels.pmc_registration_agreeCommunications}
+          onchange={handleDataChange} value={pageObject.strMarketingEmailConsent} data-id="strMarketingEmailConsent">
+        </lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1">
+        <lightning-formatted-rich-text class="dxp-text-body registration-small-text"
+          value={labels.pmc_registration_privacyPolicyRegistration}>
+        </lightning-formatted-rich-text>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-grid slds-grid_align-center slds-m-top_medium mobile-button">
+        <lightning-button variant="brand" onclick={proceedButtonHandler} label={labels.pmc_registration_proceed}>
+        </lightning-button>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-grid slds-grid_align-center slds-m-top_medium">
+        <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_registration_backToLogin}>
+        </lightning-formatted-rich-text>
+      </div>
+    </div>
+  </div>
+  <template if:true={isLoading}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

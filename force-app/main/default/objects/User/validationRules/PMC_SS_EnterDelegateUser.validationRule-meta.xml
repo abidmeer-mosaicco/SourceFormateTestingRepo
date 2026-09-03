@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_EnterDelegateUser</fullName>
+    <active>true</active>
+    <description>This validation rule checks if Delegate user is not blank</description>
+    <errorConditionFormula>AND(NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c), ISBLANK(PMC_SS_DelegateUser__c), OR(NOT(ISBLANK(PMC_SS_OutOfOfficeStartDate__c)), NOT(ISBLANK(PMC_SS_OutOfOfficeEndDate__c))),
+NOT(ISNEW())
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_DelegateUser__c</errorDisplayField>
+    <errorMessage>Please enter the Delegate User while entering Out Of Office start date and end date.</errorMessage>
+</ValidationRule>

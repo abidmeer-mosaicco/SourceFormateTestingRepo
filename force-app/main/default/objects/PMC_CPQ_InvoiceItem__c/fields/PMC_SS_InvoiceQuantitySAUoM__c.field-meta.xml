@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_InvoiceQuantitySAUoM__c</fullName>
+    <description>To store Invoice Quantity according to related Sales Agreement&apos;s UoM</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(PMC_CPQ_UnitOfMeasure__c, &apos;MTN&apos;) &amp;&amp; ISPICKVAL(PMC_CPQ_Invoice__r.PMC_CPQ_Order__r.SalesAgreement.PMC_SS_UnitofMeasure__c,&apos;MTN&apos;), PMC_CPQ_NetInvoicedQuantity__c,
+IF( ISPICKVAL(PMC_CPQ_UnitOfMeasure__c, &apos;STN&apos;) &amp;&amp; ISPICKVAL(PMC_CPQ_Invoice__r.PMC_CPQ_Order__r.SalesAgreement.PMC_SS_UnitofMeasure__c,&apos;STN&apos;), PMC_CPQ_NetInvoicedQuantity__c,
+IF( ISPICKVAL(PMC_CPQ_UnitOfMeasure__c, &apos;MTN&apos;) &amp;&amp; ISPICKVAL(PMC_CPQ_Invoice__r.PMC_CPQ_Order__r.SalesAgreement.PMC_SS_UnitofMeasure__c,&apos;STN&apos;), PMC_CPQ_NetInvoicedQuantity__c*$CustomMetadata.PMC_SS_UOMConversionMapping__mdt.MTNtoSTN.PMC_SS_ConversionFactor__c,
+IF( ISPICKVAL(PMC_CPQ_UnitOfMeasure__c, &apos;STN&apos;) &amp;&amp; ISPICKVAL(PMC_CPQ_Invoice__r.PMC_CPQ_Order__r.SalesAgreement.PMC_SS_UnitofMeasure__c,&apos;MTN&apos;), PMC_CPQ_NetInvoicedQuantity__c*$CustomMetadata.PMC_SS_UOMConversionMapping__mdt.STNtoMTN.PMC_SS_ConversionFactor__c,  null))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Invoice Quantity (SA UoM)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,115 @@
+.md-filters-container {
+  /* margin-bottom: 1rem; */
+  /* padding: 1rem; */
+}
+
+.md-text-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.md-filter-row {
+  display: grid;
+  /* gap: 0.75rem; */
+  gap: 1em;
+}
+
+.md-filter-row-text {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.md-filter-item {
+  min-width: 0;
+}
+
+.md-filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  justify-content: space-between;
+}
+
+.md-filter-row-advanced {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.md-advanced-container {
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.25s ease,
+    margin-top 0.25s ease;
+}
+
+.md-advanced-open {
+  max-height: 900px;
+  opacity: 1;
+  margin-top: 0.75rem;
+  display: grid;
+  row-gap: 1em;
+}
+
+.md-advanced-closed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  pointer-events: none;
+}
+
+.button-no-style {
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  column-gap: 0.5em;
+  background: unset;
+  border: 0;
+  padding: 0px;
+  display: grid;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--dark-secondary-green);
+  font-weight: bold;
+
+  --slds-c-icon-color-foreground-default: var(--dark-secondary-green);
+
+  span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .md-filter-row-text {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md-filter-row-advanced {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .md-filter-row-text {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .md-filter-row-advanced {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+input[type="date"].slds-input {
+  min-height: 2rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+input[type="date"].slds-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+input[type="date"].slds-input:focus {
+  outline: none;
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #1589ee;
+}

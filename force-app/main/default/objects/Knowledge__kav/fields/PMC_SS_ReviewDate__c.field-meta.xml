@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReviewDate__c</fullName>
+    <formula>IF( ISPICKVAL(PublishStatus, &apos;Online&apos;) , IF((MONTH( DATEVALUE(LastPublishedDate) )==2 &amp;&amp; DAY( DATEVALUE(LastPublishedDate) ) == 29),DATE(YEAR( DATEVALUE(LastPublishedDate) )+0,MONTH( DATEVALUE(LastPublishedDate) ),28),DATE(YEAR( DATEVALUE(LastPublishedDate) )+0,MONTH( DATEVALUE(LastPublishedDate) ),DAY( DATEVALUE(LastPublishedDate) ))) , null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Review Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

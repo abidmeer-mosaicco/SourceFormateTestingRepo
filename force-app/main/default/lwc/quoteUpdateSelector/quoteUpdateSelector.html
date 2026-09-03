@@ -1,0 +1,140 @@
+<template>
+    <div class="selector-wrapper slds-var-m-top_small">
+        <!-- Sidebar (collapsible) -->
+        <div class={leftPanelClass} data-id="leftPanel">
+            <c-quote-update-filters
+                search-key={searchKey}
+                sold-to={soldTo}
+                quote-number={quoteNumber}
+                type={type}
+                sap-original-contract={sapOriginalContract}
+                account={account}
+                business-type={businessType}
+                sales-office={salesOffice}
+                account-manager={accountManager}
+                contract-doc-status={contractDocStatus}
+                contract-valid-from={contractValidFrom}
+                contract-valid-to={contractValidTo}
+                approval-status={approvalStatus}
+                quote-status={quoteStatus}
+                sap-contract-ref={sapContractRef}
+                total-records={totalRecords}
+                selected-count={selectedCount}
+                onfilterschange={handleFiltersChange}
+                onload={handleLoadRequest}
+                onclear={handleClearRequest}
+                onresetselection={resetSelection}
+            >
+            </c-quote-update-filters>
+        </div>
+        <!-- Toggle Bar -->
+        <div class="toggle-bar" onclick={togglePanel} title={labels.toggleFilters}>
+            <lightning-button-icon icon-name={toggleIcon} alternative-text={labels.toggleFilters} variant="bare" size="x-small"></lightning-button-icon>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-panel">
+            <!-- Search Results Table Section -->
+            <div class="slds-var-m-top_medium">
+                <div class="slds-grid slds-grid_vertical-align-center slds-var-p-horizontal_small slds-var-p-top_x-small">
+                    <div class="slds-media slds-media_center">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="standard:contract" size="small" alternative-text={labels.contracts}></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-text-heading_small">{labels.searchResults}</h2>
+                        </div>
+                    </div>
+                    <div class="slds-col_bump-left">
+                        <lightning-button-icon
+                            icon-name={searchExpandIconName}
+                            alternative-text={searchExpandButtonLabel}
+                            title={searchExpandButtonLabel}
+                            onclick={handleToggleSearchColumnWidth}
+                            variant="border-filled">
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-var-p-around_small table-scroll" data-has-selection={hasSelection}>
+                    <template if:true={isLoading}>
+                        <lightning-spinner alternative-text={labels.loading} size="small"></lightning-spinner>
+                    </template>
+                    <template if:true={filteredContracts}>
+                        <lightning-datatable
+                            key-field="Id"
+                            data={filteredContracts}
+                            columns={columns}
+                            onrowselection={handleFilteredRowSelection} 
+                            selected-rows={selectedIds}
+                            data-table-type="main">
+                        </lightning-datatable>
+                    </template>
+                    <template if:false={filteredContracts}>
+                        <p class="slds-text-color_weak slds-var-p-vertical_small">{labels.noRecords}</p>
+                    </template>
+                </div>
+
+                <!-- Pagination Controls (outside scroll area) -->
+                <template if:true={showPagination}>
+                    <div class="slds-var-p-around_small">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col">
+                                <span class="slds-text-body_small">{paginationInfo}</span>
+                            </div>
+                            <div class="slds-col_bump-left">
+                                <lightning-button-group>
+                                    <lightning-button label={labels.firstButton} onclick={handleFirstPage} disabled={disablePrevious}></lightning-button>
+                                    <lightning-button icon-name="utility:chevronleft" onclick={handlePreviousPage} disabled={disablePrevious}></lightning-button>
+                                    <lightning-button icon-name="utility:chevronright" onclick={handleNextPage} disabled={disableNext}></lightning-button>
+                                </lightning-button-group>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <template if:true={selectedCount}>
+                <!-- Selected Contracts Table Section -->
+                <div class="slds-var-m-top_large">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-var-p-horizontal_small slds-var-p-top_x-small">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <lightning-icon icon-name="utility:success" size="small" alternative-text={labels.selected}></lightning-icon>
+                            </div>
+                            <div class="slds-media__body">
+                                <h2 class="slds-text-heading_small">{labels.selectedHeading}</h2>
+                            </div>
+                        </div>
+                        <div class="slds-col_bump-left">
+                            <lightning-button-icon
+                                icon-name={selectedExpandIconName}
+                                alternative-text={selectedExpandButtonLabel}
+                                title={selectedExpandButtonLabel}
+                                onclick={handleToggleSelectedColumnWidth}
+                                variant="border-filled">
+                            </lightning-button-icon>
+                        </div>
+                    </div>
+                    <div class="slds-var-p-around_small">
+                        <c-quote-update-datatable
+                            key-field="Id"
+                            data={selected}
+                            columns={editableColumns}
+                            selected-rows={selectedIds}
+                            onrowselection={handleSelectedRowSelection}
+                            draft-values={draftValues}
+                            oncellchange={handleCellChange}
+                            onsave={handleSave}
+                            oncancel={handleCancel}
+                            data-table-type="selected"
+                            ondatechange={handleDateCellChange}
+                            errors={dataErrors} 
+                        >
+                        </c-quote-update-datatable>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    
+</template>

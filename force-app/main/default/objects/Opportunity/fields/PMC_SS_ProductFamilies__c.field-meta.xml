@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductFamilies__c</fullName>
+    <description>Indicates the product families of the Opportunity</description>
+    <label>Product Families</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PMC_SS_ProductFamilies</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

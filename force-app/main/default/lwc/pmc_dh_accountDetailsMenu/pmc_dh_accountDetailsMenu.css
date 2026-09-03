@@ -1,0 +1,158 @@
+.accounts-menu {
+  box-shadow: 0px 0px 15px rgba(9, 53, 50, 0.1);
+  background-color: var(--white);
+  z-index: 99;
+}
+
+.account-menu-li {
+  width: 100%;
+}
+
+.account-menu-li:hover,
+.account-menu-li:focus,
+.accounts-menu-item:hover,
+.accounts-menu-item:focus {
+  background-color: var(--tertiary-grey);
+  outline: none;
+  border: none;
+}
+
+.accounts-menu-item {
+  cursor: pointer;
+}
+
+.accounts-menu-item-img {
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.user-account {
+  white-space: nowrap;
+}
+
+.temp-box {
+  width: auto;
+  cursor: pointer;
+}
+
+.user-account-img {
+  min-width: 36px;
+}
+
+.temp-box:focus {
+  outline: none;
+  border: none;
+}
+
+.user-account-detail {
+  max-width: 112px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .user-account {
+    display: none;
+  }
+
+  .account-menu-li {
+    background-color: var(--tertiary-grey);
+    cursor: default;
+  }
+}
+
+@media (min-width: 1281px) {
+  .account-menu-li {
+    display: none;
+  }
+
+  .accounts-menu {
+    width: max-content;
+  }
+}
+
+@media (max-width: 1023px) {
+  .mobile-user-account {
+    padding: 10px;
+  }
+
+  .temp-box {
+    flex-direction: column;
+  }
+
+  .accounts-menu {
+    box-shadow: none;
+  }
+
+  .accounts-menu .account-option {
+    font-size: var(--large-font-size);
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--dark-secondary-green);
+  }
+
+  .accounts-menu .accounts-menu-item {
+    padding: 8px;
+  }
+
+  .dxp-text-body {
+    font-size: var(--large);
+    line-height: 27px;
+  }
+
+  .accounts-menu .accounts-menu-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .temp-box {
+    position: relative;
+  }
+
+  .accounts-menu {
+    position: absolute;
+    top: 56px;
+    right: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .accounts-menu {
+    width: max-content;
+  }
+}
+
+.account-menu-li:hover .account-option,
+.account-menu-li:focus .account-option,
+.accounts-menu-item:hover .account-option,
+.accounts-menu-item:focus .account-option {
+  font-family: var(--medium-font);
+  font-weight: 500;
+}
+
+.account-option {
+  font-family: var(--regular-font);
+  line-height: 17px;
+  color: var(--dark-primary-green);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}
+
+.user-name {
+  font-family: var(--bold-font);
+  line-height: 1.2;
+  color: var(--dark-primary-green);
+  font-size: var(--large-font-size);
+  font-weight: 700;
+}
+
+.account-name {
+  font-family: var(--regular-font);
+  line-height: 1.2;
+  color: var(--primary-grey);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+}

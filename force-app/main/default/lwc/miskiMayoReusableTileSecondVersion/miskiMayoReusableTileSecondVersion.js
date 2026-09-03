@@ -1,0 +1,87 @@
+import { LightningElement, api } from 'lwc';
+import ICONS from '@salesforce/resourceUrl/miskiMayoReusableTiles';
+
+export default class MiskiMayoReusableTile extends LightningElement {
+    @api text;
+    @api textHead;
+    @api backGroundColor; //#ffffff;
+    @api backGroundBorderColor; // Default Miski Mayo border color #e32e12; backGroundBorderColor
+    @api iconName;
+    @api iconSize;
+    @api textColor;
+    @api textColorHead;
+    @api fontSize;
+    @api fontSizeHead;
+    @api cardHeight;
+    @api bottonTextHeight;
+
+    get iconUrl() {
+        return ICONS + `/${this.iconName}.svg`;
+    }
+
+    get cardStyle() {
+        return `
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid ${this.backGroundBorderColor};
+            border-radius: 1.25rem;
+            overflow: hidden;
+            width: 100%;
+            height: ${this.cardHeight}px;
+            text-align: center;
+            background-color:${this.backGroundColor};
+        `;
+    }
+
+    get iconStyle() {
+        return `
+            background-color:${this.backGroundColor};
+        `;
+    }
+
+    get iconSection() {
+        return `
+            padding: ${this.iconPadding}px 0;
+            background-color: white;
+        `;
+    }
+
+    get iconStyle() {
+        return `
+            max-width: ${this.iconSize}rem;
+            max-height: ${this.iconSize}rem;
+            z-index: 1;
+        `;
+    }
+
+    get iconSection() {
+        return `
+            margin-top: 1.5rem!important;
+            z-index: 1;
+        `;
+    }
+                
+    get bottomStyle() {
+        return `
+            background-color: ${this.backGroundBorderColor};
+            padding: 1rem;
+            padding-top: 0rem;
+            height: ${this.bottonTextHeight}px;
+        `;
+    }
+
+    get bottomStyleHead() {
+        return `
+            color: ${this.textColorHead};
+            font-size: ${this.fontSizeHead}px;
+        `;
+    }
+
+    get textBodyStyle() {
+        return `
+            color: ${this.textColor};
+            font-size: ${this.fontSize}px;
+        `;
+    }
+}

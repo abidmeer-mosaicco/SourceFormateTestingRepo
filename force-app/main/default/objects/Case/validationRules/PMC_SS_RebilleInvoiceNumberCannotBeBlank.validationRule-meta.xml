@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RebilleInvoiceNumberCannotBeBlank</fullName>
+    <active>true</active>
+    <description>Checks whether Rebill Invoice Number is blank or not</description>
+    <errorConditionFormula>AND(
+$RecordType.DeveloperName != &apos;CustomerService&apos;,
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Invoice Adjustments&apos;),
+AND(OR(ISPICKVAL( Status , &apos;Closed&apos;),ISPICKVAL( Status , &apos;Closure Pending&apos;)), OR(PMC_SS_RebillAmount__c = 0, ISBLANK(    PMC_SS_RebillAmount__c    ))))</errorConditionFormula>
+    <errorDisplayField>PMC_SS_RebillAmount__c</errorDisplayField>
+    <errorMessage>Rebill Amount cannot be blank or 0</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Quantity &amp; Quality-Draft survey / No Hol</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_CPQ_TermsConditionsData__c</field>
+        <value xsi:type="xsd:string">Quantity as determined independent draft survey, nominated by the seller, to govern and be final. Quality as stated on manufacturer&apos;s certificate or, at Seller&apos;s option, independent certificate of analysis to govern and be final. 
+Draft Survey report will be provided as part of vessel documentation. Seller will not provide a hold cleanliness certificate as part of vessel documentation.</value>
+    </values>
+</CustomMetadata>

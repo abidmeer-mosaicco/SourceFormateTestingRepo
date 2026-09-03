@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This email action will send an email alert to indirect opportunity owner when the Created Date on indirect opportunity is 14 days older than today.</description>
+        <name>IndirectOpportunity14DaysInactivityEmailAction</name>
+        <label>Indirect Opportunity 14 Days Inactivity Email Action</label>
+        <locationX>176</locationX>
+        <locationY>468</locationY>
+        <actionName>Opportunity.PMC_SS_NotifyOpportunityRetailerEmailAlert</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>AccountOwnerToListAssignment</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.PMC_SS_NotifyOpportunityRetailerEmailAlert</nameSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store Account Owner Ids of the account associated to respective opportunity</description>
+        <name>AccountOwnerToListAssignment</name>
+        <label>Account Owner To List Assignment</label>
+        <locationX>176</locationX>
+        <locationY>576</locationY>
+        <assignmentItems>
+            <assignToReference>lstAccountOwnerIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IndirectOpportunityCreated14DaysAgoNotificationSubFlow</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Process switch custom setting value check to bypass flow.</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>IndirectOpportunityCreated14DaysAgoDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Element to check if Indirect Opportunity was created 14 days ago.</description>
+        <name>IndirectOpportunityCreated14DaysAgoDecision</name>
+        <label>Indirect Opportunity Created 14 Days Ago Decision</label>
+        <locationX>440</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IndirectOpportunityCreated14DaysAgoDecision_OpportunityCreated14DaysAgoOutcome</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>strDaysSinceCreatedDateFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_IndirectOpportunity_CreatedDateDuration</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Indirect Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Hub Buyer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Hub Super Buyer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IndirectOpportunity14DaysInactivityEmailAction</targetReference>
+            </connector>
+            <label>Opportunity Created 14 Days Ago Outcome</label>
+        </rules>
+    </decisions>
+    <description>Scheduled flow to send email notification to opportunity owner and custom push notification to account owner when opportunity created date is 14 days older than today.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>strDaysSinceCreatedDateFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT( 
+    FLOOR(
+         NOW() - {!$Record.CreatedDate}
+    ) 
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the body of the notification</description>
+        <name>strNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;A Retailer Opportunity, &apos;+ {!$Record.Name} +&apos; is open for past &apos;+ {!$Label.PMC_SS_IndirectOpportunity_CreatedDateDuration} +&apos; days. A follow-up notification has been sent to Retailer, please work with Retailers to take an action on Opportunity.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Holds the Notification Title</description>
+        <name>strNotificationTitleFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;An Opportunity, &apos;+ {!$Record.Name} +&apos; is open for past &apos;+ {!$Label.PMC_SS_IndirectOpportunity_CreatedDateDuration} +&apos; days&apos;</expression>
+    </formulas>
+    <interviewLabel>PMC SS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Follow Up With Retailers For Opportunity Scheduler Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>strFlowName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-06-30</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Send Push Notification to Account Owner for the respective indirect opportunity when the Indirect Opportunity Created Date is 14 Days ago from today.</description>
+        <name>IndirectOpportunityCreated14DaysAgoNotificationSubFlow</name>
+        <label>Indirect Opportunity Created 14 Days Ago Notification Sub Flow</label>
+        <locationX>176</locationX>
+        <locationY>684</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstAccountOwnerIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>strNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>strNotificationTitleFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <description>This variable will store account owner IDs which is associated to respective opportunity</description>
+        <name>lstAccountOwnerIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>To store current flow name</description>
+        <name>strFlowName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>PMC_SS_FollowUpWithRetailersForOpportunitySchedulerFlow</stringValue>
+        </value>
+    </variables>
+</Flow>

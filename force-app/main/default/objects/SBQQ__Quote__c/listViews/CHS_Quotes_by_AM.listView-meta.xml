@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHS_Quotes_by_AM</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>PMC_CPQ_SAPContractReference__c</columns>
+    <columns>PMC_CPQ_ContractType__c</columns>
+    <columns>SBQQ__Account__c</columns>
+    <columns>NAME</columns>
+    <columns>PMC_CPQ_Incoterms__c</columns>
+    <columns>PMC_CPQ_ModeOfTransportation__c</columns>
+    <columns>PMC_CPQ_QuoteShortNameDescription__c</columns>
+    <columns>SBQQ__Status__c</columns>
+    <columns>PMC_CPQ_ContractStart__c</columns>
+    <columns>PMC_CPQ_ContractEnd__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>SBQQ__Account__c</field>
+        <operation>equals</operation>
+        <value>CHS INC</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>2/11/2026 12:00 AM</value>
+    </filters>
+    <label>CHS Quotes by AM</label>
+</ListView>

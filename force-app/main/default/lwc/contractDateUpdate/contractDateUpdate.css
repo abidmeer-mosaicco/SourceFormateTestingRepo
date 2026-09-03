@@ -1,0 +1,12 @@
+/* Main card wrapper */
+.slds-card {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure child components take full height and grow naturally */
+c-contract-date-update-selector {
+    display: block;
+    flex: 1 1 auto;
+}

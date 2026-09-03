@@ -1,0 +1,123 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Details",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"da00927e-ce78-456c-adbe-20e4e7b7de9e\",\"columns\":[{\"UUID\":\"36a56d02-601d-4a41-8db7-8911a9047851\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_orderDetails",
+              "id" : "3fa8bb0f-7f44-4d96-8e3b-ae429caad783",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_unauthorizedAccessPage",
+              "id" : "6e9e13c8-c4fd-4d77-811f-23c7b383389d",
+              "type" : "component"
+            } ],
+            "id" : "36a56d02-601d-4a41-8db7-8911a9047851",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "da00927e-ce78-456c-adbe-20e4e7b7de9e",
+          "type" : "component"
+        } ],
+        "id" : "3d45ca50-b4be-4b4e-b092-3e540f935db1",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Order Details",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "587e0d5f-b68f-4f3e-97d3-914f3daa5b8f",
+          "type" : "component"
+        } ],
+        "id" : "4b10e9f5-ab51-47b9-b4ab-8b74dfe3f660",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "66e93df2-ebf4-48d7-8ed3-c5b7bdec3833",
+      "type" : "component"
+    },
+    "contentOperations" : {
+      "operations" : [ {
+        "targetId" : "3fa8bb0f-7f44-4d96-8e3b-ae429caad783",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "6ca39c4b-8bdd-4380-989a-7ad054b93738",
+          "description" : "",
+          "criteriaType" : "AnyCriterionMatches",
+          "expressionCriteria" : [ {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Buyer",
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Contract Manager",
+            "criterionNumber" : 2
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Finance Manager",
+            "criterionNumber" : 3
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Logistics Manager",
+            "criterionNumber" : 4
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Super Buyer",
+            "criterionNumber" : 5
+          } ]
+        }
+      }, {
+        "targetId" : "6e9e13c8-c4fd-4d77-811f-23c7b383389d",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "e590f2ec-0150-4133-9dac-d5aae095c2e3",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Knowledge Only User",
+            "criterionNumber" : 1
+          } ]
+        }
+      } ]
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ycf0MQ9psBNvuSrdD8cHsC3r34nYXz",
+    "viewType" : "custom-order-details"
+  },
+  "urlName" : "order-details"
+}

@@ -1,0 +1,97 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "46efcca3-e1ef-4667-8383-3c80ce92548c",
+  "label" : "Minera Verde",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3126ac59-ae6b-4c49-8794-d64eaa2e1e77",
+          "columns" : [ {
+            "UUID" : "b4caf39c-924a-4092-a2ea-94566ecac82f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3126ac59-ae6b-4c49-8794-d64eaa2e1e77",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "a460b93d-c8ab-4cf5-816b-0aaeede1085c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b4caf39c-924a-4092-a2ea-94566ecac82f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "da254805-77f3-4e19-a52e-5f3fd842b637",
+          "columns" : [ {
+            "UUID" : "85fb0567-4c9c-4a33-96ec-2897a0e7c41b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "da254805-77f3-4e19-a52e-5f3fd842b637",
+      "regions" : [ {
+        "id" : "85fb0567-4c9c-4a33-96ec-2897a0e7c41b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "413d9d13-5891-4511-8e6d-ff8bc0124bb0",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Minera Verde"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b0fb09f3-80e5-4154-b6fd-ac7e2f26f18c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e7595266-ca90-4e90-b35e-88c8af024427",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-minera-verde"
+}

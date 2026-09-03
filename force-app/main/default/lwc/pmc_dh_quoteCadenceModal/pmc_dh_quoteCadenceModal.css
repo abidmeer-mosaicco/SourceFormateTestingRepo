@@ -1,0 +1,24 @@
+.modal-wrapper,
+.info-section,
+.info-text {
+  padding: 16px;
+}
+
+.monthly-quantity-section {
+  padding: 0px 16px;
+}
+
+.button-style {
+  display: flex;
+  justify-content: end;
+}
+
+.monthly-quantity-section .input-section .lbl-field-value {
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 767px) {
+  .button-style {
+    padding-bottom: 16px;
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field indicates whether a New Order was created in SAP or if the existing Order in SAP was updated. --></help>
+    <label><!-- Order Classification --></label>
+    <name>PMC_SS_OrderClassification__c</name>
+    <picklistValues>
+        <masterLabel>New Order</masterLabel>
+        <translation><!-- New Order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Order Change</masterLabel>
+        <translation><!-- No Order Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Updated Order</masterLabel>
+        <translation><!-- Updated Order --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

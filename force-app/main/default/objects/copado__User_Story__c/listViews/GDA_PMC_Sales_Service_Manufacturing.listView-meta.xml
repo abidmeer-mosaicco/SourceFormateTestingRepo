@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDA_PMC_Sales_Service_Manufacturing</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Project__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Project__c</field>
+        <operation>contains</operation>
+        <value>GDA PMC Sales,Service &amp; Manufacturing</value>
+    </filters>
+    <label>GDA PMC Sales, Service &amp; Manufacturing</label>
+    <sharedTo>
+        <group>Copado_Release_Managers</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Email Template for Acceptance of International Raw Material Contracts by AM</name>
+    <style>none</style>
+    <subject>{!SBQQ__Quote__c.SBQQ__Account__c} | {!SBQQ__Quote__c.PMC_CPQ_Document_ID__c} is Accepted</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

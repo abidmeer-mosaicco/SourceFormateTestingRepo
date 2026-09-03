@@ -1,0 +1,130 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "pmc_dh_customTheme",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"2ab37530-ae0a-424f-b306-48df9af653bd\",\"columns\":[{\"UUID\":\"ab46fb01-3a51-4f39-bb4d-e5ea16951d4c\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_guestHeader",
+              "id" : "834c8886-8577-48ec-a6e7-5a211d58b01c",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { },
+                "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}"
+              },
+              "definition" : "c:pmc_dh_header",
+              "id" : "1261502d-b94e-429e-91bb-66eb55bc1a0a",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "countType" : "UniqueProductCount",
+                "dxpStyle" : { },
+                "showCount" : true
+              },
+              "definition" : "commerce_builder:cartBadge",
+              "id" : "caa24f5f-5596-48c5-834b-340d5bed82c9",
+              "type" : "component"
+            } ],
+            "id" : "ab46fb01-3a51-4f39-bb4d-e5ea16951d4c",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "customCssClasses" : "head-wrapper",
+          "definition" : "dxp_layout:columns",
+          "id" : "2ab37530-ae0a-424f-b306-48df9af653bd",
+          "type" : "component"
+        } ],
+        "id" : "c841d4d2-ffd0-4801-9fba-b0171c457403",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_footer",
+          "id" : "71ad8723-a339-458b-b7b6-a8b1154877d2",
+          "type" : "component"
+        } ],
+        "id" : "1d227a53-58dd-4ab9-b1aa-4eb1892fe377",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_cookieConsentBanner",
+          "id" : "a6b3a0a1-f428-449f-94af-12e23236988c",
+          "type" : "component"
+        } ],
+        "id" : "d189d48c-e4d2-4173-a554-ba1937bb3b98",
+        "name" : "cookie",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_outage",
+          "id" : "fb072574-6a9f-44e4-987d-79021d9a99f0",
+          "type" : "component"
+        } ],
+        "id" : "6a1a1106-4de3-4fdd-9ef8-b3b75aabecda",
+        "name" : "outage",
+        "type" : "region"
+      } ],
+      "definition" : "c:pmc_dh_customTheme",
+      "id" : "406be585-163f-4d60-8bf2-06adf5d98cc5",
+      "type" : "component"
+    },
+    "contentOperations" : {
+      "operations" : [ {
+        "targetId" : "834c8886-8577-48ec-a6e7-5a211d58b01c",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "d3794778-5781-4a91-9d4a-f07d82407636",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : true,
+            "criterionNumber" : 1
+          } ]
+        }
+      }, {
+        "targetId" : "1261502d-b94e-429e-91bb-66eb55bc1a0a",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "4d01af22-25e3-4b38-adf9-cfd581e0250a",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          } ]
+        }
+      } ]
+    }
+  },
+  "urlName" : "pmc-dh-customtheme"
+}

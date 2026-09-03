@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SNOW_MosaicPayingReceivingCompany__c</fullName>
+    <label>Mosaic Paying / Receiving Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>4090</fullName>
+                <default>false</default>
+                <label>4090 - Mosaic Distribuição</label>
+            </value>
+            <value>
+                <fullName>4110</fullName>
+                <default>false</default>
+                <label>4110 - Fospar</label>
+            </value>
+            <value>
+                <fullName>4115</fullName>
+                <default>false</default>
+                <label>4115 - Bahamas</label>
+            </value>
+            <value>
+                <fullName>4350</fullName>
+                <default>false</default>
+                <label>4350 - Paraguay Mosaic</label>
+            </value>
+            <value>
+                <fullName>4460</fullName>
+                <default>false</default>
+                <label>4460 - IFC</label>
+            </value>
+            <value>
+                <fullName>4550</fullName>
+                <default>false</default>
+                <label>4550 - Mosaic Potássio</label>
+            </value>
+            <value>
+                <fullName>4560</fullName>
+                <default>false</default>
+                <label>4560 - Mosaic P&amp;K</label>
+            </value>
+            <value>
+                <fullName>4570</fullName>
+                <default>false</default>
+                <label>4570 - Terras Brasil</label>
+            </value>
+            <value>
+                <fullName>4690</fullName>
+                <default>false</default>
+                <label>4690 - Jupiter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

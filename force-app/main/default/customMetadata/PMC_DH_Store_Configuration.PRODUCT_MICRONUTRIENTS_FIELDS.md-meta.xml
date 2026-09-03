@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Product Micronutrients Fields</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_DH_Batch_Size__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_Country__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_DefaultUOMForCountry__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_Default_Image_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_FieldsAPIName__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;PMC_CPQ_Boron__c&quot;: &quot;Boron&quot;,
+  &quot;PMC_CPQ_Calcium__c&quot;: &quot;Calcium&quot;,
+  &quot;PMC_CPQ_Chlorine__c&quot;: &quot;Chlorine&quot;,
+  &quot;PMC_CPQ_Cobalt__c&quot;: &quot;Cobalt&quot;,
+  &quot;PMC_CPQ_Copper__c&quot;: &quot;Copper&quot;,
+  &quot;PMC_CPQ_Iron__c&quot;: &quot;Iron&quot;,
+  &quot;PMC_CPQ_Magnesium__c&quot;: &quot;Magnesium&quot;,
+  &quot;PMC_CPQ_Manganese__c&quot;: &quot;Manganese&quot;,
+  &quot;PMC_CPQ_Molybdenum__c&quot;: &quot;Molybdenum&quot;,
+  &quot;PMC_CPQ_Silicone__c&quot;: &quot;Silicone&quot;,
+  &quot;PMC_CPQ_Sulfur__c&quot;: &quot;Sulfur&quot;,
+  &quot;PMC_CPQ_Zinc__c&quot;: &quot;Zinc&quot;
+}</value>
+    </values>
+    <values>
+        <field>PMC_DH_PageUrl__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_Prepended_Image_Url__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_Product_Max_Result__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_QuoteInactiveExtendedDays__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_QuoteInactiveExtendedHours__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PMC_DH_isActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

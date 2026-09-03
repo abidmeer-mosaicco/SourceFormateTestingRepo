@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <targetField>email_opens_mock__dll.InternalOrganization__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>if(ISEMPTY(formulaField[&apos;EventDate&apos;])) { null; } else { DAYPRECISION(formulaField[&apos;EventDate&apos;]); }</sourceFormula>
+        <targetField>email_opens_mock__dll.cdp_sys_PartitionDate__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.Location__c</sourceField>
+        <sourceFormula>Location</sourceFormula>
+        <targetField>email_opens_mock__dll.Location__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.CampaignName__c</sourceField>
+        <sourceFormula>CampaignName</sourceFormula>
+        <targetField>email_opens_mock__dll.CampaignName__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>UploadedFiles</sourceFormula>
+        <targetField>email_opens_mock__dll.DataSource__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.EmailAddress__c</sourceField>
+        <sourceFormula>EmailAddress</sourceFormula>
+        <targetField>email_opens_mock__dll.EmailAddress__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.Device__c</sourceField>
+        <sourceFormula>Device</sourceFormula>
+        <targetField>email_opens_mock__dll.Device__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&apos;email_opens_mock.csv&apos;</sourceFormula>
+        <targetField>email_opens_mock__dll.DataSourceObject__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.EmailId__c</sourceField>
+        <sourceFormula>EmailId</sourceFormula>
+        <targetField>email_opens_mock__dll.EmailId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.EventDate__c</sourceField>
+        <sourceFormula>EventDate</sourceFormula>
+        <targetField>email_opens_mock__dll.EventDate__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>email_opens_mock.EventTime__c</sourceField>
+        <sourceFormula>EventTime</sourceFormula>
+        <targetField>email_opens_mock__dll.EventTime__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>email_opens_mock_map_email_opens_mock_1753113671232</masterLabel>
+    <sourceObjectName>email_opens_mock</sourceObjectName>
+    <targetObjectName>email_opens_mock__dll</targetObjectName>
+</ObjectSourceTargetMap>

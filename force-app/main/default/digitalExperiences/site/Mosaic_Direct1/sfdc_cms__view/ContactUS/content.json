@@ -1,0 +1,63 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "ContactUS",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"dd322b2e-2277-430f-aff2-7cc0e1bea084\",\"columns\":[{\"UUID\":\"43f4c720-9fa9-46c5-a792-2e4a9091f3dc\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_contactUs",
+              "id" : "4dd5027f-865b-44fe-9fbb-c37dc964e53e",
+              "type" : "component"
+            } ],
+            "id" : "43f4c720-9fa9-46c5-a792-2e4a9091f3dc",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "dd322b2e-2277-430f-aff2-7cc0e1bea084",
+          "type" : "component"
+        } ],
+        "id" : "6ffca0dc-c508-4306-8c8e-e6f5dd75d725",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "ContactUS",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "9f5fa5d5-f787-4094-90a8-6f993bf20bcb",
+          "type" : "component"
+        } ],
+        "id" : "8039b028-434e-45d0-a55e-9ddedae26bdc",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "53952ca7-25a5-43ef-b2ef-1964ce0c2762",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ycf0MQ9psBNvuSrdD8cHsC3r34nYXz",
+    "viewType" : "custom-contactus"
+  },
+  "urlName" : "contactus"
+}

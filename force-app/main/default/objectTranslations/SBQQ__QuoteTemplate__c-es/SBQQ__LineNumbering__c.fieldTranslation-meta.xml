@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Especifique cómo numerar los ítems de línea en los documentos generados. &quot;Empezar por el presupuesto&quot; numera todas las líneas secuencialmente a través de los grupos (si los hay). &quot;Empezar en el grupo&quot; restablece los números dentro de cada grupo.&quot;</help>
+    <label>Numeración de líneas</label>
+    <name>SBQQ__LineNumbering__c</name>
+    <picklistValues>
+        <masterLabel>Start at group</masterLabel>
+        <translation>Empezar en el grupo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Start at quote</masterLabel>
+        <translation>Empezar por el presupuesto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

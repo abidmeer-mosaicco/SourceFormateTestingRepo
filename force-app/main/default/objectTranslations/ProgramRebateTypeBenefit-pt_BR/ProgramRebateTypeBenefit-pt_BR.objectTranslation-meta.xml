@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Não é possível criar/atualizar o benefício de tipo de bônus quando o programa de bônus estiver inativo</errorMessage>
+        <name>PMC_SS_RebateTypeBenefitModification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O benefício de tipo de bônus não pode ser criado/editado nesse estágio. Altere o Contrato de Vendas para fazer revisões no Benefício do Tipo de Rebate.</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeBenefitEdit</name>
+    </validationRules>
+</CustomObjectTranslation>

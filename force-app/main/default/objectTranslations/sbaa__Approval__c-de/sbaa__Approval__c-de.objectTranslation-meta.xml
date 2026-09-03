@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Genehmigung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Genehmigungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungen --></value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RequestFields --></label>
+        <name>sbaa__RequestFields</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Genehmigungsnummer</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Comments is required when rejecting a case --></errorMessage>
+        <name>Rejection_with_Comment</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- ApproveFromRecordPage --></label>
+        <name>ApproveFromRecordPage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MassApproval --></label>
+        <name>MassApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MassReject --></label>
+        <name>MassReject</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Recall --></label>
+        <name>Recall</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RejectFromRecordPage --></label>
+        <name>RejectFromRecordPage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Approve --></label>
+        <name>sbaa__Approve</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reassign --></label>
+        <name>sbaa__Reassign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reject --></label>
+        <name>sbaa__Reject</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ResendRequestEmail --></label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

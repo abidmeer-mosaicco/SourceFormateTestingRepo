@@ -1,0 +1,60 @@
+<apex:component controller="PMC_SS_Case_AA_EmailTemplate_ctrl" access="global">
+    <apex:attribute name="cseId" type="Id" assignTo="{!caseId}" description="Case ID to load"/>
+    <apex:attribute name="apprvalId" type="Id" assignTo="{!approvalId}" description="Approval ID to load"/>
+    
+    <html>
+    <body>
+        <p>Hello {!approvalRecord.sbaa__Approver__r.Name},</p>
+        
+        <p>A Cancel/Rebill case for <strong>{!caseRecord.Account.Name}</strong> has been submitted for your approval.</p>
+
+        <p>Please review and approve the following Cancel/Rebill case:</p>
+		<p style="font-family: Arial, sans-serif;"><a href="{!caseLink}" target="_blank">Click here</a> to view all details of the case.</p>
+
+        <h3>Case Summary:</h3>
+        <ul>
+            <li>
+             <p><strong>Case ID:</strong> {!caseRecord.CaseNumber}</p>
+            </li>
+        	<li>
+                <p><strong>Customer Name:</strong> {!caseRecord.Account.Name}</p>
+            </li>
+        	<li>
+                <p><strong>Case Subject:</strong> {!caseRecord.Subject}</p>
+            </li>
+            <li>
+                <p><strong>Case Description:</strong> {!caseRecord.Description}</p>
+            </li>
+            <li>
+                <p><strong>At Fault Party:</strong> {!caseRecord.PMC_SS_AtFaultParty__c}</p>
+            </li>
+            <li>
+                <p><strong>Location:</strong> {!caseRecord.PMC_SS_Location__r.Name}</p>
+            </li>
+        </ul>
+        
+        <h3>Invoice Details:</h3>
+        <table border="1" cellpadding="5" cellspacing="0" width="100%" style="border-collapse: collapse; border: 1px solid #000;">
+            <tr style="background-color: #f2f2f2;">
+               <th style="border: 1px solid #000; text-align: center;">Original Invoice Amount:</th>
+               <th style="border: 1px solid #000; text-align: center;">Invoice Rebill Amount:</th>
+               <th style="border: 1px solid #000; text-align: center;">Invoice Delta:</th>
+               <th style="border: 1px solid #000; text-align: center;">MOT:</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #000; text-align: center;">{!formattedOriginalInvoiceAmount}</td>
+                <td style="border: 1px solid #000; text-align: center;">{!formattedRebillAmount}</td>
+                <td style="border: 1px solid #000; text-align: center;">{!formattedInvoiceDifference}</td>
+                <td style="border: 1px solid #000; text-align: center;">{!caseRecord.PMC_SS_MOT__c}</td>
+            </tr>
+         </table>
+
+        <p>If you have any questions or require additional information, please don’t hesitate to contact us.</p>
+
+        <p><a href="{!approvalLink}" target="_blank">Click on this link to approve the Rebill</a>.</p>
+
+        <p>Thank you,<br/>
+        {!approvalRecord.CreatedBy.name}</p>
+    </body>
+    </html>
+</apex:component>

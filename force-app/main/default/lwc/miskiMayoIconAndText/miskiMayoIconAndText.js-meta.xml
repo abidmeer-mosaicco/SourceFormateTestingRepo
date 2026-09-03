@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <!-- (1) Ícone -->
+            <property name="iconName" type="String" label="Icon Name (file without .svg)" description="Icon file name within the Static Resource (e.g. 'fertilizante')." required="true" default="fertilizante"/>
+            <property name="iconSize" type="String" label="Icon Size (rem)" description="Icon size in rem (number only)" default="6"/>
+            <property name="iconAlt" type="String" label="Icon Alt Text" description="Accessibility alternative text for the icon (if empty, uses the Header)."/>
+
+            <!-- (2) Texto - Header -->
+            <property name="headerText" type="String" label="Header Text" description="Header Text" default="Header Title"/>
+            <property name="headerFontSize" type="String" label="Header Text Font Size (px)" description="Header font size in pixels" default="22"/>
+            <property name="headerFontWeight" type="String" label="Header Text Weight" description="Header Weight (e.g. 400, 600, 700 or 'bold')" default="700"/>
+
+            <!-- (2) Texto - Body -->
+            <property name="bodyText" type="String" label="Body Text" description="Body Text" default="Content description. This is the body of the text."/>
+            <property name="bodyFontSize" type="String" label="Body Text Font Size (px)" description="Body font size in pixels" default="16"/>
+            <property name="bodyFontWeight" type="String" label="Body Text Weight" description="Body Weight (e.g.: 400, 500, 600)" default="400"/>
+
+            <!-- Opcionais úteis -->
+            <property name="textColor" type="String" label="Text Color" description="Text color (HEX, RGB or CSS name)" default="#111"/>
+            <property name="maxTextWidth" type="String" label="Max Text Width (px)" description="Maximum text width to avoid very long lines (0 for no limit)" default="900"/>
+            <property name="horizontalGapRem" type="String" label="Horizontal Gap (rem)" description="Horizontal space between icon and text, in rem" default="1.25"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

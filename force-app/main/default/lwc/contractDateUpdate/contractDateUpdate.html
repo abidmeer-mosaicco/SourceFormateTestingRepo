@@ -1,0 +1,105 @@
+<template>
+    <div class="style-container"></div>
+    <iframe
+        src="/apex/PMC_CPQ_EventListenerBridge?event=/event/MassUpdateEvent__e"
+        style="display:none;"
+        tabindex="-1">
+    </iframe>
+    <div class="slds-var-m-bottom_large">
+        <c-progress-path stages={stages} onstageclick={handleStageClick}></c-progress-path>
+    </div>
+    <div class="slds-card slds-var-m-top_small slds-var-p-around_medium">
+        <template if:true={isProcessingStage}>
+            <lightning-card title={labels.CARD_PROCESSING} icon-name="utility:refresh">
+                <div class="slds-var-p-around_medium slds-var-m-bottom_small slds-var-m-top_small">
+                    <p>{labels.TEXT_PROCESSING}</p>
+                    <lightning-progress-bar value={processingPercent}></lightning-progress-bar>
+                </div>
+            </lightning-card>
+        </template>
+        <template if:true={isSelectStage}>
+            <c-contract-date-update-selector
+                execution-id={executionId}
+                onrecordsselected={handleRecordsSelected}
+                onprocess={handleProcessRequest}
+                onexecutioncreated={handleExecutionCreated}
+                columns={columns}
+            ></c-contract-date-update-selector>
+        </template>
+        <template if:true={isGenerateAmendmentsStage}>
+            <div class="slds-var-m-around_small slds-grid slds-grid_align-end slds-grid_vertical-align-center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end" style="gap:0.5rem">
+                    <lightning-button class="slds-var-m-left_x-small" label={labels.STAGE_GENERATE_AMENDMENTS} variant="brand" onclick={handleGenerateAmendments}></lightning-button>
+                    <lightning-button-icon class="slds-m-left_x-small" icon-name="utility:refresh" alternative-text={labels.BUTTON_REFRESH} onclick={handleRefreshLines} variant="border-filled" size="medium"></lightning-button-icon>
+                </div>
+            </div>
+            <c-contract-date-update-datatable
+                columns={columns}
+                data={orderedLines}
+                key-field="Id"
+                selected-rows={selectedRowIds}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onrefreshlines={handleRefreshLines}
+                onsave={handleSaveGenerateAmendments}
+            >
+            </c-contract-date-update-datatable>
+        </template>
+        <template if:true={isCheckEligibilityStage}>
+            <div class="slds-var-m-around_small slds-grid slds-grid_align-end slds-grid_vertical-align-center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end" style="gap:0.5rem">
+                    <lightning-button class="slds-var-m-left_x-small" label={labels.STAGE_CHECK_ELIGIBILITY} variant="brand" onclick={handleCheckEligibility}></lightning-button>
+                    <lightning-button-icon class="slds-m-left_x-small" icon-name="utility:refresh" alternative-text={labels.BUTTON_REFRESH} onclick={handleRefreshLines} variant="border-filled" size="medium"></lightning-button-icon>
+                </div>
+            </div>
+            <c-contract-date-update-datatable
+                columns={columns}
+                data={orderedLines}
+                key-field="Id"
+                selected-rows={selectedRowIds}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onrefreshlines={handleRefreshLines}
+            >
+            </c-contract-date-update-datatable>
+        </template>
+
+        <template if:true={isSubmitForApprovalStage}>
+            <div class="slds-var-m-around_small slds-grid slds-grid_align-end slds-grid_vertical-align-center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end" style="gap:0.5rem">
+                    <lightning-button class="slds-var-m-left_x-small" label={labels.STAGE_SUBMIT_FOR_APPROVAL} variant="brand" onclick={handleSubmitForApproval}></lightning-button>
+                    <lightning-button-icon class="slds-m-left_x-small" icon-name="utility:refresh" alternative-text={labels.BUTTON_REFRESH} onclick={handleRefreshLines} variant="border-filled" size="medium"></lightning-button-icon>
+                </div>
+            </div>
+            <c-contract-date-update-datatable
+                columns={columns}
+                data={orderedLines}
+                key-field="Id"
+                selected-rows={selectedRowIds}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onrefreshlines={handleRefreshLines}
+            >
+            </c-contract-date-update-datatable>
+        </template>
+
+        <template if:true={isGenerateContractsStage}>
+            <div class="slds-var-m-around_small slds-grid slds-grid_align-end slds-grid_vertical-align-center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end" style="gap:0.5rem">
+                    <lightning-button class="slds-var-m-left_x-small" label={labels.STAGE_GENERATE_CONTRACTS} variant="brand" onclick={handleGenerateContracts}></lightning-button>
+                    <lightning-button-icon class="slds-m-left_x-small" icon-name="utility:refresh" alternative-text={labels.BUTTON_REFRESH} onclick={handleRefreshLines} variant="border-filled" size="medium"></lightning-button-icon>
+                </div>
+            </div>
+            <c-contract-date-update-datatable
+                columns={columns}
+                data={orderedLines}
+                key-field="Id"
+                selected-rows={selectedRowIds}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onrefreshlines={handleRefreshLines}
+            >
+            </c-contract-date-update-datatable>
+        </template>
+    </div>
+</template>

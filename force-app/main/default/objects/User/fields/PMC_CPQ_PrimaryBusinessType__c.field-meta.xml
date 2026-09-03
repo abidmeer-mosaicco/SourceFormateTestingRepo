@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_PrimaryBusinessType__c</fullName>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_SalesRegion__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>PMC_CPQ_QuoteBusinessType</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2C - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Specialties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2C - Paraguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Potash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Raw Material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Co-Products</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

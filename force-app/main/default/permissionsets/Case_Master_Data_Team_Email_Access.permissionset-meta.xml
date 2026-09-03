@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>not able to send an email from the customer.service@mosaicco.com and customerservice.brasil@mosaicco.com email address from a case in Salesforce.</description>
+    <emailRoutingAddressAccesses>
+        <enabled>true</enabled>
+        <name>china_accountdatarequests@mosaicco.com</name>
+    </emailRoutingAddressAccesses>
+    <emailRoutingAddressAccesses>
+        <enabled>true</enabled>
+        <name>china_productdatarequests@mosaicco.com</name>
+    </emailRoutingAddressAccesses>
+    <emailRoutingAddressAccesses>
+        <enabled>true</enabled>
+        <name>india_accountdatarequests@mosaicco.com</name>
+    </emailRoutingAddressAccesses>
+    <emailRoutingAddressAccesses>
+        <enabled>true</enabled>
+        <name>india_productdatarequests@mosaicco.com</name>
+    </emailRoutingAddressAccesses>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Case Master Data Team Email Access</label>
+    <license>Salesforce</license>
+</PermissionSet>

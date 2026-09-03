@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-28-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-input type="file" 
+        accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf"
+        label={title} onchange={openfileUpload}>
+    </lightning-input>    
+    <template if:true={fileData}>
+        <p class="body">File Uploaded Successfully</p>
+    </template>
+</template>

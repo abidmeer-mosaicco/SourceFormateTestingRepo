@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Refers to the limit of the query in the start method of SetupAuditTrailImpersonatedBatch. Defaults to 50,000 if not specified. Raise this to capture more results (batch will take longer). Lower it if we&apos;re getting a query timeout. NOTE: If the SetupAudTrailImpBatch DisableFullQuery is checked/enabled, this batch configuration will have no effect and is not needed. --></help>
+    <label><!-- SetupAuditTrailImpersonatedBatch Limit --></label>
+    <name>sc_ext__SetupAuditTrailImpersonatedBatch_Limit__c</name>
+</CustomFieldTranslation>

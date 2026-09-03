@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to send email to Retailer for Lead acceptance or Rejection</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC_SS_RetailerLeadReviewEmailTemplate</name>
+    <relatedEntityType>Lead</relatedEntityType>
+    <style>none</style>
+    <subject>You Have a New Potential Lead</subject>
+    <textOnly>[Image alt text: Mosaic]
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_HelloText} {{{Recipient.PMC_SS_OwnerFullName__c}}},
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_LeadInformation}
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_LeadName} {{{Recipient.FirstName}}} {{{Recipient.LastName}}}
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_LeadProdInterest} {{{Recipient.PMC_SS_LatestProductInterests__c}}}
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_LeadReviewText} {Label.PMC_SS_MosaicDirect_SiteName} &lt; {Label.PMC_SS_MosaicDirect_SiteBaseURL}{Label.PMC_SS_MosaicDirect_SiteURLPath} &gt; 
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_ThankYouText}
+
+{Label.PMC_SS_RetailerLeadEmailTemplate_SalesforceTeamText}</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

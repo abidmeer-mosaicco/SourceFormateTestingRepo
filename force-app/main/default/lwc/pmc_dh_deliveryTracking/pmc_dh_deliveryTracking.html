@@ -1,0 +1,69 @@
+<template>
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_breadcrumb crumbs={crumbs} oncustomnavigateev={landToOrderDetailsView}></c-pmc_dh_breadcrumb>
+    <div class="delivery-tracking-head text-bold-xxlarge text-color-dark-primary-green">
+      {labels.pmc_deliveryTracking_deliveryTracking}</div>
+    <template if:false={isShipmentView}>
+      <div class="back-to-ord-line text-medium-large text-color-dark-primary-green"
+        onclick={navigateToOrderLineDetails}>
+        {labels.pmc_deliveryTracking_backToOrderLine} #{orderLineNum}</div>
+    </template>
+    <c-pmc_dh_delivery-progress-steps steps-data={stepsData}>
+    </c-pmc_dh_delivery-progress-steps>
+
+    <div class="custom-card delivery-details-card">
+      <div class="card-header">{labels.pmc_deliveryTracking_deliveryDetails}</div>
+      <div class="card-body delivery-details-card-body">
+        <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_orderHistory_orderNumber}</div>
+            <div class="lbl-field-value">{deliveryTrackingData.strOrderNumber}</div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_homepage_product}</div>
+            <div class="lbl-field-value del-product">{deliveryTrackingData.strProductName}</div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_deliveryTracking_shipper}</div>
+            <div class="lbl-field-value">{deliveryTrackingData.strShipper}</div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_deliveryTracking_carrier}</div>
+            <div class="lbl-field-value">{deliveryTrackingData.strCarrier}</div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_shipmentDetails_eta}</div>
+            <div class="lbl-field-value">{deliveryTrackingData.datETA}</div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_1-of-6 del-detail-cont">
+            <div class="lbl-field-name">{labels.pmc_deliveryTracking_deliveryStatus}</div>
+            <div class="badge-info">
+              <span class="badge">
+                {deliveryTrackingData.strDeliveryStatus}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress-map-container">
+      <template if:true={deliveryTrackingData.deliveryProgress}>
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 del-progress">
+          <c-pmc_dh_delivery-progress delivery-progress={deliveryTrackingData.deliveryProgress}>
+          </c-pmc_dh_delivery-progress>
+        </div>
+      </template>
+      <div class="slds-col slds-size_12-of-12 slds-medium-size_8-of-12 map-container">
+        <template if:true={deliveryTrackingData.mapMarkers}>
+          <lightning-map class="delivery-map" map-markers={deliveryTrackingData.mapMarkers} zoom-level={zoomLevel}>
+          </lightning-map>
+        </template>
+      </div>
+    </div>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

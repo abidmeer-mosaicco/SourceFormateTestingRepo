@@ -1,0 +1,209 @@
+<template>
+  <!-- SLDS Modal -->
+  <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open add-members-modal">
+    <div class="slds-modal__container add-members-container">
+
+      <!-- Header with right-aligned actions -->
+      <header class="slds-modal__header add-members-header">
+        <h2 class="slds-modal__title slds-hyphenate">Add Members</h2>
+
+        <!-- Actions (top-right) -->
+        <div class="add-members-actions">
+          <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={saveDisabled}></lightning-button>
+        <!--  <lightning-button class="slds-m-left_x-small" variant="neutral" label="Save &amp; More" onclick={handleSaveAndMore}></lightning-button> -->
+          <lightning-button class="slds-m-left_x-small" variant="neutral" label="Cancel" onclick={close}></lightning-button>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="slds-modal__content slds-p-around_medium add-members-content">
+        <!-- Info text -->
+        <p>{infoText}</p>
+
+        <!-- Checkboxes -->
+        <div class="slds-form-element add-members-checks">
+          <lightning-input
+            type="checkbox"
+            label="Automatically add my default opportunity team to opportunities that I create or opportunities that are transferred to me"
+            checked
+            disabled>
+          </lightning-input>
+
+          <lightning-input
+            class="slds-m-top_x-small"
+            type="checkbox"
+            label="Update open opportunity teams with these members"
+            checked
+            disabled>
+          </lightning-input>
+        </div>
+
+        <!-- Grid -->
+        <div class="add-members-grid-wrapper">
+          <div class="slds-box slds-m-top_small add-members-grid">
+
+            <!-- Table header -->
+            <div class="slds-grid slds-wrap add-members-header-row">
+              <div class="slds-col add-col-user slds-text-title_bold">User</div>
+              <div class="slds-col add-col-access slds-text-title_bold">Opportunity Access</div>
+              <div class="slds-col add-col-role slds-text-title_bold">Team Role</div>
+              <!-- No remove icon in header; keep it in rows -->
+            </div>
+
+            <!-- Rows -->
+
+            
+            <template for:each={rows} for:item="row">
+              <!-- IMPORTANT: no slds-wrap on row; keep on one line -->
+              <div key={row.uid} class="slds-grid slds-gutters slds-grid_vertical-align-center add-members-row">
+
+                <!-- USER (flex-grow) -->
+                <div class="slds-col slds-grow add-col-user">
+                  <div class="slds-grid slds-wrap add-user-row">
+                    <div class="slds-col add-user-type">
+                      <lightning-combobox
+                        name="userType"
+                        value={row.userType}
+                        options={userTypeOptions}
+                        data-uid={row.uid}
+                        onchange={handleUserTypeChange}>
+                      </lightning-combobox>
+                    </div>
+
+                    <div class="slds-col add-user-input">
+                      <!-- Position relative so dropdown can be absolutely positioned inside -->
+                      <div class="add-user-input-wrap slds-position_relative">
+                        <lightning-input
+                          type="text"
+                          placeholder="Type to search users"
+                          value={row.userName}
+                          data-uid={row.uid}
+                          onchange={handleUserNameChange}
+                          onkeyup={handleUserNameKeyup}
+                          onfocus={openResultsForRow}
+                          class="user-input">
+                        </lightning-input>
+
+                     
+
+
+<!-- Results dropdown -->
+<template if:true={row.showResults}>
+  <!-- Only show panel once min chars are met -->
+  <template if:true={minCharsMet}>
+    <div class="add-user-results" role="listbox" aria-label="User search results">
+      <!-- Spinner while searching -->
+      <template if:true={isSearching}>
+        <div class="add-user-option add-user-option--empty" role="option" tabindex="-1">
+          <lightning-spinner size="small" alternative-text="Searching"></lightning-spinner>
+        </div>
+      </template>
+
+      <!-- Results -->
+      <template if:true={hasSearchResults}>
+        <template for:each={searchResults} for:item="usr">
+          <div
+            key={usr.Id}
+            class="add-user-option"
+            role="option"
+            tabindex="0"
+            data-id={usr.Id}
+            data-name={usr.Name}
+            data-uid={row.uid}
+            onclick={handlePickUser}
+            onkeydown={handlePickUserKey}
+          >
+            <div class="add-user-option__avatar">
+              <template if:true={usr.SmallPhotoUrl}>
+                <img src={usr.SmallPhotoUrl} alt="" class="add-user-option__avatar-img" />
+              </template>
+              <template if:false={usr.SmallPhotoUrl}>
+                <lightning-icon icon-name="standard:user" size="small"></lightning-icon>
+              </template>
+            </div>
+
+            <div class="add-user-option__text">
+              <div class="add-user-option__name slds-truncate" title={usr.Name}>
+                {usr.Name}
+              </div>
+              <div class="add-user-option__meta slds-text-color_weak slds-truncate">
+                <template if:true={usr.hasTitle}>{usr.Title}</template>
+                <template if:true={usr.hasTitleAndDept}>
+                  <span class="dot"> · </span>
+                </template>
+                <template if:true={usr.hasDept}>{usr.Department}</template>
+                <template if:false={usr.hasTitleOrDept}>{usr.Username}</template>
+              </div>
+            </div>
+          </div>
+        </template>
+      </template>
+
+      <!-- No matches only after a search has completed -->
+      <template if:true={hasSearched}>
+        <template if:false={hasSearchResults}>
+          <div class="add-user-option add-user-option--empty" role="option" tabindex="-1">
+            <span class="slds-text-color_weak">No matches. Type a different name.</span>
+          </div>
+        </template>
+      </template>
+    </div>
+  </template>
+</template>
+ </div> <!-- /add-user-input-wrap -->
+                    </div> <!-- /add-user-input -->
+                  </div> <!-- /add-user-row -->
+                </div> <!-- /add-col-user -->
+
+                <!-- ACCESS -->
+                <div class="slds-col add-col-access">
+                  <lightning-combobox
+                    name="oppAccess"
+                    value={row.access}
+                    options={accessOptions}
+                    data-uid={row.uid}
+                    onchange={handleAccessChange}>
+                  </lightning-combobox>
+                </div>
+
+                <!-- ROLE -->
+                <div class="slds-col add-col-role">
+                  <lightning-combobox
+                    name="role"
+                    label="Team Role"
+                    value={row.role}
+                    placeholder="Select Role"
+                    options={roleOptions}
+                    data-uid={row.uid}
+                    onchange={handleRoleChange}
+                    title={row.role}>
+                  </lightning-combobox>
+                </div>
+
+                <!-- REMOVE (per row; non-shrink) -->
+                <div class="slds-col slds-shrink-none slds-align_absolute-center remove-col">
+                  <lightning-button-icon
+                   
+                   icon-name="utility:delete"
+                    alternative-text="Remove"
+                    title="Remove this row"
+                    variant="bare"
+                    size="large"
+                    data-uid={row.uid}
+                    onclick={handleRemoveRow}
+                    disabled={isBusy}>
+                  </lightning-button-icon>
+                </div>
+ </div>
+            </template>
+</div> <!-- /add-members-grid -->
+        </div> <!-- /add-members-grid-wrapper -->
+  </div> 
+<footer class="slds-modal__footer slds-grid slds-grid_align-end">
+        <lightning-button variant="brand" label="Add Row" onclick={handleAddRow}></lightning-button>
+      </footer>
+  </div> <!-- /modal__container -->
+  </section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+<lightning-flow onchange="{handleFlowStatusChange}" style="height:0; opacity:0;"></lightning-flow>
+</template>

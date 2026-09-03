@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SNOW_TicketLink__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(  SUBSTITUTE(SUBSTITUTE( $CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.ServiceNowTicket_URL.PMC_SS_SNOW_SolutionEndPoint__c ,&apos;SNTableName&apos;, CASE( PMC_SS_ServiceNowTicketType__c , 
+ &apos;Customer Credit Analysis&apos;, $CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Customer_Credit_Analysis.PMC_SS_SNOW_TableName__c,
+ &apos;Release of Paid Contracts&apos;, $CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Release_of_Paid_Contracts.PMC_SS_SNOW_TableName__c,
+ &apos;Perform Warranty&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Perform_Warranty.PMC_SS_SNOW_TableName__c,
+ &apos;Warranty Formalization&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Warranty_Formalization.PMC_SS_SNOW_TableName__c,
+ &apos;Use of Credits, Return, Receipt of Discharge and Reports&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Use_of_Credits_Return_Receipt.PMC_SS_SNOW_TableName__c,
+ &apos;Collections Portal&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Collections_Portal.PMC_SS_SNOW_TableName__c,
+ &apos;Circularization Letters – Clients&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Circularization_Letters_Clients.PMC_SS_SNOW_TableName__c,
+ &apos;Debit or Credit Notes&apos;,$CustomMetadata.PMC_SS_SNOW_SolutionWithEndPoint__mdt.Debit_or_Credit_Notes.PMC_SS_SNOW_TableName__c,&apos;&apos;)),&apos;SNTicketId&apos;, PMC_SS_SNOW_ServiceNowTicketSyncId__c),&apos;Ticket Link&apos;)</formula>
+    <label>ServiceNow Ticket Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

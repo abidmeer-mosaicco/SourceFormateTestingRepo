@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Queue to validade Sold-to Accounts Extensions for 4004 and 4005 Sales Orgs</description>
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>pricing.brasil@mosaicco.com</email>
+    <name>Pricing</name>
+    <queueMembers>
+        <users>
+            <user>alessandro.ramos@mosaicco.com</user>
+            <user>emili.almeida@mosaicco.com.prod</user>
+            <user>erika.campos@mosaicco.com.prod</user>
+            <user>fernando.ramiro@mosaicco.com.prod</user>
+            <user>franciele.souza@mosaicco.com.prod</user>
+            <user>lucas.donvito@mosaicco.com</user>
+            <user>lucas.maemura@mosaicco.com.prod</user>
+            <user>nathalia.novais@mosaicco.com</user>
+            <user>nathalia.severo@mosaicco.com</user>
+            <user>vinicius.pinto@mosaicco.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>FlowOrchestrationWorkItem</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_StatusNotEditable</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+AND(
+CONTAINS( $Profile.Name , &apos;Digital Hub&apos; ) ,
+ ISCHANGED( Status ),  
+ ISNULL(ClosedDate)
+), 
+AND(
+CONTAINS( $Profile.Name , &apos;Digital Hub&apos; ) ,
+ ISCHANGED( Status ),
+ ISPICKVAL( PRIORVALUE(Status), &apos;Closed&apos;)&amp;&amp; NOT( ISPICKVAL(Status, &apos;Re-Open&apos;))
+)
+)</errorConditionFormula>
+    <errorMessage>User can&apos;t update the Case Status field.</errorMessage>
+</ValidationRule>

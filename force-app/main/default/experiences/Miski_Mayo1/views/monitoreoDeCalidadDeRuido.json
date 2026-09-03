@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "35f01764-7bf2-4c51-aab9-70d244f32578",
+  "label" : "Monitoreo de Calidad De Ruido",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4080413e-474c-403e-b8c4-493a3f34441e",
+          "columns" : [ {
+            "UUID" : "5e6a26d6-04c7-4fd8-9fa3-ea2b1bacf1a7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4080413e-474c-403e-b8c4-493a3f34441e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "90b4c99e-cba6-4247-b988-dd53f9e63121",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5e6a26d6-04c7-4fd8-9fa3-ea2b1bacf1a7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8130975f-f988-445d-9540-a4e419859e89",
+          "columns" : [ {
+            "UUID" : "2967d736-d397-4de4-ae25-d99cfb80c1f6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8130975f-f988-445d-9540-a4e419859e89",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP20"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "ec9e1d1f-f468-439c-a8fb-6f7618e0ed2c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2967d736-d397-4de4-ae25-d99cfb80c1f6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "561c9cf6-1a58-44a2-929f-e1e8aa924231",
+          "columns" : [ {
+            "UUID" : "87918704-553d-48fc-8463-8f6e4ba7299f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6dcffd0f-2bfb-4763-8206-bf70e57c652a",
+            "columnKey" : "fd313",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "432a2c28-706e-42c4-851c-f27eb5a9fd13",
+            "columnKey" : "9ce45",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5cfde45d-34b9-430e-a850-ae5d5fb8cf70",
+            "columnKey" : "3626e",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ad5735fe-3a59-4f60-b31c-257830365214",
+            "columnKey" : "5ca39",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5fe3b1b9-90c0-44c7-ab35-6eee062437d2",
+            "columnKey" : "c6ec3",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "561c9cf6-1a58-44a2-929f-e1e8aa924231",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "663d59ca-beee-401a-8851-80e18882c0c1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "87918704-553d-48fc-8463-8f6e4ba7299f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6dcffd0f-2bfb-4763-8206-bf70e57c652a",
+        "regionLabel" : "Column 2",
+        "regionName" : "fd313",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "432a2c28-706e-42c4-851c-f27eb5a9fd13",
+        "regionLabel" : "Column 3",
+        "regionName" : "9ce45",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5cfde45d-34b9-430e-a850-ae5d5fb8cf70",
+        "regionLabel" : "Column 4",
+        "regionName" : "3626e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ad5735fe-3a59-4f60-b31c-257830365214",
+        "regionLabel" : "Column 5",
+        "regionName" : "5ca39",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5fe3b1b9-90c0-44c7-ab35-6eee062437d2",
+        "regionLabel" : "Column 6",
+        "regionName" : "c6ec3",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "bba7be43-8803-42d4-964a-8325d1eaca74",
+          "columns" : [ {
+            "UUID" : "3ef540cd-1e64-4346-8d18-cdc1e5410e4d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "bba7be43-8803-42d4-964a-8325d1eaca74",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Monitoreo de Calidad de Ruido </strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3441fa71-4abc-4b29-8a90-67204e40bc06",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3ef540cd-1e64-4346-8d18-cdc1e5410e4d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "054ebae7-d4d5-4bab-9f87-78da56b71908",
+          "columns" : [ {
+            "UUID" : "29d9dfe1-dc14-4789-984f-b537c1e77b82",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4e66a524-8d7a-4f58-8661-3234f88bc7cb",
+            "columnKey" : "f466a",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a8a96e60-e1be-4c88-96a2-8f03eed775dc",
+            "columnKey" : "06ad1",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "518daf01-ec50-4527-a9e9-a08634b6a4b3",
+            "columnKey" : "a4195",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1fe61567-da23-482a-abf5-f70b7bfc0234",
+            "columnKey" : "60970",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6207d1ad-655f-4e07-85c2-5c5b8541e3bc",
+            "columnKey" : "5fb99",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 121
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "054ebae7-d4d5-4bab-9f87-78da56b71908",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "9b90a29f-9503-44b1-be2e-152c9a7a4088",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "29d9dfe1-dc14-4789-984f-b537c1e77b82",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4e66a524-8d7a-4f58-8661-3234f88bc7cb",
+        "regionLabel" : "Column 2",
+        "regionName" : "f466a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "a8a96e60-e1be-4c88-96a2-8f03eed775dc",
+        "regionLabel" : "Column 3",
+        "regionName" : "06ad1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "518daf01-ec50-4527-a9e9-a08634b6a4b3",
+        "regionLabel" : "Column 4",
+        "regionName" : "a4195",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1fe61567-da23-482a-abf5-f70b7bfc0234",
+        "regionLabel" : "Column 5",
+        "regionName" : "60970",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6207d1ad-655f-4e07-85c2-5c5b8541e3bc",
+        "regionLabel" : "Column 6",
+        "regionName" : "5fb99",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 63,
+        "sectionConfig" : {
+          "UUID" : "4f36ccca-ace7-4030-9e51-4013b17136af",
+          "columns" : [ {
+            "UUID" : "f468733a-2d25-49de-b398-a94f9944e41c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4f36ccca-ace7-4030-9e51-4013b17136af",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo: </strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e8e95de4-45c9-4707-98b2-93a2fbaf11a4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Determinar los niveles de ruido tanto diurno como nocturno en las 08 estaciones cercanas a nuestra área de operaciones y comparar los resultados obtenidos con la legislación nacional vigente (Zona Industrial: Horario diurno 80 LAeqT* y Horario nocturno 70 LAeqT*).</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Determinar los niveles de ruido tanto diurno como nocturno en una de las estaciones ubicadas en la Zona Residencial (Puerto Rico) y comparar los resultados obtenidos con la legislación nacional vigente (Zona Residencial: Horario diurno 60 LAeqT y Horario nocturno 50 LAeqT2).</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Este Monitoreo se realiza con Frecuencia Trimestral.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "3f4a3650-87a6-4b5c-a7df-309f6b6fbad2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 14px;\">*LAeqT: Nivel de Presión Sonora Continuo Equivalente con ponderación A</span></p><p><br></p><p><br></p><p><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">Ubicación de estaciones:</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">&nbsp;AR-10 (Sur oeste de la mina), AR-20 (Sur de la mina), AR-30 (Cantera Chorrillos), AR-40 (Nor oeste de la mina), AR-50 (Oeste de la mina), AR-61 (Al norte del óvalo Bayóvar), AR-70 (Ganadero), AR-80 (Norte de cantera arenera), AR-90 (Caleta Puerto Rico).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ac417595-35c7-48e0-9b6a-86b20eb2ba21",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f468733a-2d25-49de-b398-a94f9944e41c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "157b86a6-16ac-4017-8016-ed024840318a",
+          "columns" : [ {
+            "UUID" : "dd50ea4c-d109-475c-961e-4ab8c219ea35",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "157b86a6-16ac-4017-8016-ed024840318a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP27"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselStatic",
+          "id" : "4b03b3ab-c065-4810-b136-789d33218719",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dd50ea4c-d109-475c-961e-4ab8c219ea35",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fda21206-42e9-4c41-8b3b-04c998b84051",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo de Calidad De Ruido"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9a2061a3-8f2e-453b-aad1-2dfbd02cb365",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c3c7fd07-8a2e-41bb-ab12-617d82de6c93",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-calidad-de-ruido"
+}

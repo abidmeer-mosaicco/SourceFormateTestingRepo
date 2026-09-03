@@ -1,0 +1,53 @@
+<template>
+  <div class="mosaic-direct-list-container">
+    <div class="slds-grid slds-gutters slds-m-bottom_small slds-wrap">
+      <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+        <lightning-input label="Search" placeholder="Type to search" value={searchTerm} onchange={handleSearchInput}> </lightning-input>
+      </div>
+
+      <template lwc:if={dateFilterFieldName}>
+        <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+          <lightning-input type="date" label="From" value={dateFromValue} onchange={handleDateFromChange}> </lightning-input>
+        </div>
+        <div class="slds-col slds-size_1-of-2 slds-large-size_2-of-12">
+          <lightning-input type="date" label="To" value={dateToValue} onchange={handleDateToChange}> </lightning-input>
+        </div>
+      </template>
+
+      <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-align_absolute-center">
+        <lightning-button label="Clear filters" onclick={handleClearFilters}></lightning-button>
+      </div>
+    </div>
+
+    <template lwc:if={isLoading}>
+      <div class="slds-align_absolute-center slds-m-top_medium">
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+      </div>
+    </template>
+
+    <template lwc:else>
+      <lightning-datatable
+        key-field="Id"
+        data={data}
+        columns={columns}
+        draft-values={draftValues}
+        onsave={handleSave}
+        onrowaction={handleRowAction}
+        hide-checkbox-column
+      >
+      </lightning-datatable>
+
+      <div class="slds-m-top_small slds-grid slds-grid_align-spread slds-align_absolute-center">
+        <div>
+          <lightning-button label="Previous" onclick={handlePrevPage} disabled={isPrevDisabled}></lightning-button>
+          <lightning-button class="slds-m-left_x-small" label="Next" onclick={handleNextPage} disabled={isNextDisabled}></lightning-button>
+        </div>
+        <div class="slds-text-body_small">Page: {pageNumber} / {totalPages} • Total: {totalSize}</div>
+      </div>
+
+      <template lwc:if={noResults}>
+        <div class="slds-text-color_weak slds-m-top_small slds-align_absolute-center">{noResultsMessage}</div>
+      </template>
+    </template>
+  </div>
+</template>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Tillage__c</fullName>
+    <label>Tillage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Conventional</fullName>
+                <default>false</default>
+                <label>Conventional</label>
+            </value>
+            <value>
+                <fullName>No-till</fullName>
+                <default>false</default>
+                <label>No-till</label>
+            </value>
+            <value>
+                <fullName>Reduced</fullName>
+                <default>false</default>
+                <label>Reduced</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

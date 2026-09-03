@@ -1,0 +1,466 @@
+{
+  "version" : "60.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "PMC_SS_AccountManagerName__c", "PMC_SS_AllocatedActualQuantity__c", "PMC_SS_AllocationFrequency__c", "PMC_SS_AllocationPeriod__c", "PMC_SS_AllocationSummary__c", "PMC_SS_Location__c", "PMC_SS_Product__c", "PMC_SS_RequestedQuantity__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "PMC_SS_Allocation__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "PMC_SS_Allocation__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN3" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "LOAD_DATASET7" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_Product__c" ],
+        "rightQualifier" : "Product",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET7" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "PMC_CPQ_ProductFamily__c", "PMC_CPQ_ProductCategory__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Product2",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Product2"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN4" : {
+      "action" : "join",
+      "sources" : [ "JOIN3", "LOAD_DATASET8" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_Location__c" ],
+        "rightQualifier" : "Location",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET8" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "PMC_CPQ_Region__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Location",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Location"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN5" : {
+      "action" : "join",
+      "sources" : [ "JOIN4", "LOAD_DATASET9" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_AccountManagerName__c" ],
+        "rightQualifier" : "User",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET9" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "PMC_CPQ_SalesRegion__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "User",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "User"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "FORMULA9" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "AllocationsWithContracts",
+          "name" : "AllocationsWithContracts",
+          "folderName" : "Sales_Forecasting_App"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "FORMULA5" : {
+      "action" : "formula",
+      "sources" : [ "JOIN5" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "PMC_SS_AllocationPeriod__c_formula",
+          "label" : "Allocation Period Formula",
+          "formulaExpression" : "concat(\r\n    case\r\n    When month(PMC_SS_AllocationPeriod__c) = 1\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 01', ' (','January')\r\n     When month(PMC_SS_AllocationPeriod__c) = 2\r\n    then concat(year(PMC_SS_AllocationPeriod__c),' 02', ' (','February')\r\n     When month(PMC_SS_AllocationPeriod__c) = 3\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 03', ' (','March')\r\n     When month(PMC_SS_AllocationPeriod__c) = 4\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 04', ' (','April') \r\n     When month(PMC_SS_AllocationPeriod__c) = 5\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 05', ' (','May')\r\n     When month(PMC_SS_AllocationPeriod__c) = 6\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 06', ' (','June')\r\n     When month(PMC_SS_AllocationPeriod__c) = 7\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 07', ' (','July')\r\n     When month(PMC_SS_AllocationPeriod__c) = 8\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 08', ' (','August')\r\n     When month(PMC_SS_AllocationPeriod__c) = 9\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 09', ' (','September')\r\n     When month(PMC_SS_AllocationPeriod__c) = 10\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 10', ' (','October')\r\n     When month(PMC_SS_AllocationPeriod__c) = 11\r\n    then  concat(year(PMC_SS_AllocationPeriod__c),' 11', ' (','November')\r\n    else\r\n     concat(year(PMC_SS_AllocationPeriod__c),' 12', ' (','December')\r\nend,\r\n')')\r\n\r\n",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA6" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA5" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "AllocatedActualQuantity_STN",
+          "label" : "Allocated Actual Quantity ( STN)",
+          "formulaExpression" : "Round(PMC_SS_AllocatedActualQuantity__c * 1.10231,2)",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA7" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA6" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "UOM_MTN",
+          "label" : "UOM (MTN)",
+          "formulaExpression" : "'MTN'",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA8" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA7" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "UOM_STN",
+          "label" : "UOM (STN)",
+          "formulaExpression" : "'STN'",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA10" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA8" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "RequestedQuantity_STN",
+          "label" : "Requested Quantity ( STN)",
+          "formulaExpression" : "Round(PMC_SS_RequestedQuantity__c * 1.10231,2)",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "EXTRACT0" : {
+      "action" : "extractGrains",
+      "sources" : [ "FORMULA10" ],
+      "parameters" : {
+        "grainExtractions" : [ {
+          "source" : "PMC_SS_AllocationPeriod__c",
+          "targets" : [ {
+            "name" : "PMC_SS_AllocationPeriod__c_DAY",
+            "label" : "Allocation Period Day",
+            "grainType" : "DAY"
+          }, {
+            "name" : "PMC_SS_AllocationPeriod__c_MONTH",
+            "label" : "Allocation Period Month",
+            "grainType" : "MONTH"
+          }, {
+            "name" : "PMC_SS_AllocationPeriod__c_YEAR",
+            "label" : "Allocation Period Year",
+            "grainType" : "YEAR"
+          } ]
+        } ]
+      }
+    },
+    "AGGREGATE1" : {
+      "action" : "aggregate",
+      "sources" : [ "EXTRACT0" ],
+      "parameters" : {
+        "aggregations" : [ {
+          "action" : "SUM",
+          "source" : "PMC_SS_AllocatedActualQuantity__c",
+          "name" : "SUM_PMC_SS_AllocatedActualQuantity__c",
+          "label" : "Sum of Allocated Actual Quantity"
+        }, {
+          "action" : "SUM",
+          "source" : "AllocatedActualQuantity_STN",
+          "name" : "SUM_AllocatedActualQuantity_STN",
+          "label" : "Sum of Allocated Actual Quantity ( STN)"
+        }, {
+          "action" : "SUM",
+          "source" : "PMC_SS_RequestedQuantity__c",
+          "name" : "SUM_PMC_SS_RequestedQuantity__c",
+          "label" : "Sum of Requested Quantity"
+        }, {
+          "action" : "SUM",
+          "source" : "RequestedQuantity_STN",
+          "name" : "SUM_RequestedQuantity_STN",
+          "label" : "Sum of Requested Quantity ( STN)"
+        } ],
+        "groupings" : [ "User.Name", "Product.Name", "Location.Name", "PMC_SS_AllocationPeriod__c_formula", "PMC_SS_AllocationSummary__c", "Id", "UOM_MTN", "UOM_STN", "PMC_SS_AllocationPeriod__c_DAY", "PMC_SS_AllocationPeriod__c_MONTH", "PMC_SS_AllocationPeriod__c_YEAR" ],
+        "pivots" : [ ],
+        "nodeType" : "STANDARD"
+      }
+    },
+    "FORMULA9" : {
+      "action" : "formula",
+      "sources" : [ "AGGREGATE1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "DATETIME",
+          "name" : "AllocationPeriodDate",
+          "label" : "Allocation Period Date",
+          "formulaExpression" : "to_timestamp(concat(PMC_SS_AllocationPeriod__c_YEAR,'/',PMC_SS_AllocationPeriod__c_MONTH,'/',PMC_SS_AllocationPeriod__c_DAY),'yyyy/MM/dd')",
+          "format" : "dd/MM/yyyy",
+          "defaultValue" : ""
+        } ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "PMC_SS_Allocation__c",
+        "type" : "LOAD_DATASET",
+        "top" : 250.2,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN3" : {
+        "label" : "AllocationJoinProduct",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 390.2,
+        "left" : 1092
+      },
+      "LOAD_DATASET7" : {
+        "label" : "Product2",
+        "type" : "LOAD_DATASET",
+        "top" : 670.2,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN4" : {
+        "label" : "AllocationJoinLocation",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 390.2,
+        "left" : 1232
+      },
+      "LOAD_DATASET8" : {
+        "label" : "Location",
+        "type" : "LOAD_DATASET",
+        "top" : 810.2,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN5" : {
+        "label" : "AllocationJoinUser",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 390.2,
+        "left" : 1372
+      },
+      "LOAD_DATASET9" : {
+        "label" : "User",
+        "type" : "LOAD_DATASET",
+        "top" : 950.2,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "OUTPUT0" : {
+        "label" : "AllocationsWithContracts",
+        "description" : "",
+        "type" : "OUTPUT",
+        "top" : 390.2,
+        "left" : 1512
+      },
+      "TRANSFORM5" : {
+        "label" : "Transform 5",
+        "type" : "TRANSFORM",
+        "top" : 532.4,
+        "left" : 1512,
+        "graph" : {
+          "FORMULA5" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA6" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA7" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA8" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA10" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA5",
+          "target" : "FORMULA6"
+        }, {
+          "source" : "FORMULA6",
+          "target" : "FORMULA7"
+        }, {
+          "source" : "FORMULA7",
+          "target" : "FORMULA8"
+        }, {
+          "source" : "FORMULA8",
+          "target" : "FORMULA10"
+        } ]
+      },
+      "AGGREGATE0" : {
+        "label" : "Aggregate 0",
+        "type" : "AGGREGATE",
+        "top" : 532.1,
+        "left" : 1652,
+        "graph" : {
+          "EXTRACT0" : null,
+          "AGGREGATE1" : null
+        },
+        "connectors" : [ {
+          "source" : "EXTRACT0",
+          "target" : "AGGREGATE1"
+        } ]
+      },
+      "TRANSFORM6" : {
+        "label" : "Transform 6",
+        "type" : "TRANSFORM",
+        "top" : 532,
+        "left" : 1792,
+        "graph" : {
+          "FORMULA9" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ ]
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN3"
+    }, {
+      "source" : "LOAD_DATASET7",
+      "target" : "JOIN3"
+    }, {
+      "source" : "JOIN3",
+      "target" : "JOIN4"
+    }, {
+      "source" : "LOAD_DATASET8",
+      "target" : "JOIN4"
+    }, {
+      "source" : "JOIN4",
+      "target" : "JOIN5"
+    }, {
+      "source" : "LOAD_DATASET9",
+      "target" : "JOIN5"
+    }, {
+      "source" : "JOIN5",
+      "target" : "TRANSFORM5"
+    }, {
+      "source" : "TRANSFORM5",
+      "target" : "AGGREGATE0"
+    }, {
+      "source" : "AGGREGATE0",
+      "target" : "TRANSFORM6"
+    }, {
+      "source" : "TRANSFORM6",
+      "target" : "OUTPUT0"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Incoterm2__c</fullName>
+    <description>This field is to check destination of the incoterm which is dependent on Incoterm1 and Region</description>
+    <externalId>false</externalId>
+    <formula>IF( PMC_CPQ_QuoteRegionExtractor__c  = &apos;North America&apos;,
+IF(OR( ISPICKVAL( PMC_CPQ_Incoterms1__c , &apos;FOB&apos;), ISPICKVAL( PMC_CPQ_Incoterms1__c , &apos;FCA&apos;)),&apos;Origin&apos;,&apos;Destination&apos;),
+IF(PMC_CPQ_QuoteRegionExtractor__c  = &apos;Brazil&apos;,&apos;Origin&apos;,&apos;Destination&apos;))</formula>
+    <label>Back End Incoterms2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

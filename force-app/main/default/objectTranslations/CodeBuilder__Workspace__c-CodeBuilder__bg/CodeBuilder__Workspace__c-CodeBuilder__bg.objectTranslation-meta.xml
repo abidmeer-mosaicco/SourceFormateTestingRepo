@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Среда</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Среди</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Име на среда</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Името на работно пространство не може да бъде променено</errorMessage>
+        <name>CodeBuilder__CannotChangeWorkspaceName</name>
+    </validationRules>
+</CustomObjectTranslation>

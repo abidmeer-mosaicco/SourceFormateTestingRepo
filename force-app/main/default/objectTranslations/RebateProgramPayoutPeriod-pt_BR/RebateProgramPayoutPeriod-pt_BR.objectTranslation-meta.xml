@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Os períodos de pagamento não podem ser criados/editados nesse estágio. Favor alterar o Contrato de Vendas para fazer revisões nos Períodos de Pagamento.</errorMessage>
+        <name>PMC_SS_RestrictPayoutPeriodEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível criar/atualizar o período de pagamento do programa de bônus quando o programa de bônus estiver inativo</errorMessage>
+        <name>PMC_SS_RestrictPayoutPeriodModification</name>
+    </validationRules>
+</CustomObjectTranslation>

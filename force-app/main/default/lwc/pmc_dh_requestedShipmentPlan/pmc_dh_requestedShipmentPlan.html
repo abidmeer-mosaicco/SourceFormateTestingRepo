@@ -1,0 +1,390 @@
+<!-- <template> -->
+
+
+
+<!-- <div class="slds-grid slds-gutters slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <div class="custom-card">
+        <div class="card-body">
+          <div class="slds-grid slds-wrap slds-m-around--medium slds-m-top--none">
+            <div class="slds-col slds-size_1-of-1 rsp-msg">
+              <span>Requested Shipment Plan</span>
+            </div>
+          </div>
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="slds-grid slds-wrap slds-p-bottom--small border-bottom">
+                <div class="slds-col slds-size_1-of-6">                  
+                  <c-pmc_dh_selection-picklist
+                      text-label='Frequency'
+                      combobox-list-json='' data-id=""
+                      default-value='' is-required
+                      data-product-index='' parent-name=""
+                      data-shipment-index=''
+                      oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_selection-picklist>
+                </div>
+                <div class="slds-col slds-size_1-of-6 date-field">
+                  <div class="lbl-field-name">
+                    Start Contract Date
+                  </div>
+                  <div class="lbl-field-value">
+                    MM/DD/YYYY
+                  </div>
+                </div>
+                <div class="slds-col slds-size_1-of-6 date-field">
+                  <div class="lbl-field-name">
+                    End Contract Date
+                  </div>
+                  <div class="lbl-field-value">
+                    MM/DD/YYYY
+                  </div>
+                </div>
+                <div class="slds-col slds-size_1-of-6">                  
+                  <c-pmc_dh_input-element text-label="Shipment PO Number" data-id="" data-name=""
+                    is-required default-value="" text-placeholder="###" data-product-index='' data-shipment-index=''
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_input-element>
+                </div>
+                <div class="slds-col slds-size_1-of-6">                  
+                  <c-pmc_dh_input-element text-label="PO Increment By" data-id="" data-name=""
+                    is-required default-value="" text-placeholder="###" data-product-index='' data-shipment-index=''
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_input-element>
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-p-around--small">
+              <div class="slds-grid slds-wrap label-section slds-p-bottom--x-small">
+                <div class="slds-col slds-size_1-of-6 lbl-field-name">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Quantity
+                </div>
+                <div class="slds-col slds-size_1-of-6 lbl-field-name">
+                  <abbr class="slds-required" title="required">*</abbr>
+                  Requested Shipment Date
+                </div>
+              </div>
+
+              <div class="slds-grid slds-wrap details-section" for:each={productInfoArray} for:item="plan" for:index="indexShipmentPlan" key={plan}>
+                <div class="slds-col slds-size_1-of-6">
+                  <c-pmc_dh_input-element text-label="Quantity" data-id="intQuantity" data-name="intQuantity"
+                    is-required default-value={plan.intQuantity} text-placeholder="###" 
+                    data-product-index={indexProduct} data-shipment-index={indexShipment} data-shipment-plan-index={indexShipmentPlan}
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_input-element>
+                </div>
+                <div class="slds-col slds-size_1-of-6">
+                  <c-pmc_dh_input-element text-label='Requested Shipment Date' type="date"
+                    data-i
+                    d="datRequestedShipmentDate" default-value={plan.datRequestedShipmentDate} is-required 
+                    data-product-index={indexProduct} data-shipment-index={indexShipment} data-shipment-plan-index={indexShipmentPlan} 
+                    min-value={today} oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_input-element>
+                </div>
+                <div class="slds-col slds-size_2-of-6 close-icon">
+                  <img src={closeIconUrl} alt={labels.pmc_modal_close} onclick={removeShipmentLine} />
+                </div>
+              </div>
+              <div class="slds-p-left--medium add-new-shipment" onclick={addShipmentLine}>+Add New Shipment</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- </template> -->
+
+<template>
+  <template lwc:if={isContentLoaded}>
+    <div class="slds-m-top_large">
+      <div class="message-container slds-m-top--medium">
+        <c-pmc_dh_message-banner type={messageBannerType}
+          message={labels.pmc_requestToDeliverShippingInformation_infoMessage}>
+        </c-pmc_dh_message-banner>
+      </div>
+    </div>
+
+    <div class="scrollable-container-mobile">
+      <div class="scrollable-content-mobile">
+        <div class="slds-grid slds-gutters slds-wrap">
+          <div class="slds-col slds-size_1-of-1 padding-right-none-small">
+            <div class="custom-card">
+              <div class="card-header">
+                {labels.pmc_quoteCheckoutFlow_shippingInfo}
+              </div>
+              <div class="card-body">
+                <div class="label-section">
+                  <div class="product-col">
+                    {labels.pmc_quoteCheckoutFlow_products}
+                  </div>
+
+                  <div class="shipment-col">
+                    <div class="delivery-col">
+                      {labels.pmc_requestToDeliverShippingInformation_deliveryAddress}
+                    </div>
+                    <div class="incoterms-col">
+                      {labels.pmc_requestToDeliverShippingInformation_qty}
+                    </div>
+                    <div class="delivery-col">
+                      {labels.pmc_requestToDeliverShippingInformation_requestedShipmentDate}
+                    </div>
+                    <div class="qty-col">
+                      {labels.pmc_requestToDeliverShippingInformation_deliveryMode}
+                    </div>
+                    <div class="incoterms-col">
+                      {labels.pmc_quoteCheckoutFlow_incoterms}
+                    </div>
+                    <div class="delivery-col">
+                      {labels.pmc_quoteCheckoutFlow_shipFrom}
+                    </div>
+                  </div>
+                </div>
+                <div class="details-section" for:each={productInfoArray} for:item="product" for:index="indexProduct"
+                  key={product}>
+                  <div class="product-col">
+                    <div class="product-details">
+                      <div class="product-image">
+                        <a href={product.href} target="_self">
+                          <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                        </a>
+                      </div>
+                      <div class="product-info">
+                        <div class="product-name">
+                          <a href={product.href} target="_self">{product.strProductName}</a>
+                        </div>
+                        <div class="product-sku">
+                          {labels.pmc_cartCheckout_sku}&nbsp;{product.strSku}
+                        </div>
+                        <div class="total-quantity slds-m-top_medium">
+                          {labels.pmc_quoteCheckoutFlow_totalQuantity} {product.strTotalQty}
+                        </div>
+                        <div class="contract-number slds-m-top--x-small">
+                          {labels.pmc_requestToDeliverShippingInformation_contractPoNumber}:
+                          {product.strContractPONumber}
+                        </div>
+                        <template lwc:if={isLocationBrazil}>
+                          <div class="input-number slds-m-top_medium">
+                            <c-pmc_dh_input-element text-label={labels.pmc_contractDetails_itemNumber}
+                              data-id="strItemNumber" data-name="strItemNumber" max-length=10 pattern="[A-Za-z0-9]*"
+                              default-value={product.strItemNumber}
+                              text-placeholder={labels.pmc_contractDetails_itemNumber} data-product-index={indexProduct}
+                              data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_input-element>
+                          </div>
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipment-col">
+                    <div class="shipment-fields slds-m-bottom--medium" for:each={product.lstCartItems} for:item="item"
+                      for:index="indexShipment" key={item}>
+                      <!-- New Line Added  -->
+                      <div class="shipment-section slds-p-bottom--none slds-grid slds-wrap">
+
+                        <div class="slds-col slds-size_1-of-1 shipment-inner-section">
+                          <div class="shipment-item delivery-col">
+                            <c-pmc_dh_selection-picklist
+                              text-label={labels.pmc_requestToDeliverShippingInformation_deliveryAddress}
+                              combobox-list-json={product.lstShipTo} data-id="strShipTo" default-value={item.strShipTo}
+                              is-required data-product-index={indexProduct} parent-name="strShipTo"
+                              data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_selection-picklist>
+                          </div>
+                          <div class="shipment-item incoterms-col">
+                            <c-pmc_dh_input-element text-label={labels.pmc_requestToDeliverShippingInformation_qty}
+                              data-id="intQuantity" data-name="intQuantity" is-required default-value={item.intQuantity}
+                              text-placeholder={labels.pmc_requestToDeliverShippingInformation_qty}
+                              data-product-index={indexProduct} data-shipment-index={indexShipment}
+                              oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_input-element>
+                          </div>
+                          <div class="shipment-item delivery-col">
+                            <c-pmc_dh_input-element
+                              text-label={labels.pmc_requestToDeliverShippingInformation_requestedShipmentDate}
+                              type="date" data-id="datRequestedShipmentDate"
+                              default-value={item.datRequestedShipmentDate} is-required
+                              data-product-index={indexProduct} data-shipment-index={indexShipment}
+                              parent-name="datRequestedShipmentDate" min-value={today}
+                              oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_input-element>
+                          </div>
+                          <div class="shipment-item qty-col">
+                            <c-pmc_dh_selection-picklist
+                              text-label={labels.pmc_requestToDeliverShippingInformation_deliveryMode}
+                              combobox-list-json={product.lstDeliveryModes} is-disabled={item.isDeliveryModeDisabled}
+                              data-id="strDeliveryMode" default-value={item.strDeliveryMode} is-required
+                              data-product-index={indexProduct} parent-name="strDeliveryMode"
+                              data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_selection-picklist>
+                          </div>
+                          <div class="shipment-item incoterms-col">
+                            <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_incoterms}
+                              combobox-list-json={product.lstIncoterms} is-disabled={item.isIncotermsDisabled}
+                              data-id="strIncoterms" default-value={item.strIncoterms} is-required
+                              data-product-index={indexProduct} parent-name="strIncoterms"
+                              data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_selection-picklist>
+                          </div>
+                          <div class="shipment-item delivery-col">
+                            <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_shipFrom}
+                              combobox-list-json={product.lstShipFrom} is-disabled={item.isShipFromDisabled}
+                              data-id="strShipFrom" default-value={item.strShipFrom} is-required
+                              data-product-index={indexProduct} parent-name="strShipFrom"
+                              data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                            </c-pmc_dh_selection-picklist>
+                          </div>
+                          <div class="shipment-item accordion-icon">
+                            <div class="icon-wrapper">
+                              <a onclick={expandShipment} data-cart-id={item.strCartItemId}>
+                                <img class={cssDropdownIcon} src={iconUrlObj.arrowRightIconUrl} alt='Accordion Button'
+                                  data-product-index={indexProduct} data-shipment-index={indexShipment} /></a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- My New Code  -->
+
+                        <div class="slds-col slds-size_1-of-1 slds-p-around--none shipment-plan-container"
+                          data-product-index={indexProduct} data-shipment-index={indexShipment}>
+                          <div class="card-body">
+                            <div class="slds-grid slds-wrap slds-m-around--medium slds-m-top--none">
+                              <div class="slds-col slds-size_1-of-1 rsp-msg">
+                                <span>Requested Shipment Plan</span>
+                              </div>
+                            </div>
+                            <div class="slds-grid slds-wrap">
+                              <div class="slds-col slds-size_1-of-1">
+                                <div class="slds-grid slds-wrap slds-p-bottom--small border-bottom">
+                                  <div class="slds-col slds-size_1-of-6">
+                                    <c-pmc_dh_selection-picklist text-label='Frequency'
+                                      combobox-list-json={product.lstFrequency} data-id="strFrequency"
+                                      default-value={item.strFrequency} is-required parent-name="strFrequency"
+                                      data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                      oninputdatachange={handleDataChange}>
+                                    </c-pmc_dh_selection-picklist>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-6 date-field">
+                                    <div class="lbl-field-name">
+                                      Start Contract Date
+                                    </div>
+                                    <div class="lbl-field-value">
+                                      {product.datContractStartDate}
+                                    </div>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-6 date-field">
+                                    <div class="lbl-field-name">
+                                      End Contract Date
+                                    </div>
+                                    <div class="lbl-field-value">
+                                      {product.datContractEndDate}
+                                    </div>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-6">
+                                    <c-pmc_dh_input-element text-label="Shipment PO Number"
+                                      data-id="strDeliveryPONumber" data-name="strDeliveryPONumber" is-required
+                                      default-value={item.strDeliveryPONumber} text-placeholder="###"
+                                      data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                      oninputdatachange={handleDataChange} is-disabled={isLocationBrazil}
+                                      max-length=32>
+                                    </c-pmc_dh_input-element>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-6">
+                                    <c-pmc_dh_input-element text-label="PO Increment By" data-id="intPONumberIncrement"
+                                      data-name="intPONumberIncrement" is-required
+                                      default-value={item.intPONumberIncrement} text-placeholder="###" type="number"
+                                      min="1" max="10" data-product-index={indexProduct}
+                                      data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                                    </c-pmc_dh_input-element>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="slds-col slds-size_1-of-1 slds-p-around--small">
+                                <div class="slds-grid slds-wrap label-section slds-p-bottom--x-small">
+                                  <div class="slds-col slds-size_1-of-5 lbl-field-name">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    Quantity
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-5 lbl-field-name">
+                                    <abbr class="slds-required" title="required">*</abbr>
+                                    Requested Shipment Date
+                                  </div>
+                                </div>
+
+                                <div class="slds-grid slds-wrap shipment-plan-details-section"
+                                  for:each={item.lstShipmentPlan} for:item="plan" for:index="indexShipmentPlan"
+                                  key={plan}>
+                                  <div class="slds-col slds-size_1-of-5">
+                                    <c-pmc_dh_input-element text-label="Quantity" data-id="intShipmentQuantity"
+                                      data-name="intShipmentQuantity" is-required default-value={plan.intQuantity}
+                                      text-placeholder="###" data-product-index={indexProduct}
+                                      data-shipment-index={indexShipment} data-shipment-plan-index={indexShipmentPlan}
+                                      oninputdatachange={handleDataChange}>
+                                    </c-pmc_dh_input-element>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-5">
+                                    <c-pmc_dh_input-element text-label='Requested Shipment Date' type="date" data-i
+                                      d="datRequestedShipmentDate" default-value={plan.datRequestedShipmentDate}
+                                      is-required data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                      data-shipment-plan-index={indexShipmentPlan} min-value={today}
+                                      oninputdatachange={handleDataChange}>
+                                    </c-pmc_dh_input-element>
+                                  </div>
+                                  <div class="slds-col slds-size_1-of-5 close-icon" if:true={isRemoveEnabled}>
+                                    <img src={closeIconUrl} alt={labels.pmc_modal_close}
+                                      data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                      data-shipment-plan-index={indexShipmentPlan} onclick={removeShipmentLine} />
+                                  </div>
+                                </div>
+
+                                <div class="slds-p-left--medium slds-p-bottom--medium shipment-error-msg">Quantity in
+                                  the shipment plan exceeding the total Quantity.</div>
+
+                                <div class="slds-p-left--medium add-new-shipment" data-product-index={indexProduct}
+                                  data-shipment-index={indexShipment} onclick={addShipmentLine}>+Add New Shipment</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+
+                      <div class="shipment-item delete-icon slds-p-top--medium">
+                        <div class="icon-wrapper">
+                          <a onclick={deleteShipment} data-product-index={indexProduct}
+                            data-shipment-index={indexShipment} data-cart-id={item.strCartItemId}><img
+                              src={iconUrlObj.deleteIconUrl} alt={labels.pmc_accountDetails_delete} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="add-shipment slds-p-left--none">
+                      <a onclick={addShipment}
+                        data-product-index={indexProduct}>{labels.pmc_quoteCheckoutFlow_addNewShip}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-button slds-m-bottom_large">
+      <lightning-button variant="brand" label={labels.pmc_quoteCheckoutFlow_proceed} disabled={isProceedDisabled}
+        onclick={proceedButtonHandler}></lightning-button>
+    </div>
+  </template>
+
+  <template lwc:if={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+
+</template>

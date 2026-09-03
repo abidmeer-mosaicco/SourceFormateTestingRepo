@@ -1,0 +1,63 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Service Not Available",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "margin" : {
+                "bottom" : "50px",
+                "left" : "",
+                "right" : "",
+                "top" : "50px"
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"b0c4ca7a-bb04-4cb0-9ff2-aff2329380b1\",\"columns\":[{\"UUID\":\"b2dcda94-d52e-44f5-8ca9-55af7240691a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { },
+                "richTextValue" : "<p class=\"outage-page\" style=\"\n\tmargin: 0 auto;\n\tbackground-size: 240px auto;\n    background-repeat: no-repeat;\n    width: 280px;\n    height: 140px;\n    background-image: url('/sfsites/c/resource/pmc_brandingStaticResource/images/logo-mosaic.png');\n    background-position: center;\n\tdisplay:none;\"></p>\n<div style=\"display: flex; align-items: center; flex-direction: column; margin: 25px;\">\n    <div style=\"background: url(assets/images/serviceNotAvailable.svg) center no-repeat; background-size: contain; height:330px; width: 100%; max-width: 538px;\"></div>\n</div>"
+              },
+              "customCssClasses" : "outage-image",
+              "definition" : "community_builder:htmlEditor",
+              "id" : "83b72905-79ea-487c-bfc6-1191893f43e5",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { },
+                "richTextValue" : "<div style=\"margin: 25px; text-align: center;\">\n <h1><b style=\"font-weight: 700; font-size: 30px; line-height: 36px; color:#093532; font-family: Barlow-Bold,'Salesforce Sans',arial,sans-serif;\">System Temporarily Unavailable</b></h1> <br>\n <p><span style=\"font-weight: 400; font-size: 14px; line-height: 16.8px; color:#436462; font-family: Barlow-Regular,'Salesforce Sans',arial,sans-serif;\">We apologize, but Mosaic Direct is currently down for maintenance. <br>\nWe are working to restore service as quickly as possible.</span></p>\n</div>\n\n<div style=\"margin: 40px 25px; text-align: center;\">\n <h1><b style=\"font-weight: 700; font-size: 30px; line-height: 36px; color:#093532; font-family: Barlow-Bold,'Salesforce Sans',arial,sans-serif;\">Sistema Temporariamente Indisponível</b></h1> <br>\n <p><span style=\"font-weight: 400; font-size: 14px; line-height: 16.8px; color:#436462; font-family: Barlow-Regular,'Salesforce Sans',arial,sans-serif;\">Pedimos desculpas, mas o Mosaic Direct está fora do ar para manutenção neste momento.<br>\nEstamos trabalhando para restaurar o serviço o mais rápido possível</span></p>\n</div>\n\n<div style=\"margin: 40px 25px; text-align: center;\">\n <h1><b style=\"font-weight: 700; font-size: 30px; line-height: 36px; color:#093532; font-family: Barlow-Bold,'Salesforce Sans',arial,sans-serif;\">Sistema Temporalmente No Disponible</b></h1> <br>\n <p><span style=\"font-weight: 400; font-size: 14px; line-height: 16.8px; color:#436462; font-family: Barlow-Regular,'Salesforce Sans',arial,sans-serif;\">Pedimos disculpas, pero Mosaic Direct está actualmente fuera de servicio por mantenimiento.<br>\nEstamos trabajando para restablecer el servicio lo más rápido posible.</span></p>\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "197e1c4a-0723-451c-bc91-181c3a837ddd",
+              "type" : "component"
+            } ],
+            "id" : "b2dcda94-d52e-44f5-8ca9-55af7240691a",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "b0c4ca7a-bb04-4cb0-9ff2-aff2329380b1",
+          "type" : "component"
+        } ],
+        "id" : "5d75f940-f953-43a6-9b5a-41aa86a3e6d9",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6606473c-78af-4151-85e7-cfaa2f2463e0",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ServiceNotAvailable",
+    "viewType" : "service-not-available"
+  },
+  "urlName" : "service-not-available"
+}

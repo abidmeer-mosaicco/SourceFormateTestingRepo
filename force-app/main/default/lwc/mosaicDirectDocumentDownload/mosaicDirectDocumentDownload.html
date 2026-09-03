@@ -1,0 +1,53 @@
+<template>
+    <!-- Invoice Button Template -->
+    <template lwc:if={isInvoiceButton}>
+        <lightning-button-icon
+            icon-name={invoiceIconName}
+            variant="bare"
+            size="small"
+            alternative-text="View Invoice"
+            title="View Invoice"
+            disabled={isLoading}
+            onclick={handleInvoiceClick}>
+        </lightning-button-icon>
+    </template>
+
+    <!-- BOL Button Template -->
+    <template lwc:elseif={isBOLButton}>
+        <lightning-button-icon
+            icon-name={bolIconName}
+            variant="bare"
+            size="small"
+            alternative-text="View BOL"
+            title="View BOL"
+            disabled={isLoading}
+            onclick={handleBOLClick}>
+        </lightning-button-icon>
+    </template>
+
+    <!-- COA Button Template -->
+    <template lwc:elseif={isCOAButton}>
+        <lightning-button-icon
+            icon-name={coaIconName}
+            variant="bare"
+            size="small"
+            alternative-text="View COA"
+            title="View COA"
+            disabled={isLoading}
+            onclick={handleCOAClick}>
+        </lightning-button-icon>
+    </template>
+
+    <!-- Download All Button Template -->
+    <template lwc:elseif={isDownloadAllButton}>
+        <lightning-button-icon
+            icon-name={downloadAllIconName}
+            variant="bare"
+            size="small"
+            alternative-text="Download All Documents"
+            title="Download All Documents"
+            disabled={isLoading}
+            onclick={handleDownloadAllClick}>
+        </lightning-button-icon>
+    </template>
+</template>

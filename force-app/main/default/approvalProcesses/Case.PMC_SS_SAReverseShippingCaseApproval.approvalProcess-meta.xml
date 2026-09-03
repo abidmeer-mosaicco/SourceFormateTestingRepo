@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_BillingManager</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Route to Billing Manager Queue for first approval</description>
+        <entryCriteria>
+            <formula>ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp; 
+PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Billing Manager</label>
+        <name>PMC_SS_RouteToBillingManager</name>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforSecondlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_RegionalManager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Route to Regional Manager for second approval</description>
+        <entryCriteria>
+            <formula>ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp; 
+ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;) &amp;&amp;  
+PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Regional Manager</label>
+        <name>PMC_SS_RouteToRegionalManager</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_SS_ApprovalforThirdLevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SalesDirector</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Route to Sales Director for third approval</description>
+        <entryCriteria>
+            <formula>ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;   
+ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 2 Approved&apos;) &amp;&amp; 
+PMC_SS_OriginalInvoiceAmount__c&gt;1000000 &amp;&amp; 
+PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Sales Director</label>
+        <name>PMC_SS_RouteToSalesDirector</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Case Owner to email to Industrial Manager and record the Approval/Rejection</description>
+        <entryCriteria>
+            <formula>AND(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;),
+				PMC_SS_RouteToQuality__c = False,
+			OR(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 2 Approved&apos;)&amp;&amp; 
+						PMC_SS_OriginalInvoiceAmount__c&lt;=1000000,
+			ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 3 Approved&apos;) &amp;&amp; 
+			PMC_SS_OriginalInvoiceAmount__c&gt;1000000))</formula>
+        </entryCriteria>
+        <label>Email to Industrial Manager for Approval</label>
+        <name>PMC_SS_EmailtoIndustrialManagerforApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Case Approval Process for SA users for Reverse Shipping Action</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>NOT(
+    OR(
+        RecordTypeId = &quot;012RT000001oRfZYAU&quot;,
+        RecordTypeId = &quot;012RT000001oRFlYAM&quot;,
+        RecordTypeId = &quot;012RT000001oRSfYAM&quot;
+    )
+)</formula>
+    </entryCriteria>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>PMC_SS_ResetActionReason</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>SA Reverse Shipping Case Approval</label>
+    <processOrder>3</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

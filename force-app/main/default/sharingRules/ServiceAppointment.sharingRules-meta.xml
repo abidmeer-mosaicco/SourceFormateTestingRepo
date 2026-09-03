@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Service_Appointment_Sharing_Rule_Mosaic</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Service Appointment Sharing Rule_Mosaic</label>
+        <sharedTo>
+            <guestUser>Mosaic_Scheduler</guestUser>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>DurationType</field>
+            <operation>equals</operation>
+            <value>Hours</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>DurationType</field>
+            <operation>equals</operation>
+            <value>Minutes</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

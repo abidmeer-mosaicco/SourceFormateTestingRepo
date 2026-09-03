@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SoldToShipToJunction__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Ship To</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>PMC_SS_AccountPartnerRelationships__c.PMC_SS_Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.PMC_CPQ_Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>PMC_SS_AccountPartnerRelationships__c.PMC_SS_Type__c</field>
+            <operation>equals</operation>
+            <value>Ship-to</value>
+        </filterItems>
+        <filterItems>
+            <field>PMC_SS_AccountPartnerRelationships__c.PMC_SS_RelatedAccountSalesArea__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.PMC_CPQ_SalesArea__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>PMC_SS_AccountPartnerRelationships__c.PMC_SS_RelatedAccountSalesArea__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>PMC_SS_AccountPartnerRelationships__c.PMC_SS_IsActive__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>PMC_SS_AccountPartnerRelationships__c</referenceTo>
+    <relationshipLabel>CPQ Quote Lines (Sold-to &amp; Ship-to Account Junction)</relationshipLabel>
+    <relationshipName>CPQ_Quote_Lines1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

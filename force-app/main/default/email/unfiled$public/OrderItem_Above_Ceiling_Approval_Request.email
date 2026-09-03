@@ -1,0 +1,28 @@
+<messaging:emailTemplate subject="FPD Called Price Approval Request - Order {!relatedTo.OrderNumber}" recipientType="User" relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+            <head>
+                <meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+                <meta name="Template" content="Response"/>
+            </head>
+            <body>
+                <apex:outputPanel >
+                    <b>
+                        <p>FPD Called Above Ceiling Price Approval Request</p>
+                    </b>
+                </apex:outputPanel>
+                <apex:outputPanel >
+                    Agreed Final Price - Freight is above the Ceiling Price
+                </apex:outputPanel>
+                <br/> <br/>
+                <apex:outputPanel >
+                    Hello {!Recipient.Name}, <br/><br/>
+                    A order for {!relatedTo.Account.Name} has been submitted for your approval by {!$User.FirstName}. 
+                </apex:outputPanel>
+                <c:PMC_CPQ_AboveCeilingOrderRequestEmail orderRecordId="{!relatedTo.Id}"
+                    approvalReqStatus="Requested"
+                />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

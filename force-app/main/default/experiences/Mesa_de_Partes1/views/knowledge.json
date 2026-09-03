@@ -1,0 +1,95 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3b9ec344-be4d-42f4-88d1-4ceef37a4653",
+  "label" : "Knowledge",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e1d84395-85f3-4cb4-9641-04f079c037b2",
+          "columns" : [ {
+            "UUID" : "e5554b69-3089-468a-946b-8154003e0e76",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e1d84395-85f3-4cb4-9641-04f079c037b2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "numberOfArticles" : 7,
+            "title" : "Artículos de tendencia",
+            "topicId" : "{!topicId}"
+          },
+          "componentName" : "selfService:topicTrendingArticles42",
+          "id" : "ff0ce175-1b66-486e-969a-ebc1ef79731e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(226, 35, 26)",
+            "bannerPosition" : "right",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255,255,255)",
+            "iconSize" : "medium",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Request_Types",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "89b6dff3-7e05-4b4c-a6ad-84b497d1ce9f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e5554b69-3089-468a-946b-8154003e0e76",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3c8b5b1a-f1e0-4120-b98a-c699ea2469df",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Knowledge"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "941c4ae9-70c4-4b57-8617-17bd6fba60fb",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1a74fddd-9943-4c3e-8d68-fcb79d975e44",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "tUqz2BDm5csaXdbOhiD5VXw08yIyvE",
+  "type" : "view",
+  "viewType" : "custom-knowledge"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="textHead" type="String" label="Insert the Text Head" description="Insert the Text" required="true"/>
+            <property name="textColorHead" type="String" label="Text Color Head" description="Text Color" default="black"/>
+            <property name="text" type="String" label="Insert the Text" description="Insert the Text" required="true"/>
+            <property name="backGroundColor" type="String" label="Background Color " description="Background e Border Color (HEX format or color name)" default="white" required="true"/>
+            <property name="backGroundBorderColor" type="String" label="Text Background and Border Color " description="Background Color (HEX format or color name)" default="none"/>
+            <property name="iconName" type="String" label="Icon Name" description="Icon Name" required="true" default="fertilizante"/>
+            <property name="iconSize" type="String" label="Icon Size" description="Icon Size in rem" required="true"  default="7"/>
+            <property name="iconAlignment" type="String" label="Icon Alignment" description="Icon alignment" required="true" default="center"/>
+            <property name="iconPaddingLeft" type="String" label="Icon Padding Left" description="Icon Padding Left" required="true" default="0"/>
+            <property name="iconPaddingRight" type="String" label="Icon Padding Right" description="Icon Padding Right" required="true" default="0"/>
+            <property name="iconPaddingTop" type="String" label="Icon Padding Top" description="Icon Padding Top" required="true" default="0"/>
+            <property name="iconPaddingBottom" type="String" label="Icon Padding Bottom" description="Icon Padding Bottom" required="true" default="0"/>
+            <property name="fontSize" type="String" label="Font Size in Pixels" description="Font Size in Pixels" required="true" default="14"/>
+            <property name="fontSizeHead" type="String" label="Head Font Size in Pixels" description="Font Size in Pixels" required="true" default="20"/>
+            <property name="fontHeadStyle" type="String" label="Head Font Size Style" description="Head Font Size Style" required="true" default="bold"/>
+            <property name="fontHeadWeight" type="String" label="Head Font Size Style" description="Head Font Size Style" required="true" default="700"/>
+            <property name="bottonTextHeight" type="String" label="Bottom Text Height Size in Pixels" description="Bottom Text Height Size in Pixels" required="true" default="150"/>
+            <property name="cardHeight" type="String" label="Card Height Size in Pixels" description="Card Height Size in Pixels" required="true" default="450"/>
+            <property name="borderThickness" type="String" label="Border Thickness in Pixels" description="Border Thickness in Pixels" required="true" default="1"/>
+            <property name="borderColor" type="String" label="Insert the Border Color" description="Insert the Border Color" required="true" default="black"/>
+            <property name="backgroundOpacity" type="String" label="Icon Background Opacity" description="Number 0 to 9 for Icon Background Opacity"  default="99"/>
+            <property name="borderRadius" type="String" label="Border Radius" description="Button border Radius (number)" default="6"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

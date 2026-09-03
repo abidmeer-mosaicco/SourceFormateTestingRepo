@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Error_Message</name>
+        <label>Set Error Message</label>
+        <locationX>143</locationX>
+        <locationY>719</locationY>
+        <assignmentItems>
+            <assignToReference>recordError</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>A Ship-to relationship already exists between these accounts.&quot;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Error_Message</name>
+        <label>Error Message</label>
+        <locationX>143</locationX>
+        <locationY>827</locationY>
+        <customErrorMessages>
+            <errorMessage>{!recordError}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_for_Duplicates</name>
+        <label>Check for Duplicates</label>
+        <locationX>275</locationX>
+        <locationY>611</locationY>
+        <defaultConnectorLabel>No Duplicate</defaultConnectorLabel>
+        <rules>
+            <name>Duplicate_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Find_Existing_Account_Partner_Relationships</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Error_Message</targetReference>
+            </connector>
+            <label>Duplicate Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the user is creating the relationship in the salesforce LE interface</description>
+        <name>Check_if_user_is_Integration_User</name>
+        <label>Check if user is Integration User</label>
+        <locationX>473</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_Integration_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Alias</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>iuser</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_Existing_Account_Partner_Relationships</targetReference>
+            </connector>
+            <label>Not Integration User</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Config_Setting_Decision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Check_if_user_is_Integration_User</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Don_t_Run_Outcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <description>Flow created to prevent duplicate &quot;Ship-to&quot; relationships between one Sold-to account and one Ship-to Account.
+This rule was originated in the Jira Card https://themosaiccompany.atlassian.net/browse/EIDGT-1002 and initially developed by Caio Costa</description>
+    <environments>Default</environments>
+    <interviewLabel>Prevent Duplicate Ship-to Relationships {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Prevent Duplicate Ship-to Relationships</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Find_Existing_Account_Partner_Relationships</name>
+        <label>Find Existing Account Partner Relationships</label>
+        <locationX>275</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_Duplicates</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_Account__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_RelatedAccount__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_RelatedAccount__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Ship-to</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_ExternalUniqueIdentifier__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_ExternalUniqueIdentifier__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PMC_SS_AccountPartnerRelationships__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Config_Setting_Decision</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Ship-to</stringValue>
+            </value>
+        </filters>
+        <object>PMC_SS_AccountPartnerRelationships__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordError</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

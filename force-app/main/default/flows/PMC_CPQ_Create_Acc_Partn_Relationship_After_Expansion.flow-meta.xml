@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_if_sales_area_exists</name>
+        <label>Check if sales area exists</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_Account_Partner_Relationship2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sales_area_exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Related_Account_Sales_Area.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Account_Partner_Relationship</targetReference>
+            </connector>
+            <label>Sales area don&apos;t exist</label>
+        </rules>
+    </decisions>
+    <description>Create an Account Partner Relationship After Creating a Sales area expansion</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ExternalUniqueIdentifier</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.PMC_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c} + 
+{!$Record.PMC_DG_Account_Name__r.PMC_SS_SAPCustomerNumber__c} + 
+&quot;Ship-to&quot; + 
+TEXT({!$Record.PMC_SalesOrganization__c}) + 
+&quot;00&quot;+TEXT({!$Record.PMC_Division__c})</expression>
+    </formulas>
+    <formulas>
+        <name>SalesOrganizationDesc</name>
+        <dataType>String</dataType>
+        <expression>IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1002&quot;, &quot;Mosaic Global Sales LLC&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1003&quot;, &quot;Mosaic Crop Nutrition LLC&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1004&quot;, &quot;Mosaic Fertilizer LLC&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1005&quot;, &quot;Mosaic Potash Carlsbad In&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1025&quot;, &quot;Tampa Port Services, LLC&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1026&quot;, &quot;Mos Ag Innovation Sol,LLC&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1030&quot;, &quot;Gulf Sulphur Service, LTD&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;2000&quot;, &quot;Mosaic CA Crop Nutrit, LP&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;2001&quot;, &quot;Mosaic Potash Colonsay UL&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;2002&quot;, &quot;Mosaic Potash Esterhazy&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;2003&quot;, &quot;Mosaic Canada ULC (BP)&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4000&quot;, &quot;Mosaic Fertilizantes do B&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4001&quot;, &quot;Fospar SA&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4004&quot;, &quot;Mosaic Potássio Mineração&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4005&quot;, &quot;Mosaic Fertilizantes P&amp;K&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4600&quot;, &quot;Mosaic Fert Bahamas Ltd&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4620&quot;, &quot;Mosaic Fert Paraguay SRL&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;4680&quot;, &quot;Comp. Minera Miski Mayo&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1310&quot;, &quot;Dom. Sales Org CN&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1410&quot;, &quot;Dom. Sales Org BR&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1710&quot;, &quot;Dom. Sales Org US&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;1810&quot;, &quot;Dom. Sales Org IN&quot;,
+IF(TEXT($Record.PMC_SalesOrganization__c) = &quot;2910&quot;, &quot;Dom. Sales Org CA&quot;,
+&quot;&quot;)))))))))))))))))))))))</expression>
+    </formulas>
+    <interviewLabel>PMC CPQ Create Acc Partn Relationship After Expansion {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Create Acc Partn Relationship After Expansion</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Account_Partner_Relationship</name>
+        <label>Create Account Partner Relationship</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_CPQ_Expansion_Origin__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_AccountSAPID__c</field>
+            <value>
+                <elementReference>$Record.PMC_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_Account__c</field>
+            <value>
+                <elementReference>$Record.PMC_SoldToAccount__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_ExternalUniqueIdentifier__c</field>
+            <value>
+                <elementReference>ExternalUniqueIdentifier</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_IsActive__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RelatedAccountSAPId__c</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.PMC_SS_SAPCustomerNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RelatedAccount__c</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_Type__c</field>
+            <value>
+                <stringValue>Ship-to</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_SS_AccountPartnerRelationships__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Account_Partner_Relationship2</name>
+        <label>Create Account Partner Relationship</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_CPQ_Expansion_Origin__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_AccountSAPID__c</field>
+            <value>
+                <elementReference>$Record.PMC_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_Account__c</field>
+            <value>
+                <elementReference>$Record.PMC_SoldToAccount__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_ExternalUniqueIdentifier__c</field>
+            <value>
+                <elementReference>ExternalUniqueIdentifier</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_IsActive__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RelatedAccountSAPId__c</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.PMC_SS_SAPCustomerNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RelatedAccountSalesArea__c</field>
+            <value>
+                <elementReference>Get_Related_Account_Sales_Area.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RelatedAccount__c</field>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_Type__c</field>
+            <value>
+                <stringValue>Ship-to</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_SS_AccountPartnerRelationships__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Related_Account_Sales_Area</name>
+        <label>Get Related Account Sales Area</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_if_sales_area_exists</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_SoldToAccount__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_CPQ_Division__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_DG_Account_Name__r.PMC_SS_Division__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_CPQ_SalesOrganization__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>SalesOrganizationDesc</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PMC_SS_AccountSalesAreaRelationship__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Related_Account_Sales_Area</targetReference>
+        </connector>
+        <object>PMC_AccountSalesArea__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

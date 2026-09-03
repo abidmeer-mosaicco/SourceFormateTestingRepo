@@ -1,0 +1,118 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2aeadbc1-a072-41c9-bba5-84f8da81490b",
+  "label" : "Ética y cumplimiento",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d693a0ff-9d46-49f3-af9d-87aa9ac1e12c",
+          "columns" : [ {
+            "UUID" : "ecb1dd40-d934-4300-a127-38dd14c651b3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d693a0ff-9d46-49f3-af9d-87aa9ac1e12c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "2260d04f-fcfe-449e-a807-ba98fef78acc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ecb1dd40-d934-4300-a127-38dd14c651b3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b26f66ab-49bf-44d4-89a5-8c252b06cad5",
+          "columns" : [ {
+            "UUID" : "afcdd738-ade7-4ac2-878d-66c44c51f310",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b26f66ab-49bf-44d4-89a5-8c252b06cad5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "2",
+            "pageName" : "pageK",
+            "textDescription" : "Valoramos a quien hace nuestra empresa"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "5fac9d17-4e89-42ec-b364-a5ad89958dc5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "afcdd738-ade7-4ac2-878d-66c44c51f310",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c53d2057-b38c-4d2a-95b4-c66d7f3244c2",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Ética y cumplimiento"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "809df13f-5140-45e0-ae7a-9e3a85409884",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "18270fe0-6632-4d7f-abc8-5acdfe669872",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-tica-y-cumplimiento"
+}

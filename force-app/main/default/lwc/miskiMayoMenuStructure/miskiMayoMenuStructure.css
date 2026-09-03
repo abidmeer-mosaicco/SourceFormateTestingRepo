@@ -1,0 +1,141 @@
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e2231a;
+    padding: 1rem;
+    position: relative;
+    font-family: Arial, sans-serif;
+    z-index: 999999;
+}
+
+.logo { font-size: 1.5rem; color: white; font-weight: bold; text-align: center; }
+
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.hamburger span { width: 25px; height: 3px; background-color: white; display: block; }
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.menu.open { display: block; flex-direction: column; font-size: 0.68rem; }
+
+.menu-item { position: relative; text-wrap-mode: nowrap !important; }
+.menu-item > span { color: white; font-weight: 500; cursor: pointer; }
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0;
+    background: #fff;
+    list-style: none;
+    min-width: 220px;
+    z-index: 10;
+    padding: 0; margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.menu-item:hover .submenu { display: block; }
+
+.submenu-item { position: relative; white-space: pre-wrap !important; }
+.submenu-item > span,
+.sub-submenu li > span {
+    display: block;
+    padding: 10px 16px;
+    color: #222; cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submenu-item > span:hover,
+.sub-submenu li > span:hover { background-color: #e2231a; color: white; cursor: pointer; }
+
+.sub-submenu {
+    display: none;
+    position: absolute;
+    top: 0; left: 100%;
+    background: #fff;
+    min-width: 220px;
+    list-style: none;
+    padding: 0; margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.submenu-item:hover .sub-submenu { display: block; }
+
+.logo-img { max-width: 200px; }
+
+.submenu-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.submenu-label:hover { background-color: #e2231a; color: white; }
+.arrow-right { font-weight: bold; margin-left: 10px; transition: transform .2s ease; }
+
+@media screen and (min-width: 1025px) and (max-width: 1900px) {
+    .menu { margin-right: 4rem!important; font-size: 0.70rem; }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu { margin-right: 8rem!important; font-size: 0.50rem; }
+}
+
+/* -------- MOBILE (≤768px):accordion mode -------- */
+@media screen and (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #e2231a;
+        position: absolute;
+        top: 60px; left: 0;
+        width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem!important;
+    }
+    .menu.open { display: flex; }
+
+    /* disables hover behavior on mobile */
+    .menu-item:hover .submenu { display: none; }
+    .submenu-item:hover .sub-submenu { display: none; }
+
+    /* 1st level: open/close by .open class */
+    .menu-item { font-size: 0.95rem; }
+    .menu-item.open > .submenu {
+        display: block;
+        position: relative;   /* occupies the entire width */
+        top: 0; left: 0;
+        background: #fff;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .submenu-item {
+        font-size: 0.95rem;
+        padding: 0.5rem;
+        
+    }
+
+    /* 3rd level: stacked below 2nd level */
+    .sub-submenu {
+        position: relative;   /* key to not “open to the right” */
+        left: 0; top: 0;
+        background: #fff;
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+        display: none;        /* closed by default */
+    }
+    .submenu-item.open > .sub-submenu { display: block; }
+
+    /* visual feedback on caret */
+    .submenu-item.open .arrow-right { transform: rotate(90deg); }
+}

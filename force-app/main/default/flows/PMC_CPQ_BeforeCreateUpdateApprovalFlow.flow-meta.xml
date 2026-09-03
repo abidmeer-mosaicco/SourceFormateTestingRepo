@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>SubmitterCommentAssignment</name>
+        <label>Submitter Comment Assignment</label>
+        <locationX>176</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_SubmitterComments__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Quote__r.PMC_AdditionalComments__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.sbaa__CommentsLong__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Quote__r.ApprovalComments__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>ConfigSettingDecision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>IsApprovalRecordNewOrUpdateDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSetting_DontRunOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsApprovalRecordNewOrUpdateDecision</name>
+        <label>Is Approval Record New Or Update Decision</label>
+        <locationX>440</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IsApprovalRecordNewOrUpdate_IfApprovalNewOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BooleanIsNewRecordFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SubmitterCommentAssignment</targetReference>
+            </connector>
+            <label>If Approval New Outcome</label>
+        </rules>
+        <rules>
+            <name>IsApprovalRecordNewOrUpdate_IfApprovalUpdateOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BooleanIsNewRecordFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>If Approval Update Outcome</label>
+        </rules>
+    </decisions>
+    <description>Fixes GCPM-5088 / INC1410516.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>BooleanIsNewRecordFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>PMC_CPQ_Before Create/Update Approval Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Before Create/Update Approval Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSettingDecision</targetReference>
+        </connector>
+        <object>sbaa__Approval__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

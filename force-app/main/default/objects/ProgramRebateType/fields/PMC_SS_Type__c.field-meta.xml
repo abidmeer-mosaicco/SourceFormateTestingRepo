@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Type__c</fullName>
+    <label>Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ZRS6</fullName>
+                <default>false</default>
+                <label>Blended</label>
+            </value>
+            <value>
+                <fullName>Cultivar - Performa</fullName>
+                <default>false</default>
+                <label>Cultivar - Performa</label>
+            </value>
+            <value>
+                <fullName>Cultivar - Performa Bio</fullName>
+                <default>false</default>
+                <label>Cultivar - Performa Bio</label>
+            </value>
+            <value>
+                <fullName>Cultivar - Performance</fullName>
+                <default>false</default>
+                <label>Cultivar - Performance</label>
+            </value>
+            <value>
+                <fullName>Cultivar - Volume</fullName>
+                <default>false</default>
+                <label>Cultivar - Volume</label>
+            </value>
+            <value>
+                <fullName>ZRS3</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>ZRS1</fullName>
+                <default>false</default>
+                <label>Individual</label>
+            </value>
+            <value>
+                <fullName>ZRS2</fullName>
+                <default>false</default>
+                <label>Portfolio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

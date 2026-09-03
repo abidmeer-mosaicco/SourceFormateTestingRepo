@@ -1,0 +1,55 @@
+<template>
+  <template lwc:if={pageLoaded}>
+    <div class="custom-card">
+      <div class="card-header">
+        {labels.pmc_preferences_notifyMeFor}
+      </div>
+      <div class="card-body">
+        <template for:each={preferenceObj} for:item="pref">
+          <div key={pref.strParentNotificationId} class="card-section slds-m-horizontal_medium slds-m-bottom_medium">
+            <div class="head-labels">
+              <div class="content-header">
+                {pref.strParentNotificationName}
+              </div>
+              <div class="notify-medium">
+                <div>{labels.pmc_preferences_whatsApp}</div>
+                <div>{labels.pmc_preferences_text}</div>
+                <div>{labels.pmc_preferences_email}</div>
+              </div>
+            </div>
+            <template for:each={pref.lstChildNotifications} for:item="type">
+              <div key={type.intSequence} class="content-info" data-mobileview={type.mobileView}>
+                <div>{type.strNotificationName}</div>
+                <div class="toggle-style">
+                  <template for:each={type.lstChannelTypes} for:item="channel">
+                    <div key={channel.strNotificationId} class="mobile-toggle" data-mobileview={type.mobileView}>
+                      <div class="channel" data-mobileview={type.mobileView}>{channel.strNotificationChannelType}</div>
+                      <div class="slds-form-element toggle">
+                        <label class="slds-checkbox_toggle slds-grid">
+                          <input type="checkbox" name={channel.strNotificationChannelType}
+                            value={type.strNotificationName} aria-label={type.strNotificationName}
+                            data-id={channel.strNotificationId} disabled={channel.boolDisabledNotification}
+                            checked={channel.boolSelectedValue} onchange={handleCheckbox} />
+                          <span class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                          </span>
+                        </label>
+                      </div>
+                      <template lwc:if={channel.isWhatsApp}>
+                        <div class="toggle-space">&nbsp;</div>
+                      </template>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+    </div>
+  </template>
+
+  <template lwc:if={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

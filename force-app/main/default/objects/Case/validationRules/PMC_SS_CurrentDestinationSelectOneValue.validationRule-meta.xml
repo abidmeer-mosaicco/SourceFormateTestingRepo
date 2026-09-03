@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CurrentDestinationSelectOneValue</fullName>
+    <active>true</active>
+    <description>Checks whether the user has filled only one field or not</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+OR(ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect Destination&apos;),ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Diversion&apos;)),
+OR(AND(ISBLANK(PMC_SS_CurrentDestinationLocation__c  ),ISBLANK(PMC_SS_CurrentDestinationShipTo__c  )),AND(NOT(ISBLANK(PMC_SS_CurrentDestinationLocation__c  )),NOT(ISBLANK(PMC_SS_CurrentDestinationShipTo__c  )))),NOT(ISPICKVAL(Origin , &apos;Email&apos;))
+)</errorConditionFormula>
+    <errorMessage>You can only fill either one of them, Current Destination Location or Current Destination Ship To</errorMessage>
+</ValidationRule>

@@ -1,0 +1,140 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-25-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div>
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <div class="slds-combobox_container">
+                    <div id="box" class={boxClass} aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                            <template if:true={isValueSelected}>
+                                <div id="lookup-pill" class="pillContainer">
+                                    <lightning-pill label={selectedName} name={selectedName} onremove={handleRemovePill} href={href}>
+                                        <lightning-icon icon-name={iconName} alternative-text="acc" ></lightning-icon>
+                                    </lightning-pill>
+                                </div>
+                            </template>
+
+                            <template if:false={isValueSelected}>
+                                <div class="slds-p-top_none">
+                                    <lightning-input class={inputClass}  id="input" name="inputField" data-name="lookupfield" value={searchTerm}
+                                                     onclick={handleClick} onblur={onBlur} onchange={onChange}
+                                                     variant="label-hidden" autocomplete="off" placeholder={searchPlaceholder}>
+                                    </lightning-input>
+                                    <!-- GSMD-1467 -->
+                                    <button class="slds-button slds-input__icon slds-input__icon_right" onclick={openOrderSearchModal} style="position: absolute; right: 0.5rem;">
+                                        <lightning-icon
+                                            icon-name="utility:search"
+                                            size="x-small"
+                                            alternative-text="Search"
+                                        ></lightning-icon>
+                                    </button>
+                                    <!-- GSMD-1467 -->
+                                </div>
+                            </template>
+                        </div>
+                        <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid">
+                            <ul class="slds-listbox slds-listbox_vertical recordListBox">
+                                <template for:each={records} for:item="record">
+                                    <li key={record.Id} data-id={record.Id} data-name={record.OrderNumber} onclick={onSelect} onmousedown={onSelect} class="slds-listbox__item eachItem">
+                                        <!-- <div class="slds-media slds-listbox__option_entity">
+                                            <lightning-icon icon-name={iconName} alternative-text="icon" size="small"></lightning-icon> &nbsp;&nbsp;
+                                            <span class="verticalAlign slds-truncate">{record.OrderNumber}</span><br />
+                                            <small>{record.PMC_CPQ_SAPOrderNumber__c}</small>
+                                        </div> -->
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                            <span class="slds-media__figure slds-listbox__option-icon">
+                                                <lightning-icon
+                                                   icon-name={iconName}
+                                                   size="small"
+                                                   alternative-text="icon"
+                                                ></lightning-icon>
+                                            </span>
+                                            <!-- GSMD-1467 -->
+                                            <span class="slds-media__body">
+                                                <div class="slds-truncate"><strong>{record.OrderNumber}</strong></div>
+                                                <div class="slds-truncate slds-text-color_weak" style="display: block;">
+                                                   {record.PMC_CPQ_SAPOrderNumber__c}
+                                                </div>
+                                                <div class="slds-truncate slds-text-color_weak" style="display: block;">
+                                                    {record.PMC_CPQ_PO__c}
+                                                </div>
+                                            </span>
+                                            <!-- GSMD-1467 -->
+                                         </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GSMD-1467 -->
+        <template if:true={isOrderSearchModalOpen}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-modal="true">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning-icon icon-name="utility:search" size="small" class="slds-m-right_small" alternative-text="Search" title="Search"></lightning-icon>
+                        <h2 class="slds-modal__title slds-hyphenate">Search Order</h2>
+                    </header>
+
+                    <div class="slds-modal__content slds-p-around_medium modalHeight">
+                        <lightning-input label="Search by Name or Number" value={orderItemSearchKey} onchange={handleOrderItemSearchKeyChange}></lightning-input>
+
+                        <template if:true={filteredOrders}>
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered  slds-table_striped slds-m-top_medium">
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Order Number</th>
+                                        <th>SAP Order Number    </th>
+                                        <th>Customer Purchase Order</th>
+                                        <th>Status</th>
+                                        <th>SAP Contract Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={filteredOrders} for:item="order" for:index="index">
+                                        <tr key={order.Id}>
+                                            <td>
+                                                <input
+                                                    type="radio"
+                                                    name="invoiceSelection"
+                                                    data-id={order.Id}
+                                                    data-name={order.OrderNumber}
+                                                    checked={order.isSelected}
+                                                    onchange={handleOrderItemCheckboxChange} />
+                                            </td>
+                                            <td>{order.OrderNumber}</td>
+                                            <td>{order.PMC_CPQ_SAPOrderNumber__c}</td>
+                                            <td >{order.PMC_CPQ_PO__c}</td>
+                                            <td>{order.Status}</td>
+                                            <td>{order.PMC_CPQ_SAPContractReference__c}</td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </template>
+
+                        <template if:false={filteredOrders}>
+                            <p class="slds-text-color_weak slds-p-top_medium">No orders found.</p>
+                        </template>
+                    </div>
+
+                    <footer class="slds-modal__footer">
+                        <lightning-button variant="neutral" label="Close" onclick={closeOrderSearchModal}></lightning-button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+        <!-- GSMD-1467 -->
+
+    </div>
+</template>

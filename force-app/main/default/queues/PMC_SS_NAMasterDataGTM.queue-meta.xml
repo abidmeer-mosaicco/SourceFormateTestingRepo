@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>NA Master Data GTM</name>
+    <queueMembers>
+        <users>
+            <user>fernando.ramiro@mosaicco.com.prod</user>
+            <user>georgia.berlim@mosaicco.com.prod</user>
+            <user>liniker.almeida@mosaicco.com</user>
+            <user>maria.campos3@mosaicco.com</user>
+            <user>michael.trajanodemenezes@mosaicco.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

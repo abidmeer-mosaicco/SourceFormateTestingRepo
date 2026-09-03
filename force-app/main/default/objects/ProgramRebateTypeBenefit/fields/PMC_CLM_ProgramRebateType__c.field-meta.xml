@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_ProgramRebateType__c</fullName>
+    <description>This field will be used to get the value of Type field of Rebate Type record associated with Program Rebate Type Benefit</description>
+    <externalId>false</externalId>
+    <formula>TEXT(ProgramRebateType.PMC_SS_Type__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Program Rebate Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_CustomerAcceptanceMethod__c</fullName>
+    <description>This fied is used to capture the medium the quote has been accepted</description>
+    <inlineHelpText>Medium through which customer communicated</inlineHelpText>
+    <label>Customer Acceptance Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SBQQ__Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accepted by DH Customer</fullName>
+                <default>false</default>
+                <label>Accepted by DH Customer</label>
+            </value>
+            <value>
+                <fullName>DocuSign</fullName>
+                <default>false</default>
+                <label>DocuSign</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+                <label>In Person</label>
+            </value>
+            <value>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+                <label>Phone Call</label>
+            </value>
+            <value>
+                <fullName>Text/Whatsapp</fullName>
+                <default>false</default>
+                <label>Text/Whatsapp</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>Accepted by DH Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>DocuSign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>In Person</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>Phone Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accepted</controllingFieldValue>
+            <valueName>Text/Whatsapp</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

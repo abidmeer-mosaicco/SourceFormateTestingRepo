@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequireBillingPostalCode</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+    OR(
+        ISPICKVAL(BillingCountryCode, &quot;BR&quot;),
+        ISPICKVAL(BillingCountryCode, &quot;PY&quot;)
+    ),
+    ISBLANK(BillingPostalCode)
+)</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Please provide the Zip/Postal Code</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RegionalDirectorCannotBeBlank</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),OR(
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Cancellation due to customer death&apos;),
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Commercial input error&apos;),
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Insufficient loading balance&apos;),
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Customer Cancellation&apos;),
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Unapproved credit limit&apos;),
+ISPICKVAL(  PMC_SS_ContractCancellation__c , &apos;Volume Reduction due to agronomic adjustment&apos;)),
+AND(PMC_SS_Ton__c &gt; 1000 , PMC_SS_Ton__c &lt;= 2000),
+AND(ISPICKVAL( Status , &apos;New&apos;), ISBLANK( PMC_SS_RegionalDirector__c )))</errorConditionFormula>
+    <errorMessage>There is no Regional Director Team Members for this Account. Please add the members to send the Case for Approval</errorMessage>
+</ValidationRule>

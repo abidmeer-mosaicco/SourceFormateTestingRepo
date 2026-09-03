@@ -1,0 +1,27 @@
+<template>
+  <div class="slds-grid slds-wrap slds-grid_align-spread slds-p-vertical_medium">
+    <div class="slds-col slds-size_12-of-12 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-p-vertical_x-small">
+      <div class="user-text">{labels.pmc_home_hello} {firstName}!</div>
+      <p class="user-greet">{labels.pmc_home_welcome}</p>
+    </div>
+    <div class="slds-col slds-grid slds-p-vertical_x-small">
+      <div class="icon slds-col slds-p-right_small">
+        <img src={iconUrlObj.personAccountUrl} alt={labels.pmc_home_accountManager} />
+      </div>
+      <div class="details slds-col">
+        <div class="account-title">{labels.pmc_home_accountManager}</div>
+        <div class="account-name">{accountManagerName}</div>
+      </div>
+    </div>
+  </div>
+
+  <template if:true={isWidgetSection}>
+    <c-pmc_dh_homepage-widget-section>
+    </c-pmc_dh_homepage-widget-section>
+  </template>
+
+  <template if:true={isLoading}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+  
+</template>

@@ -1,0 +1,66 @@
+.card-container {
+    position: relative;
+    width: 100%; /*17.5rem;*/ /* 280px */
+    /*height: 35rem;*/ /*17.5rem;*/
+    border-radius: 0.9375rem; /* 15px */
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    /* NEW 5/5*/
+    /*display: flex;
+    flex-direction: column;*/
+    
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* <<< importante para deixar o Title abaixo do ícone */
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    z-index: 1;
+    position: relative;
+}
+
+.icon {
+    max-width: 7rem;
+    max-height: 7rem;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.4s ease;
+    z-index: 2;
+    padding: 1rem;
+    opacity: 0; /* <<< invisível inicialmente */
+}
+
+.card-container:hover .hover-overlay {
+    width: 100%;
+    opacity: 1; /* <<< visível no hover */
+}
+
+.hover-title {
+    /*font-size: 1.125rem;*/ /* 18px */
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.hover-description {
+    /*font-size: 0.875rem;*/ /* 14px */
+    text-align: center;
+}

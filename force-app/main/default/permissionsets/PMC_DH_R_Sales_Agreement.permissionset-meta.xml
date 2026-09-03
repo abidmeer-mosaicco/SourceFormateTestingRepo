@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Collaborate with your partners on sales agreements using the Manufacturing community.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PMC_DH_R_Sales_Agreement</label>
+    <license>ManufacturingSalesAgreementsForCmtyPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EnableMassUpdtForMfgSACmty</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseMfgSalesAgreementsCmty</name>
+    </userPermissions>
+</PermissionSet>

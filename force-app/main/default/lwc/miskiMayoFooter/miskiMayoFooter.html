@@ -1,0 +1,78 @@
+<template>
+  <template if:true={showFooter}>
+    <footer class="footer">
+      <div class="footer-main">
+        <!-- COLUMN 1: Enlaces externos -->
+        <div class="footer-column">
+          <p class="footer-title" style="font-size: 1.5rem;">Enlaces externos</p>
+          <ul class="footer-link-list">
+            <li><a href={labels.MM_TRABAJA_CON_NOSOTROS_URL_COMPLETE} class="link-text" target="_blank" rel="noopener noreferrer">Trabaja con nosotros</a></li>
+            <li><a href={labels.MM_PROVEEDORES_URL_COMPLETE} class="link-text" target="_blank" rel="noopener noreferrer">Proveedores</a></li>
+            <li><a href={labels.MM_INGRESO_A_PUERTO_URL_COMPLETE} class="link-text" target="_blank" rel="noopener noreferrer">Ingreso a Puerto</a></li>
+            <li><a href={labels.MM_EXTERNAL_WORKDAY_URL_COMPLETE} class="link-text" target="_blank" rel="noopener noreferrer">Workday</a></li>
+            <li><a href={labels.MM_EXTERNAL_ADRYAN_URL_COMPLETE} class="link-text" target="_blank" rel="noopener noreferrer">Adryan</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 2: Páginas de interés -->
+        <div class="footer-column">
+          <p class="footer-title" style="font-size: 1.5rem;">{labels.MMFooterEnlacesdeInteres}</p>
+          <div class="footer-links-group two-columns">
+            <ul class="footer-link-list">
+              <li><a href={labels.MMFooterFOSPIBAYWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterFOSPIBAY}</a></li>
+              <li><a href={labels.MMFooterSNMPEWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterSNMPE}</a></li>
+              <li><a href={labels.MMFooterMosaicWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterMosaic}</a></li>
+              <li><a href={labels.MMFooterMitsuiWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterMitsui}</a></li>
+            </ul>
+            <ul class="footer-link-list">
+              <li><a href={labels.MMFooterMineriadetodosWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterMineriadetodos}</a></li>
+              <li><a href={labels.MMFooterISEMWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterISEM}</a></li>
+              <li><a href={labels.MMFooterEITIPERUWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterEITIPERU}</a></li>
+              <li><a href={labels.MMFooterWIMPeruWebsiteLink} class="link-text" target="_blank" rel="noopener noreferrer">{labels.MMFooterWIMPeru}</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Logo + Address -->
+        <div class="footer-column logo-column">
+          <div class="footer-office">
+            <p class="footer-office-title">
+              <img src={locationIcon} alt="Location icon" class="footer-icon-img" />
+              {labels.MMFooterOficinasPiura}
+            </p>
+            <p class="footer-office-address">{labels.MMFooterOficinasPiuraAddress}</p>
+          </div>
+          <div class="footer-office">
+            <p class="footer-office-title">
+              <img src={locationIcon} alt="Location icon" class="footer-icon-img" />
+              {labels.MMFooterOficinasLima}
+            </p>
+            <p class="footer-office-address">{labels.MMFooterOficinasLimaAddress}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM PART -->
+      <div class="footer-bottom">
+        <div>
+          <p>{labels.MMFooterDesarrollado}</p>
+          <p>{labels.MMFooterCopyright}</p>
+        </div>
+        <div class="footer-bottom-right">
+          <span class="footer-title" style="font-size: 1.5rem;">{labels.MMFooterVisitanuestrasredessociales}</span>
+          <div class="social-icons">
+            <a href={labels.MMFooterFacebookWebsiteLink} class="social-icon" target="_blank" rel="noopener noreferrer">
+              <img src={facebook} alt={labels.MMFooterFacebook} />
+            </a>
+            <a href={labels.MMFooterYouTubeWebsiteLink} class="social-icon" target="_blank" rel="noopener noreferrer">
+              <img src={youtube} alt={labels.MMFooterYouTube} />
+            </a>
+            <a href={labels.MMFooterLinkedInWebsiteLink} class="social-icon" target="_blank" rel="noopener noreferrer">
+              <img src={linkedin} alt={labels.MMFooterLinkedIn} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </template>
+</template>

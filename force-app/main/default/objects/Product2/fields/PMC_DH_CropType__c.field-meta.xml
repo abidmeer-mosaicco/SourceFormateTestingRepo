@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_CropType__c</fullName>
+    <label>Crop Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cotton</fullName>
+                <default>false</default>
+                <label>Cotton</label>
+            </value>
+            <value>
+                <fullName>Potato</fullName>
+                <default>false</default>
+                <label>Potato</label>
+            </value>
+            <value>
+                <fullName>Sugarcane</fullName>
+                <default>false</default>
+                <label>Sugarcane</label>
+            </value>
+            <value>
+                <fullName>Rice</fullName>
+                <default>false</default>
+                <label>Rice</label>
+            </value>
+            <value>
+                <fullName>Corn (Winter)</fullName>
+                <default>false</default>
+                <label>Corn (Winter)</label>
+            </value>
+            <value>
+                <fullName>Coffee</fullName>
+                <default>false</default>
+                <label>Coffee</label>
+            </value>
+            <value>
+                <fullName>Corn (Summer)</fullName>
+                <default>false</default>
+                <label>Corn (Summer)</label>
+            </value>
+            <value>
+                <fullName>HF</fullName>
+                <default>false</default>
+                <label>HF</label>
+            </value>
+            <value>
+                <fullName>Soy</fullName>
+                <default>false</default>
+                <label>Soy</label>
+            </value>
+            <value>
+                <fullName>Beans</fullName>
+                <default>false</default>
+                <label>Beans</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Citrus</fullName>
+                <default>false</default>
+                <label>Citrus</label>
+            </value>
+            <value>
+                <fullName>Pasture</fullName>
+                <default>false</default>
+                <label>Pasture</label>
+            </value>
+            <value>
+                <fullName>Wheat</fullName>
+                <default>false</default>
+                <label>Wheat</label>
+            </value>
+            <value>
+                <fullName>Reforestation</fullName>
+                <default>false</default>
+                <label>Reforestation</label>
+            </value>
+            <value>
+                <fullName>Alfalfa</fullName>
+                <default>false</default>
+                <label>Alfalfa</label>
+            </value>
+            <value>
+                <fullName>Artichoke</fullName>
+                <default>false</default>
+                <label>Artichoke</label>
+            </value>
+            <value>
+                <fullName>Banana</fullName>
+                <default>false</default>
+                <label>Banana</label>
+            </value>
+            <value>
+                <fullName>Barley</fullName>
+                <default>false</default>
+                <label>Barley</label>
+            </value>
+            <value>
+                <fullName>Bean</fullName>
+                <default>false</default>
+                <label>Bean</label>
+            </value>
+            <value>
+                <fullName>Beans Safrinha</fullName>
+                <default>false</default>
+                <label>Beans Safrinha</label>
+            </value>
+            <value>
+                <fullName>Cane</fullName>
+                <default>false</default>
+                <label>Cane</label>
+            </value>
+            <value>
+                <fullName>Carrot</fullName>
+                <default>false</default>
+                <label>Carrot</label>
+            </value>
+            <value>
+                <fullName>Cassava</fullName>
+                <default>false</default>
+                <label>Cassava</label>
+            </value>
+            <value>
+                <fullName>Castor bean</fullName>
+                <default>false</default>
+                <label>Castor bean</label>
+            </value>
+            <value>
+                <fullName>Cocoa</fullName>
+                <default>false</default>
+                <label>Cocoa</label>
+            </value>
+            <value>
+                <fullName>Coconut</fullName>
+                <default>false</default>
+                <label>Coconut</label>
+            </value>
+            <value>
+                <fullName>Coffee-Irrigant</fullName>
+                <default>false</default>
+                <label>Coffee-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Corn</fullName>
+                <default>false</default>
+                <label>Corn</label>
+            </value>
+            <value>
+                <fullName>Corn Safrinha</fullName>
+                <default>false</default>
+                <label>Corn Safrinha</label>
+            </value>
+            <value>
+                <fullName>Corn silage</fullName>
+                <default>false</default>
+                <label>Corn silage</label>
+            </value>
+            <value>
+                <fullName>Corn-Irrigant</fullName>
+                <default>false</default>
+                <label>Corn-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Cotton-Irrigant</fullName>
+                <default>false</default>
+                <label>Cotton-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Cucumber</fullName>
+                <default>false</default>
+                <label>Cucumber</label>
+            </value>
+            <value>
+                <fullName>Eucalyptus</fullName>
+                <default>false</default>
+                <label>Eucalyptus</label>
+            </value>
+            <value>
+                <fullName>Frijoles-Riego</fullName>
+                <default>false</default>
+                <label>Frijoles-Riego</label>
+            </value>
+            <value>
+                <fullName>Fruits</fullName>
+                <default>false</default>
+                <label>Fruits</label>
+            </value>
+            <value>
+                <fullName>Garlic</fullName>
+                <default>false</default>
+                <label>Garlic</label>
+            </value>
+            <value>
+                <fullName>Grape</fullName>
+                <default>false</default>
+                <label>Grape</label>
+            </value>
+            <value>
+                <fullName>Millet silage</fullName>
+                <default>false</default>
+                <label>Millet silage</label>
+            </value>
+            <value>
+                <fullName>Mulberry</fullName>
+                <default>false</default>
+                <label>Mulberry</label>
+            </value>
+            <value>
+                <fullName>Onion</fullName>
+                <default>false</default>
+                <label>Onion</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Papaya</fullName>
+                <default>false</default>
+                <label>Papaya</label>
+            </value>
+            <value>
+                <fullName>Pasture Bov. Cutting</fullName>
+                <default>false</default>
+                <label>Pasture Bov. Cutting</label>
+            </value>
+            <value>
+                <fullName>Pasture Bov. Milk</fullName>
+                <default>false</default>
+                <label>Pasture Bov. Milk</label>
+            </value>
+            <value>
+                <fullName>Pasture Goats</fullName>
+                <default>false</default>
+                <label>Pasture Goats</label>
+            </value>
+            <value>
+                <fullName>Pasture Horses</fullName>
+                <default>false</default>
+                <label>Pasture Horses</label>
+            </value>
+            <value>
+                <fullName>Pasture ILP/ICLF</fullName>
+                <default>false</default>
+                <label>Pasture ILP/ICLF</label>
+            </value>
+            <value>
+                <fullName>Pasture Seed</fullName>
+                <default>false</default>
+                <label>Pasture Seed</label>
+            </value>
+            <value>
+                <fullName>Pasture Sheep</fullName>
+                <default>false</default>
+                <label>Pasture Sheep</label>
+            </value>
+            <value>
+                <fullName>Pasture silage</fullName>
+                <default>false</default>
+                <label>Pasture silage</label>
+            </value>
+            <value>
+                <fullName>Pastures</fullName>
+                <default>false</default>
+                <label>Pastures</label>
+            </value>
+            <value>
+                <fullName>Pea</fullName>
+                <default>false</default>
+                <label>Pea</label>
+            </value>
+            <value>
+                <fullName>Peach</fullName>
+                <default>false</default>
+                <label>Peach</label>
+            </value>
+            <value>
+                <fullName>Peanut</fullName>
+                <default>false</default>
+                <label>Peanut</label>
+            </value>
+            <value>
+                <fullName>Persimmon</fullName>
+                <default>false</default>
+                <label>Persimmon</label>
+            </value>
+            <value>
+                <fullName>Pineapple</fullName>
+                <default>false</default>
+                <label>Pineapple</label>
+            </value>
+            <value>
+                <fullName>Potato-Irrigant</fullName>
+                <default>false</default>
+                <label>Potato-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Produce</fullName>
+                <default>false</default>
+                <label>Produce</label>
+            </value>
+            <value>
+                <fullName>Pumpkin</fullName>
+                <default>false</default>
+                <label>Pumpkin</label>
+            </value>
+            <value>
+                <fullName>Rami</fullName>
+                <default>false</default>
+                <label>Rami</label>
+            </value>
+            <value>
+                <fullName>Rice-Irrigant</fullName>
+                <default>false</default>
+                <label>Rice-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Safrinha Soybeans</fullName>
+                <default>false</default>
+                <label>Safrinha Soybeans</label>
+            </value>
+            <value>
+                <fullName>Smoke</fullName>
+                <default>false</default>
+                <label>Smoke</label>
+            </value>
+            <value>
+                <fullName>Soca Cane</fullName>
+                <default>false</default>
+                <label>Soca Cane</label>
+            </value>
+            <value>
+                <fullName>Sorghum silage</fullName>
+                <default>false</default>
+                <label>Sorghum silage</label>
+            </value>
+            <value>
+                <fullName>Sorgo</fullName>
+                <default>false</default>
+                <label>Sorgo</label>
+            </value>
+            <value>
+                <fullName>Sorgo Safrinha</fullName>
+                <default>false</default>
+                <label>Sorgo Safrinha</label>
+            </value>
+            <value>
+                <fullName>Soybeans-Irrigant</fullName>
+                <default>false</default>
+                <label>Soybeans-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Straw Pasture/Agriculture</fullName>
+                <default>false</default>
+                <label>Straw Pasture/Agriculture</label>
+            </value>
+            <value>
+                <fullName>Strawberry</fullName>
+                <default>false</default>
+                <label>Strawberry</label>
+            </value>
+            <value>
+                <fullName>Sugarcane-Plant</fullName>
+                <default>false</default>
+                <label>Sugarcane-Plant</label>
+            </value>
+            <value>
+                <fullName>Sunflower</fullName>
+                <default>false</default>
+                <label>Sunflower</label>
+            </value>
+            <value>
+                <fullName>Sweet Potato</fullName>
+                <default>false</default>
+                <label>Sweet Potato</label>
+            </value>
+            <value>
+                <fullName>Tea</fullName>
+                <default>false</default>
+                <label>Tea</label>
+            </value>
+            <value>
+                <fullName>Tomato</fullName>
+                <default>false</default>
+                <label>Tomato</label>
+            </value>
+            <value>
+                <fullName>Vegetable</fullName>
+                <default>false</default>
+                <label>Vegetable</label>
+            </value>
+            <value>
+                <fullName>Vegetables-Irrigant</fullName>
+                <default>false</default>
+                <label>Vegetables-Irrigant</label>
+            </value>
+            <value>
+                <fullName>Watermelon</fullName>
+                <default>false</default>
+                <label>Watermelon</label>
+            </value>
+            <value>
+                <fullName>Wheat silage</fullName>
+                <default>false</default>
+                <label>Wheat silage</label>
+            </value>
+            <value>
+                <fullName>Wheat-Irrigant</fullName>
+                <default>false</default>
+                <label>Wheat-Irrigant</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,101 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "In transit",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "1rem",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "1rem",
+            "sectionConfig" : "{\"UUID\":\"c58b413f-02ae-433e-bbb0-9ee55f4743ba\",\"columns\":[{\"UUID\":\"78bc77b2-55a4-4079-be42-a4888824f07f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicDirectNavBar",
+              "id" : "872562d1-0ab7-4bff-ac2f-433fbf3a5270",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "buttonNames" : "Barge, Rail",
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicBargeRail",
+              "id" : "423da74b-56da-468f-9c1a-31bdb5ae7522",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "accountNamePath" : "PMC_CPQ_OrderProduct__r.Order.Account.Name",
+                "baseWhereClause" : "isTTVisible__c = TRUE AND Shipment.PMC_CPQ_DeliveryActualGIDate__c >= 2026-04-01 AND (PMC_CPQ_OrderProduct__r.PMC_CPQ_Incoterms__c != 'FOB' AND PMC_CPQ_OrderProduct__r.PMC_CPQ_Incoterms__c != 'FCA')",
+                "dxpStyle" : { },
+                "filterFieldName" : "PMC_CPQ_OrderProduct__r.Order.Account.PMC_SS_SAPCustomerNumber__c",
+                "manualFieldApiNames" : "Id, PMC_CPQ_OrderProduct__r.OrderId, PMC_CPQ_OrderProduct__r.Order.Account.Name, PMC_CPQ_OrderProduct__r.Order.PMC_CPQ_SAPOrderNumber__c, PMC_CPQ_OrderProduct__r.OrderItemNumber__c, PMC_CPQ_OrderProduct__r.SBQQ__Contract__r.SBQQ__Quote__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_LinePONumber__c, PMC_CPQ_OrderProduct__r.Product2.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_ShipTo__r.PMC_SS_CityState__c, Shipment.PMC_CPQ_DeliveryActualGIDate__c, Shipment.PMC_CPQ_VehicleID__c, Shipment.PMC_CPQ_CurrentLocation__c, Shipment.PMC_CPQ_ETA__c, PMC_CPQ_DeliveryQuantity__c, PMC_CPQ_UnitofMeasure__c, PMC_CPQ_OrderProduct__r.PMC_CPQ_ProductLocation__r.Name, Shipment.DaysNotMoved__c, PMC_CPQ_OrderProduct__r.PMC_CPQ_ShipTo__r.ShipToFormula__c, Shipment.StatusCode__c, Shipment.PMC_CPQ_TowName__c, Shipment.PMC_CPQ_CurrentCarrier__c, Shipment.PMC_CPQ_Comments__c",
+                "manualFieldLabelNames" : "Id, OrderId, Account name, Order Number, Order Item, Contract, PO Number, Product, Destination, Ship Date, Vehicle ID, Current Location, ETA, Weight, Unit of Measure, Origin, Days not Moved, Ship To, Status, Fleet/Tow Name, Current Carrier,  Last Comment",
+                "objectApiName" : "ShipmentItem",
+                "pageSize" : 50,
+                "tableType" : "In Transit"
+              },
+              "definition" : "c:mosaicDirectList",
+              "id" : "146ba19d-7b35-4ce8-a857-0faa1a0aca78",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicDirectLoading",
+              "id" : "6f3ba48a-ab45-443c-8b4b-635ee6c4a5b1",
+              "type" : "component"
+            } ],
+            "id" : "78bc77b2-55a4-4079-be42-a4888824f07f",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c58b413f-02ae-433e-bbb0-9ee55f4743ba",
+          "type" : "component"
+        } ],
+        "id" : "4b7fa44b-3f72-4a1f-93a5-496af6f800a0",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "In transit",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "5bf3e7c2-b39b-4edd-8754-eaba538998c7",
+          "type" : "component"
+        } ],
+        "id" : "bef6c964-5ab4-4eb4-b429-3c9f157b5819",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "4fe954de-7e16-44c4-8b14-3d6521db817f",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-in-transit"
+  },
+  "urlName" : "in-transit"
+}

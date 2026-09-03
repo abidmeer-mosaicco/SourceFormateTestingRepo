@@ -1,0 +1,97 @@
+.slds-input_faux.slds-combobox__input,
+.slds-input-has-icon--left-right .slds-input,
+lightning-input input.slds-input {
+  padding: var(--tb-size-small_custom2);
+  border-radius: 0;
+}
+.slds-combobox__form-element {
+  margin-bottom: 5px;
+}
+.show-custom-error {
+  box-shadow: rgb(186, 5, 23) 0px 0px 0px 1px inset !important;
+}
+.slds-dropdown-trigger_click .slds-icon_container.slds-input__icon {
+  padding-right: var(--tb-size-medium_custom2);
+  padding-left: 0;
+  background: url(/sfsites/c/resource/tb_globalAssets/icons/vectordown.svg) no-repeat !important;
+}
+
+.slds-dropdown-trigger_click.slds-is-open .slds-icon_container.slds-input__icon {
+  background: url(/sfsites/c/resource/tb_globalAssets/icons/vectorup.svg) no-repeat !important;
+}
+.slds-dropdown-trigger_click.slds-is-open .slds-dropdown {
+  top: 32px;
+  max-height: inherit;
+  overflow: inherit;
+}
+.slds-dropdown-trigger_click .scroll-list {
+  max-height: 220px;
+  overflow-y: auto;
+}
+.slds-dropdown-trigger_click .scroll-list ul li{
+
+}
+.slds-dropdown-trigger_click .float-list {
+  border-top: 1px solid #c0d1cf;
+}
+.slds-dropdown-trigger_click .float-list .link {
+  padding: 10px 12px 8px;
+  text-decoration: underline;
+  display: block;
+  font-family: var(--medium-font);
+}
+.slds-dropdown-trigger_click .slds-input_faux.slds-combobox__input {
+  cursor: pointer;
+  border: 1px solid rgb(191, 208, 206);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 32px;
+  padding: 0 32px 0 12px;
+}
+.slds-combobox_container.disabled {
+  cursor: not-allowed;
+}
+.slds-combobox_container.disabled .slds-dropdown-trigger_click {
+  pointer-events: none;
+}
+.slds-combobox_container.disabled
+  .slds-dropdown-trigger_click
+  .slds-input_faux.slds-combobox__input {
+  border: none;
+  background-color: var(--tb-color_offWhite);
+}
+.slds-input_faux.slds-combobox__input .slds-truncate {
+  max-width: 92%;
+  line-height: 30px;
+}
+
+.slds-form-element__help {
+  display: none;
+}
+.show-slds-error .slds-form-element__help {
+  display: block;
+  color: var(--tb-color_red);
+}
+.slds-dropdown-trigger_click.show-slds-error .slds-input_faux.slds-combobox__input {
+  border-color: rgb(186, 5, 23);
+  box-shadow: 0 0 0 1px rgb(191, 208, 206)
+}
+.custom-link {
+  border-top: 1px solid var(--dxp-s-dropdown-color-border,var(--dxp-g-neutral));
+}
+.custom-link a{
+  color: #1D625C;
+  text-decoration-line: underline;
+}
+/* .slds-listbox_vertical .slds-listbox__option.slds-has-focus {
+  background-color: inherit;
+} */
+.slds-listbox_vertical .slds-listbox__option_term {
+  padding: .54rem .75rem
+}
+.disabled-picklist {
+  pointer-events: none; /* Prevent clicks */
+  opacity: 0.6; /* Make it look faded */
+  background-color: #f3f3f3; /* Light grey background */
+  cursor: not-allowed;
+}

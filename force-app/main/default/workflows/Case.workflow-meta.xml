@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_Assigned_to_UserNo_Response_24_Hours_Email_Alert</fullName>
+        <description>Miski Mayo Case Registered Assigned to UserNo Response 24 Hours Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_24_Hours</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_Email_Alert</fullName>
+        <description>Miski Mayo Case Registered Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Comercial</fullName>
+        <description>Miski Mayo Case Registered No Response 3 Days - Comercial</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Communication</fullName>
+        <ccEmails>asunta.grandez@miskimayo.com</ccEmails>
+        <ccEmails>wendy.rojas@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Communication</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Human_Resources</fullName>
+        <ccEmails>elsa.cortes@miskimayo.com</ccEmails>
+        <ccEmails>mayra.pensky@miskimayo.com</ccEmails>
+        <ccEmails>frank.cordova@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Human Resources</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Legal</fullName>
+        <ccEmails>frank.sandoval@miskimayo.com</ccEmails>
+        <ccEmails>carmen.martinez@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Legal</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Port</fullName>
+        <ccEmails>juan.lozano@miskimayo.com</ccEmails>
+        <ccEmails>fany.chapilliquen@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Port</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Social_management</fullName>
+        <ccEmails>erick.estrada@miskimayo.com</ccEmails>
+        <ccEmails>anyi.velapatino@miskimayo.com</ccEmails>
+        <ccEmails>paola.farfan@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Social management</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_Response_3_Days_Suministros</fullName>
+        <ccEmails>carlos.agurto@miskimayo.com</ccEmails>
+        <ccEmails>jhainy.sernaque@miskimayo.com</ccEmails>
+        <ccEmails>napoleon.ruiz@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Case Registered No Response 3 Days - Suministros</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Assigned_to_User_But_No_Response_In_The_Last_3_days</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Case_Registered_No_User_Takes_Email_Alert</fullName>
+        <description>Miski Mayo Case Registered No User Takes Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_No_User_Takes_Alert</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Comercial_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>limcc@dg.mitsui.com</ccEmails>
+        <ccEmails>he.quispe@mitsui.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Comercial Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Communication_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>asunta.grandez@miskimayo.com</ccEmails>
+        <ccEmails>wendy.rojas@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Communication Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Email_Alert</fullName>
+        <description>Miski Mayo Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Creation_Email_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Gestion_Social_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>erick.estrada@miskimayo.com</ccEmails>
+        <ccEmails>anyi.velapatino@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Gestion Social Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Legal_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>frank.sandoval@miskimayo.com</ccEmails>
+        <ccEmails>carmen.martinez@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Legal Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Puerto_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>juan.lozano@miskimayo.com</ccEmails>
+        <ccEmails>fany.chapilliquen@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Puerto Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Recursos_Humanos_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>mayra.pensky@miskimayo.com</ccEmails>
+        <ccEmails>elsa.cortes@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Recursos Humanos Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Miski_Mayo_Suministros_Case_Registered_Administrator_Notification</fullName>
+        <ccEmails>carlos.Agurto@miskimayo.com</ccEmails>
+        <ccEmails>jhainy.Sernaque@miskimayo.com</ccEmails>
+        <ccEmails>jenny.vidalon@miskimayo.com</ccEmails>
+        <description>Miski Mayo Suministros Case Registered Administrator Notification</description>
+        <protected>false</protected>
+        <senderAddress>mesadepartesvirtual@miskimayo.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Miski_Mayo_Case_Registered_Administrator_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>PMC_SS_NotifyUserOnCaseCreationEmailAlert</fullName>
+        <description>Notify user that Case has been created</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply.customer.service@mosaicco.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/PMC_SS_KnowledgeArticleRequestCaseTemplate</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Modify_Case_Status_to_Closed</fullName>
+        <field>Status</field>
+        <literalValue>Closed</literalValue>
+        <name>Modify Case Status to Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_ApprovalforFinallevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Final Approved</literalValue>
+        <name>Approval for Final level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_ApprovalforFirstlevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Level 1 Approved</literalValue>
+        <name>Approval for First level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_ApprovalforSecondlevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Level 2 Approved</literalValue>
+        <name>Approval for Second level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_QualityApprovalforFinallevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Final Approved</literalValue>
+        <name>Quality Approval for Final level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_QualityApprovalforFirstlevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Level 1 Approved</literalValue>
+        <name>Quality Approval for First level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_QualityApprovalforSecondlevel</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Level 2 Approved</literalValue>
+        <name>Quality Approval for Second level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_QualityRejection</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Quality Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_Rejection</fullName>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_ApprovalforThirdLevel</fullName>
+        <description>Approval status field update for Third level approval</description>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Level 3 Approved</literalValue>
+        <name>Approval for Third Level</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_CaseNearbyMilestoneCompleted</fullName>
+        <field>PMC_SS_MilestoneIsNearby__c</field>
+        <literalValue>0</literalValue>
+        <name>Case Nearby Milestone Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_FirstContactMilestoneCompleted</fullName>
+        <field>PMC_SS_MilestoneIsViolated__c</field>
+        <literalValue>0</literalValue>
+        <name>First Contact Milestone Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_FirstContactMilestoneNearby</fullName>
+        <field>PMC_SS_MilestoneIsNearby__c</field>
+        <literalValue>1</literalValue>
+        <name>First Contact Milestone Nearby</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_FirstContactMilestoneViolated</fullName>
+        <field>PMC_SS_MilestoneIsViolated__c</field>
+        <literalValue>1</literalValue>
+        <name>First Contact Milestone Violated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_ResetActionReason</fullName>
+        <description>To reset back the Action Reason when Case approval is Rejected.</description>
+        <field>PMC_SS_ActionReason__c</field>
+        <name>Reset Action Reason</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_ResolutionMilestoneCompleted</fullName>
+        <field>PMC_SS_MilestoneIsViolated__c</field>
+        <literalValue>0</literalValue>
+        <name>Resolution Milestone Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_ResolutionMilestoneNearby</fullName>
+        <field>PMC_SS_MilestoneIsNearby__c</field>
+        <literalValue>1</literalValue>
+        <name>Resolution Milestone Nearby</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_ResolutionMilestoneViolated</fullName>
+        <field>PMC_SS_MilestoneIsViolated__c</field>
+        <literalValue>1</literalValue>
+        <name>Resolution Milestone Violated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

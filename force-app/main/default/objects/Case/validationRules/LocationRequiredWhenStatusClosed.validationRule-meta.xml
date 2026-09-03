@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LocationRequiredWhenStatusClosed</fullName>
+    <active>true</active>
+    <description>Location is required when Status is &apos;Close&apos; or &apos;Closure Pending&apos;</description>
+    <errorConditionFormula>AND(
+				OR(
+								ISPICKVAL(Status, &apos;Closed&apos;) ,
+								ISPICKVAL(Status, &apos;Closure Pending&apos;)
+				),
+				NOT(
+								OR(
+												ISPICKVAL(Type, &quot;Master Data&quot;),
+												ISPICKVAL(Type, &quot;EDI&quot;)
+								)
+				),
+				NOT(
+								AND(
+												ISPICKVAL(PMC_SS_IssueReason__c, &quot;MDM Verification&quot;),
+												ISPICKVAL(Type, &quot;Internal&quot;)
+								)
+				),
+				ISBLANK(PMC_SS_Location__c),
+				RecordType.DeveloperName = &apos;PMC_SS_CaseGeneral&apos;,
+				Account.BillingCountry!=&apos;Brazil&apos;,
+				Account.BillingCountry!=&apos;Paraguay&apos; 		
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Location__c</errorDisplayField>
+    <errorMessage>Location is required to close out your case.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,39 @@
+<template>
+  <div class="slds-grid slds-wrap slds-grid_align-center">
+    <div class="slds-col slds-grow-none slds-m-bottom_medium">
+      <h3>{labels.pmc_registration_accountInfoTitle}</h3>
+    </div>
+    <template if:true={showErrorMessage}>
+      <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+        <c-pmc_dh_message-banner type="error" message={labels.pmc_registration_accountError}>
+        </c-pmc_dh_message-banner>
+      </div>
+    </template>
+    <div class="slds-grid slds-wrap slds-gutters_direct">
+      <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+        <lightning-formatted-text class="dxp-text-body account-info-text"
+          value={labels.pmc_registration_existingAccount}>
+        </lightning-formatted-text>
+      </div>
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_number} data-id="strAccountNumber"
+          parent-name="strAccountNumber" default-value={pageObject.strAccountNumber} is-required
+          oninputdatachange={handleDataChange} type="text">
+        </c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_input-element text-label={labels.pmc_registration_accountManagerEmail} data-id="managerEmailId"
+          parent-name="managerEmailId" default-value={pageObject.managerEmailId} is-required
+          oninputdatachange={handleDataChange} type="email"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-grid slds-grid_align-center slds-m-top_medium mobile-button">
+        <lightning-button variant="brand" onclick={handleProceed} label={labels.pmc_registration_proceed}>
+        </lightning-button>
+      </div>
+    </div>
+  </div>
+
+  <template if:true={isLoading}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

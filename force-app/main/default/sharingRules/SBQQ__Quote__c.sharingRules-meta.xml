@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>PMC_CLM_ShareBrazilQuoteswithBrazilLegalTeam</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This sharing rule will be used to share all Quotes of Brazil region with the members of Brazil Legal Group</description>
+        <label>Share Brazil Quotes with Brazil Legal Team</label>
+        <sharedTo>
+            <group>PMC_CLM_LegalUserBrazil</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CLM_ShareNorthAmericaQuoteswithNALegalTeam</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This sharing rule will be used to share all North America Region Quotes with members of the NA Legal team with read-only access</description>
+        <label>Share North America Quotes with NA Legal Team</label>
+        <sharedTo>
+            <group>PMC_CLM_LegalUserNorthAmerica</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_NAProductManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share all North America Quotes with NA Product Managers.</description>
+        <label>NA Product Manager</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_NA_ProductManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_NAQuoteAccessSSA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share all North America region quotes with North America Sales Service Analyst with Read/Write access.</description>
+        <label>North America Sales Service Analyst</label>
+        <sharedTo>
+            <role>PMC_SS_NASalesServiceAnalystSSA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_NAQuoteAccessToNASSR</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share all North America region quotes with NA SSR with Read access.</description>
+        <label>NA Quote Access To NA SSR</label>
+        <sharedTo>
+            <role>PMC_SS_NASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>notEqual</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_NASalesTeam</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share quote of North America within NA Sales Team as a read only access.</description>
+        <label>NA Sales Team</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_NA_SalesManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAB2BProductManagers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share all Brazil/South America Quotes with B2B Product Managers as Read/Write Access</description>
+        <label>SA B2B Product Managers</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_SA_B2B_ProductManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAB2BSalesTeam</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Brazil/South America quote within SA Sales Team with Read only access.</description>
+        <label>SA B2B Sales Team</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_SA_B2BSalesManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAB2CProductManagers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share all Brazil quotes with B2C product managers with Read/Write Access</description>
+        <label>SA B2C Product Managers</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_SA_B2C_ProductManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAB2CSalesTeam</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share all Brazil quotes with Sales team with read only permission</description>
+        <label>SA B2C Sales Team</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>PMC_SA_B2CSalesManager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAQuoteAccessToSASSA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share all Brazil region non amendment quotes with SA Sales Service Analyst with Read/Write access.</description>
+        <label>SA Quote Access To SA SSA</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceAnalystSSA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>notEqual</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SAQuoteAccessToSASSR</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share all Brazil region quotes with SA SSR in Read access.</description>
+        <label>SA Quote Access To SA SSR</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>notEqual</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_ShareBrazilQuotewithBrazilApprovers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Brazil Quote with Brazil Approvers</label>
+        <sharedTo>
+            <group>PMC_CPQ_SAApprovers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_ShareNAAmendmentQuotesWithSSR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This will share all NA Amendment quotes with NA SSR in read/write mode</description>
+        <label>Share NA  Amendment Quotes with SSR</label>
+        <sharedTo>
+            <role>PMC_SS_NASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>equals</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_ShareSAAmendmentQuotesWithSSR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This will share all SA Amendment quotes with NA SSR in read/write mode</description>
+        <label>Share SA  Amendment Quotes with SSR</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>equals</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_ShareSAAmendmentQuotewithSASSA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>To share SA Amendment quotes with SA SSA in Read/Write mode.</description>
+        <label>Share SA Amendment Quote with SA SSA</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceAnalystSSA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SBQQ__Type__c</field>
+            <operation>equals</operation>
+            <value>Amendment</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusIconFormula__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( TEXT(sbaa__Status__c) ,
+  &quot;Requested&quot;, IMAGE(&quot;/img/loading.gif&quot;, &quot;Pending&quot;, 16, 16),
+  &quot;Approved&quot;, IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Approved&quot;, 16, 16),
+  &quot;Rejected&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Rejected&quot;, 16, 16),
+  &quot;Recalled&quot;, IMAGE(&quot;/img/func_icons/util/ileUndo16.gif&quot;, &quot;Recalled&quot;, 16, 16),
+  &quot;Revoked&quot;, IMAGE(&quot;/img/func_icons/remove12_on.gif&quot;, &quot;Revoked&quot;, 16, 16),
+  &quot;&quot;
+) &amp; &quot; - &quot; &amp; TEXT(sbaa__Status__c)</formula>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

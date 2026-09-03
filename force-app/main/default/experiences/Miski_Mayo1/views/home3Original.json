@@ -1,0 +1,669 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2cccbc52-8929-4f3e-81b5-94d25da3fc14",
+  "label" : "Home3 (Original)",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4c8f295f-732a-46c7-a506-e22cdff09b05",
+          "columns" : [ {
+            "UUID" : "d38ae65f-c2e8-4ad9-9185-14fb8e0cf53a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d40df27e-902e-407a-9bfe-6d65127bc793",
+            "columnKey" : "08fd6",
+            "columnName" : "Column 2",
+            "columnWidth" : "10",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 72
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4c8f295f-732a-46c7-a506-e22cdff09b05",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoMenuIconRedirect",
+          "id" : "740d86ee-86e4-4937-a6c7-a6586fe1726f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d38ae65f-c2e8-4ad9-9185-14fb8e0cf53a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenu",
+          "id" : "e3b91789-68db-41d0-8872-abf7cef3215d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d40df27e-902e-407a-9bfe-6d65127bc793",
+        "regionLabel" : "Column 2",
+        "regionName" : "08fd6",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0.74) url(/sfsites/c/file-asset/OP_MINA_DIA_02_FOTOGRAFIA_CORPORA?v=1) top center /cover",
+        "backgroundOverlay" : "rgba(53, 53, 53, 0.65)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "1f160829-de2d-47f4-9148-f5ca708c4eb1",
+          "columns" : [ {
+            "UUID" : "ee618c1b-2e9f-4a4f-946d-151948c7cc69",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "092b727c-e811-4bfd-9c94-29994ef10a4d",
+            "columnKey" : "acb30",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1f160829-de2d-47f4-9148-f5ca708c4eb1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><h2 style=\"text-align: left;\"><span style=\"color: rgb(255, 255, 255); font-size: 48px;\">Compañía Minera Miski Mayo</span></h2><p style=\"text-align: left;\"><br></p><p style=\"text-align: left;\"><span style=\"color: rgb(255, 255, 255); font-size: 18px;\">Somos Miski Mayo, empresa minera no metálica pionera en la región Piura. Líder en producción de concentrado de fosfato en el Perú, contando con el yacimiento más grande de Sudamérica. Transformamos recursos naturales en desarrollo sostenible en beneficio de la provincia de Sechura y la región Piura. Operamos con altos estándares en seguridad, protegemos el medio ambiente, y promovemos la mejora de la calidad de vida de nuestra gente y de nuestro entorno.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d4eb871d-31dd-41a8-9bdb-67609da23216",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(226, 35, 26)",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".8",
+            "label" : "VER MÁS",
+            "textColor" : "white",
+            "url" : "https://globaldigitalacceleration.my.site.com/miskimayo/s/nosotros"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "6d3abd69-11c6-42c1-a57c-102384cb99ec",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "dfe2b944-73ae-44af-add5-e8219e28bc6d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ee618c1b-2e9f-4a4f-946d-151948c7cc69",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "092b727c-e811-4bfd-9c94-29994ef10a4d",
+        "regionLabel" : "Column 2",
+        "regionName" : "acb30",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "d3512ecc-513a-4358-943e-75a559f7c6a0",
+          "columns" : [ {
+            "UUID" : "5bb03ae3-d9f4-4b3e-a4e5-d3d0d69b236b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7c2e0b94-6a3c-4425-8f7f-5c9bbb2b05c2",
+            "columnKey" : "cad7d",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 158
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d3512ecc-513a-4358-943e-75a559f7c6a0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 48px;\">Somos&nbsp;</span><span style=\"font-size: 48px; color: rgb(230, 0, 0);\">Miski Mayo</span></h2><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "caecb311-73a8-4f0f-9abd-d18792cc10e4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 15pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Iniciamos nuestra operación un 10 de julio de 2010.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Pertenecemos al corporativo Mosaic Company, nuestro accionista mayoritario.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 16px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Cumplimos nuestros compromisos contractuales con el Estado y la Comunidad, habiendo aportado 1,529.5 millones de soles hasta julio del 2024.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "56bf1b1e-6c1d-4d35-bec3-77a09883c050",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".8",
+            "label" : "CONÓCENOS",
+            "textColor" : "white",
+            "url" : "https://globaldigitalacceleration.my.site.com/miskimayo/s/nosotros"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "0c39ae50-e765-487d-8a5d-679691c5a3ff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5bb03ae3-d9f4-4b3e-a4e5-d3d0d69b236b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP2"
+          },
+          "componentName" : "c:miskiMayoCustomCarousel",
+          "id" : "8a5adb28-5231-42ec-894c-133ddb85b8ad",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7c2e0b94-6a3c-4425-8f7f-5c9bbb2b05c2",
+        "regionLabel" : "Column 2",
+        "regionName" : "cad7d",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e7fe2cab-84d5-44bf-89e1-d162f6ea6d90",
+          "columns" : [ {
+            "UUID" : "9ba2c8da-e092-4374-b9ee-f4a64074725c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 188
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e7fe2cab-84d5-44bf-89e1-d162f6ea6d90",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><br></h1><h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(255, 255, 255);\">Conoce Nuestro Proceso Productivo</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ef88bbcc-7740-4919-b29b-d5f873b793fc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9ba2c8da-e092-4374-b9ee-f4a64074725c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "efde49e5-3535-4d79-b1d0-364613ac1d19",
+          "columns" : [ {
+            "UUID" : "f565a952-731a-4fcf-ba15-454eebd72af8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 341
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "efde49e5-3535-4d79-b1d0-364613ac1d19",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "collectionLayoutDefinition" : {
+                "attributes" : {
+                  "collectionTitle" : "",
+                  "collectionTitleHeadingTag" : "h2",
+                  "columns" : "4",
+                  "rows" : "1",
+                  "showCollectionTitle" : true,
+                  "showViewMoreButton" : false,
+                  "spacing" : "none",
+                  "viewMoreButtonBackgroundColor" : "",
+                  "viewMoreButtonBackgroundColorHover" : "",
+                  "viewMoreButtonBorderColor" : "",
+                  "viewMoreButtonBorderColorHover" : "",
+                  "viewMoreButtonLabel" : "View More Items",
+                  "viewMoreButtonPlacement" : "center",
+                  "viewMoreButtonRadius" : 4,
+                  "viewMoreButtonTextColor" : "",
+                  "viewMoreButtonTextColorHover" : ""
+                },
+                "componentName" : "forceCommunity:dynamicCollectionGrid"
+              },
+              "dataProviderDefinition" : {
+                "attributes" : {
+                  "dataProviderInfo" : {
+                    "apiName" : "Proceso_Productivo_Tiles"
+                  },
+                  "dataProviderType" : "NamedCollection"
+                },
+                "componentName" : "forceCommunity:managedContentCollectionDataProvider"
+              },
+              "itemLayoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "cover",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : "492",
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "overlayFadeOut",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{\"title\":{\"linkURL\":\"{!CurrentItem.imageUrl}\"}}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.image.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0.22)",
+                  "showButton" : false,
+                  "showCaption" : true,
+                  "showDateTime" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "bottom center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "{!CurrentItem.description}",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:dynamicCollection",
+          "id" : "22b579dc-6fc1-4468-8256-e6a32d816b04",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f565a952-731a-4fcf-ba15-454eebd72af8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "40e057cb-6e89-4291-a4ed-4183d3466dc0",
+          "columns" : [ {
+            "UUID" : "5d11fb09-2ec7-4a39-9a31-a1a7fd808939",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 101
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "40e057cb-6e89-4291-a4ed-4183d3466dc0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 48px; color: rgb(43, 22, 27);\">&nbsp;Ultimas Noticias</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "350920de-199e-495d-aa6b-7c3b87a0c33b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5d11fb09-2ec7-4a39-9a31-a1a7fd808939",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "30938ab0-55c9-4749-8c18-41857c13641a",
+          "columns" : [ {
+            "UUID" : "d75c6eda-4cfa-44bf-a516-21e2b34fff1f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 199
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "30938ab0-55c9-4749-8c18-41857c13641a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "collectionLayoutDefinition" : {
+                "attributes" : {
+                  "collectionTitle" : "",
+                  "collectionTitleHeadingTag" : "h2",
+                  "columns" : "4",
+                  "rows" : "1",
+                  "showCollectionTitle" : true,
+                  "showViewMoreButton" : false,
+                  "spacing" : "small",
+                  "viewMoreButtonBackgroundColor" : "",
+                  "viewMoreButtonBackgroundColorHover" : "",
+                  "viewMoreButtonBorderColor" : "",
+                  "viewMoreButtonBorderColorHover" : "",
+                  "viewMoreButtonLabel" : "View More Items",
+                  "viewMoreButtonPlacement" : "center",
+                  "viewMoreButtonRadius" : 4,
+                  "viewMoreButtonTextColor" : "",
+                  "viewMoreButtonTextColorHover" : ""
+                },
+                "componentName" : "forceCommunity:dynamicCollectionGrid"
+              },
+              "dataProviderDefinition" : {
+                "attributes" : {
+                  "dataProviderInfo" : {
+                    "apiName" : "Notacias"
+                  },
+                  "dataProviderType" : "NamedCollection"
+                },
+                "componentName" : "forceCommunity:managedContentCollectionDataProvider"
+              },
+              "itemLayoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "cover",
+                  "borderColor" : "rgb(255, 255, 255)",
+                  "componentBorderStyles" : "",
+                  "componentHoverEffect" : "imageZoomIn",
+                  "componentPadding" : "none",
+                  "contentBackgroundColor" : "#ffffff",
+                  "contentOffset" : "0",
+                  "contentOffsetBackgroundColor" : "rgba(0, 0, 0, 0.03)",
+                  "contentOffsetPadding" : "none",
+                  "contentPosition" : "center",
+                  "contentWidth" : 100,
+                  "dateFormat" : "none",
+                  "datetime" : "{!CurrentItem.date}",
+                  "datetimeFontSize" : "small",
+                  "datetimeTextColor" : "rgb(0, 0, 0)",
+                  "datetimeTextDecoration" : "{\"bold\":true}",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagConstraints" : "media",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "imageAlignment" : "top",
+                  "imageAltText" : "",
+                  "imageBorderColor" : "#ffffff",
+                  "imageBorderStyles" : "",
+                  "imageUrl" : "{!CurrentItem.bannerImage.url}",
+                  "mediaAspectRatio" : "16:9",
+                  "mediaHeight" : "155",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "",
+                  "metadataTextDecoration" : "",
+                  "showDateTime" : true,
+                  "showExcerpt" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFeaturedMedia" : true,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "subTitleTextColor" : "",
+                  "textAlignment" : "left",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "{!CurrentItem.excerpt}",
+                  "titleFontSize" : "small",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextColor" : "rgb(0, 0, 0)",
+                  "titleTextDecoration" : "{\"textTransform\":\"none\",\"bold\":false}",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:flexTileLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:dynamicCollection",
+          "id" : "b0a6774e-b425-4f58-8632-55336661fd3f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d75c6eda-4cfa-44bf-a516-21e2b34fff1f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b4ae0318-bea7-4a79-be5f-b5a184fb4864",
+          "columns" : [ {
+            "UUID" : "f33963aa-3b13-4343-961f-dee80ec961bd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b4ae0318-bea7-4a79-be5f-b5a184fb4864",
+      "regions" : [ {
+        "id" : "f33963aa-3b13-4343-961f-dee80ec961bd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "059100ad-6058-487f-852e-1457be8a7f53",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Miski Mayo"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3bdacf77-222f-42fd-aaec-8492f30c1405",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "30d2df2f-2f8d-4b70-994e-ce2bc77188cf",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

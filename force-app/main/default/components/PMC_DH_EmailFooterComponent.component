@@ -1,0 +1,41 @@
+<!--
+  @description       : 
+  @author            : @siddharth.pradhan
+  @group             : 
+  @last modified on  : 05-23-2023
+  @last modified by  : @digital.hub
+-->
+
+<apex:component access="global" controller="PMC_DH_AccessReviewController">
+  <apex:attribute name="conObjId" assignTo="{!contId}" type="String" description="Con sf id" />
+  <tr>
+    <td style="background-color: #F2F2F2">
+        <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td height="32">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">
+                   <table width="600" border="0" cellspacing="0" cellpadding="0">
+                       <tr>
+                           <td width="150">&nbsp;</td>
+                           <td align="center">
+                               <a href='{!contactUsLink}' style="margin:0;padding:0;font-size:16px;line-height:19px;color:#1D625C;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: underline;">{!$Label.pmc_emailTemplate_contactUs}</a>
+                           </td>
+                           <td width="150">&nbsp;</td>
+                       </tr>
+                   </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center"><p style="margin:16px 0 0 0;padding:0;font-size:16px;line-height:19px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_copyright}</p></td>
+              </tr>
+              <tr>
+                <td height="32">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+    </td>
+  </tr>
+</apex:component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduling_2_User_Stories</fullName>
+    <columns>NAME</columns>
+    <columns>copado__User_Story_Title__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Developer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__User_Story_Title__c</field>
+        <operation>contains</operation>
+        <value>SMDP2</value>
+    </filters>
+    <label>Scheduling 2 User Stories</label>
+</ListView>

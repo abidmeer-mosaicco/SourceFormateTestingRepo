@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_BlockEditUnderdelTolerance</fullName>
+    <active>true</active>
+    <description>Prevents that any user other than team members of Master data and System Administrator edit the field value</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+ISCHANGED(PMC_SS_Underdeltolerance__c),
+    ISPICKVAL($User.UserType, &quot;Standard&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Underdeltolerance__c</errorDisplayField>
+    <errorMessage>Underdel Tolerance - Only Master Data or System Administrator team members can edit this field</errorMessage>
+</ValidationRule>

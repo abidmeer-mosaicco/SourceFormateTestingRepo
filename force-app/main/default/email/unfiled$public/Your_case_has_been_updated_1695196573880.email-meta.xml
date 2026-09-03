@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Your case has been updated</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC_DH_YourCaseHasBeenUpdated</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>Your case has been updated</subject>
+    <textOnly>[Image alt text: Mosaic] 
+
+{labels.pmc_emailTemplate_caseUpdated}
+
+{labels.pmc_emailTemplate_caseNumber} {{{Case.CaseNumber}}}
+
+{labels.pmc_emailTemplate_caseInquiryType} {{{Case.Type}}}
+
+{labels.pmc_emailTemplate_caseTopic} {{{Case.PMC_SS_IssueReason__c}}}
+
+{labels.pmc_emailTemplate_caseViewBtn} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_caseViewLink}{{{Case.Id}}}/{{{Case.Subject}}}{labels.pmc_emailTemplate_caseNumberLink}{{{Case.CaseNumber}}} &gt; 
+
+{labels.pmc_emailTemplate_copyPasteLink1}
+
+{labels.pmc_emailTemplate_copyPasteLink2}
+
+{labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_caseViewLink}{{{Case.Id}}}/{{{Case.Subject}}}{labels.pmc_emailTemplate_caseNumberLink}{{{Case.CaseNumber}}} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_caseViewLink}{{{Case.Id}}}/{{{Case.Subject}}}{labels.pmc_emailTemplate_caseNumberLink}{{{Case.CaseNumber}}} &gt; 
+
+{labels.pmc_emailTemplate_customerService1} {labels.pmc_emailTemplate_customerService2} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contactUsLink} &gt; {labels.pmc_emailTemplate_customerService3}
+
+{labels.pmc_emailTemplate_contactUs} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contactUsLink} &gt; 
+
+{labels.pmc_emailTemplate_copyright}</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

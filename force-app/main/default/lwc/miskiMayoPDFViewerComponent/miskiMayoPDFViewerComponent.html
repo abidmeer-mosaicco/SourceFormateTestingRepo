@@ -1,0 +1,36 @@
+<template>
+    <a onclick={openModalNew}><span style="color:red; font-size: 2rem;">{modalTitle}</span></a>
+    <template if:true={myopenModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class={modalClass}>
+            <div class="slds-modal__container">
+                <template if:true={showLoadingSpinner}>
+                    <lightning-spinner alternative-text="Loading"></lightning-spinner>
+                </template>
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" size="medium">
+                        </lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{modalTitle}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <template if:true={viewerUrlNew}>
+                        <div class="wrapper">
+                            <iframe src={pdfUrl} onload={onLoad}></iframe>
+                        </div>
+                    </template>
+                </div>
+                <footer class="slds-modal__footer">
+                    <footer class="slds-modal__footer">
+                        <lightning-button label="Zoom Out" variant="brand" onclick={handleZoomOut} class="slds-text-heading_small"></lightning-button>&nbsp;&nbsp;
+                        <lightning-button label="Zoom In" variant="brand" onclick={handleZoomIn} class="slds-text-heading_small"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <lightning-button label="Print" variant="neutral" onclick={printPDF} class="slds-text-heading_small slds-m-right_x-small slds-m-left_x-large"></lightning-button>
+                        <lightning-button label="Close" variant="neutral" onclick={closeModal} class="slds-text-heading_small"></lightning-button>
+                    </footer>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

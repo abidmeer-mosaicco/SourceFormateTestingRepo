@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Escolha como essa porcentagem da opção de produto total é calculada. O pacote é específico para o produto principal. Componentes é específico para componentes irmãos. A hierarquia inteira abrange todas as linhas da configuração.</help>
+    <label>Porcentagem do escopo total</label>
+    <name>SBQQ__SubscriptionScope__c</name>
+    <picklistValues>
+        <masterLabel>Components</masterLabel>
+        <translation>Componentes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entire Hierarchy</masterLabel>
+        <translation>Toda a hierarquia</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Package</masterLabel>
+        <translation>Pacote</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Package &amp; Components</masterLabel>
+        <translation>Pacote e componentes</translation>
+    </picklistValues>
+</CustomFieldTranslation>

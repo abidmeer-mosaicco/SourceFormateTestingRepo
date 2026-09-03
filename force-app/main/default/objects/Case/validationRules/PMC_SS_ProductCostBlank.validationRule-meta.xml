@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductCostBlank</fullName>
+    <active>true</active>
+    <description>Product Cost is required in order to close a Case.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Quality&quot;,
+ISPICKVAL(Status, &quot;Closed&quot;),
+ISBLANK(TEXT(PMC_SS_ProductCost__c))
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_ProductCost__c</errorDisplayField>
+    <errorMessage>Product Cost is required in order to close a Case.</errorMessage>
+</ValidationRule>

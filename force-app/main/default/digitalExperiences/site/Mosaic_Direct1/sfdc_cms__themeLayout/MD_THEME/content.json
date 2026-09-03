@@ -1,0 +1,51 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "MD_THEME",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:md_header",
+          "id" : "57810735-b857-4a98-814e-500918aee8f3",
+          "type" : "component"
+        } ],
+        "id" : "eedca6b4-3b03-4af0-8f42-18648bb81ccc",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_footer",
+          "id" : "00c91752-2501-4d82-a643-36b37744546f",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:mosaicDirectLoading",
+          "id" : "599d915f-2289-4ca7-9fae-bcc771b19f2f",
+          "type" : "component"
+        } ],
+        "id" : "4daac1bd-9f5d-4e9a-b5f2-8783b7c122a4",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      }, {
+        "id" : "8f8cd506-118e-4782-9833-48232abc0b1e",
+        "name" : "cookie",
+        "type" : "region"
+      } ],
+      "definition" : "c:md_theme",
+      "id" : "d5849a54-123f-45f9-9e5a-0f58fc34f79b",
+      "type" : "component"
+    }
+  },
+  "urlName" : "md-theme"
+}

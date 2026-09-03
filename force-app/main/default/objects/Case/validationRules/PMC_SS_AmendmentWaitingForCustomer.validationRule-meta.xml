@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_AmendmentWaitingForCustomer</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Status, &apos;Closed&apos;) ,
+ISPICKVAL(Status, &apos;Closure Pending&apos;)
+),
+RecordType.DeveloperName = &apos;CustomerService&apos;,
+ISPICKVAL(PMC_SS_IssueReason__c, &apos;Amendment&apos;) , 
+ISPICKVAL(Type, &apos;Transactions&apos;) , 
+ISBLANK(TEXT(Amendment_waiting_for_customer_signature__c))
+)</errorConditionFormula>
+    <errorDisplayField>Amendment_waiting_for_customer_signature__c</errorDisplayField>
+    <errorMessage>The Amendment waiting for customer signature is blank</errorMessage>
+</ValidationRule>

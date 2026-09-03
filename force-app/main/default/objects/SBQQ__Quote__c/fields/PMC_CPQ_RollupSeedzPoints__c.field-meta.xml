@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_RollupSeedzPoints__c</fullName>
+    <description>This field populates the Rolled up seez points which is used Only for Brazil Account Managers</description>
+    <label>Rolled-up Seedz Points</label>
+    <summarizedField>SBQQ__QuoteLine__c.SBQQ__BatchQuantity__c</summarizedField>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

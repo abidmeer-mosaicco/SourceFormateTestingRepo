@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SalesOffice__c</fullName>
+    <description>Specifies the User’s Sales Office</description>
+    <label>Sales Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BR BA B2C</fullName>
+                <default>false</default>
+                <label>BR BA B2C</label>
+            </value>
+            <value>
+                <fullName>BR Canais MT B2C</fullName>
+                <default>false</default>
+                <label>BR Canais MT B2C</label>
+            </value>
+            <value>
+                <fullName>BR East B2C</fullName>
+                <default>false</default>
+                <label>BR East B2C</label>
+            </value>
+            <value>
+                <fullName>BR East Feed</fullName>
+                <default>false</default>
+                <label>BR East Feed</label>
+            </value>
+            <value>
+                <fullName>BR East Fertilizer</fullName>
+                <default>false</default>
+                <label>BR East Fertilizer</label>
+            </value>
+            <value>
+                <fullName>BR Espec Agricolas B2B Specialties</fullName>
+                <default>false</default>
+                <label>BR Espec Agricolas B2B Specialties</label>
+            </value>
+            <value>
+                <fullName>BR Espec Industriais  B2B Specialties</fullName>
+                <default>false</default>
+                <label>BR Espec Industriais  B2B Specialties</label>
+            </value>
+            <value>
+                <fullName>BR Feed B2B</fullName>
+                <default>false</default>
+                <label>BR Feed B2B</label>
+            </value>
+            <value>
+                <fullName>BR Fertilizer B2B1</fullName>
+                <default>false</default>
+                <label>BR Fertilizer B2B1</label>
+            </value>
+            <value>
+                <fullName>BR Fertilizer B2B2</fullName>
+                <default>false</default>
+                <label>BR Fertilizer B2B2</label>
+            </value>
+            <value>
+                <fullName>BR Fospar</fullName>
+                <default>false</default>
+                <label>BR Fospar</label>
+            </value>
+            <value>
+                <fullName>BR GO B2C</fullName>
+                <default>false</default>
+                <label>BR GO B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM MEGA FARMER B2C</fullName>
+                <default>false</default>
+                <label>BR KAM MEGA FARMER B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM RETAIL NORTE B2C</fullName>
+                <default>false</default>
+                <label>BR KAM RETAIL NORTE B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM RETAIL SUL B2C</fullName>
+                <default>false</default>
+                <label>BR KAM RETAIL SUL B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM Trader GO+MT B2C</fullName>
+                <default>false</default>
+                <label>BR KAM Trader GO+MT B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM Trader INT B2C</fullName>
+                <default>false</default>
+                <label>BR KAM Trader INT B2C</label>
+            </value>
+            <value>
+                <fullName>BR KAM Trader MS B2C</fullName>
+                <default>false</default>
+                <label>BR KAM Trader MS B2C</label>
+            </value>
+            <value>
+                <fullName>BR MATOPIPA B2C</fullName>
+                <default>false</default>
+                <label>BR MATOPIPA B2C</label>
+            </value>
+            <value>
+                <fullName>BR MG Norte B2C</fullName>
+                <default>false</default>
+                <label>BR MG Norte B2C</label>
+            </value>
+            <value>
+                <fullName>BR MG Sul B2C</fullName>
+                <default>false</default>
+                <label>BR MG Sul B2C</label>
+            </value>
+            <value>
+                <fullName>BR MOS OPERAÇÕES B2C</fullName>
+                <default>false</default>
+                <label>BR MOS OPERAÇÕES B2C</label>
+            </value>
+            <value>
+                <fullName>BR MS B2C</fullName>
+                <default>false</default>
+                <label>BR MS B2C</label>
+            </value>
+            <value>
+                <fullName>BR MT NORTE B2C</fullName>
+                <default>false</default>
+                <label>BR MT NORTE B2C</label>
+            </value>
+            <value>
+                <fullName>BR MT OESTE B2C</fullName>
+                <default>false</default>
+                <label>BR MT OESTE B2C</label>
+            </value>
+            <value>
+                <fullName>BR MT SUL B2C</fullName>
+                <default>false</default>
+                <label>BR MT SUL B2C</label>
+            </value>
+            <value>
+                <fullName>BR North B2C</fullName>
+                <default>false</default>
+                <label>BR North B2C</label>
+            </value>
+            <value>
+                <fullName>BR North Feed</fullName>
+                <default>false</default>
+                <label>BR North Feed</label>
+            </value>
+            <value>
+                <fullName>BR North Fertilizer</fullName>
+                <default>false</default>
+                <label>BR North Fertilizer</label>
+            </value>
+            <value>
+                <fullName>BR PASTAGEM B2C</fullName>
+                <default>false</default>
+                <label>BR PASTAGEM B2C</label>
+            </value>
+            <value>
+                <fullName>BR PR/SC 1 B2C</fullName>
+                <default>false</default>
+                <label>BR PR/SC 1 B2C</label>
+            </value>
+            <value>
+                <fullName>BR PR/SC 2 B2C</fullName>
+                <default>false</default>
+                <label>BR PR/SC 2 B2C</label>
+            </value>
+            <value>
+                <fullName>BR RS B2C</fullName>
+                <default>false</default>
+                <label>BR RS B2C</label>
+            </value>
+            <value>
+                <fullName>BR South B2C</fullName>
+                <default>false</default>
+                <label>BR South B2C</label>
+            </value>
+            <value>
+                <fullName>BR South Feed</fullName>
+                <default>false</default>
+                <label>BR South Feed</label>
+            </value>
+            <value>
+                <fullName>BR South Fertilizer</fullName>
+                <default>false</default>
+                <label>BR South Fertilizer</label>
+            </value>
+            <value>
+                <fullName>BR SP Norte B2C</fullName>
+                <default>false</default>
+                <label>BR SP Norte B2C</label>
+            </value>
+            <value>
+                <fullName>BR SP Sul B2C</fullName>
+                <default>false</default>
+                <label>BR SP Sul B2C</label>
+            </value>
+            <value>
+                <fullName>BR West B2C</fullName>
+                <default>false</default>
+                <label>BR West B2C</label>
+            </value>
+            <value>
+                <fullName>BR West Feed</fullName>
+                <default>false</default>
+                <label>BR West Feed</label>
+            </value>
+            <value>
+                <fullName>BR West Fertilizer</fullName>
+                <default>false</default>
+                <label>BR West Fertilizer</label>
+            </value>
+            <value>
+                <fullName>CA All Feed</fullName>
+                <default>false</default>
+                <label>CA All Feed</label>
+            </value>
+            <value>
+                <fullName>CA All Industrial</fullName>
+                <default>false</default>
+                <label>CA All Industrial</label>
+            </value>
+            <value>
+                <fullName>CA East Fertilizer</fullName>
+                <default>false</default>
+                <label>CA East Fertilizer</label>
+            </value>
+            <value>
+                <fullName>CA West Fertilizer</fullName>
+                <default>false</default>
+                <label>CA West Fertilizer</label>
+            </value>
+            <value>
+                <fullName>PE All Raw Materials</fullName>
+                <default>false</default>
+                <label>PE All Raw Materials</label>
+            </value>
+            <value>
+                <fullName>PY All Fertilizer</fullName>
+                <default>false</default>
+                <label>PY All Fertilizer</label>
+            </value>
+            <value>
+                <fullName>PY KAM Trader PY B2C</fullName>
+                <default>false</default>
+                <label>PY KAM Trader PY B2C</label>
+            </value>
+            <value>
+                <fullName>US All Ammonia</fullName>
+                <default>false</default>
+                <label>US All Ammonia</label>
+            </value>
+            <value>
+                <fullName>US All Feed</fullName>
+                <default>false</default>
+                <label>US All Feed</label>
+            </value>
+            <value>
+                <fullName>US All Industrial</fullName>
+                <default>false</default>
+                <label>US All Industrial</label>
+            </value>
+            <value>
+                <fullName>US All Raw Materials</fullName>
+                <default>false</default>
+                <label>US All Raw Materials</label>
+            </value>
+            <value>
+                <fullName>US East Fertilizer</fullName>
+                <default>false</default>
+                <label>US East Fertilizer</label>
+            </value>
+            <value>
+                <fullName>US West Fertilizer</fullName>
+                <default>false</default>
+                <label>US West Fertilizer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

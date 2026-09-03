@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ValidateCPFFormat</fullName>
+    <active>true</active>
+    <description>Validate Account CPF format</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+ISPICKVAL( BillingCountryCode , &quot;BR&quot;),
+ISPICKVAL(  PMC_SS_CustomerType__c , &quot;B2C&quot;),
+!REGEX(  PMC_SS_CPF__c ,&quot;^\\d{11}?$&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_CPF__c</errorDisplayField>
+    <errorMessage>Please inform CPF by using only numbers (11 numbers).</errorMessage>
+</ValidationRule>

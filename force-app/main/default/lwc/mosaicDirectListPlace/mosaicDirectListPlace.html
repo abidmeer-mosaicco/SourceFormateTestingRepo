@@ -1,0 +1,118 @@
+<template>
+  <div class="md-list-container">
+    <p class="md-big-title">Place Order</p>
+
+    <div class="md-box">
+      <div class="md-header">
+        <p>Search Filters</p>
+      </div>
+
+      <div class="md-grid md-p-1 md-align-flex-end" style="grid-template-columns: auto auto 1fr;">
+        <div class="md-grid md-align-flex-end" style="grid-template-columns: auto auto;">
+          <div class="md-grid md-input-box" style="grid-template-columns: auto auto;">
+            <div>
+              <p>Search</p>
+              <input type="text" name="search" placeholder="Type to search" value={searchTerm}>
+            </div>
+            <button class="md-button md-default-button" variant="brand" label="Search" onclick={handleSearchInput}
+              disabled={disableSearchBtn}>Search</button>
+          </div>
+        </div>
+
+        <div class="md-grid md-align-flex-end md-grid-container" lwc:if={dateFilterFieldName}
+          style="grid-template-columns: repeat(2, 1fr);">
+          <lightning-input class="md-date-input" variant="error-hidden" id="dateFrom" data-id="dateFrom" type="date"
+            label="From" value={tempDateFrom} data-name="from" onchange={handleDateChange}></lightning-input>
+          <lightning-input class="md-date-input" variant="error-hidden" id="dateTo" data-id="dateTo" type="date"
+            label="To" value={tempDateTo} data-name="to" onchange={handleDateChange}></lightning-input>
+        </div>
+
+        <button class="md-button md-light-button" variant="brand" label="Clear filters"
+          onclick={handleClearFilters}>Clear filters</button>
+      </div>
+    </div>
+
+    <template if:true={errorMessage}>
+      <div class="md-inline-error slds-m-bottom_small" role="alert">
+        <div class="slds-grid slds-grid_align-spread slds-align_absolute-center">
+          <div class="slds-col slds-size_11-of-12 md-inline-error-text">{errorMessage}</div>
+          <div class="slds-col slds-size_1-of-12">
+            <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close"
+              onclick={clearError}>×</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template if:true={isLoading}>
+      <div class="slds-align_absolute-center slds-m-top_medium">
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+      </div>
+    </template>
+
+    <div class="md-datatable-container">
+      <div if:true={hasRecords} class="md-table-container">
+        <lightning-datatable key-field="Id" data={data} columns={columns} draft-values={draftValues} onsave={handleSave}
+          onrowaction={handleRowAction} onsort={handleSort} sorted-by={sortField} sorted-direction={sortDirLower}
+          wrap-text-max-lines="3" wrap-table-header="all" column-widths-mode="auto"
+          hide-checkbox-column></lightning-datatable>
+      </div>
+
+      <template if:false={isLoading}>
+        <div class="md-info-message" if:false={hasRecords}>
+          <lightning-icon icon-name="utility:info" size="x-small" alternative-text="Info"></lightning-icon>
+          <span>{noResultsMessage}</span>
+        </div>
+      </template>
+
+      <div if:true={hasRecords} class="slds-m-top_small slds-grid slds-grid_align-spread slds-align_absolute-center">
+        <div class="md-pagination slds-grid slds-grid_align-center slds-wrap">
+          <div>
+            <button class="md-pagination-button" data-active="true" onclick={handlePrevPage} disabled={isPrevDisabled}>
+              <lightning-icon size="x-small" icon-name="utility:chevronleft"></lightning-icon>
+            </button>
+          </div>
+
+          <div class="slds-grid slds-grid_vertical-align-center slds-m-horizontal_x-small">
+            <button class="md-pagination-button" onclick={handlePageClick} data-page="1" data-active={isFirstPageActive}
+              variant={page1Variant}>1</button>
+
+            <template if:true={showLeftEllipsis}>
+              <span class="slds-m-horizontal_x-small slds-align_absolute-center"
+                style="text-align: center;">...</span>
+            </template>
+
+            <template for:each={pageButtons} for:item="pageBtn">
+              <button key={pageBtn.page} class="md-pagination-button" onclick={handlePageClick}
+                data-active={pageBtn.active} data-page={pageBtn.page} variant={pageBtn.variant}>
+                {pageBtn.label}
+              </button>
+            </template>
+
+            <template if:true={showRightEllipsis}>
+              <span class="slds-m-horizontal_x-small slds-align_absolute-center"
+                style="text-align: center;">...</span>
+            </template>
+
+            <template if:true={showLastPage}>
+              <button class="md-pagination-button" onclick={handlePageClick} data-page={totalPages}
+                data-active={isLastPageActive} variant={lastPageVariant}>{totalPages}</button>
+            </template>
+          </div>
+
+          <div>
+            <button class="md-pagination-button" data-active="true" onclick={handleNextPage} disabled={isNextDisabled}>
+              <lightning-icon size="x-small" icon-name="utility:chevronright"></lightning-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <template lwc:if={inlineErrorVisible}>
+        <div class="md-inline-error" style={inlineErrorStyle} role="alert" onclick={clearInlineError} data-inline-error>
+          <div class="md-inline-error-text">{inlineErrorMessage}</div>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

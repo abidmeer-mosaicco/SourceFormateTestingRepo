@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Picklist_Values_By_Region</fullName>
+    <active>true</active>
+    <description>This validation rule will prevent South America users from saving records with the restricted picklist values while allowing North America users to proceed.</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(PMC_SS_IssueReason__c, &apos;Article request&apos;) || ISPICKVAL(PMC_SS_IssueReason__c , &apos;Data entry&apos;) || ISPICKVAL(PMC_SS_IssueReason__c, &apos;Planning&apos;) || ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock out / Plant outage&apos;), TEXT($User.PMC_CPQ_SalesRegion__c) = &apos;Brazil&apos;)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_IssueReason__c</errorDisplayField>
+    <errorMessage>This picklist value is not available for users in South America.</errorMessage>
+</ValidationRule>

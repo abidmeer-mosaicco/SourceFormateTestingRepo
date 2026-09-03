@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejected_FPD_Approvals</fullName>
+    <columns>NAME</columns>
+    <columns>StatusIconFormula__c</columns>
+    <columns>PMC_CPQ_Order__c</columns>
+    <columns>OrderItem__c</columns>
+    <columns>PMC_CPQ_SoldtoAccount__c</columns>
+    <columns>PMC_CPQ_Incoterms__c</columns>
+    <columns>PMC_CPQ_Product_Family__c</columns>
+    <columns>PMC_CPQ_Product__c</columns>
+    <columns>PMC_CPQ_ProductLocation__c</columns>
+    <columns>PMC_CPQ_Floorplusfreight__c</columns>
+    <columns>PMC_CPQ_FinalAgreedPrice__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>StatusIconFormula__c</field>
+        <operation>contains</operation>
+        <value>Rejected</value>
+    </filters>
+    <filters>
+        <field>sbaa__ApprovedBy__c</field>
+        <operation>contains</operation>
+        <value>Roberto Souto</value>
+    </filters>
+    <label>Rejected FPD Approvals</label>
+</ListView>

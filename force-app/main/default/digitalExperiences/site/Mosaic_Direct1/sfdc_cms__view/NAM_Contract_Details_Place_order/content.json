@@ -1,0 +1,71 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "NAM Contract Details - Place order",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"4c4c3392-6adc-421c-b2c2-b5dd0eb31c98\",\"columns\":[{\"UUID\":\"b1c1d83b-3686-466f-b155-9e348ff8f542\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicDirectContractSummary",
+              "id" : "517883e9-316b-450a-8881-ff130fc9a990",
+              "type" : "component"
+            } ],
+            "id" : "b1c1d83b-3686-466f-b155-9e348ff8f542",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4c4c3392-6adc-421c-b2c2-b5dd0eb31c98",
+          "type" : "component"
+        } ],
+        "id" : "e5a284e3-25ca-426e-87c9-2591a56e2424",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "NAM Contract Details - Place order",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "b4170691-74a3-4950-b288-1ec7547d3fc4",
+          "type" : "component"
+        } ],
+        "id" : "b6eaba2b-a287-4eb7-af15-c337d4724405",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "76537fba-fb3b-4afd-a113-9f4cdc78a983",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "boyHQnfOS2WtkjDrgBWLvYjS4Toy9f",
+    "viewType" : "custom-contractdetails-1"
+  },
+  "urlName" : "nam-contract-details---place-order"
+}

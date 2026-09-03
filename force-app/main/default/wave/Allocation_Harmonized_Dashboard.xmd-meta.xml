@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <field>q2_1.User.Name</field>
+        <isDerived>false</isDerived>
+        <label>Account Manager</label>
+        <linkTemplateEnabled>false</linkTemplateEnabled>
+        <recordIdField>PMC_SS_AllocationSummary__c</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>q2_1.Product.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>false</linkTemplateEnabled>
+        <recordIdField>Recid</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>q2_1.PMC_SS_AllocationPeriod__c_formula</field>
+        <isDerived>false</isDerived>
+        <label>Allocation Period</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>allocation_lens_1.PMC_SS_AllocationPeriod__c_formula</field>
+        <isDerived>false</isDerived>
+        <label>Allocation Period</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>allocation_lens_1.User.Name</field>
+        <isDerived>false</isDerived>
+        <label>Account Manager</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <type>Asset</type>
+    <waveVisualization>Allocation_Harmonized_Dashboard</waveVisualization>
+</WaveXmd>

@@ -1,0 +1,83 @@
+<template>
+  <div class="icon-button">
+    <img src={buttonUrl} alt={labels.pmc_addNewUser_title} tabindex="0" onclick={openNewUserModal}
+      onkeydown={handleIconKeyDown} onmouseenter={handleMouseEnter} onmouseleave={handleMouseLeave} />
+    <template if:true={isMouseOver}>
+      <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-right btn-tooltip" role="tooltip" id="help">
+        <div class="slds-popover__body tooltip-text">{labels.pmc_addNewUser_title}</div>
+      </div>
+    </template>
+  </div>
+
+  <c-pmc_dh_custom-modal open-modal={isAddNewUser} modal-heading={labels.pmc_addNewUser_title} modal-width="550px"
+    onclosemodalevent={handleCloseNewUserModal}>
+    <template if:true={errorMessage}>
+      <div class="slds-m-horizontal_medium slds-m-top_medium">
+        <c-pmc_dh_message-banner type="error" message={errorMessage}></c-pmc_dh_message-banner>
+      </div>
+    </template>
+    <div class="slds-grid slds-gutters slds-wrap slds-p-around_medium">
+      <!-- First Name field -->
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_userDetails_firstName} data-id="strFirstName"
+          parent-name="strFirstName" default-value={pageObject.strFirstName} is-required
+          oninputdatachange={handleDataChange} pattern="[A-Za-z]*"
+          text-placeholder={labels.pmc_userDetails_firstName}></c-pmc_dh_input-element>
+      </div>
+      <!-- Last Name field -->
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+        <c-pmc_dh_input-element text-label={labels.pmc_userDetails_lastName} data-id="strLastName"
+          parent-name="strLastName" default-value={pageObject.strLastName} is-required
+          oninputdatachange={handleDataChange} pattern="[A-Za-z]*"
+          text-placeholder={labels.pmc_userDetails_lastName}></c-pmc_dh_input-element>
+      </div>
+      <!-- Email field -->
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_input-element text-label={labels.pmc_addNewUser_userEmail} data-id="strEmail" parent-name="strEmail"
+          default-value={pageObject.strEmail} is-required oninputdatachange={handleDataChange}
+          oninputdatablur={handleDataBlur} text-placeholder={labels.pmc_addNewUser_userEmail}
+          type="text"></c-pmc_dh_input-element>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-grid slds-wrap country-phone-user-fields-wrapper">
+        <!-- Country Code field -->
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+          <c-pmc_dh_selection-picklist text-label={labels.pmc_userDetails_countryCode} data-id="strCountryCode"
+            parent-name="strCountryCode" data-name="" combobox-list-json={picklistOptions.lstCountryCode}
+            default-value={pageObject.strCountryCode} is-required oninputdatachange={handleDataChange}
+            placeholder={labels.pmc_userDetails_countryCode}></c-pmc_dh_selection-picklist>
+        </div>
+        <!-- Phone Number field -->
+        <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+          <c-pmc_dh_input-element text-label={labels.pmc_userDetails_userPhone} data-id="strPhoneNumber"
+            parent-name="strPhoneNumber" is-required is-number text-placeholder={labels.pmc_userDetails_userPhone}
+            oninputdatachange={handleDataChange} oninputdatablur={handleDataBlur} is-disabled={_phoneStrDisabled}
+            oninputfocus={handleInputFocus} default-value={pageObject.strPhoneNumber} maxlength={phoneMaxLength}
+            pattern="[0-9]+">
+          </c-pmc_dh_input-element>
+        </div>
+        <!-- User Type field -->
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+          <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewUser_userType}
+            combobox-list-json={picklistOptions.lstUserType} data-id="strUserType" parent-name="strUserType"
+            default-value={pageObject.strUserType} is-required oninputdatachange={handleDataChange}
+            placeholder={labels.pmc_addNewUser_userType}></c-pmc_dh_selection-picklist>
+        </div>
+      </div>
+      <!-- Sold To Account field -->
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewUser_soldToAccount} class-name="sold-to-account"
+          combobox-list-json={picklistOptions.lstaccWrp} data-id="strAccountId" parent-name="strAccountId"
+          default-value={pageObject.strAccountId} is-required oninputdatachange={handleDataChange}
+          placeholder={labels.pmc_addNewUser_soldToAccount}></c-pmc_dh_selection-picklist>
+      </div>
+      <!-- Submit button -->
+      <div class="slds-col mobile-button">
+        <lightning-button variant="brand" label={labels.pmc_addNewUser_title} title={labels.pmc_addNewUser_title}
+          onclick={addUserHandler}></lightning-button>
+      </div>
+    </div>
+    <template if:true={isLoading}>
+      <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+    </template>
+  </c-pmc_dh_custom-modal>
+</template>

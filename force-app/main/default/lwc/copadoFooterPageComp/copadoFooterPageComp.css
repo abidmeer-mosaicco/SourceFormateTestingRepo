@@ -1,0 +1,319 @@
+/* Base
+.footer {
+  background: #728c86;
+  color: #f9f9f9;
+  padding: 20px 16px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.social-icons,
+.stock-info,
+.footer-right {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.social-icons a img {
+  width: 40px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+}
+
+.stock-info {
+  padding: 20px 0 0 0;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.footer-right a {
+  color: #ffe082;
+  text-decoration: none;
+  margin: 0 4px;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(245, 245, 220, 0.3);
+  color: #ffe082;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+  font-size: 0.95rem;
+}
+
+.mos-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.mos-text {
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.grey-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #d1dad7;
+  border-radius: 50%;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 12px;
+  color: #d1dad7;
+  font-weight: 400;
+}
+
+.mos-quotes {
+  font-weight: 700;
+  color: #ffe082;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+@media (max-width: 599px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-icons a img {
+    width: 32px;
+    margin: 0 8px;
+  }
+
+  .logo {
+    height: 72px;
+  }
+
+  .footer-right {
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .footer-top {
+    column-gap: 16px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+}
+
+@media (max-width: 360px) {
+  .social-icons a img {
+    width: 28px;
+    margin: 0 6px;
+  }
+
+  .footer-right {
+    font-size: 14px;
+  }
+}
+
+:host,
+.footer,
+.footer-top,
+.footer-bottom {
+  overflow-x: hidden;
+} */
+
+
+
+
+
+
+
+@font-face {
+  font-family: "customfont";
+  src: url('/resource/Barlow/Barlow-Medium.otf') format('TrueType');
+}
+
+.test1 {
+  font-family: "customfont";
+}
+
+.footer-container {
+  background: #728c86;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  line-height: 27px;
+}
+
+.brand-logo {
+  margin-bottom: 40px;
+  text-align: center; /* Centers logo on all devices */
+}
+
+.brand-logo img {
+  width: 180px;
+  height: auto;
+}
+
+.footer-links {
+  gap: 48px;
+}
+
+.footer-links * {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "customfont";
+}
+
+.footer-links *:hover {
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 18px;
+  color: #093532;
+  font-family: "customfont";
+}
+
+/* Tablets (1024px - 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .brand-logo img {
+    min-width: 114px;
+    width: 114px;
+  }
+}
+
+/* Small laptops & tablets */
+@media screen and (max-width: 1200px) {
+  .footer-links {
+    gap: 16px;
+  }
+}
+
+/* Tablets (max-width 1023px) */
+@media (max-width: 1023px) {
+  .brand-logo img {
+    min-width: 120px;
+    width: 120px;
+  }
+}
+
+/* Mobile devices (max-width 767px) */
+@media screen and (max-width: 767px) {
+  .footer-container {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .brand-logo {
+    display: block;         /* Always visible on mobile */
+    text-align: center;     /* Center image */
+    margin: 0 0 16px 0;
+  }
+
+  .brand-logo img {
+    width: 120px;           /* Resize logo for mobile */
+    height: auto;
+  }
+
+  .footer-links {
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer-links * {
+    font-family: "customfont";
+    font-size: 16px;
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 12px;
+    font-family: "customfont";
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,141 @@
+.container {
+    margin: auto;
+}
+
+.image-width{
+    width:100%;
+}
+.text-section {
+    position: absolute;
+    width: 70%;
+    bottom: 11rem;/* Adjustment to raise the red bar */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #5c0303a1;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .text-section {
+        bottom: 6rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .text-section {
+        bottom: 3.5rem;
+        width: 90%;
+    }
+}
+
+.text-heading {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .text-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .text-heading {
+        font-size: 0.4rem;
+    }
+}
+
+.fade-in-text {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0.6rem;
+    /*color: black;*/
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    user-select: none;
+
+    /**/
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    
+}
+
+.slideNumbers {
+    font-size: 0.75rem;
+    position: absolute;
+    padding: 0.5rem 0.75rem;
+    top: 0;
+    color: #f2f2f2;
+}
+
+.dot {
+    height: 0.9375rem;
+    width: 0.9375rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #bbb;
+    margin: 0 0.125rem;
+    display: inline-block;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+.zoom-on-load {
+    animation: zoomIn 4s ease forwards;
+    transform-origin: center;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05); /* Slightly enlarges the image*/
+    }
+}

@@ -1,0 +1,92 @@
+.card-body.delivery-details-card-body {
+  padding: 16px;
+}
+
+.delivery-details-card {
+  margin-top: 24px;
+}
+
+.delivery-tracking-head {
+  padding: 21px 0 32px 0;
+}
+
+.back-to-ord-line {
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.progress-map-container {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.delivery-map {
+  margin-top: 24px;
+  height: 524px;
+}
+
+.lbl-field-name {
+  padding-bottom: 8px;
+}
+
+.lbl-field-value {
+  padding-right: 8px;
+}
+
+.del-status-body {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 1px solid #1D625C;
+  display: inline-block;
+  border-radius: 100px;
+  padding: 5px 18px;
+}
+
+.del-progress {
+  padding-right: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .del-detail-cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+
+  .del-detail-cont:first-child {
+    padding-top: 4px;
+  }
+
+  .del-detail-cont:last-child {
+    padding-bottom: 4px;
+  }
+
+  .progress-map-container {
+    flex-direction: column;
+  }
+
+  .delivery-map {
+    margin-top: auto;
+    padding-left: 0;
+    height: 343px;
+    margin-bottom: 16px;
+  }
+
+  .del-progress {
+    padding-right: 0;
+  }
+
+  .del-product {
+    width: 60%;
+  }
+
+  .lbl-field-value {
+    padding-right: 0;
+  }
+
+  .badge-info {
+    padding: 16px 0 16px 16px;
+  }
+}

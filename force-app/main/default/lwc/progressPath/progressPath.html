@@ -1,0 +1,42 @@
+<template>
+  <div class="slds-path slds-path_has-coaching" role="application" aria-label={labels.progressPath}>
+    <div class="slds-grid slds-path__track">
+      <div class="slds-grid slds-path__scroller-container">
+        <div class="slds-path__scroller">
+          <div class="slds-path__scroller_inner">
+            <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal" aria-labelledby="progress-path-stage-name">
+              <template for:each={normalizedStages} for:item="stage">
+                <li key={stage.label} class={stage.classList} role="presentation">
+                  <a role="option" tabindex={stage.tabIndex} aria-selected={stage.ariaSelected} data-label={stage.label} class="slds-path__link" onclick={handleStageClick}>
+                    <span class="slds-path__stage path__stage">
+                      <template if:true={stage.isComplete}>
+                        <lightning-icon icon-name="utility:check" size="x-small" alternative-text={labels.complete} class="slds-icon slds-icon_x-small white-utility-icon"></lightning-icon>
+                        <span class="slds-assistive-text">{labels.stageComplete}</span>
+                      </template>
+                      <template if:true={stage.isCurrent}>
+                        <span class="slds-assistive-text">{labels.currentStage}</span>
+                      </template>
+                    </span>
+                    <span class="path__title">{stage.label}</span>
+                    <template if:true={stage.countLabel}>
+                      <span class="slds-badge slds-m-left_x-small" title={labels.progress}>{stage.countLabel}</span>
+                    </template>
+                  </a>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <template if:true={showActionArea}>
+        <div class="slds-grid slds-path__action">
+          <span id="progress-path-stage-name" class="slds-path__stage-name">{labels.stage} {currentStageLabel}</span>
+          <slot name="actions"></slot>
+        </div>
+      </template>
+    </div>
+    <div class="slds-path__content" if:true={showContent}>
+      <slot></slot>
+    </div>
+  </div>
+</template>

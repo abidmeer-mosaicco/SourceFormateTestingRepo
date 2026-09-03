@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAP_FPD_Orders_interface_log_view</fullName>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>PMC_CPQ_IntegrationStatus__c</columns>
+    <columns>PMC_CPQ_InterfaceURL__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_InterfaceURL__c</field>
+        <operation>equals</operation>
+        <value>/http/toSAP_FPDOrders</value>
+    </filters>
+    <label>SAP FPD Orders interface log view</label>
+    <sharedTo>
+        <role>Admin</role>
+    </sharedTo>
+</ListView>

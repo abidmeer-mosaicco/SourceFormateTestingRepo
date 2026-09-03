@@ -1,0 +1,2799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CaseGeneral</fullName>
+    <active>true</active>
+    <businessProcess>General</businessProcess>
+    <label>Case General</label>
+    <picklistValues>
+        <picklist>Amendment_waiting_for_customer_signature__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovalStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GLPA_Centro_Poblado2__c</picklist>
+        <values>
+            <fullName>Alto El Roque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bayóvar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belizario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chullachy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chusis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirilo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ciudad del Pescador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constante</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Barco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Calabazo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Porvenir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Sauce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Venado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garita García</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hacienda Bazán</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Bocana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Claridad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Coscola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Esperanza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Florida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Maceta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Mina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Trampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Las Capillas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Los Pocitos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mata Caballo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micaela Bastidas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mina Abandonada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mina de Sal Zapayal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minchales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miramar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noria Honda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nueva Esperanza</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nueva La Bocana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuevo Bazán</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuevo Chulliyachi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuevo Parachique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palo Parado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pampa de Loro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pan de Azufre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petroperú</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pueblo Nuevo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Nuevo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reventazón</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Isidro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Martín</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santa Ana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santa Rosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sechura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sombrero Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajamar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tres Cruces</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tres de Enero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trujillo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Túpac Amaru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vicente Chunga Aldana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virgen de La Luz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Víctor Raúl Haya de la Torre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yapato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yudur</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GLPA_Datos_del_destinatario_dirigido_a__c</picklist>
+        <values>
+            <fullName>Comercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comunicación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gestión Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recursos Humanos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suministros</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GLPA_Datos_del_documento__c</picklist>
+        <values>
+            <fullName>Carta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notificacion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oficio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requerimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolucion</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GLPA_Distrito__c</picklist>
+        <values>
+            <fullName>Bellavista</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bernal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cristo Nos Valga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rinconada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sechura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GLPA_Tipo_de_documento_de_identidad__c</picklist>
+        <values>
+            <fullName>CE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DNI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RUC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Issue_Sub_Reason__c</picklist>
+        <values>
+            <fullName>Adulteration %2F Cargo Theft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blocks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booked Sales Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caking from Humidity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical Additive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical Deficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coarse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contamination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damaged Cargo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Granulometric Uniformity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humidity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Impurity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Label Discrepancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Spillage on Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stay Extension Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck at Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight Discrepancy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instant Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unauthenticated Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_AccessorialCostDetail__c</picklist>
+        <values>
+            <fullName>Equipment Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance Costs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Costs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samples Shipped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation Costs%2FLabor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Expenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse Cost%2FLabor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ActionReason__c</picklist>
+        <values>
+            <fullName>Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverse Shipment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ActionToken__c</picklist>
+        <values>
+            <fullName>Cancel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ActionsToResolve__c</picklist>
+        <values>
+            <fullName>Cancel%2FRebill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Quality Action Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality Mitigation Performed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ApprovalStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Final Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 1 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 2 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 3 Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ArticleType__c</picklist>
+        <values>
+            <fullName>FAQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procedure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Bulletin%2FNotice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transition Document</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_AtFaultParty__c</picklist>
+        <values>
+            <fullName>Carrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plant %2F Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_Business__c</picklist>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ContractAmendmentJustificationVal__c</picklist>
+        <values>
+            <fullName>Commercial Input Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing Capacity Restriction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality Restriction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raw Material %2F Product Restriction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck Restriction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ContractAmendmentType__c</picklist>
+        <values>
+            <fullName>Agent Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agent%E2%80%99s Commission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract End Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Start Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culture Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freight Cost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoterm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plant%2FOrigin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unit Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volume Change</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ContractCancellationSubReason__c</picklist>
+        <values>
+            <fullName>Factory Problems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of Raw Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistic Problems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality Problems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unreleased Credit - Constitution of Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unreleased Credit - Delinquency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unreleased Credit - Surety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unreleased Credit - Unauthorized term</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ContractCancellation__c</picklist>
+        <values>
+            <fullName>Cancellation Due to Customer Death</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Input Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Inactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Contract without Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Loading Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic%E2%80%99s Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Digital Signature %3E 15 Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejection via Workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unapproved Credit Limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volume Reduction Due to Agronomic Adjustment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_CustomerCreditsDetail__c</picklist>
+        <values>
+            <fullName>Demurrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse Credit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_CustomerImpact__c</picklist>
+        <values>
+            <fullName>Minor Impact to Customer%E2%80%99s Supply %2F Operations %2F Safety %2F Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Impact to Customer%E2%80%99s Supply %2F Operations %2F Safety %2F Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejection %2F Loss of Cargo and%2For Risk of Losing a Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Significant Impact to Customer%E2%80%99s Supply %2F Operations %2F Safety %2F Health</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_CustomerImpacted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_CustomerIncurredCostsDetail__c</picklist>
+        <values>
+            <fullName>Demurrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsignment Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_CustomerWaivedCostsDetails__c</picklist>
+        <values>
+            <fullName>Demurrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Despatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsignment Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_Document__c</picklist>
+        <values>
+            <fullName>BOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Sheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hazmat Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SDS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_Easy_Checklist_Sent__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_EvidenceConfirmed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_IncidentFrequency__c</picklist>
+        <values>
+            <fullName>1st Occurrence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Occurrence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than 2 Occurrences</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_IncidentProbability__c</picklist>
+        <values>
+            <fullName>Likely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Likely</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Likely</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_IncidentQuantity__c</picklist>
+        <values>
+            <fullName>0 %E2%80%93 100 tons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2C001 %E2%80%93 3%2C000 tons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101 %E2%80%93 1%2C000 tons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater than 3%2C000 tons</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_IncidentSeverity__c</picklist>
+        <values>
+            <fullName>%240 - %241%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%241%2C001 - %245%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2415%2C001 - %2425%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425%2C001 - %2450%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%245%2C001 - %2415%2C000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than %2450%2C000</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_InternalExternalImpact__c</picklist>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_IssueReason__c</picklist>
+        <values>
+            <fullName>Account Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Article Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking Edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COA Setup %2F Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call by Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambio Exhange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change to loading priorities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Note Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deactivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit Note Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demurrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation Order%2FBonus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Driver Verification%2FChange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Export Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Export prioritization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Solution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDOC Failures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Include Script CIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Destination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect UOM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Vehicle ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IntelliTrans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intercompany Sold To Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Adjustments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Contact %2F Output</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Issue of Advance Invoicing %28FA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Link Ship To to Sold To</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Cargo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mode of transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Edits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potash Discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Concern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reclaim rates %28mechanical breakdown%2Flower than typical rates%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Route %2F Directions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Returns %28SADM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales order changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship Date %2F Scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship To Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship To Creation - Export</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship To Creation and GLN Linking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment Contact %2F Output</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sold To Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sold To Creation - Export</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Split sales order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock Out %2F Plant Outage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unblock Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehouse Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight Discrepancy</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_LostRevenueDetail__c</picklist>
+        <values>
+            <fullName>Cancel %26 Rebill Delta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Orders</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_MDMStatus__c</picklist>
+        <values>
+            <fullName>Waiting for Customer Form Completion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Master Data Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Product Costing Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Product Form Completion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Product Routing Creation and Assignment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_MOT__c</picklist>
+        <values>
+            <fullName>Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vessel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ModeofTransportation__c</picklist>
+        <values>
+            <fullName>Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vessel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_OperationsReportable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_OrderClassification__c</picklist>
+        <values>
+            <fullName>New Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Order Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Updated Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_Packing_Sent_to_Analysis__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_PaymentRequestType__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wire</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_PointofFailureSubCategory__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dismissed or None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Material Handling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operations Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Chain Warehousing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation Mosaic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation Vendor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_PostInvestigationCause__c</picklist>
+        <values>
+            <fullName>Adulteration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bagging Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Caused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failure to Meet Specification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Contamination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lumps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Factors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temperature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ProductIssue__c</picklist>
+        <values>
+            <fullName>Adulteration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bagging Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint Dismissed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failure to Meet Specifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Contamination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lumps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Factors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Reason</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temperature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treatment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ProductSegregated__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ProductType__c</picklist>
+        <values>
+            <fullName>AFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commodity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conventional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raw Materials</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_QualityStatus__c</picklist>
+        <values>
+            <fullName>Awaiting Pricing %2F Costs %28NA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Release of Claims %28NA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Samples %2F Analysis %2F Inspection %28NA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Shipment %2F Regulatory Information %28NA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mitigation %28NA%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ReOpenReason__c</picklist>
+        <values>
+            <fullName>New information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolution Not Accurate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolution Not Complete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_RootCauseAnalysis__c</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_Business__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>88</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_MosaicPayingReceivingCompany__c</picklist>
+        <values>
+            <fullName>4090</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4115</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4350</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4460</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4550</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4560</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4570</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4690</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_Program__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_Reason__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_RequestType__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advance Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking Intervention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billed and billable portfolio report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closing of Services Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compensation reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complementary Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demurrage %2F Dispatch Closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharge Receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Empty Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enlargement of Registration to Another Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Export Exchange Closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Import Exchange Closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MRO Exchange Closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDA Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New NDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Product Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premium Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Registration in MIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receipt Composition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Registration Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return of Values</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scrap Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplementary Invoice Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck in Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck in the Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update of Registration Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Use of the balance in another contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wallet Lock</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_Status__c</picklist>
+        <values>
+            <fullName>Awaiting Agronomic and Legal Opinion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Analysis of credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Area Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Commercial Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Draft and Power of Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Legal Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Legal Validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Mortgage Protocol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Protocol Drafting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Protocol Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Requester Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Stock Valuation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Treatment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Value Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting analysis of acquittance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Credit Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Validation of Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Warranty Validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request of Notary Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Under Legal Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Approval in SAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Inclusion in SAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Limit Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Limit Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for New Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Requester Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Requester Information - In Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Requestor Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Responsible Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Risk Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Signature Collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Treatment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Update in SAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Warranty Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for additional Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for signature correction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting via Registered</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SNOW_WarrantyType__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SamplesAvailable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ServiceNowTicketType__c</picklist>
+        <values>
+            <fullName>Circularization Letters %E2%80%93 Clients</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collections Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Credit Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debit or Credit Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Warranty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release of Paid Contracts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Use of Credits%2C Return%2C Receipt of Discharge and Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty Formalization</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SolutionGiventoCustomer__c</picklist>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Material Bonus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Refund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SolutionType__c</picklist>
+        <values>
+            <fullName>Cargo Rejection %2F Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distressed Tonnage Moved to Scrap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Quality Mitigation Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Site Remediation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Price Adjustment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Information Provided</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_StockOutReason__c</picklist>
+        <values>
+            <fullName>Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forecast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shrink%2FInventory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weather</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_SuboptimalCostsDetails__c</picklist>
+        <values>
+            <fullName>Additional Freight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demurrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion Fee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsignment Fee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_UOM__c</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Adulteration%2F Cargo theft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical Deficiency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contamination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cultivar Rebate Initiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer unable to hold%2Faccept %28customer can%E2%80%99t accept full or partial load%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Entry Error %E2%80%93 possible add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery delay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demurrage - Credit because truck had to wait to load</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diversion %E2%80%93 possible add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Delayed %28Yaritza %E2%80%93 rail cars delayed and vessel left%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equipment Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High humidity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higher granulometry %28out of specification%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Account Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Delivery Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Destination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Incoterms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Material %E2%80%93 duplicate of Incorrect Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Payment Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Price</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Product duplicate of Incorrect Material</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect Ship Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect currency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incorrect vehicle ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Damage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Product Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Availability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refusal of cargo - CIF and FOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reship %E2%80%93 possible add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Issue %E2%80%93 possible add</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Weight discrepancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet product on receipt CIF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>EDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

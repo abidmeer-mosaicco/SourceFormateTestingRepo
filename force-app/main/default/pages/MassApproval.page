@@ -1,0 +1,55 @@
+<apex:page standardController="sbaa__Approval__c" 
+           recordSetVar="approvals" 
+           cache="false"
+           extensions="MassApprovalVFController">
+    <apex:slds />
+    
+    <apex:form id="approvalForm">
+        <apex:pageMessages />
+
+        <!-- Spinner de processamento -->
+        <apex:outputPanel rendered="{!processing}">
+            <div class="slds-text-heading_small">Processing approvals...</div>
+            <div class="slds-spinner_container">
+                <div class="slds-spinner slds-spinner_medium slds-spinner_brand" role="status">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </apex:outputPanel>
+
+        <!-- Mensagem pós-processamento -->
+        <apex:outputPanel rendered="{!redirect}">
+            <p class="slds-text-heading_small">Records {!IF(approvalMode, 'approved', 'rejected')} successfully. Redirecting...</p>
+            <script>
+                setTimeout(function() {
+                    window.history.back();
+                    // window.location.href = "{!redirectUrl}";
+                }, 1500); 
+            </script>
+        </apex:outputPanel>
+
+        <!-- Chamada do método Apex -->
+        <apex:actionFunction name="callApproveSelected" action="{!approveSelected}" rerender="approvalForm"/>
+
+        <!-- Script: confirmação automática ao carregar -->
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    var hasRecordId = "{!recordId}";
+                    console.log('hasRecordId', hasRecordId);
+                    
+                    var actionLabel = "{!IF(approvalMode, 'approve', 'reject')}";
+                    if(hasRecordId || confirm("Are you sure you want to " + actionLabel + " the selected records?")) {
+                        callApproveSelected().then(() => {
+                            window.history.replaceState(null, null, window.location.pathname + "?timestamp=" + new Date().getTime());
+                        });
+                    } else {
+                        window.history.back();
+                    }
+                }, 200); 
+            };
+        </script>
+    </apex:form>
+</apex:page>

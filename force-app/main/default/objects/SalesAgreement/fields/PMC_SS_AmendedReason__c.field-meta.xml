@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_AmendedReason__c</fullName>
+    <description>Reason for Amending Sales Agreement</description>
+    <label>Amended Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Changes in Circumstance</fullName>
+                <default>false</default>
+                <label>Changes in Circumstance</label>
+            </value>
+            <value>
+                <fullName>Changes to Terms</fullName>
+                <default>false</default>
+                <label>Changes to Terms</label>
+            </value>
+            <value>
+                <fullName>Dispute</fullName>
+                <default>false</default>
+                <label>Dispute</label>
+            </value>
+            <value>
+                <fullName>Error Correction</fullName>
+                <default>false</default>
+                <label>Error Correction</label>
+            </value>
+            <value>
+                <fullName>New Product Interests</fullName>
+                <default>false</default>
+                <label>New Product Interests</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

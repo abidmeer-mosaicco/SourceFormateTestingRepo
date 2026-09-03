@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Accounts Receivable Team</description>
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Accounts Receivable Team</name>
+    <queueMembers>
+        <users>
+            <user>alex.silva2@mosaicco.com</user>
+            <user>amanda.santos@mosaicco.com</user>
+            <user>caroline.guimaraes@mosaicco.com</user>
+            <user>katiuce.machado@mosaicco.com.prod</user>
+            <user>luciana.oliveira2@mosaicco.com</user>
+            <user>marcelo.machado@mosaicco.com.prod</user>
+            <user>marcos.andreata1@mosaicco.com</user>
+            <user>marianne.cunha@mosaicco.com</user>
+            <user>sthefani.gomes@mosaicco.com</user>
+            <user>tatiana.santos@mosaicco.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

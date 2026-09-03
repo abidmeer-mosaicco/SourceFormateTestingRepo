@@ -1,0 +1,33 @@
+<template>
+  <p class="header-text slds-m-top_medium slds-m-bottom_medium">
+    {labels.pmc_contactUs_title}
+  </p>
+
+  <div class="contact-us-wrapper slds-p-around_medium slds-m-bottom_xx-large slds-m-top_x-large">
+    <div class="slds-grid slds-m-bottom_x-large">
+      <div class="slds-col slds-no-flex slds-m-right_large">
+        <div class="icon-wrapper">
+          <img src={iconUrlObj.mailIconUrl} alt={labels.pmc_emailTemplate_email} />
+        </div>
+      </div>
+      <div class="slds-col slds-align-content-center">
+        <div>
+          <a href={mailToEmail}>{labels.pmc_contactUs_mail}</a>
+        </div>
+      </div>
+    </div>
+    <div class="slds-grid">
+      <div class="slds-col slds-no-flex slds-m-right_large">
+        <div class="icon-wrapper">
+          <img src={iconUrlObj.phoneIconUrl} alt={labels.pmc_userDetails_phone} />
+        </div>
+      </div>
+      <div class="contact-list slds-col slds-align-content-center">
+        <div>{labels.pmc_contactUs_general}</div>
+        <div>{labels.pmc_contactUs_us}</div>
+        <div>{labels.pmc_contactUs_brazil}</div>
+        <div>{labels.pmc_contactUs_india}</div>
+      </div>
+    </div>
+  </div>
+</template>

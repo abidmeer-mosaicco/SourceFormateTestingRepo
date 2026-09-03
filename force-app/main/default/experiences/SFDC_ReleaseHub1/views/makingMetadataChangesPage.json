@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "2777e72e-0e9e-45e5-890a-250b513d89d0",
+  "label" : "Making Metadata Changes Page",
+  "regions" : [ {
+    "id" : "9c4af329-b597-4afe-920a-f93d194a50ac",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:documentMetadataChanges",
+      "id" : "2671b206-dabe-487c-9f7b-87a1b7947fa8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "515e8a2b-80b5-4ac7-8e98-7a33502a3814",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "fafc24fa-0fee-4b97-8bc3-c61645fada8a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Making Metadata Changes Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ab30b618-b934-4031-a8c8-b37d6745627e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fc83d878-04d3-4623-8990-36e9566c782d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-making-metadata-changes-page"
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_RejectionReasonFormula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    LEFT(TEXT($User.LanguageLocaleKey), 2) = &quot;pt&quot;,
+    CASE(PMC_CPQ_RejectionReason__c,
+        &quot;9A&quot;, &quot;Cancelamento Desistência cliente&quot;,
+        &quot;9B&quot;, &quot;Cancelamento Ordem Expirada&quot;,
+        &quot;9C&quot;, &quot;Cancelamento Falta MP ou Produto&quot;,
+        &quot;9D&quot;, &quot;Rejeitado via Workflow&quot;,
+        &quot;9E&quot;, &quot;Cancelamento Vencido Pagamento&quot;,
+        &quot;9F&quot;, &quot;Baixa de volume por ajuste agronômico&quot;,
+        &quot;9G&quot;, &quot;Cancelamento por erro comercial&quot;,
+        &quot;9H&quot;, &quot;Gestão de crédito&quot;,
+        &quot;9I&quot;, &quot;Cancelamento Problemas Fabris&quot;,
+        &quot;9J&quot;, &quot;Contrato finalizado&quot;,
+        &quot;9K&quot;, &quot;Cancelamento Renegociação - Pedido Mosai&quot;,
+        &quot;9L&quot;, &quot;Cancelamento Renegociação-Pedido do Clie&quot;,
+        &quot;9M&quot;, &quot;Mudança de transportadora&quot;,
+        &quot;9N&quot;, &quot;Cancelamento Problemas Logísticos&quot;,
+        &quot;9O&quot;, &quot;Pedido B2B Rejeitado&quot;,
+        &quot;9P&quot;, &quot;Cancelamento Falta de assinatura&quot;,
+        &quot;9Q&quot;, &quot;Saldo insuficiente para Carregamento&quot;,
+        &quot;9R&quot;, &quot;Cancelamento com Problema de Qualidade&quot;,
+        &quot;9S&quot;, &quot;Distrato por falecimento&quot;,
+        &quot;ZA&quot;, &quot;Contrato de Cancelamento Expirado&quot;,
+        &quot;ZB&quot;, &quot;Canpotex Ordem Finalizada&quot;,
+        &quot;ZC&quot;, &quot;Devido a Fatura Complementar&quot;,
+        PMC_CPQ_RejectionReason__c
+    ),
+    CASE(PMC_CPQ_RejectionReason__c,
+        &quot;9A&quot;, &quot;Cust Initiated - Ordering Error&quot;,
+        &quot;9B&quot;, &quot;Cancellation Contract Expired&quot;,
+        &quot;9C&quot;, &quot;Supply/Availability&quot;,
+        &quot;9D&quot;, &quot;Rejected by workflow&quot;,
+        &quot;9E&quot;, &quot;Cust Initiated - Price Dispute&quot;,
+        &quot;9F&quot;, &quot;Volume low by Agronomic adjustments&quot;,
+        &quot;9G&quot;, &quot;CSR Initiated - Order Entry Error&quot;,
+        &quot;9H&quot;, &quot;Credit Management&quot;,
+        &quot;9I&quot;, &quot;Open Acct. vs Pre-Pay&quot;,
+        &quot;9J&quot;, &quot;Contract Fulfilled&quot;,
+        &quot;9K&quot;, &quot;Shipment Diverted - Mosaic Request&quot;,
+        &quot;9L&quot;, &quot;Shipment Diverted - Customer Request&quot;,
+        &quot;9M&quot;, &quot;Carrier change&quot;,
+        &quot;9N&quot;, &quot;DH Cancellation&quot;,
+        &quot;9O&quot;, &quot;B2B Order Rejected&quot;,
+        &quot;9P&quot;, &quot;Canpotex Rejection&quot;,
+        &quot;9Q&quot;, &quot;Order cannot be fulfilled&quot;,
+        &quot;9R&quot;, &quot;Reshipment&quot;,
+        &quot;9S&quot;, &quot;Diversion to New Customer&quot;,
+        &quot;ZA&quot;, &quot;Deleted from SFDC via Amendment&quot;,
+        &quot;ZB&quot;, &quot;Canpotex Order Completed&quot;,
+        &quot;ZC&quot;, &quot;Due to Complementary Invoice&quot;,
+        PMC_CPQ_RejectionReason__c
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Rejected Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

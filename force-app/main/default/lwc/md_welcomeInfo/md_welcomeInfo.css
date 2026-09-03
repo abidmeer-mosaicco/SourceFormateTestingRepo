@@ -1,0 +1,53 @@
+.welcome-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.user-text {
+  color: var(--dark-primary-green);
+  font-family: var(--bold-font);
+  font-weight: 700;
+  font-size: 22px;
+  /* font-size: var(--xxx-large-font-size);
+  line-height: 36px; */
+  margin-bottom: 6px;
+}
+
+.account-manager {
+  display: grid;
+  justify-content: flex-end;
+
+  .accountManagerContent {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: .5em;
+    align-items: flex-start;
+  }
+
+  .rightContent {
+    display: grid;
+  }
+}
+
+.account-title {
+  color: var(--dark-primary-green);
+  font-family: var(--bold-font);
+  font-weight: 700;
+  font-size: 17px;
+  /* font-size: var(--large-font-size);
+  line-height: 22px; */
+  margin-bottom: 4px;
+}
+
+.account-name {
+  color: var(--primary-grey);
+  font-family: var(--regular-font);
+  font-weight: 400;
+  font-size: var(--small-font-size);
+  line-height: 17px;
+}
+
+.new_person_account {
+  --slds-c-icon-color-foreground: #ffffff;
+  --slds-c-icon-color-background: #093532;
+}

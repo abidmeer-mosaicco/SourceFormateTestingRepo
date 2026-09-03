@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Functional_Users_Brazil</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CORE.USERS.USERNAME</columns>
+    <columns>PMC_CPQ_SalesRegion__c</columns>
+    <columns>CORE.USERS.ACTIVE</columns>
+    <columns>CORE.USER_ROLE.NAME</columns>
+    <columns>CORE.PROFILE.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_SalesRegion__c</field>
+        <operation>equals</operation>
+        <value>Brazil</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Functional Users - Brazil</label>
+</ListView>

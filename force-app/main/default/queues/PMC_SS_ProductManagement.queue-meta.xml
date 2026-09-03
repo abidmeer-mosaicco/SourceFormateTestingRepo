@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>aprovacaotimedeprodutos@mosaicco.com</email>
+    <name>Product Management</name>
+    <queueMembers>
+        <users>
+            <user>alyx.richter@mosaicco.com.prod</user>
+            <user>brad.satava@mosaicco.com.prod</user>
+            <user>bruna.leme@mosaicco.com.prod</user>
+            <user>colin.lindholm@mosaicco.com.prod</user>
+            <user>fernando.guerra@mosaicco.com.br.prod</user>
+            <user>fernando.ramiro@mosaicco.com.prod</user>
+            <user>jeff.simpson@mosaicco.com.prod</user>
+            <user>lucas.codognotto@mosaicco.com.prod</user>
+            <user>maria.campos3@mosaicco.com</user>
+            <user>patrick.connors@mosaicco.com.prod</user>
+            <user>rogerio.medeiros@mosaicco.com.prod</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>FlowOrchestrationWorkItem</sobjectType>
+    </queueSobject>
+</Queue>

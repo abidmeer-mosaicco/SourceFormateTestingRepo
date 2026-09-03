@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_IncidentFrequency__c</fullName>
+    <description>How often this Case has occurred with any customer in “recent history” (~2 years)</description>
+    <label>Incident Frequency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st Occurrence</fullName>
+                <default>false</default>
+                <label>1st Occurrence</label>
+            </value>
+            <value>
+                <fullName>2nd Occurrence</fullName>
+                <default>false</default>
+                <label>2nd Occurrence</label>
+            </value>
+            <value>
+                <fullName>More than 2 Occurrences</fullName>
+                <default>false</default>
+                <label>More than 2 Occurrences</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

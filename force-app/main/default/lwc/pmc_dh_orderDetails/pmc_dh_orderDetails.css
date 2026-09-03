@@ -1,0 +1,428 @@
+.content-info,
+.shipment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  word-break: break-word;
+}
+
+.shipment-plan-item {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--tertiary-green);
+}
+
+.contract-header.slds-grid {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header .contract-header.slds-grid .slds-col,
+.contract-header .contract-link {
+  flex: none;
+}
+
+.contract-link a {
+  text-decoration: underline;
+  font-size: var(--x-small-font-size);
+  line-height: 14.4px;
+  font-family: var(--regular-font);
+  font-weight: 400;
+  color: var(--primary-green);
+  cursor: pointer;
+}
+
+.contract-link a[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.contract-card .contract-content {
+  row-gap: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.order-summary .content-info:first-child {
+  padding-left: 16px;
+}
+
+.order-summary .card-body {
+  overflow-y: auto;
+}
+
+.product-image {
+  min-width: 104px;
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  background-color: var(--tertiary-grey);
+}
+
+.product-image img {
+  max-width: 104px;
+  height: 104px;
+}
+
+.btn-style {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5px;
+}
+
+.call-price-modal-wrapper {
+  padding: 16px;
+}
+
+.product-col {
+  min-width: 360px;
+  max-width: 360px;
+  display: flex;
+}
+
+.slds-table thead th {
+  background-color: var(--tertiary-green);
+  padding: 16px 10px;
+  color: var(--dark-primary-green);
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.slds-table tbody td {
+  padding: 10px;
+  color: var(--dark-primary-green);
+}
+
+.product-name {
+  font-weight: 700;
+  line-height: 22px;
+  font-size: var(--large-font-size);
+}
+
+.product-name a,
+.wrap-text {
+  white-space: pre-wrap;
+}
+
+::-webkit-scrollbar-track {
+  margin: 0;
+}
+
+.badge-font {
+  font-family: var(--medium-font);
+}
+
+.order-line-badge {
+  padding: 5px 8px;
+  min-width: 90px;
+  justify-content: center;
+}
+
+.productInfo-card .product-info-section {
+  border-bottom: 1px solid var(--tertiary-green);
+  margin-bottom: 16px;
+}
+
+.productInfo-card .product-info-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.productInfo-card .product-info-section:last-child .shipment-information-section:last-child .grouping-section {
+  padding-bottom: 0;
+}
+
+.product-info-section .slds-grid.product-img {
+  column-gap: 16px;
+}
+
+.shipping-info {
+  min-width: 14vw;
+  max-width: 14vw;
+}
+
+.shipment-error-section {
+  border-bottom: 1px solid var(--tertiary-green);
+}
+
+.shipment-error-section:last-child {
+  border-bottom: none;
+}
+
+.shipment-error-section td,
+.duplicate-error-section td {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.shipment-error-section td div:last-child {
+  margin-bottom: 8px;
+}
+
+.product-info-col {
+  width: 15%;
+}
+
+.info-message .dxp-text-body {
+  width: 100%;
+}
+
+.info-message a {
+  font-family: var(--medium-font);
+  font-size: var(--large-font-size);
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: underline;
+  float: right;
+}
+
+.ship-info-header {
+  display: flex;
+  height: 48px;
+  width: 150%;
+  background-color: var(--tertiary-green);
+  padding: 0px 16px;
+  margin-top: 16px;
+}
+
+.ship-info-header p {
+  line-height: 19px;
+  align-self: center;
+  font-weight: 500;
+  color: var(--dark-primary-green);
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+}
+
+.shipment-information-section {
+  border-bottom: 1px solid var(--secondary-green);
+}
+
+.shipment-information-section:last-child {
+  border-bottom: none;
+}
+
+.grouping-section {
+  border-top: 1px solid var(--secondary-green);
+}
+
+.grouping-section .slds-col {
+  padding: 8px 4px;
+}
+
+.grouping-section .slds-grid .slds-col:nth-child(7) {
+  border-right: 1px solid #BFD0CE;
+  padding-left: 8px;
+}
+
+.order-line {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.order-summary-btn-section {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+  align-self: center;
+}
+
+.call-price-modal-wrapper .modal-message {
+  font-family: 'Barlow-Medium';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #000000;
+}
+
+.call-price-modal-wrapper .button-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-icon-style {
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+.productInfo-card .scrollable-wrapper-table {
+  overflow-x: scroll;
+}
+
+.shipment-error-msg {
+  font-family: var(--regular-font);
+  font-size: var(--x-small-font-size);
+  line-height: 14.4px;
+  color: #A61A14;
+  padding-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .product-info {
+    min-width: fit-content;
+  }
+
+  .product-image,
+  .hidden-sm {
+    display: none;
+  }
+
+  .product-col {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 16px;
+  }
+
+  .badge-info {
+    padding: 16px 16px 0;
+  }
+
+  .lbl-field-value {
+    font-size: var(--small-font-size);
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    line-height: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .productInfo-card .scrollable-wrapper-table {
+    max-width: calc(100vw - 32px - 32px);
+    margin-bottom: 16px;
+  }
+
+  .productInfo-card .product-info-section:last-child .scrollable-wrapper-table {
+    margin-bottom: 0;
+  }
+
+  .contract-card .contract-content {
+    row-gap: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .productInfo-card .product-col {
+    margin-bottom: 24px;
+  }
+
+  .shipping-info {
+    min-width: 320px;
+    max-width: 320px;
+  }
+
+  .product-info-col {
+    width: 100%;
+  }
+
+  .info-message {
+    align-items: flex-start;
+  }
+
+  .info-message a {
+    font-size: var(--x-small-font-size);
+    line-height: 14px;
+    float: none;
+  }
+
+  .info-message .dxp-text-body {
+    width: unset;
+  }
+
+  .info-message img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .shipment-information-section,
+  .ship-info-header {
+    width: 1142px;
+  }
+
+  .order-summary-btn-section {
+    flex-direction: column;
+    margin-top: 8px;
+  }
+
+  .order-summary .card-body .slds-grid {
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .call-price-modal-wrapper .button-section {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1749px) {
+  .scrollable-container {
+    max-width: calc(91.6vw);
+    overflow-x: scroll;
+    margin-bottom: 32px;
+  }
+
+  .scrollable-content {
+    min-width: calc(91.6 / 100 * 1750px);
+    max-width: calc(91.6 / 100 * 1750px);
+    padding-left: 2px;
+  }
+
+  .order-summary-section,
+  .contract-info-section,
+  .called-price-summary-section {
+    padding-right: 2px;
+  }
+
+  .shipping-info {
+    min-width: 210px;
+    max-width: 210px;
+  }
+
+  .info-message {
+    align-items: flex-start;
+  }
+
+  .info-message a {
+    float: none;
+    min-width: fit-content;
+  }
+
+  .info-message .dxp-text-body {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .badge-info {
+    padding: 0;
+    width: unset;
+  }
+}
+
+@media (min-width: 1750px) {
+  .productInfo-card {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .edit-icon-style {
+    justify-content: flex-end;
+    padding: 4px 16px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-summary-btn-section {
+    max-width: fit-content;
+  }
+}

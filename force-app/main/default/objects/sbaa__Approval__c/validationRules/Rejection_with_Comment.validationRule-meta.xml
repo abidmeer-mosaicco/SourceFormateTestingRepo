@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_with_Comment</fullName>
+    <active>true</active>
+    <description>when case is rejected then comment is required field</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(sbaa__Status__c, &quot;Rejected&quot;),
+ ISBLANK(sbaa__CommentsLong__c),
+ NOT(ISBLANK(Case__c))  
+)</errorConditionFormula>
+    <errorDisplayField>sbaa__CommentsLong__c</errorDisplayField>
+    <errorMessage>Comments is required when rejecting a case</errorMessage>
+</ValidationRule>

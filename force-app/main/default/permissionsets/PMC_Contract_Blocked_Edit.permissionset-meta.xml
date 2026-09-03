@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>to edit and view contract blocked field</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.PMC_CPQ_Contract_Blocked__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Contract Blocked Edit</label>
+</PermissionSet>

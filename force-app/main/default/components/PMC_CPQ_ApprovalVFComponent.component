@@ -1,0 +1,161 @@
+<!--
+* @description This VF component is used in Approval Email Template
+* @author Jeyanthi Muthaiah
+* @storynumber : GDASF-13704
+-->
+<apex:component controller="PMC_CPQ_ApprovalRequestEmailTempClass" access="global" >
+    <apex:slds />
+    
+    <style>
+        table{width:100%;}th{background-color:#CCCCCC;}
+        .lineTablequote{padding:4px;border:1px;border-spacing: 0;}
+        table,tr,th,td{padding:4px;border:1px;border-spacing: 0;border-style: solid;border-collapse: collapse;}
+    </style>
+    
+    
+    <apex:attribute name="quote" description="quote id"  assignTo="{!quoteId}" type="String"/> 
+    <apex:attribute name="userrole" description="User role" type="String"/>
+    <apex:attribute name="approverName" description="Approver Name" type="String"/>
+   
+    <br/>
+    <br/>
+    <apex:outputPanel rendered="{!userrole != 'Service Director'}">  
+    Quotation : {!quoteInfo.Name} that was submitted for approval has been approved by {!approverName}.
+    <apex:outputLink value="/{!quoteId}" target="_blank">View Quote</apex:outputLink> <br/>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!userrole = 'Service Director'}">  
+    Quotation : {!quoteInfo.Name} that was submitted for approval for “Payment Change” has been approved by {!approverName}.
+    <apex:outputLink value="/{!quoteId}" target="_blank">View Quote</apex:outputLink> <br/>
+    </apex:outputPanel>
+
+    
+    <apex:outputPanel rendered="{!userrole != 'Service Director'}">
+   <b><p style="color:Red">Please Kindly Note , the Expiration Date/Time of the quote is on &nbsp; 
+        <apex:outputText value="{0,date,dd/MM/yyyy}"><apex:param value="{!quoteInfo.PMC_CPQ_ExpirationDate__c}" /></apex:outputText> {!quoteInfo.PMC_CPQ_ExpirationTime__c}. </p></b>
+     </apex:outputPanel>
+    <!-- Quote info -->
+    <h4><b>Quote Summary</b></h4>
+    <table class="lineTablequote">
+        <tr class="lineTablequote">
+            <td class="lineTablequote"> <b> Customer Name :&nbsp; </b><apex:outputText value="{!quoteInfo.SBQQ__Account__r.Name}"/></td>
+            
+            <td class="lineTablequote"><b>Contract Validity :&nbsp;</b><apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!quoteInfo.PMC_CPQ_ContractEnd__c}" />
+                </apex:outputText><br /></td>
+        </tr>   
+        <tr class="lineTablequote">
+            
+            <td class="lineTablequote"><b> Quote Description :&nbsp;</b><apex:outputText value="{!quoteInfo.PMC_CPQ_QuoteShortNameDescription__c}"/></td>
+            <td class="lineTablequote"><b> Currency :&nbsp;</b><apex:outputText value="{!quoteInfo.CurrencyIsoCode}"/></td>
+        </tr>
+        <tr class="lineTablequote">
+            
+            <td class="lineTablequote"> <b> Quote Issue Date :&nbsp;</b><apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!quoteInfo.Approvals1__r[0].CreatedDate}" />
+                </apex:outputText></td>
+            <td class="lineTablequote"><b> Payment Terms :&nbsp;</b><apex:outputText value="{!quoteInfo.SBQQ__PaymentTerms__c}"/></td>
+            
+        </tr>
+    </table>
+    
+    <p>
+        <b>Submitter Comments: </b><apex:outputField label="Submitter Comments: " value="{!quoteInfo.PMC_AdditionalComments__c}"/>
+    </p>
+    
+    <!-- Quote Line info --> 
+    <apex:outputPanel rendered="{!userrole != 'Service Director'}">  
+    <h4><b>Quote Line Information</b></h4>
+    <table id="lineTable">
+        <tr >
+            <th>Product Name</th>
+            <th>Contract Type</th>
+            <th>Price Book Value</th>
+            <th>Price per Ton</th>
+            <th>Target Price</th>
+            <th>Floor Price</th>
+            <th>Price Adjustment (USD)</th>
+            <!-- Modified part of GOHS-45 by Jaswanth Vaithiswaran Margin heading changed to Replacement Margin --> 
+            <th>Replacement Margin (USD)</th>
+            <th>Payment Date</th> 
+            <th>Incoterms</th>
+        </tr>
+        <apex:repeat value="{!qLines}" var="line">
+            <tr>
+                <td><apex:outputText value="{!line.SBQQ__ProductName__c}"/></td>                           
+                <td><apex:outputText value="{!line.PMC_CPQ_ContractType__c}"/></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_PriceBookValue__c}"/></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_FinalPricePerTonne__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceTarget__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceFloor__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_Discount__c}" />
+                    </apex:outputText></td>
+                <!-- Modified part of GOHS-45 by Jaswanth Vaithiswaran PMC_CPQ_Margin__c field changed to PMC_CPQ_ReplacementMargin__c -->
+                <td><apex:outputText value="{0, number,###,###,###,##0.00 }">
+                    <apex:param value="{!line.PMC_CPQ_ReplacementMargin__c}" />    
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0,date,MM/dd/yyyy}">
+                    <apex:param value="{!line.PMC_CPQ_PaymentDate__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_Incoterms1__c}"/></td>
+            </tr>
+        </apex:repeat>
+    </table>
+ </apex:outputPanel>
+    
+     <!-- Quote Line info --> 
+    <apex:outputPanel rendered="{!userrole = 'Service Director'}">  
+    <h4><b>Quote Line Information</b></h4>
+    <table id="lineTable">
+        <tr >
+            <th>Product Name</th>
+            <th>Contract Type</th>
+            <th>Target Price</th>
+            <th>Floor Price</th>
+            <th>Price Adjustment (USD)</th>
+            <!-- Modified part of GOHS-45 by Jaswanth Vaithiswaran Margin heading changed to Replacement Margin -->
+            <th>Replacement Margin (USD)</th>
+            <th>Payment Date</th> 
+            <th>Incoterms</th>
+            <th>Sales Price</th>
+            
+        </tr>
+        <apex:repeat value="{!qLines}" var="line">
+            <tr>
+                <td><apex:outputText value="{!line.SBQQ__ProductName__c}"/></td>                           
+                <td><apex:outputText value="{!line.PMC_CPQ_ContractType__c}"/></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceTarget__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceFloor__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_Discount__c}" />
+                    </apex:outputText></td>
+                <!-- Modified part of GOHS-45 by Jaswanth Vaithiswaran PMC_CPQ_Margin__c field changed to PMC_CPQ_ReplacementMargin__c -->
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_ReplacementMargin__c}" />    
+                    </apex:outputText></td>
+                <td><apex:outputText value="{0,date,MM/dd/yyyy}">
+                    <apex:param value="{!line.PMC_CPQ_PaymentDate__c}" />
+                    </apex:outputText></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_Incoterms1__c}"/></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_CustomerPrice__c}" />
+                    </apex:outputText></td>
+                
+            </tr>
+        </apex:repeat>
+    </table>
+ </apex:outputPanel>
+    
+    
+    
+</apex:component>

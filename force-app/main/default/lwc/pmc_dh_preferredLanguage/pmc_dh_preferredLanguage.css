@@ -1,0 +1,26 @@
+.language-selector-container, .info-text-container{
+    display: flex;
+}
+.language-selector-container{
+    justify-content: space-between;
+}
+.pref-lan-help{
+    margin: 1px 0 0 8px;
+}
+.info-icon{
+    width: 15px;
+    height: 15px;
+}
+.pref-lan-head{
+    margin-top: 8px;
+}
+@media screen and (max-width:767px) {
+    .info-icon{
+        margin-top: 6px;
+    }
+    .preferred-language-dropdown,
+    .preferred-language-dropdown .slds-dropdown_fluid {
+        width: 120px;
+        min-width: auto;
+    }
+}

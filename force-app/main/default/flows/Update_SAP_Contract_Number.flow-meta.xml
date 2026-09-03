@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>SetSAPContractNumber</name>
+        <label>SetSAPContractNumber</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>VarSAPContractNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Quote__r.PMC_CPQ_SAPContractReference__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Has_SAP_Reference</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>check_Bypass</name>
+        <label>check Bypass</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>SetSAPContractNumber</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassTrue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>F_BypassFlow</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>BypassTrue</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Se o Quote ainda não tem o número SAP, não há o que copiar: o flow encerra sem update e sem log, para não gerar ruído em todo save de Contract anterior ao retorno do SAP.</description>
+        <name>Has_SAP_Reference</name>
+        <label>Has SAP Reference</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No SAP Reference</defaultConnectorLabel>
+        <rules>
+            <name>SAPReferencePopulated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>F_HasSAPReference</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SAP_Contract_Number</targetReference>
+            </connector>
+            <label>SAPReferencePopulated</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>F_BypassFlow</name>
+        <dataType>Boolean</dataType>
+        <expression>{!$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Garante um External Id único por ocorrência, para que uma segunda falha no mesmo registro não derrube o próprio fault path.</description>
+        <name>F_ErrorLogExternalId</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Id} &amp; &apos; - &apos; &amp; TEXT({!$Flow.CurrentDateTime})</expression>
+    </formulas>
+    <formulas>
+        <description>Mensagem de erro com o contexto necessário para reprocessar manualmente o número de contrato SAP.</description>
+        <name>F_FaultMessage</name>
+        <dataType>String</dataType>
+        <expression>&apos;Nao foi possivel copiar o SAP Contract Number para o Contract &apos; &amp; {!$Record.Id} &amp; &apos; (Quote: &apos; &amp; {!$Record.SBQQ__Quote__c} &amp; &apos;). Valor esperado: &apos; &amp; BLANKVALUE({!VarSAPContractNumber}, &apos;(vazio)&apos;) &amp; &apos;. Erro: &apos; &amp; {!$Flow.FaultMessage}</expression>
+    </formulas>
+    <formulas>
+        <description>Indica se o Quote já trouxe o número de contrato SAP. ISBLANK cobre tanto nulo quanto texto vazio.</description>
+        <name>F_HasSAPReference</name>
+        <dataType>Boolean</dataType>
+        <expression>NOT(ISBLANK({!VarSAPContractNumber}))</expression>
+    </formulas>
+    <interviewLabel>Update SAP Contract Number {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update SAP Contract Number</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Fault path: registra o erro em Error Log e deixa a transação principal concluir, em vez de derrubar o save do Contract.</description>
+        <name>CreateErrorLog</name>
+        <label>Create Error Log</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>PMC_ExternalId__c</field>
+            <value>
+                <elementReference>F_ErrorLogExternalId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <stringValue>Update SAP Contract Number</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>F_FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>Update_SAP_Contract_Number</name>
+        <label>Update SAP Contract Number</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <faultConnector>
+            <targetReference>CreateErrorLog</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_CPQ_SAPContractNumber__c</field>
+            <value>
+                <elementReference>VarSAPContractNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>check_Bypass</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>SBQQ__Quote__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SBQQ__Quote__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Contract</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>VarSAPContractNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set group is assigned to the “Credit Analyst” Profile</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Credit Analyst CPQ Permission Set Group</label>
+    <permissionSets>PMC_CPQ_Quote_QuoteLine</permissionSets>
+    <permissionSets>PMC_CPQ_R_Approval</permissionSets>
+    <permissionSets>PMC_CPQ_R_Quote_Template</permissionSets>
+    <permissionSets>PMC_CPQ_R_RawMaterial</permissionSets>
+    <permissionSets>PMC_CPQ_R_Subscription</permissionSets>
+    <permissionSets>PMC_RCase</permissionSets>
+    <permissionSets>PMC_RContact</permissionSets>
+    <permissionSets>PMC_ROpportunity</permissionSets>
+    <permissionSets>PMC_ROrder</permissionSets>
+    <permissionSets>PMC_R_Contract</permissionSets>
+    <permissionSets>PMC_R_Location</permissionSets>
+    <permissionSets>PMC_R_Pricebook</permissionSets>
+    <permissionSets>PMC_R_Product</permissionSets>
+    <permissionSets>R_ProductSalesArea</permissionSets>
+    <permissionSets>SBQQ__SalesforceCPQUserAccess</permissionSets>
+    <permissionSets>sbaa__AdvancedApprovalsUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

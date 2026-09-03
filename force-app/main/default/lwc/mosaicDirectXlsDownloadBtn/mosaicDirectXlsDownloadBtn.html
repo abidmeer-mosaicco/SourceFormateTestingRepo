@@ -1,0 +1,27 @@
+<template>
+  <div class="download-container">
+    <button class="md-button md-default-button" variant="brand" title="Download" onclick={handleDownload}
+      disabled={isLoading}>Download</button>
+    <template if:true={isLoading}>
+      <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+    </template>
+  </div>
+
+  <template if:true={isLoading}>
+    <div style="
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.65);
+        z-index: 9999;
+      ">
+      <div
+        style="text-align: center; padding: 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)">
+        <lightning-spinner alternative-text="Generating file" size="medium"></lightning-spinner>
+        <div style="margin-top: 8px; font-weight: 600">Generating file...</div>
+      </div>
+    </div>
+  </template>
+</template>

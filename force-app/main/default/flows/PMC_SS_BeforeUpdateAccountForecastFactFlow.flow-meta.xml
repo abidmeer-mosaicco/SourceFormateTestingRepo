@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Element to assign current sales plan and generate current sales plan STN quantity for MTN to MTN combination</description>
+        <name>CSPValueForMTNToMTNCombinationAssignment</name>
+        <label>CSP Value For MTN to MTN Combination Assignment</label>
+        <locationX>50</locationX>
+        <locationY>1211</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlan__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_CurrentSalesPlanMTN__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlanSTN__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numMTNtoSTN</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Element to assign current sales plan and generate current sales plan STN quantity for MTN to STN combination</description>
+        <name>CSPValueForMTNToSTNCombinationAssignment</name>
+        <label>CSP Value For MTN-STN Combination Assignment</label>
+        <locationX>578</locationX>
+        <locationY>1211</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlan__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numMTNtoSTN</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlanSTN__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numMTNtoSTN</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Element to assign current sales plan and generate current sales plan MTN quantity for STN to MTN combination</description>
+        <name>CSPValuesForSTNToMTNCombinationAssignment</name>
+        <label>CSP Values For STN to MTN Combination Assignment</label>
+        <locationX>842</locationX>
+        <locationY>1211</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlan__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numSTNtoMTN</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlanMTN__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numSTNtoMTN</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Element to assign current sales plan and generate current sales plan MTN quantity for STN to STN combination</description>
+        <name>CSPValuesForSTNToSTNCombinationAssignment</name>
+        <label>CSP Values For STN to STN Combination Assignment</label>
+        <locationX>314</locationX>
+        <locationY>1211</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlan__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_CurrentSalesPlanSTN__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_CurrentSalesPlanMTN__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numSTNtoMTN</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Assignment element to store the MTN to STN conversion factor in local variable</description>
+        <name>MTNToSTNConversionFactorAssignment</name>
+        <label>MTN to STN Conversion Factor Assignment</label>
+        <locationX>666</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>MTNtoSTNConversion</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>UOMConversionIterate.PMC_SS_ConversionFactor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UOMConversionIterate</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assignment element to store STN to MTN conversion factor in local variable</description>
+        <name>STNToMTNConversionFactorAssignment</name>
+        <label>STN to MTN Conversion Factor Assignment</label>
+        <locationX>930</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>STNtoMTNConversion</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>UOMConversionIterate.PMC_SS_ConversionFactor__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UOMConversionIterate</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Constant string to store &apos;MTN&apos; Unit of measure</description>
+        <name>STRING_MTN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>MTN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Record name for MTN to STN Conversion</description>
+        <name>STRING_MTN_TO_STN_CONVERSION_RECORD_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>MTNtoSTN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Constant string to store &apos;STN&apos; Unit of measure</description>
+        <name>STRING_STN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>STN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Constant to store the Metadata name</description>
+        <name>STRING_STN_TO_MTN_CONVERSION_RECORD_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>STNtoMTN</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Decision element to check if the flow is bypassed</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>336</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>GetUOMConversionMetadataRecords</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_IsBypassedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Is Bypassed Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to check the CSP update and the Fact Unit of measure</description>
+        <name>CSPUpdateDecision</name>
+        <label>CSP Update Decision</label>
+        <locationX>578</locationX>
+        <locationY>1103</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CSPUpdateDecision_CSPEnteredInMTNUOMIsMTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_CurrentSalesPlanMTN__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CSPValueForMTNToMTNCombinationAssignment</targetReference>
+            </connector>
+            <label>CSP Entered In MTN &amp; UOM is MTN Outcome</label>
+        </rules>
+        <rules>
+            <name>CSPUpdateDecision_CSPEnteredInSTNUOMIsSTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_CurrentSalesPlanSTN__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>STN</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CSPValuesForSTNToSTNCombinationAssignment</targetReference>
+            </connector>
+            <label>CSP Entered In STN &amp; UOM Is STN Outcome</label>
+        </rules>
+        <rules>
+            <name>CSPUpdateDecision_CSPEnteredInMTNUOMIsSTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_CurrentSalesPlanMTN__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CSPValueForMTNToSTNCombinationAssignment</targetReference>
+            </connector>
+            <label>CSP Entered In MTN &amp; UOM is STN Outcome</label>
+        </rules>
+        <rules>
+            <name>CSPUpdateDecision_CSPEnteredInSTNUOMIsMTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_CurrentSalesPlanSTN__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MTN</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CSPValuesForSTNToMTNCombinationAssignment</targetReference>
+            </connector>
+            <label>CSP Entered In STN &amp; UOM is MTN Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to check if UOM conversion records are available</description>
+        <name>UOMConversionRecordsCheckDecision</name>
+        <label>UOM Conversion Records Check Decision</label>
+        <locationX>974</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>UOMConversionRecordsCheckDecision_RecordsAvailableOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetUOMConversionMetadataRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UOMConversionIterate</targetReference>
+            </connector>
+            <label>Records Available Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to check if MTN to STN and STN to MTN conversion metadata is available.</description>
+        <name>UOMConversionTypeCheckDecision</name>
+        <label>UOM Conversion Type Check Decision</label>
+        <locationX>930</locationX>
+        <locationY>719</locationY>
+        <defaultConnector>
+            <targetReference>UOMConversionIterate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>UOMConversionTypeCheckDecision_IfMTNToSTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UOMConversionIterate.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN_TO_STN_CONVERSION_RECORD_NAME</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MTNToSTNConversionFactorAssignment</targetReference>
+            </connector>
+            <label>If MTN to STN Outcome</label>
+        </rules>
+        <rules>
+            <name>UOMConversionTypeCheckDecision_IfSTNToMTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UOMConversionIterate.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN_TO_MTN_CONVERSION_RECORD_NAME</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>STNToMTNConversionFactorAssignment</targetReference>
+            </connector>
+            <label>If STN to MTN Outcome</label>
+        </rules>
+    </decisions>
+    <description>Before update flow to update the current sales plan values for forecast fact records.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula for MTN to STN quantity conversion.</description>
+        <name>numMTNtoSTN</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.PMC_SS_CurrentSalesPlanMTN__c} * {!MTNtoSTNConversion}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Formula for STN to MTN quantity conversion</description>
+        <name>numSTNtoMTN</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.PMC_SS_CurrentSalesPlanSTN__c} *  {!STNtoMTNConversion}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>PMC SS Before Update Account Forecast Fact Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Before Update Account Forecast Fact Flow</label>
+    <loops>
+        <description>Loop element to iterate over UOM Conversion Metadata records.</description>
+        <name>UOMConversionIterate</name>
+        <label>UOM Conversion Iterate</label>
+        <locationX>578</locationX>
+        <locationY>611</locationY>
+        <collectionReference>GetUOMConversionMetadataRecords</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>UOMConversionTypeCheckDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>CSPUpdateDecision</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Element to fetch the UOM conversion metadata records</description>
+        <name>GetUOMConversionMetadataRecords</name>
+        <label>Get UOM Conversion Metadata Records</label>
+        <locationX>974</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UOMConversionRecordsCheckDecision</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>PMC_SS_UOMConversionMapping__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>210</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>PMC_SS_CurrentSalesPlanMTN__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_CurrentSalesPlanSTN__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>AdvAccountForecastFact</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>MTNtoSTNConversion</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>6</scale>
+    </variables>
+    <variables>
+        <name>STNtoMTNConversion</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>6</scale>
+    </variables>
+</Flow>

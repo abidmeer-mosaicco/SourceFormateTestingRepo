@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- PersonalInfo_EPIM --></label>
+        <name>PersonalInfo_EPIM</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Copado License Manager --></label>
+        <name>copado__License_Manager</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage>&quot;El usuario seleccionado ya está ausente. Por favor, seleccione otro usuario para delegar.&quot;</errorMessage>
+        <name>PMC_SS_DelegatedUserOOORule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Por favor, introduzca la fecha de inicio y la fecha de finalización de Ausente de la oficina cuando introduzca el usuario delegado&quot;</errorMessage>
+        <name>PMC_SS_EnterDatesForOutOfOffice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Introduzca el usuario delegado cuando introduzca la fecha de inicio y la fecha de finalización de la ausencia.</errorMessage>
+        <name>PMC_SS_EnterDelegateUser</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Rellene los campos obligatorios, número de móvil, ID de federación y región de ventas para guardar el registro.&quot;</errorMessage>
+        <name>PMC_SS_MandatoryUserFields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>La fecha anterior no puede seleccionarse como fecha de inicio de la ausencia</errorMessage>
+        <name>PMC_SS_OOOStartDateGreaterOrEqualToToday</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>La fecha de inicio de la ausencia no puede ser despues de la fecha de finalización de la ausencia</errorMessage>
+        <name>PMC_SS_OOOStartDateIsGreaterThanEndDate</name>
+    </validationRules>
+    <webLinks>
+        <label>Seleccionar tema</label>
+        <name>SBQQ__Select_Theme</name>
+    </webLinks>
+</CustomObjectTranslation>

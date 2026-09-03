@@ -1,0 +1,319 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "b94c0a58-fa98-44da-b8a0-dd05f8d0f35a",
+  "label" : "Preguntas Frecuentes",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "07dba7cd-c323-407b-b523-929566bf108a",
+          "columns" : [ {
+            "UUID" : "1fcfcdfe-29a5-4302-904c-e6e387ef53c1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "07dba7cd-c323-407b-b523-929566bf108a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "021dcc3b-f32c-4e9e-9dc8-fd6cb06ec4d9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1fcfcdfe-29a5-4302-904c-e6e387ef53c1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "22c54d1c-bdc4-4124-8ecc-4bd771c76600",
+          "columns" : [ {
+            "UUID" : "8c218d28-a7b4-49d6-b1c7-867ccd4c1545",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "22c54d1c-bdc4-4124-8ecc-4bd771c76600",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Preguntas Frecuentes</strong></h2><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "5c81b742-d546-4bf8-aab2-4e34a99b46f0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8c218d28-a7b4-49d6-b1c7-867ccd4c1545",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "1ab8e86b-537a-4116-930e-c6dee35b40ed",
+          "columns" : [ {
+            "UUID" : "49f84df4-06dc-4302-9c79-5d73b5aa3672",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1ab8e86b-537a-4116-930e-c6dee35b40ed",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "5bc5d56d-7c7d-4855-a42d-b48c39ee8ec4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    1. ¿Cómo puedo trabajar con ustedes o postular para trabajar en la empresa?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "827c0f86-8de0-4df9-b3b7-ad6c236c2c36",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px;\">Para conocer nuestras ofertas laborales vigentes y postular a ellas, visita la plataforma Bumeran, donde podrás ingresar tu CV o información personal. Para postular es necesario que crees una cuenta en dicha plataforma.</span></p><p><br></p><p><span style=\"font-size: 22px;\">Las convocatorias abiertas, así como la culminación de la selección son publicadas en nuestras redes sociales de Facebook y LinkedIn. Te invitamos a seguirnos en estas plataformas para recibir alertas cada vez que haya una convocatoria laboral vigente.</span></p><p><br></p><p><a href=\"https://www.facebook.com/MineraMiskiMayo/\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 22px; background-color: rgb(255, 255, 255); color: rgb(0, 123, 255);\">Compañía Minera Miski Mayo S.R.L.: Mi empresa |Facebook</a></p><p><br></p><p><a href=\"https://www.linkedin.com/company/miski-mayo/mycompany/\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 22px; color: rgb(0, 123, 255);\">Compañía Minera Miski Mayo S.R.L.: Mi empresa | LinkedIn</a></p><p><br></p><p><span style=\"font-size: 22px;\">Recuerda que:</span></p><ul><li><span style=\"font-size: 22px;\">Ninguno de nuestros procesos de contratación se realiza a cambio de dinero.</span></li><li><span style=\"font-size: 22px;\">No realizamos convocatorias laborales a través de correo electrónico o WhatsApp.</span></li></ul><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "fafcef8d-98dd-47aa-9106-ee098f31e1fe",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    2. ¿Cómo mi empresa puede brindar servicios a Compañía Minera Miski Mayo?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "67947097-daad-429c-a43c-974c64599b43",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px;\">Si deseas darnos a conocer tu empresa te invitamos a que ingreses al siguiente link que se encuentra en nuestra página web:&nbsp;&nbsp;</span><a href=\"https://miskimayo.witsmedia.lat/proveedores/\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 22px; color: rgb(0, 123, 255);\">Proveedores – Online Furniture Store (witsmedia.lat)</a></p><p><br></p><p><span style=\"font-size: 22px;\">Completa elformulario proporcionando información detallada de tu empresa para que podamos tenerla presente en futuros procesos de licitación.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "507061b9-b5c8-4830-9c70-61c79e58a4c4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    3. Si quiero solicitar una donación o apoyo, ¿con quién me puedo contactar?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "03bbdbdc-f6de-4b3f-837f-3e37a96c74f6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si quieres hacernos llegar una solicitud o donación hazlo a través de nuestra Mesa de Partes Virtual. Elige la opción de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Registra tu solicitud y/o documento</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, haz clic y luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Gestión Social”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "66bb2ea6-9740-44be-84c8-12cd1cafd624",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    4. ¿Cómo puedo comprar fosfato de Miski Mayo?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "69f98f7a-ac68-4e9b-be5b-4351d11ab611",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si quieres información sobre la venta de nuestro concentrado de fosfato, escríbenos a través de nuestra Mesa de Partes Virtual. Elige la opción de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Consulta</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, haz clic y luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área “</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">Comercial”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y tu consulta. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.&nbsp;&nbsp;</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8239c95a-fff4-4a92-a188-57b88cbaa094",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    5. Quiero conocer los reportes ambientales o algún tema específico ambiental\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "08d22e42-22ff-4476-9321-f2247dbdb498",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Consulta</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, haz clic y luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Comunicación”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.&nbsp;&nbsp;</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "75a90fd5-6101-4f53-80ae-e3228297918b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    6. ¿Cómo puedo visitar la operación?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "575928c7-52dc-4b77-b832-f693993a8f1c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si quieres visitar la operación debes registrar una solicitud en nuestra Mesa de Partes Virtual.&nbsp;Elige la opción&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Registra tu solicitud y/o documento</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, haz clic y luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Gestión Social”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "11522726-47c4-4ff6-833d-f162b199e1db",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    7. Deseo información adicional sobre el proceso de operación\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "34d393ff-a42c-4117-bd50-e79ea96fa5f0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Consulta</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, haz clic y luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Comunicación”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.&nbsp;</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e5e47053-b7a2-43dd-8b65-c1eec0311210",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"background-color: #E2231A; color: white; font-weight: bold; padding: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 22px;\">\n    8. Quiero hacer una consulta, pero no tengo claro a quien dirigirla en su mesa de partes. ¿Cómo hago?\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "18d7be61-ec9e-4da9-84f5-7fcaf29c6349",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">Si no tienes claro a quien dirigir tu consulta, puedes hacerla llegar al área de Comunicación para que derive tu consulta al área respectiva. Elige la opción de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Consulta</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">”, luego de desplegar las opciones de la sección&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Área a la que dirige su documento”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">, selecciona el área de&nbsp;</span><strong style=\"font-size: 22px; color: rgb(72, 72, 72);\">“Comunicación”</strong><span style=\"font-size: 22px; color: rgb(72, 72, 72);\">. Ingresa todos tus datos y tu consulta. Esta área se encargará de retransmitir tu consulta al área respectiva para que atienda tu comunicación, dándote respuesta al correo electrónico que registraste.&nbsp;</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "66e0f677-cc8b-49ee-b6b1-9b51478b0e7c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "49f84df4-06dc-4302-9c79-5d73b5aa3672",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "0da94bc2-49b8-47b3-b273-fc66d4c5c98e",
+          "columns" : [ {
+            "UUID" : "ef296128-aa16-4686-a142-80436fc94a79",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0da94bc2-49b8-47b3-b273-fc66d4c5c98e",
+      "regions" : [ {
+        "id" : "ef296128-aa16-4686-a142-80436fc94a79",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b28a85de-32c5-416d-ae46-0d145201a896",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Preguntas Frecuentes"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ac52c26f-3c6c-4500-8156-007d7a41a7a9",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ab2e544c-f4d4-470e-a17f-1ddd8cf95fa9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-preguntas-frecuentes"
+}

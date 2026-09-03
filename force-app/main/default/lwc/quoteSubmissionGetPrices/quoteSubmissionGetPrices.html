@@ -1,0 +1,54 @@
+<template>
+	<iframe
+		src="/apex/PMC_CPQ_EventListenerBridge?event=/event/Get_Price_Response__e"
+		style="display:none;"
+		tabindex="-1">
+	</iframe>
+	<div class="slds-var-m-around_medium">
+		<!-- Status Message -->
+		<template if:true={statusMessage}>
+			<div class="slds-box slds-box_x-small slds-var-m-top_medium slds-text-align_center">
+				<template if:true={isLoading}>
+					<lightning-spinner alternative-text={labels.LABEL_PROCESSING_SPINNER} size="small" class="slds-var-m-right_small"></lightning-spinner>
+				</template>
+				<span class="slds-text-body_regular">{statusMessage}</span>
+			</div>
+		</template>
+
+		<!-- Error Message -->
+		<template if:true={errorMessage}>
+			<div class="slds-box slds-box_x-small slds-var-m-top_medium slds-theme_error">
+				<div class="slds-text-color_error">
+					<lightning-icon icon-name="utility:error" size="x-small" class="slds-var-m-right_x-small"></lightning-icon>
+					{errorMessage}
+				</div>
+			</div>
+		</template>
+
+		<!-- Instructions -->
+		<template if:false={isLoading}>
+
+			<!-- Action Buttons -->
+			<div class="slds-var-m-top_large slds-text-align_center">
+				<!-- <lightning-button
+					variant="brand"
+					label={labels.LABEL_GET_LATEST_PRICES_BUTTON}
+					onclick={handleFetchPrices}
+					disabled={isLoading}
+					class="slds-var-m-right_small"
+				>
+				</lightning-button> -->
+
+				<template if:true={showRetryButton}>
+					<lightning-button variant="neutral" label={labels.LABEL_RETRY_BUTTON} onclick={handleRetry} disabled={isLoading}> </lightning-button>
+				</template>
+			</div>
+
+			<div class="slds-var-m-top_medium slds-text-align_center">
+				<p class="slds-text-body_small slds-text-color_weak">
+					{labels.LABEL_INSTRUCTIONS_MESSAGE}
+				</p>
+			</div>
+		</template>
+	</div>
+</template>

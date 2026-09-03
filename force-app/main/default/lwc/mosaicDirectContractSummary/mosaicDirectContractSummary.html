@@ -1,0 +1,135 @@
+<template>
+  <div class="container">
+    <h2 class="md-big-title md-mb-2">Contract <template if:true={contract.quoteName}>{contract.quoteName}</template>
+      <template if:true={accountName}> - {accountName}</template></h2>
+
+    <div class="md-grid" style="grid-template-columns: auto 1fr; column-gap: 3em;">
+      <div class="md-box">
+        <div class="md-header">
+          <p>Validity Period</p>
+        </div>
+
+        <div class="md-body md-grid" style="grid-template-columns: auto auto auto; column-gap: 5em;">
+          <div class="md-grid md-flex-flow">
+            <p class="md-p-title">Start Date</p>
+            <span class="md-span">{contract.startDate}</span>
+          </div>
+
+          <div class="md-grid md-flex-flow">
+            <p class="md-p-title">End Date</p>
+            <span class="md-span">{contract.endDate}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-box">
+        <div class="md-header">
+          <p>Contract Summary</p>
+        </div>
+
+        <div class="md-body md-grid" style="grid-template-columns: auto auto auto;">
+          <div class="md-grid md-flex-flow">
+            <p class="md-p-title">Contract PO Number</p>
+            <span class="md-span">{contract.contractPO}</span>
+          </div>
+
+          <div class="md-grid md-flex-flow">
+            <p class="md-p-title">Contract Type</p>
+            <span class="md-span">{contract.contractType}</span>
+          </div>
+
+          <div class="md-grid md-flex-flow">
+            <p class="md-p-title">MOT</p>
+            <span class="md-span">{contract.MOT}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md-box md-my-2">
+      <div class="md-header">
+        <p>Contract Items</p>
+      </div>
+
+      <div class="md-body">
+        <div class="dropdown" onmouseleave={handleMouseLeave} onmouseenter={handleMouseEnter}>
+          <div class="input-container">
+            <input type="text" class="dropdown-button" value={searchKey} oninput={handleSearch} onclick={toggleDropdown}
+              placeholder="Choose an item to place an order..." />
+
+            <!-- <div class="helper-row">
+              <span class="helper-text">Choose an item to place an order</span>
+            </div> -->
+          </div>
+
+          <template if:true={aberto}>
+            <div class="dropdown-menu">
+              <table class="dropdown-table">
+                <thead>
+                  <tr>
+                    <th>Contract Item</th>
+                    <th>Description</th>
+                    <th>Item Qt. Available (t)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <template for:each={filteredItems} for:item="item">
+                    <tr key={item.Id} data-id={item.Id} onclick={selectItem} class="dropdown-row">
+                      <td>{item.Name}</td>
+                      <td>{item.Description__c}</td>
+                      <td>{item.Quantity__c}</td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <template if:true={selectedRecord}>
+      <c-mosaic-direct-place-order-modal
+        open={isOpen}
+        opportunity={selectedRecord.Opportunity}
+        selected-record={selectedRecord}
+        origin-city={selectedRecord.Origin}
+        contract-item={selectedRecord.Name}
+        contract={contract}
+        contract-id={contractId}
+        quote={selectedRecord.Quote}
+        quote-line={selectedRecord.QuoteLine}
+        account={selectedRecord.Account}
+        contract-description={selectedRecord.Description__c}
+        ship-method-from-contract={selectedRecord.SHIPPINGTYPE}
+        ship-to-options-from-contract={shipToOptions}
+        shipto-id={selectedRecord.ShipToId}
+        transport-mode-from-contract={selectedRecord.MOT}
+        incoterm-from-contract={selectedRecord.INCOTERM}
+        subscription-id={selectedRecord.Id}
+        start-date={selectedRecord.StartDate}
+        end-date={selectedRecord.EndDate}
+        contract-end-date={selectedRecord.ContractEndDate}
+        product-location={selectedRecord.ProductLocation}
+        unit-of-measure={selectedRecord.UnitOfMeasure}
+        uom={selectedRecord.UOM}
+        payment-terms={selectedRecord.PaymentTerms}
+        advance-billing={selectedRecord.AdvanceBilling}
+        incoterm2={selectedRecord.Incoterm2}
+        exchange-rate={selectedRecord.ExchangeRate}
+        fixed-ship-to-value={selectedRecord.ShipTo}
+        available-qty-tons={selectedRecord.Quantity__c}
+        sales-office={selectedRecord.SalesOffice}
+        sales-channel={selectedRecord.SalesChannel}
+        onplaceorderchange={handlePlaceOrderChange}
+        onclose={handleModalClose}>
+      </c-mosaic-direct-place-order-modal>
+    </template>
+
+    <div class="md-mt-2">
+      <c-mosaic-direct-order-table title="Placed Orders" max-orders-display="10" show-empty-state="true"
+        new-order-data={selectedItemData} onordertotalschange={handleOrderTotalsChange}>
+      </c-mosaic-direct-order-table>
+    </div>
+  </div>
+</template>

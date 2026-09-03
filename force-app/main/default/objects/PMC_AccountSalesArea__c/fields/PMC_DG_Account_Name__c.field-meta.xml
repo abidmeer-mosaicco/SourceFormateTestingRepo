@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DG_Account_Name__c</fullName>
+    <label>Account Name</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Account Sales Areas</relationshipLabel>
+    <relationshipName>Account_Sales_Areas</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

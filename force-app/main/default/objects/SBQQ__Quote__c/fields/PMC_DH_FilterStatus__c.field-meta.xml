@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_FilterStatus__c</fullName>
+    <description>This field is referred in Digital Hub List View Page and Detail View Pages as the customer friendly status.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+   ISPICKVAL(SBQQ__Status__c, &quot;Accepted&quot;),
+   IF(
+      ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;Phone Call&quot;) ||
+      ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;Email&quot;) ||
+      ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;In Person&quot;) ||
+      ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;Text/Whatsapp&quot;),
+      $Label.PMC_DH_AcceptedbyAccountManager,
+      IF(
+         ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;DocuSign&quot;) ||
+         ISPICKVAL(PMC_CPQ_CustomerAcceptanceMethod__c, &quot;Accepted by DH Customer&quot;),
+         $Label.pmc_quoteDetailsFlow_accepted,
+         &quot;&quot;
+      )
+   ),
+   CASE(
+      SBQQ__Status__c,
+      &quot;Request&quot;, $Label.pmc_quoteDetailsFlow_statusSubmitted,
+      &quot;Draft&quot;, $Label.pmc_quoteDetailsFlow_statusUnderReviewByAccountManager,
+      &quot;Approved&quot;, $Label.pmc_quoteDetailsFlow_statusUnderReviewByAccountManager,
+      &quot;Presented&quot;, $Label.PMC_DH_ActionPending,
+      &quot;Accepted&quot;, $Label.pmc_quoteDetailsFlow_accepted,
+      &quot;Rejected&quot;, $Label.PMC_DH_InactiveStatus,
+&quot;Expired&quot;,$Label.PMC_DH_InactiveStatus,
+      &quot;&quot;
+   )
+)</formula>
+    <label>PMC_DH_FilterStatus</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

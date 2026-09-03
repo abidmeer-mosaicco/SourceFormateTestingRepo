@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <definitionCreationType>Calculated_Insight</definitionCreationType>
+    <masterLabel>Chance_to_convert_like_to_convert_map_EinsteinEmailEngagementScores_EmailConversionLikelihood_1753147406743</masterLabel>
+    <owner>DataCloud</owner>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>Chance_to_convert__cio.like_to_convert__c</sourceFieldName>
+    <targetEntity xsi:nil="true"/>
+    <targetFieldName>EinsteinEmailEngagementScores__dlm.EmailConversionLikelihood__c</targetFieldName>
+</FieldSrcTrgtRelationship>

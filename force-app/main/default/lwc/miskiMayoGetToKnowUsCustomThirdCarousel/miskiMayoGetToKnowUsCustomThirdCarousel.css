@@ -1,0 +1,140 @@
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.custom-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    min-height: 420px;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.zoom-on-hover {
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.05);
+}
+
+.description-text {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.nav-button {
+    position: absolute;
+    top: 15%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+}
+
+.arrow-icon {
+    /*width: 48px;
+    height: 48px;*/
+    width: 45px;
+    height: 45px;
+    margin-top: 1rem;
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1900px) {
+
+.arrow-icon {
+    /*width: 48px;
+    height: 48px;*/
+    width: 35px;
+    height: 35px;
+    margin-top: 0.8rem;
+    
+}
+
+
+}
+
+@media (max-width: 1024px) {
+    .carousel-slide {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .arrow-icon {
+        /*width: 23px !important;
+        height: 23px !important;*/
+        width: 36px !important;
+        height: 36px !important;
+        margin-top: 4rem;
+    }
+    .nav-button {
+        top: 8%;
+    }
+
+    .description-text {
+        text-align: left;
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .custom-card {
+        min-height: 440px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .arrow-icon {
+        /*width: 18px !important;
+        height: 18px !important;*/
+        width: 36px !important;
+        height: 36px !important;
+        /*margin-top: 0.1rem;*/
+        margin-top: 4.5rem;
+    }
+    .nav-button {
+        top: 6%;
+    }
+
+    .description-text {
+        font-size: 0.9rem;
+    }
+}

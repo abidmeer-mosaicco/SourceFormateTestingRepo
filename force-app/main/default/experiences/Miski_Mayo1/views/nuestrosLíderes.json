@@ -1,0 +1,154 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "26607114-9775-4b96-bad3-d9d91594508c",
+  "label" : "Nuestros Líderes",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "983dc307-62d5-4f79-914c-aa3727ad0293",
+          "columns" : [ {
+            "UUID" : "f1c54235-1747-4597-9c0f-482c84d0fd29",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "983dc307-62d5-4f79-914c-aa3727ad0293",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "3206bb13-49eb-4e80-93ba-30411bc57355",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f1c54235-1747-4597-9c0f-482c84d0fd29",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ca2f1276-f434-49ee-91ea-0f95cc540ae4",
+          "columns" : [ {
+            "UUID" : "34df4d5e-ee33-470f-a110-d38dc09f3037",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ca2f1276-f434-49ee-91ea-0f95cc540ae4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP1",
+            "textDescription" : "Pertenecemos al corporativo estadounidense Mosaic Company"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "0bd0554c-cbf0-487d-9774-a14a03d252c8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoOurLeadersCardsWithModal",
+          "id" : "9ea83d5b-b889-4fc8-915a-8b4cf12dfbb0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "34df4d5e-ee33-470f-a110-d38dc09f3037",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d7936315-a30c-489c-b713-938f71ce511f",
+          "columns" : [ {
+            "UUID" : "208755f6-b98e-49c4-b8e6-7d7afcb61986",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 113
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d7936315-a30c-489c-b713-938f71ce511f",
+      "regions" : [ {
+        "id" : "208755f6-b98e-49c4-b8e6-7d7afcb61986",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8bd997db-e48c-45c7-b505-3e6858e2b1f5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Nuestros Líderes"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "9baa1271-366f-4e14-9d9a-77beb9f6703b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2c646c7c-c4f3-48f2-8bfb-0b16641e9049",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-nuestros-lderes"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_PopulateAddressonLead</fullName>
+    <active>true</active>
+    <description>Restricts the users to update the status as Sales Qualified and Converted if the Address if Blank</description>
+    <errorConditionFormula>AND(
+     NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c), 
+     ISBLANK(Address),
+     ISCHANGED(Status),
+     OR(
+	 ISPICKVAL(Status,&apos;Sales Qualified&apos;),
+	 ISPICKVAL(Status,&apos;Converted&apos;)  
+       )	
+)</errorConditionFormula>
+    <errorMessage>Please ensure that this lead has an Address prior to marking the Lead Status as Sales Qualified or Converted</errorMessage>
+</ValidationRule>

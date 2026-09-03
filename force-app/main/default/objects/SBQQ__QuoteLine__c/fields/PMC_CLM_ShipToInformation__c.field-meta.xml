@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_ShipToInformation__c</fullName>
+    <description>This field is created to get the Ship To address information on the Line level - so that it can be shown in the amendment template</description>
+    <externalId>false</externalId>
+    <formula>PMC_CPQ_ShipTo__r.ShippingStreet + &apos;, &apos; + PMC_CPQ_ShipTo__r.ShippingCity + &apos;, &apos; +  PMC_CPQ_ShipTo__r.ShippingPostalCode + &apos;, &apos; + PMC_CPQ_ShipTo__r.ShippingState + &apos;, &apos; + PMC_CPQ_ShipTo__r.ShippingCountry</formula>
+    <label>Ship To Information</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

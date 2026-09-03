@@ -1,0 +1,40 @@
+<template>
+  <c-pmc_dh_custom-modal open-modal={isAddNewUserModal} modal-heading={labels.pmc_addNewUser_title} modal-width="500px"
+    onclosemodalevent={handleCloseNewUserModal}>
+    <div class="slds-grid slds-gutters slds-wrap m-content">
+      <template if:false={userData.boolIsUserExisting}>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="lbl-field-name">{labels.pmc_userDetails_firstName}</div>
+          <div class="lbl-field-value">{userData.strFirstName}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="lbl-field-name">{labels.pmc_userDetails_lastName}</div>
+          <div class="lbl-field-value">{userData.strLastName}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="lbl-field-name">{labels.pmc_userDetails_email}</div>
+          <div class="lbl-field-value">{userData.strEmail}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="lbl-field-name">{labels.pmc_addNewUser_phoneNumber}</div>
+          <div class="lbl-field-value">{userData.strPhoneNumber}</div>
+        </div>
+        <template if:false={boolIsSuperBuyerAuthorized}>
+          <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewUser_userType}
+              combobox-list-json={userData.lstUserType} data-id="lstUserType" parent-name="lstUserType"
+              default-value={pageObject.lstUserType} is-required
+              oninputdatachange={handleDataChange}></c-pmc_dh_selection-picklist>
+          </div>
+        </template>
+      </template>
+      <div class="slds-col slds-size_1-of-1 mobile-button">
+        <lightning-button variant="brand" label={labels.pmc_addNewUser_title} title={labels.pmc_addNewUser_title}
+          onclick={addNewUserHandler}></lightning-button>
+      </div>
+    </div>
+    <template if:true={isSpinner}>
+      <lightning-spinner variant="brand" size="small"></lightning-spinner>
+    </template>
+  </c-pmc_dh_custom-modal>
+</template>

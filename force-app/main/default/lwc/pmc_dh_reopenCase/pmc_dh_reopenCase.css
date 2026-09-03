@@ -1,0 +1,23 @@
+:host {
+  --sds-c-textarea-sizing-min-height: 110px;
+}
+.icon-button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.icon-button img {
+  cursor: pointer;
+}
+.btn-tooltip {
+  position: absolute;
+  top: -44px;
+  background: var(--primary-green);
+}
+.btn-tooltip .tooltip-text {
+  font-size: var(--x-small-font-size);
+}
+.mobile-button {
+  display: flex;
+  justify-content: flex-end;
+}

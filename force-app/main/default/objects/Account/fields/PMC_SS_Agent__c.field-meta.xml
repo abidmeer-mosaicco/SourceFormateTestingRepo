@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Agent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>What is the Agent related to this Account?</description>
+    <inlineHelpText>What is the Agent related to this Account?</inlineHelpText>
+    <label>Agent</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please select an Agent Account.</errorMessage>
+        <filterItems>
+            <field>Account.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>PMC_SS_Agent</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Customers</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWAPINAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AfterCreateUpdateContractFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>CheckRelatedAccountExists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if triggering account has a related Account</description>
+        <name>CheckRelatedAccountExists</name>
+        <label>Check Related Account Exists</label>
+        <locationX>440</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No Related Account</defaultConnectorLabel>
+        <rules>
+            <name>RelatedAccountExists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ModifyAccountLastInteractionDateUpdate</targetReference>
+            </connector>
+            <label>Related Account Exists</label>
+        </rules>
+    </decisions>
+    <description>Flow to modify related Account&apos;s Last Interaction Date whenever Contract is created or updated.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>BypassVRToggle</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Account.PMC_CPQ_FlowAccountVRByPassToggle__c}=true,false , true)</expression>
+    </formulas>
+    <interviewLabel>PMC SS After Create/Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS After Create/Update Contract Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWAPINAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Modify related Account&apos;s Last Interaction Date</description>
+        <name>ModifyAccountLastInteractionDateUpdate</name>
+        <label>Modify Account Last Interaction Date Update</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_CPQ_FlowAccountVRByPassToggle__c</field>
+            <value>
+                <elementReference>BypassVRToggle</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_LastInteractionDate__c</field>
+            <value>
+                <elementReference>$Record.LastModifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>Contract</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

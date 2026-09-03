@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Send an email alerts to Opportunity owners when the LastModifiedDate on opportunity is 5 days older than today.</description>
+        <name>Opportunity_Inactivity_Notification_Email_Action</name>
+        <label>Opportunity Inactivity Notification Email Action</label>
+        <locationX>176</locationX>
+        <locationY>516</locationY>
+        <actionName>Opportunity.PMC_SS_OpportunityInactivityEmailAlert</actionName>
+        <actionType>emailAlert</actionType>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.PMC_SS_OpportunityInactivityEmailAlert</nameSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Process switch custom setting value check to bypass flow.</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>SendInactivityNotificationDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Element to check if the opportunity last modified date was 5 days ago.</description>
+        <name>SendInactivityNotificationDecision</name>
+        <label>Send Inactivity Notification Decision</label>
+        <locationX>440</locationX>
+        <locationY>396</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SendInactivityNotificationDecision_InactiveFor5DaysOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strDaysSinceLastModifiedFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_OpportunityInactivityDuration</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opportunity_Inactivity_Notification_Email_Action</targetReference>
+            </connector>
+            <label>Inactive For 5 Days Outcome</label>
+        </rules>
+    </decisions>
+    <description>Scheduled flow to send email notification to Opportunity owners when the Last Modified Date is 5 days older than today.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>strDaysSinceLastModifiedFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT( 
+    FLOOR(
+         NOW() - {!$Record.LastModifiedDate}
+    ) 
+)</expression>
+    </formulas>
+    <interviewLabel>PMC SS Opportunity Inactivity Email Scheduler Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Opportunity Inactivity Email Scheduler Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>636</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>strFlowName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-05-04</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Current flows name</description>
+        <name>strFlowName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>PMC_SS_OpportunityInactivityEmailSchedulerFlow</stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_IssueReason__c</fullName>
+    <description>Specifies the reason of the issue</description>
+    <inlineHelpText>Contract Cancellation, Product request, Credit Request, Financial Solution and Anticipated Billing are for Brazil users ONLY...</inlineHelpText>
+    <label>Issue Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Issues</fullName>
+                <default>false</default>
+                <label>Account Issues</label>
+            </value>
+            <value>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+                <label>Amendment</label>
+            </value>
+            <value>
+                <fullName>Banking Edits</fullName>
+                <default>false</default>
+                <label>Banking Edits</label>
+            </value>
+            <value>
+                <fullName>Call by Date</fullName>
+                <default>false</default>
+                <label>Call by Date</label>
+            </value>
+            <value>
+                <fullName>Cambio Exhange</fullName>
+                <default>false</default>
+                <label>Cambio Exhange</label>
+            </value>
+            <value>
+                <fullName>Change to loading priorities</fullName>
+                <default>false</default>
+                <label>Change to loading priorities</label>
+            </value>
+            <value>
+                <fullName>COA Setup / Change</fullName>
+                <default>false</default>
+                <label>COA Setup / Change</label>
+            </value>
+            <value>
+                <fullName>Consignment</fullName>
+                <default>false</default>
+                <label>Consignment</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Contract Cancellation</label>
+            </value>
+            <value>
+                <fullName>Credit Note Request</fullName>
+                <default>false</default>
+                <label>Credit Note Request</label>
+            </value>
+            <value>
+                <fullName>Credit Request</fullName>
+                <default>false</default>
+                <label>Credit Request</label>
+            </value>
+            <value>
+                <fullName>Customer Issue</fullName>
+                <default>false</default>
+                <label>Customer Issue</label>
+            </value>
+            <value>
+                <fullName>Deactivation</fullName>
+                <default>false</default>
+                <label>Deactivation</label>
+            </value>
+            <value>
+                <fullName>Debit Note Request</fullName>
+                <default>false</default>
+                <label>Debit Note Request</label>
+            </value>
+            <value>
+                <fullName>Delivery Delay</fullName>
+                <default>false</default>
+                <label>Delivery Delay</label>
+            </value>
+            <value>
+                <fullName>Demurrage</fullName>
+                <default>false</default>
+                <label>Demurrage</label>
+            </value>
+            <value>
+                <fullName>Diversion</fullName>
+                <default>false</default>
+                <label>Diversion</label>
+            </value>
+            <value>
+                <fullName>Document Request</fullName>
+                <default>false</default>
+                <label>Document Request</label>
+            </value>
+            <value>
+                <fullName>Donation Order/Bonus</fullName>
+                <default>false</default>
+                <label>Donation Order/Bonus</label>
+            </value>
+            <value>
+                <fullName>Driver Verification/Change</fullName>
+                <default>false</default>
+                <label>Driver Verification/Change</label>
+            </value>
+            <value>
+                <fullName>Equipment Failure</fullName>
+                <default>false</default>
+                <label>Equipment Failure</label>
+            </value>
+            <value>
+                <fullName>Export Documentation</fullName>
+                <default>false</default>
+                <label>Export Documentation</label>
+            </value>
+            <value>
+                <fullName>Export prioritization</fullName>
+                <default>false</default>
+                <label>Export prioritization</label>
+            </value>
+            <value>
+                <fullName>Financial Solution</fullName>
+                <default>false</default>
+                <label>Financial Solution</label>
+            </value>
+            <value>
+                <fullName>IDOC Failures</fullName>
+                <default>false</default>
+                <label>IDOC Failures</label>
+            </value>
+            <value>
+                <fullName>Include Script CIF</fullName>
+                <default>false</default>
+                <label>Include Script CIF</label>
+            </value>
+            <value>
+                <fullName>Incorrect Destination</fullName>
+                <default>false</default>
+                <label>Incorrect Destination</label>
+            </value>
+            <value>
+                <fullName>Incorrect Label</fullName>
+                <default>false</default>
+                <label>Incorrect Label</label>
+            </value>
+            <value>
+                <fullName>Incorrect Product</fullName>
+                <default>false</default>
+                <label>Incorrect Product</label>
+            </value>
+            <value>
+                <fullName>Incorrect UOM</fullName>
+                <default>false</default>
+                <label>Incorrect UOM</label>
+            </value>
+            <value>
+                <fullName>Incorrect Vehicle ID</fullName>
+                <default>false</default>
+                <label>Incorrect Vehicle ID</label>
+            </value>
+            <value>
+                <fullName>IntelliTrans</fullName>
+                <default>false</default>
+                <label>IntelliTrans</label>
+            </value>
+            <value>
+                <fullName>Intercompany Sold To Change</fullName>
+                <default>false</default>
+                <label>Intercompany Sold To Change</label>
+            </value>
+            <value>
+                <fullName>Invoice Adjustments</fullName>
+                <default>false</default>
+                <label>Invoice Adjustments</label>
+            </value>
+            <value>
+                <fullName>Invoice Contact / Output</fullName>
+                <default>false</default>
+                <label>Invoice Contact / Output</label>
+            </value>
+            <value>
+                <fullName>Issue of Advance Invoicing (FA)</fullName>
+                <default>false</default>
+                <label>Issue of Advance Invoicing (FA)</label>
+            </value>
+            <value>
+                <fullName>Link Ship To to Sold To</fullName>
+                <default>false</default>
+                <label>Link Ship To to Sold To</label>
+            </value>
+            <value>
+                <fullName>Material Edits</fullName>
+                <default>false</default>
+                <label>Material Edits</label>
+            </value>
+            <value>
+                <fullName>Missing Cargo</fullName>
+                <default>false</default>
+                <label>Missing Cargo</label>
+            </value>
+            <value>
+                <fullName>Mode of transportation</fullName>
+                <default>false</default>
+                <label>Mode of transportation</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payment Edits</fullName>
+                <default>false</default>
+                <label>Payment Edits</label>
+            </value>
+            <value>
+                <fullName>Potash Discount</fullName>
+                <default>false</default>
+                <label>Potash Discount</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Product Concern</fullName>
+                <default>false</default>
+                <label>Product Concern</label>
+            </value>
+            <value>
+                <fullName>Product Request</fullName>
+                <default>false</default>
+                <label>Product Request</label>
+            </value>
+            <value>
+                <fullName>Rebate</fullName>
+                <default>false</default>
+                <label>Rebate</label>
+            </value>
+            <value>
+                <fullName>Reclaim rates (mechanical breakdown/lower than typical rates)</fullName>
+                <default>false</default>
+                <label>Reclaim rates (mechanical breakdown/lower than typical rates)</label>
+            </value>
+            <value>
+                <fullName>Route / Directions</fullName>
+                <default>false</default>
+                <label>Route / Directions</label>
+            </value>
+            <value>
+                <fullName>Sales order changes</fullName>
+                <default>false</default>
+                <label>Sales order changes</label>
+            </value>
+            <value>
+                <fullName>Sales Returns (SADM)</fullName>
+                <default>false</default>
+                <label>Sales Returns (SADM)</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Ship Date / Scheduling</fullName>
+                <default>false</default>
+                <label>Ship Date / Scheduling</label>
+            </value>
+            <value>
+                <fullName>Shipment Contact / Output</fullName>
+                <default>false</default>
+                <label>Shipment Contact / Output</label>
+            </value>
+            <value>
+                <fullName>Ship To Change</fullName>
+                <default>false</default>
+                <label>Ship To Change</label>
+            </value>
+            <value>
+                <fullName>Ship To Creation - Export</fullName>
+                <default>false</default>
+                <label>Ship To Creation - Export</label>
+            </value>
+            <value>
+                <fullName>Ship To Creation and GLN Linking</fullName>
+                <default>false</default>
+                <label>Ship To Creation and GLN Linking</label>
+            </value>
+            <value>
+                <fullName>Sold To Creation - Export</fullName>
+                <default>false</default>
+                <label>Sold To Creation - Export</label>
+            </value>
+            <value>
+                <fullName>Split sales order</fullName>
+                <default>false</default>
+                <label>Split sales order</label>
+            </value>
+            <value>
+                <fullName>Tax Update</fullName>
+                <default>false</default>
+                <label>Tax Update</label>
+            </value>
+            <value>
+                <fullName>Unblock Contract</fullName>
+                <default>false</default>
+                <label>Unblock Contract</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+            <value>
+                <fullName>Warehouse Update</fullName>
+                <default>false</default>
+                <label>Warehouse Update</label>
+            </value>
+            <value>
+                <fullName>Weight Discrepancy</fullName>
+                <default>false</default>
+                <label>Weight Discrepancy</label>
+            </value>
+            <value>
+                <fullName>Sold To Change</fullName>
+                <default>false</default>
+                <label>Sold To Change</label>
+            </value>
+            <value>
+                <fullName>Data Entry</fullName>
+                <default>false</default>
+                <label>Data Entry</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Stock Out / Plant Outage</fullName>
+                <default>false</default>
+                <label>Stock Out / Plant Outage</label>
+            </value>
+            <value>
+                <fullName>Article Request</fullName>
+                <default>false</default>
+                <label>Article Request</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SAM Quality</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAM Quality</controllingFieldValue>
+            <valueName>Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EDI</controllingFieldValue>
+            <valueName>Customer Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EDI</controllingFieldValue>
+            <valueName>IDOC Failures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EDI</controllingFieldValue>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <controllingFieldValue>Mosaic Direct</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Banking Edits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>COA Setup / Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Deactivation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Intercompany Sold To Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Invoice Contact / Output</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Link Ship To to Sold To</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Material Edits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Payment Edits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Potash Discount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Shipment Contact / Output</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Ship To Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Ship To Creation - Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Ship To Creation and GLN Linking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Sold To Creation - Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Tax Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Warehouse Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Master Data</controllingFieldValue>
+            <valueName>Sold To Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Credit Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Financial Solution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Data Entry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Stock Out / Plant Outage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Article Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invoice</controllingFieldValue>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Invoice Adjustments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Direct</controllingFieldValue>
+            <valueName>Account Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Direct</controllingFieldValue>
+            <valueName>Document Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Incorrect Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Incorrect Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Product Concern</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Product Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Weight Discrepancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Change to loading priorities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Delivery Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Demurrage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Diversion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Driver Verification/Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Equipment Failure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Export prioritization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Incorrect Destination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Incorrect UOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>IntelliTrans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Missing Cargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Mode of transportation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Reclaim rates (mechanical breakdown/lower than typical rates)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Route / Directions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Ship Date / Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shipping</controllingFieldValue>
+            <valueName>Warehouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Call by Date</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Cambio Exhange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Consignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Credit Note Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Debit Note Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Donation Order/Bonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Export Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Include Script CIF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Issue of Advance Invoicing (FA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Rebate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Sales order changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Sales Returns (SADM)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Split sales order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactions</controllingFieldValue>
+            <valueName>Unblock Contract</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

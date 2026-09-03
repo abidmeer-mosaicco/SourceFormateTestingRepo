@@ -1,0 +1,42 @@
+/* Forçar Arial em todo o LWC */
+:host {
+  font-family: "Arial", sans-serif !important;
+}
+
+.sf-form { max-width:1180px; margin:0 auto; }
+.top-alert { border-radius: .375rem; }
+
+.card {
+  background:#fff; border:1px solid var(--lwc-colorBorder,#e5e5e5);
+  border-radius:.75rem; padding:1rem 1.25rem; margin-bottom:1rem;
+  box-shadow:0 1px 2px rgba(0,0,0,.05);
+}
+.section-title { font-size:1rem; font-weight:700; margin-bottom:.75rem; }
+.grid { display:grid; gap:.75rem 1rem; }
+.grid.two { grid-template-columns:1fr 1fr; }
+.span2 { grid-column:1 / -1; }
+.kv { display:flex; flex-direction:column; padding-top:.25rem; }
+.kv-label { font-size:.75rem; color:var(--lwc-colorTextWeak,#6b6b6b); margin-bottom:.15rem; }
+.kv-value { font-weight:600; }
+
+/* Pills (chips) */
+.chip-row {
+  display:flex; flex-wrap:wrap; gap:.5rem;
+  padding:.25rem 0 .5rem 0;
+}
+.hint-text { color:var(--lwc-colorTextWeak,#6b6b6b); font-size:.85rem; }
+.mt-8 { margin-top:.5rem; }
+.mt-12 { margin-top:.75rem; }
+
+/* Mobile-first */
+@media (max-width: 900px) {
+  .grid.two { grid-template-columns: 1fr; }
+  .card { padding: .875rem 1rem; }
+  .sf-form lightning-dual-listbox { max-height: 360px; }
+}
+
+/* SLDS modal width */
+.slds-modal__container { max-width: 28rem; }
+@media (min-width: 480px) and (max-width: 900px) {
+  .slds-modal__container { max-width: 32rem; }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAQ</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Recommended_Compact_Layout</compactLayoutAssignment>
+    <description>Quick answers to general questions about day-to-day operations.</description>
+    <label>FAQ</label>
+    <picklistValues>
+        <picklist>PMC_SS_Region__c</picklist>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

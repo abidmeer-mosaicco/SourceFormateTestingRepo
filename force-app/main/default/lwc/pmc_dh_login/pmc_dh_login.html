@@ -1,0 +1,48 @@
+<template>
+  <div class="slds-p-vertical_xx-large slds-p-top_none align-center-mobile">
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_7-of-12 slds-large-size_8-of-12"></div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_4-of-12">
+        <div class="login-widget">
+          <lightning-card title="">
+            <form onkeydown={handleKeyDown}>
+              <div class="slds-var-m-around_medium">
+                <div class="slds-m-around_medium">
+                  <div class="title">{labels.pmc_login_title}</div>
+                </div>
+                <div class="slds-m-around_medium">
+                  <c-pmc_dh_input-element text-label={labels.pmc_login_userName} data-id="userName"
+                    parent-name="userName" default-value={loginObject.userName} oninputdatachange={handleDataChange}
+                    is-required></c-pmc_dh_input-element>
+                </div>
+                <div class="slds-m-around_medium">
+                  <c-pmc_dh_input-element type="password" text-label={labels.pmc_login_password} data-id="password"
+                    parent-name="password" default-value={loginObject.password} oninputdatachange={handleDataChange}
+                    is-required></c-pmc_dh_input-element>
+                  <div class="slds-text-align_right"></div>
+                  <template if:true={formErrorMessage}>
+                    <div class="form-error">{formErrorMessage}</div>
+                  </template>
+                  <div class="slds-text-align_right slds-m-top_medium"><a data-name="forgotpassword"
+                      onclick={handleNavigation} class="anchor-link">{labels.pmc_login_forgotPassword}</a></div>
+                </div>
+                <div class="slds-m-around_medium">
+                  <lightning-button variant="brand" label={labels.pmc_login_text} title={labels.pmc_login_text} stretch
+                    onclick={loginHandler}></lightning-button>
+                </div>
+                <div class="slds-m-around_medium">
+                  <p class="slds-m-bottom_x-large slds-text-align_center account-info-text">
+                    {labels.pmc_login_newToDigitalHub} <a data-name="selfregister" onclick={handleNavigation}
+                      class="anchor-link">{labels.pmc_login_registerNow}</a></p>
+                </div>
+              </div>
+              <template if:true={isSpinner}>
+                <lightning-spinner variant="brand" size="medium" class="widget-spinner"></lightning-spinner>
+              </template>
+            </form>
+          </lightning-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

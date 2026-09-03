@@ -1,0 +1,92 @@
+<template>
+  <div class="slds-scrollable_x slds-p-vertical_medium slds-p-horizontal_xxx-small slds-m-bottom_medium" tabindex="0">
+    <table class="tbl-container slds-table slds-table_cell-buffer slds-table_bordered">
+      <!-- Table Header -->
+      <thead>
+        <tr class="slds-line-height_reset">
+          <th for:each={_columns} for:item="column" key={column.fieldName} scope="col">
+            <div class="slds-grid slds-grid_vertical-align-center">
+              <span class="tbl-column-data" title={column.label}>
+                {column.label}
+              </span>
+              <template if:true={column.sortable}>
+                <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0"
+                  onclick={doSorting} name={column.fieldName}>
+                  <template if:true={column.isAscSort}>
+                    <lightning-icon icon-name="utility:arrowup" size="x-small" class="slds-icon"
+                      alternative-text={labels.pmc_sorting_ascSort}>
+                    </lightning-icon>
+                  </template>
+                  <template if:false={column.isAscSort}>
+                    <lightning-icon icon-name="utility:arrowdown" size="x-small" class="slds-icon"
+                      alternative-text={labels.pmc_sorting_descSort}>
+                    </lightning-icon>
+                  </template>
+                </a>
+              </template>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <!-- Table Data -->
+      <tbody>
+        <tr class="slds-hint-parent" for:each={records} for:item="record" key={record.loopId} data-disabled={record.isDisabled}>
+          <template for:each={record.data} for:item="data">
+            <!-- If column type is text -->
+            <td if:true={data.istext} key={data.field} data-label={data.field} class={data.cellAttributes.class}>
+              <span class="tbl-column-data" title={data.value}>
+                {data.value}
+              </span>
+            </td>
+            <!-- If column type is dynamiclink -->
+            <td if:true={data.isdynamiclink} key={data.field} data-label={data.field}>
+              <span class="tbl-column-data" title={data.value}>
+                <a class="dynamic-link" data-id={record.id} onclick={handleDynamicLinkclick}>{data.value}</a>
+              </span>
+            </td>
+            <!-- If column type is phone -->
+            <td if:true={data.isphone} key={data.field} data-label={data.field}>
+              <span class="tbl-column-data" title={data.value}>
+                {data.value}
+              </span>
+            </td>
+            <!-- If column type is badge -->
+            <td if:true={data.isbadge} key={data.field} data-label={data.field} class={data.cellAttributes.class}>
+              <template if:true={data.value}>
+                <lightning-badge label={data.value} class={data.typeAttributes.variant}
+                  icon-name={data.typeAttributes.iconName} icon-position={data.typeAttributes.position}
+                  icon-alternative-text={data.typeAttributes.tooltipTxt}>
+                </lightning-badge>
+              </template>
+            </td>
+            <!-- If column type is link -->
+            <td if:true={data.islink} key={data.field} data-label={data.field}>
+              <span title={data.typeAttributes.rowActionName}>
+                <a data-id={record.id} onclick={handleOnclick}>{data.typeAttributes.rowActionName}</a>
+              </span>
+            </td>
+            <!-- If column type is checkbox -->
+            <td if:true={data.ischeckbox} key={data.field} data-label={data.field}>
+              <lightning-input data-id={record.id} onclick={handleOnclick} type="checkbox" checked={data.value}
+               disabled={record.isDisabled} onchange={handleChangeCheckbox}>
+              </lightning-input>
+            </td>
+            <!-- If column type is action -->
+            <td if:true={data.isaction} key={data.field} data-label={data.field} class={data.cellAttributes.class}>
+              <lightning-button-menu class="tbl-action-menu" menu-alignment={data.typeAttributes.menuAlignment}
+                icon-name={data.typeAttributes.iconName} icon-size={data.typeAttributes.iconSize}
+                alternative-text={labels.pmc_datatable_rowActions} title={labels.pmc_datatable_rowActions}
+                variant={data.typeAttributes.variant} data-id={record.id} onselect={handleOnselect}>
+                <template for:each={data.typeAttributes.rowActions} for:item="action">
+                  <lightning-menu-item class="tbl-action-menu-item" key={action.value} value={action.value}
+                    label={action.label}>
+                  </lightning-menu-item>
+                </template>
+              </lightning-button-menu>
+            </td>
+          </template>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>

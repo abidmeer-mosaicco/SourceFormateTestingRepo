@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- PersonalInfo_EPIM --></label>
+        <name>PersonalInfo_EPIM</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Copado License Manager --></label>
+        <name>copado__License_Manager</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage>O usuário que você selecionou já está fora do escritório. Selecione outro usuário para delegar.</errorMessage>
+        <name>PMC_SS_DelegatedUserOOORule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Insira a data de início e a data de término do Out Off Office ao inserir o usuário delegado</errorMessage>
+        <name>PMC_SS_EnterDatesForOutOfOffice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Digite o usuário delegado ao inserir a data de início e a data de término do expediente.</errorMessage>
+        <name>PMC_SS_EnterDelegateUser</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Preencha os campos obrigatórios, número do celular, ID da federação e região de vendas para salvar o registro.&quot;</errorMessage>
+        <name>PMC_SS_MandatoryUserFields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A data anterior não pode ser selecionada como uma data de início fora do expediente</errorMessage>
+        <name>PMC_SS_OOOStartDateGreaterOrEqualToToday</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A data de início da ausência temporária não pode ser posterior à data de término da ausência temporária</errorMessage>
+        <name>PMC_SS_OOOStartDateIsGreaterThanEndDate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Select_Theme --></label>
+        <name>SBQQ__Select_Theme</name>
+    </webLinks>
+</CustomObjectTranslation>

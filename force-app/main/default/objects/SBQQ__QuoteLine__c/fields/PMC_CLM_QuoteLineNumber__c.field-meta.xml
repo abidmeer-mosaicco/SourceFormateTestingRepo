@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_QuoteLineNumber__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF	(
+	TEXT(SBQQ__Quote__r.SBQQ__Type__c) &lt;&gt; &apos;Amendment&apos;,
+		SBQQ__Quote__r.PMC_CLM_DocumentNumber__c &amp; &quot;-&quot; &amp; SUBSTITUTE(Name,&quot;QL-&quot;,&quot;&quot;),
+		IF	(
+				ISNULL(SBQQ__UpgradedSubscription__c) ||  ISBLANK(SBQQ__UpgradedSubscription__c),
+				SBQQ__Quote__r.SBQQ__Opportunity2__r.SBQQ__AmendedContract__r.SBQQ__Quote__r.PMC_CLM_DocumentNumber__c &amp; &quot;-&quot; &amp; SUBSTITUTE(Name,&quot;QL-&quot;,&quot;&quot;),
+				SBQQ__UpgradedSubscription__r.SBQQ__QuoteLine__r.SBQQ__Quote__r.PMC_CLM_DocumentNumber__c &amp; &quot;-&quot; &amp; SUBSTITUTE(SBQQ__UpgradedSubscription__r.SBQQ__QuoteLine__r.Name ,&quot;QL-&quot;,&quot;&quot;) 	
+			)
+	)</formula>
+    <label>Quote Line Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

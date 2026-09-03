@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ContractCancellation__c</fullName>
+    <label>Contract Cancellation Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancellation Due to Customer Death</fullName>
+                <default>false</default>
+                <label>Cancellation Due to Customer Death</label>
+            </value>
+            <value>
+                <fullName>Commercial Input Error</fullName>
+                <default>false</default>
+                <label>Commercial Input Error</label>
+            </value>
+            <value>
+                <fullName>Contract Inactivation</fullName>
+                <default>false</default>
+                <label>Contract Inactivation</label>
+            </value>
+            <value>
+                <fullName>Customer Cancellation</fullName>
+                <default>false</default>
+                <label>Customer Cancellation</label>
+            </value>
+            <value>
+                <fullName>Expired Contract without Payment</fullName>
+                <default>false</default>
+                <label>Expired Contract without Payment</label>
+            </value>
+            <value>
+                <fullName>Insufficient Loading Balance</fullName>
+                <default>false</default>
+                <label>Insufficient Loading Balance</label>
+            </value>
+            <value>
+                <fullName>Mosaic’s Failure</fullName>
+                <default>false</default>
+                <label>Mosaic’s Failure</label>
+            </value>
+            <value>
+                <fullName>No Digital Signature &gt; 15 Days</fullName>
+                <default>false</default>
+                <label>No Digital Signature &gt; 15 Days</label>
+            </value>
+            <value>
+                <fullName>Rejection via Workflow</fullName>
+                <default>false</default>
+                <label>Rejection via Workflow</label>
+            </value>
+            <value>
+                <fullName>Unapproved Credit Limit</fullName>
+                <default>false</default>
+                <label>Unapproved Credit Limit</label>
+            </value>
+            <value>
+                <fullName>Volume Reduction Due to Agronomic Adjustment</fullName>
+                <default>false</default>
+                <label>Volume Reduction Due to Agronomic Adjustment</label>
+            </value>
+            <value>
+                <fullName>Balance Return to Master Contract</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Balance Return to Master Contract</label>
+            </value>
+            <value>
+                <fullName>No Physical Signature &gt; 40 Days</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Physical Signature &gt; 40 Days</label>
+            </value>
+            <value>
+                <fullName>Unpaid Expired Contracts &gt; 15 Days</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unpaid Expired Contracts &gt; 15 Days</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

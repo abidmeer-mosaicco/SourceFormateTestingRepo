@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForProductManagerInternal</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Provide View All  Access for Product Managers (Internal Users)</description>
+        <label>R Access for Product Manager Internal</label>
+        <sharedTo>
+            <group>PMC_SS_ProductManagerAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForProductManagerPartner</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Provide View All Access for Product Managers (Partner Users)</description>
+        <label>R Access for Product Manager Partner</label>
+        <sharedTo>
+            <group>PMC_SS_ProductManagerAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForSSRInternal</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Provide View All, Edit All Access for SSRs (Internal Users)</description>
+        <label>R Access for SSR Internal</label>
+        <sharedTo>
+            <group>PMC_SS_SSRAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForSSRPartner</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Provide View All Access for SSRs (PartnerUsers)</description>
+        <label>R Access for SSR Partner</label>
+        <sharedTo>
+            <group>PMC_SS_SSRAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSAInternal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Provide View All, Edit All Access for SSAs (Internal Users)</description>
+        <label>RW Access for SSA Internal</label>
+        <sharedTo>
+            <group>PMC_SS_SSAAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSAPartner</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Provide View All, Edit All Access for SSAs (Partner Users)</description>
+        <label>RW Access for SSA Partner</label>
+        <sharedTo>
+            <group>PMC_SS_SSAAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforNASalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in NA Sales Manager role to other NA Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for NA Sales Manager</label>
+        <sharedTo>
+            <role>PMC_NA_SalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_NA_SalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforNASalesTeam</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in NA Sales Team role to other NA Sales Team with Read Edit Access</description>
+        <label>Read Edit Access for NA Sales Team</label>
+        <sharedTo>
+            <role>PMC_NA_SalesTeam</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_NA_SalesTeam</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforNATechnicalSalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in NA Technical Sales Manager role to other NA Technical Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for NA Technical Sales Manager</label>
+        <sharedTo>
+            <role>PMC_NA_TechnicalSalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_NA_TechnicalSalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2BSalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2B Sales Manager role to other SA B2B Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for SA B2B Sales Manager</label>
+        <sharedTo>
+            <role>PMC_SA_B2BSalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2BSalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2BSalesTeam</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2B Sales Team role to other SA B2B Sales Team with Read Edit Access</description>
+        <label>Read Edit Access for SA B2B Sales Team</label>
+        <sharedTo>
+            <role>PMC_SA_B2BSalesTeam</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2BSalesTeam</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2BTechnicalSalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2B Technical Sales Manager role to other SA B2B Technical Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for SA B2B Technical Sales Manager</label>
+        <sharedTo>
+            <role>PMC_SA_B2BTechnicalSalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2BTechnicalSalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2CSalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2C Sales Manager role to other SA B2C Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for SA B2C Sales Manager</label>
+        <sharedTo>
+            <role>PMC_SA_B2CSalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2CSalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2CSalesTeam</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2C Sales Team role to other SA B2C Sales Team with Read Edit Access</description>
+        <label>Read Edit Access for SA B2C Sales Team</label>
+        <sharedTo>
+            <role>PMC_SA_B2CSalesTeam</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2CSalesTeam</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_ReadEditAccessforSAB2CTechnicalSalesManager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This rules Shares the Sales Agreement records created by users in SA B2C Technical Sales Manager role to other SA B2C Technical Sales Manager with Read Edit Access</description>
+        <label>Read Edit Access for SA B2C Technical Sales Manager</label>
+        <sharedTo>
+            <role>PMC_SA_B2CTechnicalSalesManager</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PMC_SA_B2CTechnicalSalesManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

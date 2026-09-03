@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SoldToAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup field on the Ship-to Account that is looking up to the Sold-to Account</description>
+    <inlineHelpText>Provide the Sold-to customer for linking</inlineHelpText>
+    <label>Sold-to partner related</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Sold-to</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Sold-to partner related</relationshipLabel>
+    <relationshipName>Shipto_Sold</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

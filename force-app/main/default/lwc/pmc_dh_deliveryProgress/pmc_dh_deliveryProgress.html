@@ -1,0 +1,21 @@
+<template>
+    <div class="custom-card delivery-prog-card">
+        <div class="card-header">{labels.pmc_deliveryTracking_deliveryProgress}</div>
+        <div class="card-body delivery-prog-card-body">
+            <template iterator:deldata={deliveryProgress}>
+                <div key={deldata.value.datDeliveryStep} class="delivery-data-cont">
+                    <img src={iconUrl} alt="rect-img" class="rect-box">
+                    <div class="vertical-line"></div>
+                    <div>
+                        <div class="date-container">
+                            <div class="text-medium-normal date-time">{deldata.value.datDeliveryStep}</div>
+                            <div lwc:if={deldata.first} class="current-pill text-regular-normal">
+                                {labels.pmc_deliveryTracking_current}</div>
+                        </div>
+                        <div class="delivery-details">{deldata.value.strDeliveryDetailsInfo}</div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

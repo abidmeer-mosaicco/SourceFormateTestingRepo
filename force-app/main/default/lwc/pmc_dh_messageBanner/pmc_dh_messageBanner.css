@@ -1,0 +1,20 @@
+.hyperlink{
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: var(--medium-font);
+}
+
+@media (min-width: 768px) and (max-width: 1749px) {
+    .banner-cont {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--large-font-size);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-cont {
+      font-size: var(--x-small-font-size);
+    }
+}

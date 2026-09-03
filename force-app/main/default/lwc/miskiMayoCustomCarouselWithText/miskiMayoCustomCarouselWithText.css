@@ -1,0 +1,130 @@
+.container {
+    margin: auto;
+}
+
+.image-width { 
+    
+    width: 100%;
+    z-index: -99999!important;
+ }
+
+/* Text over image */
+.text-section {
+    position: absolute;
+    width: fit-content;
+    max-width: 95%;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #5c0303a1;
+    border-radius: 0.625rem;
+    padding: 0.625rem 1rem;
+    z-index: 10;
+}
+.text-heading {
+    font-family: 'Gentona Book', sans-serif;
+    color: #fff !important;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+@media screen and (min-width: 1030px) and (max-width: 1600px) {
+
+    .image-width { 
+        margin-top:-0.3rem!important;
+ }
+    
+
+}
+
+/* --------- DESKTOP SETTINGS --------- */
+@media (min-width: 1064px) {
+    .prev, .next { font-size: 2rem; }
+}
+
+/* --------- TABLETS --------- */
+@media screen and (max-width: 1024px) {
+    .text-section { bottom: 2rem; padding: 0.5rem 0.8rem; }
+    .text-heading { font-size: 1rem; line-height: 1.8rem; }
+}
+
+/* --------- MOBILE (mobile only) ---------
+Objective: Taller (vertical) and full-width image; larger text. */
+@media screen and (max-width: 600px) {
+
+    .image-width { 
+            margin-top:-0.8rem!important;
+            padding:0rem!important;
+            min-width:150%!important;   
+            margin-left:-3rem!important;
+    }
+
+    .text-section {
+        bottom: 0.4rem;
+        /*padding: 0.3rem 0.6rem;*/
+        padding: 0.1rem 0.3rem;
+        margin-bottom: 1.6rem;
+
+    }
+
+    .text-heading {
+        /*font-size: 0.95rem;
+        line-height: 1.1rem;*/
+        /*font-size: 0.3rem;*/
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        color: #fff !important;
+    }
+    .prev, .next {
+        /*padding: .6rem; */
+        /*padding-bottom: 24rem;*/
+        margin-top:-3rem;
+    }
+}
+
+/* animations */
+.fade-in-text { animation: fadeInUp 1s ease-in forwards; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    user-select: none;
+}
+.next { right: 0; border-radius: 0 0.1875rem 0.1875rem 0; }
+.prev:hover, .next:hover { background: rgba(0, 0, 0, 0.8); }
+
+.slideNumbers {
+    font-size: 0.75rem;
+    position: absolute;
+    padding: 0.5rem 0.75rem;
+    top: 0;
+    color: #f2f2f2;
+}
+
+.dot {
+    height: 0.9375rem;
+    width: 0.9375rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #bbb;
+    margin: 0 0.125rem;
+    display: inline-block;
+}
+.active, .dot:hover { background-color: #717171; }
+
+.fade { animation-name: fade; animation-duration: 1.5s; }
+@keyframes fade { from {opacity:.4;} to {opacity:1;} }
+
+.zoom-on-load { animation: zoomIn 4s ease forwards; transform-origin: center; }
+@keyframes zoomIn { from{transform:scale(1);} to{transform:scale(1.05);} }

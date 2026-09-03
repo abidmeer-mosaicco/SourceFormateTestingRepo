@@ -1,0 +1,24 @@
+<template>
+  <template if:true={isSearchBar}>
+    <div class="search-container">
+      <lightning-input label="search" variant="label-hidden" type="text" class="search"
+        placeholder={labels.pmc_searchBar_search} value={searchTerm} onkeydown={handleSearchTermKeyDown}
+        onchange={search}></lightning-input>
+      <lightning-button-icon icon-name="utility:search" variant="bare" alternative-text={labels.pmc_searchBar_search}
+        title={labels.pmc_searchBar_search} onclick={handleSearchChange}></lightning-button-icon>
+      <div class="search-dropdown" if:true={_isSearchFlyout}>
+        <div class="search-dropdown-box">
+          <ul class="search-dropdown__list">
+            <p class="product-suggestions-text">{labels.pmc_searchBar_productSuggestionsText}</p>
+            <template for:each={_searchResults} for:item="item">
+              <li class="search-dropdown__item" data-product-val={item.element.strProductValue} key={item.id}
+                onclick={handleSearchFlyoutChange} tabindex="0" onkeydown={searchFlyoutKeypressHandler}>
+                {item.element.strProductValue}
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </template>
+</template>

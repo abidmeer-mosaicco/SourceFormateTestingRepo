@@ -1,0 +1,42 @@
+<apex:component controller="PMC_SS_Case_AA_EmailTemplate_ctrl" access="global">
+    <apex:attribute name="cseId" type="Id" assignTo="{!caseId}" description="Case ID to load"/>
+    <apex:attribute name="apprvalId" type="Id" assignTo="{!approvalId}" description="Approval ID to load"/>
+    
+    <html>
+    <body>
+        <p>Hello {!approvalRecord.Owner.Name},</p>
+        
+        <p>The Cancel/Rebill case that you have submitted for <strong>{!caseRecord.Account.Name}</strong> has been rejected.</p>
+
+        <p>Please review the below details for details on the case, as well as the reason why it was rejected.</p>
+
+        <h3><u>Case Details:</u></h3>
+        
+        <table border="1px" style="width:100%; border-collapse:collapse;">
+            <tr>
+               <th>Case ID</th>
+               <th>Customer Name</th>
+               <th>Case Subject</th>
+               <th>Rejection Date</th>
+               <th>Rejected By</th>
+               <th>Reason for Rejection</th>
+            </tr>
+            <tr>
+                <td>{!caseRecord.CaseNumber}</td>
+                <td>{!caseRecord.Account.Name}</td>
+                <td>{!caseRecord.Subject}</td>
+                <td>{!approvalRecord.LastModifiedDate}</td>
+                <td>{!approvalRecord.sbaa__RejectedBy__r.Name}</td>
+                <td>{!approvalRecord.sbaa__CommentsLong__c}</td>
+            </tr>
+        </table>
+
+        <p>To proceed further, please update your case directly in Salesforce, based on the details provided in the <strong>Reason for Rejection</strong>, and if applicable, resubmit the case for approval.</p>
+
+        <p>Click <a href="{!caseLink}" target="_blank">here</a> to view the case.</p>
+
+        <p>Thank you,<br/>
+        {!approvalRecord.sbaa__RejectedBy__r.Name}</p>
+    </body>
+    </html>
+</apex:component>

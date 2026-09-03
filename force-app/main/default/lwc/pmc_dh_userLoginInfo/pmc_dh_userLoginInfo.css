@@ -1,0 +1,36 @@
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px;
+}
+
+.custom-card {
+  filter: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-bottom: 0;
+}
+.custom-card .card-body {
+  padding: 16px 0 8px;
+  border-width: 0px 2px 0px 2px;
+  border-style: solid;
+  border-color: var(--tertiary-grey);
+}
+.login-info-container {
+  padding-top: 25px;
+  margin-bottom: -16px;
+}
+
+@media (max-width: 767px) {
+  .login-info-container {
+    padding-top: 0;
+  }
+  .custom-card {
+    margin: 0;
+  }
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

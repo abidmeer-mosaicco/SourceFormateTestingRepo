@@ -1,0 +1,129 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4049a256-6cf0-4d79-8d35-48dafa63f217",
+  "label" : "Danos a conocer tu empresa",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5c06ae34-7582-4212-9d94-48eaab37371e",
+          "columns" : [ {
+            "UUID" : "42f38067-4de7-45e9-b92b-a49fd53e727f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5c06ae34-7582-4212-9d94-48eaab37371e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "7b945826-c327-4585-ab05-bc1ebe1dd22a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "42f38067-4de7-45e9-b92b-a49fd53e727f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "7ea1ef83-ff31-4b36-8d78-aae47238ee6a",
+          "columns" : [ {
+            "UUID" : "9d1454ef-c137-40c8-84a8-e73e9ce9b098",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7dc49e38-c9c5-4888-8e4c-63b0f3ef3c93",
+            "columnKey" : "5e4df",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7ea1ef83-ff31-4b36-8d78-aae47238ee6a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1><strong style=\"color: rgb(230, 0, 0); font-size: 26px;\">Danos a Conocer Tu Empresa</strong></h1><p>&nbsp;</p><p><span style=\"font-size: 18px; color: rgb(102, 102, 102);\">Estimado proveedor, con la finalidad de poder conocer tus servicios te solicitamos ingresar al siguiente link donde podrás registrar la información de tu empresa.</span></p><p><br></p><p><span style=\"font-size: 18px; color: rgb(102, 102, 102);\">De esta manera nos permitirás tener conocimiento del alcance de tus servicios y evaluar -cuando sea necesario- la posibilidad de invitarte a participar de futuros procesos de licitación.</span></p><p><br></p><p><span style=\"font-size: 18px; color: rgb(102, 102, 102);\">Haz click aquí&nbsp;</span><a href=\"https://forms.gle/8UrHoykJmdpidmyT9\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"font-size: 18px; color: rgb(193, 106, 16);\">Formato de registro</a></p><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a34898dd-0761-43c5-98d7-dac5089dcbfb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9d1454ef-c137-40c8-84a8-e73e9ce9b098",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.PLANTA_CONCENTRADORA_ALMACEN_DIA1.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "79a83ae6-25d8-42bd-985b-2d091445c51f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7dc49e38-c9c5-4888-8e4c-63b0f3ef3c93",
+        "regionLabel" : "Column 2",
+        "regionName" : "5e4df",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1e0c2a4b-5ce5-44bf-bcba-0c0afc9eadc9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Danos a conocer tu empresa"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dff45888-2393-4cf5-b01d-f55e44175de4",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fdf1be79-01e7-49b9-a043-6d8c4e05dc44",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-danos-a-conocer-tu-empresa"
+}

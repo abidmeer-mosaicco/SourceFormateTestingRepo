@@ -1,0 +1,169 @@
+<template>
+  <div class="slds-m-top_large">
+    <c-pmc_dh_message-banner type="info" message={labels.pmc_quoteCheckoutFlow_createNewAddress}>
+    </c-pmc_dh_message-banner>
+  </div>
+
+  <template if:true={isPageLoaded}>
+    <template if:true={productInfoArray.length}>
+      <div class="custom-card scrollable-container" tabindex="0">
+        <div class="card-header">{labels.pmc_quoteCheckoutFlow_deliveryInformation}</div>
+        <div class="card-body">
+          <template for:each={productInfoArray} for:item="product" for:index="indexProduct">
+            <div class="label-section slds-p-top_medium" key={product.strProductId}>
+              <div class="product-col">
+                {labels.pmc_quoteCheckoutFlow_products}
+              </div>
+              <div class="unit-col slds-border_right">
+                {labels.pmc_requestForQuote_unit}
+              </div>
+              <div class="shipment-col slds-m-left_medium">
+                <div class="quantity-col">
+                  {labels.pmc_quoteCheckoutFlow_quantity}
+                </div>
+                <div class="ship-col">
+                  {labels.pmc_quoteCheckoutFlow_shipTo}
+                </div>
+                <div class="incoterms-col">
+                  {labels.pmc_quoteCheckoutFlow_incoterms}
+                </div>
+                <div class="delivery-col">
+                  {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                </div>
+                <div class="ship-col">
+                  {labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                </div>
+                <template if:true={isLocationBrazil}>
+                  <div class="pack-col">
+                    {labels.pmc_requestForQuote_packType}
+                  </div>
+                </template>
+              </div>
+            </div>
+            <div class="details-section" data-product-index={indexProduct} key={product.strProductId}>
+              <div class="product-col slds-p-top_medium">
+                <div class="product-image">
+                  <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                </div>
+                <div class="product-info">
+                  <div class="product-name">
+                    <a href={product.href} target="_self"> {product.strProductName}</a>
+                  </div>
+                  <div class="product-sku">{product.strSku}</div>
+                  <div class="total-quantity slds-m-top_medium">
+                    {labels.pmc_quoteCheckoutFlow_totalQuantity}&nbsp;{product.strTotalQty}&nbsp;{labels.pmc_quoteCheckoutFlow_tons}
+                  </div>
+                </div>
+              </div>
+              <div class="unit-col slds-border_right">
+                <c-pmc_dh_selection-picklist text-label={labels.pmc_requestForQuote_unit}
+                  combobox-list-json={product.lstProductUOM} data-id="strProductUOM"
+                  default-value={product.strProductUOM} is-required data-product-index={indexProduct}
+                  parent-name="strProductUOM" data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                </c-pmc_dh_selection-picklist>
+              </div>
+              <div class="shipment-col slds-p-top_medium slds-m-left_medium">
+                <template for:each={product.lstCartItems} for:item="item" for:index="indexShipment">
+                  <div class="shipment-fields" key={item.strCartItemId}>
+                    <div class="shipment-item quantity-col">
+                      <lightning-input label={labels.pmc_quoteCheckoutFlow_quantity} variant="label-hidden"
+                        data-id="strQuantity" value={item.strQuantity} onkeyup={handleKeyUp}
+                        placeholder={labels.pmc_quoteCheckoutFlow_enterQuantity} data-product-index={indexProduct}
+                        max-length=10 data-value={item.strQuantity} data-shipment-index={indexShipment}
+                        onchange={handleDataChange}>
+                      </lightning-input>
+                    </div>
+                    <div class="shipment-item ship-col">
+                      <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_shipTo}
+                        combobox-list-json={product.lstShipTo} data-id="strShipTo" default-value={item.strShipTo}
+                        is-required data-product-index={indexProduct} parent-name="strShipTo"
+                        data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_selection-picklist>
+                    </div>
+                    <div class="shipment-item incoterms-col">
+                      <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_incoterms}
+                        combobox-list-json={product.lstIncoterms} is-disabled={item.isIncotermsDisabled}
+                        data-id="strIncoterms" default-value={item.strIncoterms} is-required
+                        data-product-index={indexProduct} parent-name="strIncoterms" data-shipment-index={indexShipment}
+                        oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_selection-picklist>
+                    </div>
+                    <div class="shipment-item delivery-col">
+                      <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_deliveryMode}
+                        combobox-list-json={item.lstDeliveryModes} is-disabled={item.isDeliveryModeDisabled}
+                        data-id="strDeliveryMode" default-value={item.strDeliveryMode} is-required
+                        data-product-index={indexProduct} parent-name="strDeliveryMode"
+                        data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_selection-picklist>
+                    </div>
+                    <div class="shipment-item ship-col">
+                      <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                        combobox-list-json={product.lstShipFrom} is-disabled={item.isShipFromDisabled}
+                        data-id="strShipFrom" default-value={item.strShipFrom} is-required
+                        data-product-index={indexProduct} parent-name="strShipFrom" data-shipment-index={indexShipment}
+                        oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_selection-picklist>
+                    </div>
+                    <template if:true={isLocationBrazil}>
+                      <div class="shipment-item pack-col">
+                        <c-pmc_dh_selection-picklist text-label={labels.pmc_requestForQuote_packType}
+                          combobox-list-json={product.lstPackType} is-disabled={item.isPackTypeDisabled}
+                          data-id="strPackType" default-value={item.strPackType} is-required
+                          data-product-index={indexProduct} parent-name="strPackType"
+                          data-shipment-index={indexShipment} oninputdatachange={handleDataChange}>
+                        </c-pmc_dh_selection-picklist>
+                      </div>
+                    </template>
+                    <div class="shipment-item">
+                      <div class="icon-wrapper">
+                        <a onclick={deleteShipment} data-product-index={indexProduct}
+                          data-shipment-index={indexShipment} data-cart-id={item.strCartItemId}><img
+                            src={iconUrlObj.deleteIconUrl} alt={labels.pmc_accountDetails_delete} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+
+                <template lwc:if={product.isDuplicate}>
+                  <div class="slds-p-left--medium slds-p-bottom--x-small shipment-line-error">
+                    {labels.pmc_quoteCheckoutFlow_duplicateProductsMessage}
+                  </div>
+                </template>
+
+                <div class="add-shipment">
+                  <a onclick={addShipment}
+                    data-product-index={indexProduct}>{labels.pmc_quoteCheckoutFlow_addNewShip}</a>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <div class="mobile-button slds-m-bottom_large">
+        <lightning-button variant="brand" label={labels.pmc_quoteCheckoutFlow_proceed} disabled={isProceedDisabled}
+          onclick={proceedButtonHandler}></lightning-button>
+      </div>
+    </template>
+
+    <template if:false={productInfoArray.length}>
+      <div class="custom-card">
+        <div class="card-header">
+          {labels.pmc_quoteCheckoutFlow_deliveryInformation}
+        </div>
+        <div class="card-body">
+          <div class="slds-p-horizontal_medium no-product">
+            <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_quoteCheckoutFlow_noProductsMessage}>
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+      </div>
+    </template>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+
+</template>

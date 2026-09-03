@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>PMC SS Case Assignment Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>PMC_SS_MasterDataTeam</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND (3 OR 4) AND (5 OR 6 OR 7)) OR 8</booleanFilter>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Master Data</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Case General</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>notEqual</operation>
+                <value>12</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>notEqual</operation>
+                <value>04</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>notEqual</operation>
+                <value>13</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Product Master</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_SAMasterDataGTM</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 AND 2 AND (3 OR 4) AND (5 OR 6 OR 7 OR 8 OR 9))</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Case General</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Master Data</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>equals</operation>
+                <value>13</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>equals</operation>
+                <value>04</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>equals</operation>
+                <value>12</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>equals</operation>
+                <value>09</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.PMC_SS_Segmentation__c</field>
+                <operation>equals</operation>
+                <value>08</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_NAMasterDataGTM</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND( 				RecordType.DeveloperName=&apos;PMC_SS_CaseGeneral&apos;, 				Account.BillingCountry != &apos;Brazil&apos;, 				Account.BillingCountry != &apos;Paraguay&apos;, 				OR( 								ISPICKVAL(Type, &apos;Master Data&apos;), 								AND( 												ISPICKVAL(PMC_SS_IssueReason__c, &apos;MDM Verification&apos;), 												ISPICKVAL(Type, &apos;Internal&apos;) 								) 				) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Internal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_IssueReason__c</field>
+                <operation>equals</operation>
+                <value>Credit Request</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Accounts_Receivable_Team</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Internal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_IssueReason__c</field>
+                <operation>equals</operation>
+                <value>Financial Solution</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Especialidades</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2) AND (3 OR 4 OR 5 OR 6)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR Espec Industriais</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR Espec Agricolas B</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Uruguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Bolivia,Plurinational State of</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>SAM_Feed</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3 OR 4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR FEED B2B</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Uruguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Bolivia,Plurinational State of</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>KAM_Mega_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2 OR 3) AND (4 OR 5 OR 6 OR 7)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR KAM Retail Norte</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR KAM Retail Sul B2</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR KAM Mega Farmer B</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Uruguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Bolivia,Plurinational State of</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>KAM_Trader_Industria</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND( 				OR( 								ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR  Fertilizer B2B2&apos;), 								ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR KAM Trader GO+MT&apos;), 								ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR KAM Trader INT B2&apos;), 								ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR KAM Trader MS B2C&apos;) 				), 				 				OR( 								Account.BillingCountry ==&apos;Brazil&apos;, 								Account.BillingCountry ==&apos;Paraguay&apos;, 								Account.BillingCountry ==&apos;Uruguay&apos;, 								Account.BillingCountry ==&apos;Bolivia, Plurinational State of&apos; 				) 			)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Norte</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND( OR( ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;Bioscience&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR BA B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR GO B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR Matopipa B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR MT Norte B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR MT Oeste B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR MT SUL B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR Pastagem B2C&apos;), ISPICKVAL(Account.Owner.PMC_CPQ_SalesOffice__c , &apos;BR  Fertilizer B2B1&apos;) ),  			OR( Account.BillingCountry ==&apos;Brazil&apos;, Account.BillingCountry ==&apos;Paraguay&apos;, Account.BillingCountry ==&apos;Uruguay&apos;, Account.BillingCountry ==&apos;Bolivia, Plurinational State of&apos; ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sudeste</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2 OR 3 OR 4) AND (5 OR 6 OR 7 OR 8)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR MG Norte B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR MG Sul B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR SP Norte B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR SP SUL B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Uruguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Bolivia,Plurinational State of</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Sul</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5) AND (6 OR 7 OR 8 OR 9)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR MS B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR PR/SC 1 B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR PR/SC 2 B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR RS / SC B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+                <value>BR RS B2C</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Uruguay</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Bolivia,Plurinational State of</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Brasil_Cases_n_o_Atribu_dos</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Account_Owner_Sales_Office__c</field>
+                <operation>equals</operation>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.ContactEmail</field>
+                <operation>equals</operation>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_Quality</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_KnowledgeCreator</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Internal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_IssueReason__c</field>
+                <operation>equals</operation>
+                <value>Article Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_KnowledgeCreatorSAM</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Case General</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Internal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_IssueReason__c</field>
+                <operation>equals</operation>
+                <value>Article Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_Product</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Product</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_IssueReason__c</field>
+                <operation>equals</operation>
+                <value>Incorrect Product,Product Availability</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_Warehouse</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND( ISNEW(), ISPICKVAL( Type , &apos;Shipping&apos;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_Feed</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Account.PMC_SS_Channel__c</field>
+                <operation>equals</operation>
+                <value>Feed</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_AgricultureFertilizer</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Account.PMC_SS_Channel__c</field>
+                <operation>equals</operation>
+                <value>Agriculture/Fertilizer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Arax_Qualidade</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_ProductLocation__CountryCode__s</field>
+                <operation>contains</operation>
+                <value>BR</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Plant__c</field>
+                <operation>contains</operation>
+                <value>4260</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_Plant__c</field>
+                <operation>contains</operation>
+                <value>4261</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_InternationalSales</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Account.PMC_SS_Channel__c</field>
+                <operation>equals</operation>
+                <value>International Sales</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PMC_SS_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>equals</operation>
+                <value>United States</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Brazil</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.BillingCountry</field>
+                <operation>notEqual</operation>
+                <value>Paraguay</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

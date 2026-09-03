@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_HierarchyApprovalStatus__c</fullName>
+    <description>This field is used to track Hierarchy Approval Status</description>
+    <label>Hierarchy Approval Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account submitted for Approval</fullName>
+                <default>false</default>
+                <label>Account submitted for Approval</label>
+            </value>
+            <value>
+                <fullName>Account Approved</fullName>
+                <default>false</default>
+                <label>Account Approved</label>
+            </value>
+            <value>
+                <fullName>Account Rejected</fullName>
+                <default>false</default>
+                <label>Account Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

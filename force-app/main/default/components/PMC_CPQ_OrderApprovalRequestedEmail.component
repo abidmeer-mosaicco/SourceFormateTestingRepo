@@ -1,0 +1,95 @@
+<apex:component controller="PMC_CPQ_OrderApprovalEmailCtrl" access="global">
+    <apex:slds />
+    <style>
+        table { width:100%; }
+        th { background-color:#CCCCCC; }
+        .lineTablequote { padding:4px; border:1px; border-spacing: 0; }
+        table, tr, th, td { padding:4px; border:1px; border-spacing: 0; border-style: solid; border-collapse: collapse; }
+    </style>
+    
+    <!-- Define Attributes -->
+    <apex:attribute name="orderRecordId" description="Order Id" assignTo="{!orderId}" type="String"/>
+    <apex:attribute name="approvalReqStatus" description="Approval Status" assignTo="{!approvalStatus}" type="String"/>
+    <apex:attribute name="submittedBy" description="Submitted by (Name)" type="String"/>
+    
+    <br/><br/><a href="{!orderUrl}" target="_blank">View Order</a>
+    <br/><br/><a href="{!listViewUrl}" target="_blank">View FPD Approval Requests</a>
+    <br/><br/>
+    
+    <!-- Order info -->
+    <h4><b>Order Summary</b></h4>
+    <table class="lineTablequote">
+        <tr class="lineTablequote">
+            <b> Customer Name :&nbsp; </b>
+            <apex:outputText value="{!orderRecord.accountName}"/>
+            <br />
+        </tr>
+        <tr class="lineTablequote">
+            <b> Order Number :&nbsp;</b>
+            <a href="{!orderUrl}" target="_blank"><apex:outputText value="{!orderRecord.orderNumber}"/></a>
+            <br />
+        </tr>
+        <tr class="lineTablequote">
+            <b> SAP Order Number :&nbsp;</b>
+            <apex:outputText value="{!orderRecord.sapOrderNumber}"/>
+            <br />
+        </tr>
+        <tr class="lineTablequote">
+            <b>Contract Validity :&nbsp;</b>
+            <apex:outputText value="{!orderRecord.contractEndDate}"/>
+            <br />
+        </tr>
+    </table>
+    <br/>   
+    
+    <!-- Order Line info --> 
+    <apex:outputPanel >
+        <h4><b>Order Line Information</b></h4>
+        <table id="lineTable">
+            <tr>
+                <th>Order line</th>
+                <th>Ship To</th>
+                <th>Account Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price By Date</th>
+                <th>Floor + Freight</th>
+                <th>Agreed Final Price</th>
+                <th>Status</th>
+            </tr>
+            <apex:repeat value="{!orderItemWrappers}" var="line">
+                <tr>
+                    <td>
+                        <a href="{!line.orderLineUrl}" target="_blank">
+                            <apex:outputText value="{!line.orderItemNumber}"/>
+                        </a>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.shipToName}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.accountName}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.productName}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.quantity}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.pricingDate}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.floorPlusFreight}"/>&nbsp;<apex:outputText value="{!line.currencyCode}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.finalAgreedPrice}"/>&nbsp;<apex:outputText value="{!line.currencyCode}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!line.orderLineStatus}"/>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </apex:outputPanel>
+</apex:component>

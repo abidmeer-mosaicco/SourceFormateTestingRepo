@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Case Approval Request: Cancel/Rebill on {!relatedTo.Case__r.CaseNumber} for {!relatedTo.Case__r.Account.Name}" recipientType="User" relatedToType="sbaa__Approval__c">
+<messaging:htmlEmailBody >
+        <c:PMC_SS_Case_AA_Request_EmailTemplate_cmp cseId="{!relatedTo.Case__r.Id}" apprvalId="{!relatedTo.Id}"/>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

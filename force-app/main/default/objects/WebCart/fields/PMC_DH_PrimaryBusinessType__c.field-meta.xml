@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_PrimaryBusinessType__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(!ISNULL(TEXT((PMC_DH_Account__r.Owner.PMC_CPQ_PrimaryBusinessType__c))),! ISBLANK(TEXT( PMC_DH_Account__r.Owner.PMC_CPQ_PrimaryBusinessType__c))),TEXT(PMC_DH_Account__r.Owner.PMC_CPQ_PrimaryBusinessType__c),NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Primary Business Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

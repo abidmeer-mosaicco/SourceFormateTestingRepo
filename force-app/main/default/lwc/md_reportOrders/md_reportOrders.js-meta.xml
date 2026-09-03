@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>MD Relatório de Orders</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="objectApiName" type="String" label="Object API Name" description="e.g., OrderItem" required="true" />
+            <property name="manualFieldApiNames" type="String" label="Field API Names (CSV)" description="API field paths in column order. Leave empty for integration-only columns. Use __NF__ for Número da NF and __BILLING_DATE__ for Data de Emissão NF." required="true" />
+            <property name="manualFieldLabelNames" type="String" label="Field Labels (CSV)" description="Column labels in the same order as Field API Names." />
+            <property name="pageSize" type="Integer" label="Page Size" default="50" />
+            <property name="accountNamePath" type="String" label="Account Name Path" description="e.g., PMC_CPQ_SoldToAccount__r.Name" />
+            <property name="sapNumberPath" type="String" label="SAP Customer Number Path" description="e.g., PMC_CPQ_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c" />
+            <property name="baseWhereClause" type="String" label="Base WHERE (SOQL fragment)" description="Without the word WHERE." />
+            <property name="showTableTitle" type="Boolean" label="Show Table Title" default="false" />
+            <property name="showDownloadButton" type="Boolean" label="Show Download Button" default="true" />
+            <property name="tableType" type="String" label="Table Type" description="Used to identify table behavior." />
+            <property name="filterFieldName" type="String" label="Search Field (API)" />
+            <property name="dateFilterFieldName" type="String" label="Date Filter Field (From - API)" />
+            <property name="endDateFilterFieldName" type="String" label="Date Filter Field (To - API)" />
+            <property name="fixedColumnIndexVehicleId" type="Integer" label="(Deprecated) Vehicle ID Column Position"/>
+            <property name="fixedColumnIndexShippedDate" type="Integer" label="(Deprecated) Shipped Date Column Position"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_BlockEditCustomerType</fullName>
+    <active>true</active>
+    <description>Block the field PMC_SS_CustomerType__c for edition by users thar are not of Master Data or Admin profile</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+ISCHANGED(PMC_SS_CustomerType__c)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_CustomerType__c</errorDisplayField>
+    <errorMessage>Only Master Data or System Administrator team members can edit this field</errorMessage>
+</ValidationRule>

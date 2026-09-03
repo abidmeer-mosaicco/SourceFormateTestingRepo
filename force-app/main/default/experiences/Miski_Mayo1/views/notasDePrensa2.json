@@ -1,0 +1,60 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "e4603cf5-5fb3-4bbe-96e3-4d7812f5c0fe",
+  "label" : "Notas de Prensa 2",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f6285a3f-6918-4698-af88-3533da55745f",
+          "columns" : [ {
+            "UUID" : "be1de8a6-12d6-42a0-9d0b-522ec7dfb1a5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f6285a3f-6918-4698-af88-3533da55745f",
+      "regions" : [ {
+        "id" : "be1de8a6-12d6-42a0-9d0b-522ec7dfb1a5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5d6b15bf-6de4-4c22-9ca5-d5066cd899de",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Notas de Prensa"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0b23cd14-b35c-45a7-ba67-a6572005a66d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a8f24a3a-868c-4b11-960f-b21d741de8b9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "SthSlltzV5SJDLwyIVcdkWPDXYKAOR",
+  "type" : "view",
+  "viewType" : "custom-notas-de-prensa"
+}

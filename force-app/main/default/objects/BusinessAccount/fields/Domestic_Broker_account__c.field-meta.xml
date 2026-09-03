@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domestic_Broker_account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Domestic Broker</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Accounts (Domestic Broker)</relationshipLabel>
+    <relationshipName>DomesticBroker</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

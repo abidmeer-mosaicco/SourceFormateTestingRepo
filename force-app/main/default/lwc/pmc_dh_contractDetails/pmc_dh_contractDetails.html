@@ -1,0 +1,507 @@
+<template>
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+
+    <h3 class="slds-m-bottom_medium slds-m-top_medium">
+      {labels.pmc_contractDetails_contract}&nbsp;{pageObj.strContractNumber}
+    </h3>
+
+    <template if:true={pageRendered}>
+      <template if:true={showBanner}>
+        <div class="message-container">
+          <c-pmc_dh_message-banner type={messageBannerType} message={messageForBanner}>
+          </c-pmc_dh_message-banner>
+        </div>
+      </template>
+    </template>
+    <div>
+      <div class="slds-grid slds-gutters slds-wrap contract-summary-section">
+        <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+          <div class="custom-card contract-summary-card">
+            <div class="card-header">
+              {labels.pmc_contractDetails_contractSummary}
+            </div>
+            <div class="card-body">
+              <div class="slds-grid slds-wrap">
+                <template if:true={isPOEditable}>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 po-number">
+                    <lightning-input label={labels.pmc_contractDetails_poNumber} value={poNumber}
+                      disabled={isEditDisabled} onchange={handleDataChange} max-length=32>
+                    </lightning-input>
+                  </div>
+                </template>
+                <template if:false={isPOEditable}>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_contractDetails_poNumber}
+                    </div>
+                    <div class="lbl-field-value">
+                      {pageObj.contractSummaryWrapper.strPoNumber}
+                    </div>
+                  </div>
+                </template>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteDetailsFlow_customerName}
+                  </div>
+                  <div class="lbl-field-value">
+                    {pageObj.contractSummaryWrapper.strCustomerName}
+                  </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_contractDetails_validityPeriod}
+                  </div>
+                  <div class="lbl-field-value">
+                    {pageObj.contractSummaryWrapper.datContractStartDate}-{pageObj.contractSummaryWrapper.datContractEndDate}
+                  </div>
+                </div>
+                <template if:true={showInactiveReason}>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_contractDetails_reason}
+                    </div>
+                    <div class="lbl-field-value">
+                      {pageObj.contractSummaryWrapper.strInactiveReason}
+                    </div>
+                  </div>
+                </template>
+                <div class="slds-col_bump-right slds-size_1-of-1 slds-medium-size_1-of-6 badge-info">
+                  <div class="lbl-field-name status-label">
+                    {labels.pmc_addresses_status}
+                  </div>
+                  <div class="lbl-field-value slds-size_1-of-1">
+                    <span class="badge">
+                      {pageObj.contractSummaryWrapper.strSummaryStatus}
+                    </span>
+                  </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-6 button-section">
+                  <template if:true={isRequoteVisible}>
+                    <template if:true={isStatusInactive}>
+                      <div class="mobile-button btn-style">
+                        <lightning-button label={labels.pmc_contractDetails_requote}
+                          onclick={openRequoteModalHandler}></lightning-button>
+                      </div>
+                    </template>
+                  </template>
+                  <template if:true={isRequestSignatureAllowed}>
+                    <div class="mobile-button btn-style">
+                      <lightning-button label={labels.pmc_contractDetails_requestSignature}
+                        disabled={isRequestSignatureDisabled}
+                        onclick={openRequestSignatureModalHandler}></lightning-button>
+                    </div>
+                  </template>
+                  <div>
+                    <template if:true={isPOEditable}>
+                      <template if:true={isEditDisabled}>
+                        <div class="icon-wrapper">
+                          <img src={iconUrlObj.edit} alt={labels.pmc_userDetails_edit}
+                            title={labels.pmc_userDetails_edit} onclick={handleEditInfo} />
+                        </div>
+                      </template>
+                    </template>
+                    <div class="close-save-buttons">
+                      <template if:false={isEditDisabled}>
+                        <div class="icon-wrapper">
+                          <img src={iconUrlObj.close} alt={labels.pmc_miniCartModal_closeLabel}
+                            title={labels.pmc_miniCartModal_closeLabel} onclick={handleCloseEdit} />
+                        </div>
+                        <div class="icon-wrapper">
+                          <img src={iconUrlObj.check} alt={labels.pmc_quoteDetailsFlow_check}
+                            title={labels.pmc_quoteDetailsFlow_check} onclick={handleSaveInfo} />
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slds-grid slds-gutters slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-p-around_none">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card payment-info-card">
+                <div class="card-header">
+                  {labels.pmc_quoteCheckoutFlow_paymentInfo}
+                </div>
+                <div class="card-body">
+                  <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                      </div>
+                      <div class="lbl-field-value">
+                        {pageObj.paymentInfoWrapper.strPaymentTermSelected}
+                      </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_currency}
+                      </div>
+                      <div class="lbl-field-value">
+                        {pageObj.paymentInfoWrapper.strCurrencySelected}
+                      </div>
+                    </div>
+                    <template if:true={isBoletoVisible}>
+                      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 mobile-button btn-style">
+                        <lightning-button label={labels.pmc_contractDetails_generateBoleto} variant="brand">
+                        </lightning-button>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card product-info-card">
+                <div class="card-header">
+                  <div>
+                    {labels.pmc_requestForQuote_productsInformation}
+                  </div>
+                  <template if:true={isCadenceSuggestionAllowed}>
+                    <div>
+                      <a onclick={openCadenceSuggestionModal}>
+                        {labels.pmc_cadenceSuggestion_viewCadenceDelivery}
+                      </a>
+                    </div>
+                  </template>
+                </div>
+                <div class="card-body">
+                  <div for:each={pageObj.productInfoWrapper.lstCartWrapper} for:item="product" for:index="indexProduct"
+                    key={product.strProductId} class="slds-p-around_medium slds-p-top_medium product-section">
+                    <div class="product-grid">
+                      <div class="product-col slds-p-left_none slds-medium-size_2-of-4 slds-size_1-of-1">
+                        <div class="product-image">
+                          <template if:true={isProductLinkClickable}>
+                            <a href={product.pdpUrl} target="_self">
+                              <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                            </a>
+                          </template>
+                          <template if:false={isProductLinkClickable}>
+                            <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                          </template>
+                        </div>
+                        <div class="product-info">
+                          <div class="product-name">
+                            <template if:true={isProductLinkClickable}>
+                              <a href={product.pdpUrl} target="_self">
+                                {product.strProductName}
+                              </a>
+                            </template>
+                            <template if:false={isProductLinkClickable}>
+                              <div class="text-bold-large text-color-primary-green">
+                                {product.strProductName}
+                              </div>
+                            </template>
+                          </div>
+                          <div class="product-sku">{product.strSku}</div>
+                        </div>
+                      </div>
+                      <div class="content-info slds-size_1-of-1 slds-medium-size_1-of-4">
+                        <div class="lbl-field-name">
+                          {labels.pmc_requestForQuote_totalQty}
+                        </div>
+                        <div class="lbl-field-value">
+                          <span class="numeric-info lbl-field-value">{product.strTotalQty}</span>
+                        </div>
+                      </div>
+                      <div class="content-info slds-size_1-of-1 slds-medium-size_1-of-4">
+                        <div class="lbl-field-name">
+                          {labels.pmc_requestForQuote_unitOfMeasure}
+                        </div>
+                        <div class="lbl-field-value">
+                          {product.strProductUOMLabel}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-table-wrapper">
+                      <div class="scrollable-wrapper-table" tabindex="0">
+                        <table class="slds-table slds-m-vertical_medium">
+                          <thead>
+                            <tr class="slds-line-height_reset">
+                              <th scope="col">
+                                <div title={labels.pmc_contractDetails_orderedQty}>
+                                  {labels.pmc_contractDetails_orderedQty}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_contractDetails_availableQty}>
+                                  {labels.pmc_contractDetails_availableQty}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                  {labels.pmc_quoteCheckoutFlow_shipTo}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipFrom}>
+                                  {labels.pmc_quoteCheckoutFlow_shipFrom}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_contractDetails_contractType}>
+                                  {labels.pmc_contractDetails_contractType}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                  {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                  {labels.pmc_quoteCheckoutFlow_incoterms}
+                                </div>
+                              </th>
+                              <template if:true={isLocationBrazil}>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packType}>
+                                    {labels.pmc_requestForQuote_packType}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packagingType}>
+                                    {labels.pmc_requestForQuote_packagingType}
+                                  </div>
+                                </th>
+                              </template>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr for:each={product.lstContractItems} for:item="shipment" for:index="indexShipment"
+                              key={shipment.strContractItemId}>
+                              <td scope="row" class="numeric-info">
+                                {shipment.intOrderedQty}
+                              </td>
+                              <td scope="row" class="numeric-info">
+                                {shipment.intAvailableQty}
+                              </td>
+                              <td scope="row" class="shipping-info">
+                                {shipment.wrpShipTo.label}
+                              </td>
+                              <td scope="row" class="shipping-info">
+                                {shipment.wrpShipFrom.label}
+                              </td>
+                              <td scope="row">{shipment.strContractTypeLabel}</td>
+                              <td scope="row">{shipment.strDeliveryModeLabel}</td>
+                              <td scope="row">{shipment.strIncotermLabel}</td>
+                              <template if:true={isLocationBrazil}>
+                                <td scope="row">{shipment.strPackTypeLabel}</td>
+                                <td scope="row">{shipment.strPackageTypeLabel}</td>
+                              </template>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <template if:true={isAddToOrderVisible}>
+                        <table class="slds-table slds-m-vertical_medium add-to-order">
+                          <thead>
+                            <tr class="slds-line-height_reset">
+                              <th scope="col">
+                                <div title={labels.pmc_contractDetails_addToOrder}>
+                                  {labels.pmc_contractDetails_addToOrder}
+                                </div>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr for:each={product.lstContractItems} for:item="shipment" for:index="indexShipment"
+                              key={shipment.strContractItemId}>
+                              <td scope="row">
+                                <div class="icon-wrapper">
+                                  <template if:true={shipment.isAddToOrder}>
+                                    <img src={shipment.cartIconUrl} alt={labels.pmc_contractDetails_addToOrder}
+                                      data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                      title={labels.pmc_contractDetails_addToOrder} onclick={handleAddToOrder}
+                                      data-active={shipment.isAddToOrder} />
+                                  </template>
+                                  <template if:false={shipment.isAddToOrder}>
+                                    <img src={shipment.cartIconUrl} alt={labels.pmc_contractDetails_addToOrder}
+                                      title={labels.pmc_contractDetails_addToOrder}
+                                      data-active={shipment.isAddToOrder} />
+                                  </template>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <template lwc:if={isStatusActive}>
+                <div class="legal-message">
+                  <lightning-formatted-rich-text class="dxp-text-body"
+                    value={labels.pmc_contractDetails_activeContractWarningMsg}>
+                  </lightning-formatted-rich-text>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_none">
+          <div class="slds-grid slds-wrap quote-origin-section">
+            <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+              <div class="custom-card quote-origin-card">
+                <div class="card-header">
+                  {labels.pmc_contractDetails_quoteOfOrigin}
+                </div>
+                <div class="card-body">
+                  <template lwc:if={pageObj.lstQuoteOfOriginWrapper}>
+                    <div for:each={pageObj.lstQuoteOfOriginWrapper} for:item="quoteOfOrigin"
+                      key={quoteOfOrigin.strQuoteId} class="slds-m-bottom_x-small">
+                      <template lwc:if={isQuoteWidgetVisible}>
+                        <a href={quoteOfOrigin.quotePageUrl}>{quoteOfOrigin.strQuoteNumber}</a>
+                      </template>
+                      <template lwc:else>
+                        <div class="quote">{quoteOfOrigin.strQuoteNumber}</div>
+                      </template>
+                    </div>
+                  </template>
+                  <template lwc:if={pageObj.quoteOfOriginWrapper}>
+                    <template lwc:if={isQuoteWidgetVisible}>
+                      <a
+                        href={pageObj.quoteOfOriginWrapper.quotePageUrl}>{pageObj.quoteOfOriginWrapper.strQuoteNumber}</a>
+                    </template>
+                    <template lwc:else>
+                      <div class="quote">{pageObj.quoteOfOriginWrapper.strQuoteNumber}</div>
+                    </template>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <template if:false={isActionPending}>
+            <div class="slds-grid slds-wrap contract-doc-section">
+              <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+                <div class="custom-card">
+                  <div class="card-header">
+                    {labels.pmc_contractDetails_contractDocuments}
+                    <span onclick={expandContractDocument}>
+                      <img alt={labels.pmc_orderHistory_download} class={cssDropdownIcon} data-target='dropdown-icon'
+                        src={iconUrlObj.arrowDownUrl} />
+                    </span>
+                  </div>
+                  <template lwc:if={isContractDocument}>
+                    <div class="card-body">
+                      <template lwc:if={isDocAvail}>
+                        <template for:each={contractDocuments.lstContractDoc} for:item="documnt">
+                          <div key={documnt.strDocId} class="slds-grid slds-wrap doc-section">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-7 doc-info">
+                              <div class="lbl-field-name">{labels.pmc_caseDetails_docName}</div>
+                              <div class="lbl-field-value">
+                                <span class="doc-name" data-doc-id={documnt.strDocId} onclick={docViewHandler}
+                                  onkeydown={handleDocViewOnEnter}>{documnt.strDocName}</span>
+                              </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-7 doc-info">
+                              <div class="lbl-field-name">{labels.pmc_contractDetails_contractType}</div>
+                              <div class="lbl-field-value">{documnt.strContractType}</div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-7 doc-info">
+                              <div class="lbl-field-name">{labels.pmc_quoteCheckoutFlow_deliveryMode}</div>
+                              <div class="lbl-field-value">{documnt.strDeliveryMode}</div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-7 download-icon">
+                              <a tabindex="0" data-doc-id={documnt.strDocId} onclick={docDownloadHandler}>
+                                <img src={iconUrlObj.download} alt={labels.pmc_orderHistory_download}
+                                  data-doc-id={documnt.strDocId} />
+                              </a>
+                            </div>
+                          </div>
+                        </template>
+                      </template>
+                      <template lwc:else>
+                        <p class="slds-p-horizontal_medium text-na">NA</p>
+                      </template>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <template if:true={isCadenceSuggestionAllowed}>
+      <template if:true={isCadenceSuggestionModal}>
+        <c-pmc_dh_cadence-suggestion-modal is-read-only quote-id={pageObj.strQuoteId}
+          onclosemodal={handleCloseCadenceSuggestionModal}>
+        </c-pmc_dh_cadence-suggestion-modal>
+      </template>
+    </template>
+
+    <c-pmc_dh_custom-requote-modal is-modal={isRequoteModal} modal-heading={labels.pmc_contractDetails_requoteProducts}
+      modal-text={labels.pmc_contractDetails_contractRequoteMessage} onclosemodal={handleCloseRequoteModal}
+      onhandleproductaction={handleRequoteProducts}>
+    </c-pmc_dh_custom-requote-modal>
+
+    <c-pmc_dh_custom-modal open-modal={isAddedToCartModal} modal-heading={addedToCartTitle}
+      modal-width="537px" onclosemodalevent={handleCloseAddedToCartModal}>
+      <div class="added-to-cart-modal-wrapper">
+        <div class="added-to-cart-modal-call-to-action">
+          <lightning-button label={labels.pmc_contractDetails_continueShopping} onclick={handleCloseAddedToCartModal}>
+          </lightning-button>
+          <lightning-button label={labels.pmc_contractDetails_viewCart} variant="brand" onclick={handleViewCart}>
+          </lightning-button>
+        </div>
+      </div>
+    </c-pmc_dh_custom-modal>
+
+    <c-pmc_dh_custom-modal open-modal={isRequestSignatureModal}
+      modal-heading={labels.pmc_contractDetails_requestSignature} modal-width="537px"
+      onclosemodalevent={handleCloseRequestSignatureModal}>
+      <template if:false={isSignatureRequested}>
+        <div class="request-signature-modal-wrapper">
+          <div class="modal-message slds-m-bottom_medium">
+            {labels.pmc_contractDetails_requestSignatureMessage}
+          </div>
+          <div class="request-signature-modal-call-to-action mobile-button">
+            <lightning-button label={labels.pmc_addressDetails_cancel} onclick={handleCloseRequestSignatureModal}>
+            </lightning-button>
+            <lightning-button label={labels.pmc_registration_proceed} variant="brand"
+              onclick={handleConfirmSignatureRequest}>
+            </lightning-button>
+          </div>
+        </div>
+      </template>
+      <template if:true={isSignatureRequested}>
+        <div class="request-signature-modal-wrapper signature-request-confirmed">
+          <div class="icon-wrapper">
+            <img src={iconUrlObj.circleCheck} alt={labels.pmc_deleteAddress_success} />
+          </div>
+          <div class="text-bold-xxlarge text-color-dark-primary-green slds-m-top_medium slds-m-bottom_medium">
+            {labels.pmc_contractDetails_accountManagerNotified}
+          </div>
+          <div class="text-regular-small text-color-dark-primary-green slds-m-bottom_medium">
+            {labels.pmc_contractDetails_requestSignatureSuccessMessage}
+          </div>
+        </div>
+      </template>
+      <template if:true={isModalSpinner}>
+        <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+      </template>
+    </c-pmc_dh_custom-modal>
+  </template>
+
+  <template if:true={isUnauthorizedAccess}>
+    <c-pmc_dh_unauthorized-access-page
+      message={labels.pmc_unauthorizedAccess_restrictedAccessText2}></c-pmc_dh_unauthorized-access-page>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner></c-pmc_dh_spinner>
+  </template>
+</template>

@@ -1,0 +1,23 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Address Form",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "componentHeaderEditAddressLabel" : "Editar Endereço",
+          "componentHeaderNewAddressLabel" : "Novo endereço",
+          "makeDefaultAddressLabel" : "Faça deste meu endereço padrão"
+        },
+        "id" : "691f035a-b326-4bc1-af20-1c575a479ff3"
+      }, {
+        "attributes" : {
+          "firstActionButtonText" : "Cancelar",
+          "secondActionButtonText" : "Salvar"
+        },
+        "id" : "b0138697-8d2c-4097-b529-437b454ca053"
+      } ]
+    }
+  },
+  "urlName" : "address-form"
+}

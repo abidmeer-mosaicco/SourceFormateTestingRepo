@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_Preferences__c</fullName>
+    <label>Preferences</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Access documents</fullName>
+                <default>false</default>
+                <label>Access documents</label>
+            </value>
+            <value>
+                <fullName>Browse Knowledge articles</fullName>
+                <default>false</default>
+                <label>Browse Knowledge articles</label>
+            </value>
+            <value>
+                <fullName>Manage contracts</fullName>
+                <default>false</default>
+                <label>Manage contracts</label>
+            </value>
+            <value>
+                <fullName>Manage leads</fullName>
+                <default>false</default>
+                <label>Manage leads</label>
+            </value>
+            <value>
+                <fullName>Request quotes or place orders</fullName>
+                <default>false</default>
+                <label>Request quotes or place orders</label>
+            </value>
+            <value>
+                <fullName>Track orders</fullName>
+                <default>false</default>
+                <label>Track orders</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

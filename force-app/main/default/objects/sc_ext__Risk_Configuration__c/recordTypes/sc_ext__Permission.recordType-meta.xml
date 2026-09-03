@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__Permission</fullName>
+    <active>true</active>
+    <description>Permission override record for sys, app, custom permissions</description>
+    <label>Permission</label>
+    <picklistValues>
+        <picklist>sc_ext__Type__c</picklist>
+        <values>
+            <fullName>App</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Aprobación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Aprobaciones</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- RequestFields --></label>
+        <name>sbaa__RequestFields</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nº de aprobación</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- Comments is required when rejecting a case --></errorMessage>
+        <name>Rejection_with_Comment</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- ApproveFromRecordPage --></label>
+        <name>ApproveFromRecordPage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MassApproval --></label>
+        <name>MassApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MassReject --></label>
+        <name>MassReject</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Recall --></label>
+        <name>Recall</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RejectFromRecordPage --></label>
+        <name>RejectFromRecordPage</name>
+    </webLinks>
+    <webLinks>
+        <label>Aprobar</label>
+        <name>sbaa__Approve</name>
+    </webLinks>
+    <webLinks>
+        <label>Reasignar</label>
+        <name>sbaa__Reassign</name>
+    </webLinks>
+    <webLinks>
+        <label>Rechazar</label>
+        <name>sbaa__Reject</name>
+    </webLinks>
+    <webLinks>
+        <label>Volver a enviar solicitud</label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictStatusPendingCustToDraft</fullName>
+    <active>true</active>
+    <description>This validation rule ensures that Sales agreement status cannot be moved from Pending with Customer to Draft or Approved.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+ISCHANGED( Status ),
+ISPICKVAL(PRIORVALUE(Status),&apos;Pending with Customer&apos;),
+OR(
+ISPICKVAL( Status , &apos;Draft&apos;),
+ISPICKVAL( Status , &apos;Archived&apos;)
+)
+)</errorConditionFormula>
+    <errorMessage>This agreement has already been approved, therefore it cannot be moved to Draft or Archived. Please amend the new Sales Agreement if modifications are needed.</errorMessage>
+</ValidationRule>

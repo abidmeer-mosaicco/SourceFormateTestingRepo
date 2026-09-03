@@ -1,0 +1,48 @@
+<template>
+    <nav class="menu-container">
+        <div class="hamburger" onclick={toggleMenu}>
+            <span></span><span></span><span></span>
+        </div>
+
+        <ul class={menuClass}>
+            <template for:each={menuItems} for:item="item">
+                <li key={item.name} class="menu-item">
+                    <!-- First Level -->
+                    <span class="top-label" onclick={handleTopClick}>{item.name}</span>
+
+                    <template if:true={item.subItems}>
+                        <ul class="submenu">
+                            <template for:each={item.subItems} for:item="sub">
+                                <li key={sub.name} class="submenu-item">
+                                    <!-- Second Level -->
+                                    <span class="submenu-label"
+                                          onclick={handleSubClick}
+                                          data-label={sub.labelName}
+                                          data-has-children={sub.subSubItems}>
+                                        {sub.name}
+                                        <template if:true={sub.subSubItems}>
+                                            <span class="arrow-right">&rsaquo;</span>
+                                        </template>
+                                    </span>
+
+                                    <!-- Third Level -->
+                                    <template if:true={sub.subSubItems}>
+                                        <ul class="sub-submenu">
+                                            <template for:each={sub.subSubItems} for:item="subsub">
+                                                <li key={subsub.name}>
+                                                    <span onclick={handleClick} data-label={subsub.labelName}>
+                                                        {subsub.name}
+                                                    </span>
+                                                </li>
+                                            </template>
+                                        </ul>
+                                    </template>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                </li>
+            </template>
+        </ul>
+    </nav>
+</template>

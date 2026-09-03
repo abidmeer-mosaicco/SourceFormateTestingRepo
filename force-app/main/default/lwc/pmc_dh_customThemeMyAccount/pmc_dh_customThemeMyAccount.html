@@ -1,0 +1,58 @@
+<template>
+  <header data-f6-region class="page-header">
+    <div class="container">
+      <slot name="header"></slot>
+    </div>
+  </header>
+  <section data-f6-region class="page-container">
+    <div class="container">
+      <c-pmc_dh_custom-tabs ontabclick={tabClickHandler}
+        user-management-tabs-handler={userManagementTabsHandler}></c-pmc_dh_custom-tabs>
+      <div class="slds-grid" if:true={userManagementTabsHandler.AccountDetails}>
+        <div class="slds-col">
+          <slot name="accountdetail"></slot>
+        </div>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap" if:true={userManagementTabsHandler.UserDetails}>
+        <div class="slds-col slds-medium-size_1-of-2 slds-small-size_1-of-1">
+          <slot name="userdetail"></slot>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-small-size_1-of-1 user-login-info">
+          <slot name="ootb"></slot>
+          <c-pmc_dh_preferred-language language-dropdown-values={languageDropdownValues}></c-pmc_dh_preferred-language>
+        </div>
+      </div>
+      <div class="slds-grid" if:true={userManagementTabsHandler.Addresses}>
+        <div class="slds-col slds-size_1-of-1">
+          <slot name="addresses"></slot>
+        </div>
+      </div>
+      <div class="slds-grid" if:true={userManagementTabsHandler.UserManagement}>
+        <div class="slds-col slds-size_1-of-1">
+          <slot name="usermanagement"></slot>
+        </div>
+      </div>
+      <div class="slds-grid" if:true={userManagementTabsHandler.Preferences}>
+        <div class="slds-col slds-size_1-of-1">
+          <slot name="preferences"></slot>
+        </div>
+      </div>
+      <div class="slds-grid" if:true={userManagementTabsHandler.Rebates}>
+        <div class="slds-col slds-size_1-of-1">
+          <slot name="rebates"></slot>
+        </div>
+      </div>
+      <div class="slds-grid" if:true={userManagementTabsHandler.LeadManagement}>
+        <div class="slds-col slds-size_1-of-1">
+          <slot name="leadmanagement"></slot>
+        </div>
+      </div>
+    </div>
+    <c-pmc_dh_add-new-user-prefilled></c-pmc_dh_add-new-user-prefilled>
+  </section>
+  <footer data-f6-region class="page-footer">
+    <div class="container">
+      <slot name="footer"></slot>
+    </div>
+  </footer>
+</template>

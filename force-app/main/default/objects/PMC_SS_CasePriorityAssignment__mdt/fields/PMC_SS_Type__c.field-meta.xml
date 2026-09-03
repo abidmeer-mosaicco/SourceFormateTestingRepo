@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Type__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>true</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Mosaic Direct</fullName>
+                <default>false</default>
+                <label>Mosaic Direct</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Transactions</fullName>
+                <default>false</default>
+                <label>Transactions</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Internal Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internal Request</label>
+            </value>
+            <value>
+                <fullName>NPK Blend Request</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NPK Blend Request</label>
+            </value>
+            <value>
+                <fullName>New Product Registration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Product Registration</label>
+            </value>
+            <value>
+                <fullName>Order</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

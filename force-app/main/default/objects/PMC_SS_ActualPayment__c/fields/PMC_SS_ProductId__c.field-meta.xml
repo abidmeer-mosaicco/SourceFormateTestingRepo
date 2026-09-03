@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Material number</description>
+    <label>Product</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Actual Payments</relationshipLabel>
+    <relationshipName>PMC_SS_ActualPaymentsProduct</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,667 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "8cbd2996-1057-4cae-aeb0-d48b55e7f687",
+  "label" : "Hacemos Minería Verde",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "78088b62-8305-4487-9a03-fdaa50158d08",
+          "columns" : [ {
+            "UUID" : "b18f19de-d012-4370-94ba-477cf2fbcc6b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "78088b62-8305-4487-9a03-fdaa50158d08",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "62eba1fc-f9bd-486c-b115-49d0e23123fb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b18f19de-d012-4370-94ba-477cf2fbcc6b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "35242ba7-09e2-440d-86fa-5525c87c69d6",
+          "columns" : [ {
+            "UUID" : "fcda4c5c-9ac7-4ff3-acc6-9f4f20514f71",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "35242ba7-09e2-440d-86fa-5525c87c69d6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageD",
+            "textDescription" : "No usamos productos químicos ni realizamos voladuras durante nuestro proceso"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "75ce7b82-a0b5-4542-9026-c6abfe4d236c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "fcda4c5c-9ac7-4ff3-acc6-9f4f20514f71",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c9ab27c0-42ec-468a-8bcc-6e38f6244582",
+          "columns" : [ {
+            "UUID" : "ae514c26-cfad-411f-b82b-d9f16e19c514",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c9ab27c0-42ec-468a-8bcc-6e38f6244582",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Hacemos Minería Verde </strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4531a6f9-de86-4115-8f83-64641698720c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ae514c26-cfad-411f-b82b-d9f16e19c514",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "d2be22c3-3262-41e7-8538-7609f5ab6396",
+          "columns" : [ {
+            "UUID" : "2938c9c3-26f3-4318-a40c-bccd1b7698eb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ec08849a-1ddf-47bf-b45c-7682f271cec7",
+            "columnKey" : "4ad59",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5581426e-e4e2-466e-bab5-37a1afbcec39",
+            "columnKey" : "426d8",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d2be22c3-3262-41e7-8538-7609f5ab6396",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/slZrZc1ylzY\" src=\"https://www.youtube.com/embed/slZrZc1ylzY\"></iframe></div><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b9ea0924-ed9d-4fb5-a13f-2d55ff6f0c30",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2938c9c3-26f3-4318-a40c-bccd1b7698eb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ec08849a-1ddf-47bf-b45c-7682f271cec7",
+        "regionLabel" : "Column 2",
+        "regionName" : "4ad59",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">Cumplimos con todos los estándares ambientales</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 16px;\">En nuestra empresa medimos y controlamos nuestras acciones, cumpliendo con los estándares de calidad ambiental tales como los monitoreos de agua, aire, mar y suelo. Asimismo, nuestra operación es amigable con el ecosistema ya que tenemos buenas prácticas medioambientales.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "bfc116f9-fad4-46aa-a502-26f7a4cce847",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5581426e-e4e2-466e-bab5-37a1afbcec39",
+        "regionLabel" : "Column 3",
+        "regionName" : "426d8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0b3a6372-c448-40f5-ad0f-2fca5e9add7d",
+          "columns" : [ {
+            "UUID" : "ec607d1e-714f-4cae-9fe3-081963834f2f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0b3a6372-c448-40f5-ad0f-2fca5e9add7d",
+      "regions" : [ {
+        "id" : "ec607d1e-714f-4cae-9fe3-081963834f2f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "1aa41683-242a-401a-b76b-fb24bad4ded0",
+          "columns" : [ {
+            "UUID" : "59b7c649-d2f4-4b8b-8611-3758b3fa3b6f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "23573a9c-e031-494e-9e80-546fb257ba7c",
+            "columnKey" : "4ad59",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3543f636-e240-4f6e-b212-e1b8ec513a95",
+            "columnKey" : "67666",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1aa41683-242a-401a-b76b-fb24bad4ded0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/w3bdg32krcw\" src=\"https://www.youtube.com/embed/w3bdg32krcw\"></iframe></div><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "81f15073-38d0-4b0d-ba12-8bf3e6ad6901",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "59b7c649-d2f4-4b8b-8611-3758b3fa3b6f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "23573a9c-e031-494e-9e80-546fb257ba7c",
+        "regionLabel" : "Column 2",
+        "regionName" : "4ad59",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">El fosfato de Bayóvar es un elemento natural de origen marino</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 16px;\">El fosfato que extraemos del desierto de Sechura es natural, de origen biológico marino y contribuye con la existencia de la gran variedad hidrobiológica de la zona costera de la provincia. Por lo tanto, no contamina.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e4017ac0-4c5a-4a2c-9774-c16c039c5920",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3543f636-e240-4f6e-b212-e1b8ec513a95",
+        "regionLabel" : "Column 3",
+        "regionName" : "67666",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "84244e46-2434-4913-905c-8e38c881a219",
+          "columns" : [ {
+            "UUID" : "08f3ff49-02ee-46bb-8b54-650fbcb7409e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "84244e46-2434-4913-905c-8e38c881a219",
+      "regions" : [ {
+        "id" : "08f3ff49-02ee-46bb-8b54-650fbcb7409e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "6df67485-1b39-44a3-9f2c-1c832b0c141b",
+          "columns" : [ {
+            "UUID" : "11cffda1-5316-46d8-b160-dd91e916e231",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6c8dd9d3-5007-4d6b-92cb-22c0d1afbade",
+            "columnKey" : "4ad59",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "dcf6c469-6a3c-45a1-83eb-b0adbc7a4276",
+            "columnKey" : "63c76",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6df67485-1b39-44a3-9f2c-1c832b0c141b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/VUROPhPaUUE\" src=\"https://www.youtube.com/embed/VUROPhPaUUE\"></iframe></div><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9161b753-1b82-4eab-ba78-09876011facb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "11cffda1-5316-46d8-b160-dd91e916e231",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6c8dd9d3-5007-4d6b-92cb-22c0d1afbade",
+        "regionLabel" : "Column 2",
+        "regionName" : "4ad59",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">Nuestro proceso es amigable con el medio ambiente</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 16px;\">Somos una minera no metálica, que para obtener el concentrado de fosfato, insumo importante para producir fertilizantes, no necesitamos utilizar reactivos químicos en nuestro proceso productivo. Solo en el proceso de filtrado utilizamos un agente biodegradable que nos ayuda a disminuir la humedad del fosfato.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "70f1ca48-14d7-4ee9-985f-01790dec2e5a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dcf6c469-6a3c-45a1-83eb-b0adbc7a4276",
+        "regionLabel" : "Column 3",
+        "regionName" : "63c76",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4d2d58ba-3952-4d83-9327-b953bd98adc4",
+          "columns" : [ {
+            "UUID" : "c45dce57-2e21-4283-9b89-85710e8224e2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4d2d58ba-3952-4d83-9327-b953bd98adc4",
+      "regions" : [ {
+        "id" : "c45dce57-2e21-4283-9b89-85710e8224e2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "658ee7e0-ef4a-4a0f-87dd-0e644e32a422",
+          "columns" : [ {
+            "UUID" : "98369d05-f94a-4b7d-81d2-e8d0823cb48b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b695dcf4-c282-4d4c-999b-bb1286fe814b",
+            "columnKey" : "4ad59",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "94fe6e11-1175-447e-b299-369543471c82",
+            "columnKey" : "9abc8",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "658ee7e0-ef4a-4a0f-87dd-0e644e32a422",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/n6MgA3D8qOo\" src=\"https://www.youtube.com/embed/n6MgA3D8qOo\"></iframe></div><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8c54b40f-8dee-4c3f-a8ca-5fb47617cc51",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "98369d05-f94a-4b7d-81d2-e8d0823cb48b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b695dcf4-c282-4d4c-999b-bb1286fe814b",
+        "regionLabel" : "Column 2",
+        "regionName" : "4ad59",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">Gestionamos responsablemente nuestros residuos</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 16px;\">Al material residual se le llama relaves fino y grueso, los cuales están compuestos por agua de mar con arcilla y arena. Estos relaves no contienen ningún tipo de contaminante, debido a que en nuestro proceso no utilizamos reactivos químicos. Asimismo, como parte de nuestros compromisos del Estudio de Impacto Ambiental (EIA), contamos con depósitos donde almacenamos nuestros relaves biodegradables.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b1f1abbc-a606-4167-bce3-3137c69dc7c9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "94fe6e11-1175-447e-b299-369543471c82",
+        "regionLabel" : "Column 3",
+        "regionName" : "9abc8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d3647dc2-901c-4545-973c-ae87a3e038fc",
+          "columns" : [ {
+            "UUID" : "e32bc090-30f5-4259-ad4d-501392e7eca4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d3647dc2-901c-4545-973c-ae87a3e038fc",
+      "regions" : [ {
+        "id" : "e32bc090-30f5-4259-ad4d-501392e7eca4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "cc3524b3-6b83-4f2e-80b6-a1d2d355b091",
+          "columns" : [ {
+            "UUID" : "24064206-7bc9-4f1f-a770-58ede607d07e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8167d210-a675-470f-944f-f25f535af52a",
+            "columnKey" : "4ad59",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a87efeed-9f78-431a-b120-b6af0f204154",
+            "columnKey" : "392e9",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cc3524b3-6b83-4f2e-80b6-a1d2d355b091",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div class=\"sfdcCbVideoContainer\"><iframe class=\"sfdcCbVideo\" allowfullscreen=\"true\" width=\"100%\" title=\"Video from https://www.youtube.com/embed/pu6ItDgQA6g\" src=\"https://www.youtube.com/embed/pu6ItDgQA6g\"></iframe></div><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7eb77eca-51a1-4bae-911c-83eafd48e5da",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "24064206-7bc9-4f1f-a770-58ede607d07e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8167d210-a675-470f-944f-f25f535af52a",
+        "regionLabel" : "Column 2",
+        "regionName" : "4ad59",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">Nuestra toma de agua de mar no impacta el ecosistema marino</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 16px;\">La zona de succión cuenta&nbsp;con filtros especiales que evitan el ingreso de las larvas a las bombas, debido a que la velocidad de succión del agua en el filtro es de 0.05 metros por segundo, incapaz de arrastrar larvas a las bombas. Asimismo, las bombas se encuentran a 12 metros de la superficie del mar y no tienen contacto con el lecho marino.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1111e5b9-11b4-49bd-9fa3-c281e6bbf374",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a87efeed-9f78-431a-b120-b6af0f204154",
+        "regionLabel" : "Column 3",
+        "regionName" : "392e9",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f4b62d9f-23e7-4332-aa06-400272539545",
+          "columns" : [ {
+            "UUID" : "dbd562aa-55ba-4e1a-a6c8-13bf9d6622e8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f4b62d9f-23e7-4332-aa06-400272539545",
+      "regions" : [ {
+        "id" : "dbd562aa-55ba-4e1a-a6c8-13bf9d6622e8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d254167-5a18-446a-a06e-49a140018109",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Hacemos Minería Verde"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e8f585f7-f22b-4aee-aaf9-f380e8d736eb",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fd17d6c4-8557-4a10-8a09-dfc9112b0a05",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-hacemos-minera-verde"
+}

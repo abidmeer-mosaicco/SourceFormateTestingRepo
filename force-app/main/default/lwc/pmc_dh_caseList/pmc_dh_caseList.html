@@ -1,0 +1,25 @@
+<template>
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_search-filters search-input-label={labels.pmc_caseMgmt_searchCases} filters={filters}
+      onsearchev={handleSearch} onapplyfilterev={handleApplyFilter} onclearfilterev={clearFilters}
+      onclearsearchinputsev={clearSearchInputs}></c-pmc_dh_search-filters>
+    <template if:false={isResultSetEmpty}>
+      <c-pmc_dh_custom-datatable table-description="Address Data" columns={columns} table-data={filteredData}
+        default-sort-order={defaultSortOrder} onrowlinkclick={navigateToCaseDetails}>
+      </c-pmc_dh_custom-datatable>
+    </template>
+    <template if:true={caseList.length}>
+      <div class="pagination slds-m-bottom_medium">
+        <c-pmc_dh_pagination generickey="id" genericdata={caseList} class="slds-table_striped"
+          no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData} modal-theme>
+        </c-pmc_dh_pagination>
+      </div>
+    </template>
+    <div lwc:if={isResultSetEmpty} class="no-results-msg">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

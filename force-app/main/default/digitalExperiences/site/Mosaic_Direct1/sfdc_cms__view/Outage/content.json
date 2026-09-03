@@ -1,0 +1,63 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Outage",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"32f16ea9-76a2-4c87-876e-efad05ccabed\",\"columns\":[{\"UUID\":\"0587c55d-ae15-4524-bb57-4c8abf7e2819\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_outage",
+              "id" : "84dd541d-7a1c-453c-82a6-d0b68b938faf",
+              "type" : "component"
+            } ],
+            "id" : "0587c55d-ae15-4524-bb57-4c8abf7e2819",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "32f16ea9-76a2-4c87-876e-efad05ccabed",
+          "type" : "component"
+        } ],
+        "id" : "ebe83d3e-c72e-43d5-bc41-d3d52cb366e2",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Outage",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "95b5a9cf-d620-43c9-8512-55a1e58412ac",
+          "type" : "component"
+        } ],
+        "id" : "3b130758-e1cd-4175-af2b-1ffb6f7a278f",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "b50d7aa8-b2bd-49ac-9fc8-eb5794635e9c",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ycf0MQ9psBNvuSrdD8cHsC3r34nYXz",
+    "viewType" : "custom-outage"
+  },
+  "urlName" : "outage"
+}

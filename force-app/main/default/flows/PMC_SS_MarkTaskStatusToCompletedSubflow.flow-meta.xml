@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>This resource stores the API name of the flow.</description>
+        <name>STRING_FLOW_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_MarkTaskStatusToCompletedSubflow</stringValue>
+        </value>
+    </constants>
+    <description>This subflow is used to mark the status of task as completed.</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC SS Mark Task Status To Completed Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Mark Task Status To Completed Subflow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>This element will create error log record in case of error or exception.</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>242</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOW_API_NAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>This element will query the task record and update the status.</description>
+        <name>TaskRecordStatusUpdate</name>
+        <label>Task Record Status Update</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>strTaskRelatedToId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>strTaskSubject</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>TaskRecordStatusUpdate</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>The variable to store WhatId of Task</description>
+        <name>strTaskRelatedToId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This variable will store the subject of the task</description>
+        <name>strTaskSubject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

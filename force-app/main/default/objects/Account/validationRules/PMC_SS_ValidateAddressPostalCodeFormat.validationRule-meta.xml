@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ValidateAddressPostalCodeFormat</fullName>
+    <active>true</active>
+    <description>Validate Account Address Postal Code format</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+OR (
+AND( 
+ISPICKVAL( BillingCountryCode , &quot;BR&quot;),
+!REGEX(  BillingPostalCode ,&quot;^(\\d{5}\\-\\d{3})?$&quot;)
+),
+LEN( BillingPostalCode ) &gt; 10
+)
+)</errorConditionFormula>
+    <errorDisplayField>BillingPostalCode</errorDisplayField>
+    <errorMessage>Postal Code should not exceed 10 characters. For Brazil, please adjust ZIP/Postal Code format to: 00000-000</errorMessage>
+</ValidationRule>

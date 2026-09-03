@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_MaterialGroup__c</fullName>
+    <description>This field is created as a part of story to handle/store value of any Product&apos;s Group.</description>
+    <label>Product Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BIOSCIENCE</fullName>
+                <default>false</default>
+                <label>BIOSCIENCE</label>
+            </value>
+            <value>
+                <fullName>Co-Product</fullName>
+                <default>false</default>
+                <label>Co-Product</label>
+            </value>
+            <value>
+                <fullName>Nitrogen</fullName>
+                <default>false</default>
+                <label>NITROGEN</label>
+            </value>
+            <value>
+                <fullName>NPK</fullName>
+                <default>false</default>
+                <label>NPK</label>
+            </value>
+            <value>
+                <fullName>Phosphate</fullName>
+                <default>false</default>
+                <label>Phosphate</label>
+            </value>
+            <value>
+                <fullName>Potash</fullName>
+                <default>false</default>
+                <label>Potash</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>SERVICES</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label>Búsqueda de contratos activos</label>
+        <name>SBQQ__ActiveContractLookup</name>
+    </fieldSets>
+    <validationRules>
+        <errorMessage>El presupuesto de renovación sólo puede crearse antes de 30 días o menos de la fecha de finalización del contrato.</errorMessage>
+        <name>PMC_CLM_ContractRenewalValidation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Amend_M --></label>
+        <name>Amend_M</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Block_Replace_Contract --></label>
+        <name>Block_Replace_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label>Modificar</label>
+        <name>SBQQ__Amend</name>
+    </webLinks>
+    <webLinks>
+        <label>Renovar contratos</label>
+        <name>SBQQ__RenewContracts</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>CONCAT(sourceField[&apos;Group&apos;],sourceField[&apos;SKU&apos;],sourceField[&apos;Location&apos;],sourceField[&apos;Last Modified Date&apos;])</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.Location_Grp_Product_Exclusion_Change_Id__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>LocationGroupExclusion_00DDn000005I4iI.Is_Deleted__c</sourceField>
+        <sourceFormula>Is Deleted</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.Is_Deleted__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>LocationGroupExclusion_00DDn000005I4iI.Location__c</sourceField>
+        <sourceFormula>Location</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.Location__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>LocationGroupExclusion_00DDn000005I4iI.Group__c</sourceField>
+        <sourceFormula>Group</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.Group__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>LocationGroupExclusion_00DDn000005I4iI.SKU__c</sourceField>
+        <sourceFormula>SKU</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.SKU__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>LocationGroupExclusion_00DDn000005I4iI.Last_Modified_Date__c</sourceField>
+        <sourceFormula>Last Modified Date</sourceFormula>
+        <targetField>LocationGroupExclusion_00DDn000005I4iI__dll.Last_Modified_Date__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>LocationGroupExclusion_00DDn000005I4iI_map_LocationGroupExclusion_00DDn000005I4iI_1753144166358</masterLabel>
+    <sourceObjectName>LocationGroupExclusion_00DDn000005I4iI</sourceObjectName>
+    <targetObjectName>LocationGroupExclusion_00DDn000005I4iI__dll</targetObjectName>
+</ObjectSourceTargetMap>

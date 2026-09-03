@@ -1,0 +1,49 @@
+<template>
+  <div if:true={hasRecords} class="slds-m-top_small slds-grid slds-grid_align-spread slds-align_absolute-center">
+    <div class="md-pagination slds-grid slds-grid_align-center slds-wrap">
+      <div>
+        <button class="md-pagination-button" onclick={handlePrevPage} disabled={isPrevDisabled}>
+          <lightning-icon size="x-small" icon-name="utility:chevronleft"></lightning-icon>
+        </button>
+      </div>
+
+      <div class="slds-grid slds-grid_vertical-align-center slds-m-horizontal_x-small">
+        <button class="md-pagination-button" onclick={handlePageClick} data-page="1" data-active={isFirstPageActive}>
+          1
+        </button>
+
+        <template if:true={showLeftEllipsis}>
+          <span class="slds-m-horizontal_x-small slds-align_absolute-center" style="text-align: center">...</span>
+        </template>
+
+        <template for:each={pageButtons} for:item="pageBtn">
+          <button
+            key={pageBtn.page}
+            class="md-pagination-button"
+            onclick={handlePageClick}
+            data-active={pageBtn.active}
+            data-page={pageBtn.page}
+          >
+            {pageBtn.label}
+          </button>
+        </template>
+
+        <template if:true={showRightEllipsis}>
+          <span class="slds-m-horizontal_x-small slds-align_absolute-center" style="text-align: center">...</span>
+        </template>
+
+        <template if:true={showLastPage}>
+          <button class="md-pagination-button" onclick={handlePageClick} data-page={totalPages} data-active={isLastPageActive}>
+            {totalPages}
+          </button>
+        </template>
+      </div>
+
+      <div>
+        <button class="md-pagination-button" onclick={handleNextPage} disabled={isNextDisabled}>
+          <lightning-icon size="x-small" icon-name="utility:chevronright"></lightning-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>

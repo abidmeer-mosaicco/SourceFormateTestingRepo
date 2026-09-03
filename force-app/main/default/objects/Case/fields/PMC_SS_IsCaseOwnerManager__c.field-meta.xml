@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_IsCaseOwnerManager__c</fullName>
+    <formula>$User.Id = Owner:User.PMC_SS_DelegateUser__c &amp;&amp;  TODAY() &gt;=  Owner:User.PMC_SS_OutOfOfficeStartDate__c &amp;&amp;  TODAY() &lt;= Owner:User.PMC_SS_OutOfOfficeEndDate__c &amp;&amp;  NOT(ISBLANK(Owner:User.PMC_SS_OutOfOfficeStartDate__c)) &amp;&amp; NOT(ISBLANK(Owner:User.PMC_SS_OutOfOfficeEndDate__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Case Owner Manager</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

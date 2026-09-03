@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GLPA_Distrito__c</fullName>
+    <label>Distrito</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bellavista</fullName>
+                <default>false</default>
+                <label>Bellavista</label>
+            </value>
+            <value>
+                <fullName>Bernal</fullName>
+                <default>false</default>
+                <label>Bernal</label>
+            </value>
+            <value>
+                <fullName>Cristo Nos Valga</fullName>
+                <default>false</default>
+                <label>Cristo Nos Valga</label>
+            </value>
+            <value>
+                <fullName>La Union</fullName>
+                <default>false</default>
+                <label>La Union</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Rinconada</fullName>
+                <default>false</default>
+                <label>Rinconada</label>
+            </value>
+            <value>
+                <fullName>Sechura</fullName>
+                <default>false</default>
+                <label>Sechura</label>
+            </value>
+            <value>
+                <fullName>Vice</fullName>
+                <default>false</default>
+                <label>Vice</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RegionCode__c</fullName>
+    <description>Código interno para mapear componentes de acesso. Ex: SAM, NAM, ASIA</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Qual região o sistema deve disponibilizar acessos se este país for o de origem do usuário?</inlineHelpText>
+    <label>Código da Região</label>
+    <length>100</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

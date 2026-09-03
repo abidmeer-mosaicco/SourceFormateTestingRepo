@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_AccountId__c</fullName>
+    <description>DocuSign CLM (SpringCM) Account ID (aid) for this environment. Known values: 31298 (Production), 102552 (uat, qa2), 116096 (qa), 98018 (dev sandboxes: devp1, intdev, unittest, gcpmdev1). GCPM-5347.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>CLM Account ID</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

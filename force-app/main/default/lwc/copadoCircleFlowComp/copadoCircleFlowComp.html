@@ -1,0 +1,38 @@
+<template>
+    <div class="hero-container">
+        <!-- LEFT TEXT BLOCK -->
+        <div class="hero-text">
+            <h1>Salesforce DevOps Lifecycle</h1>
+            <p>
+                This visual represents the Copado DevOps workflow integrated with Salesforce.
+                Each icon in the rotating circle reflects a critical phase in the release process —
+                from planning to promotion and continuous integration.
+            </p>
+
+            <div class="pill-container">
+                <span class="pill">✔ User Stories</span>
+                <span class="pill">✔ Git Integration</span>
+                <span class="pill">✔ CI/CD Automation</span>
+                <span class="pill">✔ Metadata Deployments</span>
+            </div>
+        </div>
+
+        <!-- CIRCLE RIGHT BLOCK -->
+        <div class="hero-visual">
+            <div class="glow-circle">
+                <!-- ROTATING ICONS -->
+                <div class="rotating-ring">
+
+                    <template for:each={iconList} for:item="icon">
+                        <div key={icon.id} class={icon.className}>
+                            <img src={icon.src} alt={icon.label} />
+                            <span class="icon-label">{icon.label}</span>
+                        </div>
+                    </template>
+                </div>
+                <!-- CENTER LOGO -->
+                <img src={CopadoSalesforceLogo} alt="Salesforce Logo" class="salesforce-logo" />
+            </div>
+        </div>
+    </div>
+</template>

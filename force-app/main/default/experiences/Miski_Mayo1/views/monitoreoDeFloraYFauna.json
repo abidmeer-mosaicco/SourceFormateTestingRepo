@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4e91aaf1-bd6e-4258-8a80-c4bc0e5d562e",
+  "label" : "Monitoreo de flora y fauna",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a9b7c79a-3189-46c9-b42e-e2a48dfb16f2",
+          "columns" : [ {
+            "UUID" : "c858263e-05d7-49d5-b354-5bb77422e5fa",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a9b7c79a-3189-46c9-b42e-e2a48dfb16f2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "aa52aeeb-95ff-4363-823f-7ed89b409739",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c858263e-05d7-49d5-b354-5bb77422e5fa",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "727edeed-aabc-47bc-a520-8b7e41277c7e",
+          "columns" : [ {
+            "UUID" : "7611f437-d6f4-404c-8365-dd934bda4438",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "727edeed-aabc-47bc-a520-8b7e41277c7e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP23"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "3ade5100-f362-48e1-9efa-25287bab64fa",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7611f437-d6f4-404c-8365-dd934bda4438",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 88,
+        "sectionConfig" : {
+          "UUID" : "4d12968b-3a77-49d4-b1a6-8167e8fd9feb",
+          "columns" : [ {
+            "UUID" : "2366e421-38f5-41e7-8a69-ec61b6f2d9f7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9149f5dc-beee-42ec-a5c2-a3492884a127",
+            "columnKey" : "3fb39",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "01defe1c-5a1b-4285-981e-ef27982e63c7",
+            "columnKey" : "caf55",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7e8a680d-26de-49bc-8089-9c5a97e9903b",
+            "columnKey" : "82f1a",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d63fe737-9b76-4544-b4d7-74664dd02e35",
+            "columnKey" : "c2767",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d4da71cb-ce91-4649-9c81-3c5473b02496",
+            "columnKey" : "a1c12",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4d12968b-3a77-49d4-b1a6-8167e8fd9feb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "19396854-b72e-4b6a-a696-a916ed8a8fcb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2366e421-38f5-41e7-8a69-ec61b6f2d9f7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9149f5dc-beee-42ec-a5c2-a3492884a127",
+        "regionLabel" : "Column 2",
+        "regionName" : "3fb39",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "01defe1c-5a1b-4285-981e-ef27982e63c7",
+        "regionLabel" : "Column 3",
+        "regionName" : "caf55",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "7e8a680d-26de-49bc-8089-9c5a97e9903b",
+        "regionLabel" : "Column 4",
+        "regionName" : "82f1a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d63fe737-9b76-4544-b4d7-74664dd02e35",
+        "regionLabel" : "Column 5",
+        "regionName" : "c2767",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d4da71cb-ce91-4649-9c81-3c5473b02496",
+        "regionLabel" : "Column 6",
+        "regionName" : "a1c12",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "cce87082-3ba9-4bdd-88eb-bf325d155e2e",
+          "columns" : [ {
+            "UUID" : "9d90cdbd-820a-48f5-9e17-911752469795",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cce87082-3ba9-4bdd-88eb-bf325d155e2e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Monitoreo de Flora y Fauna</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cb674c1d-af81-40b5-a33b-4f7e52ed76ea",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9d90cdbd-820a-48f5-9e17-911752469795",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "b2aa2a4e-5b9b-4443-8c45-e2f6be23f427",
+          "columns" : [ {
+            "UUID" : "cda37a53-fbc4-40fc-9ebe-9ec3cf07d4a6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "323a6475-2a06-4b5b-b462-7c7991d5b733",
+            "columnKey" : "a393b",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a5263e9c-8487-45df-9f69-0381a238dd0f",
+            "columnKey" : "302ba",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "976f3901-ef2c-402d-a036-373973343ad0",
+            "columnKey" : "3ce52",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "70fee304-dba1-44e3-9ddf-81ea1cfb486f",
+            "columnKey" : "de5b7",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6c998e58-3f6e-4a6c-a438-a614575a331d",
+            "columnKey" : "4f467",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b2aa2a4e-5b9b-4443-8c45-e2f6be23f427",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "5b9b8b92-d02a-4f55-92ca-e9cc98652935",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cda37a53-fbc4-40fc-9ebe-9ec3cf07d4a6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "323a6475-2a06-4b5b-b462-7c7991d5b733",
+        "regionLabel" : "Column 2",
+        "regionName" : "a393b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "a5263e9c-8487-45df-9f69-0381a238dd0f",
+        "regionLabel" : "Column 3",
+        "regionName" : "302ba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "976f3901-ef2c-402d-a036-373973343ad0",
+        "regionLabel" : "Column 4",
+        "regionName" : "3ce52",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "70fee304-dba1-44e3-9ddf-81ea1cfb486f",
+        "regionLabel" : "Column 5",
+        "regionName" : "de5b7",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6c998e58-3f6e-4a6c-a438-a614575a331d",
+        "regionLabel" : "Column 6",
+        "regionName" : "4f467",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "4113b513-cc59-44d6-8e29-6d0f72c34f27",
+          "columns" : [ {
+            "UUID" : "f67d1af5-cdfa-4d53-b3c2-3b17327e1899",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4113b513-cc59-44d6-8e29-6d0f72c34f27",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "34df7de4-d528-4d8e-9ba0-37b03d2f1ecb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Evaluar y caracterizar la composición de flora y fauna (riqueza de especies, índices de diversidad, y abundancia) en las estaciones descritas en el Plan de Manejo Ambiental de CMNM.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Identificar, describir y caracterizar las unidades de vegetación dentro del área de evaluación.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Realizar un inventario de especies incluidas en las categorías de conservación y/o protección según normativa nacional D.S. Nº 004-2014-MINAGRI para fauna, D.S. Nº 043-2006-AG para flora y normativa internacional: Lista Roja de la UICN y Apéndice I, II y III de la Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres (CITES).</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "df9e2d6c-4623-4486-996d-a77cc471996b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">El monitoreo de flora y fauna es fundamental para conocer el estado de conservación del ecosistema, ya que algunas especies son consideradas indicadores del lugar, permitiéndonos determinar cambios o alteraciones en sus hábitats.</span></p><p><br></p><p><strong style=\"color: rgb(72, 72, 72); font-size: 22px;\">Ubicación de estaciones:</strong><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">&nbsp;FT-A1 (Cantera Chorrillos), FT-A2 (Cerro Illescas), FT-A3 (Acceso a reventazón), FT-A4 (Antiguo campamento Bayóvar).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "10e78105-928c-4220-91ad-c72c2bbe3990",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f67d1af5-cdfa-4d53-b3c2-3b17327e1899",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "e225bca3-7438-4fcc-96ff-c334021ab921",
+          "columns" : [ {
+            "UUID" : "cefe6ff8-0984-4cae-bd19-34bb3be864e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e225bca3-7438-4fcc-96ff-c334021ab921",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "8",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "7",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP31"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "bee75edc-1ce0-4bd5-a92e-9f5beacf56a0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cefe6ff8-0984-4cae-bd19-34bb3be864e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7968eb79-e21e-446e-8d0a-fd4c440e2934",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo de flora y fauna"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "43cc357a-aed1-44ae-bda4-2cb01852be19",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2e50d022-094b-4bf6-8365-e61e40131fe8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-flora-y-fauna"
+}

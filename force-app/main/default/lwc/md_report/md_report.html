@@ -1,0 +1,117 @@
+<template>
+  <div class="md-list-container">
+    <p class="md-big-title" lwc:if={showTableTitle}>{tableTitle}</p>
+
+    <div class="md-xls-btn-container" lwc:if={showDownloadButton}>
+      <c-md_report-download-xls
+        object-api-name={objectApiName}
+        rows={data}
+        all-rows={allRowsForDownload}
+        onrequestdownload={handleRequestDownload}
+        manual-field-api-names={manualFieldApiNames}
+        manual-field-label-names={manualFieldLabelNames}
+        export-file-name={exportFileName}
+      ></c-md_report-download-xls>
+    </div>
+
+    <div class="md-box" lwc:if={showLegacyFilters}>
+      <div class="md-header">
+        <p>{filterHeaderLabel}</p>
+      </div>
+
+      <div class="md-p-1">
+        <div class="md-grid md-align-flex-end md-input-box" style="grid-template-columns: auto auto auto 1fr">
+          <div>
+            <p>{searchFieldLabel}</p>
+            <input type="text" placeholder={searchPlaceholder} value={searchTerm} onchange={handleSearchInput} />
+          </div>
+
+          <template lwc:if={dateFilterFieldName}>
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="dateFrom">{dateFromLabel}</label>
+              <div class="slds-form-element__control">
+                <input type="date" id="dateFrom" data-id="dateFrom" class="slds-input" value={dateFromValue} onchange={handleDateFromChange} />
+              </div>
+            </div>
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="dateTo">{dateToLabel}</label>
+              <div class="slds-form-element__control">
+                <input type="date" id="dateTo" data-id="dateTo" class="slds-input" value={dateToValue} onchange={handleDateToChange} />
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="md-filter-actions">
+          <button class="md-button md-light-button" onclick={handleClearFilters}>{filterClearLabel}</button>
+          <button class="md-button md-default-button" onclick={handleSearch} disabled={disableSearchBtn}>{filterApplyLabel}</button>
+        </div>
+      </div>
+    </div>
+
+    <template lwc:else>
+      <div class="md-box" lwc:if={showFilters}>
+        <c-md_report-filters
+          is-visible={showFilters}
+          show-advanced={showAdvancedFilters}
+          primary-fields={filterPrimaryFields}
+          advanced-fields={filterAdvancedFields}
+          hide-advanced-btn={hideAdvancedFiltersButton}
+          header-label={filterHeaderLabel}
+          advanced-label={filterAdvancedLabel}
+          clear-label={filterClearLabel}
+          apply-label={filterApplyLabel}
+          onfilterchange={handleFilterChange}
+          ontoggleadvanced={handleToggleAdvanced}
+          onapplyfilters={handleApplyFilters}
+          onclearfilters={handleClearAdvancedFilters}
+        ></c-md_report-filters>
+      </div>
+    </template>
+
+    <div class="md-datatable-container">
+      <div if:true={hasRecords} class="md-table-container">
+        <c-mosaic-direct-list-datatable
+          if:true={hasRecords}
+          key-field="Id"
+          data={data}
+          columns={columns}
+          draft-values={draftValues}
+          onrowaction={handleRowAction}
+          onsort={handleSort}
+          sorted-by={sortField}
+          sorted-direction={sortDirLower}
+          ondocumentdownloaderror={handleDocumentDownloadError}
+          wrap-text-max-lines="3"
+          wrap-table-header="all"
+          hide-checkbox-column
+        >
+        </c-mosaic-direct-list-datatable>
+      </div>
+
+      <template if:false={isLoading}>
+        <div class="md-info-message" if:false={hasRecords}>
+          <lightning-icon icon-name="utility:info" size="x-small" alternative-text="Info"></lightning-icon>
+          <span>{noResultsMessage}</span>
+        </div>
+      </template>
+
+      <div if:true={hasRecords} class="slds-m-top_small slds-grid slds-grid_align-spread slds-align_absolute-center">
+        <c-mosaic-direct-pagination
+          has-records={hasRecords}
+          current-page={pageNumber}
+          total-pages={totalPages}
+          page-buttons={pageButtons}
+          is-prev-disabled={isPrevDisabled}
+          is-next-disabled={isNextDisabled}
+          is-first-page-active={isFirstPageActive}
+          is-last-page-active={isLastPageActive}
+          show-left-ellipsis={showLeftEllipsis}
+          show-right-ellipsis={showRightEllipsis}
+          show-last-page={showLastPage}
+          onpagechange={handlePaginationChange}
+        ></c-mosaic-direct-pagination>
+      </div>
+    </div>
+  </div>
+</template>

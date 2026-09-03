@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Record_Type</name>
+        <label>Assign Record Type</label>
+        <locationX>875</locationX>
+        <locationY>2903</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Record_Type.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Zero_to_Freight</name>
+        <label>Assign Zero to Freight</label>
+        <locationX>875</locationX>
+        <locationY>1103</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_EstFreightPrice__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IsShipToPopulatedDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>To assign Quantity based on Account&apos;s UoM</description>
+        <name>ConvertedToMTNQuantityAssignment</name>
+        <label>Converted To MTN Quantity Assignment</label>
+        <locationX>314</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_QuantityAccountsUoM__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numSTNToMTNConversionFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>To assign Quantity based on Account&apos;s UoM</description>
+        <name>ConvertedToSTNQuantityAssignment</name>
+        <label>Converted To STN Quantity Assignment</label>
+        <locationX>578</locationX>
+        <locationY>2327</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_QuantityAccountsUoM__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>numMTNToSTNConversionFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>To reset Quantity(Account&apos;s UoM) when UoM is other than MTN/STN</description>
+        <name>NullifyAccountsUoMAssignment</name>
+        <label>Nullify Account&apos;s UoM Assignment</label>
+        <locationX>1018</locationX>
+        <locationY>2111</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_QuantityAccountsUoM__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Populate_Values_from_Original_Quote_Line_Assignment</name>
+        <label>Populate Values from Original Quote Line</label>
+        <locationX>875</locationX>
+        <locationY>1703</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_ContractType__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RenewedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_ContractType__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_Incoterms1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RenewedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_Incoterms1__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_ModeofTransportation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RenewedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_ModeofTransportation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_UnitofMeasure__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RenewedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_UnitofMeasure__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UnitOfMeasureCheckDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>To assign Quantity based on Account&apos;s UoM</description>
+        <name>QuantityAssignment</name>
+        <label>Quantity Assignment</label>
+        <locationX>50</locationX>
+        <locationY>2219</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_SS_QuantityAccountsUoM__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Quantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Reset_Values</name>
+        <label>Reset Values</label>
+        <locationX>853</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_OriginalQuantity__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Clonning_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Comission_From_Source</name>
+        <label>Set Comission From Source</label>
+        <locationX>721</locationX>
+        <locationY>719</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_Commission__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Source__r.PMC_CPQ_Commission__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Freight_Populated_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>ShiptoAssignmentfromJunction</name>
+        <label>Ship to Assignment from Junction</label>
+        <locationX>875</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_ShipTo__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PMC_CPQ_SoldToShipToJunction__r.PMC_SS_RelatedAccount__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Parent_Quote_is_a_Renewal_Quote_Decision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>If ship to is removed the Actual ship to also needs to be removed</description>
+        <name>ShipToBlankAssignment</name>
+        <label>Ship To Blank Assignment</label>
+        <locationX>1139</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_ShipTo__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Parent_Quote_is_a_Renewal_Quote_Decision</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>To store Name of MTN UoM</description>
+        <name>STRING_MTN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>MTN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>MTNtoSTN Custom Metadata</description>
+        <name>STRING_MTNtoSTN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>MTNtoSTN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>To store Name of STN UoM</description>
+        <name>STRING_STN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>STN</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Custom Metadata Developer Name for STNtoMTN</description>
+        <name>STRING_STNtoMTN</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>STNtoMTN</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Clonning_Type</name>
+        <label>Clonning Type</label>
+        <locationX>853</locationX>
+        <locationY>611</locationY>
+        <defaultConnector>
+            <targetReference>Is_Freight_Populated_Decision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BlockAndReplaceOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Source__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Comission_From_Source</targetReference>
+            </connector>
+            <label>BlockAndReplaceOutcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ConfigSetting_Decision</name>
+        <label>Config Setting Decision</label>
+        <locationX>396</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Should_Reset_Original_Quantity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSettingDecision_DontRunOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Freight_Populated_Decision</name>
+        <label>Is Freight Populated Decision</label>
+        <locationX>1007</locationX>
+        <locationY>995</locationY>
+        <defaultConnector>
+            <targetReference>IsShipToPopulatedDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Freight Populated</defaultConnectorLabel>
+        <rules>
+            <name>Freight_Not_Populated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_EstFreightPrice__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Zero_to_Freight</targetReference>
+            </connector>
+            <label>Freight Not Populated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsShipToPopulatedDecision</name>
+        <label>Is Ship to Populated Decision</label>
+        <locationX>1007</locationX>
+        <locationY>1295</locationY>
+        <defaultConnector>
+            <targetReference>ShipToBlankAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Ship To Blank Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IsShipToPopulatedDecision_ShipToPopulatedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_SoldToShipToJunction__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ShiptoAssignmentfromJunction</targetReference>
+            </connector>
+            <label>Ship to Populated Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Parent_Quote_is_a_Renewal_Quote_Decision</name>
+        <label>Parent Quote is a Renewal Quote</label>
+        <locationX>1007</locationX>
+        <locationY>1595</locationY>
+        <defaultConnector>
+            <targetReference>UnitOfMeasureCheckDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Parent_Quote_is_Renewal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Quote__r.SBQQ__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Renewal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__RenewedSubscription__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Populate_Values_from_Original_Quote_Line_Assignment</targetReference>
+            </connector>
+            <label>Parent Quote is Renewal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>To compare Account&apos;s and Quote Line&apos;s UoM to check if conversion is required.</description>
+        <name>QuantityConversionRequiredDecision</name>
+        <label>Quantity Conversion Required Decision</label>
+        <locationX>446</locationX>
+        <locationY>2111</locationY>
+        <defaultConnector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>QuantityConversionRequiredDecision_SameUoMOutcome</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Account__r.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Account__r.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuantityAssignment</targetReference>
+            </connector>
+            <label>Same UoM Outcome</label>
+        </rules>
+        <rules>
+            <name>QuantityConversionRequiredDecision_STNtoMTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Account__r.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>STNToMTNCustomMetadataGet</targetReference>
+            </connector>
+            <label>STN to MTN Outcome</label>
+        </rules>
+        <rules>
+            <name>QuantityConversionRequiredDecision_MTNtoSTNOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Account__r.PMC_SS_UnitofMeasure__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MTNToSTNCustomMetadataGet</targetReference>
+            </connector>
+            <label>MTN to STN Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>QuoteLineIsNewDecision</name>
+        <label>Quote Line Is New Decision</label>
+        <locationX>1007</locationX>
+        <locationY>2687</locationY>
+        <defaultConnectorLabel>Is Update Outcome</defaultConnectorLabel>
+        <rules>
+            <name>QuoteLineIsNewDecision_IsNewOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>BooleanIsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Record_Type</targetReference>
+            </connector>
+            <label>Is New Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Should_Reset_Original_Quantity</name>
+        <label>Should Reset Original Quantity</label>
+        <locationX>1007</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Is_Freight_Populated_Decision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IsNew_Or_isCloned_Outcome</name>
+            <conditionLogic>(1 OR 2 ) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>BooleanIsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>isCloned</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_LegacyQuoteLineID__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Reset_Values</targetReference>
+            </connector>
+            <label>IsNew Or isCloned</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision Element to check unit of measure is not null.</description>
+        <name>UnitOfMeasureCheckDecision</name>
+        <label>Unit Of Measure Check Decision</label>
+        <locationX>1007</locationX>
+        <locationY>1895</locationY>
+        <defaultConnector>
+            <targetReference>QuoteLineIsNewDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>UnitOfMeasureCheckDecision_UOMPresent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UoMMTNOrSTNDecision</targetReference>
+            </connector>
+            <label>UOM Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>To check if UoM is MTN or STN</description>
+        <name>UoMMTNOrSTNDecision</name>
+        <label>UoM MTN Or STN Decision</label>
+        <locationX>732</locationX>
+        <locationY>2003</locationY>
+        <defaultConnector>
+            <targetReference>NullifyAccountsUoMAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>UoMMTNOrSTNDecision_MTNSTNUoMOutcome</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_MTN</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_UnitofMeasure__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>STRING_STN</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuantityConversionRequiredDecision</targetReference>
+            </connector>
+            <label>MTN/STN UoM Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow will be used to leverage all Before Operations on the Quote Line object</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>BooleanIsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>isCloned</name>
+        <dataType>Boolean</dataType>
+        <expression>ISCLONE()</expression>
+    </formulas>
+    <formulas>
+        <description>To convert Quantity from MTN to STN</description>
+        <name>numMTNToSTNConversionFormula</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.SBQQ__Quantity__c}*{!MTNToSTNCustomMetadataGet.PMC_SS_ConversionFactor__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>To convert Quantity from STN to MTN</description>
+        <name>numSTNToMTNConversionFormula</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.SBQQ__Quantity__c}*{!STNToMTNCustomMetadataGet.PMC_SS_ConversionFactor__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>PMC CPQ Quote Line Before Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Quote Line Before Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Record_Type</name>
+        <label>Get Record Type</label>
+        <locationX>875</locationX>
+        <locationY>2795</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Record_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>SBQQ__QuoteLine__c</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Quote__r.RecordType.DeveloperName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>To get MTNtoSTN</description>
+        <name>MTNToSTNCustomMetadataGet</name>
+        <label>MTN To STN Custom Metadata Get</label>
+        <locationX>578</locationX>
+        <locationY>2219</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ConvertedToSTNQuantityAssignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_MTNtoSTN</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PMC_SS_UOMConversionMapping__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>To get STNtoMTN</description>
+        <name>STNToMTNCustomMetadataGet</name>
+        <label>STN To MTN Custom Metadata Get</label>
+        <locationX>314</locationX>
+        <locationY>2219</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ConvertedToMTNQuantityAssignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_STNtoMTN</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PMC_SS_UOMConversionMapping__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>270</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSetting_Decision</targetReference>
+        </connector>
+        <object>SBQQ__QuoteLine__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

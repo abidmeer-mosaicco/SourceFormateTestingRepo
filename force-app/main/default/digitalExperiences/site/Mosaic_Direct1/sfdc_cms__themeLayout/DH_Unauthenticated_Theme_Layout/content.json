@@ -1,0 +1,64 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "DH Unauthenticated Theme Layout",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_guestHeader",
+          "id" : "c21bbc36-af69-4f21-bfb8-886a7881ef8e",
+          "type" : "component"
+        } ],
+        "id" : "42047a1b-5a1a-4ce7-b536-643461187968",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_footer",
+          "id" : "d3998e2e-a2ec-40c8-a8e3-90069ef33c0d",
+          "type" : "component"
+        } ],
+        "id" : "b329ae2e-ecb5-46f6-9579-783d9e7c5b8f",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_cookieConsentBanner",
+          "id" : "289e4c79-cda3-4e70-a9f8-6de4ff45f2e7",
+          "type" : "component"
+        } ],
+        "id" : "91cdc689-8ab1-4b4d-ba27-df8cd109fe20",
+        "name" : "cookie",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_outage",
+          "id" : "f84514fb-74e2-4cc3-b640-97bdee909b7d",
+          "type" : "component"
+        } ],
+        "id" : "d4bd9b25-b658-4239-9b9c-33b05a9cc171",
+        "name" : "outage",
+        "type" : "region"
+      } ],
+      "definition" : "c:pmc_dh_customUnauthenticatedTheme",
+      "id" : "09bfc935-cd43-4e5d-8295-f629e5409b7b",
+      "type" : "component"
+    }
+  },
+  "urlName" : "dh-unauthenticated-theme-layout"
+}

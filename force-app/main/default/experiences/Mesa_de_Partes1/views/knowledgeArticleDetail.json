@@ -1,0 +1,81 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "d9cd326c-26cd-45c4-828f-72ad9d04183e",
+  "label" : "Knowledge Article Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "04d566ed-1bb8-4e8d-a1a6-829806dfbaac",
+          "columns" : [ {
+            "UUID" : "c4a92216-7ebe-4905-83d0-8abfee1cb25a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "04d566ed-1bb8-4e8d-a1a6-829806dfbaac",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:recordDetail",
+          "id" : "e12aea2d-813b-4145-a760-deae245f6d08",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "numberOfArticles" : 5,
+            "title" : "Trending Articles",
+            "topicId" : "{!topicId}"
+          },
+          "componentName" : "selfService:topicTrendingArticles42",
+          "id" : "e2e2bf8b-cc77-4f0b-84cc-02c57179bbae",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c4a92216-7ebe-4905-83d0-8abfee1cb25a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a299a0c6-4e41-439d-8409-61b6791030b4",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Knowledge Article Detail"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fd86e584-c869-4083-938d-ad1d4a878675",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e7a7f82b-ba9b-4c8e-a40a-a4eed0e475d7",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "tUqz2BDm5csaXdbOhiD5VXw08yIyvE",
+  "type" : "view",
+  "viewType" : "custom-knowledge-article-detail"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ExchangeRate__c</fullName>
+    <description>Document exchange rate (VBRK-KURRF). The mapping specifies 9+5 decimals (scale=5). The org standard uses precision=18 for Number fields. Consistent with the PMC_CPQ_ExchangeRate__c already existing on OrderItem and Quote (scale=4 on those; here scale=5 as per the SAP specification).</description>
+    <externalId>false</externalId>
+    <label>Exchange Rate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>5</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

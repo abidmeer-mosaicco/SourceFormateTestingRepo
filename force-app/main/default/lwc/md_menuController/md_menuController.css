@@ -1,0 +1,107 @@
+.md-menu-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+}
+
+.md-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.md-menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+.md-menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.md-menu-link {
+    font-family: var(--regular-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: var(--dark-secondary-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: font-weight 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.md-menu-link:hover {
+    font-weight: 600;
+}
+
+.md-menu-link.active {
+    font-weight: 700;
+    color: var(--md-brand-primary-orange);
+}
+
+.md-chevron {
+    font-size: 10px;
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.md-menu-item--dropdown {
+    cursor: pointer;
+}
+
+.md-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(9, 53, 50, 0.1);
+    z-index: 100;
+}
+
+.md-dropdown-item {
+    border-bottom: 1px solid rgba(9, 53, 50, 0.06);
+}
+
+.md-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.md-dropdown-item a {
+    display: block;
+    padding: .5em 1em;
+    font-family: var(--regular-font);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--dark-secondary-green);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.15s ease;
+}
+
+.md-dropdown-item a:hover {
+    background-color: var(--md-tertiary-gray);
+    font-weight: 500;
+}
+
+.md-dropdown-item a.active {
+    font-weight: 700;
+    color: var(--md-brand-primary-orange);
+}

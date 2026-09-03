@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3b419f13-924b-4fde-b758-805c96dde6c4",
+  "label" : "Environmental Setup Page",
+  "regions" : [ {
+    "id" : "eb2c0fcd-1bdf-443f-9175-af69b5934790",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:documentEnvironmentalSetup",
+      "id" : "1f265d2a-687a-4328-99cc-e1be335b0521",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "84f4e4ef-e082-44b3-a371-25f462f05e05",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ec5a73db-83d3-4699-9edc-8ca115e8d930",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Environmental Setup Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "249a044d-84cd-47b1-9e37-8c36f38d4a93",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1d1f628f-ad5d-40ed-97e3-fd42ce14b96e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-environmental-setup-page"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Product_Resource_to_O9__c</fullName>
+    <label>Product Resource to O9</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BASICA PRO</fullName>
+                <default>false</default>
+                <label>BASICA PRO</label>
+            </value>
+            <value>
+                <fullName>K BLENDS</fullName>
+                <default>false</default>
+                <label>K BLENDS</label>
+            </value>
+            <value>
+                <fullName>N BLENDS</fullName>
+                <default>false</default>
+                <label>N BLENDS</label>
+            </value>
+            <value>
+                <fullName>NITROGEN</fullName>
+                <default>false</default>
+                <label>NITROGEN</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>P BLENDS</fullName>
+                <default>false</default>
+                <label>P BLENDS</label>
+            </value>
+            <value>
+                <fullName>PHOSPHATE</fullName>
+                <default>false</default>
+                <label>PHOSPHATE</label>
+            </value>
+            <value>
+                <fullName>POTASH</fullName>
+                <default>false</default>
+                <label>POTASH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

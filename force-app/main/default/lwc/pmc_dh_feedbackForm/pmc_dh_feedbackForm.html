@@ -1,0 +1,14 @@
+<template>
+  <div class="slds-grid slds-gutters slds-wrap slds-p-horizontal_medium slds-p-top_medium feedback-frm">
+    <div class="slds-col slds-size_1-of-1">
+      <lightning-radio-group name={reasonFieldName} data-name={reasonFieldName} label={reasonLabel}
+        options={picklistOptions} value="" type="radio" onchange={handleDataChange}>
+      </lightning-radio-group>
+    </div>
+    <div class="slds-col slds-size_1-of-1">
+      <lightning-textarea name={commentFieldName} data-name={commentFieldName} maxlength="255" label={commentLabel}
+        disabled={isCommentDisabled} variant="label-hidden" placeholder={textareaPlaceholder}
+        onchange={handleDataChange}></lightning-textarea>
+    </div>
+  </div>
+</template>

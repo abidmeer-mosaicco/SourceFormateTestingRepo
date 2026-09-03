@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowGuestPaymentsApi>false</allowGuestPaymentsApi>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
+    <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
+    <browserXssProtection>true</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <clickjackProtectionLevel>AllowAllFraming</clickjackProtectionLevel>
+    <contentSniffingProtection>true</contentSniffingProtection>
+    <customWebAddresses>
+        <domainName>www.miskimayo.com</domainName>
+        <primary>false</primary>
+    </customWebAddresses>
+    <enableAuraRequests>true</enableAuraRequests>
+    <favoriteIcon>miskiMayoCustomCarouselWithTextPartP34</favoriteIcon>
+    <fileNotFoundPage>FileNotFound</fileNotFoundPage>
+    <genericErrorPage>Exception</genericErrorPage>
+    <inMaintenancePage>InMaintenance</inMaintenancePage>
+    <indexPage>CommunitiesLanding</indexPage>
+    <masterLabel>Miski Mayo</masterLabel>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <selfRegPage>CommunitiesSelfReg</selfRegPage>
+    <serverIsDown>SNA_OsKrQ_sf_default_cdn_Miski_Mayo_Aura1</serverIsDown>
+    <siteAdmin>sarah.yeager@mosaicco.com</siteAdmin>
+    <siteGuestRecordDefaultOwner>sarah.yeager@mosaicco.com</siteGuestRecordDefaultOwner>
+    <siteRedirectMappings>
+        <action>Permanent</action>
+        <isActive>true</isActive>
+        <isDynamic>false</isDynamic>
+        <source>/favicon.ico</source>
+        <target>/sfsites/c/resource/miskiMayoCustomCarouselWithTextPartP34</target>
+    </siteRedirectMappings>
+    <siteType>ChatterNetwork</siteType>
+    <urlPathPrefix>miskimayo</urlPathPrefix>
+</CustomSite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <label>Brasil</label>
+        <name>PMC_SS_Brazil</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Norteamérica</label>
+        <name>PMC_SS_NorthAmerica</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>El tipo de rebaja no se puede crear/editar en esta fase. Modifique el contrato de venta para revisar el tipo de rebaja.</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede crear/actualizar el tipo de rebaja del programa una vez que el programa de rebaja está inactivo.</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeModification</name>
+    </validationRules>
+</CustomObjectTranslation>

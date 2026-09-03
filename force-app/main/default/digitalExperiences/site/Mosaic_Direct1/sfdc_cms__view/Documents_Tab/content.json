@@ -1,0 +1,128 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Documents Tab",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"d27088d3-0857-409b-a0bc-b45761d48f35\",\"columns\":[{\"UUID\":\"bcce9fba-d462-4c0c-9acf-bfc17e1ca73e\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicDirectNavBar",
+              "id" : "462c0826-4d9b-4367-a6fa-9152abfbad63",
+              "type" : "component"
+            } ],
+            "id" : "bcce9fba-d462-4c0c-9acf-bfc17e1ca73e",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "d27088d3-0857-409b-a0bc-b45761d48f35",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"d0ab6059-540d-438a-9169-8bafde5b5857\",\"columns\":[{\"UUID\":\"168817ff-86b0-4654-8e81-c2aef1600fa3\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "defaultObject" : "ShipmentItem",
+                "dxpStyle" : {
+                  "isVisible" : true
+                },
+                "orderAccountNamePath" : "PMC_CPQ_OrderProduct__r.Order.Account.Name",
+                "orderBaseWhere" : "isVisible__c = true",
+                "orderDateFilterFieldName" : "PMC_CPQ_ShippedDate__c",
+                "orderEndDateFilterFieldName" : "PMC_CPQ_ShippedDate__c",
+                "orderManualFieldApiNames" : "Id, PMC_CPQ_OrderProduct__r.OrderId, PMC_CPQ_OrderProduct__r.Order.Account.Name, PMC_CPQ_OrderProduct__r.Order.PMC_CPQ_SAPOrderNumber__c, PMC_CPQ_OrderProduct__r.OrderItemNumber__c, PMC_CPQ_OrderProduct__r.SBQQ__Contract__r.SBQQ__Quote__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_LinePONumber__c, PMC_CPQ_ShippedDate__c ,PMC_CPQ_OrderProduct__r.PMC_CPQ_ProductLocation__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_ShipTo__r.PMC_SS_CityState__c, PMC_CPQ_OrderProduct__r.PMC_CPQ_ModeofTransportation__c, Shipment.PMC_CPQ_VehicleID__c",
+                "orderManualFieldLabelNames" : "Id, OrderId, Account name, Order Number, Order Item, Contract Number,PO Number, Shipment date, Origin, Ship To, MOT, Vehicle ID",
+                "orderSapNumberPath" : "PMC_CPQ_OrderProduct__r.Order.Account.PMC_SS_SAPCustomerNumber__c",
+                "pageSize" : 50,
+                "quoteAccountNamePath" : "SBQQ__Account__r.Name",
+                "quoteBaseWhere" : "SBQQ__Type__c = 'Quote' AND SBQQ__Status__c = 'Accepted'",
+                "quoteDateFilterFieldName" : "PMC_CPQ_ContractStart__c",
+                "quoteEndDateFilterFieldName" : "PMC_CPQ_ContractEnd__c",
+                "quoteManualFieldApiNames" : "SBQQ__Account__r.Name,  Id, Name,PMC_CPQ_PO__c,SBQQ__LineItems__r.SBQQ__ProductName__c,SBQQ__LineItems__r.PMC_CPQ_ModeofTransportation__c,SBQQ__LineItems__r.PMC_CPQ_ShippingType__c,SBQQ__LineItems__r.PMC_CPQ_Incoterms1__c,SBQQ__LineItems__r.PMC_CPQ_ProductLocation__r.Name, SBQQ__LineItems__r.PMC_CPQ_SoldToShipToJunction__r.Name,SBQQ__LineItems__r.PMC_CPQ_FinalPricePerTon__c,PMC_CPQ_ContractStart__c,PMC_CPQ_ContractEnd__c",
+                "quoteManualFieldLabelNames" : "Account Name, Id,Contract Number,PO,Product,MOT,Shipping Type,Incoterm,Origin,Ship To, Price Per Ton, Contract Start,Contract End",
+                "quoteSapNumberPath" : "SBQQ__Account__r.PMC_SS_SAPCustomerNumber__c"
+              },
+              "definition" : "c:mosaicDirectContainer",
+              "id" : "15ad5699-c25e-45b0-9649-56c0429b86ba",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicDirectLoading",
+              "id" : "99d9cf13-5564-449e-b458-d7b57a86b110",
+              "type" : "component"
+            } ],
+            "id" : "168817ff-86b0-4654-8e81-c2aef1600fa3",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "d0ab6059-540d-438a-9169-8bafde5b5857",
+          "type" : "component"
+        } ],
+        "id" : "4d80431e-687b-4be5-95fd-7b93b5554fdb",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Documents Tab",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "c13c914f-75d5-43ad-bb09-cc74fb2abf2b",
+          "type" : "component"
+        } ],
+        "id" : "0738bfab-bab5-49ff-af6b-d9d816d2befa",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "cae2bd2a-5451-47b4-85c5-4b569847be00",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-documents-tab"
+  },
+  "urlName" : "documents-tab"
+}

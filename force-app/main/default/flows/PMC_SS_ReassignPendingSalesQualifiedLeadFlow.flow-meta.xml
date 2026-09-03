@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>This constant variable stores the API name of flow</description>
+        <name>STRING_FLOW_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_ReassignPendingSalesQualifiedLeadFlow</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>This constant will store the api name of GTM Brazil Leads Queue.</description>
+        <name>STRING_GTM_BRAZIL_LEADS_QUEUE_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_GTMBrazilLeads</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>This constant variable is used to store the API name of GTM NA Leads Queue</description>
+        <name>STRING_GTM_NA_LEADS_QUEUE_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_GTMNALeads</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>This decision element is used to check if we have to bypass the execution of this flow.</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>314</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>LeadOwnerReassignmentDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_IsBypassed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Is Bypassed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision element will check how many days have been passed since the last email was sent to the retailer for acceptance and if it is more than or equal to 14 it changes the lead owner to GTM queue</description>
+        <name>LeadOwnerReassignmentDecision</name>
+        <label>Lead Owner Reassignment Decision</label>
+        <locationX>842</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>LeadOwnerReassignmentDecision_ChangeOwnerToNAGTMQueueOutcome</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>strNumberOfDaysSinceLastEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_LeadRetailerAcceptanceDeadline</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>North America</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>United States</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Canada</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Peru</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetGTMNALeadsQueueRecord</targetReference>
+            </connector>
+            <label>Change Owner To NA GTM Queue Outcome</label>
+        </rules>
+        <rules>
+            <name>LeadOwnerReassignmentDecision_ChangeOwnerToBrazilGTMQueueOutcome</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>strNumberOfDaysSinceLastEmail</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_LeadRetailerAcceptanceDeadline</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Brazil</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Country</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Paraguay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetGTMBrazilLeadsQueueRecord</targetReference>
+            </connector>
+            <label>Change Owner To Brazil GTM Queue Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow will reassign the owner to GTM for leads which are in sales qualified status but are not approved or rejected by retailer user in last 14 days.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>This formula will calculate the number of days that has been passed since the email was triggered.</description>
+        <name>strNumberOfDaysSinceLastEmail</name>
+        <dataType>String</dataType>
+        <expression>TEXT( TODAY() - {!$Record.PMC_SS_RetailerEmailSentDate__c} )</expression>
+    </formulas>
+    <interviewLabel>PMC SS S {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Reassign Pending Sales Qualified Lead Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>This element is used to create error log records in case of failure.</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>1370</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOW_API_NAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>This element will get the GTM Brazil leads queue record</description>
+        <name>GetGTMBrazilLeadsQueueRecord</name>
+        <label>Get GTM Brazil Leads Queue Record</label>
+        <locationX>842</locationX>
+        <locationY>468</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>BRLeadRecordOwnerUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_GTM_BRAZIL_LEADS_QUEUE_API_NAME</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>This element is used to get the GTM queue for north america region.</description>
+        <name>GetGTMNALeadsQueueRecord</name>
+        <label>Get GTM NA Leads Queue Record</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>NALeadRecordOwnerUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_GTM_NA_LEADS_QUEUE_API_NAME</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>This element will update the lead owner to GTM Brazil Leads queue</description>
+        <name>BRLeadRecordOwnerUpdate</name>
+        <label>BR Lead Record Owner Update</label>
+        <locationX>842</locationX>
+        <locationY>576</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>GetGTMBrazilLeadsQueueRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This element will update the lead owner to GTM NA Leads queue</description>
+        <name>NALeadRecordOwnerUpdate</name>
+        <label>NA Lead Record Owner Update</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>GetGTMNALeadsQueueRecord.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>PMC_SS_AcceptedByRetailer__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Lost</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Converted</stringValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-09-26</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

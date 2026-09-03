@@ -1,0 +1,1315 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2555a09f-79c9-431c-8873-d9fd7567a6e3",
+  "label" : "Gestión Ambiental",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a7769506-7004-4132-87d8-5f27af6fafcf",
+          "columns" : [ {
+            "UUID" : "a495b1a5-122f-40a3-9f1a-3b8cd54198c6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a7769506-7004-4132-87d8-5f27af6fafcf",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "695ee2e8-1b54-476a-b678-db9035786080",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a495b1a5-122f-40a3-9f1a-3b8cd54198c6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "62e94425-6774-4cf5-8b99-d8d3aab694f7",
+          "columns" : [ {
+            "UUID" : "99d919f2-0c7c-4055-8e1f-496e2baa67e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "62e94425-6774-4cf5-8b99-d8d3aab694f7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageI",
+            "textDescription" : "Cumplimos con nuestros compromisos socioambientales"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "50fcb356-83f4-436e-a93a-db53f650f835",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "99d919f2-0c7c-4055-8e1f-496e2baa67e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "2a918cee-ac52-4e97-8c62-7b1951ab8c14",
+          "columns" : [ {
+            "UUID" : "7340611f-02d6-4c40-98e8-e0241532094c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 212
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2a918cee-ac52-4e97-8c62-7b1951ab8c14",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Gestión Ambiental</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1ae3f9bc-1ba0-4ff0-8356-66ef05610de3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 20px;\">Siendo uno de nuestros valores empresariales “Cuidar nuestro planeta”, buscamos que nuestra operación tenga un desempeño ambiental óptimo, que cumpla con la normatividad ambiental nacional y con los diversos permisos obtenidos y de los cuales derivan nuestros compromisos ambientales.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "edf90d73-fcb8-4ae9-b5a5-14b6128a83fa",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7340611f-02d6-4c40-98e8-e0241532094c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "16016b9e-a65d-4b50-8ba3-270d41cd3f25",
+          "columns" : [ {
+            "UUID" : "3c17e4ea-c5fb-41d8-97c4-c5b4b0149002",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a3e89d37-4d17-44cc-9916-f542175efd93",
+            "columnKey" : "a51db",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bec55a69-fd2c-4364-92eb-c4473b3c904b",
+            "columnKey" : "c3611",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "16016b9e-a65d-4b50-8ba3-270d41cd3f25",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "GlobeSeed",
+            "iconSize" : "5",
+            "text" : "Ejecutamos nuestro plan de manejo ambiental de acuerdo con lo estipulado en nuestro Instrumento de Gestión Ambiental (EIA), para prevenir, mitigar y controlar los posibles impactos ambientales que pudieran generar nuestras operaciones.",
+            "textColorHead" : "Black",
+            "textHead" : "Plan de Manejo Ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "9bf1f43c-6336-4b91-ab0c-18ba220418d3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "Trashcan",
+            "iconSize" : "5",
+            "text" : "Con el compromiso de nuestro personal y contratistas, manejamos nuestros residuos desde su generación, segregación en la fuente, recolección, transporte y disposición final en rellenos sanitarios y/o de seguridad autorizados.",
+            "textColorHead" : "Black",
+            "textHead" : "Gestión Integral de Residuos Sólidos"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "ebdd15ae-bc17-4382-b3f6-1dc121a059c1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3c17e4ea-c5fb-41d8-97c4-c5b4b0149002",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "CloudSeed",
+            "iconSize" : "9",
+            "text" : "Contamos con el reconocimiento “Huella de Carbono” Nivel 1 otorgado por el Ministerio del Medio Ambiente, por haber realizado la medición de nuestra huella de carbono en el periodo 2023. Seguiremos trabajando en dejar una huella positiva en nuestro planeta hasta obtener las 4 estrellas.",
+            "textColorHead" : "Black",
+            "textHead" : "Huella de Carbono Perú"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "5dea38af-8306-4e90-83c7-5c77a5190977",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "Gear",
+            "iconSize" : "5",
+            "text" : "En nuestros procesos productivos no usamos reactivos químicos. Nuestros relaves finos están compuestos de agua de mar con arcilla y arena que son depositados en los tanques (tanques excavados) y pozas de relaves ubicados.",
+            "textColorHead" : "Black",
+            "textHead" : "Procesos Productivos Limpios"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "8aa68347-f9bb-4fad-bfd6-1ba1e89b2cf9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a3e89d37-4d17-44cc-9916-f542175efd93",
+        "regionLabel" : "Column 2",
+        "regionName" : "a51db",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "Hydrant",
+            "iconSize" : "5",
+            "text" : "Nuestras aguas residuales domésticas e industriales son tratadas íntegramente en nuestras Plantas de Tratamiento de Aguas Residuales Domésticas (PTARD) y en los tanques y pozas de relaves, respectivamente; cumpliendo con los Límites Máximos Permisibles establecidos en la normatividad ambiental.",
+            "textColorHead" : "Black",
+            "textHead" : "Cero vertimientos de aguas residuales"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "2966eb94-e8e7-4fed-9194-b65a9b0cadba",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "backgroundOpacity" : "9",
+            "borderColor" : "#E2231A",
+            "borderThickness" : "4",
+            "bottonTextHeight" : "400",
+            "cardHeight" : "515",
+            "fontSize" : "18",
+            "fontSizeHead" : "22",
+            "iconName" : "ChartMeeting",
+            "iconSize" : "5",
+            "text" : "Nuestro personal, como el de nuestras contratistas, son capacitados en los distintos aspectos e impactos ambientales relacionados con sus actividades, considerando las medidas de control ambiental establecidas en el Instrumento de Gestión Ambiental correspondiente.",
+            "textColorHead" : "Black",
+            "textHead" : "Capacitaciones"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdatedTwo",
+          "id" : "07ed5226-fe76-4e3a-8b18-f4d8b8772ba2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bec55a69-fd2c-4364-92eb-c4473b3c904b",
+        "regionLabel" : "Column 3",
+        "regionName" : "c3611",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "a75ed0c6-3b94-45f3-af93-a9c38502668b",
+          "columns" : [ {
+            "UUID" : "9b1183e5-0d7d-4fab-9dae-59ad49851aef",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 82
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a75ed0c6-3b94-45f3-af93-a9c38502668b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#instrumentos-de-gestion-ambiental-aprobados\" id=\"instrumentos-de-gestion-ambiental-aprobados\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(0px);\">\n          <span style=\"color: #E2231A;\">Instrumentos</span> <span style=\"color: #E2231A;\">de</span> <span style=\"color: #E2231A;\"> Gestión </span> <span style=\"color: #E2231A;\"> Ambiental</span> <span style=\"color: #E2231A;\"> aprobados</span> \n    </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "d236a76f-7103-4057-87c4-797e0e973875",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px; color: rgb(26, 26, 26);\">En Miski Mayo iniciamos nuestras actividades en el año 2010, conforme lo aprobado en el EIA (2008). Nuestra operación está conformada por los siguientes componentes aprobados en el EIA:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c96e26d6-3c6b-477a-a5d9-db44430bbc6e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9b1183e5-0d7d-4fab-9dae-59ad49851aef",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "6b25af11-4494-422f-9615-18b5ffd07bd7",
+          "columns" : [ {
+            "UUID" : "7b15d931-fe17-45c9-94ed-13f95f59f2ad",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6dc53695-8a33-461b-b5ec-15c4c1e3e8f0",
+            "columnKey" : "7783c",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6b25af11-4494-422f-9615-18b5ffd07bd7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 15pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Mina</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Planta Concentradora</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Zona de Descarga de Camiones</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Faja Transportadora Sobre Terreno</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Zona de Secado y Almacenamiento</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "0cf852a3-2144-4f3b-9f72-570472afd461",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7b15d931-fe17-45c9-94ed-13f95f59f2ad",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 15pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Puerto</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Línea de Impulsión de Agua de Mar</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Carretera Industrial</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10003;</span>\n    <span>Líneas de Transmisión</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "f5dff31b-7d37-4cab-869d-7bf7b4278d74",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6dc53695-8a33-461b-b5ec-15c4c1e3e8f0",
+        "regionLabel" : "Column 2",
+        "regionName" : "7783c",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "0bb9a83b-fe48-4648-8481-7f8051abb2dc",
+          "columns" : [ {
+            "UUID" : "d7d07005-ed44-4d30-9f20-837e4ece196c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9e5eb4b1-62e1-4e8a-bc81-4ed452095da8",
+            "columnKey" : "6816d",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "cd977311-edad-4abd-b46e-853d55a13928",
+            "columnKey" : "7d638",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0bb9a83b-fe48-4648-8481-7f8051abb2dc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "En el año 2011, Miski Mayo presentó la Primera Modificación del EIA, la cual contempló principalmente, el incremento de la producción hasta un 49% (5,8 Mt de concentrado de fosfato) a extraerse de las capas 1 a 5, reduciendo la vida útil de la Mina de 27 a 22 años; asimismo la adición de una línea de procesamiento, incremento del volumen de captación de agua de mar y la ampliación de instalaciones.",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "GlobeHands",
+            "title" : "Primera Modificatoria del EIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "cd1bcc5b-852f-4a4e-9b41-ba18e3db9eea",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d7d07005-ed44-4d30-9f20-837e4ece196c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "Posteriormente, Miski Mayo presentó un Informe Técnico Sustentatorio (ITS) para la mejora de la performance de la Planta Concentradora y la construcción de estructuras temporales de protección para contener posibles inundaciones en el área de mina, ante la posibilidad de la próxima ocurrencia de un Fenómeno El Niño (FEN).",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "HandPlant",
+            "title" : "Primer ITS de Primera MEIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "4ebd7ab0-afaa-4fe7-8876-645993f8e088",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9e5eb4b1-62e1-4e8a-bc81-4ed452095da8",
+        "regionLabel" : "Column 2",
+        "regionName" : "6816d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "En el año 2015, el Ministerio de Energía y Minas aprobó la Segunda Modificación del Estudio de Impacto Ambiental Detallado; consistiendo en la explotación de las capas de mineral de fosfato 6 y 7, las cuales requerían la implementación de un proceso de flotación en la línea 3 de la Planta Concentradora y la modificación de los componentes relacionados a este proceso en esta línea de producción.",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "TwoHandsPlant",
+            "title" : "Segunda Modificatoria del EIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "66d923c3-674e-408f-8b34-e089fcd68eb4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cd977311-edad-4abd-b46e-853d55a13928",
+        "regionLabel" : "Column 3",
+        "regionName" : "7d638",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "dfb74b1d-2d0e-4f99-bfc3-3f61cb46a165",
+          "columns" : [ {
+            "UUID" : "f0973ea9-132b-4b22-926c-518a91dffb5f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0f0b5f39-ea00-442b-b23c-d50de1cecf0a",
+            "columnKey" : "6816d",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "51c3b6f6-7d9b-4eae-9f9f-98f3b7a61d1a",
+            "columnKey" : "7d638",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "dfb74b1d-2d0e-4f99-bfc3-3f61cb46a165",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "En el año 2017, el Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles (SENACE), otorgó conformidad al Primer Informe Técnico Sustentatorio (ITS) de la Segunda Modificación del Estudio de Impacto Ambiental Detallado del Proyecto Fosfatos. Este ITS comprendía la modificación de la configuración de los tanques de relaves, y las estructuras previas a la ocurrencia de un evento de El Niño.",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "GrowingGlobe",
+            "title" : "Primer ITS de Segunda MEIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "5099c7ea-7a53-4b78-8b88-ed35855be64e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f0973ea9-132b-4b22-926c-518a91dffb5f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "En el año 2020, el SENACE otorgó conformidad al Segundo Informe Técnico Sustentatorio de la Segunda Modificación del Estudio de Impacto Ambiental Detallado del Proyecto Fosfatos Bayóvar; incluía la modificación de componentes principales y auxiliares.",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "LoveGlobe",
+            "title" : "Segundo ITS de Segunda MEIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "8f71748a-370b-4317-8f66-a4d304751302",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0f0b5f39-ea00-442b-b23c-d50de1cecf0a",
+        "regionLabel" : "Column 2",
+        "regionName" : "6816d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "450",
+            "description" : "En 2021, SENACE aprobó el Tercer Informe Técnico Sustentatorio de la Segunda MEIA Detallado de la Mina Fosfatos Bayóvar, el cual incluye la modificación de la matriz energética en la Planta de Secado, Optimización de la flota de transporte de concentrado húmedo, ejecución de sondeos exploratorios para la confirmación de reservas y la Instalación y operación de una estación de abastecimiento de energía eléctrica para vehículos eléctricos de transporte de personal.",
+            "fontSizeDescription" : "14",
+            "fontSizeTitle" : "18",
+            "iconName" : "HoldGlobe",
+            "title" : "Tercer ITS de Segunda MEIA"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "343c9cb0-e79e-4bf9-aaf1-6472e011a18b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "51c3b6f6-7d9b-4eae-9f9f-98f3b7a61d1a",
+        "regionLabel" : "Column 3",
+        "regionName" : "7d638",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "3bfdbb3d-fc91-4d08-a06c-bf2a3b3e1482",
+          "columns" : [ {
+            "UUID" : "a043aed2-4dd7-4687-bd7f-7c0c61e700f7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3bfdbb3d-fc91-4d08-a06c-bf2a3b3e1482",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#programa-de-monitoreo-ambiental\" id=\"programa-de-monitoreo-ambiental\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(-5px);\">\n      <span style=\"color: #E2231A;\">Programa</span> <span style=\"color: #E2231A;\">de</span> <span style=\"color: #E2231A;\"> Monitoreo </span> <span style=\"color: #E2231A;\"> Ambiental</span> \n    </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "f820632e-d283-4f31-9cdf-6b1b7e04935b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px; color: rgb(26, 26, 26);\">El Estudio de Impacto Ambiental (EIA) del Proyecto de Fosfatos Bayóvar fue aprobado mediante R.D. 084-2008-MEM/AAM del 17 de Abril del 2008. Los compromisos asumidos por Miski Mayo para las etapas de construcción y operación del Proyecto de Fosfatos Bayóvar se encuentran en la mencionada Resolución Directoral, en el EIA (Golder 2007) y en el documento de respuestas a las observaciones efectuadas por la autoridad ambiental (Golder 2008). Entre los compromisos se encuentra la aplicación de un Plan de Monitoreo Ambiental para ambas etapas, el cual incluye aspectos físicos y biológicos.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d9e9565b-c12a-49b0-8531-82349dd044fc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a043aed2-4dd7-4687-bd7f-7c0c61e700f7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "0ee3fe27-2c4c-45d3-aa8b-8d7fd19ceab1",
+          "columns" : [ {
+            "UUID" : "a2308043-30ad-45fc-b21b-082673a04725",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f10797a0-30d7-453d-8a59-6b680a122d47",
+            "columnKey" : "8feba",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "81726a2f-ed77-43a0-92b2-b7cf0875fc52",
+            "columnKey" : "84a99",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 285
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0ee3fe27-2c4c-45d3-aa8b-8d7fd19ceab1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "WindGust",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "cefe4cb8-41e6-4e1e-b644-149ed946f5c6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo de Calidad </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">de Aire</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1785ce9c-ba8d-4bc4-bacf-54e48727a109",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-calidad-de-aire"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "0f2e1106-de80-4087-83de-122e89e70a73",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a2308043-30ad-45fc-b21b-082673a04725",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Speaker",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "5888c27c-e62a-471b-a513-8c11a5a9fd56",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo de Calidad </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">de Ruido</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2bb0779e-6a86-470b-afb1-7b668a301b88",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-calidad-de-ruido"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "bdfd4b99-ff25-4062-a4f5-93bd580bf64a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f10797a0-30d7-453d-8a59-6b680a122d47",
+        "regionLabel" : "Column 2",
+        "regionName" : "8feba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Drop",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "fc6dc066-e047-4fa0-a636-c27ce131455b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo de Calidad </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">de Agua de Mar</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9db165db-6711-4e02-aaab-851f08d44941",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-calidad-de-agua-de-mar"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "be3e008f-70ff-4eee-8c02-ddffa8cef116",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "81726a2f-ed77-43a0-92b2-b7cf0875fc52",
+        "regionLabel" : "Column 3",
+        "regionName" : "84a99",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "2754782d-d9c5-466f-8a9b-ff10f265ddcb",
+          "columns" : [ {
+            "UUID" : "dbfaaf55-779c-421a-9949-39b5dd1dd1e2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e9155030-9363-4964-ab7f-e583bbe4f99e",
+            "columnKey" : "8feba",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e081b662-0873-49ba-8870-d13361f3f2d8",
+            "columnKey" : "84a99",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2754782d-d9c5-466f-8a9b-ff10f265ddcb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "DropGround",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "8f725e00-f2ab-4365-a6c0-ab82ae6c44a1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo de Calidad </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">de Agua Subterránea</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "fa664158-fb26-40db-9673-d4d5b23b9f73",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-agua-subterranea"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "cfed175f-fd15-498e-acc1-a8046fbd5b1d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dbfaaf55-779c-421a-9949-39b5dd1dd1e2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Sedimentary",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "073c287c-bea9-4c64-a718-c195e0c7fac1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">de Suelos</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "22e9f920-652a-4e86-b7c4-7e4ade188ab7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-suelos"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "e402becf-944e-44e5-ada6-2932eb963767",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e9155030-9363-4964-ab7f-e583bbe4f99e",
+        "regionLabel" : "Column 2",
+        "regionName" : "8feba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Wildlife",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "e9fbd1cc-4902-4cd2-8e8d-bdd60cc436e4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo de </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Flora y Fauna</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "43d5d0a6-1b9d-4ff0-a19b-1ddd879b14a7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-de-flora-y-fauna"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "d5a3857f-2549-4950-a46f-62d715cb0a2d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e081b662-0873-49ba-8870-d13361f3f2d8",
+        "regionLabel" : "Column 3",
+        "regionName" : "84a99",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "37a7cdea-5b07-4177-bd9d-9595310b33a6",
+          "columns" : [ {
+            "UUID" : "5f3f26b7-5055-4132-8d4c-2fda7f800dba",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1bd1549e-d096-44d5-86f5-334194c2f7bc",
+            "columnKey" : "8feba",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5fe077b7-c57a-4c26-b1e6-abbffae88505",
+            "columnKey" : "84a99",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "37a7cdea-5b07-4177-bd9d-9595310b33a6",
+      "regions" : [ {
+        "id" : "5f3f26b7-5055-4132-8d4c-2fda7f800dba",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "75",
+            "cardHeight" : "75",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "RecycleDrop",
+            "iconSize" : "3",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "fd59b724-8672-44ae-a5d0-c43ac769a316",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">Monitoreo Hidrobiológico </strong></p><p style=\"text-align: center;\"><strong style=\"font-size: 18px;\">y Sedimentos</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "74a83c3b-54ab-441f-8370-9099f2ee5943",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "black",
+            "borderRadius" : "0",
+            "borderThickness" : "0",
+            "fontSize" : ".75",
+            "label" : "VER INFORMACIÓN",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/monitoreo-hidrobiologico-y-sedimentos"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "621b1d04-1c21-4d00-a5ac-264c7e241ac7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1bd1549e-d096-44d5-86f5-334194c2f7bc",
+        "regionLabel" : "Column 2",
+        "regionName" : "8feba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5fe077b7-c57a-4c26-b1e6-abbffae88505",
+        "regionLabel" : "Column 3",
+        "regionName" : "84a99",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "f5fbdfb5-a1d6-414c-b1f8-7aeff7902ad6",
+          "columns" : [ {
+            "UUID" : "610ecee2-571e-42f9-a799-6a97ec805ffc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f5fbdfb5-a1d6-414c-b1f8-7aeff7902ad6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#plan-de-cierre-de-mina\" id=\"plan-de-cierre-de-mina\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(-5px);\">\n      <span style=\"color: #E2231A;\">Plan</span> <span style=\"color: #E2231A;\">de</span> <span style=\"color: #E2231A;\"> Cierre </span> <span style=\"color: #E2231A;\"> de</span> <span style=\"color: #E2231A;\"> Mina </span> \n    </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "a90fa8e8-c028-48b0-a5d9-3e2e1d55b7bb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px;\">Las actividades mineras tienen un tiempo de vida, por lo que una vez concluidas las operaciones se produce el cierre de mina, que busca rehabilitar las áreas donde se ha trabajado. Por ello, la normativa peruana exige la presentación de un plan de cierre de minas.&nbsp;</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 20px;\">El Plan de Cierre de Minas es un instrumento de gestión ambiental que detalla las actividades que la empresa minera realizará para la clausura de la mina, a fin de dejar el medio ambiente en las mejores condiciones. En el caso de nuestra empresa, nuestra mina Bayóvar actualmente tiene una vida útil de 22 años aproximadamente y nuestro proceso de cierre de mina es “progresivo”, esto quiere decir que se ejecutan acciones de cierre anualmente durante la vida útil de la mina, las cuales consisten sobre todo en trabajos de movimientos de tierra paralelamente a la operación minera.&nbsp;</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 20px;\">Cuando la mina deje de operar se iniciará “el cierre final” y se completará el proceso de rehabilitación en todas las áreas que se trabajó en la unidad minera, las cuales serán monitoreadas en la etapa de post cierre.&nbsp;Para que puedas conocer más a detalle las acciones consideradas te invitamos a revisar el siguiente afiche informativo.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "993c68ae-9b4c-4351-9e45-463c467442cd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Screenshot_20250505_133750.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "90ad24f9-22cb-4e74-867c-e90360d91219",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "610ecee2-571e-42f9-a799-6a97ec805ffc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 50,
+        "sectionConfig" : {
+          "UUID" : "a670b7e2-9974-4df9-9dca-6155c91fdcce",
+          "columns" : [ {
+            "UUID" : "dfbc83fa-289e-401f-9624-f2f890ccdc20",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e0f32599-1724-4754-85bf-814c5ebd18b5",
+            "columnKey" : "41b43",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "538e3ee9-13a2-4d35-bb41-9b33b20e766f",
+            "columnKey" : "b9ba7",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 200
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a670b7e2-9974-4df9-9dca-6155c91fdcce",
+      "regions" : [ {
+        "id" : "dfbc83fa-289e-401f-9624-f2f890ccdc20",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "modalTitle" : "DESCARGAR PDF",
+            "pdfUrl" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000001kWFd/uUGtFSTWKrRFE5X0c9Gdri16OOaaJruXTXFDMWr55kE"
+          },
+          "componentName" : "c:miskiMayoPDFViewerComponent",
+          "id" : "8cd7477f-db24-442f-be20-aad11b51eb8b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e0f32599-1724-4754-85bf-814c5ebd18b5",
+        "regionLabel" : "Column 2",
+        "regionName" : "41b43",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "538e3ee9-13a2-4d35-bb41-9b33b20e766f",
+        "regionLabel" : "Column 3",
+        "regionName" : "b9ba7",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b44b2da4-a1e7-46c9-9753-b01db5d77172",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Gestión Ambiental"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "65e30565-9c2f-4b67-89e7-761812928fda",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a1dd09b6-fa6f-4958-b6d9-a69b56a8e7f6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-gestin-ambiental"
+}

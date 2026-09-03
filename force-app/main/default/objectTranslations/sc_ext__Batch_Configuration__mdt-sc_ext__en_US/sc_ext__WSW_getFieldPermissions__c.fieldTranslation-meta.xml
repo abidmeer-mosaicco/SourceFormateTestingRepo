@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defaults to 10 unless set here. Gradually set the number to lower than 10 if encountering the remote response exceeded 15 MB error while trying to load a user in the User Lens. Controls how many permission set ids are sent to apex per batch to retrieve field permissions --></help>
+    <label><!-- WSW getFieldPermissions --></label>
+    <name>sc_ext__WSW_getFieldPermissions__c</name>
+</CustomFieldTranslation>

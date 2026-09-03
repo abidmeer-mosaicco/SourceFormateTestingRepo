@@ -1,0 +1,438 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4601e00e-bb06-476e-a6c6-082118908d1d",
+  "label" : "Código de conducta ética del proveedor",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3ceedc89-299e-44b2-aa8a-98980bb6393a",
+          "columns" : [ {
+            "UUID" : "05a2091d-b0ad-4c13-8951-27ff3b07be55",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3ceedc89-299e-44b2-aa8a-98980bb6393a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "7803b8b8-f418-435b-a8b8-5fef2db65f2f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "05a2091d-b0ad-4c13-8951-27ff3b07be55",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "eab451fb-6fe1-43d6-9f8d-49925284e530",
+          "columns" : [ {
+            "UUID" : "4ae15c73-fff8-4a7e-8f7c-2678541404e2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "eab451fb-6fe1-43d6-9f8d-49925284e530",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageM",
+            "textDescription" : "En Miski Mayo hacemos que las cosas sucedan"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "7ec3b55a-d326-4a6f-a8d1-b4e22b3e7272",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4ae15c73-fff8-4a7e-8f7c-2678541404e2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 93,
+        "sectionConfig" : {
+          "UUID" : "28091c35-9349-4a1d-94d3-ba8ebe377590",
+          "columns" : [ {
+            "UUID" : "8daa19b3-6874-4e3d-a9d7-99fc0509c39e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "28091c35-9349-4a1d-94d3-ba8ebe377590",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Código de Conducta Ética del Proveedor</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b3f769b0-6da3-466d-8b3f-ac25b8fd13d5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px;\">Miski Mayo </span><span style=\"font-size: 20px; background-color: transparent;\">tiene el compromiso de construir un modelo de negocio sostenible y contribuir con una sociedad más justa, ambientalmente equilibrada y económicamente próspera. Para lograr este objetivo, debemos actuar e influenciar de manera positiva y proactiva en cada socio y otras partes involucradas en nuestra cadena productiva.</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 20px;\">El Código de Ética y Conducta del Proveedor tiene por objetivo esclarecer lo que Miski Mayo entiende por conducta ética en las relaciones comerciales con las empresas que nos proporcionan productos y servicios.</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-size: 20px; background-color: transparent;\">Asimismo, esperamos que nuestros proveedores extiendan estos criterios por toda su cadena de valor, o sea, clientes, socios, proveedores de materias primas y proveedores de servicios relacionados, de manera directa o indirecta, con las actividades de la empresa.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "37c8974a-8766-4e0a-97f7-8ce1fde2f70c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8daa19b3-6874-4e3d-a9d7-99fc0509c39e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c85e77e4-4bb6-4beb-8cbb-5315b4534f57",
+          "columns" : [ {
+            "UUID" : "f97ba214-ff48-4223-b006-12e38370a490",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c85e77e4-4bb6-4beb-8cbb-5315b4534f57",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCW23O2CYKXBECVPCGJUTEIW2J2E",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "contain",
+                  "borderColor" : "",
+                  "componentBorderStyles" : "",
+                  "componentHoverEffect" : "zoomIn",
+                  "componentPadding" : "none",
+                  "contentBackgroundColor" : "rgba(255, 255, 255, 0)",
+                  "contentOffset" : "0",
+                  "contentOffsetBackgroundColor" : "rgb(255, 255, 255)",
+                  "contentOffsetPadding" : "medium",
+                  "contentPosition" : "center",
+                  "contentWidth" : 100,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagConstraints" : "media",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "imageAlignment" : "top",
+                  "imageAltText" : "",
+                  "imageBorderColor" : "rgb(0, 0, 0)",
+                  "imageBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"1\"},\"borderTopRightRadius\":{\"value\":\"1\"},\"borderBottomRightRadius\":{\"value\":\"1\"},\"borderBottomLeftRadius\":{\"value\":\"1\"}}",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "mediaAspectRatio" : "16:9",
+                  "mediaHeight" : "780",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "",
+                  "metadataTextDecoration" : "",
+                  "showDateTime" : false,
+                  "showExcerpt" : false,
+                  "showEyebrow" : false,
+                  "showEyebrowHighlight" : false,
+                  "showFeaturedMedia" : true,
+                  "showFlag" : false,
+                  "showMetadata1" : false,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : false,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : false,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "subTitleTextColor" : "",
+                  "textAlignment" : "center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : true,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:tileLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "b2dd54fc-ed09-4c49-b1a0-00c0b9ab69cc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f97ba214-ff48-4223-b006-12e38370a490",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 50,
+        "sectionConfig" : {
+          "UUID" : "919180a2-9823-4fe2-a88f-3a8b6a934587",
+          "columns" : [ {
+            "UUID" : "f1028556-e7ce-4aad-a5b8-e624ac0c6e23",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2fbb3c89-e7fb-4767-bb2b-5dfc8230bd97",
+            "columnKey" : "68d6b",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9ad1bce4-976b-4532-a9b9-dfe5169ae39f",
+            "columnKey" : "51c97",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 71
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "919180a2-9823-4fe2-a88f-3a8b6a934587",
+      "regions" : [ {
+        "id" : "f1028556-e7ce-4aad-a5b8-e624ac0c6e23",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "modalTitle" : "DESCARGAR PDF",
+            "pdfUrl" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000001kWVl/0HbtN_2MfocJMgL4sIlEZZVHv3IFSAeQQPqK9RmatHg"
+          },
+          "componentName" : "c:miskiMayoPDFViewerComponent",
+          "id" : "cbc3cb50-8cdb-4f13-86b7-de645f38c786",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2fbb3c89-e7fb-4767-bb2b-5dfc8230bd97",
+        "regionLabel" : "Column 2",
+        "regionName" : "68d6b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9ad1bce4-976b-4532-a9b9-dfe5169ae39f",
+        "regionLabel" : "Column 3",
+        "regionName" : "51c97",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ef31b96a-d3ff-45f7-960e-2fbbaeaac038",
+          "columns" : [ {
+            "UUID" : "b81bd1b1-b7a7-4083-83fe-49eacfcd0983",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ef31b96a-d3ff-45f7-960e-2fbbaeaac038",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.cover_codigo_de_conducta2.1}\" style=\"width: 857.027px; height: 1172.15px;\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ccca7a96-520d-43cb-b6fa-ddc22bf6bfb7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b81bd1b1-b7a7-4083-83fe-49eacfcd0983",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1b74d692-ffdd-4904-9a06-0866a757b3f5",
+          "columns" : [ {
+            "UUID" : "38c5db2d-d1d2-48aa-a89c-f8c14d42001a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 70
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1b74d692-ffdd-4904-9a06-0866a757b3f5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "white",
+            "borderColor" : "black",
+            "borderRadius" : "6",
+            "borderThickness" : "0",
+            "fontSize" : "2.0",
+            "label" : "DESCARGAR PDF",
+            "textColor" : "red",
+            "url" : "https://cmmosaiccompany.navexone.com/content/dotNet/documents/?app=pt&source=unspecified&docid=353&public=true"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "b9a4dd16-310d-4ce5-a3a8-bee523623e86",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "38c5db2d-d1d2-48aa-a89c-f8c14d42001a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a336cdba-b163-408e-9c10-dea6df587889",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Código de conducta ética del proveedor"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c4731384-b1d2-4d4e-a52e-0318a6f2b1d6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2169f64b-c8c0-437e-aa9d-5a83f83d7cdc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-cdigo-de-conducta-tica-del-proveedor"
+}

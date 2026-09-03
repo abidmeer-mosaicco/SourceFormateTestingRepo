@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_NewDestinationSelectOneValue</fullName>
+    <active>true</active>
+    <description>Checks whether the user has selected only one value or not</description>
+    <errorConditionFormula>AND(
+
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+
+AND(OR(ISPICKVAL( Status , &apos;Closed&apos;),ISPICKVAL( Status , &apos;Closure Pending&apos;)), OR(ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect Destination&apos;),ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Diversion&apos;)),OR(AND(ISBLANK(  PMC_SS_NewDestinationLocation__c   ),ISBLANK(   PMC_SS_NewDestinationShipTo__c  )),
+
+AND(NOT(ISBLANK( PMC_SS_NewDestinationLocation__c  )),NOT(ISBLANK( PMC_SS_NewDestinationShipTo__c )))))
+
+)</errorConditionFormula>
+    <errorMessage>You can only fill either one of them, New Destination Location or New Destination Ship To</errorMessage>
+</ValidationRule>

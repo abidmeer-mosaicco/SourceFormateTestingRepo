@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Account Request</label>
+                <name>PMC_SS_AccountRequest</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Case Management</label>
+                <name>PMC_SS_CaseManagement</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Contact Management</label>
+                <name>PMC_SS_ContactManagement</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Contract Management</label>
+                <name>PMC_SS_ContractManagement</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Document Request</label>
+                <name>PMC_SS_DocumentRequest</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Order Management</label>
+                <name>PMC_SS_OrderManagement</name>
+            </dataCategory>
+            <label>Customer Service</label>
+            <name>PMC_SS_CustomerService</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Sales</label>
+            <name>PMC_SS_Sales</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Quality</label>
+            <name>PMC_SS_Quality</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>North America</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

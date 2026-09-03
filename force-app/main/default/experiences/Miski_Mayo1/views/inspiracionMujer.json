@@ -1,0 +1,468 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "bbd937b1-814c-4864-9a4a-5311b7598f0b",
+  "label" : "Inspiracion Mujer",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2945f31a-5dd4-4902-844f-5ef9b0f8e686",
+          "columns" : [ {
+            "UUID" : "124890fa-3ff4-44f3-91d7-47d9e02dbf1b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2945f31a-5dd4-4902-844f-5ef9b0f8e686",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "7b024788-a1f4-45e3-964e-82b12fb7ba88",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "124890fa-3ff4-44f3-91d7-47d9e02dbf1b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "1bf87914-27c4-41ae-bb13-a3f386a154ae",
+          "columns" : [ {
+            "UUID" : "a6a2b674-6b49-4bcb-be35-1f634b0ebe0d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b87b7179-8d12-4206-a10a-678ba8a5bb85",
+            "columnKey" : "69982",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "593ab6f0-f570-4ed6-a20c-1062c7cb0d5e",
+            "columnKey" : "a5f12",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f4c6a02d-665b-430a-8795-7b4984f70529",
+            "columnKey" : "ea37c",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4ee1e60a-84fa-4606-8b53-2b62600e85e1",
+            "columnKey" : "46988",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "dd3f1550-a203-4ea6-97d4-a6470df6805e",
+            "columnKey" : "ad6c7",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 45
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1bf87914-27c4-41ae-bb13-a3f386a154ae",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/diversidad-e-inclusion"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "dbf65d12-bd8e-4ba0-aa8a-26ec71e14eff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a6a2b674-6b49-4bcb-be35-1f634b0ebe0d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b87b7179-8d12-4206-a10a-678ba8a5bb85",
+        "regionLabel" : "Column 2",
+        "regionName" : "69982",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "593ab6f0-f570-4ed6-a20c-1062c7cb0d5e",
+        "regionLabel" : "Column 3",
+        "regionName" : "a5f12",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f4c6a02d-665b-430a-8795-7b4984f70529",
+        "regionLabel" : "Column 4",
+        "regionName" : "ea37c",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4ee1e60a-84fa-4606-8b53-2b62600e85e1",
+        "regionLabel" : "Column 5",
+        "regionName" : "46988",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "dd3f1550-a203-4ea6-97d4-a6470df6805e",
+        "regionLabel" : "Column 6",
+        "regionName" : "ad6c7",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 25,
+        "sectionConfig" : {
+          "UUID" : "759524fd-d7a3-443e-bbc7-6e11a8b7c2d4",
+          "columns" : [ {
+            "UUID" : "4ee7be0a-c5d0-4fa5-9d1b-8ea977167fe8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 137
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "759524fd-d7a3-443e-bbc7-6e11a8b7c2d4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 10px;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Disenosintitulo600x582.1}\"></span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "944c551d-08bb-4e3c-b0f4-25b33e71fb10",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4ee7be0a-c5d0-4fa5-9d1b-8ea977167fe8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "045f38c0-bc9b-40bf-b758-0a464ee3df78",
+          "columns" : [ {
+            "UUID" : "3424e9cb-1567-4a3e-9c92-a64de34fa844",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 142
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "045f38c0-bc9b-40bf-b758-0a464ee3df78",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Programa de Liderazgo Femenino: Inspira Mujer</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "48c39317-3533-425b-8819-0136ec2d888d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 20px;\">El 2024 se desarrolló nuestro primer Programa de Liderazgo femenino, dirigido a mujeres de las diferentes áreas de la empresa con posiciones de analistas junior, pleno y senior, quienes durante 6 meses fueron capacitadas en temas como: Gestión de emociones, Desarrollo del estilo de liderazgo, Conversaciones efectivas, Influencia con integridad, además de recibir sesiones de coaching para un mejor autoconocimiento.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0f78695b-b61c-4019-8ca9-5a50ecbebb5a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3424e9cb-1567-4a3e-9c92-a64de34fa844",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "29c194fb-6a51-4ffd-af0c-24c4e71c8b4f",
+          "columns" : [ {
+            "UUID" : "2152dca1-0e28-49d9-9baf-bfbea3bacbf4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0dd19134-28ce-4197-b76a-7827d28b627c",
+            "columnKey" : "f8934",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5ff63013-0ae4-4542-ad62-5b46ef9a3dd5",
+            "columnKey" : "9250b",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9e4e3068-3003-4d57-9ae2-f836f49d1072",
+            "columnKey" : "a6d0f",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "24d3f8cb-b3cd-4ae3-b56e-a37636097b6e",
+            "columnKey" : "27dbb",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "764a549a-ac68-45b1-a0a4-8c931c103b07",
+            "columnKey" : "ec491",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 144
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "29c194fb-6a51-4ffd-af0c-24c4e71c8b4f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "c0877593-0316-41ba-a3a4-5eb09a3b7d89",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2152dca1-0e28-49d9-9baf-bfbea3bacbf4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0dd19134-28ce-4197-b76a-7827d28b627c",
+        "regionLabel" : "Column 2",
+        "regionName" : "f8934",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5ff63013-0ae4-4542-ad62-5b46ef9a3dd5",
+        "regionLabel" : "Column 3",
+        "regionName" : "9250b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9e4e3068-3003-4d57-9ae2-f836f49d1072",
+        "regionLabel" : "Column 4",
+        "regionName" : "a6d0f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "24d3f8cb-b3cd-4ae3-b56e-a37636097b6e",
+        "regionLabel" : "Column 5",
+        "regionName" : "27dbb",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "764a549a-ac68-45b1-a0a4-8c931c103b07",
+        "regionLabel" : "Column 6",
+        "regionName" : "ec491",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 57,
+        "sectionConfig" : {
+          "UUID" : "d6180c44-5f5b-4cc2-a6a0-5aff8f09d1dd",
+          "columns" : [ {
+            "UUID" : "89b5e43d-9c6e-40c4-8d3e-5e4aa6d1444e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d6180c44-5f5b-4cc2-a6a0-5aff8f09d1dd",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7b567113-40a5-467b-bede-e084e20bcc1e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Desarrollar en las participantes las habilidades necesarias para impulsar su crecimiento, empoderamiento y formación como mujer líder a nivel personal y profesional.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Promover el desarrollo y participación de más mujeres líderes en nuestra empresa y en la industria minera, fomentando un ambiente de trabajo más inclusivo y equitativo.</span>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "0a01a074-94b1-4493-ae80-45b0b7da5651",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "89b5e43d-9c6e-40c4-8d3e-5e4aa6d1444e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "b8d23765-af49-493c-aac5-b4d7d65043f3",
+          "columns" : [ {
+            "UUID" : "5487a6e5-26d0-4935-a28e-c69c93f87709",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 301
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b8d23765-af49-493c-aac5-b4d7d65043f3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "5",
+            "imageNine" : "empty",
+            "imageOne" : "2",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "4",
+            "imageTwo" : "3",
+            "pageName" : "pageN"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "026408a3-6e6b-4504-a34c-4d1d02257807",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5487a6e5-26d0-4935-a28e-c69c93f87709",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "339c7b2f-b9ac-4810-a306-546aa3a6c8f8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Inspiracion Mujer"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "dd01232b-096c-43b0-9c69-bfc95dd50e2d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "23e22ffc-95bc-4945-9305-b5d9d6b2cc0e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-inspiracion-mujer"
+}

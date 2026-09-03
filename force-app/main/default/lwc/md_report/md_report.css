@@ -1,0 +1,33 @@
+.md-list-container {
+  position: relative;
+}
+
+.md-xls-btn-container {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  z-index: 0;
+}
+.md-filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  justify-content: space-between;
+}
+
+input[type="date"].slds-input {
+  min-height: 2rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+input[type="date"].slds-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+input[type="date"].slds-input:focus {
+  outline: none;
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #1589ee;
+}

@@ -1,0 +1,77 @@
+{
+  "appPageId" : "7cdb06d6-9854-4eec-89d2-eccfa9263b44",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "dee4d94f-50cc-47c0-a158-df9bcefc01cb",
+  "label" : "Register",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "salesforceIdentity:communityLogo2",
+      "id" : "4e47c2b5-1d2c-4d87-ad17-c4f27144e1aa",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p><span style=\"font-size: 14px;\">¡Bienvenido a la Mesa de Partes Virtual Miski Mayo!</span></p><p><span style=\"font-size: 11px;\">&nbsp;</span></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "c54401ff-3bad-4ad2-8a8b-10c158a2d85d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "flowArguments" : "",
+        "flowName" : "Miski_Mayo_Mesa_de_Partes_Self_Registration"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "d139c60b-2e6d-4f09-b547-f40290e7e765",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "headerText" : "",
+        "showHeader" : false,
+        "useCommunityDomainSso" : true
+      },
+      "componentName" : "salesforceIdentity:socialLogin2",
+      "id" : "3843dea7-ae7d-4ea1-b1af-57d2369d125a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<h3 style=\"text-align: center;\"><a href=\"https://globaldigitalacceleration.my.site.com/miskimayomesadepartes\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgba(5, 21, 36, 0.06); color: rgb(0, 102, 204);\"><strong><u>¿Ya tienes una cuenta? Ingresa aquí​</u></strong></a></h3>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "f1b53089-8ee0-4c50-ab7c-005133ce110f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0c5b39c5-7c70-40e5-9e89-73d7e44ef90c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Register"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "fb5131b6-3432-430a-be64-6c339e9e0ce0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "292234f2-5e3e-4699-aebe-f06ac1548300",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "self-register"
+}

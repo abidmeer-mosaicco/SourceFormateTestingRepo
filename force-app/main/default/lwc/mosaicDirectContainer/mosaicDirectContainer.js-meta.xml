@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Mosaic Direct - Container</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig
+            targets="lightningCommunity__Default, lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+            <property name="pageSize" type="Integer" default="50" label="Page Size" />
+            <property name="defaultObject" type="String"
+                label="Default Object (Order or SBQQ__Quote__c)" default="Order" />
+
+            <!-- Orders -->
+            <property name="orderManualFieldApiNames" type="String"
+                label="Orders - Field API Names (comma-separated)" />
+            <property name="orderManualFieldLabelNames" type="String"
+                label="Orders - Field Labels (comma-separated)" />
+            <property name="orderAccountNamePath" type="String" label="Orders - Account Name Path" />
+            <property name="orderSapNumberPath" type="String" label="Orders - SAP Number Path" />
+            <property name="orderDateFilterFieldName" type="String"
+                label="Orders - Date Filter Field" />
+            <property name="orderEndDateFilterFieldName" type="String"
+                label="Orders - End Date Field (optional)" />
+            <property name="orderBaseWhere" type="String" label="Orders - Base WHERE (optional)" />
+
+            <property name="quoteManualFieldApiNames" type="String"
+                label="Quotes - Field API Names (comma-separated)" />
+            <property name="quoteManualFieldLabelNames" type="String"
+                label="Quotes - Field Labels (comma-separated)" />
+            <property name="quoteAccountNamePath" type="String"
+                label="Quotes - Account Name Path (e.g., SBQQ__Account__r.Name)" />
+            <property name="quoteSapNumberPath" type="String"
+                label="Quotes - SAP Number Path (e.g., SBQQ__Account__r.PMC_SS_SAPCustomerNumber__c)" />
+            <property name="quoteDateFilterFieldName" type="String"
+                label="Quotes - Date Filter Field" />
+            <property name="quoteEndDateFilterFieldName" type="String"
+                label="Quotes - End Date Field (optional)" />
+            <property name="quoteBaseWhere" type="String" label="Quotes - Base WHERE (optional)" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

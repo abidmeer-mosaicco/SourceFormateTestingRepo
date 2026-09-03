@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SalesOffice__c</fullName>
+    <label>Sales Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_SalesAreaCombination__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>PMC_CPQ_SalesOfficeCodes</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>CA All Canpotex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>CA All Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>US and CA East Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>US and CA West Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Colonsay UL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Esterhazy Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Canada ULC (BP) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>US and CA All Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR BA B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR Canais MT  B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR Espec Agricolas B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR Espec Industriais</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR FEED B2B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR FOSPAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR GO B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Mega Farmer B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Retail Norte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Retail Sul B2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Trader GO+MT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Trader INT B2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR KAM Trader MS B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR Matopipa B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MG Norte B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MG Sul B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <valueName>BR MOS OPERAÇÕES B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MS B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MT Norte B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MT Oeste B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR MT SUL B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR Pastagem B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR PR/SC 1 B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR PR/SC 2 B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR RS B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR SP Norte B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR  Fertilizer B2B1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes Ltd. Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Export Common</controllingFieldValue>
+            <controllingFieldValue>Fospar SA Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Export Common</controllingFieldValue>
+            <valueName>BR  Fertilizer B2B2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Intercompany Common</controllingFieldValue>
+            <valueName>Iris Milane PY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes do B Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Intercompany Common</controllingFieldValue>
+            <valueName>Vago PY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <valueName>BR SP SUL B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizantes do B Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potássio Mineração Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizantes P&amp;K Domestic Common</controllingFieldValue>
+            <valueName>BR RS / SC B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertz Paraguay SRL Intercompany Common</controllingFieldValue>
+            <valueName>PY KAM Trader B2C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Andhra Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Haryana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Punjab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Maharashthra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Rajasthan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Madyapradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Uttar Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Gujarat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Chhattishgarh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Telangana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Bihar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Karnataka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Tamil Nadu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Orrisa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN West Bengal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Delhi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Himachal Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic India Private Ltd. Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic India Private Ltd. Intercompany Common</controllingFieldValue>
+            <valueName>IN Kerala</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN HLJ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN JL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN LNWN-TSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN NW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Northeast B2B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN SD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN SDW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN JS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN HB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN HN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Export</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN LN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN NM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Bend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN South</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Tolling-N</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Tolling-S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN East-B2B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN White potassium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN Strategic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN MrM-SD01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN MrM-LN01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (YT) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (BJ) Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (QHD) Intercompany Common</controllingFieldValue>
+            <valueName>CN MrM-SX01</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <valueName>US All Co-Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <valueName>US All International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <valueName>US All Raw Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Sol Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizer LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Potash Carlsbad In Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Intercompany Common</controllingFieldValue>
+            <valueName>US All Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Global Sales LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Intercompany Common</controllingFieldValue>
+            <valueName>US and CA All Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mos. Sulphur Partner Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Comp. Minera Miski Mayo Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Comp. Minera Miski Mayo Export Common</controllingFieldValue>
+            <controllingFieldValue>Comp. Minera Miski Mayo Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos. Sulphur Partner Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Tampa Port Services, LLC Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic CA Crop Nutrit, LP Export Common</controllingFieldValue>
+            <valueName>PE Intermediate Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Comp. Minera Miski Mayo Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Comp. Minera Miski Mayo Export Common</controllingFieldValue>
+            <controllingFieldValue>Comp. Minera Miski Mayo Intercompany Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Global Sales LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Crop Nutrition LLC Export Common</controllingFieldValue>
+            <controllingFieldValue>Mos Ag Innovation Sol,LLC Export Common</controllingFieldValue>
+            <valueName>PE Latam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic Fertilizers (HK) L Domestic Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (HK) L Export Common</controllingFieldValue>
+            <controllingFieldValue>Mosaic Fertilizers (HK) L Intercompany Common</controllingFieldValue>
+            <valueName>HK All Fertilizers</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

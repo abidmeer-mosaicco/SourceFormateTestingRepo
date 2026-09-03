@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Class_List_And_Negative_Price_Adjustment</fullName>
+    <active>true</active>
+    <description>Validates that quote classification is List and there is no line item with negative price adjustment.</description>
+    <errorConditionFormula>ISPICKVAL( PMC_CPQ_QuoteClassification__c , &apos;List&apos;) &amp;&amp;  ItemsWithNegativePriceAdjustment__c &gt; 0</errorConditionFormula>
+    <errorMessage>Invalid quote Classification. There are line items with negative price adjustment.</errorMessage>
+</ValidationRule>

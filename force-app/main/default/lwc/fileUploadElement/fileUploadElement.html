@@ -1,0 +1,35 @@
+<template>
+
+    <div class="draggable-area" ondragenter={handleDragEnter} ondragleave={handleDragLeave} ondragover={handleDragOver}
+        ondrop={handleDrop}>
+        <div class="uploaded-files">
+            <div for:each={uploadedFiles} for:item="item" key={item} class="uploaded-file">
+                <!-- Source for icon can be sent here -->
+                <div class="icon-wrapper">
+                    <img src="" alt="" />
+                </div>
+                {item}
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <input type="file" id="file" name="file" accept={acceptedFormats} multiple={isMultiple}
+                onchange={handleChange} />
+            <label for="file" class="label-desktop">
+                Drop Files
+            </label>
+            <label for="file" class="label-mobile">
+                Upload Document
+            </label>
+        </div>
+    </div>
+
+    <template if:true={isWrongFormat}>
+        <div class="slds-has-error">
+            <div class="slds-form-element__help">
+                {invalidFormatFilesError}
+            </div>
+        </div>
+    </template>
+
+</template>

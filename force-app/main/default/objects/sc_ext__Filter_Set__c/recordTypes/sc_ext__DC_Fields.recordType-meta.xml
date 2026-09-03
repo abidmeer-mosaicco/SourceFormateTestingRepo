@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__DC_Fields</fullName>
+    <active>true</active>
+    <label>DC Fields</label>
+    <picklistValues>
+        <picklist>sc_ext__Compliance_Categorization__c</picklist>
+        <values>
+            <fullName>Not Categorized</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Data_Type__c</picklist>
+        <values>
+            <fullName>Name</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Field_Type__c</picklist>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Field_Usage__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DeprecateCandidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hidden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Usage Assigned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Managed_Packages__c</picklist>
+        <values>
+            <fullName>Unmanaged</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Object_Types__c</picklist>
+        <values>
+            <fullName>Custom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Metadata Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Setting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Object</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Historical Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knowledge Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sc_ext__Sensitivity_Levels__c</picklist>
+        <values>
+            <fullName>Not Classified</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Account</baseObject>
+    <category>accounts</category>
+    <deployed>true</deployed>
+    <description>Custom Report Type Name : Accounts with or without Entitlements or Contacts
+Parent Object : Accounts
+SubObject1 : with or without record from Entitlements
+SubObject2 : with or without related record from Contacts</description>
+    <join>
+        <join>
+            <outerJoin>true</outerJoin>
+            <relationship>EntitlementContacts</relationship>
+        </join>
+        <outerJoin>true</outerJoin>
+        <relationship>Entitlements</relationship>
+    </join>
+    <label>Accounts with Entitlements with Contacts</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account External ID</displayNameOverride>
+            <field>PMC_SS_AccountExternalID__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account ID</displayNameOverride>
+            <field>Id</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Name</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Number</displayNameOverride>
+            <field>AccountNumber</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner Full Name</displayNameOverride>
+            <field>PMC_SS_AccountOwnerFullName__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Site</displayNameOverride>
+            <field>Site</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Source</displayNameOverride>
+            <field>AccountSource</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Status</displayNameOverride>
+            <field>PMC_DH_Account_Status__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Action Plan</displayNameOverride>
+            <field>PMC_SS_ActionPlan__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address Coordinates (Latitude)</displayNameOverride>
+            <field>PMC_SS_Address_Coordinates__Latitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address Coordinates (Longitude)</displayNameOverride>
+            <field>PMC_SS_Address_Coordinates__Longitude__s</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agent</displayNameOverride>
+            <field>PMC_SS_Agent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agent Code</displayNameOverride>
+            <field>PMC_SS_AgentCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Annual Revenue</displayNameOverride>
+            <field>AnnualRevenue</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address</displayNameOverride>
+            <field>BillingAddress</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>City</displayNameOverride>
+            <field>BillingCity</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Country</displayNameOverride>
+            <field>BillingCountryCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Country (text only)</displayNameOverride>
+            <field>BillingCountry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Geocode Accuracy</displayNameOverride>
+            <field>BillingGeocodeAccuracy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Latitude</displayNameOverride>
+            <field>BillingLatitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Longitude</displayNameOverride>
+            <field>BillingLongitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing State/Province</displayNameOverride>
+            <field>BillingStateCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing State/Province (text only)</displayNameOverride>
+            <field>BillingState</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Street</displayNameOverride>
+            <field>BillingStreet</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Zip/Postal Code</displayNameOverride>
+            <field>BillingPostalCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Account</displayNameOverride>
+            <field>PMC_SS_BillToAccount__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Buyer Account</displayNameOverride>
+            <field>IsBuyer</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Buyer Visa</displayNameOverride>
+            <field>PMC_SS_BuyerVisa__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Channel</displayNameOverride>
+            <field>PMC_SS_Channel__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CIF Script</displayNameOverride>
+            <field>PMC_SS_CIFScript__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Code</displayNameOverride>
+            <field>PMC_SS_ClientCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Denied</displayNameOverride>
+            <field>PMC_SS_ClientDenied__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Group</displayNameOverride>
+            <field>PMC_SS_ClientGroup__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Combine Asset Quantities</displayNameOverride>
+            <field>SBQQ__AssetQuantitiesCombined__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Combine Co-Termed Contracts</displayNameOverride>
+            <field>SBQQ__CoTermedContractsCombined__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Co-Termination</displayNameOverride>
+            <field>SBQQ__ContractCoTermination__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Language</displayNameOverride>
+            <field>PMC_SS_ContractLanguage__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Co-Termination Event</displayNameOverride>
+            <field>SBQQ__CoTerminationEvent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Counterparty Contact </displayNameOverride>
+            <field>PMC_SS_CounterpartyContact__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Counterparty Contact 2</displayNameOverride>
+            <field>PMC_SS_CounterpartyContact2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Expiration Date</displayNameOverride>
+            <field>PMC_SS_CreditExpirationDate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Limit</displayNameOverride>
+            <field>PMC_SS_CreditLimit__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Crops</displayNameOverride>
+            <field>PMC_SS_Crops__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Credit Amount</displayNameOverride>
+            <field>PMC_SS_CustomerCreditAmount__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Person or Organization</displayNameOverride>
+            <field>PMC_SS_CustomerType__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Data.com Key</displayNameOverride>
+            <field>Jigsaw</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Default Opportunity</displayNameOverride>
+            <field>SBQQ__DefaultOpportunity__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>PMC_DH_Email__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Employees</displayNameOverride>
+            <field>NumberOfEmployees</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fax</displayNameOverride>
+            <field>Fax</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Hierarchy Approval Status</displayNameOverride>
+            <field>PMC_SS_HierarchyApprovalStatus__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>HQ</displayNameOverride>
+            <field>PMC_SS_HQ__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ignore Parent Contracted Prices</displayNameOverride>
+            <field>SBQQ__IgnoreParentContractedPrices__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Industry</displayNameOverride>
+            <field>Industry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Interaction Date</displayNameOverride>
+            <field>PMC_SS_LastInteractionDate__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legal Hold Status</displayNameOverride>
+            <field>PMC_CLM_LegalHoldStatus__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Legal Hold Status Reason</displayNameOverride>
+            <field>PMC_CLM_LegalHoldStatusReason__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MDM Verified</displayNameOverride>
+            <field>PMC_SS_MDMVerified__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Offerings</displayNameOverride>
+            <field>PMC_SS_Offerings__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Operating Hours</displayNameOverride>
+            <field>OperatingHours</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunities (Plan)</displayNameOverride>
+            <field>PMC_SS_OpportunitiesPlan__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ownership</displayNameOverride>
+            <field>Ownership</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Account</displayNameOverride>
+            <field>Parent</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Terms</displayNameOverride>
+            <field>PMC_CPQ_PaymentTerms__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phone</displayNameOverride>
+            <field>Phone</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Instructions</displayNameOverride>
+            <field>PMC_DH_Delivery_Instruction__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Preserve Bundle Structure</displayNameOverride>
+            <field>SBQQ__PreserveBundle__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Hold End</displayNameOverride>
+            <field>SBQQ__PriceHoldEnd__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rating</displayNameOverride>
+            <field>Rating</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Regional Manager</displayNameOverride>
+            <field>PMC_SS_RegionalManager__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Renewal Model</displayNameOverride>
+            <field>SBQQ__RenewalModel__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Renewal Pricing Method</displayNameOverride>
+            <field>SBQQ__RenewalPricingMethod__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Director</displayNameOverride>
+            <field>PMC_SS_SalesDirector__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Customer Number</displayNameOverride>
+            <field>PMC_SS_SAPCustomerNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Segmentation</displayNameOverride>
+            <field>PMC_SS_Segmentation__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Seller Visa</displayNameOverride>
+            <field>PMC_SS_SellerVisa__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Address</displayNameOverride>
+            <field>ShippingAddress</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping City</displayNameOverride>
+            <field>ShippingCity</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Country</displayNameOverride>
+            <field>ShippingCountryCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Country (text only)</displayNameOverride>
+            <field>ShippingCountry</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Geocode Accuracy</displayNameOverride>
+            <field>ShippingGeocodeAccuracy</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Latitude</displayNameOverride>
+            <field>ShippingLatitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Longitude</displayNameOverride>
+            <field>ShippingLongitude</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping State/Province</displayNameOverride>
+            <field>ShippingStateCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping State/Province (text only)</displayNameOverride>
+            <field>ShippingState</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Street</displayNameOverride>
+            <field>ShippingStreet</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Zip/Postal Code</displayNameOverride>
+            <field>ShippingPostalCode</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SIC Code</displayNameOverride>
+            <field>Sic</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SIC Description</displayNameOverride>
+            <field>SicDesc</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>State Registration Number</displayNameOverride>
+            <field>PMC_SS_StateRegistrationNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Street Number</displayNameOverride>
+            <field>PMC_DH_StreetNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Strengths (Plan)</displayNameOverride>
+            <field>PMC_SS_StrengthsPlan__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tax-Exempt</displayNameOverride>
+            <field>SBQQ__TaxExempt__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CNPJ</displayNameOverride>
+            <field>PMC_SS_TaxIDOrCNPJOrCPF__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Threats (Plan)</displayNameOverride>
+            <field>PMC_SS_ThreatsPlan__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ticker Symbol</displayNameOverride>
+            <field>TickerSymbol</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Group</displayNameOverride>
+            <field>Type</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weaknesses (Plan)</displayNameOverride>
+            <field>PMC_SS_WeaknessesPlan__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Website</displayNameOverride>
+            <field>Website</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Care of</displayNameOverride>
+            <field>PMC_SS_Careof__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Transportation Zone</displayNameOverride>
+            <field>PMC_SS_TransportationZone__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>County Code (US Sold-to only)</displayNameOverride>
+            <field>PMC_SS_CountyCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reconciliation Account</displayNameOverride>
+            <field>PMC_SS_ReconciliationAccount__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lockbox</displayNameOverride>
+            <field>PMC_SS_Lockbox__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales District</displayNameOverride>
+            <field>PMC_SS_SalesDistrict__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tonnage Taxable</displayNameOverride>
+            <field>PMC_SS_TonnageTaxable__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Underdel. Tolerance</displayNameOverride>
+            <field>PMC_SS_Underdeltolerance__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Overdel. Tolerance</displayNameOverride>
+            <field>PMC_SS_OverdelTolerance__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payer Contact</displayNameOverride>
+            <field>PMC_SS_PayerContact__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Company Code</displayNameOverride>
+            <field>PMC_SS_CompanyCode__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Office</displayNameOverride>
+            <field>PMC_SS_SalesOffice__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Region</displayNameOverride>
+            <field>PMC_SS_SalesRegion__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Advanced Account Forecast Set Use</displayNameOverride>
+            <field>PMC_SS_AdvancedAccountForecastSetUse__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fiori Link</displayNameOverride>
+            <field>PMC_SS_FioriLink__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Link a Commissions Agent - sold</displayNameOverride>
+            <field>PMC_SS_LinkCommissionsAgent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CPF</displayNameOverride>
+            <field>PMC_SS_CPF__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>State Tax Number</displayNameOverride>
+            <field>PMC_SS_StateTaxNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Municipal Tax Number</displayNameOverride>
+            <field>PMC_SS_MunicipalTaxNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Region</displayNameOverride>
+            <field>PMC_CPQ_Region__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit of Measure</displayNameOverride>
+            <field>PMC_SS_UnitofMeasure__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Name 2</displayNameOverride>
+            <field>PMC_SS_Name2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Veson Customer</displayNameOverride>
+            <field>PMC_SS_Veson__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Name 4</displayNameOverride>
+            <field>PMC_SS_Name4__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sold-to partner related</displayNameOverride>
+            <field>PMC_SS_SoldToAccount__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Conditions</displayNameOverride>
+            <field>PMC_SS_ShippingCondition__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Organization</displayNameOverride>
+            <field>PMC_SS_SalesOrg__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Division</displayNameOverride>
+            <field>PMC_SS_Division__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GLN Number</displayNameOverride>
+            <field>PMC_SS_GLN__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address Number</displayNameOverride>
+            <field>PMC_SS_AddressNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Address District</displayNameOverride>
+            <field>PMC_SS_AddressDistrict__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PO Box</displayNameOverride>
+            <field>PMC_SS_POBox__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>RUC</displayNameOverride>
+            <field>PMC_SS_RUC__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Property/farm name</displayNameOverride>
+            <field>PMC_SS_Property_farm_name__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>District</displayNameOverride>
+            <field>District__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Partner Status</displayNameOverride>
+            <field>Partner_Status__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Potential</displayNameOverride>
+            <field>Sales_Potential__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer buys via intercompany VCO?</displayNameOverride>
+            <field>Customer_buys_via_intercompany_VCO__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Assignment Group</displayNameOverride>
+            <field>Account_Assignment_Group__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Group</displayNameOverride>
+            <field>Customer_Group__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TSM Manager</displayNameOverride>
+            <field>TSM_Manager__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cust Serv Rep</displayNameOverride>
+            <field>Cust_Serv_Rep__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Domestic Broker</displayNameOverride>
+            <field>Domestic_Broker__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Team Accounts – Attribute 4</displayNameOverride>
+            <field>Team_Accounts_Attribute_4__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Channel – Attribute 5</displayNameOverride>
+            <field>Sales_Channel_Attribute_5__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Country Region – Attribute 6</displayNameOverride>
+            <field>Country_Region_Attribute_6__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Region – Attribute 7</displayNameOverride>
+            <field>Sales_Region_Attribute_7__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Group</displayNameOverride>
+            <field>Sales_Group__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payer partner related</displayNameOverride>
+            <field>Payer_partner_related__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to partner related</displayNameOverride>
+            <field>Bill_to_partner_related__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Manager</displayNameOverride>
+            <field>Account_Manager__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TSM Manager</displayNameOverride>
+            <field>TSM_Manager_Account__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cust Serv Rep</displayNameOverride>
+            <field>Cust_Serv_Rep_Account__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Commissions agent</displayNameOverride>
+            <field>Commissions_agent_account__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Domestic Broker</displayNameOverride>
+            <field>Domestic_Broker_account__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PMC CPI IntegrationMessage</displayNameOverride>
+            <field>PMC_CPI_IntegrationMessage__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PMC CPI IntegrationStatus</displayNameOverride>
+            <field>PMC_CPI_IntegrationStatus__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship-to partner related</displayNameOverride>
+            <field>Shipto_partner_related__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent’s SAP Customer Number</displayNameOverride>
+            <field>PMC_SS_Parents_SAP_Customer_Number__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_SearchTerm__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_PaymentTerm__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Domestic_Broker_Text__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TzoneName__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Domestic_Broker_2__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sold_to_Related_Partner_Name__c</field>
+            <table>Account</table>
+        </columns>
+        <masterLabel>Accounts</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Asset Name</displayNameOverride>
+            <field>Asset</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Hours</displayNameOverride>
+            <field>BusinessHours</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cases Per Entitlement</displayNameOverride>
+            <field>CasesPerEntitlement</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Line Item</displayNameOverride>
+            <field>ContractLineItem</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date</displayNameOverride>
+            <field>EndDate</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entitlement ID</displayNameOverride>
+            <field>Id</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Entitlement Name</displayNameOverride>
+            <field>Name</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location</displayNameOverride>
+            <field>Location</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Operating Hours</displayNameOverride>
+            <field>SvcApptBookingWindows</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Per Incident</displayNameOverride>
+            <field>IsPerIncident</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Remaining Cases</displayNameOverride>
+            <field>RemainingCases</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Remaining Work Orders</displayNameOverride>
+            <field>RemainingWorkOrders</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Contract</displayNameOverride>
+            <field>ServiceContract</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date</displayNameOverride>
+            <field>StartDate</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Work Orders Per Entitlement</displayNameOverride>
+            <field>WorkOrdersPerEntitlement</field>
+            <table>Account.Entitlements</table>
+        </columns>
+        <masterLabel>Entitlements</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounts Receivable</displayNameOverride>
+            <field>PMC_SS_AccountsReceivable__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approver</displayNameOverride>
+            <field>PMC_DH_Approver__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Assistant</displayNameOverride>
+            <field>AssistantName</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Asst. Phone</displayNameOverride>
+            <field>AssistantPhone</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Birthdate</displayNameOverride>
+            <field>Birthdate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Denied</displayNameOverride>
+            <field>PMC_SS_ClientDenied__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact ID</displayNameOverride>
+            <field>Id</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Recipient</displayNameOverride>
+            <field>PMC_SS_ContractRecipient__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Counterparty</displayNameOverride>
+            <field>PMC_SS_Counterparty__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Country Code</displayNameOverride>
+            <field>PMC_DH_CountryCode__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Courtesy Copy</displayNameOverride>
+            <field>PMC_CLM_CourtesyCopy__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CPF</displayNameOverride>
+            <field>PMC_SS_CPF__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Crops</displayNameOverride>
+            <field>PMC_SS_Crops__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Data.com Key</displayNameOverride>
+            <field>Jigsaw</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Department</displayNameOverride>
+            <field>Department</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Digital Hub User</displayNameOverride>
+            <field>PMC_SS_DigitalHubUser__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Do Not Call</displayNameOverride>
+            <field>DoNotCall</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email</displayNameOverride>
+            <field>Email</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email Bounced Date</displayNameOverride>
+            <field>EmailBouncedDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email Bounced Reason</displayNameOverride>
+            <field>EmailBouncedReason</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Marketing Email Opt Out</displayNameOverride>
+            <field>HasOptedOutOfEmail</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fax</displayNameOverride>
+            <field>Fax</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fax Opt Out</displayNameOverride>
+            <field>HasOptedOutOfFax</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Name</displayNameOverride>
+            <field>FirstName</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Full Name</displayNameOverride>
+            <field>Name</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Gender Identity</displayNameOverride>
+            <field>GenderIdentity</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Home Phone</displayNameOverride>
+            <field>HomePhone</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Individual</displayNameOverride>
+            <field>Individual</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Recipient</displayNameOverride>
+            <field>PMC_SS_InvoiceRecipient__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Email Bounced</displayNameOverride>
+            <field>IsEmailBounced</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Language</displayNameOverride>
+            <field>PMC_DH_Language__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Interaction Date</displayNameOverride>
+            <field>PMC_SS_LastInteractionDate__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Name</displayNameOverride>
+            <field>LastName</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Stay-in-Touch Request Date</displayNameOverride>
+            <field>LastCURequestDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Stay-in-Touch Save Date</displayNameOverride>
+            <field>LastCUUpdateDate</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Source</displayNameOverride>
+            <field>LeadSource</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Address</displayNameOverride>
+            <field>MailingAddress</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing City</displayNameOverride>
+            <field>MailingCity</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Country</displayNameOverride>
+            <field>MailingCountryCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Country (text only)</displayNameOverride>
+            <field>MailingCountry</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Geocode Accuracy</displayNameOverride>
+            <field>MailingGeocodeAccuracy</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Latitude</displayNameOverride>
+            <field>MailingLatitude</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Longitude</displayNameOverride>
+            <field>MailingLongitude</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing State/Province</displayNameOverride>
+            <field>MailingStateCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing State/Province (text only)</displayNameOverride>
+            <field>MailingState</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Street</displayNameOverride>
+            <field>MailingStreet</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mailing Zip/Postal Code</displayNameOverride>
+            <field>MailingPostalCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Marketing Email Consent</displayNameOverride>
+            <field>PMC_DH_MarketingEmailConsent__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Marketing SMS Opt Out</displayNameOverride>
+            <field>PMC_SS_SMSOptOut__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Marketing Whatsapp Opt Out</displayNameOverride>
+            <field>PMC_SS_WhatsappOptOut__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MDM Verified</displayNameOverride>
+            <field>PMC_SS_MDMVerified__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mobile</displayNameOverride>
+            <field>MobilePhone</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mobile Country Code</displayNameOverride>
+            <field>et4ae5__Mobile_Country_Code__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mobile Opt Out</displayNameOverride>
+            <field>et4ae5__HasOptedOutOfMobile__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Number Of Inactivity Days</displayNameOverride>
+            <field>PMC_SS_NumberOfInactivityDays__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Placing</displayNameOverride>
+            <field>PMC_SS_OrderPlacing__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other City</displayNameOverride>
+            <field>OtherCity</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Country</displayNameOverride>
+            <field>OtherCountryCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Country (text only)</displayNameOverride>
+            <field>OtherCountry</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Geocode Accuracy</displayNameOverride>
+            <field>OtherGeocodeAccuracy</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Address</displayNameOverride>
+            <field>OtherAddress</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Latitude</displayNameOverride>
+            <field>OtherLatitude</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Longitude</displayNameOverride>
+            <field>OtherLongitude</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>WhatsApp</displayNameOverride>
+            <field>OtherPhone</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other State/Province</displayNameOverride>
+            <field>OtherStateCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other State/Province (text only)</displayNameOverride>
+            <field>OtherState</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Street</displayNameOverride>
+            <field>OtherStreet</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Zip/Postal Code</displayNameOverride>
+            <field>OtherPostalCode</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phone</displayNameOverride>
+            <field>Phone</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Preferences</displayNameOverride>
+            <field>PMC_DH_Preferences__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Interests</displayNameOverride>
+            <field>PMC_SS_ProductInterests__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pronouns</displayNameOverride>
+            <field>Pronouns</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reports To</displayNameOverride>
+            <field>ReportsTo</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Salutation</displayNameOverride>
+            <field>Salutation</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Customer Number</displayNameOverride>
+            <field>PMC_SS_SAP_CustomerNumber__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Source</displayNameOverride>
+            <field>PMC_Source__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>PMC_SS_Status__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Title</displayNameOverride>
+            <field>Title</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>PMC_SS_Type__c</field>
+            <table>Account.Entitlements.EntitlementContacts</table>
+        </columns>
+        <masterLabel>Contacts</masterLabel>
+    </sections>
+</ReportType>

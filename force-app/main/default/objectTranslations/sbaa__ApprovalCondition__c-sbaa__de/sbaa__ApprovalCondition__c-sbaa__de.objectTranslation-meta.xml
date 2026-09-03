@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Genehmigungsbedingung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Genehmigungsbedingungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsbedingung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsbedingungen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsbedingung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsbedingungen --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Genehmigungsbedingung --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Genehmigungsbedingungen --></value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Bedingungsname</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Sie dürfen nur einen Filtertyp angeben, und dieser muss mit &quot;Filtertyp&quot; übereinstimmen.</errorMessage>
+        <name>sbaa__Filter_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Sie müssen einen Wert für &quot;Getestetes Feld&quot; oder &quot;Getestete Variable&quot; angeben.</errorMessage>
+        <name>sbaa__Tested_Target_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

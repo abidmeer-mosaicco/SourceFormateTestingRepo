@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Sub_Reason__c</fullName>
+    <label>Issue Sub-Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_SS_IssueReason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adulteration / Cargo Theft</fullName>
+                <default>false</default>
+                <label>Adulteration / Cargo Theft</label>
+            </value>
+            <value>
+                <fullName>Blend Material Creation</fullName>
+                <default>false</default>
+                <label>Blend Material Creation</label>
+            </value>
+            <value>
+                <fullName>Blend Material Extension</fullName>
+                <default>false</default>
+                <label>Blend Material Extension</label>
+            </value>
+            <value>
+                <fullName>Blocks</fullName>
+                <default>false</default>
+                <label>Blocks</label>
+            </value>
+            <value>
+                <fullName>Booked Sales Block</fullName>
+                <default>false</default>
+                <label>Booked Sales Block</label>
+            </value>
+            <value>
+                <fullName>Caking from Humidity</fullName>
+                <default>false</default>
+                <label>Caking from Humidity</label>
+            </value>
+            <value>
+                <fullName>Chemical Additive</fullName>
+                <default>false</default>
+                <label>Chemical Additive</label>
+            </value>
+            <value>
+                <fullName>Chemical Deficiency</fullName>
+                <default>false</default>
+                <label>Chemical Deficiency</label>
+            </value>
+            <value>
+                <fullName>Coarse</fullName>
+                <default>false</default>
+                <label>Coarse</label>
+            </value>
+            <value>
+                <fullName>Color</fullName>
+                <default>false</default>
+                <label>Color</label>
+            </value>
+            <value>
+                <fullName>Contamination</fullName>
+                <default>false</default>
+                <label>Contamination</label>
+            </value>
+            <value>
+                <fullName>Damaged Cargo</fullName>
+                <default>false</default>
+                <label>Damaged Cargo</label>
+            </value>
+            <value>
+                <fullName>Delivery Delay</fullName>
+                <default>false</default>
+                <label>Delivery Delay</label>
+            </value>
+            <value>
+                <fullName>Dust</fullName>
+                <default>false</default>
+                <label>Dust</label>
+            </value>
+            <value>
+                <fullName>Granulometric Uniformity</fullName>
+                <default>false</default>
+                <label>Granulometric Uniformity</label>
+            </value>
+            <value>
+                <fullName>Humidity</fullName>
+                <default>false</default>
+                <label>Humidity</label>
+            </value>
+            <value>
+                <fullName>Impurity</fullName>
+                <default>false</default>
+                <label>Impurity</label>
+            </value>
+            <value>
+                <fullName>Incorrect Documentation</fullName>
+                <default>false</default>
+                <label>Incorrect Documentation</label>
+            </value>
+            <value>
+                <fullName>Incorrect Product</fullName>
+                <default>false</default>
+                <label>Incorrect Product</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Oil</fullName>
+                <default>false</default>
+                <label>Oil</label>
+            </value>
+            <value>
+                <fullName>Packing</fullName>
+                <default>false</default>
+                <label>Packing</label>
+            </value>
+            <value>
+                <fullName>Product Label Discrepancy</fullName>
+                <default>false</default>
+                <label>Product Label Discrepancy</label>
+            </value>
+            <value>
+                <fullName>Product Spillage on Truck</fullName>
+                <default>false</default>
+                <label>Product Spillage on Truck</label>
+            </value>
+            <value>
+                <fullName>Replan</fullName>
+                <default>false</default>
+                <label>Replan</label>
+            </value>
+            <value>
+                <fullName>Stay Extension Fee</fullName>
+                <default>false</default>
+                <label>Stay Extension Fee</label>
+            </value>
+            <value>
+                <fullName>Stones</fullName>
+                <default>false</default>
+                <label>Stones</label>
+            </value>
+            <value>
+                <fullName>Straight Material Creation</fullName>
+                <default>false</default>
+                <label>Straight Material Creation</label>
+            </value>
+            <value>
+                <fullName>Straight Material Extension</fullName>
+                <default>false</default>
+                <label>Straight Material Extension</label>
+            </value>
+            <value>
+                <fullName>Transport Issue</fullName>
+                <default>false</default>
+                <label>Transport Issue</label>
+            </value>
+            <value>
+                <fullName>Truck at Factory</fullName>
+                <default>false</default>
+                <label>Truck at Factory</label>
+            </value>
+            <value>
+                <fullName>Truck at the plant - NO</fullName>
+                <default>false</default>
+                <label>Truck at the plant - NO</label>
+            </value>
+            <value>
+                <fullName>Truck at the plant - YES</fullName>
+                <default>false</default>
+                <label>Truck at the plant - YES</label>
+            </value>
+            <value>
+                <fullName>Weight Discrepancy</fullName>
+                <default>false</default>
+                <label>Weight Discrepancy</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yes</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Product Request</controllingFieldValue>
+            <valueName>Blend Material Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request</controllingFieldValue>
+            <valueName>Blend Material Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request</controllingFieldValue>
+            <valueName>Straight Material Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Request</controllingFieldValue>
+            <valueName>Straight Material Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Blocks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Caking from Humidity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Chemical Additive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Chemical Deficiency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Coarse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Color</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Contamination</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Delivery Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Dust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Granulometric Uniformity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Humidity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Impurity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Incorrect Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Oil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Packing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Product Label Discrepancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Product Spillage on Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Stones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Weight Discrepancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Returns (SADM)</controllingFieldValue>
+            <valueName>Truck at the plant - NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Returns (SADM)</controllingFieldValue>
+            <valueName>Truck at the plant - YES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Adulteration / Cargo Theft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Damaged Cargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Incorrect Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Stay Extension Fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Transport Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unblock Contract</controllingFieldValue>
+            <valueName>Booked Sales Block</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unblock Contract</controllingFieldValue>
+            <valueName>Replan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unblock Contract</controllingFieldValue>
+            <valueName>Truck at Factory</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

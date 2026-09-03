@@ -1,0 +1,23 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "My Profile",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Mi perfil & contraseña"
+        },
+        "id" : "699755a2-479c-4f81-aad2-4bb7ba62a09f"
+      }, {
+        "attributes" : {
+          "emailLabel" : "Correo electrónico",
+          "firstNameLabel" : "Nombre de pila",
+          "lastNameLabel" : "Apellido",
+          "phoneNumberLabel" : "Número de teléfono"
+        },
+        "id" : "b09377b1-4986-4e2e-a1bd-2ac7d36d54c7"
+      } ]
+    }
+  },
+  "urlName" : "my-profile"
+}

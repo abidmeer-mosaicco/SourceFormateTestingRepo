@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Mosaic Direct - Order Error Notification</name>
+    <style>none</style>
+    <subject>Contract {!contractNumber} - Error Processing Your Order</subject>
+    <textOnly>{!customerName},
+
+Apologies, your recent order did not process successfully. Our service team at Mosaic is actively working behind the scenes to resolve the issue and will reply to you promptly.
+
+If you have urgent questions, please feel free to contact your SSR directly.
+
+Thank you for your patience and understanding.
+
+Internal ref: {!OrderNumber}
+
+
+Please, do not reply to this email.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

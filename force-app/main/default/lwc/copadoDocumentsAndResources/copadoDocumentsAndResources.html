@@ -1,0 +1,63 @@
+<template>
+  <div class="notes-wrapper">
+    <div class="topbar">
+      <h1 class="page-title">{title}</h1>
+
+      <div class="top-actions">
+        <lightning-button-group>
+          <lightning-button label="Expand all" onclick={expandAll}></lightning-button>
+          <lightning-button label="Collapse all" onclick={collapseAll}></lightning-button>
+        </lightning-button-group>
+      </div>
+    </div>
+
+    <template if:true={isLoading}>
+      <lightning-card title="Loading…"></lightning-card>
+    </template>
+
+    <template if:true={topics.length}>
+      <template for:each={topics} for:item="t">
+        <div key={t.id} class="release-note-box">
+          <div class="release-header" data-id={t.id} onclick={toggleTopic}>
+            <h2>{t.name}</h2>
+            <span class="toggle-icon">
+              <template if:true={t._expanded}>▲</template>
+              <template if:false={t._expanded}>▼</template>
+            </span>
+          </div>
+
+          <template if:true={t._expanded}>
+            <div class="release-body">
+              <template if:true={t.shortDescription}>
+                <div class="section"><p class="topic-desc">{t.shortDescription}</p></div>
+              </template>
+
+              <template if:true={t.articles.length}>
+                <template for:each={t.articles} for:item="a">
+                  <div key={a.id} class="section">
+                    <h3>{a.title}</h3>
+                    <div class="rt" lwc:dom="manual" data-article-id={a.id}></div>
+                    <template if:true={a.ctaUrl}>
+                      <div class="cta">
+                        <lightning-button variant="brand-outline" label={a.ctaLabel}
+                          data-url={a.ctaUrl} onclick={openUrl}></lightning-button>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </template>
+
+              <template if:false={t.articles.length}>
+                <div class="section empty">No content yet.</div>
+              </template>
+            </div>
+          </template>
+        </div>
+      </template>
+    </template>
+
+    <template if:true={errorMessage}>
+      <div class="err">{errorMessage}</div>
+    </template>
+  </div>
+</template>

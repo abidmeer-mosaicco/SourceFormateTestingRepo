@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Approval Condition --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Approval Condition --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Condition Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Sólo puede especificar un tipo de filtro y debe coincidir con Tipo de filtro.</errorMessage>
+        <name>sbaa__Filter_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Debe proporcionar un valor para Campo comprobado o Variable comprobada.</errorMessage>
+        <name>sbaa__Tested_Target_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

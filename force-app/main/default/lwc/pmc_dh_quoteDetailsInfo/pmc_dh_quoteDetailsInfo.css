@@ -1,0 +1,490 @@
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-icon-style {
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+.slds-scrollable_x {
+  overflow: auto;
+}
+
+.quote-summary-btn {
+  background: var(--light-green);
+  border-color: var(--light-green);
+  color: var(--primary-green);
+  padding: 13px 18px;
+  white-space: nowrap;
+}
+
+.quote-summary-btn:disabled {
+  color: var(--primary-grey);
+  background-color: var(--tertiary-grey);
+  border-color: transparent;
+}
+
+.product-image {
+  min-width: 104px;
+  width: 104px;
+  height: 104px;
+  background-color: var(--tertiary-grey);
+}
+
+.product-image img {
+  max-width: 104px;
+  height: 104px;
+}
+
+.product-col {
+  min-width: 360px;
+  max-width: 360px;
+  display: flex;
+}
+
+.product-section:last-child {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+
+.custom-card.productInfo-card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-card.productInfo-card .card-header a {
+  font-family: var(--regular-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1D625C;
+  text-decoration: underline;
+}
+
+.productInfo-card .product-content {
+  padding-top: 16px;
+}
+
+.productInfo-card .product-content:first-child {
+  padding-top: 0;
+}
+
+.productInfo-card .product-content:last-child {
+  border-bottom: none;
+}
+
+.product-grid {
+  display: flex;
+}
+
+.product-grid .content-info {
+  padding-left: 32px;
+  padding-right: 32px;
+  min-width: fit-content;
+}
+
+.product-grid .edit-icon-style {
+  min-width: 85px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: 1px;
+}
+
+.product-grid .avg-price-per-unit,
+.product-grid .product-uom {
+  min-width: 244px;
+}
+
+.in-progress .product-uom {
+  min-width: 173px;
+}
+
+.slds-table thead th {
+  background-color: var(--tertiary-green);
+  padding: 14.5px 10px;
+}
+
+.strQuantity {
+  min-width: 66px;
+  display: table;
+}
+
+.strShipTo,
+.strShipFrom,
+.strIncoterms,
+.strDeliveryMode,
+.strPackType,
+.strPackageType {
+  min-width: -webkit-fill-available;
+  display: table;
+}
+
+
+.slds-table tbody td {
+  padding: 14px 7px 0 7px;
+  white-space: break-spaces;
+  vertical-align: baseline;
+}
+
+.in-progress .slds-table tbody td {
+  padding: 14px 7px;
+}
+
+.custom-card.paymentInfo-card,
+.custom-card.contractDateInfo-card {
+  position: relative;
+  z-index: 3;
+}
+
+.custom-card.productInfo-card,
+.custom-card.contracts-card {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-card.rejectionQuote-card .lbl-field-value{
+  word-break: break-all;
+}
+
+.product-name {
+  font-weight: 700;
+  line-height: 22px;
+  font-size: var(--large-font-size);
+}
+
+.scrollable-container {
+  max-width: calc(91.6vw - 32px);
+  overflow-x: auto;
+}
+
+.action-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quote-summary-buttons {
+  display: flex;
+  margin-right: 16px;
+}
+
+.quote-summary-buttons .quote-summary-btn {
+  justify-content: center;
+}
+
+.quote-summary-buttons .slds-button+.slds-button {
+  margin-left: 8px;
+}
+
+.primary-green-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.mobile-actions {
+  display: none;
+}
+
+.desktop-button {
+  display: flex;
+  gap: 8px;
+}
+
+.strQtyCol {
+  max-width: 60px;
+  word-wrap: break-word;
+}
+
+.strShipCol {
+  min-width: 200px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.strIncotermsCol,
+.strPackTypeCol {
+  max-width: 80px;
+  word-wrap: break-word;
+}
+
+.strDeliveryCol,
+.strPackageTypeCol {
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.shipment-line-error {
+  font-size: var(--x-small-font-size);
+  line-height: 14px;
+  color: var(--error-orange);
+}
+
+::-webkit-scrollbar-track {
+  margin: 0;
+}
+
+.requote-button-style {
+  display: flex;
+  justify-content: end;
+}
+
+.table-heading {
+  font-family: var(--medium-font);
+}
+
+.table-heading th {
+  color: #093532;
+  font-weight: 500;
+}
+
+.table-content {
+  font-family: var(--regular-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #093532;
+}
+
+.contract-message {
+  font-family: var(--medium-font);
+  font-weight: 500;
+  line-height: 19px;
+  color: #093532;
+}
+
+.contracts-card .contract-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+
+.contracts-card .contract-details a {
+  font-family: var(--medium-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #093532 !important;
+  text-decoration: underline;
+}
+
+.badge-font {
+  font-family: var(--medium-font);
+}
+
+.conversation_history-card .slds-grid {
+  flex-direction: column;
+}
+
+.conversation_history-card .conversation_history-content {
+  max-height: 455px;
+}
+
+::-webkit-scrollbar {
+  height: 42px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: var(--secondary-grey);
+  border-top: 16px solid rgba(0, 0, 0, 0);
+  border-bottom: 16px solid rgba(0, 0, 0, 0);
+}
+
+.strPackageTypeCol.text-align-center {
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .hidden-sm {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+  }
+
+  .mobile-button-style {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .quote-summary-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .quote-summary-buttons .slds-button+.slds-button {
+    margin-left: 0px;
+  }
+
+  .quote-summary-buttons .quote-summary-btn {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktop-button {
+    display: none;
+  }
+
+  .total-qty {
+    padding: 16px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .edit-icon-style {
+    justify-content: flex-end;
+    padding: 4px 16px 0;
+  }
+
+  .scrollable-container {
+    max-width: calc(100vw - 32px - 32px);
+    overflow-x: auto;
+  }
+
+  .product-info {
+    min-width: fit-content;
+  }
+
+  .product-image {
+    display: none;
+  }
+
+  .product-col {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 16px;
+  }
+
+  .contracts-card .contract-details {
+    flex-direction: column;
+  }
+
+  .contracts-card .contract-details a {
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+
+  .lbl-field-value {
+    font-size: var(--small-font-size);
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    line-height: 20px;
+    overflow-wrap: anywhere;
+  }
+
+  .action-button {
+    width: 100%;
+  }
+
+  .contract-message {
+    font-family: var(--semibold-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+
+  .conversation_history-card .slds-grid .lbl-field-value {
+    line-height: 17px;
+  }
+
+  .avg-price-per-unit {
+    padding: 4px 0px;
+  }
+
+  .product-content.slds-scrollable_x {
+    max-width: unset;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-grid .content-info,
+  .product-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mobile-scroll {
+    max-width: calc(100vw - 32px);
+    overflow-x: auto;
+  }
+
+  .product-uom {
+    flex-direction: column;
+  }
+
+  .in-progress .product-uom {
+    flex-direction: row;
+  }
+
+  .product-grid .edit-icon-style {
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 1364px) {
+  .product-info {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1401px) {
+  .slds-table {
+    min-width: 815px;
+    max-width: 815px;
+  }
+
+  .quoteSummary-card .quote-id,
+  .quoteSummary-card .content-info,
+  .quoteSummary-card .badge-info {
+    width: 12.5%;
+  }
+
+  .action-button {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .requote-button-style {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1560px) {
+  .quote-summary-scrollable-container {
+    max-width: 91.6vw;
+    overflow-x: scroll;
+  }
+
+  .quote-summary-scrollable-content {
+    min-width: 1560px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .quote-summary-scrollable-container.status-action-pending {
+    max-width: 91.6vw;
+    overflow-x: scroll;
+  }
+
+  .quote-summary-scrollable-container.status-action-pending .quote-summary-scrollable-content {
+    min-width: 1960px;
+  }
+}

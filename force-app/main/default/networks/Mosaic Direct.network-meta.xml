@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disablePvtPagesForPwdResetInLWR>false</disablePvtPagesForPwdResetInLWR>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>customerexperience@mosaicco.com</emailSenderAddress>
+    <emailSenderName>Mosaic Direct</emailSenderName>
+    <embeddedLoginEnabled>true</embeddedLoginEnabled>
+    <enableApexCDNCaching>true</enableApexCDNCaching>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableExpFriendlyUrlsAsDefault>false</enableExpFriendlyUrlsAsDefault>
+    <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>true</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableImageOptimizationCDN>true</enableImageOptimizationCDN>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableLWRExperienceConnectedApp>false</enableLWRExperienceConnectedApp>
+    <enableMemberVisibility>false</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>false</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/PMC_DH_ResetPassword</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <headlessForgotPasswordTemplate>unfiled$public/CommunityHeadlessForgotPasswordTemplate</headlessForgotPasswordTemplate>
+    <headlessRegistrationTemplate>unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
+    <logoutUrl>https://globaldigitalacceleration.my.site.com/en-US/login</logoutUrl>
+    <networkAuthApiSettings>
+        <doesForgotPasswordRequireAuth>false</doesForgotPasswordRequireAuth>
+        <doesPasswordLoginRequireAuth>false</doesPasswordLoginRequireAuth>
+        <doesPwdlessLoginRequireAuth>false</doesPwdlessLoginRequireAuth>
+        <doesRegistrationRequireAuth>false</doesRegistrationRequireAuth>
+        <isFirstPartyAppsAllowed>false</isFirstPartyAppsAllowed>
+        <isForgotPwdAllowed>false</isForgotPwdAllowed>
+        <isForgotPwdEmailTemplateAllowlistingEnabled>false</isForgotPwdEmailTemplateAllowlistingEnabled>
+        <isHeadlessUserRegistrationAllowed>false</isHeadlessUserRegistrationAllowed>
+        <isPwdlessLoginAllowed>false</isPwdlessLoginAllowed>
+        <isRecaptchaRequiredForgotPwd>false</isRecaptchaRequiredForgotPwd>
+        <isRecaptchaRequiredPwdlessLogin>false</isRecaptchaRequiredPwdlessLogin>
+        <isRecaptchaRequiredRgstr>false</isRecaptchaRequiredRgstr>
+        <isUniversalClientRgstrAllowed>false</isUniversalClientRgstrAllowed>
+        <isUserDisambiguationAllowedForgotPwd>false</isUserDisambiguationAllowedForgotPwd>
+        <isUserDisambiguationAllowedUsernamePwd>false</isUserDisambiguationAllowedUsernamePwd>
+        <maxPasswordResetAttempts>5</maxPasswordResetAttempts>
+        <recaptchaScoreThreshold>0.0</recaptchaScoreThreshold>
+    </networkAuthApiSettings>
+    <networkMemberGroups>
+        <profile>digital hub buyer</profile>
+        <profile>digital hub contract manager</profile>
+        <profile>digital hub finance manager</profile>
+        <profile>digital hub knowledge only user</profile>
+        <profile>digital hub logistics manager</profile>
+        <profile>digital hub super buyer</profile>
+        <profile>digital hub system admin</profile>
+        <profile>admin</profile>
+        <profile>mosaic direct partner community read only</profile>
+        <profile>mosaic direct partner community digital hub</profile>
+        <profile>mosaic direct partner community</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Mosaic_Direct1</picassoSite>
+    <secondaryEmailSenderEnabled>false</secondaryEmailSenderEnabled>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Mosaic_Direct</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>vforcesite</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/PMC_DH_WelcomeEmailTemplate</welcomeTemplate>
+</Network>

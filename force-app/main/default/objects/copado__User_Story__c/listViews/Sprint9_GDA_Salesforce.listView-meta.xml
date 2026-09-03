@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint9_GDA_Salesforce</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Project__c</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Developer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>Sprint 9</value>
+    </filters>
+    <filters>
+        <field>copado__Project__c</field>
+        <operation>equals</operation>
+        <value>GDA Salesforce</value>
+    </filters>
+    <label>Sprint9_GDA_Salesforce</label>
+    <sharedTo>
+        <group>Copado_Release_Managers</group>
+    </sharedTo>
+</ListView>

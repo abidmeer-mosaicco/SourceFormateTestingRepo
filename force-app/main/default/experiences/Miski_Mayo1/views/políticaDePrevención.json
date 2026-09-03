@@ -1,0 +1,299 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "0f8a3b1f-0d4d-4cca-ac8e-281e96b088af",
+  "label" : "Política de Prevención",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f79087d9-144f-4a2b-9ac8-077ffb3ed718",
+          "columns" : [ {
+            "UUID" : "c4111a3d-3e25-4f4e-a559-8c0830fc3c4e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f79087d9-144f-4a2b-9ac8-077ffb3ed718",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "0d189280-c5ee-4923-b5ab-44a9e68407b4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c4111a3d-3e25-4f4e-a559-8c0830fc3c4e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "31771271-a1c5-4e66-be68-f73872757f4e",
+          "columns" : [ {
+            "UUID" : "19d0dd46-47ba-4f1d-a348-1238ad517d53",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "31771271-a1c5-4e66-be68-f73872757f4e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageL",
+            "textDescription" : "En Miski Mayo siempre buscamos actuar de manera correcta"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "9df892d2-b1c0-45cd-bb83-8cc1a94509f8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "19d0dd46-47ba-4f1d-a348-1238ad517d53",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "c461eb65-0565-4a9d-84f9-6301434a2640",
+          "columns" : [ {
+            "UUID" : "b05767ee-741e-4cd3-8485-e06ee6013aee",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 83
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c461eb65-0565-4a9d-84f9-6301434a2640",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(230, 0, 0);\">Política de Prevención de la Discriminación, el Acoso y Las Represalias</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "96f05a7f-fb37-40f0-bebe-f1b2f109345b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b05767ee-741e-4cd3-8485-e06ee6013aee",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "ef79b4c2-9376-40e8-b1f3-10ef029194fd",
+          "columns" : [ {
+            "UUID" : "5fc7e572-f3b1-4f45-a100-4f92f6be59bc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 220
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ef79b4c2-9376-40e8-b1f3-10ef029194fd",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px; color: rgb(26, 26, 26);\">Miski Mayo tiene la Política de Prevención de la Discriminación, el Acoso y las Represalias, que se ha trabajado en base a una Política Corporativa general de nuestra casa matriz The Mosaic Company. Nuestra empresa ha adaptado esta Política a la realidad de Miski Mayo, en ese sentido, estamos seguros de que esta valiosa información nos permitirá tener una visión global de cuáles son las normas y buenas conductas que deben primar, con el fin de fomentar siempre un ambiente de armonía y respeto entre los que componen esta gran empresa.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e026e771-85cd-4add-8407-05d41b03eee7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5fc7e572-f3b1-4f45-a100-4f92f6be59bc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "f31d204f-83f0-4043-bd50-59a02e97e001",
+          "columns" : [ {
+            "UUID" : "cd2e61d9-6b5c-4bd9-8f79-27cb5f2ad230",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f31d204f-83f0-4043-bd50-59a02e97e001",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Screenshot_20250509_134038.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f9af81e9-a422-4f5a-a4ba-cd0ea2cd4b78",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cd2e61d9-6b5c-4bd9-8f79-27cb5f2ad230",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 50,
+        "sectionConfig" : {
+          "UUID" : "72b353f0-1ea5-4d28-974e-5a1823ceefd1",
+          "columns" : [ {
+            "UUID" : "bcdcafcc-b478-405f-bd39-0dbf2577feb8",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "517d6d15-b3de-46bc-b4e5-33b5d6f67b06",
+            "columnKey" : "6dc5a",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3907120d-1949-42b5-9ffb-112585f10159",
+            "columnKey" : "2565a",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 200
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "72b353f0-1ea5-4d28-974e-5a1823ceefd1",
+      "regions" : [ {
+        "id" : "bcdcafcc-b478-405f-bd39-0dbf2577feb8",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "modalTitle" : "DESCARGAR PDF",
+            "pdfUrl" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000001gLib/Vdn9QLTyHkDxsGe8ypMxJBMj4TolwVqC3z0gpW6azvg"
+          },
+          "componentName" : "c:miskiMayoPDFViewerComponent",
+          "id" : "f42a4824-d013-4a4d-99ea-9325b14865eb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "517d6d15-b3de-46bc-b4e5-33b5d6f67b06",
+        "regionLabel" : "Column 2",
+        "regionName" : "6dc5a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3907120d-1949-42b5-9ffb-112585f10159",
+        "regionLabel" : "Column 3",
+        "regionName" : "2565a",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6f273615-6ea6-4770-a50f-9fabd81aaabb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Política de Prevención"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "aa66408e-6a67-46b7-8136-93bb02c28441",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "79927e2d-6f63-4929-ae88-df2c9e34829c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-poltica-de-prevencin"
+}

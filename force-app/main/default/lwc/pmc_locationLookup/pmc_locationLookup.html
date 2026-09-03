@@ -1,0 +1,47 @@
+<template>
+<div class="slds-form-element">
+<div class="slds-form-element__control">
+<div class="slds-combobox_container">
+<div class={comboboxClass} role="combobox" aria-expanded={showDropdown} aria-haspopup="listbox">
+<!-- Input Box -->
+<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+<input type="text" class="slds-input" id="locationInput"
+                              placeholder="Search Location..."
+                              value={searchKey}
+                              oninput={handleKeyChange} />
+<!-- Search Icon -->
+<button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon"
+                               title="Search" onclick={handleIconClick}>
+<lightning-icon icon-name="utility:search" size="x-small"></lightning-icon>
+</button>
+</div>
+<!-- dropdown-->
+<template if:true={showDropdown}>
+<!-- must live directly under .slds-combobox -->
+<div class="slds-dropdown slds-dropdown_fluid slds-dropdown_length-5" role="listbox">
+<ul class="slds-listbox slds-listbox_vertical slds-dropdown__list" role="presentation">
+<template for:each={locations} for:item="loc">
+<li key={loc.Id} class="slds-listbox__item" role="presentation">
+<div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+              role="option"
+              data-id={loc.Id} data-name={loc.Name}
+              onclick={handleSelect}>
+<div class="slds-media__body">
+<span class="slds-listbox__option-text slds-listbox__option-text_entity slds-truncate" title={loc.Name}>
+               {loc.Name}
+</span>
+<span class="slds-listbox__option-meta slds-truncate" title={loc.Id}>
+               {loc.Id}
+</span>
+</div>
+</div>
+</li>
+</template>
+</ul>
+</div>
+</template>
+</div>
+</div>
+</div>
+</div>
+</template>

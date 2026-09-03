@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Price Condition --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Price Condition --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Condition # --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>El Atributo de Configuración como objeto probado sólo se permite en las Reglas de Precios de Alcance Configurador.</errorMessage>
+        <name>SBQQ__Config_attr_config_scoped_price_rules</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Atributo de configuración como un objeto probado no puede ser evaluado contra una fórmula.</errorMessage>
+        <name>SBQQ__Config_attr_tested_object_with_formula</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Si el Tipo de filtro es Fórmula, la Fórmula del filtro no puede estar vacía.&quot;</errorMessage>
+        <name>SBQQ__Filter_formula_field_null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Debe especificar el campo o la variable comprobada.</errorMessage>
+        <name>SBQQ__Tested_field_or_variable</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,214 @@
+<template>
+  <template lwc:if={pageLoaded}>
+    <c-pmc_dh_breadcrumb crumbs={crumbs} oncustomnavigateev={landToOrderDetailsView}></c-pmc_dh_breadcrumb>
+    <h3 class="slds-m-bottom_large slds-m-top_medium">
+      {labels.pmc_shipmentDetails_orderLineNumber}&nbsp;#{orderLineItem.strOrderLine}
+    </h3>
+    <div class="slds-grid navigation-flex">
+      <div class="navigation-item prev">
+        <span if:true={prevOrderLine} data-id={prevOrderLine.strOrderItemId} onkeydown={navigateToDetailOnEnter}
+          onclick={navigateToOrderLineDetails}>&lt;&nbsp;{labels.pmc_shipmentDetails_orderLineNumber}&nbsp;#{prevOrderLine.strOrderItemNumber}</span>
+      </div>
+      <div class="navigation-item next">
+        <span if:true={nextOrderLine} data-id={nextOrderLine.strOrderItemId} onkeydown={navigateToDetailOnEnter}
+          onclick={navigateToOrderLineDetails}>{labels.pmc_shipmentDetails_orderLineNumber}&nbsp;#{nextOrderLine.strOrderItemNumber}&nbsp;&gt;</span>
+      </div>
+    </div>
+    <!-- Order Line Summary -->
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_1-of-1 order-line-summary-section">
+        <div class="custom-card order-line-summary">
+          <div class="card-header">{labels.pmc_shipmentDetails_orderLineSummary}</div>
+          <div class="card-body">
+            <div class="slds-grid slds-gutters slds-wrap">
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_1 slds-medium-order_1 content-info">
+                <div class="lbl-field-name">{labels.pmc_leadManagement_product}</div>
+                <div class="lbl-field-value">{orderLineItem.objOrderLineSummary.strProductName}</div>
+              </div>
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_2 slds-medium-order_2 content-info">
+                <div class="lbl-field-name">{labels.pmc_quoteDetailsFlow_customerName}</div>
+                <div class="lbl-field-value">{orderLineItem.objOrderLineSummary.strCustomerName}</div>
+              </div>
+
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_3 slds-medium-order_3 content-info shipping-info">
+                <div class="lbl-field-name">{labels.pmc_quoteCheckoutFlow_shipTo}</div>
+                <div class="lbl-field-value">
+                  {orderLineItem.objOrderLineSummary.strShipToAdd}
+                </div>
+              </div>
+
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_4 slds-medium-order_5 content-info">
+                <div class="lbl-field-name">{labels.pmc_quoteCheckoutFlow_deliveryInformation}</div>
+                <div class="lbl-field-value">{orderLineItem.objOrderLineSummary.strDeliveryInformation}</div>
+              </div>
+
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_5 slds-medium-order_6 content-info">
+                <div class="lbl-field-name">{labels.pmc_shipmentDetails_orderLineQty}</div>
+                <div class="lbl-field-value">{orderLineItem.objOrderLineSummary.strTotalOrderLineQty}</div>
+              </div>
+
+              <div
+                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_6 slds-medium-order_7 badge-info">
+                <div class="lbl-field-name hidden-sm">{labels.pmc_shipmentDetails_orderLineStatus}</div>
+                <div class="lbl-field-value slds-size_1-of-1">
+                  <span class="badge badge-font"
+                    data-status={orderLineItem.objOrderLineSummary.strOrderLineBadgeStatus}>
+                    {orderLineItem.objOrderLineSummary.strOrderLineStatus}
+                  </span>
+                </div>
+              </div>
+              <template lwc:if={showCallPrice}>
+                <div
+                  class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_7 slds-medium-order_4 content-info">
+                  <div class="lbl-field-name">{labels.pmc_fpd_callPriceDate}</div>
+                  <div class="lbl-field-value">{orderLineItem.objOrderLineSummary.formattedCallPriceDate}</div>
+                </div>
+              </template>
+              <template lwc:else>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_7 slds-medium-order_4"></div>
+              </template>
+              <template if:true={showCallPriceBtn}>
+                <div
+                  class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-order_8 slds-medium-order_8 slds-align--absolute-center mobile-button">
+                  <lightning-button variant="brand" label={orderLineItem.callPriceCTALabel}
+                    title={orderLineItem.callPriceCTALabel} disabled={orderLineItem.callPriceCTADisabled}
+                    onclick={openCallPriceModal}>
+                  </lightning-button>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delivery Details -->
+    <div class="menu-wrapper slds-m-top_medium">
+      <lightning-button-icon icon-name="utility:chevronleft" alternative-text={labels.pmc_customTabs_previous}
+        size="medium" class="left-arrow arrow" if:true={isArrowNeeded}></lightning-button-icon>
+      <ul class="menu">
+        <li class="item dxp-text-body" for:each={_tabsArray} for:item="item" for:index="index" key={item.id}
+          data-state={item.state} data-value={item.strTabValue} data-id={item.id} onclick={handleItemClickEvent}
+          onkeydown={handleTabChangeOnEnter}>
+          {item.strTabLabel}
+        </li>
+      </ul>
+      <lightning-button-icon icon-name="utility:chevronright" alternative-text={labels.pmc_customTabs_next}
+        size="medium" class="right-arrow arrow" if:true={isArrowNeeded}></lightning-button-icon>
+    </div>
+    <div class="scrollable-container slds-m-bottom_x-large" tabindex="0">
+      <div class="scrollable-content">
+        <div class="list-container slds-m-vertical_x-large">
+          <template for:each={lstFilteredDeliveries} for:item="orderItem">
+            <div key={orderItem.strDeliveryId} class="slds-grid slds-border_bottom">
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                <div class="lbl-field-name">{labels.pmc_contractDetails_poNumber}</div>
+                <div class="lbl-field-value">{orderItem.strPONumber}</div>
+              </div>
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                <div class="lbl-field-name">{labels.pmc_leadManagement_product}</div>
+                <div class="lbl-field-value">{orderItem.strProductName}</div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_3-of-8 content-info">
+                <div class="lbl-field-name">{labels.pmc_shipmentDetails_vehicleId}</div>
+                <div class="lbl-field-value vehicle-id">
+                  <template lwc:if={isLocationBrazil}>
+                    <a href={trizzyUrl} target="_blank">{orderItem.strVehicleId}</a>
+                  </template>
+                  <template lwc:else>
+                    <span class="lbl-field-value order-line" data-id={orderItem.strVehicleId}
+                      data-orderlinenum={orderLineItem.strOrderLine} onclick={navigateToDeliveryTrackingPage}>
+                      {orderItem.strVehicleId}
+                    </span>
+                  </template>
+                </div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                <div class="lbl-field-name">{labels.pmc_shipmentDetails_estShipmentDt}</div>
+                <div class="lbl-field-value">{orderItem.datEstimatedShipmentDate}</div>
+              </div>
+
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                <div class="lbl-field-name">{labels.pmc_shipmentDetails_deliveryQty}</div>
+                <div class="lbl-field-value">{orderItem.strDeliveryQuantity}</div>
+              </div>
+              <template if:false={isLocationBrazil}>
+                <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                  <div class="lbl-field-name">{labels.pmc_shipmentDetails_eta}</div>
+                  <div class="lbl-field-value">{orderItem.strETA}</div>
+                </div>
+              </template>
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info doc-download-section">
+                <c-pmc_dh_selection-picklist text-label={labels.pmc_shipmentDetails_document} class="docpicklist"
+                  combobox-list-json={orderItem.lstDocument} data-id="strDocNm" parent-name="strDocNm"
+                  data-name="strDocNm" data-item-id={orderItem.strDeliveryId} oninputdatachange={handleDataChange}
+                  placeholder={labels.pmc_shipmentDetails_chooseDoc}
+                  is-disabled={orderItem.isDocumentListDisabled}></c-pmc_dh_selection-picklist>
+                <div class="download-icon">
+                  <template lwc:if={orderItem.isDownloadEnabled}>
+                    <img src={iconUrlObj.download} alt={labels.pmc_orderHistory_download} onclick={downloadDocument}
+                      data-item-id={orderItem.strDeliveryId} />
+                  </template>
+                </div>
+              </div>
+              <template if:false={isLocationBrazil}>
+                <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 content-info">
+                  <div lwc:if={orderItem.strCurrentLocation} class="lbl-field-name">
+                    {labels.pmc_shipmentDetails_currentLoc}
+                  </div>
+                  <div lwc:if={orderItem.strCurrentLocation} class="lbl-field-value">{orderItem.strCurrentLocation}
+                  </div>
+                </div>
+              </template>
+              <div class="slds-col slds-size_1-of-8 slds-medium-size_1-of-8 badge-info">
+                <div class="lbl-field-value slds-size_1-of-1 badge-alignment">
+                  <span class="badge badge-font" data-status={orderItem.strBadgeStatus}>
+                    {orderItem.strStatus}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <template if:true={lstDeliveries}>
+      <template if:true={lstDeliveries.length}>
+        <div class="pagination slds-m-bottom_medium">
+          <c-pmc_dh_pagination genericdata={lstDeliveries} class="slds-table_striped"
+            no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData}
+            modal-theme>
+          </c-pmc_dh_pagination>
+        </div>
+      </template>
+    </template>
+  </template>
+  <!-- Loading spinner -->
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+
+  <!-- Call Price Modal -->
+  <c-pmc_dh_custom-modal open-modal={isCallPriceModalOpen} modal-heading={labels.pmc_fpd_callPrice} modal-width="450px"
+    onclosemodalevent={cancelCallPrice}>
+    <div class="slds-p-around_medium confirmation-msg">
+      {labels.pmc_fpd_callPriceConfMsg}
+    </div>
+    <div class="slds-grid slds-p-horizontal_medium slds-p-bottom_medium modal-cta">
+      <div class="mobile-button slds-order_2 slds-medium-order_1">
+        <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+          title={labels.pmc_addressDetails_cancel} onclick={cancelCallPrice}></lightning-button>
+      </div>
+      <div class="mobile-button slds-order_1 slds-medium-order_2">
+        <lightning-button variant="brand" label={labels.pmc_leadManagement_confirm}
+          title={labels.pmc_leadManagement_confirm} onclick={confirmSubmit}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+</template>

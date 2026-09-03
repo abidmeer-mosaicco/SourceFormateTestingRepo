@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Users</fullName>
+    <columns>NAME</columns>
+    <columns>CPQ_Quote__c</columns>
+    <columns>Integration_Status__c</columns>
+    <columns>Signature_Received__c</columns>
+    <columns>Quote_Integration_Status__c</columns>
+    <columns>Integration_Error__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>notContain</operation>
+        <value>Deepak,Mohisin Mala Syed,Sudharsan A,Kaushik Gohain,Azmir Ali Sheik Dawood,Chandisree Chavali</value>
+    </filters>
+    <label>Business Users</label>
+    <sharedTo>
+        <role>Admin</role>
+    </sharedTo>
+</ListView>

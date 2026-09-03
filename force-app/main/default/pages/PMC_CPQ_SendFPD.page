@@ -1,0 +1,8 @@
+<apex:page standardController="OrderItem" extensions="PMC_CPQ_FPDActionClass" action="{!redirect}" lightningStylesheets="true">
+<apex:slds />
+<apex:pageMessages escape="false"></apex:pageMessages>
+<br></br><br></br><br></br>
+    <apex:form >
+    <center><apex:commandButton value="Back to Order Product" action="{!goBack}"/></center>
+    </apex:form>
+</apex:page>

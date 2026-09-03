@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Segmentation__c</fullName>
+    <description>Segmentation the Customer belongs to</description>
+    <label>Segmentation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>03</fullName>
+                <default>false</default>
+                <label>03 - Trading</label>
+            </value>
+            <value>
+                <fullName>04</fullName>
+                <default>false</default>
+                <label>04 - Mega Farmer</label>
+            </value>
+            <value>
+                <fullName>05</fullName>
+                <default>false</default>
+                <label>05 - Cooperativa</label>
+            </value>
+            <value>
+                <fullName>06</fullName>
+                <default>false</default>
+                <label>06 - Revenda</label>
+            </value>
+            <value>
+                <fullName>07</fullName>
+                <default>false</default>
+                <label>07 - End User</label>
+            </value>
+            <value>
+                <fullName>08</fullName>
+                <default>false</default>
+                <label>08 – Strategic Ultra</label>
+            </value>
+            <value>
+                <fullName>09</fullName>
+                <default>false</default>
+                <label>09 – Strategic Prime</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <label>12 - Strategic</label>
+            </value>
+            <value>
+                <fullName>13</fullName>
+                <default>false</default>
+                <label>13 - Core</label>
+            </value>
+            <value>
+                <fullName>14</fullName>
+                <default>false</default>
+                <label>14 - Base</label>
+            </value>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A - Customer</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B - Customer</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C - Customer</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10 - Canal - KAM</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>11 - Trader - KAM</label>
+            </value>
+            <value>
+                <fullName>8 - Canal - Ultra</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8 - Canal - Ultra</label>
+            </value>
+            <value>
+                <fullName>Canal KAM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Canal KAM</label>
+            </value>
+            <value>
+                <fullName>Basic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Canal-Basic/Grow</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Farmers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Farmers</label>
+            </value>
+            <value>
+                <fullName>Grow</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Grow</label>
+            </value>
+            <value>
+                <fullName>Key</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Key</label>
+            </value>
+            <value>
+                <fullName>Mega Farmer KAM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mega Farmer KAM</label>
+            </value>
+            <value>
+                <fullName>Mega Farmers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mega Farmers</label>
+            </value>
+            <value>
+                <fullName>Mid Farmers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mid Farmers</label>
+            </value>
+            <value>
+                <fullName>Prime</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prime</label>
+            </value>
+            <value>
+                <fullName>Small Farmers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Small Farmers</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>Top Farmers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Top Farmers</label>
+            </value>
+            <value>
+                <fullName>Trader KAM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trader KAM</label>
+            </value>
+            <value>
+                <fullName>Ultra</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ultra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

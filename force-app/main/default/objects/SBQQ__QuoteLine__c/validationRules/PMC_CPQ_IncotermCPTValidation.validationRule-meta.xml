@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_IncotermCPTValidation</fullName>
+    <active>true</active>
+    <description>Incoterms CPT is applicable only for North America if the Mode of transport is selected as Rail or Truck</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c )),
+ISPICKVAL(PMC_CPQ_Incoterms1__c ,&quot;CPT&quot;),
+NOT(ISPICKVAL( PMC_CPQ_ModeofTransportation__c ,&quot;Rail&quot;)),
+NOT(ISPICKVAL( PMC_CPQ_ModeofTransportation__c ,&quot;Truck&quot;)),
+ISPICKVAL( SBQQ__Quote__r.PMC_CPQ_Region__c ,&quot;North America&quot;)
+)</errorConditionFormula>
+    <errorMessage>Incoterms CPT is only Applicable for MOT Rail and Truck</errorMessage>
+</ValidationRule>

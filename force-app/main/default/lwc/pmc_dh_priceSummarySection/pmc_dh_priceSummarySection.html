@@ -1,0 +1,63 @@
+<template>
+  <div class="custom-card">
+    <div class="card-header">{labels.pmc_contractDetails_priceSummary}</div>
+    <div class="card-body slds-p-around_none">
+      <div class="slds-grid slds-wrap price-summary-header">
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {labels.pmc_contractDetails_products}
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {labels.pmc_contractDetails_volume}
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {labels.pmc_quoteHistory_totalPrice}
+        </div>
+      </div>
+      <div class="price-summary-details">
+        <div for:each={pageObj.lstPriceSummary} for:item="item" key={item.strProductSKU}
+          class="slds-grid slds-wrap price-summary">
+          <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+            {item.strProductName}
+          </div>
+          <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+            {item.intQuantity}&nbsp;{item.strUOM}
+          </div>
+          <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+            {item.decPrice}
+          </div>
+        </div>
+      </div>
+      <div class="slds-grid slds-wrap price-summary-total">
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {labels.pmc_contractDetails_total}
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {totalVolume}
+        </div>
+        <div class="slds-col slds-size_1-of-3 slds-medium-size_1-of-3">
+          {pageObj.decTotalPrice}
+        </div>
+      </div>
+      <template lwc:if={legalMsg}>
+        <div class="legal-message">
+          <lightning-icon size="xx-small" icon-name="utility:info">
+          </lightning-icon>
+          <div class="slds-m-left_x-small">
+            <lightning-formatted-rich-text class="dxp-text-body" value={legalMsg}>
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+      </template>
+      <template lwc:if={errorMsg}>
+        <div class="error-msg">
+          <lightning-icon size="xx-small" icon-name="utility:info">
+          </lightning-icon>
+          <div class="slds-m-left_x-small">
+            <lightning-formatted-rich-text class="dxp-text-body" value={errorMsg}>
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

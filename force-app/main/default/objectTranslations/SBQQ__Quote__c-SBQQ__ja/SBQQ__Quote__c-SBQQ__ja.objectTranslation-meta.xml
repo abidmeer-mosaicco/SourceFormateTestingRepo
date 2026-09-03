@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>見積</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Line Editor BR --></label>
+        <name>PMC_CPQ_LineEditorBR</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor BR Amendment --></label>
+        <name>PMC_CPQ_LineEditorBRAmendment</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor NA --></label>
+        <name>PMC_CPQ_LineEditorNA</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor NA  Distribution --></label>
+        <name>PMC_CPQ_LineEditorNADist</name>
+    </fieldSets>
+    <fieldSets>
+        <label>計算項目</label>
+        <name>SBQQ__CalculatingFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label>品目エディター</label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label>長期見積ロック済み項目</label>
+        <name>SBQQ__NonCurrentQuoteLockedFields</name>
+    </fieldSets>
+    <nameFieldLabel>見積番号</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Domestic --></label>
+        <name>PMC_CPQ_Domestic</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Domestic SA --></label>
+        <name>PMC_CPQ_DomesticBR</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Domestic NA --></label>
+        <name>PMC_CPQ_DomesticNA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- International --></label>
+        <name>PMC_CPQ_International</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type to track the International distribution sales quote for NA --></description>
+        <label><!-- International Distribution --></label>
+        <name>PMC_CPQ_InternationalDistribution</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Invalid quote Classification. There are line items with negative price adjustment. --></errorMessage>
+        <name>Class_List_And_Negative_Price_Adjustment</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please move the Quote status from &apos;Request&apos; to &apos;Draft&apos; to accept the Quote Request from the customer and proceed with quoting --></errorMessage>
+        <name>PMC_CPQ_AMReadOnlyfieldsonRequestStatus</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>
+            <!-- Customer Acceptance Method is required for Accepted Quotes
+has context menu -->
+        </errorMessage>
+        <name>PMC_CPQ_AcceptanceConditionMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change account value on quote --></errorMessage>
+        <name>PMC_CPQ_AccountNameValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Delete the Product from Cart to make changes to business type or create a fresh quote for another business type. --></errorMessage>
+        <name>PMC_CPQ_BRBusinessTypeChangeException</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Unable to set quote as primary due to an existing contracted quote within the same opportunity; consider creating a new opportunity for this quote or deselect the &apos;Primary&apos; checkbox. --></errorMessage>
+        <name>PMC_CPQ_ClosedOpportunityValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract Valid From date cannot be in the past. --></errorMessage>
+        <name>PMC_CPQ_ContractValidFromValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract Valid To date should not be before the Contract Valid From date --></errorMessage>
+        <name>PMC_CPQ_ContractValidToBeforeValidFrom</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure the duration in between Contract Valid From and Contract Valid To date is more than 30 days --></errorMessage>
+        <name>PMC_CPQ_ContractValidToFromValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Contract Valid To date should not be more than 1 year and 6 months from the created date of the quote --></errorMessage>
+        <name>PMC_CPQ_ContractValidToValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a valid currency based on your assigned Locale. --></errorMessage>
+        <name>PMC_CPQ_CurrencyChangeforQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please adhere to the sequential quote process: submit the quote for approval before moving to Presented or Accepted. --></errorMessage>
+        <name>PMC_CPQ_DraftStatusValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Insufficient privilege to create Amendment Quotes. Only SSA or SSR is allowed to perform. --></errorMessage>
+        <name>PMC_CPQ_NAAmendmentQuoteCreation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that the Payment Date falls on a business day --></errorMessage>
+        <name>PMC_CPQ_PaymentBusinessDateValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Payment Date is required when the Payment Method selected is &apos;Prepayment&apos; or &apos;Fixed Date&apos;. Payment Date must not be in the past --></errorMessage>
+        <name>PMC_CPQ_PaymentDateBlankValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate Contact value in order to proceed with the quote --></errorMessage>
+        <name>PMC_CPQ_PrimaryContactBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quote must be made primary at Accepted Stage --></errorMessage>
+        <name>PMC_CPQ_PrimaryMandatoryAtAcceptance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not edit a Quote once it has been submitted for approval. If you wish to make any changes, click the &apos;Recall Approvals&apos; button --></errorMessage>
+        <name>PMC_CPQ_QuoteSubmittedForApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Populate &quot;Other Rejected Reason&quot; open text field before selecting &quot;Rejected Reason&quot; as &quot;Other.&quot; --></errorMessage>
+        <name>PMC_CPQ_RejectedReasonBlankOther</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Once a Quote has been rejected, it can no longer be edited. Please click the &apos;Clone with Related&apos; button to continue quoting with the same data on a new quote --></errorMessage>
+        <name>PMC_CPQ_RejectedValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide the Rejection Reason before rejecting the quote --></errorMessage>
+        <name>PMC_CPQ_RequestQuoteRejectionReasonBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Quote can only be edited while in the &apos;Draft&apos; Status. Please set the Quote Status to &apos;Draft&apos; in order to continue with any modifications --></errorMessage>
+        <name>PMC_CPQ_RestrictAMonApprovedandAccepted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Quote cannot be created for an Account that is yet to be registered in SAP. Please wait until the SAP ID field has been populated on the Account indicating successful registration. --></errorMessage>
+        <name>PMC_CPQ_RestrictQuoteCreationSAPIDBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A Quote can only be &apos;Approved&apos; by clicking the &apos;Submit for Approval&apos; button and after receiving the required set of approvals --></errorMessage>
+        <name>PMC_CPQ_RestrictUserToApproveQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Insufficient privilege to create Amendment Quotes. Only SSA is allowed to perform amendments. --></errorMessage>
+        <name>PMC_CPQ_SAAmendmentQuoteCreation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Support Analyst can create only List and Amendment Quotes --></errorMessage>
+        <name>PMC_CPQ_SSAAccessForQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This field cannot be edited as Quote status has been Rejected. --></errorMessage>
+        <name>PMC_CPQ_ShortDescriptionForRejectedState</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- User cannot change the approved quote field value --></errorMessage>
+        <name>Quote_is_approved_field_cannot_be_edited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>終了日は開始日の後の日付に設定する必要があります。</errorMessage>
+        <name>SBQQ__End_Date_Before_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>最初のセグメント期間の終了日は、見積開始日と見積終了日の間にある必要があります。</errorMessage>
+        <name>SBQQ__Invalid_First_Segment_Term_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>サブスクリプション期間は整数にする必要があります。</errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the status of an expired or rejected quote. --></errorMessage>
+        <name>Status_Changed_From_Expired_Or_Rejected</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- PMC_CLM_GenerateProposalDocument --></label>
+        <name>PMC_CLM_GenerateProposalDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_Generate_Contract_Brazil --></label>
+        <name>PMC_CLM_Generate_Contract_Brazil</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_Generate_Contract_Intl --></label>
+        <name>PMC_CLM_Generate_Contract_Intl</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_Generate_Contract_NorthAmerica --></label>
+        <name>PMC_CLM_Generate_Contract_NorthAmerica</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_Generate_Contract_Spanish --></label>
+        <name>PMC_CLM_Generate_Contract_Spanish</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CPQ_PreviewApproval --></label>
+        <name>PMC_CPQ_PreviewApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CPQ_RecallApproval --></label>
+        <name>PMC_CPQ_RecallApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CPQ_ScheduleOrders --></label>
+        <name>PMC_CPQ_ScheduleOrders</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CPQ_SubmitForApproval --></label>
+        <name>PMC_CPQ_SubmitForApproval</name>
+    </webLinks>
+    <webLinks>
+        <label>計算</label>
+        <name>SBQQ__CalculateQuote</name>
+    </webLinks>
+    <webLinks>
+        <label>関連情報と共にコピー</label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label>関連情報と共にコピー</label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label>注文の作成</label>
+        <name>SBQQ__CreateOrderFromQuote</name>
+    </webLinks>
+    <webLinks>
+        <label>品目の編集</label>
+        <name>SBQQ__EditLines</name>
+    </webLinks>
+    <webLinks>
+        <label>ドキュメントを作成</label>
+        <name>SBQQ__GenerateDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>品目をインポート</label>
+        <name>SBQQ__ImportLines</name>
+    </webLinks>
+    <webLinks>
+        <label>ドキュメントを含める</label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>見積期間を変更</label>
+        <name>SBQQ__ModifyQuoteTerms</name>
+    </webLinks>
+    <webLinks>
+        <label>ドキュメントのプレビュー</label>
+        <name>SBQQ__PreviewDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>価格を更新</label>
+        <name>SBQQ__RefreshMultiplePrices</name>
+    </webLinks>
+    <webLinks>
+        <label>価格を更新</label>
+        <name>SBQQ__RefreshPrices</name>
+    </webLinks>
+</CustomObjectTranslation>

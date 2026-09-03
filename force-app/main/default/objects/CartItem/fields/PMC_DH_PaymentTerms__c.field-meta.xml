@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_PaymentTerms__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(!ISNULL(TEXT(( Cart.PMC_DH_PaymentTerms__c ))),! ISBLANK(TEXT(  Cart.PMC_DH_PaymentTerms__c))),TEXT( Cart.PMC_DH_PaymentTerms__c),NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Payment Terms</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

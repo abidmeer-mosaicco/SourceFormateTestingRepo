@@ -1,0 +1,77 @@
+<template>
+  <div class="custom-card slds-m-bottom_none">
+    <div class="card-header">
+      <div class="search-filter-header">
+        <div>{labels.pmc_addresses_searchFilters}</div>
+        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+          icon-name="utility:filterList" alternative-text={labels.pmc_searchFilters_filter} onclick={showSearchFilters}>
+        </lightning-icon>
+      </div>
+    </div>
+    <template if:true={showFilter}>
+      <div class="card-body">
+        <div class="slds-grid slds-wrap search-section">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-bottom_none">
+            <c-pmc_dh_search-input-element text-label={searchInputLabel} text-name="strSearchInput" text-placeholder=""
+              data-id="strSearchInput" default-value={searchFormObject.strSearchInput}
+              oninputdatachange={handleDataChange} oninputkeyup={handleEnterKeyUp} onsearchclick={searchHandler}>
+            </c-pmc_dh_search-input-element>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-bottom_none date-input">
+            <div class="slds-grid" style="column-gap: 16px">
+              <div class="slds-col slds-size_1-of-2 slds-medium-size_2-of-12 date-input">
+                <c-pmc_dh_input-element text-label={labels.pmc_caseMgmt_from} type="date" class="inputDate"
+                  data-id="fromDate" default-value={searchFormObject.fromDate} parent-name="fromDate" is-required
+                  message-when-value-missing={labels.pmc_caseMgmt_invalidDateErr} text-placeholder="MM/DD/YYYY"
+                  max-value={maxDate} message-when-range-high={labels.pmc_searchFilters_futureDateError}
+                  oninputdatachange={handleDataChange}>
+                </c-pmc_dh_input-element>
+              </div>
+              <div class="slds-col slds-size_1-of-2 slds-medium-size_2-of-12 date-input">
+                <c-pmc_dh_input-element text-label={labels.pmc_caseMgmt_to} type="date" data-id="toDate"
+                  default-value={searchFormObject.toDate} parent-name="toDate" is-required class="inputDate"
+                  message-when-value-missing={labels.pmc_caseMgmt_invalidDateErr} min-value={minDate}
+                  max-value={maxDate} message-when-range-low={labels.pmc_searchFilters_pastDateError}
+                  text-placeholder="MM/DD/YYYY" message-when-range-high={labels.pmc_searchFilters_futureDateError}
+                  oninputdatachange={handleDataChange}>
+                </c-pmc_dh_input-element>
+              </div>
+            </div>
+          </div>
+          <div class="filter-buttons slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+            <div class="mobile-button">
+              <lightning-button variant="brand" label={labels.pmc_searchInput_search}
+                title={labels.pmc_searchInput_search} onclick={searchHandler}></lightning-button>
+            </div>
+            <div class="clear-link">
+              <a onclick={clearSearchInputs} class="text-regular-small">{labels.pmc_addresses_clear}</a>
+            </div>
+          </div>
+        </div>
+
+        <template if:true={_filters.length}>
+          <div class="slds-grid slds-wrap filter-section">
+            <template for:each={_filters} for:item="filter" for:index="index">
+              <div key={index.index} class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                <c-pmc_dh_selection-picklist text-label={filter.label} default-value={filter.value}
+                  combobox-list-json={filter.options} data-id={filter.name} parent-name={filter.name}
+                  oninputdatachange={handleDataChange}>
+                </c-pmc_dh_selection-picklist>
+              </div>
+            </template>
+
+            <div class="filter-buttons slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+              <div class="mobile-button">
+                <lightning-button variant="brand" label={labels.pmc_addresses_apply} title={labels.pmc_addresses_apply}
+                  onclick={applyFilterHandler}></lightning-button>
+              </div>
+              <div class="clear-link">
+                <a onclick={clearFiltersHandler} class="text-regular-small">{labels.pmc_addresses_clear}</a>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </template>
+  </div>
+</template>

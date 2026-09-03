@@ -1,0 +1,153 @@
+.header-container {
+  background: var(--white);
+  margin: 14px 0 12px;
+}
+
+.brand-logo {
+  width: 180px;
+  height: auto;
+}
+
+.vantagens-wrapper {
+  padding: 12px 16px;
+  height: 44px;
+  background: var(--secondary-green) !important;
+  border-radius: 4px;
+  min-width: 220px;
+  align-items: center;
+  display: flex;
+}
+
+.seedz-wrapper {
+  background: none !important;
+  border: 1px solid var(--secondary-green);
+}
+
+.vantagens-wrapper a {
+  text-decoration: solid;
+}
+
+.vantagens-wrapper:hover,
+.vantagens-wrapper:focus {
+  background: var(--primary-green) !important;
+  color: var(--white);
+  border: none;
+  outline: none;
+}
+
+.seedz-error-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  height: 44px;
+  min-width: 220px;
+  border-radius: 4px;
+  border: 1px solid var(--secondary-green);
+}
+
+.seedz-error-wrapper .vantagens-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.seedz-error-wrapper span a {
+  font-family: var(--bold-font);
+  color: var(--dark-primary-green);
+  text-decoration: underline;
+}
+
+.seedz-error-wrapper span a.refresh-vantagens-disabled {
+  color: var(--primary-grey);
+  pointer-events: none;
+}
+
+.vantagens-text {
+  font-family: var(--regular-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--regular-font-size);
+  line-height: 19px;
+  padding-left: 4px;
+  color: var(--dark-primary-green);
+}
+
+span>.seedz-text {
+  font-family: var(--medium-font);
+}
+
+.header-icons img {
+  min-width: 36px;
+  min-height: 36px;
+  cursor: pointer;
+}
+
+.header-icons:last-child {
+  padding-right: 0px;
+}
+
+.skip {
+  display: block;
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
+.skip:focus {
+  left: 0;
+  top: 0;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 1023px) {
+  .brand-logo {
+    min-width: 72px;
+    width: 72px;
+  }
+
+  .vantagens-wrapper {
+    min-width: 100%;
+    display: flex;
+  }
+
+  .mobile-menu-item {
+    flex-direction: column;
+  }
+
+  .page-container {
+    padding: 18px 0 10px;
+    margin: 0;
+  }
+
+  .mobile-icon {
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+  }
+
+  .mobile-nav {
+    width: 325px;
+    z-index: 10;
+    box-shadow: 0px 0px 10px rgba(9, 53, 50, 0.1);
+    position: absolute;
+    background-color: var(--white);
+    padding: 16px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .vantagens-wrapper {
+    padding: 12px 8px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .brand-logo {
+    min-width: 114px;
+    width: 114px;
+  }
+}

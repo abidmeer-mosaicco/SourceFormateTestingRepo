@@ -1,0 +1,55 @@
+{
+  "appPageId" : "7cdb06d6-9854-4eec-89d2-eccfa9263b44",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "7fff918c-1a1d-4d85-a64e-46f61be16f7f",
+  "label" : "Login",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "salesforceIdentity:communityLogo2",
+      "id" : "516f6511-76f5-49a1-8028-c59848f2828f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "forgotPasswordLabel" : "¿Olvidaste tu contraseña?",
+        "forgotPasswordUrl" : "https://globaldigitalacceleration.my.site.com/miskimayomesadepartes/secur/forgotpassword.jsp",
+        "loginButtonLabel" : "INGRESA",
+        "minPasswordLength" : 8,
+        "passwordLabel" : "Contraseña",
+        "resetPasswordButtonLabel" : "RESTABLECER CONTRASEÑA",
+        "selfRegisterLabel" : "REGÍSTRATE",
+        "selfRegisterUrl" : "https://globaldigitalacceleration.my.site.com/miskimayomesadepartes/s/login/SelfRegister",
+        "usernameLabel" : "Correo"
+      },
+      "componentName" : "c:miskMayocustomCommunityLogin",
+      "id" : "896c8bd9-8ee4-4426-8f25-2e93a19ed976",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "03ef5a74-b724-4a8d-a6d0-637c910bcbc8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Login"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0a746642-76bf-4cc8-bd4d-0d3e41379655",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "466a047f-603f-43ad-89d3-601a385a80e6",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Login",
+  "type" : "view",
+  "viewType" : "login-home"
+}

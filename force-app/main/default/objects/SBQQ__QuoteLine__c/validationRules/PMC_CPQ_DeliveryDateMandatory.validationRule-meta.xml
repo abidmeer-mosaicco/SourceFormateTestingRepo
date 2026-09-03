@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_DeliveryDateMandatory</fullName>
+    <active>true</active>
+    <description>Delivery start date and delivery end date is mandatory for Brazil region</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+OR(
+ISBLANK( PMC_CPQ_DeliveryStartDate__c ),
+ISBLANK( PMC_CPQ_DeliveryEndDate__c )
+),
+OR(
+ISBLANK(PMC_CPQ_OpportunityLineItemId__c ),
+AND(NOT(ISBLANK(PMC_CPQ_OpportunityLineItemId__c )),NOT(ISNEW()))),
+ISPICKVAL( SBQQ__Quote__r.PMC_CPQ_Region__c ,&quot;Brazil&quot;),
+OR(
+NOT(ISNEW()),
+AND(ISNEW(),ISBLANK(SBQQ__Quote__r.PMC_CPQ_LegacyQuoteID__c))
+),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c ))
+)</errorConditionFormula>
+    <errorMessage>Delivery Start Date and Delivery End Date is Required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_RemovePartnerAccountsInCaseOfAccountDeletionFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>AccountPartnerRelationshipsGet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <description>Remove Partner Accounts In Case Of Account Deletion</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC SS Remove Partner Accounts In Case Of Account Deletion {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Remove Partner Accounts In Case Of Account Deletion Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create an Error Log record when there is a flow error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>836</locationX>
+        <locationY>503</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordDeletes>
+        <description>Delete related Account Partner Relationship records</description>
+        <name>AccountPartnerRelationshipsDelete</name>
+        <label>Account Partner Relationships Delete</label>
+        <locationX>308</locationX>
+        <locationY>503</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>AccountPartnerRelationshipsGet</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <description>Get related Account Partner Relationship records</description>
+        <name>AccountPartnerRelationshipsGet</name>
+        <label>Account Partner Relationships Get</label>
+        <locationX>308</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AccountPartnerRelationshipsDelete</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>PMC_SS_AccountPartnerRelationships__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Lead Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Company</fieldNames>
+        <fieldNames>Website</fieldNames>
+        <fieldNames>Industry</fieldNames>
+        <fieldNames>AnnualRevenue</fieldNames>
+        <fieldNames>NumberOfEmployees</fieldNames>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Learn about and contact your new lead quickly.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Use Salesforce leads to separate prospects from the Salesforce contacts you’ve already sold to.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Respond to your lead within five minutes to increase your chances of converting the lead record to an opportunity. &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Visit your lead’s website to learn about your lead’s business and industry.&lt;/li&gt;&lt;li&gt;Find your lead on social networks to determine how to best engage and connect.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>PMC_SS_Lead</recordTypeName>
+</PathAssistant>

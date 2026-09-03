@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_AllPlacedOrders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>PMC_CPQ_PO__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>CONTRACT.CONTRACT_NUMBER</columns>
+    <columns>PMC_CPQ_SAPOrderNumber__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>Placed</value>
+    </filters>
+    <filters>
+        <field>PMC_CPQ_SalesArea__c</field>
+        <operation>contains</operation>
+        <value>Export</value>
+    </filters>
+    <label>All Placed Orders</label>
+</ListView>

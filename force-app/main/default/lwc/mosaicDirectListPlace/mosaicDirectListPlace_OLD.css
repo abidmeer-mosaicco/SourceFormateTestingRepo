@@ -1,0 +1,101 @@
+.mosaic-direct-filters-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+/* Small search input used on large screens */
+.search-input-small {
+  width: 100%;
+  max-width: 260px; /* shrink the search on large screens */
+}
+
+.search-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.clear-button-under-search {
+  max-width: 140px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.date-input-small input {
+  height: 1.6rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+.right-filters {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure right-filters doesn't show a bordered box when slds-box/theme classes are present elsewhere
+   This keeps spacing but removes background, border and shadow so the visual 'box' disappears. */
+.right-filters {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.clear-button-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.clear-button-fullwidth {
+  width: 100%;
+}
+
+/* Compact variants */
+.date-input-compact input {
+  height: 1.4rem;
+  padding: 0.15rem 0.35rem;
+  font-size: 0.82rem;
+}
+
+.compact-dates {
+  gap: 0.4rem;
+  padding: 0.08rem 0.12rem 0.12rem 0.12rem;
+}
+
+.compact-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.compact-label {
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+}
+
+.clear-button-compact {
+  width: 100%;
+  max-width: 140px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.82rem;
+}
+
+.clear-button-wrap-compact {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Inline per-row error overlay */
+.inline-error {
+  background: #d32f2f; /* error red */
+  color: #ffffff; /* white text */
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  max-width: 360px;
+  white-space: pre-wrap; /* preserve newlines */
+}
+.inline-error-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+}

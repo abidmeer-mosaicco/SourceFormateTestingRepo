@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteSubmittedForApproval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c )),
+ISPICKVAL(   SBQQ__Quote__r.ApprovalStatus__c, &quot;Pending&quot;)
+ 
+)</errorConditionFormula>
+    <errorDisplayField>PMC_CPQ_PercentageOfQuantity__c</errorDisplayField>
+    <errorMessage>You may not edit a Quote once it has been submitted for approval. If you wish to make any changes, click the &apos;Recall Approvals&apos; button on the Quote detail page</errorMessage>
+</ValidationRule>

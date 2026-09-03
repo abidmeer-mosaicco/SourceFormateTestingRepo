@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApproveFromRecordPage</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Approve</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/MassApproval?mode=approve&amp;disableConfirmation=true&amp;recordId={!sbaa__Approval__c.Id}&amp;retURL=/{!sbaa__Approval__c.Id}&amp;random={!TEXT(TODAY()) + TEXT(NOW())}</url>
+</WebLink>

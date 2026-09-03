@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ContactMandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+	NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+	ISBLANK(ContactId),
+	NOT(AND(ISPICKVAL(Origin , &apos;Email&apos;),OR($User.LastName = &apos;Platform Integration User&apos;,  CreatedBy.LastName = &apos;Platform Integration User&apos; ))),
+	NOT(
+		OR(ISPICKVAL(PMC_SS_IssueReason__c , &apos;MDM Verification&apos;), ISPICKVAL(PMC_SS_IssueReason__c , &apos;Product Request&apos;))
+		),
+	NOT(
+		AND(
+			NOT(ISBLANK(ParentId)), ISPICKVAL(PMC_SS_IssueReason__c , &apos;Stock Out / Plant Outage&apos;)
+		)
+	)
+)</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>Please select contact</errorMessage>
+</ValidationRule>

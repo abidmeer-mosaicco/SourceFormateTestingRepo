@@ -1,0 +1,564 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "a9bac9f9-fada-49e1-a73a-382e6f26f655",
+  "label" : "Seguridad vial",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "275d4a59-5a71-411e-9767-e48ea49fc24e",
+          "columns" : [ {
+            "UUID" : "a534839a-34c4-49a9-a620-46b653c489eb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "275d4a59-5a71-411e-9767-e48ea49fc24e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "82ad6f07-fb0d-4212-a039-49d0a6a1ea15",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a534839a-34c4-49a9-a620-46b653c489eb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d468d31d-4319-4883-92cf-524308651eda",
+          "columns" : [ {
+            "UUID" : "2ef1752f-85ec-472e-98ea-11f1b208428e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d468d31d-4319-4883-92cf-524308651eda",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP15"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "0b501d7a-fcaf-44c0-b7a7-16775de7954e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2ef1752f-85ec-472e-98ea-11f1b208428e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "e4710582-a94b-4bb4-82a3-5b74aafe1e9e",
+          "columns" : [ {
+            "UUID" : "1022b763-9aec-43de-ae0b-7a10963ef40c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e4710582-a94b-4bb4-82a3-5b74aafe1e9e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a\n  href=\"https://www.miskimayo.com/s/gestion-social?#programas-sociales\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n \n\n  VOLVER"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "eb4ab1b8-51da-4e8a-9b71-e86e191e272c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1022b763-9aec-43de-ae0b-7a10963ef40c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "3e40500e-1675-4e8a-b0a9-4cbfb32ffb96",
+          "columns" : [ {
+            "UUID" : "24e30d17-017b-43bc-aa21-bbb26e9724c7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bbfd20eb-c5ad-48e2-a774-a18f4055f17d",
+            "columnKey" : "213da",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "053a7a4b-79db-46b5-a86a-54945d96d713",
+            "columnKey" : "e5b34",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3e40500e-1675-4e8a-b0a9-4cbfb32ffb96",
+      "regions" : [ {
+        "id" : "24e30d17-017b-43bc-aa21-bbb26e9724c7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.SEGURIDADVIAL300x8qfgf7y7cg8op1rvy1.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "877c8f10-bd8e-445a-a086-2facff4e1abb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bbfd20eb-c5ad-48e2-a774-a18f4055f17d",
+        "regionLabel" : "Column 2",
+        "regionName" : "213da",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "053a7a4b-79db-46b5-a86a-54945d96d713",
+        "regionLabel" : "Column 3",
+        "regionName" : "e5b34",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "02373fb3-203c-4411-b284-99de18d2ee16",
+          "columns" : [ {
+            "UUID" : "0a5ebb26-92e8-46d6-96e5-9c75b116f9ff",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "fb9caa47-1304-41a9-aee1-02f51588006d",
+            "columnKey" : "4a5d6",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8cd37b75-3c4f-486c-803c-da0444cd8196",
+            "columnKey" : "6ad2d",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "43c977af-c042-4099-b7a1-4a1ac83ecb90",
+            "columnKey" : "87e14",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6e936d13-643e-45c4-8c6d-aae8bb9f68a2",
+            "columnKey" : "9ed5b",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b30c9f14-b087-42c6-9408-55cee236f32d",
+            "columnKey" : "e0984",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "02373fb3-203c-4411-b284-99de18d2ee16",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "8d341916-23e4-4c74-be98-1b4a67b68f8d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0a5ebb26-92e8-46d6-96e5-9c75b116f9ff",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "fb9caa47-1304-41a9-aee1-02f51588006d",
+        "regionLabel" : "Column 2",
+        "regionName" : "4a5d6",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8cd37b75-3c4f-486c-803c-da0444cd8196",
+        "regionLabel" : "Column 3",
+        "regionName" : "6ad2d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "43c977af-c042-4099-b7a1-4a1ac83ecb90",
+        "regionLabel" : "Column 4",
+        "regionName" : "87e14",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6e936d13-643e-45c4-8c6d-aae8bb9f68a2",
+        "regionLabel" : "Column 5",
+        "regionName" : "9ed5b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b30c9f14-b087-42c6-9408-55cee236f32d",
+        "regionLabel" : "Column 6",
+        "regionName" : "e0984",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "18cead72-7a01-4c81-8c0f-fbd30160656b",
+          "columns" : [ {
+            "UUID" : "117a59ee-9240-4887-98e5-c16b20e4afa2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 150
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "18cead72-7a01-4c81-8c0f-fbd30160656b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e948250b-87ce-4500-93d5-cd0bc4b2318d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Fomentar una cultura de conducción responsable y segura a través de la educación y la toma de conciencia sobre la importancia del respeto a las normas de tránsito para asegurar un entorno vial más seguro para todos y todas.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "27d3c2f5-869f-4206-8457-d6c5185d6ce1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "117a59ee-9240-4887-98e5-c16b20e4afa2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "c511b27c-9514-4014-812a-49beb235d72b",
+          "columns" : [ {
+            "UUID" : "6b1e07ed-c34c-4e9b-a6d3-63e39239ce96",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "84edce89-fa0b-4458-8bd6-2fd6f36b04a0",
+            "columnKey" : "c068c",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3794df12-8c38-4329-aef8-cfdc4151391d",
+            "columnKey" : "ff386",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7e817f53-6151-4d3f-8ba8-b346decbc63d",
+            "columnKey" : "eac02",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d59aa0e8-fa64-46b2-b32d-a3ab5b0e045a",
+            "columnKey" : "e6dba",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7eb69f2d-2a19-4eed-916c-dcc0e9448e4d",
+            "columnKey" : "9fa2e",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c511b27c-9514-4014-812a-49beb235d72b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Clipboard2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "b38b9a31-c563-4732-b970-4f07e76f0d9f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6b1e07ed-c34c-4e9b-a6d3-63e39239ce96",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "84edce89-fa0b-4458-8bd6-2fd6f36b04a0",
+        "regionLabel" : "Column 2",
+        "regionName" : "c068c",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3794df12-8c38-4329-aef8-cfdc4151391d",
+        "regionLabel" : "Column 3",
+        "regionName" : "ff386",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "7e817f53-6151-4d3f-8ba8-b346decbc63d",
+        "regionLabel" : "Column 4",
+        "regionName" : "eac02",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d59aa0e8-fa64-46b2-b32d-a3ab5b0e045a",
+        "regionLabel" : "Column 5",
+        "regionName" : "e6dba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "7eb69f2d-2a19-4eed-916c-dcc0e9448e4d",
+        "regionLabel" : "Column 6",
+        "regionName" : "9fa2e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "3a0b7e3b-e890-41fb-8b1b-98334dc3907e",
+          "columns" : [ {
+            "UUID" : "893b5fc2-eb10-4146-9f57-a99b8be91934",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3a0b7e3b-e890-41fb-8b1b-98334dc3907e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Acciones:</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "307aca03-fd0a-484a-bdd6-c51ffd82fc8d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Talleres de sensibilización con alumnos de primaria y secundaria, conductores de vehículos y población en general de Puerto Rico, Bayóvar.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Difusión de spots a través de medios de comunicación locales y herramientas visuales en las principales avenidas.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Campaña de implementación de cintas reflectivas en vehículos que transitan en la zona.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Instalación de señalética vertical en Puerto Rico, Bayóvar.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "67afb299-7b68-4cb0-8b5e-047cdd2299c3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "893b5fc2-eb10-4146-9f57-a99b8be91934",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "859ff65a-7217-4823-88fb-68e979d45579",
+          "columns" : [ {
+            "UUID" : "ddf10af9-131f-4b5b-878c-7505a057b0e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "859ff65a-7217-4823-88fb-68e979d45579",
+      "regions" : [ {
+        "id" : "ddf10af9-131f-4b5b-878c-7505a057b0e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0ae717d9-2e7f-4539-ba19-92f6e0d57132",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Seguridad vial"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "670f0d2f-e445-4277-a84a-5e6c0e3a9228",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5b877e63-e55e-46a9-a4d1-8fc85f3e6c56",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-seguridad-vial"
+}

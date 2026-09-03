@@ -1,0 +1,718 @@
+{
+  "version" : "60.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "SBQQ__Quote__c", "SBQQ__ListPrice__c", "SBQQ__Quantity__c", "SBQQ__ProductName__c", "PMC_CPQ_Discount__c", "PMC_CPQ_EstFreightPrice__c", "PMC_CPQ_ModeofTransportation__c", "PMC_CPQ_ProductLocation__c", "PMC_CPQ_PriceGuidanceTarget__c", "PMC_CPQ_PriceGuidanceCeiling__c", "PMC_CPQ_PriceGuidanceFloor__c", "PMC_CPQ_VolumeDiscount__c", "PMC_CPQ_NetUnitPrice__c", "PMC_CPQ_SoldToShipToJunction__c", "PMC_CPQ_UnitofMeasure__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "SBQQ__QuoteLine__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "SBQQ__QuoteLine__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "PMC_CPQ_Location__c", "Id", "PMC_CPQ_ProductName__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "PMC_CPQ_ProductLocation__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "PMC_CPQ_ProductLocation__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET3" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Username", "FirstName", "Name", "UserRoleId", "PMC_CPQ_SalesRegion__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "User",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "User"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET4" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Name", "Id" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET5" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "CurrencyIsoCode", "CreatedDate", "SBQQ__Account__c", "SBQQ__Status__c", "PMC_CPQ_AccountManager__c", "PMC_CPQ_Region__c", "PMC_CPQ_GetPriceCallComplete__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "SBQQ__Quote__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "SBQQ__Quote__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "JOIN4" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "PMC_CPQ_ProductLocation__c" ],
+        "rightQualifier" : "PMC_CPQ_Pr",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "JOIN6", "LOAD_DATASET5" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "SBQQ__Quote__c" ],
+        "rightQualifier" : "SBQQ__Quot",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN2" : {
+      "action" : "join",
+      "sources" : [ "FILTER1", "JOIN5" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "SBQQ__Quot.PMC_CPQ_AccountManager__c" ],
+        "rightQualifier" : "User",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "JOIN3" : {
+      "action" : "join",
+      "sources" : [ "JOIN2", "LOAD_DATASET4" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "SBQQ__Quot.SBQQ__Account__c" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "FORMULA0" : {
+      "action" : "formula",
+      "sources" : [ "JOIN11" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "SBQQ__ListPrice__c_formula",
+          "label" : "Customer Price",
+          "formulaExpression" : "(coalesce(PMC_CPQ_NetUnitPrice__c, 0) - coalesce(PMC_CPQ_VolumeDiscount__c, 0))",
+          "precision" : 16,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA2" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "PMC_CPQ_PriceComparison_formula",
+          "label" : "Price Comparison",
+          "formulaExpression" : "case\r\n\twhen SBQQ__ListPrice__c_formula <= PMC_CPQ_PriceGuidanceFloor__c\r\n\tthen \r\n    '1.Below Floor Price'\r\n\telse\r\n\tcase \r\n        when SBQQ__ListPrice__c_formula <= PMC_CPQ_PriceGuidanceTarget__c\r\n        then\r\n        '2.Between floor price and target price'\r\n        else\r\n        case\r\n            when SBQQ__ListPrice__c_formula <= PMC_CPQ_PriceGuidanceCeiling__c\r\n            then\r\n            '3.Between target price and ceiling price'\r\n            else\r\n            case\r\n                when SBQQ__ListPrice__c_formula > PMC_CPQ_PriceGuidanceCeiling__c\r\n                then\r\n                '4.Above Ceiling price'\r\n            end\r\n        end \r\n    end\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA3" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA8" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "PMC_CPQ_Quantity__c_formula",
+          "label" : "Quantity (MTN)",
+          "formulaExpression" : "case\r\n\twhen PMC_CPQ_UnitofMeasure__c = 'STN'\r\n\tthen coalesce(SBQQ__Quantity__c, 0)/1.10231\r\n\telse\r\n\tcoalesce(SBQQ__Quantity__c, 0)\r\nend",
+          "precision" : 16,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA6" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA3" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "PMC_CPQ_SoldToShipToJunction__c_formula",
+          "label" : "Weighted Customer Price",
+          "formulaExpression" : "SBQQ__ListPrice__c_formula*PMC_CPQ_Quantity__c_formula",
+          "precision" : 16,
+          "scale" : 2,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA8" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA2" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "PMC_CPQ_QuoteCreatedDateMonth_formula",
+          "label" : "Quote Created Date Month",
+          "formulaExpression" : "case \r\nwhen month(\"SBQQ__Quot.CreatedDate\")\r\n = 1 then '1.January'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 2 then '2.February'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 3 then '3.March'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 4 then '4.April'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 5 then '5.May'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 6 then '6.June'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 7 then '7.July'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 8 then '8.August'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 9 then '9.September'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 10 then '10.October'\r\nwhen month(\"SBQQ__Quot.CreatedDate\") = 11 then '11.November'\r\nelse '12.December'\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "FORMULA6" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Pricing Report Dataset V4",
+          "name" : "Pricing_Report_Dataset_V4",
+          "folderName" : "Pricing_Guidance_App"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "LOAD_DATASET6" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Location",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Location"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN4" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET2", "LOAD_DATASET6" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "PMC_CPQ_Location__c" ],
+        "rightQualifier" : "Location",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET7" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "ParentRoleId" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "UserRole",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "UserRole"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN5" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET3", "LOAD_DATASET7" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "UserRoleId" ],
+        "rightQualifier" : "UserRole",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET8" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "PMC_CPQ_ProductFamily__c", "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Product2",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Product2"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN6" : {
+      "action" : "join",
+      "sources" : [ "JOIN0", "LOAD_DATASET8" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "PMC_CPQ_Pr.PMC_CPQ_ProductName__c" ],
+        "rightQualifier" : "Product2",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET9" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "PMC_SS_AccountPartnerRelationships__c",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "PMC_SS_AccountPartnerRelationships__c"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN7" : {
+      "action" : "join",
+      "sources" : [ "JOIN3", "LOAD_DATASET9" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "PMC_CPQ_SoldToShipToJunction__c" ],
+        "rightQualifier" : "PMC_SS_Acc",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET11" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "IsoCode", "ConversionRate", "IsActive", "IsCorporate" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "CurrencyType",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "CurrencyType"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN11" : {
+      "action" : "join",
+      "sources" : [ "JOIN7", "LOAD_DATASET11" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LEFT_OUTER",
+        "leftKeys" : [ "SBQQ__Quot.CurrencyIsoCode" ],
+        "rightQualifier" : "CurrencyTy",
+        "rightKeys" : [ "IsoCode" ]
+      }
+    },
+    "FILTER1" : {
+      "action" : "filter",
+      "sources" : [ "JOIN1" ],
+      "parameters" : {
+        "filterExpressions" : [ {
+          "type" : "TEXT",
+          "field" : "SBQQ__Quot.PMC_CPQ_GetPriceCallComplete__c",
+          "operator" : "EQUAL",
+          "operands" : [ "true" ]
+        } ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "SBQQ__QuoteLine__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 252,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET2" : {
+        "label" : "PMC_CPQ_ProductLocation__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET3" : {
+        "label" : "User",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 532,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET4" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 812,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET5" : {
+        "label" : "SBQQ__Quote__c",
+        "type" : "LOAD_DATASET",
+        "top" : 532,
+        "left" : 532,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "Join 0",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 392
+      },
+      "JOIN1" : {
+        "label" : "Join 1",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 672
+      },
+      "JOIN2" : {
+        "label" : "Join 2",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 952
+      },
+      "JOIN3" : {
+        "label" : "Join 3",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 1092
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 1512,
+        "graph" : {
+          "FORMULA0" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA2" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA3" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA6" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA8" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA3",
+          "target" : "FORMULA6"
+        }, {
+          "source" : "FORMULA8",
+          "target" : "FORMULA3"
+        }, {
+          "source" : "FORMULA2",
+          "target" : "FORMULA8"
+        }, {
+          "source" : "FORMULA0",
+          "target" : "FORMULA2"
+        } ]
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 112.4,
+        "left" : 1652
+      },
+      "LOAD_DATASET6" : {
+        "label" : "Location",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN4" : {
+        "label" : "Join 4",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 252
+      },
+      "LOAD_DATASET7" : {
+        "label" : "UserRole",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 532,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN5" : {
+        "label" : "Join 5",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 672
+      },
+      "LOAD_DATASET8" : {
+        "label" : "Product2",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 392,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN6" : {
+        "label" : "Join 6",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 532
+      },
+      "LOAD_DATASET9" : {
+        "label" : "PMC_SS_AccountPartnerRelationships__c",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 952,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN7" : {
+        "label" : "Join 7",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 1232
+      },
+      "LOAD_DATASET11" : {
+        "label" : "CurrencyType",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN11" : {
+        "label" : "Join 11",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 1372
+      },
+      "FILTER1" : {
+        "label" : "Filter 1",
+        "type" : "FILTER",
+        "top" : 112,
+        "left" : 812
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "JOIN4",
+      "target" : "JOIN0"
+    }, {
+      "source" : "JOIN6",
+      "target" : "JOIN1"
+    }, {
+      "source" : "LOAD_DATASET5",
+      "target" : "JOIN1"
+    }, {
+      "source" : "FILTER1",
+      "target" : "JOIN2"
+    }, {
+      "source" : "JOIN5",
+      "target" : "JOIN2"
+    }, {
+      "source" : "JOIN2",
+      "target" : "JOIN3"
+    }, {
+      "source" : "LOAD_DATASET4",
+      "target" : "JOIN3"
+    }, {
+      "source" : "JOIN11",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "JOIN4"
+    }, {
+      "source" : "LOAD_DATASET6",
+      "target" : "JOIN4"
+    }, {
+      "source" : "LOAD_DATASET3",
+      "target" : "JOIN5"
+    }, {
+      "source" : "LOAD_DATASET7",
+      "target" : "JOIN5"
+    }, {
+      "source" : "JOIN0",
+      "target" : "JOIN6"
+    }, {
+      "source" : "LOAD_DATASET8",
+      "target" : "JOIN6"
+    }, {
+      "source" : "JOIN3",
+      "target" : "JOIN7"
+    }, {
+      "source" : "LOAD_DATASET9",
+      "target" : "JOIN7"
+    }, {
+      "source" : "JOIN7",
+      "target" : "JOIN11"
+    }, {
+      "source" : "LOAD_DATASET11",
+      "target" : "JOIN11"
+    }, {
+      "source" : "JOIN1",
+      "target" : "FILTER1"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "OUTPUT0"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

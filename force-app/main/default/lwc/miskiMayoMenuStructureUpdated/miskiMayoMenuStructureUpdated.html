@@ -1,0 +1,59 @@
+<template>
+    <nav class="menu-container">
+        <!-- LOGO-->
+        <div class="brand" onclick={handleLogoClick} title="Ir para a home">
+            <img src={logoSrc} alt="Miski Mayo Logo" class="logo-img"/>
+        </div>
+
+        <!-- HAMBURGER -->
+        <button class="hamburger" onclick={toggleMenu} aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- MENU -->
+        <div style="display: flex;flex-direction: row; justify-content: center;align-items: center">
+            <ul class={menuClass}>
+                <template for:each={menuItems} for:item="item">
+                    <li key={item.name} class="menu-item">
+                        <!-- TOP LEVEL (fixed down arrow on mobile when there are subItems) -->
+                        <span class="top-label" onclick={handleTopClick}>
+                            {item.name}
+                            <template if:true={item.subItems}>
+                                <!-- Substituído pela seta vazada para baixo -->
+                               <span class="mobile-arrow"></span>
+                                <!--<span class="arrow">&#9662;</span>-->
+                            </template>
+                        </span>
+                        <template if:true={item.subItems}>
+                            <ul class="submenu">
+                                <template for:each={item.subItems} for:item="sub">
+                                    <li key={sub.name} class="submenu-item">
+                                        <!-- SECOND LEVEL -->
+                                        <span class="submenu-label"
+                                              onclick={handleSubClick}
+                                              data-label={sub.labelName}
+                                              data-has-children={sub.subSubItems}>
+                                            {sub.name}
+                                        </span>
+
+                                        <template if:true={sub.subSubItems}>
+                                            <ul class="sub-submenu">
+                                                <template for:each={sub.subSubItems} for:item="subsub">
+                                                    <li key={subsub.name}>
+                                                        <span onclick={handleClick} data-label={subsub.labelName}>
+                                                            {subsub.name}
+                                                        </span>
+                                                    </li>
+                                                </template>
+                                            </ul>
+                                        </template>
+                                    </li>
+                                </template>
+                            </ul>
+                        </template>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </nav>
+</template>

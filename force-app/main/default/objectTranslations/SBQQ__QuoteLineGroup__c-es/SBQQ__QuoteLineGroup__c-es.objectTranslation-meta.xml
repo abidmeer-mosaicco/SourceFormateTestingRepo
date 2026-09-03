@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Quote Line Group --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Quote Line Group --></value>
+    </caseValues>
+    <fieldSets>
+        <label>Editor de línea</label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Group Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>El término de suscripción debe ser un número positivo.</errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <webLinks>
+        <label>Calcular presupuesto</label>
+        <name>SBQQ__CalculateQuoteFromQuoteLineGroup</name>
+    </webLinks>
+</CustomObjectTranslation>

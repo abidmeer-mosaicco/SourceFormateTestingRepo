@@ -1,0 +1,52 @@
+.wrapper {
+  width: 100%;
+}
+
+.bgContainer {
+  background-size: cover;
+  background-position: center;
+  background-color: currentcolor;
+}
+
+.registration-wrapper {
+  padding: 32px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.registration-wrapper section {
+  font-family: var(--dxp-s-text-heading-extra-large-font-family);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 767px) {
+  .registration-wrapper {
+    padding: 32px 16px;
+  }
+
+  .wrapper {
+    height: 110vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    align-items: center;
+  }
+
+  .bgContainer {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 20vh 0;
+  }
+}

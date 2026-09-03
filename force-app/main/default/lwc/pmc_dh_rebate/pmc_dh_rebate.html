@@ -1,0 +1,185 @@
+<template>
+  <div class="rebate-top-section">
+    <div class="custom-card rebate-prog-summary">
+      <div class="card-header">{labels.pmc_rebates_rebateProgramSummary}</div>
+      <template lwc:if={rebatesData.objSalesAgreementSummaryWrapper}>
+        <div class="card-body rebate-prog-summary-body">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 rebate-prog-summary-item">
+              <div class="lbl-field-name rebate-prog-summary-item-head">{labels.pmc_rebates_rebateProgramName}
+              </div>
+              <div class="lbl-field-value">{rebatesData.objSalesAgreementSummaryWrapper.strRebateProgramName}</div>
+            </div>
+            <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 rebate-prog-summary-item">
+              <div class="lbl-field-name rebate-prog-summary-item-head">{labels.pmc_rebates_validityPeriod}
+              </div>
+              <div class="lbl-field-value">{validityPeriod}</div>
+            </div>
+            <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 rebate-prog-summary-item">
+              <div class="lbl-field-name rebate-prog-summary-item-head">{labels.pmc_rebates_salesAgreement}
+              </div>
+              <div class="lbl-field-value">{rebatesData.objSalesAgreementSummaryWrapper.strSalesAgreementName}</div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="custom-card rebate-prog">
+      <div class="card-header">{labels.pmc_rebates_rebateProgram}</div>
+      <div class="card-body rebate-prog-body">
+        <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 reb-prog-dropdown">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_rebates_rebatesProgram}
+              combobox-list-json={rebatesProgramOptions} oninputdatachange={handleRebateProgramChange}
+              default-value={selectedRebatesProgram} placeholder="">
+            </c-pmc_dh_selection-picklist>
+          </div>
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_5-of-12 rebate-period-section">
+            <lightning-button variant="brand" label={labels.pmc_addresses_apply} class="rebates-apply-btn"
+              onclick={applyHandler}>
+            </lightning-button>
+            <span class="text-color-primary-green text-regular-small clear-link"
+              onclick={clearHandler}>{labels.pmc_addresses_clear}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template lwc:if={pageLoaded}>
+    <div>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+          <ul class="order-menu slds-m-top_x-small">
+            <template for:each={tabsDisplayed} for:item="tab">
+              <li class={tab.tabClass} key={tab.tabName} data-name={tab.tabName} onclick={tabChangeHandler}>
+                {tab.tabName}
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+
+      <template lwc:if={isCultivar}>
+        <div class="cultivar-container">
+          <div class="cultivar-text text-color-dark-primary-green text-regular-small">{labels.pmc_rebates_cultivarMsg}
+          </div>
+          <a href={labels.PMC_DH_CultivarRebatesBR} target="_blank">
+            <lightning-button variant="brand" label={labels.pmc_rebates_goToCultivar}
+              class="rebates-apply-btn goto-cultivar">
+            </lightning-button>
+          </a>
+        </div>
+      </template>
+      <template lwc:elseif={isBrazil}></template>
+      <template lwc:else>
+        <div class="slds-grid prod-tier-cont">
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12 products-card-cont">
+            <div class="custom-card">
+              <div class="card-header individual-card">
+                {labels.pmc_contractDetails_products}
+              </div>
+              <div class="card-details">
+                <template for:each={filteredData} for:item="product" for:index="index">
+                  <div class="slds-grid slds-wrap products-cont" data-id={product.heightClassRow} key={index.index}>
+                    <div class="slds-col slds-size_2-of-12">
+                      <div class="text-color-dark-primary-green text-medium-normal">
+                        {product.strProductName}</div>
+                    </div>
+                    <div class="slds-col slds-size_3-of-12">
+                      <div
+                        class="lbl-field-name text-color-dark-primary-green text-regular-small product-content-heading">
+                        {product.invoicedQty}</div>
+                      <div class="lbl-field-value text-color-dark-primary-green text-medium-normal">
+                        {product.intInvoicedQty}</div>
+                    </div>
+                    <template if:true={showTonsRemaining}>
+                      <div class="slds-col slds-size_4-of-12">
+                        <div
+                          class="lbl-field-name text-color-dark-primary-green text-regular-small product-content-heading">
+                          {labels.pmc_rebates_remainingForNextTarget}</div>
+                        <div class="lbl-field-value text-color-dark-primary-green text-medium-normal">
+                          {product.decTonsRemForNextTarget}</div>
+                      </div>
+                    </template>
+                    <template if:true={showAccumulatedRebates}>
+                      <div class="slds-col slds-size_3-of-12">
+                        <div
+                          class="lbl-field-name text-color-dark-primary-green text-regular-small product-content-heading">
+                          {labels.pmc_rebates_accumulatedRebatesToDate}</div>
+                        <div class="lbl-field-value text-color-dark-primary-green text-medium-normal">
+                          {product.decAccumulatedRebatesToDate}</div>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12 tiers-card-cont">
+            <div class="custom-card">
+              <div class="card-header individual-card">
+                <div class="slds-grid slds-wrap tiers-container">
+                  <div class="slds-col slds-size_4-of-12">
+                    {labels.pmc_rebates_tiers}
+                  </div>
+                  <div class="slds-col slds-size_4-of-12">
+                    <template if:true={isIndividualTab}>{labels.pmc_rebates_individualIncentives}</template>
+                    <template if:true={isPortfolioTab}>{labels.pmc_rebates_portfolioIncentives}</template>
+                    <template if:true={isGrowthTab}>{labels.pmc_rebates_growthIncentives}</template>
+                  </div>
+                  <div class="slds-col slds-size_4-of-12 proj-incentives-head">
+                    <div>{labels.pmc_rebates_projectedIncentives}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-details">
+                <template for:each={filteredData} for:item="product" for:index="index">
+                  <div class="slds-grid slds-wrap tiers-body-grid" data-id={product.heightClassRow} key={index.index}>
+                    <template for:each={product.lstTiers} for:item="tier" for:index="index">
+                      <div class="slds-col slds-size_4-of-12" key={index.index}>
+                        <div class="tiers-data-color text-medium-normal tiers-data">
+                          <template lwc:if={tier.decTierStartLimit}>
+                            {tier.decTierStartLimit} +
+                          </template>
+                        </div>
+                      </div>
+                      <div class="slds-col slds-size_4-of-12" key={index.index}>
+                        <div class="tiers-data-color text-medium-normal tiers-data">
+                          {tier.decIndividualIncentive}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-size_4-of-12" key={index.index}>
+                        <div class="tiers-data-color text-medium-normal tiers-data">
+                          {tier.decProjectedIncentive}
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <template if:true={activeTabData.length}>
+          <div class="pagination slds-m-bottom_medium">
+            <c-pmc_dh_pagination generickey="id" genericdata={activeTabData} class="slds-table_striped"
+              no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData}
+              modal-theme>
+            </c-pmc_dh_pagination>
+          </div>
+        </template>
+      </template>
+
+    </div>
+  </template>
+
+  <template lwc:if={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

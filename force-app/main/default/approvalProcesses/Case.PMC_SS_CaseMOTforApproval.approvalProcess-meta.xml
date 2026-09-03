@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval when MOT is Rail and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforRailSupplyChainwithAFPofSupplyPlanningFirst</name>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Vessel and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofSupplyPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Barge and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofSupplyPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Truck and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofSupplyPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for Case when MOT is Container and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Container&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Container - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforContainerSupplyChainwithAFPofSupplyPlanningFirst</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Rail and AFP is Carrier</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforRailSupplyChainwithAFPofCarrierFirst</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when mot is Vessel and AFP is Carrier</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofCarrier</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Barge and AFP is Carrier</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofCarrier</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Truck and AFP is Carrier</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofCarrier</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for case when MOT is Container and AFP is Carrier</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Container&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Container - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforContainerSupplyChainwithAFPofCarrierFirst</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Rail and AFP is Logistics Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforRailSupplyChainwithAFPofLogisticsPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Vessel and AFP is Logistics Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofLogisticsPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Barge and AFP is Logistics Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofLogisticsPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Truck and AFP is Logistics Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofLogisticsPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level approval for case when MOT is Container and AFP is Logistics Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Container&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Container - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforContainerSupplyChainwithAFPofLogisticsPlanning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Final approval for case when MOT is Rail and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_Approval_for_Rail_Supply_Chain_with_AFP_of_Supply_Planning</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Final approval for case when MOT is Vessel and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofSupplyPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Final approval for Case when MOT is Barge and AFP is Supply Planning</description>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofSupplyPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofSupplyPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Container&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Container - Supply Chain with AFP of Supply Planning</label>
+        <name>PMC_SS_ContainerSupplyChainwithAFPofSupplyPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforRailSupplyChainwithAFPofCarrierFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofCarrierFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofCarrierFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofCarrierFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Container&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Container - Supply Chain with AFP of Carrier</label>
+        <name>PMC_SS_ApprovalforContainerSupplyChainwithAFPofCarrierFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Rail&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Rail - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforRailSupplyChainwithAFPofLogisticsPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Vessel&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Vessel - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforVesselSupplyChainwithAFPofLogisticsPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Barge&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Barge - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforBargeSupplyChainwithAFPofLogisticsPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp; 
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp; 
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp; 
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp; 
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; ISPICKVAL(PMC_SS_MOT__c,&apos;Truck&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Approval for Truck - Supply Chain with AFP of Logistics Planning</label>
+        <name>PMC_SS_ApprovalforTruckSupplyChainwithAFPofLogisticsPlanningFinal</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) 
+&amp;&amp; PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) 
+&amp;&amp; PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;))) 
+|| 
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) 
+&amp;&amp; PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;))) 
+|| 
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) 
+&amp;&amp; PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp; 
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))) 
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <label>Final Approval by Customer Service Leadership</label>
+        <name>PMC_SS_FinalApprovalbyCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Approval process to route Cases to appropriate Queues based on AFP and Mode of Transportation.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>NOT(
+    OR(
+        RecordTypeId = &quot;012RT000001oRfZYAU&quot;,
+        RecordTypeId = &quot;012RT000001oRFlYAM&quot;,
+        RecordTypeId = &quot;012RT000001oRSfYAM&quot;
+    )
+)</formula>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>PMC_Rejection</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>PMC_SS_ResetActionReason</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Case MOT Approval</label>
+    <processOrder>2</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

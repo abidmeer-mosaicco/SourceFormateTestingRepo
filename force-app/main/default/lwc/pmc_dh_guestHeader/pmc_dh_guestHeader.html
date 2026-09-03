@@ -1,0 +1,12 @@
+<template>
+  <a href="#maincontent" class="skip slds-show_large" tabindex=0>{labels.pmc_header_skipToContent}</a>
+  <div class="slds-grid slds-gutters_direct slds-grid_vertical-align-center header-container">
+    <div class="slds-col slds-size_1-of-2 slds-grid slds-grid_align-spread">
+      <img src={iconUrlObj.mosaicLogoUrl} alt={labels.pmc_header_mosaicLogoText} class="brand-logo" />
+    </div>
+    <div class="slds-col slds-size_1-of-2 lang-container">
+      <c-pmc_dh_language-dropdown></c-pmc_dh_language-dropdown>
+    </div>
+  </div>
+  <a class="main-content slds-assistive-text" href="javascript:void(0);" id="maincontent">{labels.pmc_header_skipToContent}</a>
+</template>

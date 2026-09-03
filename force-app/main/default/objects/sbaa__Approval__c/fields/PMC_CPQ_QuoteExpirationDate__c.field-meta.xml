@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteExpirationDate__c</fullName>
+    <description>This field is created as part of User Story to store Quote&apos;s Expiration Date/Time</description>
+    <formula>Quote__r.PMC_CPQ_ExpiresOn__c</formula>
+    <label>Quote Expiration Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_IndustrialBusinessType__c</fullName>
+    <description>This field to extract industrial business type to compare with Product sub family</description>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(PMC_CPQ_QuoteRecordSubType__c)=&quot;Industrial&quot;,TEXT(PMC_CPQ_QuoteRecordSubType__c),&quot;&quot; )</formula>
+    <label>Industrial Business type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

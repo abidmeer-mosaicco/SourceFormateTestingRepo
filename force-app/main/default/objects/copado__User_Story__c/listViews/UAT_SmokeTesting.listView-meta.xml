@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAT_SmokeTesting</fullName>
+    <booleanFilter>(1 OR 2) OR (3 OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Last_Promotion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>UAT_SmokeTesting</value>
+    </filters>
+    <filters>
+        <field>copado__Release__c</field>
+        <operation>equals</operation>
+        <value>UAT_SmokeTesting</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>UAT_DefectFix</value>
+    </filters>
+    <filters>
+        <field>copado__Release__c</field>
+        <operation>equals</operation>
+        <value>UAT_DefectFix</value>
+    </filters>
+    <label>UAT_SmokeTesting</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,24 @@
+<template>
+  <div class="md-multi-picklist">
+    <label class="md-multi-label">{label}</label>
+    <button type="button" class="md-multi-trigger" onclick={handleToggleDropdown}>
+      <span>{displayValue}</span>
+      <span class="md-multi-icon">▼</span>
+    </button>
+
+    <template lwc:if={isOpen}>
+      <div class="md-multi-panel" style={panelStyle}>
+        <lightning-input type="search" variant="label-hidden" placeholder="Search" value={searchTerm} onchange={handleSearchChange}></lightning-input>
+
+        <div class="md-multi-options">
+          <template for:each={filteredOptions} for:item="option">
+            <label key={option.value} class="md-multi-option">
+              <input type="checkbox" data-value={option.value} checked={option.checked} onchange={handleOptionChange} />
+              <span>{option.label}</span>
+            </label>
+          </template>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

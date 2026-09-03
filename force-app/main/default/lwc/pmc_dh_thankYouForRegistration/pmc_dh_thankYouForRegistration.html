@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-grid slds-wrap slds-grid_align-center slds-text-align_center">
+        <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+            <h3>{labels.pmc_registration_thankYouText}</h3>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+            <lightning-formatted-text class="dxp-text-body thankyou-for-registration-text"
+                value={labels.pmc_registration_representativeCall}></lightning-formatted-text>
+        </div>
+        <div class="slds-col slds-size_1-of-1">
+            <a href={labels.pmc_registration_learnMoreAboutMosaicUrl} target="_blank"
+                class="anchor-link">{labels.pmc_registration_learnMoreAboutMosaic}</a>
+        </div>
+    </div>
+</template>

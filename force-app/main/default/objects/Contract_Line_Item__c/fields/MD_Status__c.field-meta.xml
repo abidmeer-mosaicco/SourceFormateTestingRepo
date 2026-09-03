@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MD_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  OR(
+    ISPICKVAL(Original_Subscription_Ref__r.AutoClosedInfo__c, &quot;Y1&quot;),
+    ISPICKVAL(Original_Subscription_Ref__r.AutoClosedInfo__c, &quot;Y2&quot;),
+    ISPICKVAL(Latest_Subscription__r.AutoClosedInfo__c, &quot;Y1&quot;),
+    ISPICKVAL(Latest_Subscription__r.AutoClosedInfo__c, &quot;Y2&quot;)
+  ),
+  &quot;Completed&quot;,
+  IF(
+    AND(NOT(ISBLANK(Total_Available_Quantity__c)), Total_Available_Quantity__c &lt;= 0),
+    &quot;Completed&quot;,
+    IF(
+      AND(NOT(ISBLANK(End_Date__c)), TODAY() &gt; End_Date__c),
+      &quot;Expired&quot;,
+      &quot;Open&quot;
+    )
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__WSW_getFieldPermissions__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Defaults to 10 unless set here. Gradually set the number to lower than 10 if encountering the remote response exceeded 15 MB error while trying to load a user in the User Lens. Controls how many permission set ids are sent to apex per batch to retrieve field permissions</inlineHelpText>
+    <label>WSW getFieldPermissions</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

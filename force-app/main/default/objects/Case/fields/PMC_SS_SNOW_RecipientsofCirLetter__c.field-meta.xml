@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SNOW_RecipientsofCirLetter__c</fullName>
+    <description>Field to write the emails that will receive the Letter of Circularization, following the instructions. &quot;Enter the emails of External Customers here to receive information about the completion of this call;
+For each e-mail provided, separate it with a comma (&quot;,&quot;), such as: joão@example.com, maria@example.com.&quot;.</description>
+    <externalId>false</externalId>
+    <label>Recipients of Circularization Letter</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,212 @@
+<template>
+  <template if:true={open}>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading" class="slds-modal slds-fade-in-open slds-modal_large">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header">
+          <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleClose}>
+            <lightning-icon icon-name="utility:close" alternative-text="Close" size="small"></lightning-icon>
+          </button>
+          <h2 id="modal-heading" class="slds-text-heading_medium">Place Order</h2>
+          <span class="slds-text-color_weak slds-float_right slds-text-body_small">*Fill in all fields*</span>
+        </header>
+
+        <div class="slds-modal__content slds-p-around_medium">
+          <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_medium">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">Contract Item</span>
+                <div class="slds-form-element__control">
+                  <div class="slds-form-element__static">{contractItem}</div>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">Description</span>
+                <div class="slds-form-element__control">
+                  <div class="slds-form-element__static">{contractDescription}</div>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">Item Qt. Available (t)</span>
+                <div class="slds-form-element__control">
+                  <div class="slds-form-element__static">{availableQtyTons}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">Origin</span>
+                <div class="slds-form-element__control">
+                  <div class="slds-form-element__static">{originDisplay}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">MOT</span>
+                <div class="slds-form-element__control">
+                  <div class="slds-form-element__static">{transportModeFromContract}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+              <template if:true={canEditShipTo}>
+                <span class="slds-form-element__label">Ship-to Location</span>
+                <div class="slds-combobox_container shipto-wrapper">
+                    <lightning-input
+                        class="shipToLocation"
+                        type="search"
+                        data-id="shipToSearch"
+                        variant="label-hidden"
+                        placeholder="Search ship-to..."
+                        value={shipToSearchValue}
+                        onfocus={showShipToOptions}
+                        onkeydown={handleShipToSearchInput}>
+                    </lightning-input>
+                    
+                    <template if:true={showShipToDropdown}>
+                        <div class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid shipto-dropdown"
+                            role="listbox">
+
+                            <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                <template for:each={displayShipToOptions} for:item="opt">
+                                    <li
+                                        key={opt.value}
+                                        class="slds-listbox__item"
+                                        data-value={opt.value}
+                                        onclick={handleShipToSelect}>
+
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                            role="option">
+
+                                            <span class="slds-media__body">
+                                                <span class="slds-truncate" title={opt.label}>
+                                                    {opt.label}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+                </div>
+                <!--lightning-combobox
+                  name="shipTo"
+                  label="Ship-to Location"
+                  value={form.shipTo}
+                  options={shipToOptions}
+                  onchange={handleInputChange}
+                  required
+                ></lightning-combobox-->
+              </template>
+              <template if:false={canEditShipTo}>
+                <div class="slds-form-element slds-form-element_readonly">
+                  <span class="slds-form-element__label">Ship-to Location</span>
+                  <div class="slds-form-element__control">
+                    <div class="slds-form-element__static">{shipToDisplay}</div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap slds-gutters slds-m-top_medium">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4">
+              <lightning-input
+                type="date"
+                name="requestedDate"
+                label="Requested Shipment date"
+                value={form.requestedDate}
+                min={minDate}
+                max={maxDate}
+                onchange={handleInputChange}
+                required
+                message-when-value-missing="Shipment date is required."
+              ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4">
+              <lightning-input
+                type="number"
+                data-id="trucks"
+                name="trucks"
+                label="How many loads?"
+                value="1"
+                min="1"
+                onchange={handleInputChange}
+                required
+              ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4">
+              <lightning-input
+                type="number"
+                data-id="quantityPerLoad"
+                name="quantityPerLoad"
+                label="Quantity per Load (t)"
+                value={form.quantityPerLoad}
+                min="1"
+                step="0.01"
+                required
+                onchange={handleInputChange}
+                message-when-bad-input="Enter a positive whole number (tons)."
+              ></lightning-input>
+              <template if:true={trucksValid}>
+                <div class="slds-text-color_weak slds-m-top_x-small slds-text-body_small">Total: {totalQuantity} t</div>
+              </template>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-4 checkbox-align">
+              <lightning-input
+                type="checkbox"
+                name="oneOrderPerTruck"
+                label="Create one order per load"
+                checked={form.oneOrderPerTruck}
+                onchange={handleInputChange}
+              ></lightning-input>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap slds-gutters slds-m-top_medium">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+              <lightning-input
+                type="text"
+                name="orderNumber"
+                label="Order PO Number"
+                value={form.orderNumber}
+                onchange={handleInputChange}
+              ></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+              <lightning-input
+                type="number"
+                name="incrementalPo"
+                label="Incremental PO"
+                value={form.incrementalPo}
+                min="0"
+                onchange={handleInputChange}
+              ></lightning-input>
+            </div>
+          </div>
+
+          <div class="slds-m-top_medium slds-text-color_weak slds-text-body_small">
+            If PO Contract Number is not empty, the number will be set as default.
+          </div>
+        </div>
+
+        <footer class="slds-modal__footer">
+          <button class="slds-button slds-button_neutral" onclick={handleClose}>Cancel</button>
+          <button class="slds-button slds-button_brand" onclick={handleSave} disabled={saveDisabled}>Save</button>
+        </footer>
+      </div>
+    </section>
+
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>

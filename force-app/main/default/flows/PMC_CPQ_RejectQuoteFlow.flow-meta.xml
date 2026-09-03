@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>QuoteStatusUpdate</name>
+        <label>Quote Status Update</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>recordId.SBQQ__Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Rejected</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>recordId.PMC_CPQ_RejectionReason__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Comments</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>StatusandRejectionReasonUpdate</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>ConfigSettingDecision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>PMC_CPQ_StatusRequestDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSetting_DontRunOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>PMC_CPQ_StatusRequestDecision</name>
+        <label>Status Request Decision</label>
+        <locationX>440</locationX>
+        <locationY>242</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IsStatusisRequest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.SBQQ__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Request</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AMCommentsScreen</targetReference>
+            </connector>
+            <label>Is Status is Request</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>PMC CPQ Accept Quote Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Reject Quote Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>674</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <stringValue>PMC CPQ Reject Quote Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <name>StatusandRejectionReasonUpdate</name>
+        <label>Status and Rejection Reason Update</label>
+        <locationX>176</locationX>
+        <locationY>566</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>recordId</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>AMCommentsScreen</name>
+        <label>AM Comments Screen</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>QuoteStatusUpdate</targetReference>
+        </connector>
+        <fields>
+            <name>Comments</name>
+            <fieldText>Comments</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Confirm Rejection</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSettingDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
+    </variables>
+</Flow>

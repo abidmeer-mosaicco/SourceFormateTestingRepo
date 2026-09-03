@@ -1,0 +1,60 @@
+<template>
+    <div class="filters-container">
+        <lightning-card title={labels.cardTitle} icon-name="standard:filter">
+            <div class="filters-scroll">
+                <div class="slds-var-p-around_x-large slds-grid slds-wrap slds-gutters_small">
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="text" name="account" label={labels.account} value={account} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1 slds-var-m-top_x-small">
+                        <lightning-input type="text" name="soldTo" label={labels.soldTo} value={soldTo} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="text" name="quoteNumber" label={labels.quoteNumber} value={quoteNumber} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="text" name="sapContractRef" label={labels.sapContractRef} value={sapContractRef} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="text" name="sapOriginalContract" label={labels.sapOriginalContract} value={sapOriginalContract} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-combobox 
+                            name="businessType" 
+                            label={labels.businessType} 
+                            value={businessType} 
+                            options={businessTypeOptions} 
+                            onchange={handleComboboxChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-combobox 
+                            name="salesOffice" 
+                            label={labels.salesOffice} 
+                            value={salesOffice} 
+                            options={salesOfficeOptions} 
+                            onchange={handleComboboxChange}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="text" name="accountManager" label={labels.accountManager} value={accountManager} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="date" name="contractValidFrom" label={labels.contractValidFrom} value={contractValidFrom} onchange={handleInput}></lightning-input>
+                    </div>
+                    <div class="slds-size_1-of-1">
+                        <lightning-input type="date" name="contractValidTo" label={labels.contractValidTo} value={contractValidTo} onchange={handleInput}></lightning-input>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky bottom buttons -->
+            <div class="filters-actions">
+                <div class="slds-border_top slds-text-align_center slds-var-p-top_x-large slds-var-p-bottom_small slds-var-p-left_small slds-var-p-right_small ">
+                    <lightning-button variant="neutral" label={labels.buttonClear} onclick={handleClear}></lightning-button>
+                    <lightning-button variant="brand" label={labels.buttonLoad} onclick={handleLoad} class="slds-var-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>

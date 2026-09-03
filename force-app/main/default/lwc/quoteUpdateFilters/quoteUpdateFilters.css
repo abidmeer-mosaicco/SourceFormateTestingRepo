@@ -1,0 +1,28 @@
+/* Filters container layout - grows with viewport */
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: fit-content;
+}
+
+/* Lightning card inside should take full height */
+.filters-container lightning-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Scrollable filters area */
+.filters-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1 1 auto;
+}
+
+/* Fixed bottom actions */
+.filters-actions {
+    flex-shrink: 0;
+    background: white;
+    margin-top: auto;
+}

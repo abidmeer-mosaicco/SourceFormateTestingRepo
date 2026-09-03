@@ -1,0 +1,50 @@
+<template>
+  <div class="login-container">
+    <div class="bgContainer container-adjust">
+      <div class="min-height slds-grid slds-gutter slds-wrap">
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-wrapper" data-content={isContentVisible}>
+          <div class="content-section">
+            <div class="head-message">
+              {bannerDetails.strTitle}
+            </div>
+            <div class="content-message">
+              {bannerDetails.strDescription}
+            </div>
+            <div class="slds-grid slds-wrap icon-group">
+              <template for:each={iconDetails} for:item="icon">
+                <div key={icon.intSequence} class="icon-section">
+                  <img src={icon.iconUrl} alt={icon.strTitle} class="icon-img">
+                  <div class="icon-text">{icon.strTitle}</div>
+                </div>
+              </template>
+            </div>
+            <div class="slds-grid slds-wrap">
+              <div class="help-container container-adjust">
+                <div class="support">
+                  <div class="support-text">{labels.pmc_landingPage_needHelp}</div>
+                  <div class="support-msg">
+                    <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_landingPage_supportText}>
+                    </lightning-formatted-rich-text>
+                  </div>
+                </div>
+              </div>          
+            </div>
+            <div class="mobile-button slds-hide_medium slds-p-top_large">
+              <lightning-button variant="brand" label={labels.pmc_login_text} title={labels.pmc_login_text}
+                onclick={toggleLogin}></lightning-button>
+            </div>
+          </div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 login-wrapper" data-visible={isLoginHidden}>
+          <div class="login-section">
+            <c-pmc_dh_login></c-pmc_dh_login>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <template if:true={isSpinner}>
+      <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+    </template>
+  </div>
+</template>

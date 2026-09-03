@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>PMC_SS_CaseAccess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Provide case access to roles for Case Approval</description>
+        <label>Case Access</label>
+        <sharedTo>
+            <group>PMC_SS_CaseAccessGroup</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case General</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

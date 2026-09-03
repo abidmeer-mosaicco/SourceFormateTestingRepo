@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>NotificationRecipientsAssignment</name>
+        <label>Notification Recipients Assignment</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>lstRecipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SendOwnerChangeNotificationSubFlow</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>RecipientIdsAssignment</name>
+        <label>Recipient Ids Assignment</label>
+        <locationX>490</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>lstRecipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>AccountTeamMembersLoop.UserId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AccountTeamMembersLoop</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Holds the Name of the flow</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AccountAfterUpdateFlow  </stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>270</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>CheckingForUpdateDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check whether updated Account is a Prospect Account</description>
+        <name>CheckAccountIsNotProspectDecision</name>
+        <label>Check Account Is Not Prospect Decision</label>
+        <locationX>864</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckAccountIsNotProspectDecision_NotProspectOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>strRecordTypeDeveloperName</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AMandCSRecordsGet</targetReference>
+            </connector>
+            <label>Not Prospect Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckingForAMAndCSDecision</name>
+        <label>Checking For AM And CS Decision</label>
+        <locationX>534</locationX>
+        <locationY>755</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckingForAMAndCS_AMAndCSFoundOutCome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AMandCSRecordsGet</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AccountTeamMembersLoop</targetReference>
+            </connector>
+            <label>AM And CS Found Out Come</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckingForUpdateDecision</name>
+        <label>Checking For Update Decision</label>
+        <locationX>754</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckingForUpdate_AOChangedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NotificationRecipientsAssignment</targetReference>
+            </connector>
+            <label>AO Changed Outcome</label>
+        </rules>
+        <rules>
+            <name>CheckingForUpdate_AddressUpdatedOutcome</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.BillingCity</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BillingCountry</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BillingState</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BillingPostalCode</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.BillingStreet</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CheckAccountIsNotProspectDecision</targetReference>
+            </connector>
+            <label>Address Updated Outcome</label>
+        </rules>
+    </decisions>
+    <description>it will send a Push Notification when the Account is update</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>strAddressChangeNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Label.PMC_SS_AddressChangeNotificationBody}, &apos;#&apos; , {!$Record.Name})</expression>
+    </formulas>
+    <formulas>
+        <name>strAOChangeNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Label.PMC_SS_AOChangeNotificationBody}, &apos;#&apos; , {!$Record.Name})</expression>
+    </formulas>
+    <formulas>
+        <description>This resource will generate the title and body for notification on hierarchy approval.</description>
+        <name>strApprovalNotifcationTitleAndDescription</name>
+        <dataType>String</dataType>
+        <expression>&apos;Hierarchy for &apos; + {!$Record.Name} + &apos; is Approved.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>dynamically creates the subject for task</description>
+        <name>strApprovalTaskSubject</name>
+        <dataType>String</dataType>
+        <expression>&quot;Approve &quot; +{!$Record.Name}+ &quot;&apos;s new Hierarchy&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>strCaseDescriptionFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Label.PMC_SS_MDMVerification_CaseDescription}, &apos;#&apos;, {!$Record.Name})</expression>
+    </formulas>
+    <formulas>
+        <name>strCaseSubjectFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Label.PMC_SS_MDMVerification_CaseSubject}, &apos;#&apos;, {!$Record.Name})</expression>
+    </formulas>
+    <formulas>
+        <description>This resource will create the body for account hierarchy rejection notification</description>
+        <name>strRejectionNotificationBody</name>
+        <dataType>String</dataType>
+        <expression>&apos;Hierarchy for &apos; + {!$Record.Name} + &apos; is Rejected. Please submit a valid Account for Approval.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>This resource will dynamically generate the title for rejection notification</description>
+        <name>strRejectionNotificationTitle</name>
+        <dataType>String</dataType>
+        <expression>&apos;Hierarchy for &apos; + {!$Record.Name} + &apos; is Rejected.&apos;</expression>
+    </formulas>
+    <interviewLabel>PMC SS Account After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Account After Update Flow</label>
+    <loops>
+        <name>AccountTeamMembersLoop</name>
+        <label>Account Team Members Loop</label>
+        <locationX>402</locationX>
+        <locationY>863</locationY>
+        <collectionReference>AMandCSRecordsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>RecipientIdsAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>SendAddressChangeNotificationSubFlow</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>930</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>AMandCSRecordsGet</name>
+        <label>AM and CS Records Get</label>
+        <locationX>534</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckingForAMAndCSDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>TeamMemberRole</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Account Manager</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TeamMemberRole</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer Service</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>AccountTeamMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>144</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>BillingCountryCode</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <filters>
+            <field>BillingCountryCode</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PY</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Ship-to</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>SendAddressChangeNotificationSubFlow</name>
+        <label>Send Address Change Notification Sub Flow</label>
+        <locationX>402</locationX>
+        <locationY>1163</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstRecipientIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>strAddressChangeNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>$Label.PMC_SS_AddressChangeNotificationTitle</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>SendOwnerChangeNotificationSubFlow</name>
+        <label>Send Owner Change Notification Sub Flow</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstRecipientIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>strAOChangeNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>$Label.PMC_SS_AOChangeNotificationTitle</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <description>This list will store the id of recipients of notification</description>
+        <name>lstNotificationRecepients</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>lstRecipientIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>objAccountTeamMember</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>AccountTeamMember</objectType>
+    </variables>
+    <variables>
+        <name>recQueue</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>QueueSobject</objectType>
+    </variables>
+    <variables>
+        <description>Store Record Type Developer Name of Account</description>
+        <name>strRecordTypeDeveloperName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>PMC_SS_Prospect</stringValue>
+        </value>
+    </variables>
+</Flow>

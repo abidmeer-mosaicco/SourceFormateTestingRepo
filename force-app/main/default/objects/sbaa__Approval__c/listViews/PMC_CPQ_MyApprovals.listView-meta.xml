@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_MyApprovals</fullName>
+    <columns>NAME</columns>
+    <columns>Quote__c</columns>
+    <columns>sbaa__Approver__c</columns>
+    <columns>sbaa__Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PMC_CPQ_QuoteExpirationDate__c</columns>
+    <columns>PMC_CPQ_PriceVolume__c</columns>
+    <columns>OrderItem__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>5/20/2025 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>sbaa__ApprovedBy__c</field>
+        <operation>contains</operation>
+        <value>Michael</value>
+    </filters>
+    <label>My Approvals</label>
+</ListView>

@@ -1,0 +1,22 @@
+.modal-wrapper {
+  padding: 16px;
+}
+
+.modal-message {
+  font-family: 'Barlow-Bold';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #093532;
+}
+
+.button-style {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 767px) {
+  .button-style {
+    padding-bottom: 16px;
+  }
+}

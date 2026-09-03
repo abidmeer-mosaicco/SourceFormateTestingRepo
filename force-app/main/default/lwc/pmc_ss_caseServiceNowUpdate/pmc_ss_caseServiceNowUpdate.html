@@ -1,0 +1,359 @@
+<template >
+    <lightning-quick-action-panel title="Update Case" class="slds-size_small">
+        <lightning-card title={customLabels.PMC_SS_ServiceNow_Label}>
+            
+            <template if:true={isWarrantyFormalization}>
+                <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                    <p class="slds-col">                             
+                    <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                    title="info variant small" size="small"> </lightning-icon> 
+                    <lightning-formatted-rich-text value={customLabels.WarrantyFormalization_Instruction}></lightning-formatted-rich-text>
+            
+                    </p> 
+                </div>
+            </template>
+                
+                <template if:true={isCircularizationLettersClients}>
+                    <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                        <p class="slds-col">                             
+                        <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                        title="info variant small" size="small"> </lightning-icon> 
+                        <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_CircularizationLetters_Instruction}></lightning-formatted-rich-text>
+
+                        </p> 
+                    </div>
+            </template>
+
+            <template if:true={isPerformWarranty}>
+                <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                    <p class="slds-col">                             
+                    <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                    title="info variant small" size="small"> </lightning-icon> 
+                    <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_PerformWarranty_Instruction}></lightning-formatted-rich-text>
+                
+                    </p> 
+                </div>
+            </template>
+
+        <template if:true={isCustomerCreditAnalysis}>
+            <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                <p class="slds-col">                             
+                <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                title="info variant small" size="small"> </lightning-icon> 
+                <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_CustomerCreditAnalysis_Instruction}></lightning-formatted-rich-text>
+                
+                </p> 
+            </div>
+        </template>
+
+        <template if:true={isCollectionsPortal}>
+            <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                <p class="slds-col">                             
+                <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                title="info variant small" size="small"> </lightning-icon> 
+                <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_CollectionsPortal_Instruction}></lightning-formatted-rich-text>
+                
+                </p> 
+            </div>
+        </template>
+        <template if:true={isDebitOrCreditNotes}>
+            <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                <p class="slds-col">                             
+                <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                title="info variant small" size="small"> </lightning-icon> 
+                <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_DebitorCreditNotes_Instruction}></lightning-formatted-rich-text>
+                 
+                </p> 
+            </div>
+        </template>
+
+        <template if:true={isUseofCreditsReturnReceiptofDischargeandReports}>
+            <div class="slds-m-around_medium slds-box slds-box_x-small lgc-bg">  
+                <p class="slds-col">                             
+                <lightning-icon icon-name="utility:info" alternative-text="Info!" variant="info" class="slds-col"
+                title="info variant small" size="small"> </lightning-icon> 
+                <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_UseofCreditsReturnReceiptofDischargeandReports_InstructionOne}></lightning-formatted-rich-text>
+                <lightning-formatted-rich-text value={customLabels.PMC_SS_SNOW_UseofCreditsReturnReceiptofDischargeandReports_InstructionTwo}></lightning-formatted-rich-text>
+                
+                </p> 
+            </div>
+        </template>
+
+            <div class="slds-m-around_medium">
+                <div class="spinner">
+                    <template if:true={isLoading}>
+                        <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                        </lightning-spinner>
+                    </template>
+                </div>
+
+                <!-- Solution -->
+                    <label class="slds-form-element__label" for="solution">
+                        <abbr class="slds-required" title="required">*</abbr>{customLabels.select_ticketType}
+                    </label>
+                    <select class="slds-select" id="solution" data-name="solution" name="solution" onchange={handleOnChange}
+                        required>
+                        <template for:each={solutions} for:item="option">
+                            <option key={option.label} class="uiInputSelectOption" value={option.value}>{option.label}
+                            </option>
+                        </template>
+                    </select>
+
+
+                <template if:true={selectedSolution}>
+                    
+                    <template if:true={isDisplayRequestTypeField}>
+                           <!-- Request Type -->
+                           <lightning-combobox
+                                id="requestType"
+                                name="requestType"
+                                class="Required"
+                                data-name="requestType"
+                                label={customLabels.RequestType_FieldLabel}
+                                value={requestType}
+                                options={requestTypes}
+                                onchange={handleOnChange} required>
+                            </lightning-combobox> 
+                    </template>
+
+                    <template if:true={isDisplayNameField}>
+                        <!-- Full Name -->
+                        <lightning-input class="Required" label={customLabels.PMC_SS_SNOW_ContactName_FieldLabel} name="name" id="name" data-name="name" disabled="true"
+                            value={name} required></lightning-input>
+                    </template>
+
+                    <template if:true={isContactEmailField}>
+                        <!-- Contact Email -->
+                        <lightning-input  label={customLabels.PMC_SS_SNOW_ContactEmail_FieldLabel} name="contactEmail" id="contactEmail" data-name="contactEmail" value={contactEmail} disabled="true"></lightning-input>
+
+                    </template>
+
+                    <template if:true={isDisplayOrderContractNumber}>
+                        <!-- Order Or Contract Number -->
+                        <lightning-input  class="Required" label={customLabels.PMC_SS_SNOW_OrderNumberorContractNumber_FieldLabel} name="orderOrContractNumber" id="orderOrContractNumber" data-name="orderOrContractNumber" value={orderOrContactNumber} onchange={handleOnChange} required></lightning-input>
+                    </template>
+
+                    <!-- <template if:true={isSAPCustomerNumberField}> -->
+                        <lightning-input  label={customLabels.PMC_SS_SNOW_AccountName_FieldLabel} name="Account Name" id="accountName" data-name="accountName" disabled="true" value={accountName}></lightning-input>
+
+                        <lightning-input  label={customLabels.PMC_SS_SNOW_CustomerSAPCode_FieldLabel} name="Customer SAP Code" id="sapCustomerNumber" data-name="sapCustomerNumber" disabled="true" value={sapCustomerNumber}></lightning-input>
+
+                    <!-- </template> -->
+                  
+                    <template if:true={isUseofCreditsReturnReceiptofDischargeandReports}>
+                        <!-- Contracts -->
+                        <lightning-combobox
+                            id="invoice"
+                            class="Required"
+                            name="invoice"
+                            data-name="invoice"
+                            label={customLabels.PMC_SS_SNOW_Invoice_FieldLabel}
+                            value={invoiceValue}
+                            options={invoiceValues}
+                            onchange={handleOnChange} 
+                            required>
+                        </lightning-combobox>
+                </template>
+
+                    <template if:true={isDisplayContractNumber}>
+                        <!-- Contracts -->
+                        <lightning-combobox
+                            id="contract"
+                            class="Required"
+                            name="contract"
+                            data-name="contract"
+                            label={customLabels.PMC_SS_SNOW_ContractNumber_FieldLabel}
+                            value={contract}
+                            options={contracts}
+                            onchange={handleOnChange} 
+                            required>
+                        </lightning-combobox>
+                </template>
+
+                    <template if:true={isDisplayContractNumber}>
+                       <!-- Contract Value-->
+                       <lightning-input  type="number" class="Required" label={customLabels.PMC_SS_SNOW_ContractValue_FieldLabel} name="Contract Value" id="contractValue" data-name="contractValue" value={contractValue} onchange={handleOnChange} formatter="currency" disabled="true"></lightning-input>
+                    </template>
+
+                    <template if:true={isDebitOrCreditNotes}>
+                        <!-- Business -->
+                        <lightning-combobox
+                             id="businessValue"
+                             name="businessValue"
+                             class="Required"
+                             data-name="businessValue"
+                             label={customLabels.PMC_SS_SNOW_Business_FieldLabel}
+                             value={businessValue}
+                             options={businessValues}
+                             onchange={handleOnChange} required>
+                         </lightning-combobox> 
+
+                         <lightning-combobox
+                             id="reasonValue"
+                             name="reasonValue"
+                             class="Required"
+                             data-name="reasonValue"
+                             label={customLabels.PMC_SS_SNOW_Reason_FieldLabel}
+                             value={reasonValue}
+                             options={reasonValues}
+                             onchange={handleOnChange} required>
+                         </lightning-combobox> 
+                 </template>
+
+                    <template if:true={isDisplayExactDate}>
+                        <!-- Contract Value-->
+                    <!-- Exact Date to be Paid -->
+                        <lightning-input type="date" class="Required" date-style="short" label={customLabels.PMC_SS_SNOW_ExactDatetobePaid_FieldLabel} name="exactDateToPay" id="exactDateToPay" data-name="exactDateToPay" value={exactDateTobePaid} onchange={handleOnChange} required></lightning-input>
+                    </template>
+
+                    <template if:true={isCollectionsPortal}>
+                        <!-- Segment Manager -->
+                        <lightning-combobox
+                            id="segmentManager"
+                            class="Required"
+                            name="segmentManager"
+                            data-name="segmentManager"
+                            label={customLabels.PMC_SS_SNOW_SegmentManager_FieldLabel}
+                            value={segmentManager}
+                            options={segmentManagers}
+                            onchange={handleOnChange} 
+                            required>
+                        </lightning-combobox>
+                </template>
+
+                <template if:true={isDisplayAbatementContractNumberField}>
+
+                    <lightning-combobox
+                             id="programValue"
+                             name="programValue"
+                             class="Required"
+                             data-name="programValue"
+                             label={customLabels.PMC_SS_SNOW_Program_FieldLabel}
+                             value={programValue}
+                             options={programValues}
+                             onchange={handleOnChange} required>
+                         </lightning-combobox> 
+
+                    <!-- Abatement Contract Number -->
+                    <lightning-textarea class="Required" label={customLabels.PMC_SS_SNOW_AbatementContractNumber_FieldLabel} name="abatementContractNumber" id="abatementContractNumber" max-length="255" value={abatementContractNumber} onchange={handleOnChange} required></lightning-textarea>
+                </template>
+
+                <template if:true={isDisplayCaseNumberField}>
+                    <!-- Case Number -->
+                    <lightning-input label={customLabels.PMC_SS_SNOW_CaseNumber_FieldLabel} name="caseNumber" id="caseNumber" data-name="caseNumber" disabled="true"
+                        value={caseNumber} ></lightning-input>
+                </template>
+                <template if:true={isDisplayReasonDetail}>
+                    <!-- Reason Detail-->
+                    <lightning-input  class="Required" label={customLabels.PMC_SS_SNOW_ReasonDetail_FieldLabel} name="reasonDetail" id="reasonDetail" data-name="reasonDetail" value={reasonDetail} onchange={handleOnChange} required></lightning-input>
+
+                </template>
+                <template if:true={isDebitOrCreditNotes}>
+                    <!-- Unity-->
+                    <lightning-input  class="Required" label={customLabels.PMC_SS_SNOW_Unity_FieldLabel} name="unity" id="unity" data-name="unity" value={unity} onchange={handleOnChange} required></lightning-input>
+
+                </template>
+                
+
+                    <template if:true={isCircularizationLettersClients}>
+            
+                        <!-- Recipients of Circularization Letter -->
+                        <lightning-textarea class="Required" label={customLabels.PMC_SS_SNOW_RecipientsofCircularizationLetter_FieldLabel} name="recipientOfCircularizationLetter" id="recipientOfCircularizationLetter" max-length="255" value={recipientOfCircularizationLetter} onchange={handleOnChange} required></lightning-textarea>
+
+                        <!-- Initial Request Period -->
+                        <lightning-input type="date" class="Required" date-style="short" label={customLabels.PMC_SS_SNOW_InitialRequestPeriod_FieldLabel} name="initialRequestPeriod" id="initialRequestPeriod" data-name="initialRequestPeriod" value={initialRequestPeriod} onchange={handleOnChange} required></lightning-input>
+
+                        <!-- Mosaic Paying / Receiving Company -->
+                        <lightning-combobox
+                            id="mosaicPayingReceivingCompany"
+                            class="Required"
+                            name="mosaicPayingReceivingCompany"
+                            data-name="mosaicPayingReceivingCompany"
+                            label={customLabels.PMC_SS_SNOW_MosaicPayingReceivingCompany_FieldLabel}
+                            value={mosaicPayingReceivingCompany}
+                            options={mosaicPayingReceivingCompanies}
+                            onchange={handleOnChange} 
+                            required>
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={isPerformWarranty}>
+                        <!--CPR-->
+                        <lightning-input type="checkbox" date-style="short" label={customLabels.PMC_SS_SNOW_CPR_FieldLabel} name="CPR" id="cpr"  checked={cpr} onchange={handleOnChange} ></lightning-input>
+                        &nbsp;
+                        &nbsp; 
+                        <!--Mortgage-->
+                        <lightning-input type="checkbox" date-style="short" label={customLabels.PMC_SS_SNOW_Mortgage_FieldLabel} name="Mortgage" id="mortgage"  checked={mortgage} onchange={handleOnChange} ></lightning-input>
+                    </template>
+
+                    <template if:true={isDisplayInitialAndFinalDate}>
+                        <!-- Initial Date -->
+                        <lightning-input type="date" class="Required" date-style="short" label={customLabels.PMC_SS_SNOW_InitialDate_FieldLabel} name="initialDate" id="initialDate" data-name="initialDate" value={initialDate} onchange={handleOnChange} required></lightning-input>
+
+                        <!-- Initial Date -->
+                        <lightning-input type="date" class="Required" date-style="short" label={customLabels.PMC_SS_SNOW_FinalDate_FieldLabel} name="finalDate" id="finalDate" data-name="finalDate" value={finalDate} onchange={handleOnChange} required></lightning-input>
+                    </template>
+                    <template if:true={isCustomerCreditAnalysis}>
+                        <!-- Case Currency -->
+                        <lightning-combobox
+                            id="caseCurrency"
+                            class="Required"
+                            name="caseCurrency"
+                            data-name="caseCurrency"
+                            label={customLabels.PMC_SS_SNOW_CaseCurrency_FieldLabel}
+                            value={caseCurrency}
+                            options={caseCurrencies}
+                            onchange={handleOnChange}
+                            required>
+                        </lightning-combobox>
+
+                    </template>
+                    <template if:true={isWarrantyFormalization}>
+                        <!-- Customer Code -->
+                        <!-- <lightning-input  class="Required" label="Customer Code" name="customerCode" id="customerCode" data-name="customerCode" value={customerCode} onchange={handleOnChange} required></lightning-input> -->
+
+                        <!-- Warranty Type -->
+                        <lightning-combobox
+                            id="warrantyType"
+                            class="Required"
+                            name="warrantyType"
+                            data-name="warrantyType"
+                            label={customLabels.PMC_SS_SNOW_WarrantyType_FieldLabel}
+                            value={warrantyType}
+                            options={warrantyTypes}
+                            onchange={handleOnChange}
+                            required>
+                        </lightning-combobox>
+                        
+                    </template>
+                    <template if:true={isFinancialOperationValueField}>
+                      
+                         <!-- Financial Operation Value -->                         
+                         <lightning-input class="Required" label={customLabels.PMC_SS_SNOW_FinancialOperationValue_FieldLabel} type="number" formatter="currency" step=".01" name="financialOperationValue" id="financialOperationValue" data-name="financialOperationValue" value={financialOperationValue} onchange={handleOnChange} required></lightning-input>
+                    </template>
+
+                    <template if:true={isEndorsementValueAndPayeeField}>
+                        
+                        <!-- Endorsement Value -->                     
+                        <lightning-input class="Required" label={customLabels.PMC_SS_SNOW_EndorsementValue_FieldLabel} type="number" formatter="currency" step=".01" name="endorsementValue" id="endorsementValue" data-name="endorsementValue" value={endorsementValue} onchange={handleOnChange} required></lightning-input>
+                        <!-- Payee Name -->
+                        <lightning-input class="Required" label={customLabels.PMC_SS_SNOW_PayeeName_FieldLabel} name="payeeName" id="payeeName" data-name="payeeName" value={payeeName} onchange={handleOnChange} required></lightning-input>
+
+                    </template>
+                    <template if:true={isCommentField}>
+                        <!-- Comments -->
+                        <lightning-textarea class="Required" id="comments" data-id="comments" data-name="comments" label={customLabels.PMC_SS_Comments_FieldLabel} max-length="255" onchange={handleOnChange} required={isCommentRequiredField}></lightning-textarea>
+                    </template>
+
+                </template>
+                <div class="footer">
+                    &nbsp;
+                    <lightning-button variant="neutral" label={customLabels.PMC_SS_SNOW_Cancel_Label} onclick={closeAction}></lightning-button> &nbsp;
+                    &nbsp;
+                    <lightning-button variant="brand" label={customLabels.PMC_SS_SNOW_Save_Label} onclick={saveAction}></lightning-button>
+                </div>
+                
+
+            </div>
+        </lightning-card>
+    </lightning-quick-action-panel>
+</template>

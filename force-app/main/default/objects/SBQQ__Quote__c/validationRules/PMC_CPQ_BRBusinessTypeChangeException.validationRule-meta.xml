@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_BRBusinessTypeChangeException</fullName>
+    <active>true</active>
+    <description>To prevent AM BR from changing Business Type on a quote which has quote lines.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+ISPICKVAL(  PMC_CPQ_Region__c , &apos;Brazil&apos;),
+SBQQ__LineItemCount__c &gt; 0,
+ISCHANGED( PMC_CPQ_QuoteRecordSubType__c )
+)</errorConditionFormula>
+    <errorMessage>Delete the Product from Cart to make changes to business type or create a fresh quote for another business type.</errorMessage>
+</ValidationRule>

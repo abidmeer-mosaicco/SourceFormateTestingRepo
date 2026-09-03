@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Send Push Notification to Opportunity Owner when the Opportunity Close Date is 30 Days from today.</description>
+        <name>OpportunityClosinginnext30daysPushNotificationAction</name>
+        <label>Opportunity Closing in next 30 days Push Notification Action</label>
+        <locationX>110</locationX>
+        <locationY>684</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>CustomNotificationTypeGet.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>lstOpportunityOwnerIds</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>strNotificationTitleFormula</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>strNotificationBodyFormula</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store Opportunity Owner Ids of the Opportunity Owner</description>
+        <name>Add_Opportunity_Owner_to_List</name>
+        <label>Add Opportunity Owner to List</label>
+        <locationX>110</locationX>
+        <locationY>576</locationY>
+        <assignmentItems>
+            <assignToReference>lstOpportunityOwnerIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OpportunityClosinginnext30daysPushNotificationAction</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Holds the name of the flow</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_NotifyOpportunityOwnertoInitiateProposalFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Process switch custom setting value check to bypass flow.</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>OpportunityCloseDatein30days</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Element to check if the opportunity close date is in next 30 days.</description>
+        <name>OpportunityCloseDatein30days</name>
+        <label>Opportunity Close Date in 30 days</label>
+        <locationX>506</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OpportunityCloseDatein30days_OpportunityClosingin30days</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strOpportunityCloseDateFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_NotifyOwner_OpportunityCloseDateDuration</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CustomNotificationTypeGet</targetReference>
+            </connector>
+            <label>Opportunity Closing in 30 days</label>
+        </rules>
+    </decisions>
+    <description>This flow will be executed to notify Opportunity owner to initiate a proposal</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Contains the body of the notification</description>
+        <name>strNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please review the &apos;+ {!$Record.Name} +&apos; as it is set to close in 30 days.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Holds the Notification Title</description>
+        <name>strNotificationTitleFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Opportunity &apos;+ {!$Record.Name} +&apos; is set to close in 30 days&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>strOpportunityCloseDateFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT( 
+{!$Record.CloseDate} - TODAY()
+)</expression>
+    </formulas>
+    <interviewLabel>PMC SS Notify Opportunity Owner To Initiate Proposal Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Notify Opportunity Owner To Initiate Proposal Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>374</locationX>
+        <locationY>792</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get the Custom Notification Type for Initiate Opportunity Proposal Notification</description>
+        <name>CustomNotificationTypeGet</name>
+        <label>Custom Notification Type Get</label>
+        <locationX>110</locationX>
+        <locationY>468</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Add_Opportunity_Owner_to_List</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PMC_SS_InitiateOpportunityProposal</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StageName</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Closed Lost</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-05-04</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This variable will store opportunity owner IDs</description>
+        <name>lstOpportunityOwnerIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

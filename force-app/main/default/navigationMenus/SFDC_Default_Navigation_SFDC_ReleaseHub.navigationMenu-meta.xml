@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>SFDC ReleaseHub</container>
+    <containerType>Network</containerType>
+    <label>Default Navigation</label>
+    <navigationMenuItem>
+        <label>Copado</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Copado Access Request</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/copado-access-request-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Environmental Setup</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/environmental-setup-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Making Metadata Changes</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/making-metadata-changes-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Common Changes</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/common-changes-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Running Quality Gates</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/running-quality-gates-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Deploying Changes</label>
+                <position>5</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/deploying-changes-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Copado Docs and Resources</label>
+                <position>6</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/copado-docs-and-resources-page</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Release Calendar</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/copado-release-calendar-page</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

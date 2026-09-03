@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_PrimaryBusinessType__c</fullName>
+    <description>This field is to extract business type from Primary Business Type in Quote to use filter on Add product selection page</description>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(PMC_CPQ_QuoteRecordSubType__c)=&quot;International&quot;,&quot;&quot;, IF(
+ISPICKVAL( PMC_CPQ_Region__c, &apos;North America&apos;) ,
+IF( RecordType.DeveloperName =&apos;PMC_CPQ_International&apos;,&apos;&apos;,
+IF(TEXT(PMC_CPQ_QuoteRecordSubType__c)=&quot;Industrial&quot;,&quot;&quot;,
+IF( or(TEXT(PMC_CPQ_QuoteRecordSubType__c)=&apos;Co-Products&apos; ,TEXT(PMC_CPQ_QuoteRecordSubType__c)=&apos;Raw Material&apos;),&apos;Co-Product&apos;,
+TEXT(PMC_CPQ_QuoteRecordSubType__c))
+)
+) ,
+IF( OR(TRIM(RIGHT( TEXT( PMC_CPQ_QuoteRecordSubType__c ),LEN(TEXT( PMC_CPQ_QuoteRecordSubType__c ))-6) )=&quot;Potash&quot;,
+TRIM(RIGHT( TEXT( PMC_CPQ_QuoteRecordSubType__c ),LEN(TEXT( PMC_CPQ_QuoteRecordSubType__c ))-6) )=&quot;Paraguay&quot;),&quot;&quot;,
+if(TEXT(PMC_CPQ_QuoteRecordSubType__c)=&apos;B2B_Specialities&apos;,&apos;Co-Product&apos;,TRIM(RIGHT( TEXT( PMC_CPQ_QuoteRecordSubType__c ),LEN(TEXT( PMC_CPQ_QuoteRecordSubType__c ))-6) )))
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Primary Business Type Extractor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

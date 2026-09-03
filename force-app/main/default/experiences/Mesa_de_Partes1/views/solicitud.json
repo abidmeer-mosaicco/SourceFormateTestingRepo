@@ -1,0 +1,298 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "c2ce1fde-0625-4228-bb5e-a53b066b751d",
+  "label" : "Solicitud",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7d07344e-d562-41ff-a74c-ab1eb2d97b32",
+          "columns" : [ {
+            "UUID" : "0d0036dd-ca32-48b4-8f48-0c7f9039aa49",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7d07344e-d562-41ff-a74c-ab1eb2d97b32",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 36px;\">Solicitud</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "699396b1-0823-47e0-abaf-c88e29067441",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0d0036dd-ca32-48b4-8f48-0c7f9039aa49",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1db1eff7-66ff-46e2-a903-94428e846a55",
+          "columns" : [ {
+            "UUID" : "85cd396e-7ce2-4979-a713-7948104efbde",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2c6ba43f-a003-4ac3-ae6d-a0f2cd648629",
+            "columnKey" : "45318",
+            "columnName" : "Column 2",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1db1eff7-66ff-46e2-a903-94428e846a55",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "Miski_Mayo_Solicitud_Case"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "6ef7758b-61c8-466f-9666-9580d8bae88a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "85cd396e-7ce2-4979-a713-7948104efbde",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Toma en cuenta las siguientes indicaciones antes de completar el proceso que llevarás a cabo:</p><ul><li>Si requieres adjuntar algún documento, debe estar en formato PDF.</li><li>El peso de los archivos que adjuntes debe sumar máximo 50 MB.</li><li>Tomaremos en cuenta el orden y plazo de recepción de consultas, solicitudes/documentos o reclamos según el siguiente horario:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Entre las 08:00 horas y las 18:30 horas de un día hábil, se consideran presentados</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;mismo día hábil.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Después de las 18:30 horas y las 23:59 horas, se considerarán presentados el día hábil</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siguiente.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- En caso ingreses una consulta, solicitud/documento o reclamo un día inhábil, se</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;considerará presentado al día hábil siguiente.</p><ul><li>Después de registrar tu trámite, te enviaremos un correo con tu número de caso para que puedas hacerle seguimiento.</li></ul><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "eafcb795-c8f2-4d8c-b36b-c1577f4a5cf8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCRBJIRQLT3VGBFEA7ERZV6CH5PA",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "cover",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : 450,
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "none",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0)",
+                  "showButton" : false,
+                  "showCaption" : false,
+                  "showDateTime" : false,
+                  "showEyebrow" : false,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : false,
+                  "showMetadata1" : false,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : false,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : false,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "center center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "f5953973-2169-4371-8caf-a74acc1c667c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2c6ba43f-a003-4ac3-ae6d-a0f2cd648629",
+        "regionLabel" : "Column 2",
+        "regionName" : "45318",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "3fb31d7a-d857-46b1-8679-21f82fc4ea42",
+          "columns" : [ {
+            "UUID" : "d2c2fc71-6d87-478c-9688-170c82f4a57b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3fb31d7a-d857-46b1-8679-21f82fc4ea42",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 20px;\">Preguntas Frecuentes&nbsp;</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c4a8ad22-b4f4-4a96-8de7-fe0af7dd4caf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Haz clic en la opción de “Registra tu solicitud y/o, luego ubica la sección “Área a la que dirige su documento”, has clic y selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste. ",
+            "headerText" : "Si quiero solicitar una donación o apoyo, ¿con quién me puedo contactar?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "ffcd8c93-1a75-43a7-87e5-eed0f83dfda3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres visitar la operación debes registrar una solicitud en nuestra Mesa de Partes Virtual.  Elige la opción “Registra tu solicitud y/o documento”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.",
+            "headerText" : "¿Cómo puedo visitar la operación?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "3622e5b3-99c3-428e-bd73-b22c2007cfe7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si no tienes claro a quien dirigir tu consulta, puedes hacerla llegar al área de Comunicación para que derive tu consulta al área respectiva. Elige la opción de “Consulta”, luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. Esta área se encargará de retransmitir tu consulta al área respectiva para que atienda tu comunicación, dándote respuesta al correo electrónico que registraste.  ",
+            "headerText" : "Deseo información adicional sobre el proceso de operación",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "3254024e-4cff-4801-afda-ae63aab6f220",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d2c2fc71-6d87-478c-9688-170c82f4a57b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bb35b91f-3517-47c4-becf-f7af4515fedc",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Solicitud"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5489080a-faf0-4eac-a846-7f66cd96c96e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a815e743-c288-4561-9e1e-7e0954b5ea3e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-solicitud"
+}

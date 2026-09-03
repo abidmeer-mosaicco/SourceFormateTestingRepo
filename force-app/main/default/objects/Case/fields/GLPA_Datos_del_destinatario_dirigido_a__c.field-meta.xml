@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GLPA_Datos_del_destinatario_dirigido_a__c</fullName>
+    <description>GLPA-1017 - Necessary to fulfill the business needs of the Miski Mayo in case creation and case management.</description>
+    <label>Área a la que diriges tu consulta​</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comercial</fullName>
+                <default>false</default>
+                <label>Comercial (Consultas sobre venta comercial de fosfato)</label>
+            </value>
+            <value>
+                <fullName>Comunicación</fullName>
+                <default>false</default>
+                <label>Comunicación (Información sobre la empresa, material informativo, etc.)</label>
+            </value>
+            <value>
+                <fullName>Gestión Social</fullName>
+                <default>false</default>
+                <label>Gestión Social (solicitudes de apoyo, auspicios, reclamos, etc.)</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal (Notificaciones judiciales, de organismos estatales o policiales, etc.)</label>
+            </value>
+            <value>
+                <fullName>Puerto</fullName>
+                <default>false</default>
+                <label>Puerto (consultas y solicitudes de acceso al terminal portuario y barco)</label>
+            </value>
+            <value>
+                <fullName>Recursos Humanos</fullName>
+                <default>false</default>
+                <label>Recursos Humanos (Consultas sobre temas laborales, postulaciones, cartas judiciales, etc.)</label>
+            </value>
+            <value>
+                <fullName>Suministros</fullName>
+                <default>false</default>
+                <label>Suministros (Información de empresas que desean dar a conocer sus servicios)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ModeofTransportation__c</fullName>
+    <description>This field is created  to check The mode of transportation</description>
+    <inlineHelpText>Select the appropriate mode from the available options to track and manage logistics effectively</inlineHelpText>
+    <label>MoT</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_QuoteRecordType__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>PMC_CPQ_MoT</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Domestic NA</controllingFieldValue>
+            <valueName>Barge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic NA</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>International Distribution</controllingFieldValue>
+            <valueName>Rail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic NA</controllingFieldValue>
+            <controllingFieldValue>Domestic SA</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic NA</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>International Distribution</controllingFieldValue>
+            <valueName>Vessel</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

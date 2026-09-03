@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="headerText" type="String" default="Enter Question Here" />
+    <aura:attribute name="bodyText" type="String" default="Enter Answer Here" />
+    <aura:attribute name="rgbColor" type="String" default="rgb(0, 0, 0)" />
+    <aura:attribute name="activeSectionName" type="String" default="" />
+
+    <div style="{!'--faq-color:' + v.rgbColor}">
+        <lightning:accordion activeSectionName="{!v.activeSectionName}" allowMultipleSectionsOpen="true">
+            <lightning:accordionSection name="faq" label="{!v.headerText}">
+                <aura:unescapedHtml value="{!v.bodyText}" />
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

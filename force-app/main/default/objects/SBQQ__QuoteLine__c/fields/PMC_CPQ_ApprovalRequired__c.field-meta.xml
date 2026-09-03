@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ApprovalRequired__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( (ISPICKVAL(PMC_CPQ_ContractType__c, &apos;FPD&apos;)),0, 
+IF(
+AND(
+SBQQ__Quantity__c &gt;= 10000,
+PMC_CPQ_NetUnitPrice__c&gt;=PMC_CPQ_PriceGuidanceTarget__c,
+ PMC_CPQ_NetUnitPrice__c&lt;= PMC_CPQ_PriceGuidanceCeiling__c
+), 2,
+IF(
+AND(
+SBQQ__Quantity__c &lt; 10000,
+PMC_CPQ_NetUnitPrice__c &gt;=PMC_CPQ_PriceGuidanceFloor__c,
+PMC_CPQ_NetUnitPrice__c&lt; PMC_CPQ_PriceGuidanceTarget__c
+), 3,
+IF(
+AND(
+SBQQ__Quantity__c &gt;= 10000,
+PMC_CPQ_NetUnitPrice__c&gt;= PMC_CPQ_PriceGuidanceFloor__c,
+PMC_CPQ_NetUnitPrice__c&lt; PMC_CPQ_PriceGuidanceTarget__c
+), 4,
+IF(
+AND(
+SBQQ__Quantity__c &lt; 10000,
+ PMC_CPQ_NetUnitPrice__c&lt; PMC_CPQ_PriceGuidanceFloor__c
+), 5,
+IF(
+AND(
+SBQQ__Quantity__c &gt;= 10000,
+ PMC_CPQ_NetUnitPrice__c&lt; PMC_CPQ_PriceGuidanceFloor__c
+), 6,0
+
+))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

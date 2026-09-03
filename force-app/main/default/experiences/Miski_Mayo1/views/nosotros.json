@@ -1,0 +1,769 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "29bf0023-e2a6-4d1f-88b5-2d84bf95459b",
+  "label" : "Nosotros",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "12ab4013-265a-4b3a-af39-7c806b56c4f4",
+          "columns" : [ {
+            "UUID" : "26db7407-40d9-4e15-9bd5-bff729675966",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "12ab4013-265a-4b3a-af39-7c806b56c4f4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "3bf64039-8ac1-435d-9260-6571f7e450af",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "26db7407-40d9-4e15-9bd5-bff729675966",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f0974b62-fe26-4cbe-b686-9790e1062b10",
+          "columns" : [ {
+            "UUID" : "731969e6-b815-415a-baa0-d9c3970f7d6a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 356
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f0974b62-fe26-4cbe-b686-9790e1062b10",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageA1",
+            "textDescription" : "Explotamos yacimientos de fosfatos en medio del desierto de Sechura"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "2efe9160-d057-407a-8866-4c863d812ce3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "731969e6-b815-415a-baa0-d9c3970f7d6a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a3a3d9c0-8247-4aa7-8c59-fe4b6a24a211",
+          "columns" : [ {
+            "UUID" : "7624e007-067c-4b75-868f-471a412510bc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 55
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a3a3d9c0-8247-4aa7-8c59-fe4b6a24a211",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Nosotros</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9a45d204-d173-44e2-abc7-dc9e2728cc55",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7624e007-067c-4b75-868f-471a412510bc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "6c5b8735-00f3-460b-b16b-2829f21a7882",
+          "columns" : [ {
+            "UUID" : "c1cc0865-6633-43a6-b83f-082f1aab7387",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2a348a51-134a-4c17-bb48-0aa52f68ab58",
+            "columnKey" : "5f60e",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6c5b8735-00f3-460b-b16b-2829f21a7882",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; margin-top: 40px;\">\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Iniciamos nuestra operación un 10 de julio de 2010.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Desde 2010 a la fecha, hemos aportado al Estado y la Comunidad en cumplimiento de nuestros compromisos contractuales más de 2,031.1 millones de soles.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">En Miski Mayo contamos con más de 700 trabajadores y el 60% pertenece a nuestra zona de influencia directa en la provincia de Sechura y el 22% son provenientes de otras ciudades de la región, sumando un total de 82% de fuerza laboral perteneciente a la región Piura.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Como Miski Mayo, somos la principal empresa aportante del Fondo Social del Proyecto Integral Bayóvar (FOSPIBAY), contribuyendo el 2025 con el 97.3% del fondo total.</span>\n  </p>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "8e2f839a-6ba6-4807-8050-dd1b9e5b5353",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c1cc0865-6633-43a6-b83f-082f1aab7387",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6271286e-10cb-4844-9406-b276802a29dd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP3"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithRedSquare",
+          "id" : "1ec3ec33-508d-41ae-8640-7b4ef62f2257",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2a348a51-134a-4c17-bb48-0aa52f68ab58",
+        "regionLabel" : "Column 2",
+        "regionName" : "5f60e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5ba0c526-f4e4-4a7c-9b56-b802a146771e",
+          "columns" : [ {
+            "UUID" : "35b9158d-3adb-4e71-a717-a1f54816e2e9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "01807f15-dea6-41b8-9fca-a624adbb212b",
+            "columnKey" : "0d911",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "931aa4f8-8269-41e3-a9e2-fdc62f814435",
+            "columnKey" : "eda2e",
+            "columnName" : "Column 3",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5ba0c526-f4e4-4a7c-9b56-b802a146771e",
+      "regions" : [ {
+        "id" : "35b9158d-3adb-4e71-a717-a1f54816e2e9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "01807f15-dea6-41b8-9fca-a624adbb212b",
+        "regionLabel" : "Column 2",
+        "regionName" : "0d911",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "931aa4f8-8269-41e3-a9e2-fdc62f814435",
+        "regionLabel" : "Column 3",
+        "regionName" : "eda2e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "9951cc45-3b23-4d4b-bd93-75f9d73d9a98",
+          "columns" : [ {
+            "UUID" : "df86a6a9-cebc-4776-b83b-128afbc41982",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 110
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9951cc45-3b23-4d4b-bd93-75f9d73d9a98",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Nuestra Historia</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8909bdc3-7e52-4ff3-be78-fd862f4e6468",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(72, 72, 72); font-size: 18px;\">En Miski Mayo valoramos nuestro pasado y miramos el futuro con optimismo, porque sabemos que cada paso que damos es un peldaño más para alcanzar la excelencia. Cada hito que hemos vivido es una demostración del compromiso y trabajo en equipo, para hacer que las cosas sucedan.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "bcedeb3a-a2c9-4701-98f2-2c96ea67a154",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "df86a6a9-cebc-4776-b83b-128afbc41982",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "61a5e850-4a0d-41f2-a0a0-42c1bed7611d",
+          "columns" : [ {
+            "UUID" : "6a444d70-15c0-453a-95dd-11d518796650",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 341
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "61a5e850-4a0d-41f2-a0a0-42c1bed7611d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoGetToKnowUsCustomThirdCarousel",
+          "id" : "acaf23e4-d655-43f4-ac74-dec01fb7af19",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6a444d70-15c0-453a-95dd-11d518796650",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgb(226, 35, 26)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4a6b8df3-1a73-42bf-aac5-482d73a4dd12",
+          "columns" : [ {
+            "UUID" : "f91234a4-1d2d-450c-a182-895fb0029bc6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5fdc7a15-ac17-4714-8871-d9247a42b8c8",
+            "columnKey" : "a3659",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "03ba82d4-1c5c-47c4-ac94-c4843e0681c2",
+            "columnKey" : "c6be9",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 150
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4a6b8df3-1a73-42bf-aac5-482d73a4dd12",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "bottonTextHeight" : "10",
+            "cardHeight" : "100",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Flag",
+            "iconSize" : "4",
+            "text" : "0",
+            "textColor" : "#E2231A",
+            "textColorHead" : "#E2231A",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "f3909365-4cd2-4892-ac60-fc913306871e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(255, 255, 255);\">Misión</strong></h3><p style=\"text-align: center;\"><span style=\"font-size: 22px; color: rgb(255, 255, 255);\">Transformar recursos naturales en prosperidad y desarrollo sostenible.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a52b87c2-705e-44e9-bcbf-0cc8e4547d43",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f91234a4-1d2d-450c-a182-895fb0029bc6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "bottonTextHeight" : "10",
+            "cardHeight" : "100",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Binoculars",
+            "iconSize" : "4",
+            "text" : "0",
+            "textColor" : "#E2231A",
+            "textColorHead" : "#E2231A",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "5d257ebd-4282-4ec9-b863-fcc235d6fcf8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(255, 255, 255);\">Visión</strong></h3><p style=\"text-align: center;\"><span style=\"font-size: 22px; color: rgb(255, 255, 255);\">Ser la empresa peruana líder en creación de valor, con excelencia, pasión por las personas y por el planeta.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f134802b-9b88-4ce6-a4a5-6e5e827256dc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5fdc7a15-ac17-4714-8871-d9247a42b8c8",
+        "regionLabel" : "Column 2",
+        "regionName" : "a3659",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "none",
+            "bottonTextHeight" : "10",
+            "cardHeight" : "100",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "3People",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "#E2231A",
+            "textColorHead" : "#E2231A",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "1d025adf-3044-41eb-982b-c14449ae29f0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(255, 255, 255);\">Propósito</strong></h3><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 22px;\">Ayudar al mundo a producir </span></p><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 22px;\">los alimentos que necesita.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6f4ec1a4-9bd2-4b34-9405-f5bc4d9012c9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "03ba82d4-1c5c-47c4-ac94-c4843e0681c2",
+        "regionLabel" : "Column 3",
+        "regionName" : "c6be9",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 93,
+        "sectionConfig" : {
+          "UUID" : "5f005a76-3e6e-4528-b576-165e72e83b8f",
+          "columns" : [ {
+            "UUID" : "95ac8e21-19b4-4231-8bb9-f189e5216df5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 169
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5f005a76-3e6e-4528-b576-165e72e83b8f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Nuestros Valores</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4e44f39e-0f40-4bb2-a00d-a8b769376f20",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 18px;\">Nuestros 6 valores empresariales reflejan nuestra cultura basada en una política sólida de transparencia y ética, que prioriza la vida, nuestra gente y el respeto por nuestro entorno</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "73e9692e-43ce-4827-b07d-7bd4179ae836",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "95ac8e21-19b4-4231-8bb9-f189e5216df5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0.44) url(/sfsites/c/file-asset/AREA_DE_SECADO_MISKI_MAYO_ENE_202?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0.34)",
+        "contentAreaWidth" : 55,
+        "sectionConfig" : {
+          "UUID" : "e7645ec9-957e-468c-8a53-d70d040a212b",
+          "columns" : [ {
+            "UUID" : "58a87375-55dc-4830-bd64-0f1b8a6db95d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4cc8b898-e4a7-4f7b-94d5-9befe7e1124b",
+            "columnKey" : "23fba",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "828f4a89-2be2-492c-873f-03250d22d424",
+            "columnKey" : "162c8",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e7645ec9-957e-468c-8a53-d70d040a212b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "691a217c-34a6-49da-a648-df3710694a3b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "100",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "Finger",
+            "iconSize" : "4",
+            "text" : "La vida en primer lugar",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "df8fe626-2abe-473e-9127-a2ac107d6f87",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "CheckmarkPerson",
+            "iconSize" : "4",
+            "text" : "Actuar de manera correcta",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "e6181b2f-f4c7-4e87-ad67-b4df2e6a90e2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "58a87375-55dc-4830-bd64-0f1b8a6db95d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0f8bf03d-c88d-4b2a-b020-f4fe204423cc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "121",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "3People",
+            "iconSize" : "4",
+            "text" : "Valorar a quien hace nuestra empresa",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "e222c490-6e3e-4ab5-82a4-d7a5b1b837d3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "ShakingHands",
+            "iconSize" : "4",
+            "text" : "Crecer y evolucionar juntos",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "dac37bd2-782d-4d3b-a79a-ff7d0a50d999",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4cc8b898-e4a7-4f7b-94d5-9befe7e1124b",
+        "regionLabel" : "Column 2",
+        "regionName" : "23fba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8cf479e6-33cd-4a59-8bac-d9a5e5d31be8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "100",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "Globe",
+            "iconSize" : "4",
+            "text" : "Cuidar nuestro planeta",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "f6037c3c-238e-45ad-b447-c0f0b19ebe72",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "8",
+            "borderColor" : "white",
+            "borderThickness" : "2",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "215",
+            "fontSize" : "20",
+            "iconName" : "Star",
+            "iconSize" : "4",
+            "text" : "Hacer que suceda",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "1ba6ce03-c885-4b8e-8955-3b78efbe3519",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "828f4a89-2be2-492c-873f-03250d22d424",
+        "regionLabel" : "Column 3",
+        "regionName" : "162c8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "911eabb2-8677-4040-8980-bb8811e1ea7d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Nosotros"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "28ede7f2-4141-40be-a93a-33625a81240e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dd63dbc6-b5db-40b7-bc87-99dffacf0499",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-nosotros"
+}

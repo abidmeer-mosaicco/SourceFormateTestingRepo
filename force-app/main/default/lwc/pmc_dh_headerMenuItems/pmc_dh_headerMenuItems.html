@@ -1,0 +1,26 @@
+<template>
+  <template if:true={_mainMenuList.length}>
+    <ul class="slds-grid mobile-menu-item">
+      <li for:each={_mainMenuList} for:item="menu" key={menu.id} class="slds-col item" tabindex="0"
+        onclick={menuItemClickHandler} onkeydown={menuItemKeydownHandler} data-id={menu.id}
+        data-target={menu.strTarget}>
+        <a href="javascript:void(0)" class="main-menu">
+          {menu.strLabel}
+          <template if:true={menu.subMenuOptions}>
+            <span class="main-menu-icon">
+              <img alt="Menu list" class={cssDropdownIcon} data-target="dropdown-icon" src={arrowDownUrl} />
+            </span>
+          </template>
+        </a>
+        <template if:true={menu.subMenuOptions}>
+          <ul if:true={isSubMenuVisible} class="sub-menu">
+            <li for:each={menu.subMenuOptions} for:item="sub" key={sub.value} data-target={sub.value}
+              class="sub-menu-item" tabindex="0" onclick={subMenuOptionsClickHandler}>
+              {sub.label}
+            </li>
+          </ul>
+        </template>
+      </li>
+    </ul>
+  </template>
+</template>

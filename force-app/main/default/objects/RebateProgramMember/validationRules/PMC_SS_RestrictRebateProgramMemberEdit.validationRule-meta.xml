@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictRebateProgramMemberEdit</fullName>
+    <active>true</active>
+    <description>This validation rule is used to restrict the user from editing or creating Rebate Program Member for Under Revision or Approved Sales Agreement.</description>
+    <errorConditionFormula>AND( 
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) ,
+NOT(
+OR(
+AND(
+ISCHANGED(  MemberStatus ) ,
+ISPICKVAL(  MemberStatus , &apos;Active&apos;) ,
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Activated&apos;)
+),
+AND(
+ISCHANGED(  MemberStatus ) ,
+ISPICKVAL(  MemberStatus , &apos;Inactive&apos;) ,
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Expired&apos;)
+)
+)
+),
+NOT(ISPICKVAL(  RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Cancelled&apos;)),
+OR( ISPICKVAL(  RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c  , &apos;Approved&apos;), 
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c , &apos;Under Revision&apos;)  )
+)</errorConditionFormula>
+    <errorMessage>Rebate Program Members can’t be created/edited at this stage. Please Amend the Sales Agreement to make revisions to Rebate Program Members.</errorMessage>
+</ValidationRule>

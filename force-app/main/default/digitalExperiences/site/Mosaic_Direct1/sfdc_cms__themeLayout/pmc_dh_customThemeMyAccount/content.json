@@ -1,0 +1,185 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "pmc_dh_customThemeMyAccount",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"bbe16b1f-1f9b-470b-b31c-f359a7010d66\",\"columns\":[{\"UUID\":\"6759f20e-2bdf-45fc-aad8-6812b69fdde6\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { },
+                "effectiveAccountId" : "{!CurrentUser.effectiveAccountId}"
+              },
+              "definition" : "c:pmc_dh_header",
+              "id" : "cbf6a31f-afaf-45fb-86b2-88d38316b70b",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "countType" : "TotalProductCount",
+                "dxpStyle" : { },
+                "showCount" : false
+              },
+              "definition" : "commerce_builder:cartBadge",
+              "id" : "54956026-4db6-43dc-8180-2c0d9a3ca163",
+              "type" : "component"
+            } ],
+            "id" : "6759f20e-2bdf-45fc-aad8-6812b69fdde6",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "customCssClasses" : "head-wrapper",
+          "definition" : "dxp_layout:columns",
+          "id" : "bbe16b1f-1f9b-470b-b31c-f359a7010d66",
+          "type" : "component"
+        } ],
+        "id" : "3424bdd5-307a-4bf8-958e-d3bb120039a3",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_footer",
+          "id" : "ce64d733-cbb8-4a37-9379-ffb920f6e218",
+          "type" : "component"
+        } ],
+        "id" : "11e9f88e-87bd-46b8-b013-1a80811fdff9",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      }, {
+        "id" : "6aacbb96-4351-4ea0-8d8f-494c156bdd31",
+        "name" : "tabs",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_userLoginInfo",
+          "id" : "c27b38e0-c4c9-4d33-98ba-255f008380ea",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "commerce_builder:myAccountPassword",
+          "id" : "4b933869-2b77-414c-8091-4be07d90f366",
+          "type" : "component"
+        } ],
+        "id" : "8667b3d9-827f-4d56-8739-1e4f4326b959",
+        "name" : "ootb",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_accountDetail",
+          "id" : "d2bad226-1ee8-4b28-abec-0c54ad8af80a",
+          "type" : "component"
+        } ],
+        "id" : "91542861-8c63-4265-84df-19b7a5c1a788",
+        "name" : "accountdetail",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_addressesList",
+          "id" : "891039d5-81d0-43d4-9d50-3550dab43b4f",
+          "type" : "component"
+        } ],
+        "id" : "f5a4b46b-ba53-4d5b-a9ed-48cd972043b9",
+        "name" : "addresses",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_userDetails",
+          "id" : "eab19c55-ed99-4b30-841c-a60d26490ba1",
+          "type" : "component"
+        } ],
+        "id" : "b2e40078-6ea4-4024-8a34-c3a6e2daf27c",
+        "name" : "userdetail",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_myUserList",
+          "id" : "2b005201-a75e-4ced-ac0f-fc632c064036",
+          "type" : "component"
+        } ],
+        "id" : "d52aa618-4b29-4be7-b7e0-8f70f79deb74",
+        "name" : "usermanagement",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_preferences",
+          "id" : "68d1deef-2ca2-4fc7-8b60-c206e38b9a83",
+          "type" : "component"
+        } ],
+        "id" : "8f8c0002-ec00-4a74-a67a-3e8c955225a0",
+        "name" : "preferences",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_leadsManagement",
+          "id" : "440a4799-bf81-4aa5-ade9-6660185d8060",
+          "type" : "component"
+        } ],
+        "id" : "afdb0f86-eae5-44fc-83f3-57362a62afe9",
+        "name" : "leadmanagement",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_rebate",
+          "id" : "e9949bd6-53c4-4b65-8af6-8635886ca04e",
+          "type" : "component"
+        } ],
+        "id" : "d5c65fe5-83c5-45bf-9ef8-77448c4e276c",
+        "name" : "rebates",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_outage",
+          "id" : "58cf5e79-bdd9-4776-bc73-ccb3a33565c9",
+          "type" : "component"
+        } ],
+        "id" : "62e13fa8-3c79-4261-b38e-63908b424834",
+        "name" : "outage",
+        "type" : "region"
+      } ],
+      "definition" : "c:pmc_dh_customThemeMyAccount",
+      "id" : "a26f494e-3ea5-4240-8a0f-cfeab49ad249",
+      "type" : "component"
+    }
+  },
+  "urlName" : "pmc-dh-customthememyaccount"
+}

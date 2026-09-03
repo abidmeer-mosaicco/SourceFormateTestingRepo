@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount &lt; $25,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &lt; $25,000 by Product Management Queue</label>
+        <name>PMC_QualityCreditLessThan25000ByProductManagement</name>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount &lt; $25,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &lt; $25,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditLessThan25000ByCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagementLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount is between $25,000 and $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality $25,000 &lt; Credit Approval &lt; $50,000 by Product Management Leadership Queue</label>
+        <name>PMC_QualityCreditBetween25000And50000ByProductManagementLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount is between $25,000 and $50,000</description>
+        <entryCriteria>
+            <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality $25,000 &lt; Credit Approval &lt; $50,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditBetween25000And50000ByCreditServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &gt; $50,000 by Product Management Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByProductManagement</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforSecondlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_QualityLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &gt; $50,000 by Quality Leadership Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByQualityLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Third level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 2 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ActionReason__c</field>
+                <operation>equals</operation>
+                <value>Credit</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &gt; $50,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_CancelAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_RebillAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_DollarAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_CreditDebitAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_ReturnAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Manager For Final Approval</label>
+        <name>PMC_RouteToManagerForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <type>userHierarchyField</type>
+            </approver>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_CancelAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_RebillAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_DollarAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_CreditDebitAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_ReturnAmount__c&lt;10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Manager For First Approval</label>
+        <name>PMC_SS_RouteToManagerForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_AccountManager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Account Manager For Final Approval</label>
+        <name>PMC_SS_RouteToAccountManagerForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_AccountManager__c</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;=10000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Sales&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Service&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Customer&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Account Manager For First Approval</label>
+        <name>PMC_SS_RouteToAccountManagerForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;)))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Supply Chain For Final Approval</label>
+        <name>PMC_SS_RouteToSupplyChainForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_SupplyChain</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;))))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Carrier&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Warehouse&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Supply Planning&apos;) || ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Logistics Planning&apos;)
+|| (ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;) &amp;&amp; ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;)))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Supply Chain For First Approval</label>
+        <name>PMC_SS_RouteToSupplyChainForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <approver>
+                <name>PMC_SS_Quality</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; !ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Product Management and Quality For Final Approval</label>
+        <name>PMC_RouteToProductManagementandQualityForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <approver>
+                <name>PMC_SS_Quality</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Plant / Operations&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False &amp;&amp; !ISPICKVAL(PMC_SS_IssueReason__c, &apos;Stock Out / Plant Outage&apos;)</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Product Management and Quality For First Approval</label>
+        <name>PMC_SS_RouteToProductManagementandQualityForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_Service</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;)&amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;)&amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;)&amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Service For Final Approval</label>
+        <name>PMC_SS_RouteToServiceForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_Service</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;System&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Service For First Approval</label>
+        <name>PMC_SS_RouteToServiceForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_Quality</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&lt;1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Quality For Final Approval</label>
+        <name>PMC_SS_RouteToQualityForFinalApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_Quality</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Quality&apos;))))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Route To Quality For First Approval</label>
+        <name>PMC_SS_RouteToQualityForFirstApproval</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_ApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <formula>((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&gt;1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000 &amp;&amp;
+(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Level 1 Approved&apos;)))
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) ||
+ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) ||
+ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) ||
+ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) ||
+ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;) ||
+ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;)) &amp;&amp;
+(ISPICKVAL(PMC_SS_AtFaultParty__c,&apos;Other&apos;)))
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Cancel&apos;) &amp;&amp;
+PMC_SS_CancelAmount__c&lt;=1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000)
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Rebill&apos;) &amp;&amp;
+PMC_SS_RebillAmount__c&lt;=1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000)
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Reverse Shipment&apos;) &amp;&amp;
+PMC_SS_DollarAmount__c&lt;=1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000)
+||
+((ISPICKVAL(PMC_SS_ActionReason__c,&apos;Credit&apos;) || ISPICKVAL(PMC_SS_ActionReason__c,&apos;Debit&apos;)) &amp;&amp;
+PMC_SS_CreditDebitAmount__c&lt;=1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000)
+||
+(ISPICKVAL(PMC_SS_ActionReason__c,&apos;Return&apos;) &amp;&amp;
+PMC_SS_ReturnAmount__c&lt;=1000 &amp;&amp; PMC_SS_OriginalInvoiceAmount__c&gt;=1000000))
+&amp;&amp; PMC_SS_RouteToQuality__c = False</formula>
+        </entryCriteria>
+        <label>Route To Customer Service Leadership</label>
+        <name>PMC_SS_RouteToCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_Rejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Approval process to route Cases to appropriate Queues based on credit approval.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>NOT(
+    OR(
+        RecordTypeId = &quot;012RT000001oRfZYAU&quot;,
+        RecordTypeId = &quot;012RT000001oRFlYAM&quot;,
+        RecordTypeId = &quot;012RT000001oRSfYAM&quot;
+    )
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>PMC_ApprovalforFinallevel</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>PMC_Rejection</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>PMC_SS_ResetActionReason</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Case Approval</label>
+    <nextAutomatedApprover>
+        <useApproverFieldOfRecordOwner>false</useApproverFieldOfRecordOwner>
+        <userHierarchyField>Manager</userHierarchyField>
+    </nextAutomatedApprover>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_CurrencyChangeforQuote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+ISCHANGED(CurrencyIsoCode ),
+
+ NOT(
+   OR(
+      TEXT($User.LocaleSidKey) = &apos;en_US&apos; &amp;&amp; TEXT(CurrencyIsoCode) = &apos;USD&apos;,
+      TEXT($User.LocaleSidKey) = &apos;en_US&apos; &amp;&amp; TEXT(CurrencyIsoCode) = &apos;CAD&apos;,
+      TEXT($User.LocaleSidKey) = &apos;pt_BR&apos; &amp;&amp; TEXT(CurrencyIsoCode) = &apos;USD&apos;,
+      TEXT($User.LocaleSidKey) = &apos;pt_BR&apos; &amp;&amp; TEXT(CurrencyIsoCode) = &apos;BRL&apos;
+    
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>SBQQ__Account__c</errorDisplayField>
+    <errorMessage>Please select a valid currency based on your assigned Locale.</errorMessage>
+</ValidationRule>

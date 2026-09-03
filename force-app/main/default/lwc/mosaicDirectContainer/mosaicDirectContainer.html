@@ -1,0 +1,33 @@
+<template>
+  <c-mosaic-direct-sub-menu></c-mosaic-direct-sub-menu>
+
+  <template if:true={showOrders}>
+    <c-mosaic-direct-list
+      object-api-name="ShipmentItem"
+      manual-field-api-names={orderManualFieldApiNames}
+      manual-field-label-names={orderManualFieldLabelNames}
+      account-name-path={orderAccountNamePath}
+      sap-number-path={orderSapNumberPath}
+      date-filter-field-name={orderDateFilterFieldName}
+      end-date-filter-field-name={orderEndDateFilterFieldName}
+      base-where-clause={orderBaseWhere}
+      page-size={pageSize}
+    >
+    </c-mosaic-direct-list>
+  </template>
+
+  <template if:true={showQuotes}>
+    <c-mosaic-direct-list
+      object-api-name="SBQQ__Quote__c"
+      manual-field-api-names={quoteManualFieldApiNames}
+      manual-field-label-names={quoteManualFieldLabelNames}
+      account-name-path={quoteAccountNamePath}
+      sap-number-path={quoteSapNumberPath}
+      date-filter-field-name={quoteDateFilterFieldName}
+      end-date-filter-field-name={quoteEndDateFilterFieldName}
+      base-where-clause={quoteBaseWhere}
+      page-size={pageSize}
+    >
+    </c-mosaic-direct-list>
+  </template>
+</template>

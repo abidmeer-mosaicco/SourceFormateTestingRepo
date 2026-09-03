@@ -1,0 +1,142 @@
+<!--
+  @description       : 
+  @author            : nokrause@valgroupco.com.gaugedev
+  @group             : 
+  @last modified on  : 19-09-2025
+  @last modified by  : nokrause@valgroupco.com.gaugedev
+-->
+<template>
+  <div class="sf-form" data-formfactor={formFactor}>
+    <section class="card">
+      <h2 class="section-title">Your Information</h2>
+      <div class="grid two">
+        <lightning-input variant={labelVariant} label="First Name" value={leadFirstName} required
+          data-id="leadFirstName" onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input variant={labelVariant} label="Last Name" value={leadLastName} required data-id="leadLastName"
+          onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input variant={labelVariant} type="email" label="Email" value={leadEmail} required
+          data-id="leadEmail" onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input variant={labelVariant} type="tel" label="Mobile Phone" value={leadMobilePhone} required
+          data-id="leadMobilePhone" onchange={handleChange} inputmode="tel">
+        </lightning-input>
+
+        <lightning-input variant={labelVariant} label="Company" value={leadCompany} data-id="leadCompany"
+          onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-combobox variant={labelVariant} label="Production Acres" value={leadSize} options={resolvedSizeOptions}
+          data-id="leadSize" onchange={handleChange}>
+        </lightning-combobox>
+
+        <lightning-combobox variant={labelVariant} label="Occupation" value={leadType} options={resolvedLeadTypeOptions}
+          data-id="leadType" onchange={handleChange}>
+        </lightning-combobox>
+
+        <template if:false={isPhone}>
+          <div class="span2">
+            <label class="slds-form-element__label">Crops</label>
+            <lightning-dual-listbox name="crops" source-label="Available" selected-label="Chosen"
+              options={resolvedCropsOptions} value={cropsValues} onchange={handleDualListChange}>
+            </lightning-dual-listbox>
+          </div>
+        </template>
+
+        <template if:true={isPhone}>
+          <div class="span2">
+            <div class="slds-form-element">
+              <label class="slds-form-element__label">Crops</label>
+              <div class="chip-row">
+                <template if:true={cropsPills.length}>
+                  <template for:each={cropsPills} for:item="pill">
+                    <lightning-pill key={pill.value} label={pill.label} name={pill.value} onremove={handleRemoveCrop}>
+                    </lightning-pill>
+                  </template>
+                </template>
+                <template if:false={cropsPills.length}>
+                  <span class="hint-text">No crops selected</span>
+                </template>
+              </div>
+              <lightning-button class="mt-8" label="Select Crops" variant="neutral" onclick={openCropsModal}>
+              </lightning-button>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">General Information</h2>
+      <div class="grid two">
+        <lightning-input class="span2" variant={labelVariant} 
+          label="Reason for call" value={saSubject}
+          data-id="saSubject" onchange={handleChange}
+          maxlength="250"
+          message-when-too-long="Máximo de 250 caracteres.">
+        </lightning-input>
+
+        <lightning-textarea class="span2" label="Additional Information" 
+          value={saDescription} data-id="saDescription"
+          maxlength="250"
+          message-when-too-long="Máximo de 250 caracteres."
+          onchange={handleChange}>
+        </lightning-textarea>
+
+        <div class="kv">
+          <div class="kv-label">Service Resource</div>
+          <div class="kv-value">{serviceResourceName}</div>
+        </div>
+        <div class="kv">
+          <div class="kv-label">Work Type</div>
+          <div class="kv-value">{workTypeName}</div>
+        </div>
+        <div class="kv">
+          <div class="kv-label">Appointment Type</div>
+          <div class="kv-value">{appointmentTypeName}</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Scheduled Times</h2>
+      <div class="grid two">
+        <div class="kv">
+          <div class="kv-label">Schedule Start ({timeZone})</div>
+          <div class="kv-value">{startLocal}</div>
+        </div>
+        <div class="kv">
+          <div class="kv-label">Schedule End ({timeZone})</div>
+          <div class="kv-value">{endLocal}</div>
+        </div>
+      </div>
+    </section>
+
+    <template if:true={showCropsModal}>
+      <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <h2 class="slds-modal__title">Select Crops</h2>
+          </header>
+          <div class="slds-modal__content slds-p-around_medium">
+            <lightning-input type="search" label="Filter" value={cropsFilter} onchange={handleCropsFilter}>
+            </lightning-input>
+
+            <lightning-checkbox-group class="mt-12" name="cropsMobile" label="Available Crops"
+              options={filteredCropsOptions} value={mobileCropsBuffer} onchange={handleCropsCheckboxChange}>
+            </lightning-checkbox-group>
+          </div>
+          <footer class="slds-modal__footer slds-grid slds-grid_align-end slds-p-around_small">
+            <lightning-button label="Cancel" onclick={closeCropsModal} class="slds-m-right_small"></lightning-button>
+            <lightning-button variant="brand" label="Done" onclick={confirmCropsModal}></lightning-button>
+          </footer>
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+  </div>
+</template>

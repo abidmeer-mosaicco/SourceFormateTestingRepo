@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Especifique quando essa regra deve ser avaliada. Deve ser usado apenas para direcionar a Quote Line e não é compatível com a calculadora antiga.</help>
+    <label><!-- Calculator Evaluation Event --></label>
+    <name>SBQQ__EvaluationEvent__c</name>
+    <picklistValues>
+        <masterLabel>After Calculate</masterLabel>
+        <translation>Após o cálculo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Before Calculate</masterLabel>
+        <translation>Antes de Calcular</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Calculate</masterLabel>
+        <translation>Em Calcular</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Initialization</masterLabel>
+        <translation>Na inicialização</translation>
+    </picklistValues>
+</CustomFieldTranslation>

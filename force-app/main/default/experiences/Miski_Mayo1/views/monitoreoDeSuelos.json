@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2c050c4f-42dd-4a09-836a-f8b56db551d9",
+  "label" : "Monitoreo de suelos",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "29e10c40-1684-4deb-a516-184b92fb933b",
+          "columns" : [ {
+            "UUID" : "c633f2d3-ff04-4c84-b98d-31e9584dc94f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "29e10c40-1684-4deb-a516-184b92fb933b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "8d2e6cb9-cba7-4ff7-9f00-5d6843ac4218",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c633f2d3-ff04-4c84-b98d-31e9584dc94f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d1095308-ad9f-4816-ab43-167b063f161f",
+          "columns" : [ {
+            "UUID" : "b0c2fe81-2ab5-4792-8e50-f7b802ca4c5e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d1095308-ad9f-4816-ab43-167b063f161f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP22"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "e01f61c6-5685-4bfb-9ed3-8f64c8f9b03c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b0c2fe81-2ab5-4792-8e50-f7b802ca4c5e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 88,
+        "sectionConfig" : {
+          "UUID" : "97008e5c-57ce-4d7f-ae94-a673d49daa9f",
+          "columns" : [ {
+            "UUID" : "b8f29ca4-b90b-4368-bce5-9f12b81838b3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6670c60f-bc05-4c44-84e0-79722a9515a7",
+            "columnKey" : "8eb10",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1f817a4a-2484-49e9-a19d-127e2fb089d7",
+            "columnKey" : "d7e35",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "adfb7f30-29dc-4bea-a4df-dfcdddd7034e",
+            "columnKey" : "fb3c0",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9708b950-9d27-4e63-8677-5374d416a491",
+            "columnKey" : "4d527",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "040c2131-a013-4eb5-b7aa-786fb426f10e",
+            "columnKey" : "11b7c",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "97008e5c-57ce-4d7f-ae94-a673d49daa9f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "f6ea7794-190a-4569-aaf4-04f2c253b1b6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b8f29ca4-b90b-4368-bce5-9f12b81838b3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6670c60f-bc05-4c44-84e0-79722a9515a7",
+        "regionLabel" : "Column 2",
+        "regionName" : "8eb10",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1f817a4a-2484-49e9-a19d-127e2fb089d7",
+        "regionLabel" : "Column 3",
+        "regionName" : "d7e35",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "adfb7f30-29dc-4bea-a4df-dfcdddd7034e",
+        "regionLabel" : "Column 4",
+        "regionName" : "fb3c0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9708b950-9d27-4e63-8677-5374d416a491",
+        "regionLabel" : "Column 5",
+        "regionName" : "4d527",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "040c2131-a013-4eb5-b7aa-786fb426f10e",
+        "regionLabel" : "Column 6",
+        "regionName" : "11b7c",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "65c11e80-6b21-4825-be88-b5e7880c0deb",
+          "columns" : [ {
+            "UUID" : "ecd0605c-850f-4ab1-8de2-9dea8509f6b1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "65c11e80-6b21-4825-be88-b5e7880c0deb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Monitoreo de Suelos</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8cd256aa-2f65-455a-af4e-0290fa065dfd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ecd0605c-850f-4ab1-8de2-9dea8509f6b1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "e8e6735e-273a-4d8f-99ce-af7c7cb4b9c0",
+          "columns" : [ {
+            "UUID" : "362920cc-2b6a-41f9-aff0-12eb7e3a27da",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "736d5004-fd99-42d6-91fb-5f33f2ba90f9",
+            "columnKey" : "cefd7",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4bdd55db-a52f-473a-a660-da7ce1a5f737",
+            "columnKey" : "94834",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b76fcd81-bfc9-46d8-90cf-8af83ae25b6c",
+            "columnKey" : "3f366",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9f054cda-cae6-45f7-9576-4f9f02d29b7c",
+            "columnKey" : "cbfba",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1193a898-d0f4-4820-9f87-a847a708013c",
+            "columnKey" : "29fdd",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e8e6735e-273a-4d8f-99ce-af7c7cb4b9c0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "794252cd-c56f-472f-a46e-5f1801f5c333",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "362920cc-2b6a-41f9-aff0-12eb7e3a27da",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "736d5004-fd99-42d6-91fb-5f33f2ba90f9",
+        "regionLabel" : "Column 2",
+        "regionName" : "cefd7",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4bdd55db-a52f-473a-a660-da7ce1a5f737",
+        "regionLabel" : "Column 3",
+        "regionName" : "94834",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b76fcd81-bfc9-46d8-90cf-8af83ae25b6c",
+        "regionLabel" : "Column 4",
+        "regionName" : "3f366",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9f054cda-cae6-45f7-9576-4f9f02d29b7c",
+        "regionLabel" : "Column 5",
+        "regionName" : "cbfba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1193a898-d0f4-4820-9f87-a847a708013c",
+        "regionLabel" : "Column 6",
+        "regionName" : "29fdd",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "79453ac2-f0b0-4a32-801c-f48d1a1259d6",
+          "columns" : [ {
+            "UUID" : "560bb39e-0434-4093-ba51-fdb1ab205b22",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "79453ac2-f0b0-4a32-801c-f48d1a1259d6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "812c998b-e973-4020-a2c7-6b9bba648886",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Determinar las concentraciones de Uranio (Isótopos U-234, U-235 y U-238) y Radio (R-226) en las estaciones de monitoreo establecidas por el Plan de Monitoreo Ambiental.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Comparar los resultados de los isótopos contrastándolos con los estándares establecidos por el Radioactive Substances Act 1993 (Acta de Sustancias Radiactivas RSA93) ya que en la actualidad no se cuenta con dispositivos legales que regulen el contenido de elementos radiactivos.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "b68d8155-f409-464d-8ebf-cdfab05bf60a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 22px;\">Este monitoreo se realiza con frecuencia anual, y tiene como finalidad comparar los resultados de los parámetros de calidad de suelo con los estándares de calidad ambiental para suelo, según el Decreto Supremo N°011-2017-MINAM</span><strong style=\"font-size: 22px;\">.&nbsp;</strong></p><p><br></p><p><strong style=\"font-size: 22px;\">Ubicación de estaciones:</strong><span style=\"font-size: 22px;\">&nbsp;B1 (Carretera de acceso principal a mina), B4 (Mina tajo 2).</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "69e5701d-93d2-43aa-a1e7-32c1d80aa8a3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "560bb39e-0434-4093-ba51-fdb1ab205b22",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "20c2d8d8-31cb-4b5f-baa5-db465506a10b",
+          "columns" : [ {
+            "UUID" : "9f22c6d5-70b1-466d-a202-dcec31507455",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "20c2d8d8-31cb-4b5f-baa5-db465506a10b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP30"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "481fb813-4307-4141-9c04-00383f2a5589",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9f22c6d5-70b1-466d-a202-dcec31507455",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1ae310c7-8358-4893-9d28-33426e1d0d93",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo de suelos"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "048a5dab-3ae7-4118-8eec-0087f46d2387",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "959e6e52-dd9d-4fcc-a034-418c650cf2bf",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-suelos"
+}

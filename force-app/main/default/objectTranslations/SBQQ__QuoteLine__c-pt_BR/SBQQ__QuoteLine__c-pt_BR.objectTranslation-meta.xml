@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Linha de cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Linhas de cotação</value>
+    </caseValues>
+    <fieldSets>
+        <label>NA Internacional</label>
+        <name>PMC_CPQ_NAInternational</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- QLE-B2B -DOM_INT_BR FERT --></label>
+        <name>PMC_CPQ_QLEB2BDOMINTBRFERT</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- QLE-DomesticNACo-Pr --></label>
+        <name>PMC_CPQ_QLEDomesticNACoPr</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ConsumptionSchedule --></label>
+        <name>SBQQ__ConsumptionSchedule</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Campos bloqueados de linha de cotação não corrente</label>
+        <name>SBQQ__NonCurrentQuoteLineLockedFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Editor de linhas segmentadas</label>
+        <name>SBQQ__SegmentedLineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Resumo do editor de linha segmentada</label>
+        <name>SBQQ__SegmentedLineEditorSummary</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Gaveta de itens de linha padrão</label>
+        <name>SBQQ__StandardLineItemDrawer</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Summary Fields --></label>
+        <name>SBQQ__SummaryFields</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nome da linha</nameFieldLabel>
+    <recordTypes>
+        <label>SA doméstica</label>
+        <name>PMC_CPQ_DomesticBR</name>
+    </recordTypes>
+    <recordTypes>
+        <label>NA doméstico</label>
+        <name>PMC_CPQ_DomesticNA</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Internacional</label>
+        <name>PMC_CPQ_International</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Distribuição internacional</label>
+        <name>PMC_CPQ_InternationalDistribution</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>O valor do frete deve ser superior a 0 ao criar cotações.</errorMessage>
+        <name>FreightPriceGreaterthan0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Freight value is required and should be more than 0 --></errorMessage>
+        <name>FreightPriceGreaterthan01</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Ajuste de preço não pode ser negativo para cotações com classificação igual a Lista.</errorMessage>
+        <name>Negative_Price_Adjustment_For_List_Class</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please make sure the Commission value is set for all the line items, as Commission Agent is set at Quote --></errorMessage>
+        <name>PMC_CPQ_CommissionandCommissonAgent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contract Type is Required. --></errorMessage>
+        <name>PMC_CPQ_ContractTypeRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Crop Type is Required. --></errorMessage>
+        <name>PMC_CPQ_CropTypeRequiredForSA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Delivery Start Date and Delivery End Date is Required --></errorMessage>
+        <name>PMC_CPQ_DeliveryDateMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Os FPDs foram desativados no momento. Entre em contato com o gerente de produtos para obter mais detalhes</errorMessage>
+        <name>PMC_CPQ_FPDToggleSwitch</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Incoterms CPT is only Applicable for MOT Rail and Truck --></errorMessage>
+        <name>PMC_CPQ_IncotermCPTValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please kindly populate the Ship To field for the Non VCO Quote Lines --></errorMessage>
+        <name>PMC_CPQ_NonVCOQuoteShipTo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pack Type is Mandatory --></errorMessage>
+        <name>PMC_CPQ_PackTypeMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Packaging type is mandatory for Pack type of Packed --></errorMessage>
+        <name>PMC_CPQ_PackageTypeMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A data de pagamento não pode ser no passado.</errorMessage>
+        <name>PMC_CPQ_PaymentDateInPast</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Por favor, preencha a Data de pagamento se o Método de pagamento for escolhido como Pré-pagamento ou Data fixa, e a Data de pagamento não pode ser no passado.&quot;</errorMessage>
+        <name>PMC_CPQ_PaymentDateValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Escolha a data de pagamento como um dia útil</errorMessage>
+        <name>PMC_CPQ_PrePayPaymentDateValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to modify the field. Please contact your system administrator if this change is required. --></errorMessage>
+        <name>PMC_CPQ_Prevent_Update_IsInitialQntSatsf</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Price By Date is required for FPD Contract Type --></errorMessage>
+        <name>PMC_CPQ_PriceByDateMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A cotação foi enviada para aprovação e está sendo analisada no momento. Se você quiser fazer outras modificações, clique no botão &quot;&quot;Recall Approvals&quot;&quot;.&quot;</errorMessage>
+        <name>PMC_CPQ_QuoteSubmittedForApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O desconto que você inseriu não atende aos critérios exigidos. Ajuste o desconto de acordo com o preço mínimo</errorMessage>
+        <name>PMC_CPQ_RejectionValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A Quote Line só pode ser editada quando a cotação estiver no status Draft. Defina o Status da cotação como Rascunho para editar.</errorMessage>
+        <name>PMC_CPQ_RestrictAMonApprovedandAccepted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the Quantity after cancellation has been sent to SAP. Please contact your System Administrator. --></errorMessage>
+        <name>PMC_CPQ_Restrict_Quantity_Edit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please inform the Shipping Instructions on the Quote before creating a Quote Line with Incoterms = CIF --></errorMessage>
+        <name>PMC_CPQ_ValidateCIF</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Freight value cannot be negative. --></errorMessage>
+        <name>PMC_Freight_CannotBeNegative</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Freight is required for the selected product and incoterm combination. --></errorMessage>
+        <name>PMC_RequiredFreight_BasedOnPriceList</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Percentage must be between 0 and 100 --></errorMessage>
+        <name>Restrict_Quantity_Percentage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Você não pode especificar o desconto adicional como porcentagem e valor absoluto.</errorMessage>
+        <name>SBQQ__Additional_discount_percent_or_amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O prazo da assinatura deve ser um número positivo.</errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Você não pode especificar a marcação como porcentagem e valor absoluto.</errorMessage>
+        <name>SBQQ__Markup_percent_or_amount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Quando o Charge Type (Tipo de cobrança) for Recurring (Recorrente), um Billing Type (Tipo de cobrança) deverá ser selecionado.&quot;</errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Quando o Charge Type é One-Time, não é possível selecionar um valor de Billing Frequency.&quot;</errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Quando o Charge Type (tipo de cobrança) é One-Time (único) ou Usage (uso), não é possível selecionar um valor de Billing Type (tipo de cobrança).&quot;</errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <webLinks>
+        <label>Pré-visualização da aprovação</label>
+        <name>Preview_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label>Calcular orçamento</label>
+        <name>SBQQ__CalculateQuoteFromQuoteLine</name>
+    </webLinks>
+</CustomObjectTranslation>

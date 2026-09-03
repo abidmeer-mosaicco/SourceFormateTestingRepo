@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FreightPriceGreaterthan01</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+SBQQ__Quote__r.PMC_CPQ_QuoteOrigin__c!=&apos;DH Request&apos;,
+ISPICKVAL(PMC_CPQ_Incoterms1__c,&apos;CIF&apos;),
+ISPICKVAL(SBQQ__Quote__r.PMC_CPQ_Region__c,&apos;Brazil&apos;),
+ISPICKVAL(SBQQ__Quote__r.PMC_CPQ_QuoteRecordSubType__c,&apos;B2C - Fertilizer&apos;),
+OR(PMC_CPQ_VCOQuotation__c!=TRUE,ISBLANK(PMC_CPQ_VCOIntercompanyPlant__c),PMC_CPQ_VCOIntercompanyPlant__c=NULL),
+OR(ISBLANK(PMC_CPQ_EstFreightPrice__c),PMC_CPQ_EstFreightPrice__c&lt;=0)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_CPQ_EstFreightPrice__c</errorDisplayField>
+    <errorMessage>Freight value is required and should be more than 0</errorMessage>
+</ValidationRule>

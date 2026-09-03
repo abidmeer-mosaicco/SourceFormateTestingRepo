@@ -1,0 +1,71 @@
+.rect-box{
+    height: 32px;
+    margin-right: 8px;
+}
+.delivery-prog-card{
+    margin-top: 24px;
+}
+.delivery-prog-card-body{
+    padding: 16px;
+    max-height: 477px;
+    overflow-y: scroll;
+}
+.delivery-data-cont{
+    display: flex;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+.date-container{
+    margin-bottom: 12px;
+    display: flex;
+}
+.delivery-data-cont{
+    color: #000;
+}
+.delivery-details{
+    color: #093532;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.delivery-data-cont:first-of-type, .delivery-data-cont:first-of-type .delivery-details {
+    color: #1D625C;
+}
+.current-pill{
+    border-radius: 100px;
+    border: 1px solid var(--primary-green);
+    margin-left: 8px;
+    padding: 5px 18px 5px 18px;
+    position: relative;
+    top: -3px;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.vertical-line{
+    border-left: 1.5px solid #D6D6D6;
+    height: 3.5rem;
+    position: relative;
+    left: -24px;
+    bottom: -40px;
+}
+
+@media screen and (max-width: 768px){
+    .vertical-line{
+        border-left: 1.5px solid #D6D6D6;
+        height: 3.2rem;
+        position: relative;
+        left: -24px;
+        bottom: -40px;
+    }
+    .date-container{
+        margin-bottom: 8px;
+    }
+    .delivery-details{
+        font-size: 14px;
+        line-height: 20px; 
+    }
+}

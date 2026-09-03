@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>PMC_SS_UpdateAccHierarchyApprovalStatus</fullName>
+        <description>This quick action updates the account hierarchy status when record is submitted for approval</description>
+        <field>PMC_SS_HierarchyApprovalStatus__c</field>
+        <literalValue>Account submitted for Approval</literalValue>
+        <name>Update Account Hierarchy Approval Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_UpdateHierarchyStatusOnApproval</fullName>
+        <description>This action is used to update the account hierarchy approval status to approved.</description>
+        <field>PMC_SS_HierarchyApprovalStatus__c</field>
+        <literalValue>Account Approved</literalValue>
+        <name>Update Hierarchy Status on Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_UpdateHierarchyStatusOnRejection</fullName>
+        <description>This action is used to update account hierarchy approval status to rejected on rejection</description>
+        <field>PMC_SS_HierarchyApprovalStatus__c</field>
+        <literalValue>Account Rejected</literalValue>
+        <name>Update Hierarchy Status on Rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

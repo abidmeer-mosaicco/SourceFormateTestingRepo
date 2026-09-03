@@ -1,0 +1,21 @@
+<template>
+  <c-pmc_dh_custom-modal open-modal={isModal} modal-heading={modalHeading} modal-width="500px"
+    onclosemodalevent={closeModalHandler}>
+    <div class="modal-wrapper">
+      <div class="slds-p-bottom_medium modal-message">
+        {modalText}
+      </div>
+      <div class="slds-grid slds-wrap slds-m-top--none">
+        <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+          <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+            title={labels.pmc_addressDetails_cancel} onclick={closeModalHandler}></lightning-button>
+        </div>
+        <div
+          class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button button-style">
+          <lightning-button variant="brand" label={modalHeading} title={modalHeading}
+            onclick={productActionHandler}></lightning-button>
+        </div>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+</template>

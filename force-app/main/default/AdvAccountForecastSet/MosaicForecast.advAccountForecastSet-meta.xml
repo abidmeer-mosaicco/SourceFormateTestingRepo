@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvAccountForecastSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accountFieldName>AccountId</accountFieldName>
+    <calculationFrequency>Monthly</calculationFrequency>
+    <dimensions>
+        <advAcctForecastDimName>Product</advAcctForecastDimName>
+        <dimensionFieldName>ProductId</dimensionFieldName>
+        <dimensionSourceName>DefaultForecastDimensionSource</dimensionSourceName>
+        <hierarchySequenceNumber>1</hierarchySequenceNumber>
+    </dimensions>
+    <dimensions>
+        <advAcctForecastDimName>Location</advAcctForecastDimName>
+        <dimensionFieldName>PMC_SS_Location__c</dimensionFieldName>
+        <dimensionSourceName>Location</dimensionSourceName>
+        <hierarchySequenceNumber>2</hierarchySequenceNumber>
+    </dimensions>
+    <dimensions>
+        <advAcctForecastDimName>Account Manager</advAcctForecastDimName>
+        <dimensionFieldName>PMC_SS_AccountManager__c</dimensionFieldName>
+        <dimensionSourceName>AccountManager</dimensionSourceName>
+        <hierarchySequenceNumber>3</hierarchySequenceNumber>
+    </dimensions>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>MTN</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Current Sales Plan (MTN)</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Current Sales Plan (MTN)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>true</isDefault>
+    </displayGroups>
+    <displayGroups>
+        <advAcctFrcstDisplayGroupName>STN</advAcctFrcstDisplayGroupName>
+        <displayGroupItems>
+            <advAcctFrcstDplyGroupItemName>Current Sales Plan (STN)</advAcctFrcstDplyGroupItemName>
+            <displayOrder>0</displayOrder>
+            <measureReferenceName>Current Sales Plan (STN)</measureReferenceName>
+        </displayGroupItems>
+        <displayGroupType>MEASURE</displayGroupType>
+        <isDefault>false</isDefault>
+    </displayGroups>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>31</adjustmentDayCount>
+        <frequency>Month</frequency>
+        <profileName>admin</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>31</adjustmentDayCount>
+        <frequency>Month</frequency>
+        <profileName>sales user</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>31</adjustmentDayCount>
+        <frequency>Month</frequency>
+        <profileName>sales leadership</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastAdjPeriods>
+        <adjustmentDayCount>31</adjustmentDayCount>
+        <frequency>Month</frequency>
+        <profileName>api only profile</profileName>
+        <startDay>1</startDay>
+    </forecastAdjPeriods>
+    <forecastFactObjectName>AdvAccountForecastFact</forecastFactObjectName>
+    <forecastPeriodGroupName>MosaicPeriodGroup</forecastPeriodGroupName>
+    <forecastQuantityFieldName>ForecastedQuantity</forecastQuantityFieldName>
+    <forecastRevenueFieldName>ForecastedRevenue</forecastRevenueFieldName>
+    <forecastSetFieldName>AdvAcctForecastSetUseId</forecastSetFieldName>
+    <forecastSetName>Mosaic Forecast Set</forecastSetName>
+    <forecastStatusFieldName>Status</forecastStatusFieldName>
+    <generationDpeDefName>PMC_SS_MosaicGenerateAccountForecast</generationDpeDefName>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Current Sales Plan (MTN)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>PMC_SS_CurrentSalesPlanMTN__c</forecastDataMeasureName>
+        <forecastMeasureName>Current Sales Plan (MTN)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <measureDefinitions>
+        <advAcctForecastMeasureDefName>Current Sales Plan (STN)</advAcctForecastMeasureDefName>
+        <aggregationType>SUM</aggregationType>
+        <computationMethod>CUSTOM</computationMethod>
+        <forecastDataMeasureName>PMC_SS_CurrentSalesPlanSTN__c</forecastDataMeasureName>
+        <forecastMeasureName>Current Sales Plan (STN)</forecastMeasureName>
+        <forecastMeasureType>QUANTITY</forecastMeasureType>
+        <isAdjustmentTracked>true</isAdjustmentTracked>
+    </measureDefinitions>
+    <periodFieldName>PeriodId</periodFieldName>
+    <recalculateDpeDefName>PMC_SS_MosaicRecalculateAccountForecast</recalculateDpeDefName>
+    <regenerationDpeDefName>PMC_SS_MosaicRegenerateAccountForecast</regenerationDpeDefName>
+    <rolloverDpeDefName>PMC_SS_MosaicRolloverAccountForecast</rolloverDpeDefName>
+    <rolloverFrequency>Monthly</rolloverFrequency>
+    <status>Active</status>
+</AdvAccountForecastSet>

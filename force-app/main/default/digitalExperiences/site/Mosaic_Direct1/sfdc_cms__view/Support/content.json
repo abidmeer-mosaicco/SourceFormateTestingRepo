@@ -1,0 +1,139 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Support",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"48e2395d-1846-4422-82ce-48e40ae78068\",\"columns\":[{\"UUID\":\"cbe8a09d-0693-4c1d-8f45-8376907e9b44\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "cbe8a09d-0693-4c1d-8f45-8376907e9b44",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "48e2395d-1846-4422-82ce-48e40ae78068",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"692eb1c2-bfe4-4fb1-9633-d8a28d48a95f\",\"columns\":[{\"UUID\":\"4f0511fd-c703-4d7a-8a05-f204afdb2f79\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_caseSupport",
+              "id" : "c36b7228-cc62-4139-b53e-bf6b9dda92a0",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_unauthorizedAccessPage",
+              "id" : "59be1904-ce28-451b-992e-4c0fdac28df8",
+              "type" : "component"
+            } ],
+            "id" : "4f0511fd-c703-4d7a-8a05-f204afdb2f79",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "692eb1c2-bfe4-4fb1-9633-d8a28d48a95f",
+          "type" : "component"
+        } ],
+        "id" : "ea31f966-2a6e-46d0-a90e-411b4423ef32",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Support",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "631c0514-564a-4169-9f29-f5f2633de2e0",
+          "type" : "component"
+        } ],
+        "id" : "9cd65f46-1c23-42c5-bb04-a5e76875f2c6",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "3a952421-5136-4372-ba90-3fa2aa62df98",
+      "type" : "component"
+    },
+    "contentOperations" : {
+      "operations" : [ {
+        "targetId" : "c36b7228-cc62-4139-b53e-bf6b9dda92a0",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "e946a461-5cd6-49a8-8ffc-7fc29a72450c",
+          "description" : "",
+          "criteriaType" : "AnyCriterionMatches",
+          "expressionCriteria" : [ {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Buyer",
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Contract Manager",
+            "criterionNumber" : 2
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Finance Manager",
+            "criterionNumber" : 3
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Logistics Manager",
+            "criterionNumber" : 4
+          }, {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Super Buyer",
+            "criterionNumber" : 5
+          } ]
+        }
+      }, {
+        "targetId" : "59be1904-ce28-451b-992e-4c0fdac28df8",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "5d628bbe-59b8-46b9-b2dc-b28f776838ed",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.Record.Profile.Name",
+            "operator" : "Equal",
+            "value" : "Digital Hub Knowledge Only User",
+            "criterionNumber" : 1
+          } ]
+        }
+      } ]
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ycf0MQ9psBNvuSrdD8cHsC3r34nYXz",
+    "viewType" : "custom-support"
+  },
+  "urlName" : "support"
+}

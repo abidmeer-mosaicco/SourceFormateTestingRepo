@@ -1,0 +1,66 @@
+<!--
+* @description This VF component is used in Recall Request Email Template on Order Line
+* @author Kaushik Gohain
+* @storynumber : GCPM-2663
+-->
+<apex:component controller="PMC_CPQ_QLApprovalReqEmailTempClass" access="global" >
+    <apex:slds />
+    
+    <style>
+        table{width:100%;}th{background-color:#CCCCCC;}
+        .lineTablequote{padding:4px;border:1px;border-spacing: 0;}
+        table,tr,th,td{padding:4px;border:1px;border-spacing: 0;border-style: solid;border-collapse: collapse;}
+    </style>
+    
+    <!-- Define Attributes -->
+    <apex:attribute name="orderitem" description="Order Line id"  assignTo="{!orderItemId}" type="String"/> 
+
+    <br/>
+    <br/>   
+     <!-- Order Line info --> 
+    <apex:outputPanel >  
+    <h4><b>Order Line Information</b></h4>
+    <table id="lineTable">
+        <tr >
+       	    <th>Order line</th>
+            <th>Order Number</th>
+            <th>SAP Order Number</th>
+            <th>Contract Number</th>
+            <th>Customer Purchase Order #</th>
+            <th>Ship To</th>
+            <th>Account Name</th> 
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price By Date</th>
+            <th>List Price</th>
+            <th>Agreed Final Price</th>
+            <th>Status</th>
+            <th>Integration Message</th>
+        </tr>
+        <apex:repeat value="{!oLines}" var="line">
+            <tr>
+                <td><apex:outputText value="{!line.OrderItemNumber}"/></td>                            
+                <td><apex:outputText value="{!line.Order.OrderNumber}"/></td>
+                <td><apex:outputText value="{!line.Order.PMC_CPQ_SAPOrderNumber__c}"/></td>
+                <td><apex:outputText value="{!line.Order.Contract.ContractNumber}"/></td>
+                <td><apex:outputText value="{!line.Order.Contract.PMC_CPQ_PO__c}"/></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_ShipTo__r.Name}"/></td>
+                 <td><apex:outputText value="{!line.Order.Account.Name}"/></td>
+                <td><apex:outputText value="{!line.Product2.Name}"/></td>
+                <td><apex:outputText value="{!line.Quantity}"/></td>
+                <td><apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!line.PMC_CPQ_PricingDate__c}" />
+                </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                <apex:param value="{!line.PMC_CPQ_FPDPricefromPriceFx__c}" />
+                </apex:outputText></td>
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                <apex:param value="{!line.PMC_CPQ_FinalAgreedPrice__c}" />
+                </apex:outputText></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_OrderLineStatus__c}"/></td>
+                <td><apex:outputText value="{!line.PMC_CPQ_OrderItemIntegrationMessage__c}"/></td>
+            </tr>
+        </apex:repeat>
+    </table>
+ </apex:outputPanel>    
+</apex:component>

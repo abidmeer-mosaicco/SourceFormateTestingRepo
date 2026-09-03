@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>PMC_SS_StockOutsLetterHead</letterhead>
+    <name>PMC SS Warehouse/Plant Outage</name>
+    <style>freeForm</style>
+    <subject>Warehouse/ PLANT OUTAGE (planned or unplanned)</subject>
+    <textOnly>Dear {!Case.Account},
+{!Case.PMC_SS_Location__c}/{!Case.PMC_SS_Plant__c} has reported an outage {!Today} .To prevent  immediate inconvenience to
+your shipping plans we wish to advise the following orders identified.
+
+Customer PO number
+Mosaic order number
+
+We apologize for the impact to your business. Operations are scheduled to resume MM/DD/YY/ ASAP. Once the plant is operational, we will send notification so you may resume product pick up. Please reach out to your Customer Service Representative for further questions
+
+{!Case.OwnerFullName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

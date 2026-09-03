@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Quote__c</columns>
+    <columns>sbaa__Approver__c</columns>
+    <columns>sbaa__Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PMC_CPQ_QuoteExpirationDate__c</columns>
+    <columns>PMC_CPQ_PriceVolume__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_Line_Approval__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All</label>
+</ListView>

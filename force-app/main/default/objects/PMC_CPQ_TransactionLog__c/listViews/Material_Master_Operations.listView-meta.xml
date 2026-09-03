@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material_Master_Operations</fullName>
+    <columns>NAME</columns>
+    <columns>PMC_CPQ_InterfaceURL__c</columns>
+    <columns>PMC_CPQ_IntegrationStatus__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>PMC_CPQ_RequestBody__c</columns>
+    <columns>PMC_CPQ_ResponseBody__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_InterfaceURL__c</field>
+        <operation>equals</operation>
+        <value>/http/MasterDataMatmas_Clfmas</value>
+    </filters>
+    <label>Material Master Operations</label>
+</ListView>

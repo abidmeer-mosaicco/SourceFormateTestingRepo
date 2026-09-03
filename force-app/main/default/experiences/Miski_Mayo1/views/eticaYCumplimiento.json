@@ -1,0 +1,703 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "d0eab4c9-a540-4b23-a579-9ef3534c1824",
+  "label" : "Etica y cumplimiento",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "31bbc06f-0a08-4b3c-848e-05da3731bfa0",
+          "columns" : [ {
+            "UUID" : "972059f1-f6e7-4152-9e10-566e98c4ce24",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "31bbc06f-0a08-4b3c-848e-05da3731bfa0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "54da8f1e-5904-4163-8438-e7fd1dab05af",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "972059f1-f6e7-4152-9e10-566e98c4ce24",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a678a3e9-6a3b-481b-8215-f60ad2253bb7",
+          "columns" : [ {
+            "UUID" : "987ffe41-0701-4ecd-b64a-8539ebaeb01d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a678a3e9-6a3b-481b-8215-f60ad2253bb7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "2",
+            "pageName" : "pageK",
+            "textDescription" : "Valoramos a quien hace nuestra empresa"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "c37a42b8-df87-4589-bf9e-7d6d6c865c69",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "987ffe41-0701-4ecd-b64a-8539ebaeb01d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "c180ca3c-d0ba-485e-a051-9aeac03380eb",
+          "columns" : [ {
+            "UUID" : "35df48e2-b211-43a8-aa1a-5a9263ec0c7c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c180ca3c-d0ba-485e-a051-9aeac03380eb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Ética y Cumplimiento</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3486ddf9-cb69-4949-8ff4-d67308ad891c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(26, 26, 26); font-size: 20px;\">En Miski Mayo respetamos nuestro código de conducta. Nos regimos por la normativa especificada, cumpliendo en todo momento con los establecido por la compañía. Nuestro código de conducta es muy claro al señalar qué se espera del comportamiento de cada colaborador en base a nuestros principios corporativos:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f28b03ca-8cd6-4a45-914e-d7c384c8d55c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "35df48e2-b211-43a8-aa1a-5a9263ec0c7c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 89,
+        "sectionConfig" : {
+          "UUID" : "c73b53bd-3785-4a83-8608-c1023b7f6ca3",
+          "columns" : [ {
+            "UUID" : "e125ba81-d449-4019-b3ca-3fec60aace94",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c73b53bd-3785-4a83-8608-c1023b7f6ca3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><strong style=\"font-size: 36px;\">Principios </strong></h2><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3216efd5-ed0c-4e3a-8a18-ef7e869fe475",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e125ba81-d449-4019-b3ca-3fec60aace94",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "610d6e2b-8bd4-44b8-ba71-937a65b8c589",
+          "columns" : [ {
+            "UUID" : "872daca6-b40b-4471-8ee7-068adb709312",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5e275d22-db7a-48ec-ab15-a05930057231",
+            "columnKey" : "03a9f",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "610d6e2b-8bd4-44b8-ba71-937a65b8c589",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "Cuidando el bienestar en el lugar de trabajo, la salud y la seguridad.",
+            "headerFontSize" : "22",
+            "headerFontWeight" : "700",
+            "headerText" : "RESPETO POR LA VIDA",
+            "horizontalGapRem" : "1.25",
+            "iconAlt" : "",
+            "iconName" : "quality-of-life",
+            "iconSize" : "6",
+            "maxTextWidth" : "900",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "1628efde-90e2-4d97-8c05-036843182a5d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "25250f7a-efff-42cc-9c7e-210ff407ea58",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "Que considera prácticas transparentes de contabilidad y administración, así como la comunicación clara, objetiva y oportuna con los accionistas, inversionistas y mercados de capital.",
+            "headerFontSize" : "22",
+            "headerFontWeight" : "700",
+            "headerText" : "LA BUENA GOBERNANZA",
+            "horizontalGapRem" : "1.25",
+            "iconAlt" : "",
+            "iconName" : "comunicacion-1",
+            "iconSize" : "6",
+            "maxTextWidth" : "900",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "54cd3559-0099-4e17-a161-e11f18974b53",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4f02724f-4250-4b70-be73-532a28ab3429",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "Que debe estar presente en todas nuestras actividades, según los principios de la declaración universal de los derechos humanos para alcanzar los objetivos del negocio en conexión con las responsabilidades sociales corporativas, actuando de manera consciente y responsable con respecto a los temas socioeconómicos y ambientales, contribuyendo con el desarrollo de las comunidades del área de influencia directa.",
+            "headerFontSize" : "22",
+            "headerFontWeight" : "700",
+            "headerText" : "LA PROTECCIÓN, PROMOCIÓN Y CONCIENCIA DE DERECHOS HUMANOS",
+            "horizontalGapRem" : "1.25",
+            "iconAlt" : "",
+            "iconName" : "amor",
+            "iconSize" : "6",
+            "maxTextWidth" : "900",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "2c562f42-3ea3-4cc7-bb98-a1fd7dc484d6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4c081794-f086-415c-be5c-f60323e9146e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "Que se vincula con normas internacionales y se basa en la Foreign Corrupt Practices Act (FCPA) que es una ley de Estados Unidos que prohíbe el pago de sobornos a funcionarios públicos y figuras políticas dentro y fuera de este país. Miski Mayo está obligada a cumplir con esta ley debido a que sus accionistas cotizan sus valores en la bolsa de valores de Nueva York. El FCPA exige también llevar registros que reflejen con exactitud las transacciones de Miski Mayo, así como un sistema de control interno efectivo.",
+            "headerFontSize" : "22",
+            "headerFontWeight" : "700",
+            "headerText" : "POLÍTICA ANTICORRUPCIÓN",
+            "horizontalGapRem" : "1.25",
+            "iconAlt" : "",
+            "iconName" : "corrupcion",
+            "iconSize" : "6",
+            "maxTextWidth" : "900",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "cb6df39d-f668-405f-8df2-b0531d3d9d48",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "872daca6-b40b-4471-8ee7-068adb709312",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP25"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithRedSquare",
+          "id" : "15df65a8-0202-4fa9-b790-90a69e86efd6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "2",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP25"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithRedSquare",
+          "id" : "77fedb01-b410-4bd0-9225-1ca4f9d69ac6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5e275d22-db7a-48ec-ab15-a05930057231",
+        "regionLabel" : "Column 2",
+        "regionName" : "03a9f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "cb14ad68-76b9-46b6-a47e-7999b65ebdde",
+          "columns" : [ {
+            "UUID" : "b09d26e0-3fb6-45df-b70a-2a490888da72",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cb14ad68-76b9-46b6-a47e-7999b65ebdde",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Línea Ética </strong></h1>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6269f46d-53ed-4fea-a008-5ce9ef1bb2f3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 36px;\">¿Cómo funciona?</span>&nbsp;</h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9b8d098c-f43b-4192-a757-5d0db26b509e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b09d26e0-3fb6-45df-b70a-2a490888da72",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 63,
+        "sectionConfig" : {
+          "UUID" : "460ae6ad-45a3-44b4-b666-703fa48b0a41",
+          "columns" : [ {
+            "UUID" : "c20ba60f-2085-401e-a378-57c1cba5f77f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "460ae6ad-45a3-44b4-b666-703fa48b0a41",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "",
+            "headerFontSize" : "18",
+            "headerFontWeight" : "400",
+            "headerText" : "Quien desee reportar algún acto antiético, puede llamar al número 0800-77-582. Se le informará que está siendo conectado al centro de llamadas EP y hablarán con un representante del Call Center, quien tomará notas sobre el tema, la ubicación, personal involucrado, etc.",
+            "horizontalGapRem" : "6",
+            "iconAlt" : "",
+            "iconName" : "Phone",
+            "iconSize" : "2",
+            "maxTextWidth" : "950",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "0d659aa7-44bc-492e-8433-a403d0d76e0b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "",
+            "headerFontSize" : "18",
+            "headerFontWeight" : "400",
+            "headerText" : "El representante del Call Center usará la información para crear un informe en el Sistema EP y para el equipo de Mosaic. Si el reclamante desea que su queja sea anónima, Mosaic no podrá saber quién la ha realizado.",
+            "horizontalGapRem" : "6",
+            "iconAlt" : "",
+            "iconName" : "List",
+            "iconSize" : "2",
+            "maxTextWidth" : "950",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "5e2ae2e9-c76d-4f50-ab34-b17c481f5907",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "",
+            "headerFontSize" : "18",
+            "headerFontWeight" : "400",
+            "headerText" : "El colaborador también podrá hacer su informe a través del sitio web mosaic.ethicspoint.com.",
+            "horizontalGapRem" : "6",
+            "iconAlt" : "",
+            "iconName" : "Pager",
+            "iconSize" : "2",
+            "maxTextWidth" : "950",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "df8075dd-9ca9-4ba9-a67f-6fd7d8f92ff7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "",
+            "headerFontSize" : "18",
+            "headerFontWeight" : "400",
+            "headerText" : "Se evalúa el reporte para determinar quién debe investigar el reclamo y luego se asigna a un investigador a través del sistema EP. El investigador será de Miski Mayo pero no será parte de la gerencia de quien hizo la denuncia. Dependiendo de la naturaleza del informe, la persona que investiga comunicará al área correspondiente (si las quejas son de Seguridad, serán investigadas por alguien con conocimientos de Seguridad, si el reclamo es sobre Relaciones Laborales serán investigados por un especialista en Recursos Humanos, etc.) .",
+            "horizontalGapRem" : "6",
+            "iconAlt" : "",
+            "iconName" : "Magnify",
+            "iconSize" : "2",
+            "maxTextWidth" : "950",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "418d6d18-2c47-4433-81ab-4ba840b6fde1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "bodyFontSize" : "18",
+            "bodyFontWeight" : "400",
+            "bodyText" : "",
+            "headerFontSize" : "18",
+            "headerFontWeight" : "400",
+            "headerText" : "Al finalizar, la persona encargada de investigar hará un informe a Mosaic. Cuando el caso haya sido completamente investigado y se haya llegado a una conclusión, se cerrará el caso en el sistema.",
+            "horizontalGapRem" : "6",
+            "iconAlt" : "",
+            "iconName" : "checkmark",
+            "iconSize" : "2",
+            "maxTextWidth" : "950",
+            "textColor" : "#111"
+          },
+          "componentName" : "c:miskiMayoIconAndText",
+          "id" : "2372b262-4f74-424d-a50e-f6578ff24b3d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c20ba60f-2085-401e-a378-57c1cba5f77f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "50800afb-980a-4295-af19-53ebcdfe3086",
+          "columns" : [ {
+            "UUID" : "81f77c7b-763e-4f20-a8c2-0f880389c097",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "50800afb-980a-4295-af19-53ebcdfe3086",
+      "regions" : [ {
+        "id" : "81f77c7b-763e-4f20-a8c2-0f880389c097",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 69,
+        "sectionConfig" : {
+          "UUID" : "8f179b31-6fb5-4a94-bbc7-e8e9de6548db",
+          "columns" : [ {
+            "UUID" : "9f4de1c0-a73b-4cfb-b687-6470e7438037",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8f179b31-6fb5-4a94-bbc7-e8e9de6548db",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Screenshot_20250509_133633.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "061a7c6a-c550-45ed-ad2e-940b1b5ccbe0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9f4de1c0-a73b-4cfb-b687-6470e7438037",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 50,
+        "sectionConfig" : {
+          "UUID" : "f63a903b-c69b-49b9-aee7-a963642f3d0b",
+          "columns" : [ {
+            "UUID" : "7face4b7-4f67-4303-b7f5-de30bad3872d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bf5c7698-5e94-4565-b3de-60b942c8f548",
+            "columnKey" : "6dd41",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c10a46fc-83f6-410b-b369-92c0d2b8ce36",
+            "columnKey" : "0ea92",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f63a903b-c69b-49b9-aee7-a963642f3d0b",
+      "regions" : [ {
+        "id" : "7face4b7-4f67-4303-b7f5-de30bad3872d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "modalTitle" : "      DESCARGAR PDF",
+            "pdfUrl" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000001gLfN/fkc_gCTjgrZ9pvbm4mbCLoqCcvQa3zmaBdDrwvwGQTI"
+          },
+          "componentName" : "c:miskiMayoPDFViewerComponent",
+          "id" : "e745a7ce-8d94-49c0-a5d2-3dd82bad0f3f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bf5c7698-5e94-4565-b3de-60b942c8f548",
+        "regionLabel" : "Column 2",
+        "regionName" : "6dd41",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c10a46fc-83f6-410b-b369-92c0d2b8ce36",
+        "regionLabel" : "Column 3",
+        "regionName" : "0ea92",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a609e483-9775-466f-852a-143397696d4c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Etica y cumplimiento"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d9266eda-12bc-43f2-a1c0-f6aa3d7a052a",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "82267051-8e7f-4ba8-bcda-3040b1d03c73",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-eticaycumplimiento"
+}

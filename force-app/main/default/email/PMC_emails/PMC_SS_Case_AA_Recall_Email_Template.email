@@ -1,0 +1,7 @@
+<messaging:emailTemplate subject="Case # {!relatedTo.CaseNumber} is Recalled" recipientType="User" relatedToType="Case">
+<messaging:plainTextEmailBody >
+Case {!relatedTo.CaseNumber} : {!relatedTo.Subject} has been Recalled.
+
+Case: {{{Case.Link}}}
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

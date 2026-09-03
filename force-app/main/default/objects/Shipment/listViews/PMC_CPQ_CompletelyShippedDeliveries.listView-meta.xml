@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_CompletelyShippedDeliveries</fullName>
+    <columns>Name</columns>
+    <columns>PMC_CPQ_Product__c</columns>
+    <columns>PMC_CPQ_DeliveryStatus__c</columns>
+    <columns>PMC_CPQ_Order__c</columns>
+    <columns>PMC_CPQ_PO__c</columns>
+    <columns>PMC_CPQ_ContractNumber__c</columns>
+    <columns>PMC_CPQ_Account__c</columns>
+    <columns>PMC_CPQ_VehicleID__c</columns>
+    <columns>PMC_CPQ_ShippedDate__c</columns>
+    <columns>PMC_CPQ_CurrentLocation__c</columns>
+    <columns>DestinationLocation</columns>
+    <columns>PMC_CPQ_ETA__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_DeliveryStatus__c</field>
+        <operation>equals</operation>
+        <value>Completely Shipped</value>
+    </filters>
+    <label>Completely Shipped Deliveries</label>
+</ListView>

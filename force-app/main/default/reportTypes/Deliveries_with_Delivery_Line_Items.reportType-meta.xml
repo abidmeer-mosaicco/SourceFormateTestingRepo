@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Shipment</baseObject>
+    <category>cases</category>
+    <deployed>true</deployed>
+    <description>Deliveries with Delivery Line items</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>ShipmentItems</relationship>
+    </join>
+    <label>Deliveries with Delivery Line Items</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery ID</displayNameOverride>
+            <field>Id</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_City__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_Country__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_Country_Code__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_Street__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_State__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ship_To_State_Code__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Delivery Number</displayNameOverride>
+            <field>Name</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency ISO Code</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Address</displayNameOverride>
+            <field>ShipFromAddress</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Street</displayNameOverride>
+            <field>ShipFromStreet</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From City</displayNameOverride>
+            <field>ShipFromCity</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From State/Province (text only)</displayNameOverride>
+            <field>ShipFromState</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Zip/Postal Code</displayNameOverride>
+            <field>ShipFromPostalCode</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Country (text only)</displayNameOverride>
+            <field>ShipFromCountry</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From State/Province</displayNameOverride>
+            <field>ShipFromStateCode</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Country</displayNameOverride>
+            <field>ShipFromCountryCode</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Latitude</displayNameOverride>
+            <field>ShipFromLatitude</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Longitude</displayNameOverride>
+            <field>ShipFromLongitude</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From Geocode Accuracy</displayNameOverride>
+            <field>ShipFromGeocodeAccuracy</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Source Location</displayNameOverride>
+            <field>SourceLocation</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Destination Location</displayNameOverride>
+            <field>DestinationLocation</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tracking Number</displayNameOverride>
+            <field>TrackingNumber</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tracking URL</displayNameOverride>
+            <field>TrackingUrl</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Delivery Date</displayNameOverride>
+            <field>ExpectedDeliveryDate</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actual Delivery Date</displayNameOverride>
+            <field>ActualDeliveryDate</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Provider</displayNameOverride>
+            <field>Provider</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Status</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship To Name</displayNameOverride>
+            <field>ShipToName</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fulfillment Order</displayNameOverride>
+            <field>FulfillmentOrder</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>LineItemAutonumberMaster</displayNameOverride>
+            <field>LineItemAutonumberMaster</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Summary</displayNameOverride>
+            <field>OrderSummary</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Method</displayNameOverride>
+            <field>DeliveryMethod</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Items Quantity</displayNameOverride>
+            <field>TotalItemsQuantity</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Return Order</displayNameOverride>
+            <field>ReturnOrder</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Origin Location</displayNameOverride>
+            <field>PMC_CPQ_OriginLocation__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Item Name</displayNameOverride>
+            <field>PMC_CPQ_DeliveryItemName__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Item ID</displayNameOverride>
+            <field>PMC_CPQ_DeliveryItemID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Quantity</displayNameOverride>
+            <field>PMC_CPQ_DeliveryQuantity__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MOT</displayNameOverride>
+            <field>PMC_CPQ_ModeofTransportation__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Actual GI Date</displayNameOverride>
+            <field>PMC_CPQ_DeliveryActualGIDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipped Date</displayNameOverride>
+            <field>PMC_CPQ_ShippedDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Order ID</displayNameOverride>
+            <field>PMC_CPQ_SAPOrderID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Order line ID</displayNameOverride>
+            <field>PMC_CPQ_SAPOrderlineID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Delivery ID</displayNameOverride>
+            <field>PMC_CPQ_SAPDeliveryID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Plant ID</displayNameOverride>
+            <field>PMC_CPQ_PlantID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Origin</displayNameOverride>
+            <field>PMC_CPQ_Origin__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vehicle ID</displayNameOverride>
+            <field>PMC_CPQ_VehicleID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Number</displayNameOverride>
+            <field>PMC_CPQ_Order__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Price</displayNameOverride>
+            <field>PMC_CPQ_SalesPrice__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Status</displayNameOverride>
+            <field>PMC_CPQ_DeliveryStatus__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Status</displayNameOverride>
+            <field>PMC_CPQ_OrderStatus__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Alternate/Substitute Product</displayNameOverride>
+            <field>PMC_CPQ_AlternateSubstituteProduct__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Agreed Price (FPD)</displayNameOverride>
+            <field>PMC_CPQ_CustomerAgreedPriceFPD__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Document</displayNameOverride>
+            <field>PMC_CPQ_OrderDocument__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vessel ID</displayNameOverride>
+            <field>PMC_CPQ_VesselID__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rail Car Number (IntelliTrans)</displayNameOverride>
+            <field>PMC_CPQ_RailCarNumber__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Truck Number</displayNameOverride>
+            <field>PMC_CPQ_TruckNumber__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Goods Issue Status</displayNameOverride>
+            <field>PMC_CPQ_GoodsIssueStatus__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days Past Shipped</displayNameOverride>
+            <field>PMC_CPQ_DaysPastShipped__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Planned GI Date</displayNameOverride>
+            <field>PMC_CPQ_DeliveryPlannedGIDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loading Date</displayNameOverride>
+            <field>PMC_CPQ_LoadingDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Transportation Planning Date</displayNameOverride>
+            <field>PMC_CPQ_TransportationPlanningDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipping Point</displayNameOverride>
+            <field>PMC_CPQ_ShippingPoint__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Route</displayNameOverride>
+            <field>PMC_CPQ_Route__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Created By Name</displayNameOverride>
+            <field>PMC_CPQ_DeliveryCreatedByName__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Planned vs Actual GI</displayNameOverride>
+            <field>PMC_CPQ_DeliveryPlannedvsActualGI__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product</displayNameOverride>
+            <field>PMC_CPQ_Product__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account</displayNameOverride>
+            <field>PMC_CPQ_Account__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Location</displayNameOverride>
+            <field>PMC_CPQ_CurrentLocation__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ETA</displayNameOverride>
+            <field>PMC_CPQ_ETA__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship To Account</displayNameOverride>
+            <field>PMC_CPQ_ShipToAccount__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Number</displayNameOverride>
+            <field>PMC_CPQ_ContractNumber__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Purchase Order #</displayNameOverride>
+            <field>PMC_CPQ_PO__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weight</displayNameOverride>
+            <field>PMC_CPQ_Weight__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Carrier</displayNameOverride>
+            <field>PMC_CPQ_Carrier__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tow Name</displayNameOverride>
+            <field>PMC_CPQ_TowName__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Destination</displayNameOverride>
+            <field>PMC_CPQ_Destination__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Delivery Created Date</displayNameOverride>
+            <field>PMC_DH_SAPDeliveryCreatedDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Insp. Lot Usage Decision</displayNameOverride>
+            <field>Insp_Lot_Usage_Decision__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Carrier</displayNameOverride>
+            <field>PMC_CPQ_CurrentCarrier__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Coordinates (Latitude)</displayNameOverride>
+            <field>PMC_CPQ_CurrentCoordinates__Latitude__s</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Coordinates (Longitude)</displayNameOverride>
+            <field>PMC_CPQ_CurrentCoordinates__Longitude__s</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>UoM Unit of Measure</displayNameOverride>
+            <field>PMC_CPQ_UoMUnitofMeasure__c</field>
+            <table>Shipment</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Estimated Delivery Date</displayNameOverride>
+            <field>PMC_CPQ_EstimatedDeliveryDate__c</field>
+            <table>Shipment</table>
+        </columns>
+        <masterLabel>Deliveries</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Item ID</displayNameOverride>
+            <field>Id</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Delivery Item Number</displayNameOverride>
+            <field>Name</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Currency ISO Code</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fulfillment Order Product</displayNameOverride>
+            <field>FulfillmentOrderLineItem</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Product Summary</displayNameOverride>
+            <field>OrderItemSummary</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product</displayNameOverride>
+            <field>Product2</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity</displayNameOverride>
+            <field>Quantity</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Return Order Line Item</displayNameOverride>
+            <field>ReturnOrderLineItem</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Item</displayNameOverride>
+            <field>PMC_CPQ_OrderProduct__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Item Name</displayNameOverride>
+            <field>PMC_CPQ_DeliveryItemName__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Delivery Item ID</displayNameOverride>
+            <field>PMC_CPQ_DeliveryItemID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Quantity</displayNameOverride>
+            <field>PMC_CPQ_DeliveryQuantity__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Planned PGI Date</displayNameOverride>
+            <field>PMC_SS_DeliveryplannedPGIdate__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipped Date</displayNameOverride>
+            <field>PMC_CPQ_ShippedDate__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Order ID</displayNameOverride>
+            <field>PMC_CPQ_SAPOrderID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Order line ID</displayNameOverride>
+            <field>PMC_CPQ_SAPOrderlineID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Delivery ID</displayNameOverride>
+            <field>PMC_CPQ_SAPDeliveryID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner</displayNameOverride>
+            <field>PMC_CPQ_OwnerId__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Plant ID</displayNameOverride>
+            <field>PMC_CPQ_PlantID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Origin</displayNameOverride>
+            <field>PMC_CPQ_Origin__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vehicle ID</displayNameOverride>
+            <field>PMC_CPQ_VehicleID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Price</displayNameOverride>
+            <field>PMC_CPQ_SalesPrice__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Line Status</displayNameOverride>
+            <field>PMC_CPQ_DeliveryStatus__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Alternate/Substitute Product</displayNameOverride>
+            <field>PMC_CPQ_AlternateSubstituteProduct__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Agreed Price (FPD)</displayNameOverride>
+            <field>PMC_CPQ_CustomerAgreedPriceFPD__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Document</displayNameOverride>
+            <field>PMC_CPQ_OrderDocument__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vessel ID</displayNameOverride>
+            <field>PMC_CPQ_VesselID__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Rail Road</displayNameOverride>
+            <field>PMC_CPQ_RailCarNumber__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Truck Number</displayNameOverride>
+            <field>PMC_CPQ_TruckNumber__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weight</displayNameOverride>
+            <field>PMC_CPQ_Weight__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Location</displayNameOverride>
+            <field>PMC_CPQ_CurrentLocation__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ETA</displayNameOverride>
+            <field>PMC_CPQ_ETA__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Purchase Order #</displayNameOverride>
+            <field>PMC_CPQ_LinePONumber__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Destination</displayNameOverride>
+            <field>PMC_CPQ_Destination__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit Of Weight</displayNameOverride>
+            <field>PMC_CPQ_UnitOfWeight__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Confirmation Status</displayNameOverride>
+            <field>PMC_CPQ_ConfirmationStatus__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Goods Issue Status Description</displayNameOverride>
+            <field>PMC_CPQ_GoodsIssueStatusDescription__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location</displayNameOverride>
+            <field>PMC_CPQ_ProductLocation__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery Line Status</displayNameOverride>
+            <field>PMC_CPQ_DeliveryLineStatus__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>UoM Unit of Measure</displayNameOverride>
+            <field>PMC_CPQ_UnitofMeasure__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MOT</displayNameOverride>
+            <field>PMC_CPQ_ModeofTransportation__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity (Account’s UoM)</displayNameOverride>
+            <field>PMC_SS_QuantityAccountsUoM__c</field>
+            <table>Shipment.ShipmentItems</table>
+        </columns>
+        <masterLabel>Delivery Lines</masterLabel>
+    </sections>
+</ReportType>

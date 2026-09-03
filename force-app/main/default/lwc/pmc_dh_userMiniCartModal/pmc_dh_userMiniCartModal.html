@@ -1,0 +1,66 @@
+<template>
+  <div class="mini-cart-comp">
+    <div class="cart-icon">
+      <img src={iconUrlObj.cartUrl} alt={labels.pmc_header_cart} tabindex="0" onclick={cartClickHandler}
+        onkeydown={openCartOnEnter} />
+    </div>
+    <template if:true={showMiniCart}>
+      <div class="slds-float_right">
+        <div class="mini-cart-container" onclick={ignore}>
+          <div class="modal">
+            <div class="modal-content">
+              <template if:true={isSpinner}>
+                <lightning-spinner variant="brand" alternative-text="Loading" size="medium"
+                  class="widget-spinner"></lightning-spinner>
+              </template>
+              <div class="modal-header slds-p-around_medium">
+                <div class="slds-grid slds-gutters">
+                  <div class="slds-col slds-size_2-of-3">
+                    <p>{labels.pmc_miniCartModal_cart}</p>
+                  </div>
+                  <div class="slds-col slds-size_1-of-3">
+                    <div class="slds-clearfix">
+                      <div class="slds-float_right">
+                        <lightning-icon class="close-icon" icon-name="utility:close"
+                          alternative-text={labels.pmc_miniCartModal_closeLabel} tabindex="0"
+                          title={labels.pmc_miniCartModal_closeLabel} size="xx-small" onclick={closeMiniCartHandler}
+                          onkeydown={closeMiniCartOnEnter}></lightning-icon>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <template if:true={showCartData}>
+                <div class="modal-body">
+                  <template for:each={cartItemsList} for:item='item'>
+                    <div class="cart-items" key={item.strCartItemId}>
+                      <span class="text">
+                        {item.strCartItemName}
+                      </span>
+                      <span class="icon">
+                        <lightning-icon onkeydown={deleteIconKeypressHandler} tabindex="0"
+                          data-sku={item.strproductSKUCode} icon-name="utility:delete"
+                          alternative-text={labels.pmc_miniCartModal_deleteLabel}
+                          title={labels.pmc_miniCartModal_deleteLabel} size="x-small" class="delete-icon"
+                          onclick={handleRemoveItem}></lightning-icon>
+                      </span>
+                    </div>
+                  </template>
+                </div>
+                <div class="modal-footer slds-p-around_medium slds-text-align_center">
+                  <button class="slds-button slds-button_brand checkout-btn" title={labels.pmc_miniCartModal_btnLabel}
+                    onclick={cartCheckoutHandler}>{labels.pmc_miniCartModal_btnLabel}</button>
+                </div>
+              </template>
+              <template if:true={_showEmptyCart}>
+                <div class="modal-footer slds-p-around_medium slds-text-align_center">
+                  <p class="emptyCard">{labels.pmc_miniCartModal_emptyCart}</p>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

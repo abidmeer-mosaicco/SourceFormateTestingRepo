@@ -1,0 +1,181 @@
+/* ===== 2 COLUMN LAYOUT ===== */
+
+.para-title {
+    font-weight: 700;
+    margin: 0.1rem 0 0.2rem 0;
+}
+.para-text {
+    font-weight: 400;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: stretch; /* makes both columns have the SAME row height */   
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== LEFT COLUMN ===== */
+.left-panel {
+    background: #fff;
+    border-right: 1px solid #e8e8e8;
+}
+
+.left-scroll {
+    /* occupies the natural height of the content; may scroll if it overflows on mobile */
+    max-height: none;
+    overflow: visible;
+    padding: 1rem 1.25rem;
+}
+
+
+.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.45;
+}
+.check-item {
+    position: relative;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+/* ===== RIGHT COLUMN ===== */
+.right-panel {
+    position: relative;
+    display: flex;           /* allows child to stretch */
+}
+.red-section {
+    background: #e32119;
+    display: flex;
+    justify-content: center;
+    align-items: center;     /* vertically centers the inner content */
+    margin-left: 3.125rem;
+    padding: 0 2px 60px 0;
+    max-width: 850px !important;
+    height: 100%;            /* COPY the height of the grid-row (defined by left) */
+    flex: 1 1 auto;          /* occupies the entire available height/width of the right column */
+}
+
+/* the inner area must occupy 100% of the height inherited from the red strip */
+.carousel-section {
+    width: 100%;
+    height: 100%;
+    margin-left: -5.125rem;
+}
+
+.container {
+    margin: auto;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* image fills the entire available height while maintaining an elegant cut */
+.image-width {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;   /* ensures space coverage without distortion */
+}
+
+
+.zoom-on-load {
+    animation: zoomIn 4s ease forwards;
+    transform-origin: center;
+}
+@keyframes zoomIn {
+    from { transform: scale(1); }
+    to   { transform: scale(1.05); }
+}
+
+/* Arrows centered vertically over the image */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 1rem;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    user-select: none;
+    z-index: 2;
+    background: transparent;
+}
+.next { right: 0; }
+.prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
+
+/* Dots centered on the bottom red strip, without increasing the total height */
+.slds-text-align_center.slds-p-around_medium {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    background: transparent;
+}
+
+
+.dot {
+    height: 0.9375rem;
+    width: 0.9375rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #bbb;
+    margin: 0 0.125rem;
+    display: inline-block;
+}
+.active, .dot:hover { background-color: #717171; }
+
+
+.slideNumbers {
+    font-size: 0.75rem;
+    position: absolute;
+    padding: 0.5rem 0.75rem;
+    top: 0;
+    color: #f2f2f2;
+}
+
+/* Slide change fade */
+.fade { animation-name: fade; animation-duration: 1.5s; }
+@keyframes fade { from { opacity: .4; } to { opacity: 1; } }
+
+
+.text-section {
+    position: absolute;
+    width: 70%;
+    bottom: 11rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: #5c0303a1;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+@media screen and (max-width: 1024px) { .text-section { bottom: 6rem; } }
+@media screen and (max-width: 768px)  { .text-section { bottom: 3.5rem; width: 90%; } }
+
+.text-heading { font-family: 'Poppins', sans-serif; color: #fff; font-size: 2rem; }
+@media screen and (max-width: 1024px) { .text-heading { font-size: 2rem; } }
+@media screen and (max-width: 768px)  { .text-heading { font-size: 0.4rem; } }
+
+.fade-in-text { animation: fadeIn 1s ease-in; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

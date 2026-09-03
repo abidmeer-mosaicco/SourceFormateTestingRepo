@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountManagerManager__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   AND(
+       NOT(ISBLANK(Account.Id)),
+       NOT(ISBLANK(Account.OwnerId)),
+       NOT(ISBLANK(Account.Owner.ManagerId))
+   ),
+   Account.Owner.Manager.Id,
+   &quot;&quot;
+)</formula>
+    <label>Account Manager&apos;s Manager</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

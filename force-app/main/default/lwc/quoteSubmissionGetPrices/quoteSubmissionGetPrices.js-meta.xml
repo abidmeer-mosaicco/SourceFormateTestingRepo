@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <description>Simple component to run the Get Prices callout with platform event handling for Screen Flows</description>
+    <masterLabel>Quote Submission Get Prices</masterLabel>
+    
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" role="inputOnly" 
+                      label="Quote Record ID" 
+                      description="The ID of the quote record to fetch prices for"/>
+            
+            <property name="quoteName" type="String" role="inputOnly" 
+                      label="Quote Name" 
+                      description="The name of the quote (optional, for display purposes)"/>
+            
+            <property name="quoteRegion" type="String" role="inputOnly" 
+                      label="Quote Region" 
+                      description="The region of the quote (optional, for display purposes)"/>
+            
+            <property name="canProceed" type="Boolean" role="outputOnly" 
+                      label="Can Proceed" 
+                      description="Whether the flow can proceed to the next step (true after successful price fetch)"/>
+            
+            <property name="isLoading" type="Boolean" role="outputOnly" 
+                      label="Is Loading" 
+                      description="Whether the component is currently loading/processing"/>
+            
+            <property name="statusMessage" type="String" role="outputOnly" 
+                      label="Status Message" 
+                      description="Current status message to display"/>
+            
+            <property name="errorMessage" type="String" role="outputOnly" 
+                      label="Error Message" 
+                      description="Error message if any error occurred"/>
+            
+            <property name="priceCalloutSuccess" type="Boolean" role="outputOnly" 
+                      label="Price Callout Success" 
+                      description="Whether the price callout was successful"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>TaskFieldUpdateAssignment</name>
+        <label>Task Field Update Assignment</label>
+        <locationX>143</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strTaskSubject</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetSalesAgreementApprovalsQueue.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strTaskDescription</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <description>Stores the API Name of &quot;Sales Agreement Approvals&quot; queue for task</description>
+        <name>STRING_QUEUE_APINAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_SalesAgreementApprovals</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Decision elements that checks if the task record is the approval request record and is newly created.</description>
+        <name>ApprovalTaskDecision</name>
+        <label>Approval Task Decision</label>
+        <locationX>473</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SAApprovalTask</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolNewRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_SalesAgreementTaskInitialSubject</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>boolRelatedToSalesAgreement</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetRelatedSalesAgreementRecord</targetReference>
+            </connector>
+            <label>SA Approval Task</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Bypass_Flow_Decision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>ApprovalTaskDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Bypass_Flow_Outcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SalesAgreementQueueAvailableDecision</name>
+        <label>Sales Agreement &amp; Queue Available Decision</label>
+        <locationX>275</locationX>
+        <locationY>719</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RecordsAvailable</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetSalesAgreementApprovalsQueue</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>GetRelatedSalesAgreementRecord</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>TaskFieldUpdateAssignment</targetReference>
+            </connector>
+            <label>Records Available</label>
+        </rules>
+    </decisions>
+    <description>Auto-Launched flow for updating the approval task record for sales agreements</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Check if the record is a new record (Insert Operation)</description>
+        <name>boolNewRecord</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>Checks if the related object of the task is sales agreement object</description>
+        <name>boolRelatedToSalesAgreement</name>
+        <dataType>Boolean</dataType>
+        <expression>BEGINS({!$Record.WhatId}, {!$Label.PMC_SS_SalesAgreementObjectId})</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to populate the description of approval task</description>
+        <name>strTaskDescription</name>
+        <dataType>String</dataType>
+        <expression>{!GetRelatedSalesAgreementRecord.Name} + &apos; &apos; + {!$Label.PMC_SS_SalesAgreementTaskDescriptionSuffix}</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to populate the subject of approval task.</description>
+        <name>strTaskSubject</name>
+        <dataType>String</dataType>
+        <expression>{!GetRelatedSalesAgreementRecord.Name} + &apos; &apos; + {!$Label.PMC_SS_SalesAgreementTaskInitialSubject}</expression>
+    </formulas>
+    <interviewLabel>PMC SS Before Create/Update Task Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Before Create/Update Task Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Queries the Sales Agreement Record related to the incoming task.</description>
+        <name>GetRelatedSalesAgreementRecord</name>
+        <label>Get Related Sales Agreement Record</label>
+        <locationX>275</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetSalesAgreementApprovalsQueue</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SalesAgreement</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Queries the queue for assigning as the task owner</description>
+        <name>GetSalesAgreementApprovalsQueue</name>
+        <label>Get Sales Agreement Approvals Queue</label>
+        <locationX>275</locationX>
+        <locationY>611</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SalesAgreementQueueAvailableDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_QUEUE_APINAME</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Bypass_Flow_Decision</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

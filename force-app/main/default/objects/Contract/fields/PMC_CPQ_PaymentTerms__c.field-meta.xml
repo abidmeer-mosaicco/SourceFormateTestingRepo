@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_PaymentTerms__c</fullName>
+    <description>Terms that govern payment of the items</description>
+    <label>Payment Terms</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cash Against Documents</fullName>
+                <default>false</default>
+                <label>Cash Against Documents</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 5 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 5 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 7 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 7 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 10 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 10 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 30 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 30 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 15 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 15 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 45 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 45 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Doc - 60 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Doc - 60 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 90 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 90 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 120 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 120 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Cash Against Documents - 180 Days From BL</fullName>
+                <default>false</default>
+                <label>Cash Against Documents - 180 Days From BL</label>
+            </value>
+            <value>
+                <fullName>Prepayment</fullName>
+                <default>false</default>
+                <label>Prepayment</label>
+            </value>
+            <value>
+                <fullName>Net 1 Day - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 1 Day - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 2 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 2 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 3 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 3 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>05 Days - Document Lock Date</fullName>
+                <default>false</default>
+                <label>05 Days - Document Lock Date</label>
+            </value>
+            <value>
+                <fullName>Net 7 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 7 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 10 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 10 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 14 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 14 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 15 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 15 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 17 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 17 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 21 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 21 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 28 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 28 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 29 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 29 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 30 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 30 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 31 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 31 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 35 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 35 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 42 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 42 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 45 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 45 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 60 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 60 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 70 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 70 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 75 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 75 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 80 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 80 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 84 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 84 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 90 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 90 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 105 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 105 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 120 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 120 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 150 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 150 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 180 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 180 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 210 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 210 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Net 270 Days - From Invoicing Date</fullName>
+                <default>false</default>
+                <label>Net 270 Days - From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Fixed Date</fullName>
+                <default>false</default>
+                <label>Fixed Date</label>
+            </value>
+            <value>
+                <fullName>2 Installments From Invoicing Date</fullName>
+                <default>false</default>
+                <label>2 Installments From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>3 Installments From Invoicing Date</fullName>
+                <default>false</default>
+                <label>3 Installments From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>4 Installments From Invoicing Date</fullName>
+                <default>false</default>
+                <label>4 Installments From Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>2 Installments From Next Month Invoicing Date</fullName>
+                <default>false</default>
+                <label>2 Installments From Next Month Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>3 Installments From Next Month Invoicing Date</fullName>
+                <default>false</default>
+                <label>3 Installments From Next Month Invoicing Date</label>
+            </value>
+            <value>
+                <fullName>Due 10th Of Following Quarter</fullName>
+                <default>false</default>
+                <label>Due 10th Of Following Quarter</label>
+            </value>
+            <value>
+                <fullName>Due 1st Of Following Month</fullName>
+                <default>false</default>
+                <label>Due 1st Of Following Month</label>
+            </value>
+            <value>
+                <fullName>Net 10 Days From First Day Next Month</fullName>
+                <default>false</default>
+                <label>Net 10 Days From First Day Next Month</label>
+            </value>
+            <value>
+                <fullName>Net 15 From First Day Next Month</fullName>
+                <default>false</default>
+                <label>Net 15 From First Day Next Month</label>
+            </value>
+            <value>
+                <fullName>Net 20 From First Day Next Month</fullName>
+                <default>false</default>
+                <label>Net 20 From First Day Next Month</label>
+            </value>
+            <value>
+                <fullName>Net 30 From First Day Next Month</fullName>
+                <default>false</default>
+                <label>Net 30 From First Day Next Month</label>
+            </value>
+            <value>
+                <fullName>First Day - Next 3rd Month</fullName>
+                <default>false</default>
+                <label>First Day - Next 3rd Month</label>
+            </value>
+            <value>
+                <fullName>Confirmed L/C At Sight</fullName>
+                <default>false</default>
+                <label>Confirmed L/C At Sight</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

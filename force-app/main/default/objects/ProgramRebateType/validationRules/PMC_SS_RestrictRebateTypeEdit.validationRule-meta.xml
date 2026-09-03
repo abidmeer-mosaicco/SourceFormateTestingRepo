@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictRebateTypeEdit</fullName>
+    <active>true</active>
+    <description>This validation rule is used to restrict the user from editing or creating Rebate Type for Under Revision or Approved Sales Agreement.</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) ,
+NOT(
+OR(
+AND(
+ISCHANGED( Status ) ,
+ISPICKVAL( Status , &apos;Active&apos;) ,
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Activated&apos;)
+),
+AND(
+ISCHANGED( Status ) ,
+ISPICKVAL( Status , &apos;Inactive&apos;) ,
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Expired&apos;)
+)
+)
+),
+
+NOT(ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.Status , &apos;Cancelled&apos;)),
+OR( ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c , &apos;Approved&apos;),
+ISPICKVAL( RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c , &apos;Under Revision&apos;) ),
+
+
+
+OR((PRIORVALUE( PMC_SS_Projected_Incentive__c ) = PMC_SS_Projected_Incentive__c) ,ISBLANK(PMC_SS_Projected_Incentive__c)),
+
+OR((PRIORVALUE( PMC_SS_Forecasted_Quantity__c ) = PMC_SS_Forecasted_Quantity__c) ,ISBLANK(PMC_SS_Forecasted_Quantity__c))
+
+
+)</errorConditionFormula>
+    <errorMessage>Rebate Type can’t be created/edited at this stage. Please Amend the Sales Agreement to make revisions to Rebate Type.</errorMessage>
+</ValidationRule>

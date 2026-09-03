@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Loadport__c</fullName>
+    <label>Loadport</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>1 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>1-2 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>1-2 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>2 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>2 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>2-3 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>2-3 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>3 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>3 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>3-4 Berth Tampa, FL range (including Port Manatee)</fullName>
+                <default>false</default>
+                <label>3-4 Berth Tampa, FL range (including Port Manatee)</label>
+            </value>
+            <value>
+                <fullName>1 Berth Galveston, TX</fullName>
+                <default>false</default>
+                <label>1 Berth Galveston, TX</label>
+            </value>
+            <value>
+                <fullName>1 Berth Donaldsonville, LA</fullName>
+                <default>false</default>
+                <label>1 Berth Donaldsonville, LA</label>
+            </value>
+            <value>
+                <fullName>1-2 Berth Tampa, FL range (including Port Manatee) and/or 1 Berth Donaldsonville, LA at Sellers Option</fullName>
+                <default>false</default>
+                <label>1-2 Berth Tampa, FL range (including Port Manatee) and/or 1 Berth Donaldsonville, LA at Sellers Option</label>
+            </value>
+            <value>
+                <fullName>Carlsbad, New Mexico</fullName>
+                <default>false</default>
+                <label>Carlsbad, New Mexico</label>
+            </value>
+            <value>
+                <fullName>1- Berth Ras Al Khair (RAK), KSA</fullName>
+                <default>false</default>
+                <label>1- Berth Ras Al Khair (RAK), KSA</label>
+            </value>
+            <value>
+                <fullName>1 - Berth Bayovar, Peru</fullName>
+                <default>false</default>
+                <label>1 - Berth Bayovar, Peru</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

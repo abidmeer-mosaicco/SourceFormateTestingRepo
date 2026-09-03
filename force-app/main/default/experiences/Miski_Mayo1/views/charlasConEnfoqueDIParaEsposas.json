@@ -1,0 +1,429 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "518803e2-e73d-4359-b919-233ecd82c263",
+  "label" : "Charlas con enfoque D I para esposas",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "35ab4931-f3ae-4132-a1d3-a3cf1aeaedc6",
+          "columns" : [ {
+            "UUID" : "aa1c1390-a556-4467-a752-870aa0492be3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "35ab4931-f3ae-4132-a1d3-a3cf1aeaedc6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "5b242fba-83d1-4aaa-a1c8-2a635337fe54",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "aa1c1390-a556-4467-a752-870aa0492be3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "207799cf-e387-4a93-b241-b25c1e30e92f",
+          "columns" : [ {
+            "UUID" : "a901ecf2-4377-41f3-8d9d-6f487084f742",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1e5f3723-c648-4a59-ada6-2f82b6be28ec",
+            "columnKey" : "bfc42",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ca8d6935-e5af-4c70-b3e0-4dd7e2830495",
+            "columnKey" : "ba8e1",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "752a0ac2-db7d-49aa-8190-1fd66508d8fb",
+            "columnKey" : "6603a",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "09487903-693c-490f-ac66-3ae7fab33e72",
+            "columnKey" : "6dedd",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "53dc8fb3-1936-4f27-8e6a-4346ae1a59eb",
+            "columnKey" : "55b5b",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 109
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "207799cf-e387-4a93-b241-b25c1e30e92f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/diversidad-e-inclusion"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "f77267aa-3401-458d-a1f3-bb606414ed13",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a901ecf2-4377-41f3-8d9d-6f487084f742",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1e5f3723-c648-4a59-ada6-2f82b6be28ec",
+        "regionLabel" : "Column 2",
+        "regionName" : "bfc42",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ca8d6935-e5af-4c70-b3e0-4dd7e2830495",
+        "regionLabel" : "Column 3",
+        "regionName" : "ba8e1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "752a0ac2-db7d-49aa-8190-1fd66508d8fb",
+        "regionLabel" : "Column 4",
+        "regionName" : "6603a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "09487903-693c-490f-ac66-3ae7fab33e72",
+        "regionLabel" : "Column 5",
+        "regionName" : "6dedd",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "53dc8fb3-1936-4f27-8e6a-4346ae1a59eb",
+        "regionLabel" : "Column 6",
+        "regionName" : "55b5b",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "e809e738-4b1d-4c79-b573-a4bfad3832d1",
+          "columns" : [ {
+            "UUID" : "0fd0ddb5-3140-46cc-8149-eeb0bfab8ede",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e809e738-4b1d-4c79-b573-a4bfad3832d1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Charlas con enfoque D&amp;I para esposas, hijas y colaboradores </strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7613b985-4ca2-4edd-a54f-216bd3e2ec53",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 20px; color: rgb(72, 72, 72);\">Nuestra política de Diversidad e Inclusión (D&amp;I) también involucra a las familias de nuestros colaboradores, por ello, en el 2022 también organizamos charlas presenciales de concientización y sensibilización en temas de D&amp;I dirigido a esposas, hijas y trabajadores.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4a3af17c-4b8e-413b-9bec-c1a0d24f20a1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "0fd0ddb5-3140-46cc-8149-eeb0bfab8ede",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "27d91b3f-b990-48ca-b918-9690868a5dc3",
+          "columns" : [ {
+            "UUID" : "c577df86-1b84-47fb-97d6-a5371f9717d4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0690cd57-61f0-4fcd-855a-7fe6044ef5cd",
+            "columnKey" : "399d0",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "51899192-0a3a-4a9b-a1fc-23c289c8ecbf",
+            "columnKey" : "f6b2f",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "dcb7a138-2035-422a-95fc-431e090a0a11",
+            "columnKey" : "5e88d",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "16e36cc3-5b28-4f7a-80de-f278dfb0cbef",
+            "columnKey" : "ccb96",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "faad3585-3325-4b7f-bea2-d79bc0236bed",
+            "columnKey" : "7848e",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 134
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "27d91b3f-b990-48ca-b918-9690868a5dc3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "0d37d50f-f0fb-43b6-ab58-7c84e65ba0b1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c577df86-1b84-47fb-97d6-a5371f9717d4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0690cd57-61f0-4fcd-855a-7fe6044ef5cd",
+        "regionLabel" : "Column 2",
+        "regionName" : "399d0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "51899192-0a3a-4a9b-a1fc-23c289c8ecbf",
+        "regionLabel" : "Column 3",
+        "regionName" : "f6b2f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "dcb7a138-2035-422a-95fc-431e090a0a11",
+        "regionLabel" : "Column 4",
+        "regionName" : "5e88d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "16e36cc3-5b28-4f7a-80de-f278dfb0cbef",
+        "regionLabel" : "Column 5",
+        "regionName" : "ccb96",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "faad3585-3325-4b7f-bea2-d79bc0236bed",
+        "regionLabel" : "Column 6",
+        "regionName" : "7848e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 58,
+        "sectionConfig" : {
+          "UUID" : "f5d8da67-6d40-4652-baed-732e415864cd",
+          "columns" : [ {
+            "UUID" : "56751f13-58a8-49e3-9c97-08b919eea480",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 200
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f5d8da67-6d40-4652-baed-732e415864cd",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "59eb9453-d2f1-4d9e-935f-e163503f9429",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Sensibilizar y capacitar a las mujeres (trabajadoras, esposas, hijas y familiares) en temas que contribuyan a generar reflexión y acción para minimizar la violencia de género y dar a conocer los derechos fundamentales de las mujeres en el Perú.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Promover alianzas de trabajo con instituciones representativas de la zona, como el Centro de Emergencia Mujer (CEM Sechura).</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "d9874e86-3920-4fe3-8b23-5c9c1feb5339",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "56751f13-58a8-49e3-9c97-08b919eea480",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 82,
+        "sectionConfig" : {
+          "UUID" : "e0114ddf-e856-4723-9407-e564b33c4798",
+          "columns" : [ {
+            "UUID" : "c6bda6d0-0334-4cdb-be33-87b02107f3a0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e0114ddf-e856-4723-9407-e564b33c4798",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "2",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "3",
+            "pageName" : "pageP24"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "679dd4ee-3170-4ccc-b226-1c558e891d9b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c6bda6d0-0334-4cdb-be33-87b02107f3a0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "008a0026-acae-4f1b-8fdd-53eb1eb2c18a",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Charlas con enfoque D I para esposas"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8680459c-bb11-476a-89c3-ae4e1dae7b4b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c923dec4-8715-4fd6-a48c-fa106e841a15",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-charlas-con-enfoque-d-i-para-esposas"
+}

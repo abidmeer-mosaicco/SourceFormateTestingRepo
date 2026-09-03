@@ -1,0 +1,18 @@
+<messaging:emailTemplate subject=" {!relatedTo.Quote__r.Name} has been Approved" recipientType="User" relatedToType="sbaa__Approval__c">
+<messaging:htmlEmailBody >
+        
+<html>
+<head>
+<meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+<meta name="Template" content="Response"/>
+</head>
+<body>
+Hello {!recipient.Name},
+<c:PMC_CPQ_ApprovalVFComponent quote="{!relatedTo.Quote__c}" userrole="{!recipient.UserRole.Name}" approverName="{!relatedTo.sbaa__Approver__r.Name}"/>       
+<p style="color:white"><apex:outputText value="{!relatedTo.Id}"/></p>
+
+</body>
+</html>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

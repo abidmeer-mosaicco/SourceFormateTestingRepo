@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Address__c</fullName>
+    <description>This field was created as part of US to store/handle complete Detailed Address for Location.</description>
+    <externalId>false</externalId>
+    <formula>PMC_CPQ_Location__r.PMC_CPQ_Street__c + &apos; &apos; + PMC_CPQ_Location__r.PMC_CPQ_City__c + &apos; &apos; + PMC_CPQ_Location__r.PMC_CPQ_Region__c + &apos; &apos; +  PMC_CPQ_Location__r.PMC_CPQ_Country__c + &apos; &apos;+ PMC_CPQ_Location__r.PMC_CPQ_PostalCode__c</formula>
+    <label>Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

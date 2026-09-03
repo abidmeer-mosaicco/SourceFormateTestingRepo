@@ -1,0 +1,122 @@
+<template>
+  <div class="slds-grid slds-gutters slds-m-bottom_x-small slds-m-top_medium">
+    <div class="edit-info-text slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+      <a onclick={editUserInfoModal}>{labels.pmc_userDetails_edit}</a>
+    </div>
+  </div>
+
+  <div class="slds-grid slds-gutters slds-grid_vertical-stretch slds-wrap">
+    <!-- User Information section -->
+    <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+      <div class="custom-card">
+        <div class="card-header">{labels.pmc_userDetails_userInformation}</div>
+        <div class="card-body">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">
+                {labels.pmc_userDetails_firstName}
+              </div>
+              <div class="lbl-field-value">{userInfoObj.strFirstName}</div>
+            </div>
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">
+                {labels.pmc_userDetails_lastName}
+              </div>
+              <div class="lbl-field-value">{userInfoObj.strLastName}</div>
+            </div>
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">{labels.pmc_userDetails_phone}</div>
+              <div class="lbl-field-value">
+                <lightning-formatted-phone class="phone-number-value"
+                  value={userInfoObj.strContactPhone}></lightning-formatted-phone>
+              </div>
+            </div>
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">{labels.pmc_userDetails_email}</div>
+              <div class="lbl-field-value">{userInfoObj.strEmail}</div>
+            </div>
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">{labels.pmc_userDetails_country}</div>
+              <div class="lbl-field-value">{userInfoObj.strCountry}</div>
+            </div>
+
+            <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">
+                {labels.pmc_userDetails_dateOfBirth}
+              </div>
+              <div if:true={userInfoObj.strContactBirthdate} class="lbl-field-value">
+                <lightning-formatted-date-time value={userInfoObj.strContactBirthdate} year="numeric" month="2-digit"
+                  day="2-digit">
+                </lightning-formatted-date-time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Edit User Info Modal -->
+  <c-pmc_dh_custom-modal open-modal={isEditUserInfoModal} modal-heading={labels.pmc_editUserInfo_text}
+    modal-width="564px" onclosemodalevent={handleCloseEditPopUp}>
+    <div class="modal-wrapper">
+      <div class="slds-grid slds-gutters slds-wrap">
+        <template if:true={errorMessage}>
+          <div class="slds-size_1-of-1 slds-m-bottom_medium slds-p-horizontal_small">
+            <c-pmc_dh_message-banner type="error" message={errorMessage}>
+            </c-pmc_dh_message-banner>
+          </div>
+        </template>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="modal-field-name">{labels.pmc_userDetails_firstName}</div>
+          <div class="modal-field-value">{userInfoObj.strFirstName}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <c-pmc_dh_input-element text-label={labels.pmc_userDetails_lastName} data-id="lastNameStr"
+            parent-name="lastNameStr" text-placeholder=" " is-required oninputdatachange={handleDataChange}
+            pattern="[A-Za-z]*">
+          </c-pmc_dh_input-element>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-4 slds-size_1-of-2 modal-content-info">
+          <c-pmc_dh_selection-picklist text-label={labels.pmc_registration_countryCode} data-id="userEnteredCountryStr"
+            parent-name="userEnteredCountryStr" combobox-list-json={countryCodeOption}
+            default-value={editableInfoObj.userEnteredCountryStr} is-required oninputdatachange={handleDataChange}
+            placeholder={labels.pmc_registration_countryCode}></c-pmc_dh_selection-picklist>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-4 slds-size_1-of-2 slds-p-left_none modal-content-info">
+          <c-pmc_dh_input-element text-label={labels.pmc_userDetails_phone} data-id="userEnteredPhoneStr"
+            parent-name="userEnteredPhoneStr" is-required is-number text-placeholder=""
+            oninputdatachange={handleDataChange} oninputdatablur={handleDataBlur} oninputfocus={handleInputFocus}
+            is-disabled={_phoneStrDisabled} default-value={editableInfoObj.userEnteredPhoneStr} type="text"
+            maxlength={phoneMaxLength} pattern="[0-9]+">
+          </c-pmc_dh_input-element>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="modal-field-name">{labels.pmc_userDetails_email}</div>
+          <div class="modal-field-value">{userInfoObj.strEmail}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="modal-field-name">{labels.pmc_userDetails_country}</div>
+          <div class="modal-field-value">{userInfoObj.strCountry}</div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 modal-content-info">
+          <div class="modal-field-name">{labels.pmc_userDetails_dateOfBirth}</div>
+          <div if:true={userInfoObj.strContactBirthdate} class="modal-field-value">
+            <lightning-formatted-date-time value={userInfoObj.strContactBirthdate} year="numeric" month="2-digit"
+              day="2-digit">
+            </lightning-formatted-date-time>
+          </div>
+        </div>
+
+        <div class="slds-col mobile-button">
+          <lightning-button variant="brand" title={labels.pmc_userDetails_saveUserDetails} onclick={saveChangesHandler}
+            label={labels.pmc_userDetails_saveChanges}>
+          </lightning-button>
+        </div>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

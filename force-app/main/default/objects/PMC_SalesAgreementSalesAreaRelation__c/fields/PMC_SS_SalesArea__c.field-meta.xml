@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SalesArea__c</fullName>
+    <description>Sales Area Master-Detail field</description>
+    <label>Sales Area</label>
+    <referenceTo>PMC_SS_SalesArea__c</referenceTo>
+    <relationshipLabel>Sales Agreement Sales Area Relation</relationshipLabel>
+    <relationshipName>PMC_SS_SalesAgreementSalesAreaRelation</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

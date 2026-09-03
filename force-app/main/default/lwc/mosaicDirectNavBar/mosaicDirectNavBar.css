@@ -1,0 +1,141 @@
+.demo-gauge-menu-checkbox {
+  display: none;
+}
+
+.demo-gauge-nav-bar {
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem 1rem; */
+  padding: 0.5rem 1rem;
+}
+
+.demo-gauge-logo {
+  height: 65px;
+  width: auto;
+  margin: 0 -.8em;
+}
+
+.demo-gauge-menu-toggle {
+  display: none;
+  /* só aparece no mobile */
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+}
+
+.demo-gauge-nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* .demo-gauge-nav-list li a {
+  text-decoration: none;
+  color: #16325c;
+  font-weight: 600;
+}
+.demo-gauge-nav-list li a:hover {
+  color: #005fb2;
+} */
+
+.demo-gauge-nav-list li a {
+  font-family: var(--regular-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--medium-font);
+  line-height: 27px;
+  color: var(--dark-secondary-green);
+}
+
+.iconsContainer {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: .2em;
+  align-items: center;
+}
+
+.nameTitle {
+  font-family: var(--bold-font);
+  line-height: 1.2;
+  color: var(--md-dark-primary-green);
+  font-size: var(--large-font-size);
+  font-weight: 700;
+}
+
+.selectedAccounts {
+  color: var(--md-dark-primary-green);
+}
+
+.d-grid {
+  display: grid;
+  column-gap: .5em;
+
+  &.twoColumns {
+    grid-auto-flow: column;
+    /* grid-template-columns: repeat(2, 1fr); */
+  }
+
+  &.rows {
+    grid-auto-flow: row;
+  }
+
+  .dropdown {
+    position: relative;
+
+    .bgIcon {
+      background-color: var(--md-primary-dark-green);
+      border-radius: 50%;
+      padding: .35rem .45rem .45rem;
+      --sds-c-icon-color-foreground-default: white;
+      transform: scale(.93);
+      cursor: pointer;
+    }
+
+    .container {
+      position: absolute;
+      top: 2.6em;
+      right: 0;
+      box-shadow: 0px 0px 15px rgba(9, 53, 50, 0.1);
+      background-color: var(--white);
+      z-index: 99;
+      padding: 0;
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        padding: .75rem;
+        font-size: 13px;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: var(--md-tertiary-gray);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .cartIcon {
+    --sds-c-icon-color-foreground-default: var(--md-primary-dark-green);
+  }
+
+  .userInfoBox {
+    /* width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    margin-right: .5em;
+    font-size: var(--medium-font);
+    white-space: nowrap;
+  }
+}

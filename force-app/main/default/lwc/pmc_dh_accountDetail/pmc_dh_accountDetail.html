@@ -1,0 +1,39 @@
+<template>
+  <template if:false={isLoading}>
+    <div class="custom-card">
+      <div class="card-header">
+        {labels.pmc_accountDetails_accountInformation}
+      </div>
+      <div class="card-body">
+        <div class="slds-grid slds-wrap">
+          <template for:each={accountInformation} for:item="info">
+            <div key={info.value} class="slds-col slds-medium-size_1-of-4 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">{info.label}</div>
+              <div class="lbl-field-value">{info.value}</div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-card contact-information-card">
+      <div class="card-header">
+        {labels.pmc_accountDetails_contactInformation}
+      </div>
+      <div class="card-body">
+        <div class="slds-grid slds-wrap">
+          <template for:each={contactInformation} for:item="info" for:index="index">
+            <div key={info.value} class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+              <div class="lbl-field-name">{info.label}</div>
+              <div class="lbl-field-value">{info.value}</div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+  </template>
+  <template if:true={isLoading}>
+    <lightning-spinner variant="brand" size="medium"></lightning-spinner>
+  </template>
+</template>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <field>lens_2.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_3_1.User.Name</field>
+        <isDerived>false</isDerived>
+        <label>Account Manager Name</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_3_1.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_3_2.ALL</field>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_3_2.User.Name</field>
+        <isDerived>false</isDerived>
+        <label>Account Manager Name</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_1_1.Name</field>
+        <isDerived>false</isDerived>
+        <label>Quote Line #</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_1_1.PMC_SS_Acc.Name</field>
+        <isDerived>false</isDerived>
+        <label>Ship-To Account</label>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_1_1.SBQQ__Quot.CurrencyIsoCode</field>
+        <isDerived>false</isDerived>
+        <label>Currency</label>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>lens_1_1.User.Name</field>
+        <isDerived>false</isDerived>
+        <label>Account Manager Name</label>
+        <sortIndex>8</sortIndex>
+    </dimensions>
+    <measures>
+        <field>lens_2.# of Quotes</field>
+        <isDerived>false</isDerived>
+        <label># of Quote Lines</label>
+        <sortIndex>0</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3_1.Number of Quote Line</field>
+        <isDerived>false</isDerived>
+        <sortIndex>1</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_3_2.Number of Quote Line</field>
+        <isDerived>false</isDerived>
+        <sortIndex>2</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_1_1.PMC_CPQ_PriceGuidanceFloor__c</field>
+        <formatCustomFormat>[&quot;#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>3</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_1_1.PMC_CPQ_PriceGuidanceCeiling__c</field>
+        <formatCustomFormat>[&quot;#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>4</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_1_1.PMC_CPQ_PriceGuidanceTarget__c</field>
+        <formatCustomFormat>[&quot;#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>5</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_1_1.SBQQ__ListPrice__c_formula</field>
+        <formatCustomFormat>[&quot;#,###&quot;,1]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>6</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_6_2.Percentage % of sales</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <sortIndex>7</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_6_2.Sum of Customer Price</field>
+        <isDerived>false</isDerived>
+        <label>Sum of Weighted Customer Price($)</label>
+        <sortIndex>8</sortIndex>
+    </measures>
+    <measures>
+        <field>lens_6_2.Percentage % of Tonnes</field>
+        <formatCustomFormat>[&quot;#,###.##%&quot;,100]</formatCustomFormat>
+        <isDerived>false</isDerived>
+        <label>Percentage % of Tons</label>
+        <sortIndex>9</sortIndex>
+    </measures>
+    <type>Asset</type>
+    <waveVisualization>Pricing_Report_Dashboard_Version_2</waveVisualization>
+</WaveXmd>

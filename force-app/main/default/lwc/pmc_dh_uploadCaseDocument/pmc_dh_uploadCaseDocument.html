@@ -1,0 +1,39 @@
+<template>
+  <div class="icon-button">
+    <img src={uploadIconUrl} alt={labels.pmc_caseDetails_uploadDocuments} tabindex="0" onclick={openUploadDocumentModal}
+      onkeydown={handleIconKeyDown} onmouseenter={handleMouseEnter} onmouseleave={handleMouseLeave} />
+    <template if:true={isMouseOver}>
+      <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-right btn-tooltip" role="tooltip" id="help">
+        <div class="slds-popover__body tooltip-text">{labels.pmc_caseDetails_uploadDocuments}</div>
+      </div>
+    </template>
+  </div>
+
+  <c-pmc_dh_custom-modal open-modal={isUploadDocumentModal} modal-heading={labels.pmc_caseDetails_uploadADocument}
+    modal-width="500px" onclosemodalevent={handleCloseUploadDocumentModal}>
+    <div class="modal-wrapper slds-p-around_medium">
+      <div class="upload-document-text slds-m-bottom_x-small">
+        {labels.pmc_caseDetails_uploadRequestedDocuments}
+      </div>
+      <div class="text-medium-normal slds-m-bottom_x-small">
+        {labels.pmc_caseDetails_supportedFileTypes}
+      </div>
+
+      <c-pmc_dh_file-upload-element is-multiple={isMultiple}
+        accepted-formats={acceptedFormats} type="type2"
+        onuploadcomplete={handleFileUpload}>
+      </c-pmc_dh_file-upload-element>
+
+      <div class="button-full-width slds-m-top_x-small">
+        <lightning-button label={labels.pmc_quoteCheckoutFlow_proceed} variant="brand" disabled={isProceedDisabled}
+          onclick={handleProceed}>
+        </lightning-button>
+      </div>
+    </div>
+
+    <template if:true={loadSpinner}>
+      <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+    </template>
+  </c-pmc_dh_custom-modal>
+
+</template>

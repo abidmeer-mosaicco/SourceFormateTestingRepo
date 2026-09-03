@@ -1,0 +1,20 @@
+<!-- updateOpportunityTeam.html -->
+<template>
+
+  <template if:true={showButton}>
+    <lightning-button
+      label="Update Opportunity Team"
+      variant="brand"
+      onclick={openModal}>
+    </lightning-button>
+  </template>
+
+  <template if:true={showModal}>
+    <c-default-opp-team-add-members
+      owner-user-id={recordId}
+      onclose={closeModal}>
+    </c-default-opp-team-add-members>
+    
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Segmentation__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Segmentation</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>true</default>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Base</fullName>
+                <default>false</default>
+                <label>Base</label>
+            </value>
+            <value>
+                <fullName>Prime</fullName>
+                <default>false</default>
+                <label>Prime</label>
+            </value>
+            <value>
+                <fullName>Ultra</fullName>
+                <default>false</default>
+                <label>Ultra</label>
+            </value>
+            <value>
+                <fullName>Grow</fullName>
+                <default>false</default>
+                <label>Grow</label>
+            </value>
+            <value>
+                <fullName>Basic</fullName>
+                <default>false</default>
+                <label>Basic</label>
+            </value>
+            <value>
+                <fullName>Mega Farmers</fullName>
+                <default>false</default>
+                <label>Mega Farmers</label>
+            </value>
+            <value>
+                <fullName>Top Farmers</fullName>
+                <default>false</default>
+                <label>Top Farmers</label>
+            </value>
+            <value>
+                <fullName>Farmers</fullName>
+                <default>false</default>
+                <label>Farmers</label>
+            </value>
+            <value>
+                <fullName>Mid Farmers</fullName>
+                <default>false</default>
+                <label>Mid Farmers</label>
+            </value>
+            <value>
+                <fullName>Small Farmers</fullName>
+                <default>false</default>
+                <label>Small Farmers</label>
+            </value>
+            <value>
+                <fullName>Key</fullName>
+                <default>false</default>
+                <label>Key</label>
+            </value>
+            <value>
+                <fullName>Canal KAM</fullName>
+                <default>false</default>
+                <label>Canal - KAM</label>
+            </value>
+            <value>
+                <fullName>Trader KAM</fullName>
+                <default>false</default>
+                <label>Trader - KAM</label>
+            </value>
+            <value>
+                <fullName>Mega Farmer KAM</fullName>
+                <default>false</default>
+                <label>EU - KAM Mega Farmer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

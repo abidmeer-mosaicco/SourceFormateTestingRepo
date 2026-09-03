@@ -1,0 +1,47 @@
+<template>
+  <c-pmc_dh_custom-modal open-modal={isCreateCaseEnabled} modal-heading={labels.pmc_caseMgmt_createCase}
+    modal-width="440px" onclosemodalevent={closeCreateCaseModal}>
+    <div class="slds-grid slds-gutters slds-wrap slds-p-around_medium">
+      <!-- Inquiry Type field -->
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_caseMgmt_inquiryType} data-id="strType"
+          parent-name="strType" data-name="strType" combobox-list-json={inquiryTypes} is-required
+          oninputdatachange={handleDataChange} placeholder=""></c-pmc_dh_selection-picklist>
+      </div>
+      <!-- Topic field -->
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_selection-picklist text-label={labels.pmc_caseMgmt_topic} data-id="strIssueReason"
+          parent-name="strIssueReason" data-name="strIssueReason" combobox-list-json={topics} is-required
+          default-value={caseObject.strIssueReason} oninputdatachange={handleDataChange}
+          placeholder=""></c-pmc_dh_selection-picklist>
+      </div>
+      <!-- Subject field -->
+      <div class="slds-col slds-size_1-of-1">
+        <c-pmc_dh_input-element text-label={labels.pmc_caseMgmt_subject} data-id="strSubject" parent-name="strSubject"
+          is-required oninputdatachange={handleDataChange} max-length="255" text-placeholder=" "
+          default-value={_orderNumberStr} pattern="[A-Za-z0-9#,.\-\/ ]*"></c-pmc_dh_input-element>
+      </div>
+      <!-- Description field -->
+      <div class="slds-col slds-size_1-of-1">
+        <lightning-textarea data-id="strDescription" name="strDescription" maxlength="32000" required
+          label={labels.pmc_caseMgmt_description} message-when-value-missing={labels.pmc_caseMgmt_descRequiredErr}
+          onchange={handleDataChange}></lightning-textarea>
+      </div>
+      <!-- TODO - File Upload -->
+      <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium">
+        <c-pmc_dh_file-upload-element is-multiple={isMultiple} accepted-formats=".png,.jpeg,.docx,.pdf,.xls,.xlsx"
+          onuploadcomplete={handleUpload}></c-pmc_dh_file-upload-element>
+      </div>
+      <!-- Proceed button -->
+      <div class="slds-col mobile-button">
+        <lightning-button variant="brand" label={labels.pmc_quoteCheckoutFlow_proceed}
+          title={labels.pmc_caseMgmt_proceedToCreateCase} disabled={isInvalidForm}
+          onclick={createCaseHandler}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+  <!-- Loading spinner -->
+  <template if:true={loadSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

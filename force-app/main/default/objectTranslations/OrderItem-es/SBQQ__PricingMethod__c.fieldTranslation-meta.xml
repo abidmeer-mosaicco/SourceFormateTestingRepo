@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Indica cómo se calcula el precio de este ítem de línea. &quot;Lista&quot; = restando el descuento del precio de lista. &quot;Coste&quot; = añadir el Margen de ganancia al coste.&quot;</help>
+    <label>Método de fijación de precios</label>
+    <name>SBQQ__PricingMethod__c</name>
+    <picklistValues>
+        <masterLabel>Block</masterLabel>
+        <translation>Bloque</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost</masterLabel>
+        <translation>Coste</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom</masterLabel>
+        <translation>Personalizado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>List</masterLabel>
+        <translation>Lista</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Percent Of Total</masterLabel>
+        <translation>Porcentaje del total</translation>
+    </picklistValues>
+</CustomFieldTranslation>

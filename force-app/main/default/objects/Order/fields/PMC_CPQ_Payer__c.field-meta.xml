@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Payer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to capture the Payer for the Order.</description>
+    <inlineHelpText>Payer Account for the Order.</inlineHelpText>
+    <label>Payer</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders (Payer)</relationshipLabel>
+    <relationshipName>Orders3</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

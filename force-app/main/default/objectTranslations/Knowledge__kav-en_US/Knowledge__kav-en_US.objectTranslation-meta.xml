@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Knowledge</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Knowledge</value>
+    </caseValues>
+    <recordTypes>
+        <description><!-- Quick answers to general questions about day-to-day operations. --></description>
+        <label><!-- FAQ --></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Technical document informing users about important events (e.g. System Issues, Planned down times). --></description>
+        <label><!-- Technical Bulletin/Notice --></label>
+        <name>PMC_SS_TechnicalBulletinNotice</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Document to inform users about processes within the Salesforce platform. --></description>
+        <label><!-- Training Document --></label>
+        <name>PMC_SS_TrainingDocument</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Document to inform team members of ongoing activities prior to a leave of absence. --></description>
+        <label><!-- Transition Document --></label>
+        <name>PMC_SS_TransitionDocument</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This can be used to create and upload User Guides to the Knowledge Management Database so that relevant parties are able to access User Guides when needed --></description>
+        <label><!-- User Guide --></label>
+        <name>PMC_SS_UserGuide</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Standard procedures related to order and customer management. --></description>
+        <label><!-- Procedure --></label>
+        <name>Procedure</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please provide number of days bulletin needs to be displayed --></errorMessage>
+        <name>PMC_SS_ValidateEndDateForBulletinNotice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please input positive value for &apos;Number Of Display Days&apos;. --></errorMessage>
+        <name>PMC_SS_ValidateNegativeNoOfDisplayDays</name>
+    </validationRules>
+</CustomObjectTranslation>

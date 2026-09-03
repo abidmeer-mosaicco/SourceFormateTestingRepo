@@ -1,0 +1,46 @@
+<template>
+	<c-pmc_dh_custom-modal open-modal={openSearchAddressModal} modal-heading={labels.pmc_address_searchAddressTitle}
+	modal-width={modalWidth} onclosemodalevent={closeSearchAddressModal}>
+		<div>
+			<div class="search-address-modal-body">
+				<div class="section-title text-color-dark-primary-green slds-p-around_medium">
+					{labels.pmc_address_selectAddress}
+				</div>
+				<div class="slds-p-horizontal--medium slds-p-top--medium">
+          <c-pmc_dh_search-input-element text-label={labels.pmc_address_searchAddressTitle} text-name="strSearchInput" text-placeholder={labels.pmc_address_searchPlaceholder}
+          data-id="strSearchInput" default-value={searchInput} 
+          oninputdatachange={handleDataChange} oninputkeyup={searchAddressKeypressHandler} onsearchclick={searchAddressHandler}>
+          </c-pmc_dh_search-input-element>
+        </div>
+				<fieldset class="slds-form-element">
+					<div class="slds-form-element__control search-address__list">
+						<template for:each={filteredShipToLst} for:item="item">
+							<template lwc:if={item.isChecked}>
+								<div class="slds-radio" key={item.value}>
+									<input type="radio" id={item.value} value={item.value} name="options" checked />
+									<label class="slds-radio__label" for={item.value}>
+										<span class="slds-radio_faux"></span>
+										<span class="slds-form-element__label">{item.label}</span>
+									</label>
+								</div>
+							</template>
+							<template lwc:else>
+								<div class="slds-radio" key={item.value}>
+									<input type="radio" id={item.value} value={item.value} name="options" />
+									<label class="slds-radio__label" for={item.value}>
+										<span class="slds-radio_faux"></span>
+										<span class="slds-form-element__label">{item.label}</span>
+									</label>
+								</div>
+							</template>
+						</template>
+					</div>
+				</fieldset>
+				<div class="slds-modal__footer slds-modal__footer_directional">
+					<button class="slds-button slds-button_neutral" onclick={closeSearchAddressModal}>{labels.pmc_address_cancel}</button>
+					<button class="slds-button slds-button_brand" onclick={confirmSearchAddressModal}>{labels.pmc_address_confirmSelection}</button>
+				</div>
+			</div>
+		</div>
+	</c-pmc_dh_custom-modal>
+</template>

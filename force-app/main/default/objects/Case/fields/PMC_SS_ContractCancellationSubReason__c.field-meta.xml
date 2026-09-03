@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ContractCancellationSubReason__c</fullName>
+    <label>Contract Cancellation Sub Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_SS_ContractCancellation__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Factory Problems</fullName>
+                <default>false</default>
+                <label>Factory Problems</label>
+            </value>
+            <value>
+                <fullName>Lack of Raw Materials</fullName>
+                <default>false</default>
+                <label>Lack of Raw Materials</label>
+            </value>
+            <value>
+                <fullName>Logistic Problems</fullName>
+                <default>false</default>
+                <label>Logistic Problems</label>
+            </value>
+            <value>
+                <fullName>Quality Problems</fullName>
+                <default>false</default>
+                <label>Quality Problems</label>
+            </value>
+            <value>
+                <fullName>Unreleased Credit - Constitution of Guarantee</fullName>
+                <default>false</default>
+                <label>Unreleased Credit - Constitution of Guarantee</label>
+            </value>
+            <value>
+                <fullName>Unreleased Credit - Delinquency</fullName>
+                <default>false</default>
+                <label>Unreleased Credit - Delinquency</label>
+            </value>
+            <value>
+                <fullName>Unreleased Credit - Surety</fullName>
+                <default>false</default>
+                <label>Unreleased Credit - Surety</label>
+            </value>
+            <value>
+                <fullName>Unreleased Credit - Unauthorized term</fullName>
+                <default>false</default>
+                <label>Unreleased Credit - Unauthorized term</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Mosaic’s Failure</controllingFieldValue>
+            <valueName>Factory Problems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic’s Failure</controllingFieldValue>
+            <valueName>Lack of Raw Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic’s Failure</controllingFieldValue>
+            <valueName>Logistic Problems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mosaic’s Failure</controllingFieldValue>
+            <valueName>Quality Problems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unapproved Credit Limit</controllingFieldValue>
+            <valueName>Unreleased Credit - Constitution of Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unapproved Credit Limit</controllingFieldValue>
+            <valueName>Unreleased Credit - Delinquency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unapproved Credit Limit</controllingFieldValue>
+            <valueName>Unreleased Credit - Surety</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unapproved Credit Limit</controllingFieldValue>
+            <valueName>Unreleased Credit - Unauthorized term</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

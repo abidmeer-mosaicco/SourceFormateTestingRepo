@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIT3_Sprint16</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Project__c</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>Sprint 16</value>
+    </filters>
+    <filters>
+        <field>copado__Project__c</field>
+        <operation>equals</operation>
+        <value>GDA Salesforce</value>
+    </filters>
+    <label>SIT3_Sprint16</label>
+</ListView>

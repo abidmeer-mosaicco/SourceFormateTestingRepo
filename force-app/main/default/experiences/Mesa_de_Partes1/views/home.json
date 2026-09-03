@@ -1,0 +1,473 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3a71b38d-8043-439e-8d8b-9b6dea5a271e",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9f558ae6-a3ae-4bdf-9282-3d13ffc3e7b7",
+          "columns" : [ {
+            "UUID" : "db6c9ea3-318e-440b-9c77-78e28a826e4e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 143
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9f558ae6-a3ae-4bdf-9282-3d13ffc3e7b7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "bannerBackgroundColor" : "rgb(226, 35, 26)",
+            "bannerPosition" : "right",
+            "bannerSizePercent" : 35,
+            "borderRadius" : 20,
+            "boxShadow" : true,
+            "haveBanner" : false,
+            "iconBackgroundColor" : "rgb(255, 255, 255)",
+            "iconSize" : "large",
+            "noImageColor" : "rgb(116,116,116)",
+            "overlay" : "rgba(0,0,0,0.01)",
+            "templateType" : "icon",
+            "tileMenuEditor" : "Request_Types",
+            "titleColor" : "",
+            "titleFontSize" : "medium",
+            "titleHorizontalAlign" : "center"
+          },
+          "componentName" : "community_navigation:tileMenu",
+          "id" : "931ca724-cc7b-40de-b090-2f3558741196",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "db6c9ea3-318e-440b-9c77-78e28a826e4e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "7545862b-76b0-42d9-be38-9c3d42d2265d",
+          "columns" : [ {
+            "UUID" : "36b972d0-46f9-4a08-a3f7-e78cba546fda",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1e364213-b771-430e-bf00-6e4ed66b86b1",
+            "columnKey" : "dd4f5",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d941b31e-434d-4c15-b9f3-a7fb621cf0df",
+            "columnKey" : "9ad8c",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 75
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7545862b-76b0-42d9-be38-9c3d42d2265d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px;\">Elige esta opción solo si tienes alguna duda o inquietud sobre nuestra empresa</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6c156288-f137-4d18-801a-f9e1788a460e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "36b972d0-46f9-4a08-a3f7-e78cba546fda",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px;\">Elige esta opción si requieres enviar una carta, un oficio, notificación,&nbsp;&nbsp;etc.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7020b321-d131-4d70-a15f-ba101b00d324",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1e364213-b771-430e-bf00-6e4ed66b86b1",
+        "regionLabel" : "Column 2",
+        "regionName" : "dd4f5",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 14px;\">Elige esta opción si tienes alguna disconformidad o queja con nuestra empresa o contratistas</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e6b65ea8-3523-4659-8021-d8bf46e31f28",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d941b31e-434d-4c15-b9f3-a7fb621cf0df",
+        "regionLabel" : "Column 3",
+        "regionName" : "9ad8c",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 25,
+        "sectionConfig" : {
+          "UUID" : "2d282f89-face-41f0-b593-225e1fe26c34",
+          "columns" : [ {
+            "UUID" : "3996146e-f05c-4550-8af7-8d47389b59c6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2d282f89-face-41f0-b593-225e1fe26c34",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "",
+            "borderColor" : "",
+            "borderRadius" : "36",
+            "buttonBackgroundColor" : "",
+            "buttonBackgroundHoverColor" : "",
+            "iconColor" : "",
+            "placeholderText" : "Buscar...",
+            "placeholderTextColor" : "#4a4a4a",
+            "showSearchButton" : true,
+            "showSearchSuggestionsSetup" : true,
+            "suggestionsBackgroundColor" : "rgb(255, 255, 255)",
+            "suggestionsBackgroundHoverColor" : "rgb(249, 249, 250)",
+            "suggestionsDividerColor" : "rgb(217, 219, 221)",
+            "suggestionsTextColor" : "",
+            "suggestionsTextHoverColor" : "",
+            "textColor" : ""
+          },
+          "componentName" : "b2b_search_builder:searchInput",
+          "id" : "3ede9a82-211e-4dfa-8a62-6919dc104851",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3996146e-f05c-4550-8af7-8d47389b59c6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "84e252cb-af4d-4894-87bc-0cedeece95bc",
+          "columns" : [ {
+            "UUID" : "63bad8be-1e6e-4908-85b6-cb315c7d54a5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "84e252cb-af4d-4894-87bc-0cedeece95bc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "tabsetConfig" : {
+              "UUID" : "b2b525c1-a8fc-49f2-9421-b81d8ad6b490",
+              "activeTab" : "",
+              "tabs" : [ {
+                "UUID" : "ce8e40e6-89bd-4d19-812a-11f9b9dd2616",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "1",
+                "tabName" : "Solicitudes Abiertas"
+              }, {
+                "UUID" : "1e28e1af-01af-4e40-b87c-2f12f9dba66c",
+                "allowGuestUser" : false,
+                "locked" : false,
+                "seedComponents" : [ ],
+                "tabKey" : "2",
+                "tabName" : "Solicitudes Cerradas"
+              } ],
+              "useOverflowMenu" : true
+            }
+          },
+          "componentName" : "forceCommunity:tabLayout",
+          "id" : "b2b525c1-a8fc-49f2-9421-b81d8ad6b490",
+          "regions" : [ {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "Mis_casos_abiertos_Portal",
+                "layout" : "FULL",
+                "pageSize" : 5,
+                "scope" : "Case",
+                "showActionBar" : false,
+                "showChartsPanel" : false,
+                "showDisplay" : "showall",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : false,
+                "showObjectName" : true,
+                "showPinnedList" : false,
+                "showSearchBar" : false
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "c973c456-a8c5-49ef-8632-0d0b70e29957",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "ce8e40e6-89bd-4d19-812a-11f9b9dd2616",
+            "regionLabel" : "Solicitudes Abiertas",
+            "regionName" : "1",
+            "renditionMap" : { },
+            "type" : "region"
+          }, {
+            "components" : [ {
+              "componentAttributes" : {
+                "enableInlineEdit" : true,
+                "filterName" : "Mis_casos_cerrados_Portal",
+                "layout" : "FULL",
+                "pageSize" : 25,
+                "scope" : "Case",
+                "showActionBar" : false,
+                "showChartsPanel" : false,
+                "showDisplay" : "grid",
+                "showFilterPanel" : false,
+                "showImageIcon" : true,
+                "showManualRefreshButton" : false,
+                "showObjectName" : true,
+                "showPinnedList" : true,
+                "showSearchBar" : false
+              },
+              "componentName" : "forceCommunity:objectHome",
+              "id" : "74ed3fe3-c891-408e-8a7a-c4704c383a96",
+              "renderPriority" : "NEUTRAL",
+              "renditionMap" : { },
+              "type" : "component"
+            } ],
+            "id" : "1e28e1af-01af-4e40-b87c-2f12f9dba66c",
+            "regionLabel" : "Solicitudes Cerradas",
+            "regionName" : "2",
+            "renditionMap" : { },
+            "type" : "region"
+          } ],
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "63bad8be-1e6e-4908-85b6-cb315c7d54a5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "ba5c86c7-117c-4444-accd-26cbb31876af",
+          "columns" : [ {
+            "UUID" : "ffa4c18d-4175-4d76-8798-85ca27c40093",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ba5c86c7-117c-4444-accd-26cbb31876af",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 20px;\">Preguntas frecuentes​</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e6216fa4-9ee0-4f07-a6f4-6b4cde3bc2a8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "A",
+            "bodyText" : "<p>Para conocer nuestras ofertas laborales vigentes y postular a ellas, visita la plataforma Bumeran, donde podr&aacute;s ingresar tu CV o informaci&oacute;n personal. Para postular es necesario que crees una cuenta en dicha plataforma.</p> <p>Las convocatorias abiertas, as&iacute; como la culminaci&oacute;n de la selecci&oacute;n son publicadas en nuestras redes sociales de Facebook y LinkedIn. Te invitamos a seguirnos en estas plataformas para recibir alertas cada vez que haya una convocatoria laboral vigente.</p> <p><a href=\"https://www.facebook.com/MineraMiskiMayo\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa |Facebook</a></p> <p><a href=\"https://www.linkedin.com/company/miski-mayo/posts/?feedView=all\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa | LinkedIn</a></p> <p><strong>Recuerda que:</strong></p> <p>Ninguno de nuestros procesos de contrataci&oacute;n se realiza a cambio de dinero.</p> <p>No realizamos convocatorias laborales a trav&eacute;s de correo electr&oacute;nico o WhatsApp. <br />&nbsp;</p>",
+            "headerText" : "¿Cómo puedo trabajar con ustedes o postular para trabajar en la empresa?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "59736c6b-cae0-48c3-999a-07fde92af873",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "<p>Si deseas darnos a conocer tu empresa te invitamos a que ingreses al siguiente link que se encuentra en nuestra p&aacute;gina web:  <a href=\"https://www.miskimayo.com/s/proveedores?language=es_PE\">Proveedores</a><br /> Completa el formulario proporcionando informaci&oacute;n detallada de tu empresa para que podamos tenerla presente en futuros procesos de licitaci&oacute;n.&nbsp;</p>",
+            "headerText" : "¿Cómo mi empresa puede brindar servicios a Compañía Minera Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "91526238-e5aa-40a0-87d0-ea35f752ff93",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Haz clic en la opción de “Registra tu solicitud y/o, luego ubica la sección “Área a la que dirige su documento”, has clic y selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste. ",
+            "headerText" : "Si quiero solicitar una donación o apoyo, ¿con quién me puedo contactar? ",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "0d7c6dc8-2ad3-4c21-820d-ba18362650a8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Para más información sobre la venta de nuestro concentrado de fosfato, escríbenos a través de nuestra Mesa de Partes Virtual. Elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área “Comercial”. Ingresa todos tus datos y tu consulta. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.   ",
+            "headerText" : "¿Cómo puedo comprar fosfato de Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "ae72c034-1375-4862-9afb-60abd5cd5ec6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Quiero conocer los reportes ambientales o algún tema específico ambiental",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "c0ab9b40-9ede-4426-aebb-ab5675ecbc3d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres visitar la operación debes registrar una solicitud en nuestra Mesa de Partes Virtual.  Elige la opción “Registra tu solicitud y/o documento”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.",
+            "headerText" : "¿Cómo puedo visitar la operación?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "7f4a8943-ba43-4a99-bc55-e2a25d70d906",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si no tienes claro a quien dirigir tu consulta, puedes hacerla llegar al área de Comunicación para que derive tu consulta al área respectiva. Elige la opción de “Consulta”, luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. Esta área se encargará de retransmitir tu consulta al área respectiva para que atienda tu comunicación, dándote respuesta al correo electrónico que registraste.  ",
+            "headerText" : "Quiero hacer una consulta, pero no tengo claro a quien dirigirla en su mesa de partes. ¿Cómo hago?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "c05ae820-b876-40f9-aa16-293bda292ef5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Deseo información adicional sobre el proceso de operación",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "0858d18a-9cfc-4fc8-ba1c-f2f2c82c7d78",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ffa4c18d-4175-4d76-8798-85ca27c40093",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "da4a961a-80f2-49b8-9248-382f7426dfc9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "4a9b3e9c-60ef-4c35-bf69-a17df3e5513d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "86008ebb-b1b2-4202-8ba7-f0b4b33e52fc",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

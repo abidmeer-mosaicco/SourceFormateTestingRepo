@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CheckAmendmentValuesOnCaseClosed</fullName>
+    <active>true</active>
+    <description>This validation rule checks for amendment values on case closed</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c), NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+OR(
+ISPICKVAL(Status, &apos;Closed&apos;),
+ISPICKVAL(Status, &apos;Closure Pending&apos;)
+),
+OR(
+ISPICKVAL(PMC_SS_ContractAmendmentType__c , &apos;Contract Start Date&apos;) ,ISPICKVAL(PMC_SS_ContractAmendmentType__c , &apos;Contract End Date&apos;),ISPICKVAL(PMC_SS_ContractAmendmentType__c , &apos;Due Date&apos;), ISPICKVAL(PMC_SS_ContractAmendmentType__c , &apos;Center Transfer&apos;)
+),
+ISPICKVAL(PMC_SS_ContractAmendmentJustificationVal__c, &apos;&apos;)
+)</errorConditionFormula>
+    <errorMessage>The field “Contract Amendment Justification” should be required to close the case</errorMessage>
+</ValidationRule>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Capture the list of Allocations</description>
+        <name>Allocationsssignment</name>
+        <label>Allocations Assignment</label>
+        <locationX>440</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>recordAllocations</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>AllocationsLoop</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AllocationsLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Allocation Summary record</description>
+        <name>SetAllocationSummaryAssignment</name>
+        <label>Set Allocation Summary Assignment</label>
+        <locationX>440</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>AllocationsLoop.PMC_SS_AllocationSummary__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Allocationsssignment</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Contains the API Name of the Flow</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AfterInsertUpdateAllocationSummariesFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>To Bypass Flow based on Custom Setting &quot;Process Switches&quot;</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>AllocationsGet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow updates the Allocation Summary Id on the related Allocation records</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC SS After Insert/Update Allocation Summaries Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS After Insert/Update Allocation Summaries Flow</label>
+    <loops>
+        <description>Loop through list of Allocations matching the ProductLocationMonthKey</description>
+        <name>AllocationsLoop</name>
+        <label>Allocations Loop</label>
+        <locationX>352</locationX>
+        <locationY>539</locationY>
+        <collectionReference>AllocationsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>SetAllocationSummaryAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>AllocationRecordsUpdate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates an Error Log Record</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>880</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get Allocation records based on Product Location Month Key</description>
+        <name>AllocationsGet</name>
+        <label>Allocations Get</label>
+        <locationX>352</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AllocationsLoop</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_ProductLocationAllocationKey__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_SS_ProductLocationAllocationKey__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_AllocationSummary__c</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>PMC_SS_Allocation__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the Allocation Summary Id on the related Allocation records</description>
+        <name>AllocationRecordsUpdate</name>
+        <label>Allocation Records Update</label>
+        <locationX>352</locationX>
+        <locationY>947</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>recordAllocations</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>PMC_SS_AllocationSummary__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordAllocations</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PMC_SS_Allocation__c</objectType>
+    </variables>
+</Flow>

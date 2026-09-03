@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mosaic_Direct_User_Stories</fullName>
+    <booleanFilter>(1 OR 2 OR 3 OR 4 OR 7) AND 5 AND 6 AND 8</booleanFilter>
+    <columns>NAME</columns>
+    <columns>copado__User_Story_Title__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Status__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Last_Promotion_Date__c</columns>
+    <columns>copado__Environment_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>equals</operation>
+        <value>IAGO SOARES</value>
+    </filters>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>equals</operation>
+        <value>BARBARA FORTE</value>
+    </filters>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>equals</operation>
+        <value>ARTHUR MENEZES</value>
+    </filters>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>equals</operation>
+        <value>CAUE GUIMARAES</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2026 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>copado__Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>equals</operation>
+        <value>BRUNO CARNEIRO</value>
+    </filters>
+    <filters>
+        <field>copado__User_Story_Title__c</field>
+        <operation>contains</operation>
+        <value>GMDP</value>
+    </filters>
+    <label>Mosaic Direct User Stories</label>
+</ListView>

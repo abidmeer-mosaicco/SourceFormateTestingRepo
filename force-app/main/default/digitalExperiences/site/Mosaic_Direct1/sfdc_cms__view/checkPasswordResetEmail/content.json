@@ -1,0 +1,66 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Change Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"5c15670a-635c-49d8-ba0c-77e0178bc121\",\"columns\":[{\"UUID\":\"c2b395ed-2a94-422d-9702-7f56deae5dd1\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "checkEmailMessage" : "Check the email account associated with your username for the link to reset your password. If you didn't get an email, check your Spam folder. Or contact your administrator.",
+                "dxpStyle" : { },
+                "returnButtonLabel" : "Back to login",
+                "titleLabel" : "Now check your email"
+              },
+              "definition" : "community_login:checkEmail",
+              "id" : "352a5747-ef7d-493e-832c-847a83ab4dad",
+              "type" : "component"
+            } ],
+            "id" : "c2b395ed-2a94-422d-9702-7f56deae5dd1",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "5c15670a-635c-49d8-ba0c-77e0178bc121",
+          "type" : "component"
+        } ],
+        "id" : "e4595e82-b649-4d7d-9e9b-965e4fba323f",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Change Password",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "7aa3b122-7680-4945-aa54-48c31c0463a7",
+          "type" : "component"
+        } ],
+        "id" : "69f99194-e4a7-41d5-b8ea-12c61105a049",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "8e3aca1a-6f8d-4143-97c0-8f5d3819cefd",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "aCSRUDPRXgfJDgnCncIUTzWSc4f675",
+    "viewType" : "check-password"
+  },
+  "urlName" : "change-password"
+}

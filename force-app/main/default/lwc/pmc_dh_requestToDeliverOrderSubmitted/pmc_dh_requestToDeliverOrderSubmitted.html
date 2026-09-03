@@ -1,0 +1,22 @@
+<template>
+  <template if:true={pageLoaded}>
+    <h1 class="slds-align_absolute-center slds-text-align_center slds-m-top_xx-large slds-m-bottom_medium">
+      {labels.pmc_requestToDeliver_successMessage}
+    </h1>
+    <p class="quote-request-number slds-m-bottom_large">
+      {labels.pmc_requestToDeliver_orderRequestedNumber} {orderNumber}
+    </p>
+    <div class="mobile-button slds-m-bottom_medium">
+      <lightning-button label={labels.pmc_requestToDeliver_requestAnotherOrder}
+        title={labels.pmc_requestToDeliver_requestAnotherOrder} onclick={requestAnotherOrderHandler}>
+      </lightning-button>
+      <lightning-button variant="brand" label={labels.pmc_requestToDeliver_viewMyOrders}
+        title={labels.pmc_requestToDeliver_viewMyOrders} onclick={viewMyOrderHandler}>
+      </lightning-button>
+    </div>
+  </template>
+
+  <template if:false={pageLoaded}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

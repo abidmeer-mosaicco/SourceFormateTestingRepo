@@ -1,0 +1,34 @@
+<template>
+  <c-pmc_dh_custom-modal open-modal={_isShowSwitchAccountModal} modal-heading={labels.pmc_accountDetails_switchAccounts}
+    modal-width={modalWidth} onclosemodalevent={closeSwitchAccountModal}>
+    <div>
+      <div class="switch-accounts-modal-body">
+        <c-pmc_dh_spinner is-spinner={isSpinner}></c-pmc_dh_spinner>
+        <div class="section-title text-color-dark-primary-green slds-p-horizontal--medium slds-p-bottom--medium">
+          {labels.pmc_accountDetails_searchAccTitle}
+        </div>
+        <div class="slds-p-horizontal--medium slds-p-top--medium">
+          <c-pmc_dh_search-input-element text-label={labels.pmc_accountDetails_searchAccLbl} text-name="strSearchInput" text-placeholder=""
+          data-id="strSearchInput" default-value={searchInput}
+          oninputdatachange={handleDataChange} oninputkeyup={handleEnterKeyUp} onsearchclick={searchHandler}>
+          </c-pmc_dh_search-input-element>
+        </div>
+        <ul class="switch-accounts__list">
+          <template for:each={filteredAccounts} for:item="item">
+            <li class="switch-accounts__item" key={item.strAccountId} data-acc-id={item.strAccountId}
+              data-acc-name={item.strAccountName} onclick={switchAccountHandler} tabindex="0"
+              onkeydown={switchAccountKeypressHandler}>
+              <div class="icon">
+                <img class="" src={iconUrlObj.newAccountUrl} alt="new Acc" />
+              </div>
+              <div class="details">
+                <div class="account-name">{item.strAccountName}</div>
+                <div class="address">{item.strCompleteAddress}</div>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+</template>

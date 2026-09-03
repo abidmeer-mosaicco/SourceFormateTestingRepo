@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SNOW_TicketType__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Service Now Ticket Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Credit Analysis</fullName>
+                <default>true</default>
+                <label>Customer Credit Analysis</label>
+            </value>
+            <value>
+                <fullName>Release of Paid Contracts</fullName>
+                <default>false</default>
+                <label>Release of Paid Contracts</label>
+            </value>
+            <value>
+                <fullName>Perform Warranty</fullName>
+                <default>false</default>
+                <label>Perform Warranty</label>
+            </value>
+            <value>
+                <fullName>Warranty Formalization</fullName>
+                <default>false</default>
+                <label>Warranty Formalization</label>
+            </value>
+            <value>
+                <fullName>Use of Credits, Return, Receipt of Discharge and Reports</fullName>
+                <default>false</default>
+                <label>Use of Credits, Return, Receipt of Discharge and Reports</label>
+            </value>
+            <value>
+                <fullName>Collections Portal</fullName>
+                <default>false</default>
+                <label>Collections Portal</label>
+            </value>
+            <value>
+                <fullName>Circularization Letters – Clients</fullName>
+                <default>false</default>
+                <label>Circularization Letters – Clients</label>
+            </value>
+            <value>
+                <fullName>Debit or Credit Notes</fullName>
+                <default>false</default>
+                <label>Debit or Credit Notes</label>
+            </value>
+            <value>
+                <fullName>SNOW CREDENTIALS</fullName>
+                <default>false</default>
+                <label>SNOW CREDENTIALS</label>
+            </value>
+            <value>
+                <fullName>Comments</fullName>
+                <default>false</default>
+                <label>Comments</label>
+            </value>
+            <value>
+                <fullName>Service Now Ticket URL</fullName>
+                <default>false</default>
+                <label>Service Now Ticket URL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

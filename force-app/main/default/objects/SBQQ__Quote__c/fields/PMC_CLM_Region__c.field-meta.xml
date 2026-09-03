@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_Region__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &gt;= 1000 &amp;&amp; VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &lt;= 1999, &apos;US&apos;,
+
+IF(VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &gt;= 2000 &amp;&amp; VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &lt;= 2999 , &apos;Canada&apos;,
+
+IF(VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &gt;= 4000 &amp;&amp; VALUE(LEFT( PMC_CPQ_SalesArea__r.PMC_SS_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c ,4)
+) &lt;= 4999, &apos;Brazil&apos;,&apos;&apos; 
+
+)
+
+)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

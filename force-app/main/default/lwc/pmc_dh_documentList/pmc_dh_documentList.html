@@ -1,0 +1,37 @@
+<template>
+  <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+  <p class="header-text slds-m-top_medium slds-m-bottom_x-large">
+    {labels.pmc_documentsList_myDocument}
+  </p>
+  <c-pmc_dh_message-banner type="info" message={labels.pmc_documentsList_documentText}>
+  </c-pmc_dh_message-banner>
+
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_search-filters-doc search-input-label={labels.pmc_documentsList_searchDocuments} filters={filters}
+      onsearchev={handleSearch} variation="document" onapplyfilterev={handleApplyFilter} onclearfilterev={clearFilters}
+      onclearsearchinputsev={clearSearchInputs}>
+    </c-pmc_dh_search-filters-doc>
+
+    <template if:false={isResultSetEmpty}>
+      <c-pmc_dh_custom-datatable table-description={labels.pmc_documentsList_documentList} columns={columns}
+        table-data={filteredData} default-sort-order={defaultSortOrder} onrowactionselection={rowActionHandler}>
+      </c-pmc_dh_custom-datatable>
+    </template>
+
+    <template if:true={docList.length}>
+      <div class="pagination slds-m-bottom_medium">
+        <c-pmc_dh_pagination generickey="id" genericdata={docList} class="mydatatable slds-table_striped"
+          no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData} modal-theme>
+        </c-pmc_dh_pagination>
+      </div>
+    </template>
+
+    <div lwc:if={isResultSetEmpty} class="no-results-msg">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

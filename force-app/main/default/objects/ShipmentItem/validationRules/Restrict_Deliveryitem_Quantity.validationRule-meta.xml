@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Deliveryitem_Quantity</fullName>
+    <active>false</active>
+    <description>Restriction to Edit the Quantity after Completely Shipped</description>
+    <errorConditionFormula>ISCHANGED(Quantity)  &amp;&amp;  
+(ISPICKVAL(Shipment.PMC_CPQ_DeliveryStatus__c, &apos;Completely Shipped&apos;))</errorConditionFormula>
+    <errorDisplayField>Quantity</errorDisplayField>
+    <errorMessage>You cannot update the quantity field when the Delivery Status
+is Completely Shipped</errorMessage>
+</ValidationRule>

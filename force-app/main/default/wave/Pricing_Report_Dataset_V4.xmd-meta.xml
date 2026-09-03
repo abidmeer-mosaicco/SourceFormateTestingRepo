@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset>Pricing_Report_Dataset_V4</dataset>
+    <dimensions>
+        <field>Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>Id</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>SBQQ__Quot.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>SBQQ__Quot.Id</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>SBQQ__ProductName__c</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>PMC_CPQ_Pr.PMC_CPQ_ProductName__c</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PMC_CPQ_Pr.Location.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>PMC_CPQ_Pr.Location.Id</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>SBQQ__Quot.PMC_CPQ_AccountManager__c</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>false</linkTemplateEnabled>
+        <recordIdField>SBQQ__Quot.PMC_CPQ_AccountManager__c</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>User.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>SBQQ__Quot.PMC_CPQ_AccountManager__c</recordIdField>
+        <salesforceActionsEnabled>false</salesforceActionsEnabled>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>3.Between target price and ceiling price</bin>
+                <formatValue xsi:nil="true"/>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>1.Below Floor Price</bin>
+                <formatValue xsi:nil="true"/>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>2.Between floor price and target price</bin>
+                <formatValue xsi:nil="true"/>
+                <label xsi:nil="true"/>
+                <sortIndex>2</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>4.Above Ceiling price</bin>
+                <formatValue xsi:nil="true"/>
+                <label xsi:nil="true"/>
+                <sortIndex>3</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>PMC_CPQ_PriceComparison_formula</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>categories</type>
+        </conditionalFormatting>
+        <field>PMC_CPQ_PriceComparison_formula</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Above Ceiling price</label>
+            <member>4.Above Ceiling price</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Between target price and ceiling price</label>
+            <member>3.Between target price and ceiling price</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>Between floor price and target price</label>
+            <member>2.Between floor price and target price</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>Below Floor Price</label>
+            <member>1.Below Floor Price</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>Above Ceiling price</label>
+            <member>4.Above Ceiling price</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <members>
+            <label>Between floor price and target price</label>
+            <member>2.Between floor price and target price</member>
+            <sortIndex>5</sortIndex>
+        </members>
+        <members>
+            <label>Below Floor Price</label>
+            <member>1.Below Floor Price</member>
+            <sortIndex>6</sortIndex>
+        </members>
+        <members>
+            <label>Between target price and ceiling price</label>
+            <member>3.Between target price and ceiling price</member>
+            <sortIndex>7</sortIndex>
+        </members>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PMC_CPQ_QuoteCreatedDateMonth_formula</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Jan</label>
+            <member>1.January</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Feb</label>
+            <member>2.February</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>Mar</label>
+            <member>3.March</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>Apr</label>
+            <member>4.April</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>May</label>
+            <member>5.May</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <members>
+            <label>Jun</label>
+            <member>6.June</member>
+            <sortIndex>5</sortIndex>
+        </members>
+        <members>
+            <label>Jul</label>
+            <member>7.July</member>
+            <sortIndex>6</sortIndex>
+        </members>
+        <members>
+            <label>Aug</label>
+            <member>8.August</member>
+            <sortIndex>7</sortIndex>
+        </members>
+        <members>
+            <label>Sep</label>
+            <member>9.September</member>
+            <sortIndex>8</sortIndex>
+        </members>
+        <members>
+            <label>Oct</label>
+            <member>10.October</member>
+            <sortIndex>9</sortIndex>
+        </members>
+        <members>
+            <label>Nov</label>
+            <member>11.November</member>
+            <sortIndex>10</sortIndex>
+        </members>
+        <members>
+            <label>Dec</label>
+            <member>12.December</member>
+            <sortIndex>11</sortIndex>
+        </members>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PMC_SS_Acc.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>PMC_SS_Acc.Id</recordIdField>
+        <sortIndex>8</sortIndex>
+    </dimensions>
+</WaveXmd>

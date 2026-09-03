@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_LegalHoldStatus__c</fullName>
+    <label>Legal Hold Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Legal Hold Inactive</fullName>
+                <default>true</default>
+                <label>Legal Hold Inactive</label>
+            </value>
+            <value>
+                <fullName>Legal Hold Active</fullName>
+                <default>false</default>
+                <label>Legal Hold Active</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

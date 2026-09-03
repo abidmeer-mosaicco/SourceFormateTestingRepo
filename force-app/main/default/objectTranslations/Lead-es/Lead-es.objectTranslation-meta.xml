@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <description>Tipo de registro de Leads por defecto</description>
+        <label><!-- Lead --></label>
+        <name>PMC_SS_Lead</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Asegúrese de que este Lead tiene una dirección antes de marcar el status del Lead como cualificado para ventas o convertido.</errorMessage>
+        <name>PMC_SS_PopulateAddressonLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Los usuarios de marketing no pueden convertir Leads</errorMessage>
+        <name>PMC_SS_PreventStatusChangetoConverted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Crops field value. --></errorMessage>
+        <name>PMC_SS_ReqFieldsToChangeStatusSAL_Crops</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out First Name field value. --></errorMessage>
+        <name>PMC_SS_ReqFieldsToChangeStatusSAL_FName</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Farm Size field value. --></errorMessage>
+        <name>PMC_SS_ReqFieldsToChangeStatusSAL_Farm</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Phone field value. --></errorMessage>
+        <name>PMC_SS_ReqFieldsToChangeStatusSAL_Phone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill out Zip/Postal field value. --></errorMessage>
+        <name>PMC_SS_ReqFieldsToChangeStatusSAL_Postal</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Por favor, introduzca un &quot;Motivo de rechazo&quot; que indique por qué el status de este Lead es &quot;Perdido&quot;.&quot;</errorMessage>
+        <name>PMC_SS_RequiredRejectionReason</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label>Reinscribirse en Marketing Cloud</label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label>Cancelar suscripción en Marketing Cloud</label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label>Enviar email de Marketing Cloud</label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_SMS --></label>
+        <name>et4ae5__Send_ExactTarget_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+</CustomObjectTranslation>

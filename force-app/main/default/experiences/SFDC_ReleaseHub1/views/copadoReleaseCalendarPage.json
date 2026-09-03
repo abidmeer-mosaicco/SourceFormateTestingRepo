@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "965dad52-2f18-4121-a576-19496f28fb98",
+  "label" : "Copado Release Calendar Page",
+  "regions" : [ {
+    "id" : "3ea07d26-daf5-4b29-8498-89e827672128",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:releaseCalendar",
+      "id" : "1969451b-bf17-450c-8e98-e86dc5a80731",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c4e76925-e338-43f7-b55f-60eeb0bf69f6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "e87165c1-39b0-41ce-a9cb-0017b2a3b767",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Copado Release Calendar Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0fc2c97a-2880-4077-b544-1e8867ad454d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "67b80da1-da7b-40a0-9712-329c5d4e02ed",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-copado-release-calendar-page"
+}

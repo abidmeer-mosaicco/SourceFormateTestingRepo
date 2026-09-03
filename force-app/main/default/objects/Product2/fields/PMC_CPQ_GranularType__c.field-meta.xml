@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_GranularType__c</fullName>
+    <description>This field captures the Granular Type value for each product record</description>
+    <inlineHelpText>This field captures the Granular Type value for each product record</inlineHelpText>
+    <label>Granular Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Granular</fullName>
+                <default>false</default>
+                <label>Granular</label>
+            </value>
+            <value>
+                <fullName>Fine</fullName>
+                <default>false</default>
+                <label>Fine</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>Powder</fullName>
+                <default>false</default>
+                <label>Powder</label>
+            </value>
+            <value>
+                <fullName>Pellets</fullName>
+                <default>false</default>
+                <label>Pellets</label>
+            </value>
+            <value>
+                <fullName>Coarse</fullName>
+                <default>false</default>
+                <label>Coarse</label>
+            </value>
+            <value>
+                <fullName>Rock</fullName>
+                <default>false</default>
+                <label>Rock</label>
+            </value>
+            <value>
+                <fullName>Wet Rock</fullName>
+                <default>false</default>
+                <label>Wet Rock</label>
+            </value>
+            <value>
+                <fullName>Liquid</fullName>
+                <default>false</default>
+                <label>Liquid</label>
+            </value>
+            <value>
+                <fullName>Microgranulated</fullName>
+                <default>false</default>
+                <label>Microgranulated</label>
+            </value>
+            <value>
+                <fullName>Farelado</fullName>
+                <default>false</default>
+                <label>Farelado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>SA Master Data GTM</name>
+    <queueMembers>
+        <users>
+            <user>alexandre.sartori@mosaicco.com.prod</user>
+            <user>bruno.benatti@mosaicco.com.br.prod</user>
+            <user>felipe.boresztein@mosaicco.com.prod</user>
+            <user>felipe.sabia@mosaicco.com.prod</user>
+            <user>fernando.guerra@mosaicco.com.br.prod</user>
+            <user>filipe.miranda@mosaicco.com.prod</user>
+            <user>frederico.seckler@mosaicco.com.prod</user>
+            <user>isaac.marcondes@mosaicco.com.prod</user>
+            <user>juliana.santos3@mosaicco.com.prod</user>
+            <user>larissa.oliveira2@mosaicco.com.prod</user>
+            <user>lucas.codognotto@mosaicco.com.prod</user>
+            <user>lucas.zanolla@mosaicco.com.prod</user>
+            <user>patricia.hiramatsu@mosaicco.com</user>
+            <user>paulo.lazzarini@mosaicco.com</user>
+            <user>rogerio.medeiros@mosaicco.com.prod</user>
+            <user>vanessa.ribeiro@mosaicco.com.prod</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "b045161f-0365-4c1b-a9c0-480127f1e4a3",
+  "label" : "Monitoreo de agua subterránea",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9bdbcf74-e766-4c49-bef9-eda856f40400",
+          "columns" : [ {
+            "UUID" : "ecec1d30-7e4d-4ae3-bfcb-f808869ab591",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9bdbcf74-e766-4c49-bef9-eda856f40400",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "6c2a3b5e-32cf-4ea6-8d77-4f964d73a5e6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ecec1d30-7e4d-4ae3-bfcb-f808869ab591",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7f5267dd-2164-4587-820e-736dcfd6fa9b",
+          "columns" : [ {
+            "UUID" : "a6071558-a912-4e3d-adc4-0b26e7770329",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7f5267dd-2164-4587-820e-736dcfd6fa9b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP21"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "e4ef5b6c-bdde-43fa-b043-f67c9939ca3f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a6071558-a912-4e3d-adc4-0b26e7770329",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 88,
+        "sectionConfig" : {
+          "UUID" : "1a65e60d-cbfe-4dd5-8633-cc297eb8f0bc",
+          "columns" : [ {
+            "UUID" : "cffd55cb-3570-4b28-b98d-cdd79528d6b2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "41bee169-9ba4-4fb6-a6f5-18a5a416f8cb",
+            "columnKey" : "f9562",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d5395f04-e3a1-4cca-845c-bc0352ba0827",
+            "columnKey" : "7e3cf",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3c4b694a-5275-4d8c-9c5a-ec08654b66a4",
+            "columnKey" : "8794b",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f6dae2d7-e8e0-41fc-a962-70212bcb5d6d",
+            "columnKey" : "b0734",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ef28855a-67c6-4046-be08-a3ef4a29a89f",
+            "columnKey" : "4d525",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1a65e60d-cbfe-4dd5-8633-cc297eb8f0bc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "de3e6908-e0a5-445b-a08a-79cc3d3af361",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cffd55cb-3570-4b28-b98d-cdd79528d6b2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "41bee169-9ba4-4fb6-a6f5-18a5a416f8cb",
+        "regionLabel" : "Column 2",
+        "regionName" : "f9562",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d5395f04-e3a1-4cca-845c-bc0352ba0827",
+        "regionLabel" : "Column 3",
+        "regionName" : "7e3cf",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3c4b694a-5275-4d8c-9c5a-ec08654b66a4",
+        "regionLabel" : "Column 4",
+        "regionName" : "8794b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f6dae2d7-e8e0-41fc-a962-70212bcb5d6d",
+        "regionLabel" : "Column 5",
+        "regionName" : "b0734",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ef28855a-67c6-4046-be08-a3ef4a29a89f",
+        "regionLabel" : "Column 6",
+        "regionName" : "4d525",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "22d2b4ea-2b20-444f-8834-cd7d2bc2449c",
+          "columns" : [ {
+            "UUID" : "711c6ef0-c56f-46cb-a08a-277786ff2bea",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "22d2b4ea-2b20-444f-8834-cd7d2bc2449c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Monitoreo de Agua Subterránea </strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f786b7bd-860b-4339-90ce-d5172127afc0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "711c6ef0-c56f-46cb-a08a-277786ff2bea",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "4bbfcb8e-8c94-41b0-9039-7dcf910df413",
+          "columns" : [ {
+            "UUID" : "e66fcedf-7085-44e0-9348-22b9c82ed7e4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f96671c4-71cc-4503-8822-15b7cd3545a3",
+            "columnKey" : "9850c",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a04e2756-3363-4b11-8e94-68f66ad1d6e8",
+            "columnKey" : "c56b5",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bf93f25c-e854-4bcd-9abd-99aec762d0d0",
+            "columnKey" : "52d9d",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2ba17aa1-74ae-4a38-8e58-a8cc3ed00cdd",
+            "columnKey" : "83c54",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "99b17573-821e-48a7-bc28-4c92a1b989e4",
+            "columnKey" : "3029d",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4bbfcb8e-8c94-41b0-9039-7dcf910df413",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "8d1000b2-798e-41aa-9e76-c120af8040ef",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e66fcedf-7085-44e0-9348-22b9c82ed7e4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f96671c4-71cc-4503-8822-15b7cd3545a3",
+        "regionLabel" : "Column 2",
+        "regionName" : "9850c",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "a04e2756-3363-4b11-8e94-68f66ad1d6e8",
+        "regionLabel" : "Column 3",
+        "regionName" : "c56b5",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "bf93f25c-e854-4bcd-9abd-99aec762d0d0",
+        "regionLabel" : "Column 4",
+        "regionName" : "52d9d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2ba17aa1-74ae-4a38-8e58-a8cc3ed00cdd",
+        "regionLabel" : "Column 5",
+        "regionName" : "83c54",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "99b17573-821e-48a7-bc28-4c92a1b989e4",
+        "regionLabel" : "Column 6",
+        "regionName" : "3029d",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "8a9d51a8-ffe1-491d-8bfd-481e63affbc0",
+          "columns" : [ {
+            "UUID" : "7deba89c-edac-48dd-a64f-cce707308257",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8a9d51a8-ffe1-491d-8bfd-481e63affbc0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ad76906d-f7ee-4364-8c5c-f951f933ce9d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Hacer un seguimiento de las 4 estaciones sobre los diferentes parámetros de metales disueltos y del nivel freático del agua de mar. Cabe mencionar, que la frecuencia de los monitoreos es de forma mensual para nivel freático y trimestral para materiales disueltos.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "1c0c99a6-4900-4207-a8a7-08acd56945c5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"color: rgb(72, 72, 72); font-size: 22px;\">Ubicación de estaciones:</strong><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">&nbsp;AS-MI-70 (Al sur oeste de la poza de evaporación), AS-MI-75 (Al sur oeste de la poza de evaporación), AS-MI-80 (Al sur de la poza de evaporación), AS-MI-85 (Al sur de la poza de evaporación).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cac5a5ca-d5ff-4898-92c2-65d3ef9021ec",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7deba89c-edac-48dd-a64f-cce707308257",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "b88b09df-e99b-4697-8722-b4e49ba6ec84",
+          "columns" : [ {
+            "UUID" : "53642112-d82f-462b-8402-b5b98943c586",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b88b09df-e99b-4697-8722-b4e49ba6ec84",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "2",
+            "pageName" : "pageP29"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "0ad4db57-9e8e-47c2-b21b-96839476183b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "53642112-d82f-462b-8402-b5b98943c586",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "62b366fe-725d-490e-ab51-edaa907de28e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo de agua subterránea"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "15f4ee96-27e2-42c8-9d83-27dcd13a2558",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "35fc4f9c-770e-4777-8ef5-c3b4de86aa5c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-agua-subterrnea"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VendasPortoQualidade</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.TYPE</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <filterScope>Queue</filterScope>
+    <label>Vendas Porto Qualidade</label>
+    <queue>VendasPortoQualidade</queue>
+    <sharedTo>
+        <role>Admin</role>
+        <role>PMC_Leadership</role>
+        <role>PMC_SS_SACustomerServiceLead</role>
+        <role>PMC_SS_SACustomerServiceManager</role>
+        <role>PMC_SS_SARebatesandCommissionsAnalyst</role>
+        <role>PMC_SS_SASalesServiceAnalystSSA</role>
+        <role>PMC_SS_SASalesServiceRepresentativeSSR</role>
+    </sharedTo>
+</ListView>

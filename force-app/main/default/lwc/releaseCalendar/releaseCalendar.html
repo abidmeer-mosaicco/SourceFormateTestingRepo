@@ -1,0 +1,44 @@
+<template>
+    <div class="rc">
+        <div class="rc-toolbar">
+            <div class="rc-brand">
+                <h1><span class="year">{year}</span> Release Calendar</h1>
+            </div>
+
+            <div class="rc-controls">
+                <lightning-combobox class="ctrl year" label="Year" value={yearString} options={yearOptions}
+                    onchange={onYearChange}>
+                </lightning-combobox>
+            </div>
+        </div>
+
+        <div class="rc-layout">
+            <div class="rc-grid">
+                <template for:each={months} for:item="m">
+                    <section class="month" key={m.index}>
+                        <header class="month-head">{m.label}</header>
+
+                        <div class="dow">
+                            <template for:each={dowLabels} for:item="d">
+                                <span key={d.id}>{d.label}</span>
+                            </template>
+                        </div>
+
+                        <div class="days">
+                            <template for:each={m.cells} for:item="c">
+                                <div key={c.key} class={c.className} title={c.tooltip} style={c.style}>{c.text}</div>
+                            </template>
+                        </div>
+                    </section>
+                </template>
+            </div>
+
+            <aside class="legend">
+                <div class="legend-title">Legend</div>
+                <div class="legend-item"><span class="swatch mosaic"></span>Mosaic Regular Release</div>
+                <div class="legend-item"><span class="swatch blackout"></span>Blackout Dates</div>
+                <div class="legend-item"><span class="swatch seasonal"></span>Salesforce Seasonal Release</div>
+            </aside>
+        </div>
+    </div>
+</template>

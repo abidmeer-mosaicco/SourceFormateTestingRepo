@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store Opportunity Owner Ids of the Opportunity Owner</description>
+        <name>AddOpportunityOwnerToListFor10DaysTask</name>
+        <label>Add Opportunity Owner To List For 10 Days Task</label>
+        <locationX>578</locationX>
+        <locationY>576</locationY>
+        <assignmentItems>
+            <assignToReference>lstOpportunityOwnerIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SendOpportunitySittingInAnalysisSinceLast10DaysNotificationSubFlow</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Store Opportunity Owner Ids of the Opportunity Owner</description>
+        <name>AddOpportunityOwnerToListFor45DaysTask</name>
+        <label>Add Opportunity Owner To List For 45 Days Task</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <assignmentItems>
+            <assignToReference>lstOpportunityOwnerIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SendOpportunityClosingInNext45DaysNotificationSubFlow</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Update the value of boolean variable to true</description>
+        <name>UpdateBooleanVariableValue</name>
+        <label>Update Boolean Variable Value</label>
+        <locationX>50</locationX>
+        <locationY>792</locationY>
+        <assignmentItems>
+            <assignToReference>boolIs45TaskCreated</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>CreateTaskDecision</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Holds the name of the flow</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AutomateTaskForOpportunityOwnerToScheduleTouchpointFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Process switch custom setting value check to bypass flow.</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>182</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>CreateTaskDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Element to check whether to create a task for 45 days closure date or task is in Analysis stage since last 10 days.</description>
+        <name>CreateTaskDecision</name>
+        <label>Create Task Decision</label>
+        <locationX>578</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CreateTaskDecision_OpportunityClosingIn45days</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>strOpportunityCloseDateFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_CreateTask_OpportunityCloseDateDuration</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>boolIs45TaskCreated</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create45DaysTask</targetReference>
+            </connector>
+            <label>Opportunity Closing In 45 days</label>
+        </rules>
+        <rules>
+            <name>CreateTaskDecision_OpportunityInAnalysisSince10Days</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4 AND 5</conditionLogic>
+            <conditions>
+                <leftValueReference>strAnalysisStageDurationFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Label.PMC_SS_CreateTask_OpportunityAnalysisStageDuration</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_AnalysisStageDate__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Analysis</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create10DaysInactiveOpportunityTask</targetReference>
+            </connector>
+            <label>Opportunity In Analysis Since 10 Days</label>
+        </rules>
+    </decisions>
+    <description>This flow will be executed to automate Tasks for Opportunity Owner to schedule a Touchpoint with a Customer to continue analysis of an Opportunity.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>boolAnalysisStageDurationFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+(
+TODAY() - {!$Record.PMC_SS_AnalysisStageDate__c}
+)
++ 1 = 
+VALUE({!$Label.PMC_SS_CreateTask_OpportunityAnalysisStageDuration}) 
++ 1, 
+true, 
+false
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Returns due date 5 days from today</description>
+        <name>date5DaysDueDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 5</expression>
+    </formulas>
+    <formulas>
+        <description>Returns due date 7 days from today</description>
+        <name>date7DaysDueDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 7</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the body of the notification</description>
+        <name>str10DaysNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;A Task has been assigned to you for Opportunity &apos;+ {!$Record.Name} +&apos; as it is in Analysis for 10 days. Please take appropriate action.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Holds the Notification Title</description>
+        <name>str10DaysNotificationTitleFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Opportunity &apos;+ {!$Record.Name} +&apos; is in Analysis for 10 days.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the Description of a Task</description>
+        <name>str10DaysTaskDescriptionFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Your Opportunity &apos;+ {!$Record.Name} +&apos; is in Analysis for 10 days. Please review details around that Opportunity to ensure that it is up to date, and schedule a touchpoint with the customer to ensure momentum continues moving forward!&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the subject of a Task</description>
+        <name>str10DaysTaskSubjectFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Opportunity &apos;+ {!$Record.Name} +&apos; is in Analysis for 10 days.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the body of the notification</description>
+        <name>str45DaysNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;A Task has been assigned to you for Opportunity &apos;+ {!$Record.Name} +&apos; as it is set to close in 45 days. Please take appropriate action.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Holds the Notification Title</description>
+        <name>str45DaysNotificationTitleFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Opportunity &apos; + {!$Record.Name} + &apos; is closing in 45 days.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the Description of a Task</description>
+        <name>str45DaysTaskDescriptionFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Your Opportunity &apos;+ {!$Record.Name} +&apos; is set to close in 45 days. Please review details around that Opportunity to ensure that it is up to date, and schedule a touchpoint with the customer to ensure momentum continues moving forward!&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the subject of a Task</description>
+        <name>str45DaysTaskSubjectFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Opportunity &apos;+ {!$Record.Name} +&apos; Closing in 45 days.&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>strAnalysisStageDurationFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT
+(
+TODAY() - {!$Record.PMC_SS_AnalysisStageDate__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>strOpportunityCloseDateFormula</name>
+        <dataType>String</dataType>
+        <expression>TEXT( 
+{!$Record.CloseDate} - TODAY()
+)</expression>
+    </formulas>
+    <interviewLabel>PMC SS Notify Opportunity Owner To Initiate Proposal Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Automate Task For Opportunity Owner To Schedule Touchpoint Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create10DaysInactiveOpportunityTask</name>
+        <label>Create 10 Days Inactive Opportunity Task</label>
+        <locationX>578</locationX>
+        <locationY>468</locationY>
+        <connector>
+            <targetReference>AddOpportunityOwnerToListFor10DaysTask</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>date5DaysDueDateFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>str10DaysTaskDescriptionFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>str10DaysTaskSubjectFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create45DaysTask</name>
+        <label>Create 45 Days Task</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <connector>
+            <targetReference>AddOpportunityOwnerToListFor45DaysTask</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>date7DaysDueDateFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>str45DaysTaskDescriptionFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>str45DaysTaskSubjectFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>314</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-05-16</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>SendOpportunityClosingInNext45DaysNotificationSubFlow</name>
+        <label>Send Opportunity Closing In Next 45 Days Notification Sub Flow</label>
+        <locationX>50</locationX>
+        <locationY>684</locationY>
+        <connector>
+            <targetReference>UpdateBooleanVariableValue</targetReference>
+        </connector>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>Create45DaysTask</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstOpportunityOwnerIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>str45DaysNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>str45DaysNotificationTitleFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>SendOpportunitySittingInAnalysisSinceLast10DaysNotificationSubFlow</name>
+        <label>Send Opportunity Sitting In Analysis Since Last 10 Days Notification Sub Flow</label>
+        <locationX>578</locationX>
+        <locationY>684</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>Create10DaysInactiveOpportunityTask</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstOpportunityOwnerIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>str10DaysNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>str10DaysNotificationTitleFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <description>This variable will be set to true when 45 days to opportunity close date task is created</description>
+        <name>boolIs45TaskCreated</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This variable will store opportunity owner IDs</description>
+        <name>lstOpportunityOwnerIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Variable to store the Id for the task record</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

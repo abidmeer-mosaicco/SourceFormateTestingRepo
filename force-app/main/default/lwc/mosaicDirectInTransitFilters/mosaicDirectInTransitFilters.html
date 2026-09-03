@@ -1,0 +1,86 @@
+<template>
+  <div class="md-filters-container" lwc:if={showFilters}>
+    <div class="md-header">
+      <p>{labels.md_reportfilters_headertitle}</p>
+    </div>
+
+    <div class="md-p-1">
+      <div class="md-text-filters" lwc:if={hasTextFields}>
+        <template for:each={textFieldRows} for:item="row">
+          <div key={row.key} class="md-filter-row md-filter-row-text md-input-box">
+            <template for:each={row.fields} for:item="field">
+              <div key={field.key} class="md-filter-item md-filter-item-text">
+                <lightning-input
+                  data-name={field.name}
+                  label={field.label}
+                  placeholder={field.placeholder}
+                  type={field.type}
+                  value={field.value}
+                  onchange={handleTextFieldChange}
+                ></lightning-input>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+
+      <div lwc:if={hasAdvancedFields}>
+        <button class="button-no-style" label={labels.md_reportfilters_advanced_filters} onclick={handleToggleAdvanced}>
+          <lightning-icon icon-name="utility:filterList" size="xx-small"></lightning-icon>
+          <span>{labels.md_reportfilters_advanced_filters}</span>
+        </button>
+      </div>
+
+      <div class={advancedContainerClass}>
+        <template for:each={advancedFieldRows} for:item="row">
+          <div key={row.key} class="md-filter-row md-filter-row-advanced md-input-box">
+            <template for:each={row.fields} for:item="section">
+              <div key={section.key} class="md-filter-item md-filter-item-advanced">
+                <template if:true={section.isDate}>
+                  <div class="slds-form-element">
+                    <label class="slds-form-element__label" for={section.name}>{section.label}</label>
+                    <div class="slds-form-element__control">
+                      <input
+                        type="date"
+                        id={section.name}
+                        data-name={section.name}
+                        class="slds-input"
+                        value={section.value}
+                        onchange={handleAdvancedChange}
+                      />
+                    </div>
+                  </div>
+                </template>
+                <template if:true={section.isText}>
+                  <lightning-input
+                    data-name={section.name}
+                    type="text"
+                    label={section.label}
+                    value={section.value}
+                    placeholder={section.placeholder}
+                    onchange={handleAdvancedChange}
+                  ></lightning-input>
+                </template>
+                <template if:true={section.isMultiSelect}>
+                  <c-mosaic-direct-multi-picklist
+                    data-name={section.name}
+                    label={section.label}
+                    options={section.options}
+                    value={section.value}
+                    placeholder={section.placeholder}
+                    onchange={handleAdvancedChange}
+                  ></c-mosaic-direct-multi-picklist>
+                </template>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+
+      <div class="md-filter-actions">
+        <button class="md-button md-light-button" title={labels.md_reportfilters_clear_btn} onclick={handleClearFilter}>{labels.md_reportfilters_clear_btn}</button>
+        <button class="md-button md-default-button" title={labels.md_reportfilters_apply_btn} onclick={handleApplyFilter}>{labels.md_reportfilters_apply_btn}</button>
+      </div>
+    </div>
+  </div>
+</template>

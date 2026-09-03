@@ -1,0 +1,35 @@
+.slds-box {
+    border-radius: 0.25rem;
+}
+
+.slds-theme_error {
+    background-color: #fef7f7;
+    border: 1px solid #ea001e;
+}
+
+.status-container {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disabled-overlay {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Button styling */
+lightning-button {
+    --slds-c-button-brand-color-background: #0070d2;
+    --slds-c-button-brand-color-background-hover: #005fb2;
+}

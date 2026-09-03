@@ -1,0 +1,10 @@
+<template>
+  <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+    <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+      icon-name="utility:search" alternative-text={labels.pmc_searchInput_search} onclick={handleSearchInput}>
+    </lightning-icon>
+    <lightning-input label={textLabel} placeholder={textPlaceholder} name={textName} onchange={handleDataChange}
+      onkeyup={handleKeyUp} value={_defaultValue} data-value={_defaultValue} data-name={textName}>
+    </lightning-input>
+  </div>
+</template>

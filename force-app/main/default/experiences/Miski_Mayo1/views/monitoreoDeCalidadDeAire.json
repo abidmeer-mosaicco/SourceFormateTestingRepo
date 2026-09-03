@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "4099d1ee-75c3-41f7-9f82-4ee912296d80",
+  "label" : "Monitoreo De Calidad De Aire",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "48470e79-82fe-4805-b59f-1695bd4a08f2",
+          "columns" : [ {
+            "UUID" : "eb92b37d-4ff4-470a-8fdd-58661833b999",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "48470e79-82fe-4805-b59f-1695bd4a08f2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "63da8f5f-7125-4099-aefd-767a5d256446",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "eb92b37d-4ff4-470a-8fdd-58661833b999",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f32988cf-6f25-45ea-b75d-36bb2761c4ca",
+          "columns" : [ {
+            "UUID" : "191f2d7e-be1b-4bd4-85c0-f7ca27a04590",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f32988cf-6f25-45ea-b75d-36bb2761c4ca",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP19"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "f5e0c714-3f02-476f-8060-230e16486ed1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "191f2d7e-be1b-4bd4-85c0-f7ca27a04590",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "a8679e4f-15a4-438a-9cae-23b34c7ada23",
+          "columns" : [ {
+            "UUID" : "8e1a5f2e-2275-4d06-9e36-6d2a03d06c0e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "507677cc-82e9-4721-929c-99ae6d14a0c4",
+            "columnKey" : "d075e",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1c9a4c2b-d407-447b-864d-1b19f72bb55b",
+            "columnKey" : "7f163",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8bbc857e-24f5-4f86-88e6-d8344c6e950f",
+            "columnKey" : "96978",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6c5d39e7-49c3-4088-b0c7-f244b059147b",
+            "columnKey" : "3bdef",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c1c609b5-7035-4a6f-be2f-a6f86dc5457d",
+            "columnKey" : "8241d",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a8679e4f-15a4-438a-9cae-23b34c7ada23",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "9f0e887e-6b57-4670-a4cf-3ebcabdba35f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8e1a5f2e-2275-4d06-9e36-6d2a03d06c0e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "507677cc-82e9-4721-929c-99ae6d14a0c4",
+        "regionLabel" : "Column 2",
+        "regionName" : "d075e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1c9a4c2b-d407-447b-864d-1b19f72bb55b",
+        "regionLabel" : "Column 3",
+        "regionName" : "7f163",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8bbc857e-24f5-4f86-88e6-d8344c6e950f",
+        "regionLabel" : "Column 4",
+        "regionName" : "96978",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6c5d39e7-49c3-4088-b0c7-f244b059147b",
+        "regionLabel" : "Column 5",
+        "regionName" : "3bdef",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c1c609b5-7035-4a6f-be2f-a6f86dc5457d",
+        "regionLabel" : "Column 6",
+        "regionName" : "8241d",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "a3c4b0ce-68d1-498a-9e47-5693166ea3fe",
+          "columns" : [ {
+            "UUID" : "9ee73392-e79a-4ca8-90f5-f7d5cf96b1e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a3c4b0ce-68d1-498a-9e47-5693166ea3fe",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Monitoreo de Calidad de Aire</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "62f033b4-224a-4987-90de-6728ba22ee30",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9ee73392-e79a-4ca8-90f5-f7d5cf96b1e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "f758b3e2-d81a-493a-8a8e-3e98c1b871a8",
+          "columns" : [ {
+            "UUID" : "eeaceebd-ff86-4555-b621-e4411ddd22d5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "dcfa50df-2ded-4c92-8539-fb74b4c221d1",
+            "columnKey" : "8c915",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f126e5d3-1d63-4e0e-878a-a3e058eaffe3",
+            "columnKey" : "b8ef1",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d7f0b949-6ff7-451f-94c3-78dec9975fc2",
+            "columnKey" : "083b8",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c301f889-9c6f-45a2-8d5a-4c99f77f37bc",
+            "columnKey" : "5f260",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "99ceec4b-4bf2-4df6-a12b-2ac9f8daeba3",
+            "columnKey" : "a5b86",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f758b3e2-d81a-493a-8a8e-3e98c1b871a8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "d5ef9e0e-6799-44d2-81db-5dcca408cfb5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "eeaceebd-ff86-4555-b621-e4411ddd22d5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "dcfa50df-2ded-4c92-8539-fb74b4c221d1",
+        "regionLabel" : "Column 2",
+        "regionName" : "8c915",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f126e5d3-1d63-4e0e-878a-a3e058eaffe3",
+        "regionLabel" : "Column 3",
+        "regionName" : "b8ef1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d7f0b949-6ff7-451f-94c3-78dec9975fc2",
+        "regionLabel" : "Column 4",
+        "regionName" : "083b8",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c301f889-9c6f-45a2-8d5a-4c99f77f37bc",
+        "regionLabel" : "Column 5",
+        "regionName" : "5f260",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "99ceec4b-4bf2-4df6-a12b-2ac9f8daeba3",
+        "regionLabel" : "Column 6",
+        "regionName" : "a5b86",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "a9d551a9-c0e7-43ba-9a1f-44cf66161852",
+          "columns" : [ {
+            "UUID" : "18a6b42c-af85-426c-b5ce-33b2fe4dd827",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a9d551a9-c0e7-43ba-9a1f-44cf66161852",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7abdc42c-d6dd-45dd-8318-711f10ccdb24",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Determinar las concentraciones de Gases y Material Particulado PM-10 y PM-2.5, en las 09 estaciones de monitoreo establecidas en la mina de Fosfatos Bayóvar.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Comparar los resultados de los parámetros de calidad de aire con los estándares establecidos en los Estándares Nacionales de Calidad Ambiental del Aire según el D.S. N°003-2017MINAM.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Analizar y correlacionar los parámetros meteorológicos de temperatura, humedad relativa, velocidad, precipitación pluvial y dirección del viento, con los parámetros de calidad de aire en el período de monitoreo.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Este monitoreo se realiza con frecuencia trimestral.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "be7b46f7-13d9-4f68-9f89-e3534b40f90d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"color: rgb(72, 72, 72); font-size: 22px;\">Ubicación de estaciones:</strong><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">&nbsp;AR-10 (Suroeste de la mina), AR-20 (Sur de la mina), AR-30 (Cantera Chorrillos), AR-40 (Noroeste de la mina), AR-50 (Oeste de la mina), AR-61 (Al norte del óvalo Bayóvar), AR-70 (Ganadero), AR-80 (Norte de cantera arenera), AR-90 (Caleta Puerto Rico).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "4447616b-5e1e-4f2b-b77b-418ccad9c88c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "18a6b42c-af85-426c-b5ce-33b2fe4dd827",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "cbfefaeb-ce74-4ba1-9105-029a74283402",
+          "columns" : [ {
+            "UUID" : "22650bd8-0eb6-4654-8030-6374c4bec3c1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cbfefaeb-ce74-4ba1-9105-029a74283402",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP26"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselStatic",
+          "id" : "32f977cc-f689-409a-bf3d-cbe4eb18561d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "22650bd8-0eb6-4654-8030-6374c4bec3c1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "41ffd219-3ca9-4484-bc7b-b7ebec5a69f8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo De Calidad De Aire"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7dfd128d-2111-49a5-a6d7-47e9b7fec1e2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "eb5fbb44-eee4-4eef-bdae-9e7182b05701",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-calidad-de-aire"
+}

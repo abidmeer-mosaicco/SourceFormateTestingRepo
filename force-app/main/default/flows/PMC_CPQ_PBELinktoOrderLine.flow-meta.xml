@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_List_Price_0</name>
+        <label>Assign List Price 0</label>
+        <locationX>407</locationX>
+        <locationY>1211</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ListPrice</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>AssignLatestSubscriptionToTheOrderLine</name>
+        <label>Assign Latest Subscription To The Order Line</label>
+        <locationX>187</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__Subscription__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__Subscription__r.PMC_CPQ_LatestSubscription__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CheckIfTheRecordIsNewOrUpdated</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>PricebookEntryAssignment</name>
+        <label>Pricebook Entry Assignment</label>
+        <locationX>143</locationX>
+        <locationY>1319</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PricebookEntryId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetPricebookEntry.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>QuotedListPriceAssignment</name>
+        <label>Quoted List Price Assignment</label>
+        <locationX>275</locationX>
+        <locationY>995</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__QuotedListPrice__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PMC_CPQ_ListPrice__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>RequiredFieldPresent</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>CheckIfLatestSubscriptionIsNotNull</name>
+        <label>Check If Latest Subscription Is Not Null</label>
+        <locationX>319</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>CheckIfTheRecordIsNewOrUpdated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfLatestSubscriptionIsNotNull_IfNotNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Subscription__r.PMC_CPQ_LatestSubscription__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignLatestSubscriptionToTheOrderLine</targetReference>
+            </connector>
+            <label>If Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckIfSubscriptionNotNull</name>
+        <label>Check If Subscription Not Null</label>
+        <locationX>473</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>CheckIfTheRecordIsNewOrUpdated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfSubscriptionNotNull_IfNotNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Subscription__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CheckIfLatestSubscriptionIsNotNull</targetReference>
+            </connector>
+            <label>If Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckIfTheRecordIsNewOrUpdated</name>
+        <label>Check If The Record Is New Or Updated</label>
+        <locationX>473</locationX>
+        <locationY>887</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfTheRecordIsNewOrUpdated_IfNew</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isRecordNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuotedListPriceAssignment</targetReference>
+            </connector>
+            <label>If New</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Config_Setting_Decision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>CheckIfSubscriptionNotNull</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSettingDecision_DontRunOutcome</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Profile.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Digital Hub</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Profile.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Mosaic Direct Partner Community</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>RequiredFieldPresent</name>
+        <label>Required Field Present</label>
+        <locationX>275</locationX>
+        <locationY>1103</locationY>
+        <defaultConnector>
+            <targetReference>Assign_List_Price_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RequiredFieldPresent_FieldPresent</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order.Pricebook2Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product2.PMC_CPQ_SAPProductCode__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetPricebookEntry</targetReference>
+            </connector>
+            <label>Field Present</label>
+        </rules>
+    </decisions>
+    <description>This flow will assign pricebook entry to order line, assign the List price to Quoted List Price and associate the subscription to the order line.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>isRecordNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>PMC CPQ PBE Link to OrderLine {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ PBE Link to OrderLine</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetPricebookEntry</name>
+        <label>Get Pricebook Entry</label>
+        <locationX>143</locationX>
+        <locationY>1211</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>PricebookEntryAssignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Pricebook2Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Order.Pricebook2Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_CPQ_ProductSKUCode__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Product2.PMC_CPQ_SAPProductCode__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CurrencyIsoCode</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Order.CurrencyIsoCode</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PricebookEntry</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Config_Setting_Decision</targetReference>
+        </connector>
+        <object>OrderItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

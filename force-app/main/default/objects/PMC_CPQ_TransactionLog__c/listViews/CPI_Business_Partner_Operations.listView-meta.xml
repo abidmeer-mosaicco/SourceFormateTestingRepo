@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPI_Business_Partner_Operations</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>PMC_CPQ_InterfaceURL__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>PMC_CPQ_IntegrationStatus__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_InterfaceURL__c</field>
+        <operation>equals</operation>
+        <value>/http/BPCreation</value>
+    </filters>
+    <filters>
+        <field>PMC_CPQ_InterfaceURL__c</field>
+        <operation>equals</operation>
+        <value>/http/BPModification</value>
+    </filters>
+    <label>SAP Business Partner Operations</label>
+</ListView>

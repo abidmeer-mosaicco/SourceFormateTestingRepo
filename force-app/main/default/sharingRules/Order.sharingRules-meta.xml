@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_REOrderNA</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This sharing rule is to provision Read and Edit Access to NA Orders.</description>
+        <label>RE Order NA</label>
+        <sharedTo>
+            <group>PMC_CPQ_NAOrderREAccessGroup</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Global,North America</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>PMC_CPQ_IsFPD__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_ROrderBR</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This sharing rule is to provision Read Access to BR Orders.</description>
+        <label>R Order BR</label>
+        <sharedTo>
+            <group>PMC_CPQ_BROrderRAccessGroup</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil,Global</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

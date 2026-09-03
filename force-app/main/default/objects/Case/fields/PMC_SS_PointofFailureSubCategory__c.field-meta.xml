@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_PointofFailureSubCategory__c</fullName>
+    <label>Point of Failure Sub-Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Dismissed or None</fullName>
+                <default>false</default>
+                <label>Dismissed or None</label>
+            </value>
+            <value>
+                <fullName>Operations Material Handling</fullName>
+                <default>false</default>
+                <label>Operations Material Handling</label>
+            </value>
+            <value>
+                <fullName>Operations Production</fullName>
+                <default>false</default>
+                <label>Operations Production</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Warehousing</fullName>
+                <default>false</default>
+                <label>Supply Chain Warehousing</label>
+            </value>
+            <value>
+                <fullName>Transportation Mosaic</fullName>
+                <default>false</default>
+                <label>Transportation Mosaic</label>
+            </value>
+            <value>
+                <fullName>Transportation Vendor</fullName>
+                <default>false</default>
+                <label>Transportation Vendor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

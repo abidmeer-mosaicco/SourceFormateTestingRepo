@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>FPD COMMENT</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_CPQ_TermsConditionsData__c</field>
+        <value xsi:type="xsd:string">• Lots of 1.000 MT of GMAP 11-52 and 1,000 MT of DAP will be priced final at time of BOL date using $303/MT FOB
+• Balance of 3,000 MT +/-10% of GMAP 11-52 and 2.000 MT +/-10% DAP will use the price referenced on sales confirmation as provisional pricing until final price date. 
+• Final FOB price for the remaining volume of 3,000 MT +/-10% of GMAP 11-52 and 2.000 MT +/-10% DAP will be called by noon Tampa, Fl time on Friday, December 20, 2019. Upon price final price declaration, a credit or debit memo will be issued for the difference between the provisional price and the final price.
+• If no price is declared or agreed to by noon, Tampa Fl time on Friday, December 20, 2019 the product will be final priced at that week’s publication formula price or the provisional price, whichever is higher.
+OR 
+* The total tonnage can be firm priced basis the formula price each week (by time Tampa time each date). All quantity to final price between contract date to (enter date).
+• Buyers may price the FPD tons in the lot sizes 1,000 MT and one lot of the balance of the total quantity.
+• It is required that product must be final priced before it leaves the Buyer’s port warehouse facility. Mosaic reserves the right to inspect the inventory at any time. 
+• The buyer may call the final price weekly basis the following formula mean of the average of FMB high and low price postings for MAP CFR BRAZIL, PROFERCY high and low price postings for MAP CFR BRAZIL, and FERTECON high and low price postings for MAP CFR Brazil for the issues published Thursday of that specific week. 
+• The vessel will be billed at the provisional price (listed on page 1) and the invoice paid at that price. A credit or debit memo will be issued after each portion of volume is final priced, for the difference between the provisional price and the final price declared. If a credit memo, the buyer can decide to receive a wire transfer or apply to a future purchase. A debit memo is due upon receipt.</value>
+    </values>
+</CustomMetadata>

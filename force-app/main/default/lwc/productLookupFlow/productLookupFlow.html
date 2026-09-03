@@ -1,0 +1,25 @@
+<template>
+    <lightning-input
+        type="text"
+        label={label}
+        value={searchKey}
+        placeholder={placeholder}
+        onchange={handleInputChange}>
+    </lightning-input>
+
+    <template if:true={hasResults}>
+        <ul class="slds-box slds-m-top_x-small" style="list-style-type: none; padding: 0;">
+            <template for:each={results} for:item="product">
+                <li
+                    key={product.Id}
+                    data-id={product.Id}
+                    data-name={product.PMC_CPQ_Product_Code_Name__c}
+                    onclick={handleResultClick}
+                    class="slds-p-around_x-small slds-border_bottom"
+                    style="cursor: pointer;">
+                    {product.PMC_CPQ_Product_Code_Name__c}
+                </li>
+            </template>
+        </ul>
+    </template>
+</template>

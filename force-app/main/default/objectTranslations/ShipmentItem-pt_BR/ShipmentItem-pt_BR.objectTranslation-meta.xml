@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <label>Padrão</label>
+        <name>PMC_CPQ_Default</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Trilho</label>
+        <name>PMC_CPQ_Rail</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>
+            <!-- You cannot update the quantity field when the Delivery Status
+is Completely Shipped -->
+        </errorMessage>
+        <name>Restrict_Deliveryitem_Quantity</name>
+    </validationRules>
+</CustomObjectTranslation>

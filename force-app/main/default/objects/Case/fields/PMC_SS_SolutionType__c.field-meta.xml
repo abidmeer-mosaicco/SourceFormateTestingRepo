@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SolutionType__c</fullName>
+    <description>Select the most appropriate Solution Type category</description>
+    <label>Solution Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Cargo Rejection / Exchange</fullName>
+                <default>false</default>
+                <label>Cargo Rejection / Exchange</label>
+            </value>
+            <value>
+                <fullName>Distressed Tonnage Moved to Scrap</fullName>
+                <default>false</default>
+                <label>Distressed Tonnage Moved to Scrap</label>
+            </value>
+            <value>
+                <fullName>No Quality Mitigation Required</fullName>
+                <default>false</default>
+                <label>No Quality Mitigation Required</label>
+            </value>
+            <value>
+                <fullName>On Site Remediation</fullName>
+                <default>false</default>
+                <label>On Site Remediation</label>
+            </value>
+            <value>
+                <fullName>Sales Credit</fullName>
+                <default>false</default>
+                <label>Sales Credit</label>
+            </value>
+            <value>
+                <fullName>Sales Price Adjustment</fullName>
+                <default>false</default>
+                <label>Sales Price Adjustment</label>
+            </value>
+            <value>
+                <fullName>Technical Information Provided</fullName>
+                <default>false</default>
+                <label>Technical Information Provided</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

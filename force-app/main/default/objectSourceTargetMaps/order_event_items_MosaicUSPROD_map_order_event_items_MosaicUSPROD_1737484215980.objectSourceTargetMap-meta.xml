@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.itemId__c</sourceField>
+        <sourceFormula>itemId</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.itemId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>DAYPRECISION(formulaField[&apos;eventTime__c&apos;])</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.EventDate__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.itemType__c</sourceField>
+        <sourceFormula>itemType</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.itemType__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;Mosaic US Production&quot;</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.InternalOrganization__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.quantity__c</sourceField>
+        <sourceFormula>quantity</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.quantity__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;MCIS_themosaiccompany&quot;</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.DataSource__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.price__c</sourceField>
+        <sourceFormula>price</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.price__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.orderEventId__c</sourceField>
+        <sourceFormula>orderEventId</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.orderEventId__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.sku__c</sourceField>
+        <sourceFormula>sku</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.sku__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>if(ISEMPTY(formulaField[&apos;eventTime&apos;])) { null; } else { DAYPRECISION(formulaField[&apos;eventTime&apos;]); }</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.cdp_sys_PartitionDate__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>System</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>&quot;order_event_items&quot;</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.DataSourceObject__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>UUID()</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.id__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>order_event_items_MosaicUSPROD.eventTime__c</sourceField>
+        <sourceFormula>eventTime</sourceFormula>
+        <targetField>order_event_items_MosaicUSPROD__dll.eventTime__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>order_event_items_MosaicUSPROD_map_order_event_items_MosaicUSPROD_1737484215980</masterLabel>
+    <sourceObjectName>order_event_items_MosaicUSPROD</sourceObjectName>
+    <targetObjectName>order_event_items_MosaicUSPROD__dll</targetObjectName>
+</ObjectSourceTargetMap>

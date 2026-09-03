@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Consent Information" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+        <div>
+            <p>We use cookies to personalize contents and ads. 
+            Please accept/reject the categories below to set your consent.</p>
+        </div>
+        <br>
+        <div>
+            <h2><b>Essential</b></h2>
+            <lightning-input 
+                data-id="toggleEssential" type="toggle" 
+                label="" checked={checkedEssential} 
+                onchange={changeToggleEssential} disabled="" 
+                message-toggle-active="" message-toggle-inactive="" 
+                read-only>
+            </lightning-input> <br/>
+            <h2><b>Preferences</b></h2>
+            <lightning-input 
+                data-id="togglePreferences" type="toggle" 
+                label="" checked={checkedPreferences} 
+                onchange={changeTogglePreferences} message-toggle-active="" 
+                message-toggle-inactive="">
+            </lightning-input> <br/>
+            <h2><b>Marketing</b></h2>
+            <lightning-input 
+                data-id="toggleMarketing" type="toggle" 
+                label="" checked={checkedMarketing} 
+                onchange={changeToggleMarketing} message-toggle-active="" 
+                message-toggle-inactive="" >
+            </lightning-input> <br/>
+            <h2><b>Statistics</b></h2>
+            <lightning-input 
+                data-id="toggleStatistics" type="toggle" 
+                label="" checked={checkedStatistics} 
+                onchange={changeToggleStatistics} 
+                message-toggle-active="" message-toggle-inactive="" >
+            </lightning-input> <br/>
+        </div>
+    </div>
+    <div>
+        <lightning-button 
+             class="slds-m-left_small nav-button"
+             label="Set Consent"
+             variant="brand"
+             onclick={handleClickSetConsent}>
+         </lightning-button>
+     </div>
+    </lightning-card>
+</template>

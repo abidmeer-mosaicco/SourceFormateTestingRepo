@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Your quote&apos;s price and/or quantity has been updated</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC_DH_YourQuotePriceQuantityHasBeenUpdated</name>
+    <relatedEntityType>SBQQ__Quote__c</relatedEntityType>
+    <style>none</style>
+    <subject>Your quote&apos;s price and/or quantity has been updated</subject>
+    <textOnly>[Image alt text: Mosaic] 
+
+{labels.pmc_emailTemplate_quoteUpdatedTitle}
+
+{labels.pmc_emailTemplate_quoteUpdatedBody}
+
+{labels.pmc_emailTemplate_quoteRequestNumber} {{{SBQQ__Quote__c.Name}}}
+
+{labels.pmc_emailTemplate_quoteId} {{{SBQQ__Quote__c.PMC_DH_QuoteFriendlyName__c}}}
+
+{labels.pmc_emailTemplate_companyName} {{{SBQQ__Quote__c.SBQQ__Account__c}}}
+
+{labels.pmc_emailTemplate_viewQuote} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_quoteNumber}{{{SBQQ__Quote__c.Name}}}{labels.pmc_emailTemplate_quoteIdUrl}{{{SBQQ__Quote__c.Id}}} &gt; 
+
+{labels.pmc_emailTemplate_copyPasteLink1}
+
+{labels.pmc_emailTemplate_copyPasteLink2}
+
+{labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_quoteNumber}{{{SBQQ__Quote__c.Name}}}{labels.pmc_emailTemplate_quoteIdUrl}{{{SBQQ__Quote__c.Id}}} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_quoteNumber}{{{SBQQ__Quote__c.Name}}}{labels.pmc_emailTemplate_quoteIdUrl}{{{SBQQ__Quote__c.Id}}} &gt; 
+
+{labels.pmc_emailTemplate_customerService1} {labels.pmc_emailTemplate_customerService2} &lt; {labels.pmc_emailTemplate_contactUsLink} &gt; {labels.pmc_emailTemplate_customerService3}
+
+{labels.pmc_emailTemplate_contactUs} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contactUsLink} &gt; 
+
+{labels.pmc_emailTemplate_copyright}</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

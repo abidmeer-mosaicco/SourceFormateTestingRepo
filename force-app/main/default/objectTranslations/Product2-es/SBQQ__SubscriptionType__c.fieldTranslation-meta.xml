@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Las Suscripciones Renovables se transferirán a los Presupuestos de Renovación. Las suscripciones únicas no se transferirán.</help>
+    <label>Tipo de suscripción</label>
+    <name>SBQQ__SubscriptionType__c</name>
+    <picklistValues>
+        <masterLabel>Evergreen</masterLabel>
+        <translation>Permanente</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One-time</masterLabel>
+        <translation>Una sola vez</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewable</masterLabel>
+        <translation>Renovable</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewable/Evergreen</masterLabel>
+        <translation>Renovables/Perennes</translation>
+    </picklistValues>
+</CustomFieldTranslation>

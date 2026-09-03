@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_SAP_Unique_Identifier_Criteria</name>
+        <label>Check SAP Unique Identifier Criteria</label>
+        <locationX>440</locationX>
+        <locationY>779</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SAP_Unique_Identifier_Criteria</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_ProductName__r.PMC_CPQ_SAPProductCode__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Location__r.PMC_CPQ_Plant__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_ProductLocationSAPIdentifier__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_SAP_Unique_Identifier_Field</targetReference>
+            </connector>
+            <label>SAP Unique Identifier Criteria</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckLocationisassociatedtoProductLocation</name>
+        <label>Check Location is associated to Product Location</label>
+        <locationX>440</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Check_SAP_Unique_Identifier_Criteria</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckLocationisassociatedtoProductLocation_LocationExist</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Location__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Name_Field_to_Location_Name</targetReference>
+            </connector>
+            <label>Location Exist</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ConfigSettingDecision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>CheckLocationisassociatedtoProductLocation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSettingDecision_DontRunOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <description>Modified as part of EIDGT-2400. Add element to populate external unique key value for PMC_CPQ_ProductLocationSAPIdentifier__c during Product creation and extension operations.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>strProductLocationSAPIdentifier</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.PMC_CPQ_ProductName__r.PMC_CPQ_SAPProductCode__c} + {!$Record.PMC_CPQ_Location__r.PMC_CPQ_Plant__c}</expression>
+    </formulas>
+    <interviewLabel>Update Name Field {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ After Create/Update ProductLocation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Error_Log</name>
+        <label>Error Log</label>
+        <locationX>440</locationX>
+        <locationY>995</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <stringValue>PMC_CPQ_AfterCreateProductLocationIntegration</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Updates the Name field value to Location Name</description>
+        <name>Update_Name_Field_to_Location_Name</name>
+        <label>Update Name Field to Location Name</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Check_SAP_Unique_Identifier_Criteria</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Log</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.PMC_CPQ_Location__r.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>PMC_CPQ_ProductLocationSAPIdentifier__c</description>
+        <name>Update_SAP_Unique_Identifier_Field</name>
+        <label>Update SAP Unique Identifier Field</label>
+        <locationX>176</locationX>
+        <locationY>887</locationY>
+        <faultConnector>
+            <targetReference>Error_Log</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_CPQ_ProductLocationSAPIdentifier__c</field>
+            <value>
+                <elementReference>strProductLocationSAPIdentifier</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSettingDecision</targetReference>
+        </connector>
+        <object>PMC_CPQ_ProductLocation__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

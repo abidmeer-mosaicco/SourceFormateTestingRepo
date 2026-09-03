@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_BaseUrl__c</fullName>
+    <description>DocuSign CLM (SpringCM) base URL for this environment, without trailing slash (e.g. https://na11.springcm.com for Production, https://uatna11.springcm.com for sandboxes). GCPM-5347.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>CLM Base URL</label>
+    <length>255</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

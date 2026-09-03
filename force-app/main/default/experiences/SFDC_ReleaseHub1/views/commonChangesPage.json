@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "4140f628-1076-4960-bdc3-d96fa1808990",
+  "label" : "Common Changes Page",
+  "regions" : [ {
+    "id" : "aa99f28a-1781-4e05-83c0-418a53dccae6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:documentCommonChanges",
+      "id" : "5abbeba2-f3ad-4353-aad2-cd80064a0ad1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8bf8605b-153e-46d8-8b68-ff9995fe72e5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "a257e325-dbf2-4325-be4a-2be3e0d1bcbd",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Common Changes Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "bcd4afad-25ed-4b09-abe9-deb75abe3c91",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2b689325-5e2c-4bf8-a608-506af6a310a2",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-common-changes-page"
+}

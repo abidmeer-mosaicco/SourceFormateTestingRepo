@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides View All, Modify All, Delete Permission on the Rebate object &amp; Field Level Security for Rebate object fields</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.PMC_SS_AnalysisStageDate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ProgramRebateType.PMC_SS_Forecasted_Quantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ProgramRebateType.PMC_SS_Projected_Incentive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ProgramRebateTypeBenefit.PMC_SS_Forecasted_Quantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ProgramRebateTypeBenefit.PMC_SS_Projected_Incentive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>RebateProgram.PMC_SS_Projected_Incentive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>VMD Rebate</label>
+    <license>RebateManagementPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UseMfgRebates</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_RequestStatusDuration__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(SBQQ__Status__c , &quot;Request&quot;) &amp;&amp; NOT( ISBLANK( PMC_CPQ_QuoteInRequestStatusTime__c  ) ) , TEXT(ROUND(  PMC_CPQ_PriorRequestStatusDuration__c  +((NOW() - PMC_CPQ_QuoteInRequestStatusTime__c )*24),1))&amp;&apos; Hours&apos; , TEXT( PMC_CPQ_PriorRequestStatusDuration__c  ) &amp;&apos; Hours&apos; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Request Status Duration</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

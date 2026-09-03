@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="pdfUrl" type="String" label="PDF Public URL" description="Enter the Public URL of the PDF" required="true"/>
+            <property name="modalTitle" type="String" label="PDF Title" description="Enter the Title of the PDF" required="true"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

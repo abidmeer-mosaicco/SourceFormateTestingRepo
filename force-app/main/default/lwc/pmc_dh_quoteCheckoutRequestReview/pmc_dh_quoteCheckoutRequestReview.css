@@ -1,0 +1,265 @@
+:host {
+  --sds-c-icon-color-foreground-default: var(--primary-green);
+  --dxp-c-link-text-decoration: underline;
+  --dxp-s-link-text-decoration-hover: underline;
+  --dxp-s-link-text-decoration-focus: underline;
+  --dxp-s-body-small-text-color: var(--primary-green);
+  --slds-g-color-border-base-1: var(--tertiary-green);
+}
+
+.custom-card {
+  margin-bottom: 24px;
+}
+
+.message-container {
+  margin-top: 24px;
+}
+
+.request-review-section {
+  overflow: hidden;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.payment-info {
+  padding: 0 8px;
+}
+
+.payment-section, .quote-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quote-section .custom-card,
+.payment-section .custom-card {
+  flex: 1;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.product-grid {
+  display: flex;
+}
+
+.product-grid .content-info {
+  padding-left: 32px;
+  padding-right: 32px;
+  min-width: fit-content;
+}
+
+.product-col {
+  min-width: 360px;
+  max-width: 360px;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.product-image {
+  max-width: 104px;
+  height: 104px;
+  background-color: var(--tertiary-grey);
+}
+
+.product-image img {
+  max-width: 104px;
+  height: 104px;
+}
+
+.product-info {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.product-info .product-name{
+  margin-bottom: 3px;
+}
+
+.product-name a,
+.product-name a:link,
+.product-name a:visited {
+  text-decoration: none;
+}
+
+.product-section .product-content {
+  padding-top: 16px;
+}
+
+.product-section .product-content:first-child {
+  padding-top: 0;
+}
+
+.product-section .product-content:last-child {
+  border-bottom: none;
+}
+
+.product-section .card-body {
+  padding-bottom: 0;
+}
+
+.product-section.custom-card,
+.contract-info_section.custom-card {
+  margin-top: 0;
+}
+
+.slds-scrollable_x {
+  max-width: calc(91.6vw - 32px);
+}
+
+.slds-table thead th {
+  font-family: var(--medium-font);
+  color: var(--dark-primary-green);
+  font-weight: 500;
+  font-size: var(--regular-font-size);
+  line-height: 19px;
+  background-color: var(--tertiary-green);
+  padding: 14.5px 10px;
+}
+
+.slds-table tbody td {
+  padding: 10px;
+  color: var(--dark-primary-green);
+}
+
+.shipping-info {
+  white-space: pre-wrap;
+  min-width: 160px;
+}
+
+.contract-info_content {
+  padding: 0 8px 8px;
+}
+
+.note-message {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 24px;
+  color: var(--primary-green);
+  font-size: var(--x-small-font-size);
+  line-height: 14px;
+}
+
+.slds-icon {
+  width: 14px;
+  height: 14px;
+  display: flex;
+}
+
+.slds-button {
+  padding: 13px 18px;
+  border: none;
+}
+
+.action-items .back-btn {
+  padding-right: 8px;
+}
+
+.action-items .submit-btn {
+  padding-left: 8px;
+}
+
+.action-items .back-btn button {
+  background: var(--light-green);
+  box-shadow: 0px 10px 30px #F7FBFA;
+}
+
+::-webkit-scrollbar-track {
+  margin: 0;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+@media screen and (min-width: 1400px) {
+  .slds-table {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .slds-table {
+    min-width: calc(91.6/100*1440px);
+    max-width: calc(91.6/100*1440px);
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-card {
+    margin-bottom: 16px;
+  }
+
+  .quote-section .custom-card,
+  .payment-section .custom-card {
+    margin-top: 0
+  }
+
+  .message-container {
+    margin-top: 16px;
+  }
+
+  .payment-section {
+    order: 1;
+  }
+
+  .payment-info,
+  .contract-info_content {
+    padding-bottom: 0;
+  }
+
+  .product-image {
+    display: none;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-col {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .product-grid .content-info, .product-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mobile-scroll {
+    max-width: calc(100vw - 74px);
+    overflow-x: auto;
+  }
+
+  .note-message {
+    margin-bottom: 16px;
+  }
+
+  .action-items .back-btn,
+  .action-items .submit-btn {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  .action-items .back-btn {
+    order: 1;
+  }
+
+  .product-content.slds-scrollable_x {
+    max-width: unset;
+  }
+}

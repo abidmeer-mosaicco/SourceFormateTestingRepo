@@ -1,0 +1,171 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "bfdfa7ac-2e78-4edf-b8ab-cbd7fc504d40",
+  "label" : "Test",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "804f76ec-9b7b-4b8e-b050-48349606feb9",
+          "columns" : [ {
+            "UUID" : "32035d7a-bf3b-4d0b-ae1b-f594b92f2b72",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0c2155ce-3b65-4792-ada9-97dd42259820",
+            "columnKey" : "16fd0",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e949f8a0-153f-4a6f-8e30-d8e69a0596a6",
+            "columnKey" : "e5cc6",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "804f76ec-9b7b-4b8e-b050-48349606feb9",
+      "regions" : [ {
+        "id" : "32035d7a-bf3b-4d0b-ae1b-f594b92f2b72",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0c2155ce-3b65-4792-ada9-97dd42259820",
+        "regionLabel" : "Column 2",
+        "regionName" : "16fd0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e949f8a0-153f-4a6f-8e30-d8e69a0596a6",
+        "regionLabel" : "Column 3",
+        "regionName" : "e5cc6",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(86,85,85)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "5b99d04a-bd96-4414-a3b5-9db0443e55c8",
+          "columns" : [ {
+            "UUID" : "a09d2aa7-134c-4ab5-8b3d-13109761d0cf",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5b99d04a-bd96-4414-a3b5-9db0443e55c8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "Replace this text with content of your own."
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9ab72eb9-9313-4aaf-af47-75d4f92f5e33",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a09d2aa7-134c-4ab5-8b3d-13109761d0cf",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4b8447af-1972-430e-b18f-ea5ae13d868a",
+          "columns" : [ {
+            "UUID" : "8126e784-a9c5-496e-9df0-ee2aa97215ce",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4b8447af-1972-430e-b18f-ea5ae13d868a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<ul style=\"list-style-type: none;\"><li>✓ Arroz</li><li>✓ Feijão</li><li>✓ Banana</li></ul>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "b6786d8c-5e72-4635-bd55-7d3b8f2d710d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6;\">\n  <p><span style=\"color: red;\">&#10003;</span> Iniciamos nuestra operación un 10 de julio de 2010.</p>\n  <p><span style=\"color: red;\">&#10003;</span> Pertenecemos al corporativo Mosaic Company, nuestro accionista mayoritario.</p>\n  <p><span style=\"color: red;\">&#10003;</span> Cumplimos nuestros compromisos contractuales con el Estado y la Comunidad, habiendo aportado 1,529.5 millones de soles hasta julio del 2024.</p>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "f6c73521-b61a-4d51-b587-2cd4d1a9865d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8126e784-a9c5-496e-9df0-ee2aa97215ce",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3d3bd777-4f94-4307-afa4-1324251560a1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Test"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d547d3cb-f6f1-4a86-8bf1-5952a5d86919",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "62ddc6db-e090-4cf1-a50a-b9cbfb301a87",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-test"
+}

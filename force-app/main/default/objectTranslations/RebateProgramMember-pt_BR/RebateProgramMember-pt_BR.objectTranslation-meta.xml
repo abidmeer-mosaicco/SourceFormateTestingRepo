@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Não é possível criar/atualizar o membro do programa de bônus quando o programa de bônus estiver inativo</errorMessage>
+        <name>PMC_SS_RestrictMemberModification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Os membros do programa de bônus não podem ser criados/editados nesse estágio. Altere o Contrato de Vendas para fazer revisões nos membros do programa de descontos.</errorMessage>
+        <name>PMC_SS_RestrictRebateProgramMemberEdit</name>
+    </validationRules>
+</CustomObjectTranslation>

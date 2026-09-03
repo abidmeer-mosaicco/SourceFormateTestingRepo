@@ -1,0 +1,42 @@
+.breadcrumb {
+  padding-top: 16px;
+}
+
+span {
+  padding: 0px 4px;
+  color: #D6D6D6;
+  font-family: var(--bold-font);
+  line-height: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none !important;
+}
+
+.text {
+  font-size: 14px;
+  color: #646E6E;
+}
+
+@media(max-width: 767px) {
+  a {
+    font-size: 12px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .breadcrumb {
+    padding-top: 0;
+  }
+  
+}

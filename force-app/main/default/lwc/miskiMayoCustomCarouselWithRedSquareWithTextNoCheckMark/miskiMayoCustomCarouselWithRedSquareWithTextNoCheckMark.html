@@ -1,0 +1,46 @@
+<template>
+    <!-- 2-column layout: left = texts | right = carousel -->
+    <div class="two-col">
+        <!-- LEFT COLUMN: PARAGRAPHS -->
+        <div class="left-panel">
+            <div class="left-scroll">
+                <template if:true={hasParagraphs}>
+                    <ul class="checklist" style={paragraphFontSizeStyle}>
+                        <template for:each={paragraphItems} for:item="p">
+                            <li key={p.key} class="check-item">
+                                <br>
+                                <div class="para-title">{p.title}</div>
+                                
+                                <div class="para-text">{p.value}</div>
+                                <br>
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="right-panel">
+            <div class="red-section">
+                <div class="carousel-section">
+                    <div class="slds-is-relative container" style={maxWidth}>
+                        <template for:each={slides} for:item="slide">
+                            <div class={slide.cardClasses} key={slide.slideIndex}>
+                                <img src={slide.image} class="image-width zoom-on-load"/>
+                            </div>
+                        </template>
+                        <a class="prev" onclick={backSlide}>&#10094;</a>
+                        <a class="next" onclick={forwardSlide}>&#10095;</a>
+                    </div>
+                    <!-- DOTS-->
+                    <div class="slds-text-align_center slds-p-around_medium">
+                        <template for:each={slides} for:item="slide">
+                            <span class={slide.dotClases} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

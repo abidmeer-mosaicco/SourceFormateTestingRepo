@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <label><!-- Default Event --></label>
+        <name>Default_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NA Event --></label>
+        <name>NA_Event</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please describe your goal with this customer interaction. --></errorMessage>
+        <name>PMC_GoalDescriptionRequired</name>
+    </validationRules>
+</CustomObjectTranslation>

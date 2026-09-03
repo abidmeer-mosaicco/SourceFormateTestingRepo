@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="text" type="String" label="Insert the Text" description="Insert the Text" required="true"/>
+            <property name="backGroundColor" type="String" label="Background Color " description="Background e Border Color (HEX format or color name)" default="white" required="true"/>
+            <property name="backGroundBorderColor" type="String" label="Text Background and Border Color " description="Background Color (HEX format or color name)" default="none"/>
+            <property name="iconName" type="String" label="Icon Name" description="Icon Name" required="true" default="fertilizante"/>
+            <property name="iconSize" type="String" label="Icon Size" description="Icon Size in rem" required="true"  default="7"/>
+            <property name="textColor" type="String" label="Text Color" description="Text Color" default="white"/>
+            <property name="fontSize" type="String" label="Font Size in Pixels" description="Font Size in Pixels" required="true" default="14"/>
+            <property name="bottonTextHeight" type="String" label="Bottom Text Height Size in Pixels" description="Bottom Text Height Size in Pixels" required="true" default="150"/>
+            <property name="cardHeight" type="String" label="Card Height Size in Pixels" description="Card Height Size in Pixels" required="true" default="450"/>
+            <property name="borderThickness" type="String" label="Border Thickness in Pixels" description="Border Thickness in Pixels" required="true" default="1"/>
+            <property name="borderColor" type="String" label="Insert the Border Color" description="Insert the Border Color" required="true" default="black"/>
+            <property name="backgroundOpacity" type="String" label="Icon Background Opacity" description="Number 0 to 9 for Icon Background Opacity"  default="5"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

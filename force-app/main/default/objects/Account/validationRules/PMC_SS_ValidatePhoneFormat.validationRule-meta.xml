@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ValidatePhoneFormat</fullName>
+    <active>true</active>
+    <description>Validate Phone Format for BR Accounts and Phone Lenght</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+ISPICKVAL(BillingCountryCode, &quot;BR&quot;),
+NOT(REGEX(Phone, &quot;^((\\+\\d{2}\\s)?\\(\\d{2}\\)\\s?\\d{4}\\d?\\-\\d{4})?$&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Phone Number lenght should not exceed 11 digits. For Brazil, please adjust Phone format to: (00) 00000-0000</errorMessage>
+</ValidationRule>

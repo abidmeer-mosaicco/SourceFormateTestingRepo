@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cotações</value>
+    </caseValues>
+    <fieldSets>
+        <label>Editor de linha BR</label>
+        <name>PMC_CPQ_LineEditorBR</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor BR Amendment --></label>
+        <name>PMC_CPQ_LineEditorBRAmendment</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Editor de linha NA</label>
+        <name>PMC_CPQ_LineEditorNA</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Editor de linha Distribuição NA</label>
+        <name>PMC_CPQ_LineEditorNADist</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Cálculo de campos</label>
+        <name>SBQQ__CalculatingFields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Line Editor --></label>
+        <name>SBQQ__LineEditor</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Campos bloqueados de cotações não correntes</label>
+        <name>SBQQ__NonCurrentQuoteLockedFields</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Número da cotação</nameFieldLabel>
+    <recordTypes>
+        <label><!-- Domestic --></label>
+        <name>PMC_CPQ_Domestic</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Doméstico SA</label>
+        <name>PMC_CPQ_DomesticBR</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Doméstico NA</label>
+        <name>PMC_CPQ_DomesticNA</name>
+    </recordTypes>
+    <recordTypes>
+        <label>Internacional</label>
+        <name>PMC_CPQ_International</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Tipo de registro para acompanhar a cotação de vendas de distribuição internacional para NA</description>
+        <label>Distribuição internacional</label>
+        <name>PMC_CPQ_InternationalDistribution</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Classificação da cotção inválida. Há itens com ajuste de preço negativo.</errorMessage>
+        <name>Class_List_And_Negative_Price_Adjustment</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Favor aprovar ou rejeitar a solicitação de cotação para prosseguir.</errorMessage>
+        <name>PMC_CPQ_AMReadOnlyfieldsonRequestStatus</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O método de aceitação do cliente é obrigatório</errorMessage>
+        <name>PMC_CPQ_AcceptanceConditionMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível alterar o valor da conta na cotação</errorMessage>
+        <name>PMC_CPQ_AccountNameValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Delete the Product from Cart to make changes to business type or create a fresh quote for another business type. --></errorMessage>
+        <name>PMC_CPQ_BRBusinessTypeChangeException</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Unable to set quote as primary due to an existing contracted quote within the same opportunity; consider creating a new opportunity for this quote or deselect the &apos;Primary&apos; checkbox. --></errorMessage>
+        <name>PMC_CPQ_ClosedOpportunityValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A data &quot;&quot;Contract Valid From&quot;&quot; não pode estar no passado.&quot;</errorMessage>
+        <name>PMC_CPQ_ContractValidFromValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A data do &quot;&quot;Contrato válido até&quot;&quot; não pode ser anterior à data do &quot;&quot;Contrato válido a partir de&quot;&quot;.&quot;</errorMessage>
+        <name>PMC_CPQ_ContractValidToBeforeValidFrom</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure the duration in between Contract Valid From and Contract Valid To date is more than 30 days --></errorMessage>
+        <name>PMC_CPQ_ContractValidToFromValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A data de &quot;&quot;Contrato válido até&quot;&quot; não pode exceder 1 ano e 6 meses a partir da data de criação da cotação.&quot;</errorMessage>
+        <name>PMC_CPQ_ContractValidToValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Selecione uma moeda válida com base em sua localidade atribuída.</errorMessage>
+        <name>PMC_CPQ_CurrencyChangeforQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Siga o caminho cronológico da cotação e, por favor, envie a cotação para aprovação antes de ser apresentada ou aceita&quot;</errorMessage>
+        <name>PMC_CPQ_DraftStatusValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Insufficient privilege to create Amendment Quotes. Only SSA or SSR is allowed to perform. --></errorMessage>
+        <name>PMC_CPQ_NAAmendmentQuoteCreation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Escolha a data de pagamento como um dia útil</errorMessage>
+        <name>PMC_CPQ_PaymentBusinessDateValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Por favor, preencha a Data de pagamento se o Método de pagamento for escolhido como Pré-pagamento ou Data fixa, e a Data de pagamento não pode ser no passado.&quot;</errorMessage>
+        <name>PMC_CPQ_PaymentDateBlankValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Preencha o valor do contato para prosseguir com a cotação</errorMessage>
+        <name>PMC_CPQ_PrimaryContactBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quote must be made primary at Accepted Stage --></errorMessage>
+        <name>PMC_CPQ_PrimaryMandatoryAtAcceptance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A cotação foi enviada para aprovação e está sendo analisada no momento. Se você quiser fazer outras modificações, clique no botão &quot;&quot;Recall Approvals&quot;&quot;.&quot;</errorMessage>
+        <name>PMC_CPQ_QuoteSubmittedForApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Populate &quot;Other Rejected Reason&quot; open text field before selecting &quot;Rejected Reason&quot; as &quot;Other.&quot; --></errorMessage>
+        <name>PMC_CPQ_RejectedReasonBlankOther</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;A cotação foi rejeitada. Se desejar continuar com a cotação, clique no botão &quot;&quot;Clone with Related&quot;&quot;.&quot;</errorMessage>
+        <name>PMC_CPQ_RejectedValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Selecione o motivo da rejeição antes de rejeitar a cotação</errorMessage>
+        <name>PMC_CPQ_RequestQuoteRejectionReasonBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A cotação só pode ser editada no status Rascunho. Defina o Status da cotação como Rascunho para editar.</errorMessage>
+        <name>PMC_CPQ_RestrictAMonApprovedandAccepted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;O Sold to Account ainda não está registrado no SAP, aguarde para que o Sold to Account seja registrado&quot;</errorMessage>
+        <name>PMC_CPQ_RestrictQuoteCreationSAPIDBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Envie a cotação para aprovação aos respectivos aprovadores.</errorMessage>
+        <name>PMC_CPQ_RestrictUserToApproveQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Insufficient privilege to create Amendment Quotes. Only SSA is allowed to perform amendments. --></errorMessage>
+        <name>PMC_CPQ_SAAmendmentQuoteCreation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Support Analyst can create only List and Amendment Quotes --></errorMessage>
+        <name>PMC_CPQ_SSAAccessForQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Esse campo não pode ser editado, pois o status da cotação foi Rejeitado.&quot;</errorMessage>
+        <name>PMC_CPQ_ShortDescriptionForRejectedState</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- User cannot change the approved quote field value --></errorMessage>
+        <name>Quote_is_approved_field_cannot_be_edited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A data de término deve ser posterior à data de início.</errorMessage>
+        <name>SBQQ__End_Date_Before_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>A Data de Término do Primeiro Segmento deve estar entre a Data de Início da Cotação e a Data de Término da Cotação</errorMessage>
+        <name>SBQQ__Invalid_First_Segment_Term_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O prazo da assinatura deve ser um número positivo.</errorMessage>
+        <name>SBQQ__Invalid_Subscription_Term</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível alterar o status de uma cotação expirada ou rejeitada.</errorMessage>
+        <name>Status_Changed_From_Expired_Or_Rejected</name>
+    </validationRules>
+    <webLinks>
+        <label>Gerar documento de proposta</label>
+        <name>PMC_CLM_GenerateProposalDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>Gerar contrato</label>
+        <name>PMC_CLM_Generate_Contract_Brazil</name>
+    </webLinks>
+    <webLinks>
+        <label>Gerar contrato</label>
+        <name>PMC_CLM_Generate_Contract_Intl</name>
+    </webLinks>
+    <webLinks>
+        <label>Gerar contrato</label>
+        <name>PMC_CLM_Generate_Contract_NorthAmerica</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_Generate_Contract_Spanish --></label>
+        <name>PMC_CLM_Generate_Contract_Spanish</name>
+    </webLinks>
+    <webLinks>
+        <label>Pré-visualização da aprovação</label>
+        <name>PMC_CPQ_PreviewApproval</name>
+    </webLinks>
+    <webLinks>
+        <label>Aprovação de recall</label>
+        <name>PMC_CPQ_RecallApproval</name>
+    </webLinks>
+    <webLinks>
+        <label>Agendar pedidos</label>
+        <name>PMC_CPQ_ScheduleOrders</name>
+    </webLinks>
+    <webLinks>
+        <label>Enviar para aprovação</label>
+        <name>PMC_CPQ_SubmitForApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CalculateQuote --></label>
+        <name>SBQQ__CalculateQuote</name>
+    </webLinks>
+    <webLinks>
+        <label>Clonar com o Related</label>
+        <name>SBQQ__CloneWithRelated</name>
+    </webLinks>
+    <webLinks>
+        <label>Clonar com relacionados</label>
+        <name>SBQQ__CloneWithRelatedClassic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrderFromQuote --></label>
+        <name>SBQQ__CreateOrderFromQuote</name>
+    </webLinks>
+    <webLinks>
+        <label>Adicionar Produtos</label>
+        <name>SBQQ__EditLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GenerateDocument --></label>
+        <name>SBQQ__GenerateDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>Linhas de importação</label>
+        <name>SBQQ__ImportLines</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- IncludeDocument --></label>
+        <name>SBQQ__IncludeDocument</name>
+    </webLinks>
+    <webLinks>
+        <label>Modificar os termos da cotação</label>
+        <name>SBQQ__ModifyQuoteTerms</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PreviewDocument --></label>
+        <name>SBQQ__PreviewDocument</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshMultiplePrices --></label>
+        <name>SBQQ__RefreshMultiplePrices</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RefreshPrices --></label>
+        <name>SBQQ__RefreshPrices</name>
+    </webLinks>
+</CustomObjectTranslation>

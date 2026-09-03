@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Region_Attribute_7__c</fullName>
+    <label>Sales Region – Attribute 7</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>07A</fullName>
+                <default>false</default>
+                <label>07A – Attribute 07A</label>
+            </value>
+            <value>
+                <fullName>08B</fullName>
+                <default>false</default>
+                <label>08B – Attribute 07B</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10 – DOM</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <label>11 - Export</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

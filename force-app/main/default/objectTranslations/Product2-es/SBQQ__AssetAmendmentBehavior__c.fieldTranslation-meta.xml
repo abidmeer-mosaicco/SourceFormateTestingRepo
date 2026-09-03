@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Seleccione un comportamiento al modificar los activos que representan este producto. Por defecto, las cantidades de activos no pueden disminuir a menos que se añada un upgrade, y no se aplica ningún reembolso.&quot;</help>
+    <label>Comportamiento modificación activos</label>
+    <name>SBQQ__AssetAmendmentBehavior__c</name>
+    <picklistValues>
+        <masterLabel>Allow Refund</masterLabel>
+        <translation>Permitir la devolución</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Default</masterLabel>
+        <translation>Por defecto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

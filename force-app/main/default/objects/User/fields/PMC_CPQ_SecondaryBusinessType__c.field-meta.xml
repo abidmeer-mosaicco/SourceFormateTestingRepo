@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SecondaryBusinessType__c</fullName>
+    <label>Secondary Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_PrimaryBusinessType__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>PMC_CPQ_QuoteBusinessType</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2C - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2B - Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2B - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2B - Specialties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2C - Paraguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>B2B - Potash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <valueName>Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <valueName>Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <valueName>Industrial</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

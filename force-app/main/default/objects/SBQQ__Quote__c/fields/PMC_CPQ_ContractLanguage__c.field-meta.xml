@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ContractLanguage__c</fullName>
+    <description>If region is North America, then English, else if region is Brazil, then ask Account Manager to select Spanish or Portuguese</description>
+    <label>Output Document Language</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_Region__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>English</fullName>
+                <default>false</default>
+                <label>English</label>
+            </value>
+            <value>
+                <fullName>Portuguese</fullName>
+                <default>false</default>
+                <label>Portuguese</label>
+            </value>
+            <value>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+                <label>Spanish</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>Portuguese</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>Spanish</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>English</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

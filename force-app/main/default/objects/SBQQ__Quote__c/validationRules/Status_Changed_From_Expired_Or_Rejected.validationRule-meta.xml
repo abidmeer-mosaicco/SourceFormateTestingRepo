@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Changed_From_Expired_Or_Rejected</fullName>
+    <active>true</active>
+    <description>Validates if the status of a quote was changed from Expired or Rejected to any other one.</description>
+    <errorConditionFormula>AND (
+  ISCHANGED(SBQQ__Status__c),
+  OR (
+    AND (
+      ISPICKVAL(PRIORVALUE(SBQQ__Status__c), &quot;Expired&quot;),
+      NOT(ISPICKVAL(SBQQ__Status__c, &quot;Rejected&quot;))
+    ),
+    AND (
+      ISPICKVAL(PRIORVALUE(SBQQ__Status__c), &quot;Rejected&quot;),
+      NOT(ISPICKVAL(SBQQ__Status__c, &quot;Expired&quot;))
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>You cannot change the status of an expired or rejected quote.</errorMessage>
+</ValidationRule>

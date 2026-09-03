@@ -1,0 +1,5 @@
+<messaging:emailTemplate renderUsingSystemContextWithoutSharing="True" subject="{!$Label.pmc_emailTemplate_titleNewUserAccess}" relatedToType="Contact" >
+    <messaging:htmlEmailBody >
+        <c:PMC_DH_AccessReviewEmailComponent conObjId="{!relatedTo.Id}" />
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

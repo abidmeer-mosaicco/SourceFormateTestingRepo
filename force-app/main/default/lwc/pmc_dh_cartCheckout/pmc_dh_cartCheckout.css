@@ -1,0 +1,23 @@
+.remove-message {
+  color: #A61A14;
+}
+
+.modal-wrapper {
+  padding: 16px;
+}
+
+.products-unavailable-text {
+  color: black;
+}
+
+.mobile-button{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .mobile-button{
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+}

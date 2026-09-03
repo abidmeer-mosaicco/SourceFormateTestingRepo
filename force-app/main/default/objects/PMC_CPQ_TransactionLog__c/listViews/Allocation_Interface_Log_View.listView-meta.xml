@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allocation_Interface_Log_View</fullName>
+    <columns>NAME</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PMC_CPQ_IntegrationStatus__c</columns>
+    <columns>PMC_CPQ_InterfaceURL__c</columns>
+    <columns>PMC_CPQ_ResponseBody__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>8/17/2026 12:00 AM</value>
+    </filters>
+    <label>Allocation Interface Log View</label>
+    <sharedTo>
+        <role>Admin</role>
+    </sharedTo>
+</ListView>

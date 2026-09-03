@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SAPInvoicenumberCannotBeBlank</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+OR(ISPICKVAL( PMC_SS_ActionReason__c , &apos;Credit&apos;),
+ISPICKVAL( PMC_SS_ActionReason__c , &apos;Debit&apos;)),
+AND(OR(ISPICKVAL( Status , &apos;Closed&apos;),ISPICKVAL( Status , &apos;Closure Pending&apos;)), ISBLANK(  PMC_SS_SAPInvoiceNumber__c )))</errorConditionFormula>
+    <errorDisplayField>PMC_SS_SAPInvoiceNumber__c</errorDisplayField>
+    <errorMessage>Please Enter The SAP Invoice Number</errorMessage>
+</ValidationRule>

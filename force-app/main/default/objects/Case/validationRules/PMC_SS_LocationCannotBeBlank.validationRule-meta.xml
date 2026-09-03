@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_LocationCannotBeBlank</fullName>
+    <active>false</active>
+    <description>Checks whether Location value is blank or not</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),OR(
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Incorrect Label&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Invoice Adjustments&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Incorrect Product&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Product Concern&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Weight Discrepancy&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Delivery Delay&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Demurrage&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Diversion&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Driver Verification/Change&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Equipment Failure&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect Destination&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect UOM&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Missing Cargo&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Mode of Transportation&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Route / Directions&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Ship Date / Scheduling&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Warehouse&apos;)),
+AND(OR(ISPICKVAL( Status , &apos;Closed&apos;),ISPICKVAL( Status , &apos;Closure Pending&apos;)), ISBLANK(  PMC_SS_Location__c  )))</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Location__c</errorDisplayField>
+    <errorMessage>Location cannot be blank</errorMessage>
+</ValidationRule>

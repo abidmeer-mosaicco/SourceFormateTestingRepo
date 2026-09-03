@@ -1,0 +1,32 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Commerce Layout",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "id" : "07e3c17b-23f5-4e67-ad4a-d376b930bb4f",
+        "name" : "header",
+        "title" : "Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:pmc_dh_footer",
+          "id" : "ae547b3a-0e7f-47af-87b9-2c90568a5f1a",
+          "type" : "component"
+        } ],
+        "id" : "905d01b9-ef49-4e91-8f1b-a6be1450d749",
+        "name" : "footer",
+        "title" : "Footer",
+        "type" : "region"
+      } ],
+      "definition" : "commerce:layoutSite",
+      "id" : "004a7924-e403-4cb6-9dc1-d399c790a1b2",
+      "type" : "component"
+    }
+  },
+  "urlName" : "commerce-layout"
+}

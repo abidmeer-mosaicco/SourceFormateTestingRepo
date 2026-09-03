@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_GenerateRoC</fullName>
+    <availability>online</availability>
+    <description>This button will be used to trigger the creation of a RoC document from the case record</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Generate RoC</masterLabel>
+    <openType>noSidebar</openType>
+    <protected>false</protected>
+    <url>/flow/PMC_SS_GenerateROC?recordId={!Case.Id} &amp;returl=https://na11.springcm.com/atlas/doclauncher/eos/Release of Claims?aid=31298%26eos[0].Id={!Case.Id}%26eos[0].System=Salesforce%26eos[0].Type=Case%26eos[0].Name={!Case.CaseNumber}%26eos[0].ScmPath=/Salesforce/Case/</url>
+</WebLink>

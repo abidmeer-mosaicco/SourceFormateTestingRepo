@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="text" type="String" label="Insert the Text" description="Insert the Text" required="true"/>
+            <property name="backGroundColor" type="String" label="Background Color " description="Background e Border Color (HEX format or color name)" default="white" required="true"/>
+            <property name="backGroundBorderColor" type="String" label="Text Background and Border Color " description="Background Color (HEX format or color name)" default="#e32e12"/>
+            <property name="iconName" type="String" label="Icon Name" description="Icon Name" required="true" default="fertilizante"/>
+            <!--<property name="iconSize" type="String" label="Icon Size in Pixels" description="Icon Size in Pixels" default="112"/>
+            <property name="iconPadding" type="String" label="Icon Padding in Pixels" description="Icon Padding in Pixels" default="32"/>-->
+            <property name="textColor" type="String" label="Text Color" description="Text Color" default="white"/>
+            <property name="fontSize" type="String" label="Font Size in Pixels" description="Font Size in Pixels" required="true" default="14"/>
+            <property name="bottonTextHeight" type="String" label="Bottom Text Height Size in Pixels" description="Bottom Text Height Size in Pixels" required="true" default="150"/>
+            <property name="cardHeight" type="String" label="Card Height Size in Pixels" description="Card Height Size in Pixels" required="true" default="450"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

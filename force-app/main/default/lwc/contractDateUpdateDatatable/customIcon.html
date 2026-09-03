@@ -1,0 +1,13 @@
+<template>
+    <div title={typeAttributes.title} class="slds-grid">
+        <div if:true={typeAttributes.showSpinner} class="slds-col slds-m-right_xx-small">
+            <img src="/img/loading.gif" alt="Loading" width="16" height="16" />
+        </div>
+        <template if:true={typeAttributes.iconName}>
+            <lightning-icon icon-name={typeAttributes.iconName} class="slds-col slds-m-right_xx-small" size="small" variant={typeAttributes.variant}></lightning-icon>
+        </template>
+        <template if:true={typeAttributes.text}>
+            <span class={typeAttributes.textClass}>{typeAttributes.text}</span>
+        </template>
+    </div>
+</template>

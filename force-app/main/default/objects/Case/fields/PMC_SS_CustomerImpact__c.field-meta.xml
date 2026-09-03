@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CustomerImpact__c</fullName>
+    <description>Likely impact to Customer</description>
+    <label>Customer Impact</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Impact to Customer’s Supply / Operations / Safety / Health</fullName>
+                <default>false</default>
+                <label>No Impact to Customer’s Supply / Operations / Safety / Health</label>
+            </value>
+            <value>
+                <fullName>Minor Impact to Customer’s Supply / Operations / Safety / Health</fullName>
+                <default>false</default>
+                <label>Minor Impact to Customer’s Supply / Operations / Safety / Health</label>
+            </value>
+            <value>
+                <fullName>Significant Impact to Customer’s Supply / Operations / Safety / Health</fullName>
+                <default>false</default>
+                <label>Significant Impact to Customer’s Supply / Operations / Safety / Health</label>
+            </value>
+            <value>
+                <fullName>Rejection / Loss of Cargo and/or Risk of Losing a Customer</fullName>
+                <default>false</default>
+                <label>Rejection / Loss of Cargo and/or Risk of Losing a Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

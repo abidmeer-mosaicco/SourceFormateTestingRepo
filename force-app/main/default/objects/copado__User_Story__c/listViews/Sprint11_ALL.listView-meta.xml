@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint11_ALL</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>Sprint 11</value>
+    </filters>
+    <filters>
+        <field>copado__Release__c</field>
+        <operation>notEqual</operation>
+        <value>ReleaseSIT_Mock_Deployment</value>
+    </filters>
+    <filters>
+        <field>copado__Project__c</field>
+        <operation>equals</operation>
+        <value>GDA PMC Digital Hub</value>
+    </filters>
+    <label>Sprint11_ALL_MD</label>
+</ListView>

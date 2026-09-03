@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_EndDate__c</fullName>
+    <formula>IF( ISPICKVAL( PublishStatus , &apos;Online&apos;) , LastPublishedDate +  PMC_SS_NumberOfDisplayDays__c
+, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>End Date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

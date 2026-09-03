@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CurrentDestinationLocation__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to Location Object displayed when Issue Reason selected is &quot;Incorrect Destination&quot; or &quot;Diversion&quot;. User must select either Current Destination (Location) or Current Destination (Ship To) but cannot select both.</description>
+    <label>Current Destination(Location)</label>
+    <referenceTo>Location</referenceTo>
+    <relationshipLabel>Cases (Current Destination(Location))</relationshipLabel>
+    <relationshipName>Cases4</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

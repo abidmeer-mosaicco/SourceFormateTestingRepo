@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Mosaic Direct - Order Notification</name>
+    <style>none</style>
+    <subject>Contract {!contractNumber} - Your Order(s) Have Been Created</subject>
+    <textOnly>{!customerName},
+
+We&apos;re pleased to inform you that your order(s) submitted have been created. Below is a summary for your reference:
+
+{!tableContent}
+
+If you have any questions or need assistance, please contact your SSR.
+
+Thank you for your continued partnership with Mosaic.
+
+
+Please, do not reply to this email.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

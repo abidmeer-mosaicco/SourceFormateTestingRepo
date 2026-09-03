@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_My_Favorite_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.SKU</columns>
+    <columns>PMC_CPQ_ProductSegment__c</columns>
+    <columns>PMC_CPQ_MaterialGroup__c</columns>
+    <columns>PMC_CPQ_ProductTypes__c</columns>
+    <columns>PMC_CPQ_ProductFamily__c</columns>
+    <columns>PMC_CPQ_ProductSubFamily__c</columns>
+    <columns>PMC_CPQ_ProductType__c</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <filterScope>Everything</filterScope>
+    <label>My Favorite Products</label>
+</ListView>

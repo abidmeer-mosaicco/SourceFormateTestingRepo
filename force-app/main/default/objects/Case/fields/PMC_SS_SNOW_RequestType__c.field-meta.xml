@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SNOW_RequestType__c</fullName>
+    <description>Field to select the request type based on the ServiceNow Ticket Type</description>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Advance Reports</fullName>
+                <default>false</default>
+                <label>Advance Reports</label>
+            </value>
+            <value>
+                <fullName>Banking Intervention</fullName>
+                <default>false</default>
+                <label>Banking Intervention</label>
+            </value>
+            <value>
+                <fullName>Billed and billable portfolio report</fullName>
+                <default>false</default>
+                <label>Billed and billable portfolio report</label>
+            </value>
+            <value>
+                <fullName>Closing of Services Exchange</fullName>
+                <default>false</default>
+                <label>Closing of Services Exchange</label>
+            </value>
+            <value>
+                <fullName>Compensation reports</fullName>
+                <default>false</default>
+                <label>Compensation reports</label>
+            </value>
+            <value>
+                <fullName>Complementary Note</fullName>
+                <default>false</default>
+                <label>Complementary Note</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>Core Registration</label>
+            </value>
+            <value>
+                <fullName>CRA</fullName>
+                <default>false</default>
+                <label>CRA</label>
+            </value>
+            <value>
+                <fullName>13</fullName>
+                <default>false</default>
+                <label>Credit note</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>Customer Registration</label>
+            </value>
+            <value>
+                <fullName>14</fullName>
+                <default>false</default>
+                <label>Debit note</label>
+            </value>
+            <value>
+                <fullName>Demurrage / Dispatch Closing</fullName>
+                <default>false</default>
+                <label>Demurrage / Dispatch Closing</label>
+            </value>
+            <value>
+                <fullName>Discharge Receipt</fullName>
+                <default>false</default>
+                <label>Discharge Receipt</label>
+            </value>
+            <value>
+                <fullName>Empty Factory</fullName>
+                <default>false</default>
+                <label>Empty Factory</label>
+            </value>
+            <value>
+                <fullName>Enlargement of Registration to Another Center</fullName>
+                <default>false</default>
+                <label>Enlargement of Registration to Another Centerv</label>
+            </value>
+            <value>
+                <fullName>Export Exchange Closing</fullName>
+                <default>false</default>
+                <label>Export Exchange Closing</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>Generate Billet</label>
+            </value>
+            <value>
+                <fullName>Import Exchange Closing</fullName>
+                <default>false</default>
+                <label>Import Exchange Closing</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>Login and Password Unlock</label>
+            </value>
+            <value>
+                <fullName>MRO Exchange Closing</fullName>
+                <default>false</default>
+                <label>MRO Exchange Closing</label>
+            </value>
+            <value>
+                <fullName>NDA Renewal</fullName>
+                <default>false</default>
+                <label>NDA Renewal</label>
+            </value>
+            <value>
+                <fullName>New NDA</fullName>
+                <default>false</default>
+                <label>New NDA</label>
+            </value>
+            <value>
+                <fullName>New Product Registration</fullName>
+                <default>false</default>
+                <label>New Product Registration</label>
+            </value>
+            <value>
+                <fullName>Premium Products</fullName>
+                <default>false</default>
+                <label>Premium Products</label>
+            </value>
+            <value>
+                <fullName>Product Registration in MIC</fullName>
+                <default>false</default>
+                <label>Product Registration in MIC</label>
+            </value>
+            <value>
+                <fullName>Receipt Composition</fullName>
+                <default>false</default>
+                <label>Receipt Composition</label>
+            </value>
+            <value>
+                <fullName>Registration Change</fullName>
+                <default>false</default>
+                <label>Registration Change</label>
+            </value>
+            <value>
+                <fullName>Replan</fullName>
+                <default>false</default>
+                <label>Replan</label>
+            </value>
+            <value>
+                <fullName>Return of Values</fullName>
+                <default>false</default>
+                <label>Return of Values</label>
+            </value>
+            <value>
+                <fullName>Scrap Order</fullName>
+                <default>false</default>
+                <label>Scrap Order</label>
+            </value>
+            <value>
+                <fullName>Sharing Risk</fullName>
+                <default>false</default>
+                <label>Sharing Risk</label>
+            </value>
+            <value>
+                <fullName>Supplementary Invoice Report</fullName>
+                <default>false</default>
+                <label>Supplementary Invoice Report</label>
+            </value>
+            <value>
+                <fullName>Truck in Factory</fullName>
+                <default>false</default>
+                <label>Truck in Factory</label>
+            </value>
+            <value>
+                <fullName>Truck in the Factory</fullName>
+                <default>false</default>
+                <label>Truck in the Factory</label>
+            </value>
+            <value>
+                <fullName>Update of Registration Forms</fullName>
+                <default>false</default>
+                <label>Update of Registration Forms</label>
+            </value>
+            <value>
+                <fullName>Use of the balance in another contract</fullName>
+                <default>false</default>
+                <label>Use of the balance in another contract</label>
+            </value>
+            <value>
+                <fullName>Wallet Lock</fullName>
+                <default>false</default>
+                <label>Wallet Lock</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

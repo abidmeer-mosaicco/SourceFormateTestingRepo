@@ -1,0 +1,375 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    min-width: ;
+}
+
+.image-center {
+    /* text-align: center!important; */
+    /* margin:auto !important; */
+}
+
+.classImage {
+    min-width: 45% !important;
+}
+
+.classFooter {
+    min-width: 45% !important;
+}
+
+.description-text {
+    /*font-size: 0.9rem !important;*/
+    font-size: 1rem !important;
+    padding: 0.1rem !important;
+}
+
+.name-text {
+    font-size: 1.5rem !important;
+    /*font-size: 1.65rem !important;*/
+    padding: 0.1rem !important;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1900px) {
+
+    .classImage {
+        min-width: 60% !important;
+    }
+
+    .classFooter {
+        min-width: 60% !important;
+    }
+
+    .description-text {
+    font-size: 0.75rem !important;
+    /*font-size: 1rem !important;*/
+    padding: 0.1rem !important;
+    }
+
+    .name-text {
+        font-size: 1.3rem !important;
+        /*font-size: 1.65rem !important;*/
+        padding: 0.1rem !important;
+    }
+
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+
+    .classImage {
+        min-width: 100% !important;
+    }
+
+    .classFooter {
+        min-width: 100% !important;
+    }
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-footer,
+    .card-footer-right {
+        height: 11rem !important;
+        text-align: center !important;
+        margin: auto !important;
+        min-width: 85% !important;
+    }
+
+    .description-text {
+        font-size: 0.9rem !important;
+        padding: 0.1rem !important;
+        text-align: center !important;
+    }
+
+    .name-text {
+        font-size: 1.5rem !important;
+        padding: 0.1rem !important;
+    }
+
+    .image-right {
+        text-align: center !important;
+        margin: auto !important;
+        min-width: 85% !important;
+    }
+
+    .image-center {
+        text-align: center !important;
+    }
+
+    .image-width {
+        text-align: center !important;
+        margin: auto !important;
+        min-width: 85% !important;
+    }
+
+    .text-right {
+        text-align: center !important;
+    }
+
+    .title-text {
+        font-size: 2rem;
+    }
+}
+
+/* ===================== */
+/* TABLET - AJUSTE FINAL */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .classImage {
+        min-width: 100% !important;
+    }
+
+    .classFooter {
+        min-width: 100% !important;
+    }
+
+    .card-footer,
+    .card-footer-right {
+        height: 10rem !important;
+    }
+
+    .name-text {
+        font-size: 1rem !important;
+        padding: 0.05rem !important;
+    }
+
+    .description-text {
+        font-size: 0.75rem !important;
+        padding: 0.05rem !important;
+    }
+
+    .arrow-icon {
+        font-size: 1.8rem !important;
+    }
+
+    .footer-content {
+        padding-left: 0.2rem !important;
+        justify-content: space-between !important;
+    }
+
+    .title-text {
+        font-size: 2rem;
+    }
+}
+
+/* DESKTOP */
+.card-footer,
+.card-footer-right {
+    background-color: #e32119;
+    color: white;
+    text-align: left;
+    padding: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    /*width: 31.5% !important;*/
+    width: 40% !important;
+    height: 11rem !important;
+}
+
+.card-footer-right {
+    margin-left: auto;
+}
+
+.image-right {
+    margin-left: auto;
+    /*width: 31.5% !important;*/
+    width: 40% !important;
+}
+
+.image-width {
+    /*width: 31.5% !important;*/
+    width: 40% !important;
+}
+
+.card-footer.zoom,
+.card-footer-right.zoom {
+    transform: scale(1.05);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.arrow-icon {
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-footer:hover .arrow-icon,
+.card-footer-right:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+.title-text {
+    text-align: center;
+    font-size: 4rem;
+    color: #e32119;
+}
+
+.description-text {
+    font-size: 0.9rem;
+    padding: 0.15rem;
+}
+
+.name-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.15rem;
+}
+
+/* ===================== */
+/* MODAL CSS */
+/* ===================== */
+.modal-body {
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/*.modal-name {
+    font-size: 2rem;
+    color: #e32119;
+    margin-bottom: 0.5rem;
+}*/
+
+.modal-text {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.custom-modal .slds-modal__container {
+    max-width: 40rem;
+}
+
+.full-width-modal {
+    max-width: 88%;
+    min-width: 88%;
+}
+
+.modal-content-two-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.modal-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image-full {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    max-width: 90%;
+}
+
+.modal-text-container {
+    flex: 2;
+    padding-right: 1rem;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modal-name {
+    font-size: 1.4rem; /*2rem*/
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1c1c1c;
+    margin-bottom: 0.5rem;
+}
+
+.modal-role {
+    font-size: 0.8rem; /*1.2rem;*/
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.modal-description {
+    font-size: 0.8rem; /*1.2rem;*/
+    line-height: 1.92rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.custom-close-button {
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    background: black;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* MODAL MOBILE */
+@media screen and (max-width: 480px) {
+    .modal-content-two-columns {
+        flex-direction: column;
+        padding: 1rem;
+        overflow-y: auto;
+        max-height: 100%;
+        min-height: 95%;
+        min-width: 95%;
+    }
+
+    .modal-image-container {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .modal-image-full {
+        max-width: 50%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .modal-text-container {
+        padding: 0 1rem;
+        text-align: left;
+    }
+
+    /*.modal-name {
+        font-size: 1.3rem;
+        text-align: center;
+    }*/
+
+    /*.modal-role {
+        font-size: 0.8rem;
+        text-align: center;
+    }*/
+
+    /*.modal-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0.2rem;
+    }*/
+
+    .custom-close-button {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}

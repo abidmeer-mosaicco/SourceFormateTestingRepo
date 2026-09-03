@@ -1,0 +1,56 @@
+<template>
+  <div class="mobile-button cart-checkout-button">
+    <lightning-button label={labels.pmc_cartCheckout_checkout} variant="brand" onclick={handleRequestToCheckout}
+      disabled={isCheckoutDisabled}></lightning-button>
+  </div>
+
+  <c-pmc_dh_custom-modal open-modal={isValidationModal} modal-heading={modalHeading} modal-width="551px"
+    onclosemodalevent={handleCloseModal}>
+    <div class="modal-wrapper">
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+          <div class="text-medium-normal slds-m-bottom_medium products-unavailable-text">
+            {validationType}
+          </div>
+          <div for:each={invalidProducts} for:item="item" key={item.strCartItemId}
+            class="product-wrapper slds-m-bottom_medium">
+            <div class="product-sku-wrapper slds-clearfix text-regular-normal text-color-dark-secondary-green">
+              <template if:true={isUnavailableProductsError}>
+                <div class="slds-float_left">
+                  {labels.pmc_cartCheckout_sku}&nbsp;{item.strSku}&nbsp;{item.strFlow}
+                </div>
+              </template>
+              <template if:false={isUnavailableProductsError}>
+                <div class="slds-float_left">
+                  {labels.pmc_cartCheckout_sku}&nbsp;{item.strSku}&nbsp;-&nbsp;{item.strFlow}
+                </div>
+              </template>
+              <div class="slds-float_right">
+                <a onclick={deleteCartItem} data-cart-item-id={item.strCartItemId}>
+                  <img src={iconUrlObj.deleteIconUrl} alt={labels.pmc_accountDetails_delete} width="24" height="24" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <template if:true={validationError}>
+            <div class="slds-m-top_medium text-medium-normal remove-message">
+              {validationError}
+            </div>
+          </template>
+        </div>
+
+        <template if:true={hasWarnings}>
+          <div class="slds-col slds-size_1-of-1 mobile-button">
+            <lightning-button label={labels.pmc_cartCheckout_backToCart} onclick={handleCloseModal}></lightning-button>
+            <lightning-button variant="brand" label={labels.pmc_proceed} onclick={handleProceed}></lightning-button>
+          </div>
+        </template>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+
+  <template if:true={isLoading}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+
+</template>

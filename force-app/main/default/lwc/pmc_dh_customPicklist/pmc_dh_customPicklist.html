@@ -1,0 +1,90 @@
+<template>
+  <div class="slds-form-element combobox-container">
+    <label class="slds-form-element__label" for="combobox-id-58">
+      <abbr class="slds-required" title="required">*</abbr>
+      {textLabel}
+    </label>
+    <div class="slds-form-element__control">
+      <div class="slds-combobox_container">
+        <div
+          class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" 
+          onclick={toggleDropdown}
+          onkeypress={toggleDropdown}
+        >
+          <div  class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+            <div
+              role="combobox"
+              tabindex="0"
+              class="slds-input_faux slds-combobox__input"
+              aria-labelledby="combobox-value-id-101"
+              id="combobox-id-58-selected-value"
+              aria-controls="listbox-id-28"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+            >
+              <span class="slds-truncate" id="combobox-value-id-101">{selectedLabel}</span>
+            </div>
+            <span if:false={isDisabled} class="slds-icon_container slds-icon-utility-switch slds-input__icon slds-input__icon_right">
+              <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+              </svg>
+            </span>
+          </div>
+         
+          <div
+            id="listbox-id-28"
+            class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid shipToDropdown"
+            role="listbox"
+            tabindex="0"
+            aria-busy="false"
+          >
+            <div class="scroll-list">
+              <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                <template for:each={picklistOptions} for:item="option">
+                  <li role="presentation" key={option.value} class="slds-listbox__item">
+                    <div
+                      aria-selected={option.isSelected} 
+                      role="option"
+                      data-value={option.value}
+                      class={option.class}
+                      onclick={handleOptionSelect}
+                      onkeypress={handleOptionSelect}
+                    >
+                      <template if:true={option.isSelected}>
+                        <lightning-icon
+                          class="slds-var-m-left_xxx-small slds-var-m-right_small"
+                          icon-name="utility:check"
+                          size="x-small"
+                          alternative-text="icon"
+                        ></lightning-icon>
+                        <span class="slds-media__body">
+                          <span class="slds-truncate" 
+                            title={option.label}
+                            data-value={option.value}
+                            data-parentname={parentName}
+                          >{option.label}</span>
+                        </span>
+                      </template>
+                      <template if:false={option.isSelected}>
+                        <span class="slds-media__body slds-var-m-left_x-large">
+                          <span class="slds-truncate" 
+                            title={option.label}
+                            data-value={option.value}
+                            data-parentname={parentName}
+                          >{option.label}</span>
+                        </span>
+                      </template>
+                    </div>
+                  </li>
+                </template>
+              </ul>
+            </div>
+            <div class="float-list">
+              <a class="link" onclick={handleModalClick} title={linkName}>{linkName}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReqFieldsToChangeStatusSAL_Crops</fullName>
+    <active>true</active>
+    <description>Crops Field value should be entered in order to convert Lead Status to SAL</description>
+    <errorConditionFormula>AND (
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+(
+IF(ISBLANK(PMC_SS_Crops__c), 0, 1) 
+
+)&lt;1,
+OR(ISCHANGED(Status),ISNEW()),
+ISPICKVAL(Status,&apos;SAL&apos;)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Crops__c</errorDisplayField>
+    <errorMessage>Please fill out Crops field value.</errorMessage>
+</ValidationRule>

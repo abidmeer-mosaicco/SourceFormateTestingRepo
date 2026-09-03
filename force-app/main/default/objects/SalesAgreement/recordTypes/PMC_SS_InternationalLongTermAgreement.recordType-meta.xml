@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_InternationalLongTermAgreement</fullName>
+    <active>true</active>
+    <description>International Long-Term Agreement</description>
+    <label>International Long-Term Agreement</label>
+    <picklistValues>
+        <picklist>CancellationReason</picklist>
+        <values>
+            <fullName>Customer Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal%2FRegulatory Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logistics Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supply Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CLM_AgreementDocumentStatus__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Signed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Signatures</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_AgreementType__c</picklist>
+        <values>
+            <fullName>Annual Sales Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Partner Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ex-Space Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Master Sales Agreement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_AmendedReason__c</picklist>
+        <values>
+            <fullName>Changes in Circumstance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Changes to Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error Correction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Product Interests</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_ApprovalStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Under Revision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_SS_UnitofMeasure__c</picklist>
+        <values>
+            <fullName>L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WMT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Archived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending with Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UnderRevision</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

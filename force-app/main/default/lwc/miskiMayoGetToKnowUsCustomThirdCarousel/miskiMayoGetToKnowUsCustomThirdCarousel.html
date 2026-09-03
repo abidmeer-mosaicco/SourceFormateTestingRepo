@@ -1,0 +1,22 @@
+<template>
+    <div class="carousel-wrapper">
+        <div class="carousel-track" style={trackStyle}>
+            <template for:each={visibleSlides} for:item="slide">
+                <div class="carousel-slide" key={slide.slideIndex} style="width: 350px;">
+                    <div class="custom-card">
+                        <div class="image-container">
+                            <img src={slide.image} alt={slide.altText} class="zoom-on-hover"/>
+                        </div>
+                        <div class="description-text ">{slide.description}</div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <button class="nav-button prev slds-m-left_xxx-small" onclick={previousSlide}>
+            <img src={arrowLeftIcon} class="arrow-icon" alt="Previous">
+        </button>
+        <button class="nav-button next slds-m-right_xxx-small" onclick={nextSlide}>
+            <img src={arrowRightIcon} class="arrow-icon" alt="Next">
+        </button>
+    </div>
+</template>

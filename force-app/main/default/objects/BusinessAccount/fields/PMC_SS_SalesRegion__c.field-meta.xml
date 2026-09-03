@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SalesRegion__c</fullName>
+    <description>update values</description>
+    <label>Sales Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AL00</fullName>
+                <default>false</default>
+                <label>AL00 - Maceió</label>
+            </value>
+            <value>
+                <fullName>AM01</fullName>
+                <default>false</default>
+                <label>AM01 - Itacoatiara</label>
+            </value>
+            <value>
+                <fullName>BA01</fullName>
+                <default>false</default>
+                <label>BA01 - Luis Eduardo Magalhães</label>
+            </value>
+            <value>
+                <fullName>BA02</fullName>
+                <default>false</default>
+                <label>BA02 - Candeias</label>
+            </value>
+            <value>
+                <fullName>BA03</fullName>
+                <default>false</default>
+                <label>BA03 - Feira de Santana</label>
+            </value>
+            <value>
+                <fullName>BA04</fullName>
+                <default>false</default>
+                <label>BA04 - Camaçari</label>
+            </value>
+            <value>
+                <fullName>BA05</fullName>
+                <default>false</default>
+                <label>BA05 - Conceição do Jacuipe</label>
+            </value>
+            <value>
+                <fullName>BA50</fullName>
+                <default>false</default>
+                <label>BA50 - Barreiras</label>
+            </value>
+            <value>
+                <fullName>BA51</fullName>
+                <default>false</default>
+                <label>BA51 - Correntina</label>
+            </value>
+            <value>
+                <fullName>BA52</fullName>
+                <default>false</default>
+                <label>BA52 - Formosa do Rio Preto</label>
+            </value>
+            <value>
+                <fullName>BA53</fullName>
+                <default>false</default>
+                <label>BA53 - Riachão das Neves</label>
+            </value>
+            <value>
+                <fullName>BA54</fullName>
+                <default>false</default>
+                <label>BA54 - São Desidério</label>
+            </value>
+            <value>
+                <fullName>ES01</fullName>
+                <default>false</default>
+                <label>ES01 - Serra</label>
+            </value>
+            <value>
+                <fullName>ES02</fullName>
+                <default>false</default>
+                <label>ES02 - Viana</label>
+            </value>
+            <value>
+                <fullName>ES03</fullName>
+                <default>false</default>
+                <label>ES03 - Vitória</label>
+            </value>
+            <value>
+                <fullName>ES04</fullName>
+                <default>false</default>
+                <label>ES04 - Ibatiba</label>
+            </value>
+            <value>
+                <fullName>GO01</fullName>
+                <default>false</default>
+                <label>GO01 - Bom Jesus de Goiás</label>
+            </value>
+            <value>
+                <fullName>GO02</fullName>
+                <default>false</default>
+                <label>GO02 - Rio Verde</label>
+            </value>
+            <value>
+                <fullName>GO03</fullName>
+                <default>false</default>
+                <label>GO03 - Anápolis</label>
+            </value>
+            <value>
+                <fullName>GO04</fullName>
+                <default>false</default>
+                <label>GO04 - Catalão</label>
+            </value>
+            <value>
+                <fullName>GO05</fullName>
+                <default>false</default>
+                <label>GO05 - Formosa</label>
+            </value>
+            <value>
+                <fullName>GO06</fullName>
+                <default>false</default>
+                <label>GO06 - Aparecida de Goiania</label>
+            </value>
+            <value>
+                <fullName>GO07</fullName>
+                <default>false</default>
+                <label>GO07 - Goiatuba</label>
+            </value>
+            <value>
+                <fullName>GO08</fullName>
+                <default>false</default>
+                <label>GO08 - Cristalina</label>
+            </value>
+            <value>
+                <fullName>GO09</fullName>
+                <default>false</default>
+                <label>GO09 - Itumbiara</label>
+            </value>
+            <value>
+                <fullName>GO10</fullName>
+                <default>false</default>
+                <label>GO10 - Jataí</label>
+            </value>
+            <value>
+                <fullName>GO11</fullName>
+                <default>false</default>
+                <label>GO11 - Posse</label>
+            </value>
+            <value>
+                <fullName>MA01</fullName>
+                <default>false</default>
+                <label>MA01 - São Luis</label>
+            </value>
+            <value>
+                <fullName>MA02</fullName>
+                <default>false</default>
+                <label>MA02 - Açailândia</label>
+            </value>
+            <value>
+                <fullName>MA03</fullName>
+                <default>false</default>
+                <label>MA03 - Alto Parnaíba</label>
+            </value>
+            <value>
+                <fullName>MA04</fullName>
+                <default>false</default>
+                <label>MA04 - Balsas</label>
+            </value>
+            <value>
+                <fullName>MA05</fullName>
+                <default>false</default>
+                <label>MA05 - Caxias</label>
+            </value>
+            <value>
+                <fullName>MA06</fullName>
+                <default>false</default>
+                <label>MA06 - Chapadinha</label>
+            </value>
+            <value>
+                <fullName>MA07</fullName>
+                <default>false</default>
+                <label>MA07 - Grajaú</label>
+            </value>
+            <value>
+                <fullName>MA08</fullName>
+                <default>false</default>
+                <label>MA08 - Tasso Fragoso</label>
+            </value>
+            <value>
+                <fullName>MG01</fullName>
+                <default>false</default>
+                <label>MG01 - Uberlândia</label>
+            </value>
+            <value>
+                <fullName>MG02</fullName>
+                <default>false</default>
+                <label>MG02 - Matozinhos</label>
+            </value>
+            <value>
+                <fullName>MG03</fullName>
+                <default>false</default>
+                <label>MG03 - Manhuaçú</label>
+            </value>
+            <value>
+                <fullName>MG04</fullName>
+                <default>false</default>
+                <label>MG04 - Três Corações</label>
+            </value>
+            <value>
+                <fullName>MG05</fullName>
+                <default>false</default>
+                <label>MG05 - Uberaba</label>
+            </value>
+            <value>
+                <fullName>MG06</fullName>
+                <default>false</default>
+                <label>MG06 - Alfenas</label>
+            </value>
+            <value>
+                <fullName>MG07</fullName>
+                <default>false</default>
+                <label>MG07 - Congonhal</label>
+            </value>
+            <value>
+                <fullName>MG08</fullName>
+                <default>false</default>
+                <label>MG08 - Martins Soares</label>
+            </value>
+            <value>
+                <fullName>MG09</fullName>
+                <default>false</default>
+                <label>MG09 - Varginha</label>
+            </value>
+            <value>
+                <fullName>MG10</fullName>
+                <default>false</default>
+                <label>MG10 - Patos de Minas</label>
+            </value>
+            <value>
+                <fullName>MG11</fullName>
+                <default>false</default>
+                <label>MG11 - Araguari</label>
+            </value>
+            <value>
+                <fullName>MG12</fullName>
+                <default>false</default>
+                <label>MG12 - Ibiá</label>
+            </value>
+            <value>
+                <fullName>MG13</fullName>
+                <default>false</default>
+                <label>MG13 - Patrocínio</label>
+            </value>
+            <value>
+                <fullName>MG14</fullName>
+                <default>false</default>
+                <label>MG14 - Araxá</label>
+            </value>
+            <value>
+                <fullName>MG15</fullName>
+                <default>false</default>
+                <label>MG15 - Pouso Alegre</label>
+            </value>
+            <value>
+                <fullName>MG16</fullName>
+                <default>false</default>
+                <label>MG16 - Três Pontas</label>
+            </value>
+            <value>
+                <fullName>MG17</fullName>
+                <default>false</default>
+                <label>MG17 - Betim</label>
+            </value>
+            <value>
+                <fullName>MG18</fullName>
+                <default>false</default>
+                <label>MG18 - Carmo do Rio Claro</label>
+            </value>
+            <value>
+                <fullName>MG19</fullName>
+                <default>false</default>
+                <label>MG19 - Guaxupé</label>
+            </value>
+            <value>
+                <fullName>MG20</fullName>
+                <default>false</default>
+                <label>MG20 - Iguatama</label>
+            </value>
+            <value>
+                <fullName>MG21</fullName>
+                <default>false</default>
+                <label>MG21 - Luz</label>
+            </value>
+            <value>
+                <fullName>MG22</fullName>
+                <default>false</default>
+                <label>MG22 - Machado</label>
+            </value>
+            <value>
+                <fullName>MG23</fullName>
+                <default>false</default>
+                <label>MG23 - Poços de Caldas</label>
+            </value>
+            <value>
+                <fullName>MG24</fullName>
+                <default>false</default>
+                <label>MG24 - São Tiago</label>
+            </value>
+            <value>
+                <fullName>MG25</fullName>
+                <default>false</default>
+                <label>MG25 - Ubá</label>
+            </value>
+            <value>
+                <fullName>MS01</fullName>
+                <default>false</default>
+                <label>MS01 - Dourados</label>
+            </value>
+            <value>
+                <fullName>MS02</fullName>
+                <default>false</default>
+                <label>MS02 - Campo Grande</label>
+            </value>
+            <value>
+                <fullName>MS03</fullName>
+                <default>false</default>
+                <label>MS03 - Chapadão do Sul</label>
+            </value>
+            <value>
+                <fullName>MS04</fullName>
+                <default>false</default>
+                <label>MS04 - São Gabriel do Oeste</label>
+            </value>
+            <value>
+                <fullName>MS05</fullName>
+                <default>false</default>
+                <label>MS05 - Corumbá</label>
+            </value>
+            <value>
+                <fullName>MT01</fullName>
+                <default>false</default>
+                <label>MT01 - Rondonópolis</label>
+            </value>
+            <value>
+                <fullName>MT02</fullName>
+                <default>false</default>
+                <label>MT02 - Sorriso</label>
+            </value>
+            <value>
+                <fullName>MT03</fullName>
+                <default>false</default>
+                <label>MT03 - Querência</label>
+            </value>
+            <value>
+                <fullName>MT04</fullName>
+                <default>false</default>
+                <label>MT04 - Alto Araguaia</label>
+            </value>
+            <value>
+                <fullName>MT05</fullName>
+                <default>false</default>
+                <label>MT05 - Guarantã do Norte</label>
+            </value>
+            <value>
+                <fullName>MT06</fullName>
+                <default>false</default>
+                <label>MT06 - Itiquira</label>
+            </value>
+            <value>
+                <fullName>MT08</fullName>
+                <default>false</default>
+                <label>MT08 - Lucas do Rio Verde</label>
+            </value>
+            <value>
+                <fullName>MT09</fullName>
+                <default>false</default>
+                <label>MT09 - Nova Mutum</label>
+            </value>
+            <value>
+                <fullName>MT10</fullName>
+                <default>false</default>
+                <label>MT10 - Sinop</label>
+            </value>
+            <value>
+                <fullName>MT11</fullName>
+                <default>false</default>
+                <label>MT11 - Comodoro</label>
+            </value>
+            <value>
+                <fullName>MT50</fullName>
+                <default>false</default>
+                <label>MT50 - Água Boa</label>
+            </value>
+            <value>
+                <fullName>MT51</fullName>
+                <default>false</default>
+                <label>MT51 - Barra do Garça</label>
+            </value>
+            <value>
+                <fullName>MT52</fullName>
+                <default>false</default>
+                <label>MT52 - Campo Novo do Parecis</label>
+            </value>
+            <value>
+                <fullName>MT53</fullName>
+                <default>false</default>
+                <label>MT53 - Campo Verde</label>
+            </value>
+            <value>
+                <fullName>MT54</fullName>
+                <default>false</default>
+                <label>MT54 - Canarana</label>
+            </value>
+            <value>
+                <fullName>MT55</fullName>
+                <default>false</default>
+                <label>MT55 - Confresa</label>
+            </value>
+            <value>
+                <fullName>MT56</fullName>
+                <default>false</default>
+                <label>MT56 - Deciolandia</label>
+            </value>
+            <value>
+                <fullName>MT57</fullName>
+                <default>false</default>
+                <label>MT57 - Diamantino</label>
+            </value>
+            <value>
+                <fullName>MT58</fullName>
+                <default>false</default>
+                <label>MT58 - Gaucha do Norte</label>
+            </value>
+            <value>
+                <fullName>MT59</fullName>
+                <default>false</default>
+                <label>MT59 - Nova Xavantina</label>
+            </value>
+            <value>
+                <fullName>MT60</fullName>
+                <default>false</default>
+                <label>MT60 - Paranatinga</label>
+            </value>
+            <value>
+                <fullName>MT61</fullName>
+                <default>false</default>
+                <label>MT61 - Primavera Leste</label>
+            </value>
+            <value>
+                <fullName>MT62</fullName>
+                <default>false</default>
+                <label>MT62 - Ribeirão Cascalheira</label>
+            </value>
+            <value>
+                <fullName>MT63</fullName>
+                <default>false</default>
+                <label>MT63 - São José do Xingu</label>
+            </value>
+            <value>
+                <fullName>MT64</fullName>
+                <default>false</default>
+                <label>MT64 - Sapezal</label>
+            </value>
+            <value>
+                <fullName>MT65</fullName>
+                <default>false</default>
+                <label>MT65 - Vila Rica</label>
+            </value>
+            <value>
+                <fullName>MT66</fullName>
+                <default>false</default>
+                <label>MT66 - Santo Antonio do Leste</label>
+            </value>
+            <value>
+                <fullName>MT67</fullName>
+                <default>false</default>
+                <label>MT67 - Jaciara</label>
+            </value>
+            <value>
+                <fullName>PA01</fullName>
+                <default>false</default>
+                <label>PA01 - Barcarena</label>
+            </value>
+            <value>
+                <fullName>PA02</fullName>
+                <default>false</default>
+                <label>PA02 - Santarem</label>
+            </value>
+            <value>
+                <fullName>PA03</fullName>
+                <default>false</default>
+                <label>PA03 - Conceição do Araguaia</label>
+            </value>
+            <value>
+                <fullName>PA04</fullName>
+                <default>false</default>
+                <label>PA04 - Paragominas</label>
+            </value>
+            <value>
+                <fullName>PA05</fullName>
+                <default>false</default>
+                <label>PA05 - Redenção</label>
+            </value>
+            <value>
+                <fullName>PA06</fullName>
+                <default>false</default>
+                <label>PA06 - São Félix do Xingu</label>
+            </value>
+            <value>
+                <fullName>PA51</fullName>
+                <default>false</default>
+                <label>PA51 - Placas</label>
+            </value>
+            <value>
+                <fullName>PE00</fullName>
+                <default>false</default>
+                <label>PE00 - Recife</label>
+            </value>
+            <value>
+                <fullName>PE01</fullName>
+                <default>false</default>
+                <label>PE01 - Jaboatão dos Guararapes</label>
+            </value>
+            <value>
+                <fullName>PI51</fullName>
+                <default>false</default>
+                <label>PI51 - Baixa Grande do Ribeiro</label>
+            </value>
+            <value>
+                <fullName>PI52</fullName>
+                <default>false</default>
+                <label>PI52 - Bom Jesus</label>
+            </value>
+            <value>
+                <fullName>PI53</fullName>
+                <default>false</default>
+                <label>PI53 - Palmeira Piaui</label>
+            </value>
+            <value>
+                <fullName>PI54</fullName>
+                <default>false</default>
+                <label>PI54 - Rib Gonçalves</label>
+            </value>
+            <value>
+                <fullName>PI55</fullName>
+                <default>false</default>
+                <label>PI55 - Santa Filomena</label>
+            </value>
+            <value>
+                <fullName>PI56</fullName>
+                <default>false</default>
+                <label>PI56 - Uruçui</label>
+            </value>
+            <value>
+                <fullName>PI57</fullName>
+                <default>false</default>
+                <label>PI57 - Nova Santa Rosa</label>
+            </value>
+            <value>
+                <fullName>PR01</fullName>
+                <default>false</default>
+                <label>PR01 - Curitiba</label>
+            </value>
+            <value>
+                <fullName>PR02</fullName>
+                <default>false</default>
+                <label>PR02 - Cascavel</label>
+            </value>
+            <value>
+                <fullName>PR03</fullName>
+                <default>false</default>
+                <label>PR03 - Paranaguá</label>
+            </value>
+            <value>
+                <fullName>PR04</fullName>
+                <default>false</default>
+                <label>PR04 - Ponta Grossa</label>
+            </value>
+            <value>
+                <fullName>PR05</fullName>
+                <default>false</default>
+                <label>PR05 - Cambé</label>
+            </value>
+            <value>
+                <fullName>PR50</fullName>
+                <default>false</default>
+                <label>PR50 - Almirante Tamandaré</label>
+            </value>
+            <value>
+                <fullName>PR51</fullName>
+                <default>false</default>
+                <label>PR51 - Araucária</label>
+            </value>
+            <value>
+                <fullName>RS00</fullName>
+                <default>false</default>
+                <label>RS00 - Rio Grande</label>
+            </value>
+            <value>
+                <fullName>SC00</fullName>
+                <default>false</default>
+                <label>SC00 - São Francisco do Sul</label>
+            </value>
+            <value>
+                <fullName>SE00</fullName>
+                <default>false</default>
+                <label>SE00 - Rosário do Catete</label>
+            </value>
+            <value>
+                <fullName>SE01</fullName>
+                <default>false</default>
+                <label>SE01 - Barra dos Coqueiros</label>
+            </value>
+            <value>
+                <fullName>SE02</fullName>
+                <default>false</default>
+                <label>SE02 - Laranjeiras</label>
+            </value>
+            <value>
+                <fullName>SE03</fullName>
+                <default>false</default>
+                <label>SE03 - Maruim</label>
+            </value>
+            <value>
+                <fullName>SP01</fullName>
+                <default>false</default>
+                <label>SP01 - Ourinhos</label>
+            </value>
+            <value>
+                <fullName>SP02</fullName>
+                <default>false</default>
+                <label>SP02 - Paulínia</label>
+            </value>
+            <value>
+                <fullName>SP03</fullName>
+                <default>false</default>
+                <label>SP03 - Sumaré</label>
+            </value>
+            <value>
+                <fullName>SP04</fullName>
+                <default>false</default>
+                <label>SP04 - Registro</label>
+            </value>
+            <value>
+                <fullName>SP05</fullName>
+                <default>false</default>
+                <label>SP05 - Cubatão</label>
+            </value>
+            <value>
+                <fullName>SP07</fullName>
+                <default>false</default>
+                <label>SP07 - Catanduva</label>
+            </value>
+            <value>
+                <fullName>SP08</fullName>
+                <default>false</default>
+                <label>SP08 - Igarapava</label>
+            </value>
+            <value>
+                <fullName>SP09</fullName>
+                <default>false</default>
+                <label>SP09 - Jaú</label>
+            </value>
+            <value>
+                <fullName>SP10</fullName>
+                <default>false</default>
+                <label>SP10 - Limeira</label>
+            </value>
+            <value>
+                <fullName>SP11</fullName>
+                <default>false</default>
+                <label>SP11 - Barretos</label>
+            </value>
+            <value>
+                <fullName>SP12</fullName>
+                <default>false</default>
+                <label>SP12 - Campo Limpo Paulista</label>
+            </value>
+            <value>
+                <fullName>SP13</fullName>
+                <default>false</default>
+                <label>SP13 - Ibaté</label>
+            </value>
+            <value>
+                <fullName>SP14</fullName>
+                <default>false</default>
+                <label>SP14 - Itapetininga</label>
+            </value>
+            <value>
+                <fullName>SP15</fullName>
+                <default>false</default>
+                <label>SP15 - Jardinópolis</label>
+            </value>
+            <value>
+                <fullName>SP16</fullName>
+                <default>false</default>
+                <label>SP16 - Jundiaí</label>
+            </value>
+            <value>
+                <fullName>SP17</fullName>
+                <default>false</default>
+                <label>SP17 - Ribeirão Preto</label>
+            </value>
+            <value>
+                <fullName>SP18</fullName>
+                <default>false</default>
+                <label>SP18 - São Joaquim da Barra</label>
+            </value>
+            <value>
+                <fullName>SP19</fullName>
+                <default>false</default>
+                <label>SP19 - Atibaia</label>
+            </value>
+            <value>
+                <fullName>SP20</fullName>
+                <default>false</default>
+                <label>SP20 - Barueri</label>
+            </value>
+            <value>
+                <fullName>SP21</fullName>
+                <default>false</default>
+                <label>SP21 - Canitar</label>
+            </value>
+            <value>
+                <fullName>SP22</fullName>
+                <default>false</default>
+                <label>SP22 - Cerqueira Cesar</label>
+            </value>
+            <value>
+                <fullName>SP23</fullName>
+                <default>false</default>
+                <label>SP23 - Mogi das Cruzes</label>
+            </value>
+            <value>
+                <fullName>SP24</fullName>
+                <default>false</default>
+                <label>SP24 - Serrana</label>
+            </value>
+            <value>
+                <fullName>SP25</fullName>
+                <default>false</default>
+                <label>SP25 - Suzano</label>
+            </value>
+            <value>
+                <fullName>SP26</fullName>
+                <default>false</default>
+                <label>SP26 - Campinas</label>
+            </value>
+            <value>
+                <fullName>SP51</fullName>
+                <default>false</default>
+                <label>SP51 - Osasco</label>
+            </value>
+            <value>
+                <fullName>TO01</fullName>
+                <default>false</default>
+                <label>TO01 - Arraias</label>
+            </value>
+            <value>
+                <fullName>TO02</fullName>
+                <default>false</default>
+                <label>TO02 - Alvorada</label>
+            </value>
+            <value>
+                <fullName>TO03</fullName>
+                <default>false</default>
+                <label>TO03 - Araguaina</label>
+            </value>
+            <value>
+                <fullName>TO04</fullName>
+                <default>false</default>
+                <label>TO04 - Campos Lindos</label>
+            </value>
+            <value>
+                <fullName>TO05</fullName>
+                <default>false</default>
+                <label>TO05 - Caseara</label>
+            </value>
+            <value>
+                <fullName>TO06</fullName>
+                <default>false</default>
+                <label>TO06 - Gurupi</label>
+            </value>
+            <value>
+                <fullName>TO07</fullName>
+                <default>false</default>
+                <label>TO07 - Lagoa da Confusão</label>
+            </value>
+            <value>
+                <fullName>TO08</fullName>
+                <default>false</default>
+                <label>TO08 - Palmas</label>
+            </value>
+            <value>
+                <fullName>TO09</fullName>
+                <default>false</default>
+                <label>TO09 - Pedro Afonso</label>
+            </value>
+            <value>
+                <fullName>TO10</fullName>
+                <default>false</default>
+                <label>TO10 - Silvanópolis</label>
+            </value>
+            <value>
+                <fullName>MT07</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MT07</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

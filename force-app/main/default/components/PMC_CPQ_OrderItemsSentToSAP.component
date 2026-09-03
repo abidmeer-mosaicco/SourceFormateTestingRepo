@@ -1,0 +1,73 @@
+<apex:component controller="PMC_CPQ_SAPOrderIntegrationEmailCtrl" access="global">
+    <apex:attribute name="orderRecordId" description="Order Id" assignTo="{!orderId}" type="String"/>
+    <style>
+        /* Center all cell content by default */
+        .pmc-center-table td, .pmc-center-table th {
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+        }
+
+        /* Override for name / message fields */
+        .pmc-left {
+            text-align: left !important;
+        }
+    </style>
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; color: #333;" class="pmc-center-table">
+        <tr>
+            <td style="padding: 20px; background-color: #f8f9fa;">
+                <h2 style="margin: 0 0 10px 0; color: #0070d2;">Order Summary</h2>
+                <table width="100%" cellpadding="8" cellspacing="0" border="0" style="border: 1px solid #ccc; border-collapse: collapse;">
+                    <tr>
+                        <td class="pmc-left"><strong>Customer Name: </strong><apex:outputText value="{!orderRecord.accountName}" /></td>
+                    </tr>
+                    <tr>
+                        <td class="pmc-left"><strong>Order Number: </strong><a href="{!orderUrl}" target="_blank">{!orderRecord.orderNumber}</a></td>
+                    </tr>
+                    <tr>
+                        <td class="pmc-left"><strong>SAP Order Number: </strong><apex:outputText value="{!orderRecord.sapOrderNumber}" /></td>
+                    </tr>
+                </table>
+
+                <h3 style="margin: 30px 0 10px 0; color: #0070d2;">Order Line Details</h3>
+                <table width="100%" cellpadding="6" cellspacing="0" border="0" style="border: 1px solid #ccc; border-collapse: collapse; font-size: 13px;" class="pmc-center-table">
+                    <tr style="background-color: #e9ecef;">
+                        <th>Order Line</th>
+                        <th>SAP Order Number</th>
+                        <th>SAP Order Line ID</th>
+                        <th>Last Modified By</th>
+                        <th>Integration Status</th>
+                        <th>Integration Message</th>
+                        <th>Ship To</th>
+                        <th>Account Name</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price By Date</th>
+                        <th>List Price</th>
+                        <th>Agreed Final Price</th>
+                        <th>Status</th>
+                    </tr>
+                    <apex:repeat value="{!filteredOrderItemWrappers}" var="line">
+                        <tr>
+                            <td><a href="{!line.orderLineUrl}" target="_blank">{!line.orderItemNumber}</a></td>
+                            <td><apex:outputText value="{!line.sapOrderNumber}" /></td>
+                            <td><apex:outputText value="{!line.sapOrderLineId}" /></td>
+                            <td><apex:outputText value="{!line.lastModifiedBy}" /></td>
+                            <td><apex:outputText value="{!line.integrationStatus}" /></td>
+                            <td class="pmc-left"><apex:outputText value="{!line.integrationMessage}" /></td>
+                            <td class="pmc-left"><apex:outputText value="{!line.shipToName}" /></td>
+                            <td class="pmc-left"><apex:outputText value="{!line.accountName}" /></td>
+                            <td class="pmc-left"><apex:outputText value="{!line.productName}" /></td>
+                            <td><apex:outputText value="{!line.quantity}" /></td>
+                            <td><apex:outputText value="{!line.pricingDate}" /></td>
+                            <td><apex:outputText value="{!line.listPrice}" /> {!line.currencyCode}</td>
+                            <td><apex:outputText value="{!line.finalAgreedPrice}" /> {!line.currencyCode}</td>
+                            <td><apex:outputText value="{!line.orderLineStatus}" /></td>
+                        </tr>
+                    </apex:repeat>
+                </table>
+            </td>
+        </tr>
+    </table>
+</apex:component>

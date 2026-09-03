@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MDHA2_Mosaic_Direct</fullName>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>copado__Team__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Project__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>Jira_Key__c</columns>
+    <columns>copado__Has_Apex_Code__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>Ha 2</value>
+    </filters>
+    <filters>
+        <field>copado__Team__c</field>
+        <operation>equals</operation>
+        <value>Digital Hub</value>
+    </filters>
+    <label>MDHA2  - Mosaic Direct</label>
+</ListView>

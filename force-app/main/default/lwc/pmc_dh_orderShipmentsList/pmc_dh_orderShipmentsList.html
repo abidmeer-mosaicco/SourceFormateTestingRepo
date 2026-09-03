@@ -1,0 +1,128 @@
+<template>
+  <ul class="order-menu slds-m-top_x-small">
+    <li class="menu-list sch" data-id="Scheduled" onclick={tabChangeHandler}>
+      {labels.pmc_shipmentDetails_scheduled}
+    </li>
+    <li class="menu-list tran" data-id="InTransit" onclick={tabChangeHandler}>
+      {labels.pmc_shipmentDetails_inTransit}
+    </li>
+  </ul>
+
+  <c-pmc_dh_search-filters search-input-label={labels.pmc_shipmentHistory_searchShipments} future-date-allowed
+    onsearchev={handleSearch} onapplyfilterev={handleApplyFilter} onclearsearchinputsev={clearSearchInputs}>
+  </c-pmc_dh_search-filters>
+  <template if:true={pageLoaded}>
+    <template if:false={isResultSetEmpty}>
+      <div class="scrollable-container slds-m-bottom_medium">
+        <div class="scrollable-content">
+          <div for:each={filteredData} for:item="shipment" key={shipment.strDestinationId} class="custom-card">
+            <div class="shipment-card-head">
+              <div>
+                <div class="lbl-field-name slds-m-bottom_x-small">{labels.pmc_shipmentHistory_destination}</div>
+                <div class="lbl-field-value">{shipment.strDestination}</div>
+              </div>
+              <div class="accordion-icon">
+                <img src={iconUrlObj.arrowRightIconUrl} alt={labels.pmc_leadManagement_accordion}
+                  data-record-index={shipment.strDestinationId} data-str-destination-id={shipment.strDestinationId}
+                  onclick={openAccordion} />
+              </div>
+            </div>
+            <template if:true={shipment.isAccordOpen}>
+              <div class="card-body accordion-content" data-record-index={shipment.strDestinationId}>
+                <template for:each={shipment.lstDeliveriesWrapper} for:item="order">
+                  <div key={order.strOrderId} class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-12 content-info">
+                      <div class="lbl-field-name">{labels.pmc_orderHistory_orderNumber}</div>
+                      <div class="lbl-field-value order-link" data-order-number={order.strOrderNumber}
+                        data-order-id={order.strOrderId} onclick={navigateToOrder}>{order.strOrderNumber}</div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 content-info">
+                      <div class="lbl-field-name">{labels.pmc_contractDetails_poNumber}</div>
+                      <div class="lbl-field-value wrap-text">{order.strPONumber}</div>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 content-info prdct-nm">
+                      <div class="lbl-field-name">{labels.pmc_homepage_product}</div>
+                      <div class="lbl-field-value">{order.strProductName}</div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 content-info">
+                      <div class="lbl-field-name">{labels.pmc_shipmentDetails_vehicleId}</div>
+                      <div class="lbl-field-value order-link wrap-text">
+                        <template lwc:if={isLocationBrazil}>
+                          <a href={trizzyUrl} target="_blank">{order.strVehicleId}</a>
+                        </template>
+                        <template lwc:else>
+                          <span class="lbl-field-value" data-id={order.strVehicleId}
+                            data-order-number={order.strOrderNumber} data-order-id={order.strOrderId}
+                            data-order-line-id={order.strOrderLineId} onclick={navigateToDeliveryTrackingPage}>
+                            {order.strVehicleId}
+                          </span>
+                        </template>
+                      </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 content-info">
+                      <div class="lbl-field-name">
+                        <template lwc:if={isScheduled}>
+                          {labels.pmc_shipmentHistory_scheduledDate}
+                        </template>
+                        <template lwc:else>
+                          {labels.pmc_shipmentHistory_shipDate}
+                        </template>
+                      </div>
+                      <div class="lbl-field-value">{order.formattedShipDate}</div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-12 content-info">
+                      <div class="lbl-field-name">{labels.pmc_shipmentDetails_deliveryQty}</div>
+                      <div class="lbl-field-value">{order.strDeliveryQuantity}</div>
+                    </div>
+                    <template if:false={isLocationBrazil}>
+                      <div class="slds-col slds-size_1-of-12 content-info">
+                        <div class="lbl-field-name">{labels.pmc_shipmentDetails_eta}</div>
+                        <div class="lbl-field-value">{order.formattedETA}</div>
+                      </div>
+                    </template>
+                    <div class="slds-col slds-size_2-of-12 content-info doc-download-section">
+                      <c-pmc_dh_selection-picklist text-label={labels.pmc_shipmentDetails_document}
+                        combobox-list-json={order.lstDocument} placeholder={labels.pmc_shipmentDetails_chooseDoc}
+                        data-delivery-item-id={order.strDeliveryItemId} oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_selection-picklist>
+                      <div class="download-icon">
+                        <template lwc:if={order.isDownloadEnabled}>
+                          <img src={iconUrlObj.download} alt={labels.pmc_orderHistory_download}
+                            onclick={downloadDocument} data-delivery-item-id={order.strDeliveryItemId} />
+                        </template>
+                      </div>
+                    </div>
+                    <template if:false={isLocationBrazil}>
+                      <template if:false={isScheduled}>
+                        <div class="slds-col slds-size_1-of-12 content-info">
+                          <div class="lbl-field-name">{labels.pmc_shipmentDetails_currentLoc}</div>
+                          <div class="lbl-field-value">{order.strCurrentLocation}</div>
+                        </div>
+                      </template>
+                    </template>
+                    <div class="slds-col slds-size_2-of-12 badge-style">
+                      <span class="badge badge-font" data-delivery-item-id={order.strDeliveryItemId}>
+                        {order.strStatus}
+                      </span>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </template>
+    <div class="pagination slds-m-bottom_medium">
+      <c-pmc_dh_pagination generickey="id" genericdata={shipmentsList} class="mydatatable slds-table_striped"
+        no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData} modal-theme>
+      </c-pmc_dh_pagination>
+    </div>
+    <div lwc:if={isResultSetEmpty} class="no-results-msg slds-m-vertical_large">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner></c-pmc_dh_spinner>
+  </template>
+</template>

@@ -1,0 +1,38 @@
+.icon-container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+.logo-img{
+    max-width: 200px;
+}
+
+@media screen and (max-width: 1350px) {
+    .icon-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.2rem;
+        cursor: pointer;
+    }
+
+    .logo-img{
+        max-width: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icon-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-img{
+        max-width: 200px;
+    }
+}

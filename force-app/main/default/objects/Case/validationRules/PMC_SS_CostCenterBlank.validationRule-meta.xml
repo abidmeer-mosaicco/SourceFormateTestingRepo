@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_CostCenterBlank</fullName>
+    <active>true</active>
+    <description>Cost Center is required in order to close a Case.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Quality&quot;,
+ISPICKVAL(Status, &quot;Closed&quot;),
+ISBLANK( PMC_SS_CostCenter__c )
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_CostCenter__c</errorDisplayField>
+    <errorMessage>Cost Center is required in order to close a Case.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__SetupAuditTrailImpersonatedBatch_Limit__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This configuration will only have an effect if the SetupAudTrailImpBatch DisableFullQuery configuration is unchecked/disabled. The preference is to use the full query unless a query timeout is occurring.
+
+Refers to the limit of the query in the start method of SetupAuditTrailImpersonatedBatch. Defaults to 50,000 if not specified. Raise this to capture more results (batch will take longer). Lower it if we&apos;re getting a query timeout.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Refers to the limit of the query in the start method of SetupAuditTrailImpersonatedBatch. Defaults to 50,000 if not specified. Raise this to capture more results (batch will take longer). Lower it if we&apos;re getting a query timeout. NOTE: If the SetupAudTrailImpBatch DisableFullQuery is checked/enabled, this batch configuration will have no effect and is not needed.</inlineHelpText>
+    <label>SetupAuditTrailImpersonatedBatch Limit</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

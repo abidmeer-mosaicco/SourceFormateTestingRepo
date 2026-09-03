@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Domestic</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>PMC_CPQ_CPQOrderCompactLayout</compactLayoutAssignment>
+    <label>Domestic</label>
+    <picklistValues>
+        <picklist>PMC_CPQ_ATPStatus__c</picklist>
+        <values>
+            <fullName>Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Confirmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Confirmed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_HoldSubStatus__c</picklist>
+        <values>
+            <fullName>Billing Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Block</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Incoterms__c</picklist>
+        <values>
+            <fullName>CFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB%2FCIFADO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_OrderIntegrationStatus__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Region__c</picklist>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_DH_SalesChannel__c</picklist>
+        <values>
+            <fullName>Mosaic Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__ContractingMethod__c</picklist>
+        <values>
+            <fullName>By Subscription End Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Contract</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__PaymentTerm__c</picklist>
+        <values>
+            <fullName>05 Days - Document Lock Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Installments From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Installments From Next Month Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Installments From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Installments From Next Month Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 Installments From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Doc - 60 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 10 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 120 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 15 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 180 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 30 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 45 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 5 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 7 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Against Documents - 90 Days From BL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed L%2FC At Sight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due 10th Of Following Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due 1st Of Following Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Day - Next 3rd Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 1 Day - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 10 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 10 Days From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 105 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 120 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 14 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 15 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 15 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 150 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 17 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 180 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 2 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 20 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 21 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 210 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 270 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 28 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 29 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 3 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 31 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 35 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 42 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 45 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 60 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 7 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 70 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 75 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 80 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 84 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 90 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepayment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__PriceCalcStatus__c</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Queued</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipped</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Credits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-pay Sales Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sample Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Sales Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

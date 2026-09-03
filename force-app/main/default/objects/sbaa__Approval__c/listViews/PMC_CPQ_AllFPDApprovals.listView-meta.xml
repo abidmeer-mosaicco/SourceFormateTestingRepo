@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_AllFPDApprovals</fullName>
+    <columns>NAME</columns>
+    <columns>PMC_CPQ_SAPOrderNumber__c</columns>
+    <columns>PMC_CPQ_SAPOrderLineID__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>StatusIconFormula__c</columns>
+    <columns>PMC_CPQ_Order__c</columns>
+    <columns>OrderItem__c</columns>
+    <columns>PMC_CPQ_SoldtoAccount__c</columns>
+    <columns>PMC_CPQ_Incoterms__c</columns>
+    <columns>PMC_CPQ_Product_Family__c</columns>
+    <columns>PMC_CPQ_Product__c</columns>
+    <columns>PMC_CPQ_ProductLocation__c</columns>
+    <columns>PMC_CPQ_Floorplusfreight__c</columns>
+    <columns>PMC_CPQ_FinalAgreedPrice__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>sbaa__RecordField__c</field>
+        <operation>contains</operation>
+        <value>Order_Line_Approval__c</value>
+    </filters>
+    <label>All FPD Approvals</label>
+</ListView>

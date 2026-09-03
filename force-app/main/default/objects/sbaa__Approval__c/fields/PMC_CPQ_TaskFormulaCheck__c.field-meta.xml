@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_TaskFormulaCheck__c</fullName>
+    <formula>OR( 
+ISPICKVAL(PMC_CPQ_ReminderFrequency__c,&apos;1 Hour&apos;),
+ISPICKVAL(PMC_CPQ_ReminderFrequency__c,&apos;2 Hours&apos;),
+ISPICKVAL(PMC_CPQ_ReminderFrequency__c,&apos;4 Hours&apos;),
+ISPICKVAL(PMC_CPQ_ReminderFrequency__c,&apos;8 Hours&apos;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Task Formula Check</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

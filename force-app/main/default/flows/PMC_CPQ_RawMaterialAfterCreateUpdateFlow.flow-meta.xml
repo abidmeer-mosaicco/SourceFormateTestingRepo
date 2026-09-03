@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignQuoteLineOfRawMaterialFromGetRecords</name>
+        <label>Assign Quote Line Of Raw Material From Get Records</label>
+        <locationX>176</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_QuoteLine__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetQuoteLineRecords.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>RecordUpdate</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>ConfigSettingDecision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>QuoteLineCheckDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DontRunOutcome_ConfigSettingDecision</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>QuoteLineCheckDecision</name>
+        <label>Quote Line Check Decision</label>
+        <locationX>440</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>RecordUpdate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IfQuoteLineNull_QuoteLineCheckDecision</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_QuoteLine__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetQuoteLineRecords</targetReference>
+            </connector>
+            <label>If Quote Line Null</label>
+        </rules>
+    </decisions>
+    <description>This flow deals with after operations for Raw Material object.</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC CPQ RawMaterial After Create Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ RawMaterial After Create Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>880</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>PMC_ExternalId__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <stringValue>PMC CPQ RawMaterial After Create Update Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>GetQuoteLineRecords</name>
+        <label>Get Quote Line Records</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AssignQuoteLineOfRawMaterialFromGetRecords</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SBQQ__Quote__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_CPQ_Quote__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SBQQ__Product__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.PMC_CPQ_Product__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>SBQQ__QuoteLine__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>RecordUpdate</name>
+        <label>Record Update</label>
+        <locationX>440</locationX>
+        <locationY>839</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSettingDecision</targetReference>
+        </connector>
+        <object>PMC_CPQ_RawMaterial__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

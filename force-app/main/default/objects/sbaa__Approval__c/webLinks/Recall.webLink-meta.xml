@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recall</fullName>
+    <availability>online</availability>
+    <description>Recall the approval process</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Recall</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/flow/Order_Item_Recall_Approval?recordId={!sbaa__Approval__c.OrderItemId__c}&amp;retURL=/{!sbaa__Approval__c.OrderItemId__c}</url>
+</WebLink>

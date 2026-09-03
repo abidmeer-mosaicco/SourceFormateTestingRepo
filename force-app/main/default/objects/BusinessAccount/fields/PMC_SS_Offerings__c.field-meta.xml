@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Offerings__c</fullName>
+    <description>Picklist of Offerings dependent on Segmentation</description>
+    <label>Offerings</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>PMC_SS_Segmentation__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Complaint Resolution - &lt; 15 days</fullName>
+                <default>false</default>
+                <label>Complaint Resolution - &lt; 15 days</label>
+            </value>
+            <value>
+                <fullName>Complaint Resolution - &lt; 20 days</fullName>
+                <default>false</default>
+                <label>Complaint Resolution - &lt; 20 days</label>
+            </value>
+            <value>
+                <fullName>Complaint Resolution - &lt;30 days</fullName>
+                <default>false</default>
+                <label>Complaint Resolution - &lt;30 days</label>
+            </value>
+            <value>
+                <fullName>Complaint Resolution - &lt; 30 days</fullName>
+                <default>false</default>
+                <label>Complaint Resolution - &lt; 30 days</label>
+            </value>
+            <value>
+                <fullName>Complaint Resolution - &lt; 45 days</fullName>
+                <default>false</default>
+                <label>Complaint Resolution - &lt; 45 days</label>
+            </value>
+            <value>
+                <fullName>Contracts / BPAs - Custom</fullName>
+                <default>false</default>
+                <label>Contracts / BPAs - Custom</label>
+            </value>
+            <value>
+                <fullName>Contracts / BPAs - Custom Offered</fullName>
+                <default>false</default>
+                <label>Contracts / BPAs - Custom Offered</label>
+            </value>
+            <value>
+                <fullName>Contracts / BPAs - None</fullName>
+                <default>false</default>
+                <label>Contracts / BPAs - None</label>
+            </value>
+            <value>
+                <fullName>Contracts / BPAs - Standard</fullName>
+                <default>false</default>
+                <label>Contracts / BPAs - Standard</label>
+            </value>
+            <value>
+                <fullName>Dedicated Account Management - Account Team</fullName>
+                <default>false</default>
+                <label>Dedicated Account Management - Account Team</label>
+            </value>
+            <value>
+                <fullName>Dedicated Account Management - Dedicated</fullName>
+                <default>false</default>
+                <label>Dedicated Account Management - Dedicated</label>
+            </value>
+            <value>
+                <fullName>Dedicated Account Management - Select</fullName>
+                <default>false</default>
+                <label>Dedicated Account Management - Select</label>
+            </value>
+            <value>
+                <fullName>Dedicated Account Management - Shared</fullName>
+                <default>false</default>
+                <label>Dedicated Account Management - Shared</label>
+            </value>
+            <value>
+                <fullName>Dedicated Customer Service - Dedicated</fullName>
+                <default>false</default>
+                <label>Dedicated Customer Service - Dedicated</label>
+            </value>
+            <value>
+                <fullName>Dedicated Customer Service - Online</fullName>
+                <default>false</default>
+                <label>Dedicated Customer Service - Online</label>
+            </value>
+            <value>
+                <fullName>Dedicated Customer Service - Shared</fullName>
+                <default>false</default>
+                <label>Dedicated Customer Service - Shared</label>
+            </value>
+            <value>
+                <fullName>Exclusive Space - Available</fullName>
+                <default>false</default>
+                <label>Exclusive Space - Available</label>
+            </value>
+            <value>
+                <fullName>Exclusive Space - None</fullName>
+                <default>false</default>
+                <label>Exclusive Space - None</label>
+            </value>
+            <value>
+                <fullName>Exclusive Space - Select</fullName>
+                <default>false</default>
+                <label>Exclusive Space - Select</label>
+            </value>
+            <value>
+                <fullName>Incentives - Available</fullName>
+                <default>false</default>
+                <label>Incentives - Available</label>
+            </value>
+            <value>
+                <fullName>Incentives - Limited</fullName>
+                <default>false</default>
+                <label>Incentives - Limited</label>
+            </value>
+            <value>
+                <fullName>Incentives - Limited/None</fullName>
+                <default>false</default>
+                <label>Incentives - Limited/None</label>
+            </value>
+            <value>
+                <fullName>Incentives - Offered</fullName>
+                <default>false</default>
+                <label>Incentives - Offered</label>
+            </value>
+            <value>
+                <fullName>Incentives - Select</fullName>
+                <default>false</default>
+                <label>Incentives - Select</label>
+            </value>
+            <value>
+                <fullName>Incentives - X1</fullName>
+                <default>false</default>
+                <label>Incentives - X1</label>
+            </value>
+            <value>
+                <fullName>Incentives - X2</fullName>
+                <default>false</default>
+                <label>Incentives - X2</label>
+            </value>
+            <value>
+                <fullName>Incentives - X3</fullName>
+                <default>false</default>
+                <label>Incentives - X3</label>
+            </value>
+            <value>
+                <fullName>Pricing - Directionally Advantaged</fullName>
+                <default>false</default>
+                <label>Pricing - Directionally Advantaged</label>
+            </value>
+            <value>
+                <fullName>Pricing - Directionally Discounted</fullName>
+                <default>false</default>
+                <label>Pricing - Directionally Discounted</label>
+            </value>
+            <value>
+                <fullName>Pricing - Directionally Market</fullName>
+                <default>false</default>
+                <label>Pricing - Directionally Market</label>
+            </value>
+            <value>
+                <fullName>Prioritized Supply/ Delivery - Priority 1</fullName>
+                <default>false</default>
+                <label>Prioritized Supply/ Delivery - Priority 1</label>
+            </value>
+            <value>
+                <fullName>Prioritized Supply/ Delivery - Priority 2</fullName>
+                <default>false</default>
+                <label>Prioritized Supply/ Delivery - Priority 2</label>
+            </value>
+            <value>
+                <fullName>Prioritized Supply/ Delivery - Priority 3</fullName>
+                <default>false</default>
+                <label>Prioritized Supply/ Delivery - Priority 3</label>
+            </value>
+            <value>
+                <fullName>Technical Consulation - Priority 1</fullName>
+                <default>false</default>
+                <label>Technical Consulation - Priority 1</label>
+            </value>
+            <value>
+                <fullName>Technical Consulation - Priority 2</fullName>
+                <default>false</default>
+                <label>Technical Consulation - Priority 2</label>
+            </value>
+            <value>
+                <fullName>Technical Consulation - Priority 3</fullName>
+                <default>false</default>
+                <label>Technical Consulation - Priority 3</label>
+            </value>
+            <value>
+                <fullName>Weekly Scheduling Delivery - Priority 1</fullName>
+                <default>false</default>
+                <label>Weekly Scheduling Delivery - Priority 1</label>
+            </value>
+            <value>
+                <fullName>Weekly Scheduling Delivery - Priority 2</fullName>
+                <default>false</default>
+                <label>Weekly Scheduling Delivery - Priority 2</label>
+            </value>
+            <value>
+                <fullName>Weekly Scheduling Delivery - Priority 3</fullName>
+                <default>false</default>
+                <label>Weekly Scheduling Delivery - Priority 3</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Complaint Resolution - &lt; 45 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Contracts / BPAs - None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Dedicated Account Management - Select</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Dedicated Customer Service - Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Exclusive Space - None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Incentives - Limited</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Pricing - Directionally Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Prioritized Supply/ Delivery - Priority 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Technical Consulation - Priority 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14</controllingFieldValue>
+            <valueName>Weekly Scheduling Delivery - Priority 3</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignPriceBookOnQuote</name>
+        <label>Assign PriceBook On Quote</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.SBQQ__PricebookId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetDefaultPriceBook.PMC_CPQ_DefaultSettingValue__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>GetPriceBookNotNullDecision</name>
+        <label>Get PriceBook Not Null Decision</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>GetPriceBookNotNullDecision_PriceBookIdFetchedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetDefaultPriceBook</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignPriceBookOnQuote</targetReference>
+            </connector>
+            <label>PriceBook Id Fetched Outcome</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>PMC CPQ Before Create Quote Price Book Stamp Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Before Create Quote Price Book Stamp Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetDefaultPriceBook</name>
+        <label>Get Default PriceBook</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetPriceBookNotNullDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>QualifiedApiName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>StandardPriceBookId</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>PMC_CPQ_QuoteDefaultSettings__mdt</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>PMC_CPQ_DefaultSettingValue__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetDefaultPriceBook</targetReference>
+        </connector>
+        <filterFormula>AND(
+NOT({!$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c}),
+ISPICKVAL({!$Record.SBQQ__Type__c},&apos;Quote&apos;)
+)</filterFormula>
+        <object>SBQQ__Quote__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

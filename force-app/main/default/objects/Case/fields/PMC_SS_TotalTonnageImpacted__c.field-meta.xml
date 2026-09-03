@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_TotalTonnageImpacted__c</fullName>
+    <description>Report the total amount of product that is scrapped, sold at a discount, or otherwise directly impacted by the quality issue.  Total Tonnage Impacted may be all or part of the tons involved in the case</description>
+    <externalId>false</externalId>
+    <label>Total Tonnage Impacted</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

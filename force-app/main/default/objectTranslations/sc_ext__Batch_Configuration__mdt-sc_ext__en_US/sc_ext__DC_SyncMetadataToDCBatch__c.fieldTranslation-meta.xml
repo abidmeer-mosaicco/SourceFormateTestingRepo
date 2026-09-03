@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Defaults to 5 unless set here. Gradually lower the number from 5 if encountering an Apex issue upon sync from SF (e.g., FieldDefinition does not support queryMore(), use LIMIT to restrict the results to a single batch). --></help>
+    <label><!-- DC SyncMetadataToDCBatch --></label>
+    <name>sc_ext__DC_SyncMetadataToDCBatch__c</name>
+</CustomFieldTranslation>

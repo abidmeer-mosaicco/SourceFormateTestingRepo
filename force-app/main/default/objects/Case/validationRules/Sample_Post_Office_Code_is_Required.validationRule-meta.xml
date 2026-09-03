@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Post_Office_Code_is_Required</fullName>
+    <active>true</active>
+    <description>Sample Post Office Code field is required when Sample Available field is &quot;YES&quot;</description>
+    <errorConditionFormula>AND ( 
+RecordType.DeveloperName = &quot;Quality&quot;,
+ISPICKVAL(PMC_SS_SamplesAvailable__c,&quot;YES&quot;),  
+ISBLANK(PMC_SS_Sample_Post_Office_Code__c)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Sample_Post_Office_Code__c</errorDisplayField>
+    <errorMessage>Sample Post Office Code field is required when Sample Available field is &quot;YES&quot;</errorMessage>
+</ValidationRule>

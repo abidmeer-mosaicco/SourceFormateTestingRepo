@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ValidateParentAccount</fullName>
+    <active>true</active>
+    <description>Checks if the parent account is valid.</description>
+    <errorConditionFormula>AND(
+	NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+	$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+	$Profile.Name &lt;&gt; &apos;Administrador do sistema&apos;,
+	$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+	NOT(CONTAINS($Profile.Name, &quot;Master Data&quot;)),
+	NOT( RecordType.DeveloperName == &apos;PMC_SS_Agent&apos; ),
+	NOT( ISBLANK( ParentId ) ),
+	OR(
+		AND(
+			NOT(ISPICKVAL( Type , &apos;Others&apos;)),
+			OR(
+				ISPICKVAL( Parent.Type , &apos;Ship-to&apos;),
+				ISPICKVAL( Parent.Type , &apos;Bill-to&apos;),
+				ISPICKVAL( Parent.Type , &apos;Payer&apos;),
+				Parent.RecordType.DeveloperName == &apos;PMC_SS_Agent&apos;,
+				Parent.RecordType.DeveloperName == &apos;PMC_SS_Prospect&apos;
+			)
+		),
+		AND(
+			OR(
+				ISPICKVAL( Type , &apos;Ship-to&apos;),
+				ISPICKVAL( Type , &apos;Bill-to&apos;),
+				ISPICKVAL( Type , &apos;Payer&apos;),
+				ISPICKVAL( Type , &apos;Sold-to&apos;)
+			),
+			NOT(ISPICKVAL( Parent.Type , &apos;Sold-to&apos;)),
+			NOT(ISPICKVAL( Parent.Type , &apos;Others&apos; ))
+		),
+		AND(
+			ISPICKVAL( Type , &apos;Others&apos;),
+			NOT(ISPICKVAL( Parent.Type , &apos;Sold-to&apos;)),
+			NOT(ISPICKVAL( Parent.Type , &apos;Ship-to&apos;))
+		)
+	)
+)</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>The Parent Account association is invalid, please add a valid Sold-to/Ship-to Account for Other Account or Sold-to/Other for a Sold-to Account as Parent Account.</errorMessage>
+</ValidationRule>

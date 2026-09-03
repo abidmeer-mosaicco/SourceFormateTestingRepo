@@ -1,0 +1,21 @@
+<template>
+  <div class={visibilityClass}>
+    <section role="dialog" tabindex="-1" aria-label="modal" aria-modal="true" aria-describedby="modal-content-id"
+      class="slds-modal slds-fade-in-open">
+      <div class="slds-modal__container">
+        <header class="slds-modal__header modal-header">
+          <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">
+            {modalHeading}
+          </h2>
+          <div class="close-icon-container">
+            <img src={closeIconUrl} alt={labels.pmc_modal_close} onclick={handleCloseModal} />
+          </div>
+        </header>
+        <div class="slds-modal__content contentClass" id="modal-content-id">
+          <slot></slot>
+        </div>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+  </div>
+</template>

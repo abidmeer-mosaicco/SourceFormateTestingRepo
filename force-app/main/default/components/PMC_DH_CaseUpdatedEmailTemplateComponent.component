@@ -1,0 +1,144 @@
+<!--
+  @description       : 
+  @author            : @raghu.mothukapally
+  @group             : 
+  @last modified on  : 09-26-2023
+  @last modified by  : @raghu.mothukapally
+-->
+
+<apex:component access="global">
+    <html>
+        <body style="margin:0 auto;padding:0;width:600px;">
+            <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #FFFFFF;width:600px;">
+              <tbody>
+                <tr>
+                  <td height="40">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="600" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td width="40">&nbsp;</td>
+                          <td>
+                              <table width="520" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <c:PMC_DH_EmailHeaderComponent />
+                                    <tr>
+                                      <td height="32">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" colspan="3">
+                                            <table width="520" border="0" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td width="10">&nbsp;</td>
+                                                  <td width="500" align="center"><p style="margin:0;padding:0;font-size:48px;line-height:58px;color:#093532;font-weight:700;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseUpdated}</p></td>
+                                                  <td width="10">&nbsp;</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="32">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td><p style="margin:16px 0 0 0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseUpdated}:</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="16">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><p style="margin:16px 0 0 0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseInformation}:</p></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="16">&nbsp;</td>
+                                      </tr>
+                                    <tr>
+                                      <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseNumber}: <strong>############</strong></p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="16">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseInquiryType}: <strong>Lorem Ipsum</strong></p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="16">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseTopic}: <strong>Lorem Ipsum</strong></p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="32">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center"><p style="margin:0;padding:0;font-size:18px;line-height:27px;color:#093532;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_caseViewLabel}</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="32">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <table width="520" border="0" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                <tr>
+                                                  <td width="140">&nbsp;</td>s
+                                                  <td width="240" height="43" align="center" style="margin:0;padding:0;font-size:14px;line-height:17px;color:#ffffff;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;background-color:#1D625C;display: block;text-align:center;border-radius:8px;">
+                                                    <a href="#" style="width:240px;color:#ffffff;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;padding:0;display:block;width: 240px;border-top: 12px solid #1d625c;border-bottom: 12px solid #1d625c;border-radius: 8px;">{!$Label.pmc_emailTemplate_caseViewBtn}</a>
+                                                  </td>
+                                                  <td width="140">&nbsp;</td>
+                                                </tr>
+                                              </tbody>
+                                           </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="48">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="1" style="border-top:1px solid #C8C8C8">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="32">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_copyPasteLink1}<br/>{!$Label.pmc_emailTemplate_copyPasteLink2}</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="14">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="word-break:break-all;">
+                                        <a href="#" style="margin:0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration:underline;word-break:break-all;">
+                                          <font style="word-break:break-all;">http://www/mosaicdigitalhub.com/digitalhub</font>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="14">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;">{!$Label.pmc_emailTemplate_customerService1}&nbsp;
+                                      <a href="#" style="margin:0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: underline;">{!$Label.pmc_emailTemplate_customerService2}</a>&nbsp;{!$Label.pmc_emailTemplate_customerService3}</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="48">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+            
+                          </td>
+                          <td width="40">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <c:PMC_DH_EmailFooterComponent />
+              </tbody>
+            </table>
+        </body>
+    </html>
+</apex:component>

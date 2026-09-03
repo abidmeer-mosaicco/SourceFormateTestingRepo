@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="{!$Label.PMC_DH_WelcomeEmail}" recipientType="User" renderUsingSystemContextWithoutSharing="True">
+<messaging:htmlEmailBody >
+<c:PMC_DH_WelcomeEmailTemplateComponent userName="{!recipient.Username}" link="{!$Network.NetworkUrlForUserEmails}" />
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

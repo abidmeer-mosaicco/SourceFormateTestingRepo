@@ -1,0 +1,108 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "fd84c17f-dab3-4f28-a1bf-f22f32dfbd3b",
+  "label" : "Consultas (1)",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "41769897-9ce1-4c1e-8266-08f7df5ec61c",
+          "columns" : [ {
+            "UUID" : "7a5c86d6-9f77-4aca-818b-3af2355a1939",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "41769897-9ce1-4c1e-8266-08f7df5ec61c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "99439d51-2255-4e0c-9ac4-ccd073c29479",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7a5c86d6-9f77-4aca-818b-3af2355a1939",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "519d4b75-f4b3-450c-bded-c765c543fcf5",
+          "columns" : [ {
+            "UUID" : "49c82374-6dca-4612-8fe5-90842c092bad",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "519d4b75-f4b3-450c-bded-c765c543fcf5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "[]",
+            "flowName" : "Miski_Mayo_Consultas_Screen"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "d2d9d5bd-5d07-46fc-a151-de9f5a48721b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "49c82374-6dca-4612-8fe5-90842c092bad",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7ebac5d2-2354-49ed-b779-cf3e8c1c3b60",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Consultas"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "ad31c51c-4bcc-42d5-a2e2-ccdecf01a9be",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7bc0a66a-fad1-4877-bd82-82cdf10260f3",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-consultas"
+}

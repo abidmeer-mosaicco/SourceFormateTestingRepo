@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Incoterms1__c</fullName>
+    <description>This field is created  to check incoterms data of line item record</description>
+    <label>Incoterms</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_QuoteRecordSubType__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>PMC_CPQ_Incoterms1</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>CIF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>FCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <controllingFieldValue>B2C - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Feed</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <controllingFieldValue>B2B - Specialties</controllingFieldValue>
+            <controllingFieldValue>B2C - Paraguay</controllingFieldValue>
+            <valueName>FOB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B - Potash</controllingFieldValue>
+            <controllingFieldValue>B2B - Fertilizer</controllingFieldValue>
+            <valueName>FOB/CIFADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <valueName>CFR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <valueName>DAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <valueName>DAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feed</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <controllingFieldValue>Fertilizer</controllingFieldValue>
+            <controllingFieldValue>Industrial</controllingFieldValue>
+            <controllingFieldValue>Raw Material</controllingFieldValue>
+            <controllingFieldValue>Co-Products</controllingFieldValue>
+            <valueName>CPT</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

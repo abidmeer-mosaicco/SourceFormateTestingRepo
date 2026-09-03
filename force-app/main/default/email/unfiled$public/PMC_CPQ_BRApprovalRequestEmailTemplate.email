@@ -1,0 +1,24 @@
+<messaging:emailTemplate subject="(Action Needed)" recipientType="User" relatedToType="sbaa__Approval__c">
+<messaging:htmlEmailBody >
+        
+<html>
+<head>
+<meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+<meta name="Template" content="Response"/>
+</head>
+<body>
+<h4><b>Quote Approval Request Brazil</b></h4><br />
+{!relatedTo.sbaa__Rule__r.PMC_CPQ_Description__c} <br /><br />
+Hello {!recipient.Name},<br/><br/>
+A quote for {!relatedTo.Quote__r.SBQQ__Account__r.Name} has been submitted for your approval by {!relatedTo.Owner.Name}.
+
+<apex:outputLink value="/{!relatedTo.Quote__c}" target="_blank">View Quote</apex:outputLink> <br/><br/>
+
+<c:PMC_CPQ_BRApprovalVFComponent quote="{!relatedTo.Quote__c}"/>           
+<p style="color:white"><apex:outputText value="{!relatedTo.Id}"/></p>
+
+</body>
+</html>
+
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

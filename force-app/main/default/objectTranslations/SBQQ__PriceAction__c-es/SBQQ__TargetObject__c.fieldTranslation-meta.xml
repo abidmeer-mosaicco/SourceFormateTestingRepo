@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Utilice presupuesto, Línea de presupuesto o Orientación de Precios de Línea de presupuesto cuando el Alcance de la Evaluación de la Regla de Precios sea Cálculo. Utilice la opción Producto cuando el Alcance de la evaluación de la regla de precio sea Configuración.&quot;</help>
+    <label>Objeto de destino</label>
+    <name>SBQQ__TargetObject__c</name>
+    <picklistValues>
+        <masterLabel>Product Option</masterLabel>
+        <translation>Opción de producto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote</masterLabel>
+        <translation>Presupuesto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote Line</masterLabel>
+        <translation>Línea de presupuesto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote Line Pricing Guidance</masterLabel>
+        <translation>Orientación sobre los precios de las líneas de presupuesto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

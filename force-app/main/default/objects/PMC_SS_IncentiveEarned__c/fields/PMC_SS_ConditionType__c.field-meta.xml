@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ConditionType__c</fullName>
+    <description>The Key that unquely identifies the accrual condition</description>
+    <label>Condition Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ZRA1</fullName>
+                <default>false</default>
+                <label>Individual Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS1</fullName>
+                <default>false</default>
+                <label>Individual Rebate</label>
+            </value>
+            <value>
+                <fullName>ZRA2</fullName>
+                <default>false</default>
+                <label>Portfolio Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS2</fullName>
+                <default>false</default>
+                <label>Portfolio Rebate</label>
+            </value>
+            <value>
+                <fullName>ZRA3</fullName>
+                <default>false</default>
+                <label>Growth Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS3</fullName>
+                <default>false</default>
+                <label>Growth Rebate</label>
+            </value>
+            <value>
+                <fullName>ZRA6</fullName>
+                <default>false</default>
+                <label>Blended Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS6</fullName>
+                <default>false</default>
+                <label>Blended Rebate</label>
+            </value>
+            <value>
+                <fullName>ZCA1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commission Accrual</label>
+            </value>
+            <value>
+                <fullName>ZCS1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commission Rebate</label>
+            </value>
+            <value>
+                <fullName>ZRA4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ex Sp Fix Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ex Sp Fix Rebate</label>
+            </value>
+            <value>
+                <fullName>ZRA5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ex Sp Per Ton Accrual</label>
+            </value>
+            <value>
+                <fullName>ZRS5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ex Sp Per Ton Rebate</label>
+            </value>
+            <value>
+                <fullName>ZCA2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fix Comm Accrual</label>
+            </value>
+            <value>
+                <fullName>ZCS2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fix Comm Rebate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

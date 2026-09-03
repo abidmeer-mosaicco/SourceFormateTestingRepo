@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Miski Mayo</container>
+    <containerType>Network</containerType>
+    <label>Default Navigation</label>
+    <navigationMenuItem>
+        <label>Conócenos</label>
+        <position>1</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Nosotros</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/nosotros</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Nuestros Accionistas</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/nuestras-accionistas</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Nuestros Líderes</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/nuestros-lideres</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Premios Y Reconocimientos</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/premios-y-reconocimientos</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Mineria Verde</label>
+        <position>2</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Proceso Productivo</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/proceso-productivo</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Hacemos Minería Verde</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/hacemos-minera-verde</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Nuestro Producto</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/nuestro-producto</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Sostenibilidad</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Gestión Social - Programas Sociales</label>
+                <position>0</position>
+                <publiclyAvailable>false</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestion-social?language=en_US#programas-sociales</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Social - Compromisos Contractuales</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestion-social?language=en_US#compromisos-contractuales</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Social - Proveedores y contratistas local</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestion-social?language=en_US#proveedores-y-contratistas-locales</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Salud</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/salud</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Ambiental</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/gestion-ambiental</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Ambiental - Instrumentos de Gestión Ambien</label>
+                <position>5</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestin-ambiental?language=en_US#instrumentos-de-gestion-ambiental-aprobados</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Ambiental - Programa de Monitoreo Ambienta</label>
+                <position>6</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestin-ambiental?language=en_US#programa-de-monitoreo-ambiental</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Gestión Ambiental - Plan de Cierre de Mina</label>
+                <position>7</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/gestin-ambiental?language=en_US#plan-de-cierre-de-mina</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Politicas Corporativas</label>
+        <position>4</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Politica Sig y Politica SSMA</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/politica-sig-y-politica-ssma</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Ética Y Cumplimiento</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/eticaycumplimiento</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Política De Prevención</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/politica-de-prevencion</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Código De Conducta Ética Del Proveedor</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/codigo-de-conducta-etica-del-proveedor</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Diversidad E Inclusión</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/diversidad-e-inclusion</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Noticias Y Publicaciones</label>
+        <position>5</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Notas De Prensa</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/notas-de-prensa</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Reseñas Institucionales</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/notas-de-prensa?language=en_US#resenas-institucionales</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Boletines</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/notas-de-prensa?language=en_US#boletines-institucionales</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Otras publicaciones</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/notas-de-prensa?language=en_US#otras-publicaciones</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Mesa de partes</label>
+        <position>6</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Registra Tu Consulta, Solicitud Y/O O Reclamo</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://mesadepartesmiskimayo.com/#/home</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Preguntas Frecuentes</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/preguntas-frecuentes</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Enlaces Externos</label>
+        <position>7</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Trabaja Con Nosotros</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/trabaja-con-nosotros</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Proveedores</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/proveedores</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Ingreso a Puerto</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/ingreso-a-puerto</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Adryan</label>
+                <position>3</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://adryanweb.mosaicco.com/AdryanWeb/webapp/Account/LogIn</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Workday</label>
+                <position>4</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://wd5.myworkday.com/mosaic/</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>WorkPlace</label>
+                <position>5</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://miskimayo.workplace.com/work/landing/input/</target>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Contáctenos</label>
+        <position>8</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Consultas</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/consultas</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Procedimiento de Quejas y Reclamos</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/procedimiento-de-quejas-y-reclamos</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Danos a conocer tu empresa</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>/danos-a-conocer-tu-empresa</target>
+                <type>InternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Seguridad</label>
+        <position>9</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <subMenu>
+            <navigationMenuItem>
+                <label>Sistema Integrado de Gestión de Mosaic</label>
+                <position>0</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/seguridad?language=en_US#sistema-integrado-de-gestión-de-mosaic</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Las 9 reglas para salvaguardar la vida</label>
+                <position>1</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/seguridad?language=en_US#las-9-reglas-para-salvaguardar-la-vida</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+            <navigationMenuItem>
+                <label>Herramientas de Gestión</label>
+                <position>2</position>
+                <publiclyAvailable>true</publiclyAvailable>
+                <target>https://globaldigitalacceleration--devp1.sandbox.my.site.com/miskimayo/s/seguridad?language=en_US#herramientas-de-gestión-de-seguridad</target>
+                <targetPreference>OpenExternalLinkInSameTab</targetPreference>
+                <type>ExternalLink</type>
+            </navigationMenuItem>
+        </subMenu>
+        <type>MenuLabel</type>
+    </navigationMenuItem>
+</NavigationMenu>

@@ -1,0 +1,24 @@
+<template>
+    <template lwc:if={showRebatesBanner}>
+        <div class={infoClass}>
+            <div>
+                <img src={iconUrl} alt={altText}>
+            </div>
+            <div class={shipmentAlign}>
+                <lightning-formatted-rich-text class="dxp-text-body" value={message}>
+                </lightning-formatted-rich-text>
+                <span class="hyperlink" onclick={hyperlinkHandler}>{hyperlink}</span>
+            </div>
+        </div>
+    </template>
+
+    <template lwc:else>
+        <div class={infoClass}>
+            <div>
+                <img src={iconUrl} alt={altText}>
+            </div>
+            <lightning-formatted-rich-text class="dxp-text-body" value={message}>
+            </lightning-formatted-rich-text>
+        </div>
+    </template>
+</template>

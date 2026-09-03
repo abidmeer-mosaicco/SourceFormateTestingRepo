@@ -1,0 +1,28 @@
+<template>
+  <div class="icon-button">
+    <img src={buttonUrl} alt={labels.pmc_caseMgmt_reopenCase} tabindex="0" onclick={openReopenCaseModal}
+      onkeydown={handleIconKeyDown} onmouseenter={handleMouseEnter} onmouseleave={handleMouseLeave} />
+    <template if:true={isMouseOver}>
+      <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-right btn-tooltip" role="tooltip" id="help">
+        <div class="slds-popover__body tooltip-text">{labels.pmc_caseMgmt_reopenCase}</div>
+      </div>
+    </template>
+  </div>
+  <c-pmc_dh_custom-modal open-modal={isReopenCaseEnabled} modal-heading={labels.pmc_caseMgmt_reopenCase}
+    modal-width={modalWidth} onclosemodalevent={closeReopenCaseModal}>
+    <c-pmc_dh_feedback-form reason-label={labels.pmc_caseMgmt_reopenReasonLabel}
+      comment-label={labels.pmc_caseMgmt_reopenComments} picklist-options={picklistOptions}
+      reason-field-name="strReason" comment-field-name="strOthersComment"
+      textarea-placeholder={labels.pmc_caseMgmt_commentPlaceholder}
+      oninputchange={handleDataChange}></c-pmc_dh_feedback-form>
+    <div class="slds-grid slds-p-horizontal_medium slds-p-bottom_medium">
+      <div class="slds-col mobile-button">
+        <lightning-button variant="brand" label={labels.pmc_caseMgmt_reopenCase} title={labels.pmc_caseMgmt_reopenCase}
+          disabled={disableSubmit} onclick={reopenCaseHandler}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+  <template if:true={loadSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <description>Component for downloading multiple document types (Invoice, BOL, COA, Download All) from SAP via datatable integration</description>
+    <isExposed>true</isExposed>
+    <masterLabel>MD Document Download</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="OrderId" type="String" label="Order ID (Pascal)" description="ID of the Order record (Pascal case)"/>
+            <property name="ShipmentItemId" type="String" label="ShipmentItem ID (Pascal)" description="ID of the ShipmentItem record (Pascal case)"/>
+            <property name="documentType" type="String" label="Document Type" description="Type of document (invoice, bol, coa, download_all)" default="invoice"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

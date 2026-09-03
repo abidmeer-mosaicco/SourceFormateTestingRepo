@@ -1,0 +1,107 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "3e9d6d33-298c-4816-a840-7a23749906b2",
+  "label" : "Procedimiento de Quejas y Reclamos",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e60c471f-0c4c-40d5-a377-3452998c8af5",
+          "columns" : [ {
+            "UUID" : "ba3fe53f-9523-44fb-a897-6d992a3cb040",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e60c471f-0c4c-40d5-a377-3452998c8af5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "76d3e18c-d8e1-4341-8a1b-f5aad42f69c8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ba3fe53f-9523-44fb-a897-6d992a3cb040",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 46,
+        "sectionConfig" : {
+          "UUID" : "146cd2c2-e67a-4195-80a2-c8ad4e2ac725",
+          "columns" : [ {
+            "UUID" : "61ff4d5c-031b-44e0-9ae8-39a563da3292",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "146cd2c2-e67a-4195-80a2-c8ad4e2ac725",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1><strong style=\"font-size: 26px; color: rgb(230, 0, 0);\">Procedimiento de Quejas y Reclamos</strong></h1><p><br></p><p><span style=\"font-size: 18px;\">En Miski Mayo queremos que tus molestias sean atendidas oportunamente.</span></p><p><span style=\"font-size: 18px;\">Por ello, si deseas presentar un reclamo o descontento sobre la Empresa, ya sea oral o escrito, puedes contactarnos al siguiente correo:</span></p><p><br></p><p><a href=\"mailto:contacto@miskimayo.com\" rel=\"noopener noreferrer\" target=\"null\" style=\"font-size: 18px; color: rgb(193, 106, 16);\">contacto@miskimayo.com</a></p><p><br></p><p><span style=\"font-size: 18px;\">O ubicarnos en nuestras oficinas.</span></p><h2><br></h2><h2>Oficinas Piura</h2><p><span style=\"font-size: 16px;\">Urb. San Eduardo Mz A-2, Cámara de Comercio de Piura, Edificio 2, piso 2, Piura.</span></p><h2><br></h2><h2>Oficinas Lima</h2><p><span style=\"font-size: 16px;\">Calle Dionisio Derteano 184 - Torre Ichma (Oficina 301, San Isidro, Lima, Perú).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b304811b-6edf-4213-a213-7203bf0aa6d9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "61ff4d5c-031b-44e0-9ae8-39a563da3292",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ac745588-66f8-47bc-8ba1-0b8921e8ff65",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Procedimiento de Quejas y Reclamos"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2b8090bc-99f7-4407-a230-13659e542356",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e8f62568-7347-4519-b7ed-e79888e9e210",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-procedimiento-de-quejas-y-reclamos"
+}

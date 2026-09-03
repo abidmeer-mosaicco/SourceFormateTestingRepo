@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ShippingType__c</fullName>
+    <label>Shipping Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_ModeOfTransportation__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100-Car Unit Train</fullName>
+                <default>false</default>
+                <label>100-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>105-Car Unit Train</fullName>
+                <default>false</default>
+                <label>105-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>110-Car Unit Train</fullName>
+                <default>false</default>
+                <label>110-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>112-Car Unit Train</fullName>
+                <default>false</default>
+                <label>112-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>25-Car Block</fullName>
+                <default>false</default>
+                <label>25-Car Block</label>
+            </value>
+            <value>
+                <fullName>33-Car Block</fullName>
+                <default>false</default>
+                <label>33-Car Block</label>
+            </value>
+            <value>
+                <fullName>35-Car Unit Train</fullName>
+                <default>false</default>
+                <label>35-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>50-Car Block</fullName>
+                <default>false</default>
+                <label>50-Car Block</label>
+            </value>
+            <value>
+                <fullName>64-Car Unit Train</fullName>
+                <default>false</default>
+                <label>64-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>65-Car Unit Train</fullName>
+                <default>false</default>
+                <label>65-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>70-Car Unit Train</fullName>
+                <default>false</default>
+                <label>70-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>75-Car Unit Train</fullName>
+                <default>false</default>
+                <label>75-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>85-Car Unit Train</fullName>
+                <default>false</default>
+                <label>85-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>90-Car Unit Train</fullName>
+                <default>false</default>
+                <label>90-Car Unit Train</label>
+            </value>
+            <value>
+                <fullName>Covered Hopper Car</fullName>
+                <default>false</default>
+                <label>Covered Hopper Car</label>
+            </value>
+            <value>
+                <fullName>Open Hopper</fullName>
+                <default>false</default>
+                <label>Open Hopper</label>
+            </value>
+            <value>
+                <fullName>Pneumatic Rail Car</fullName>
+                <default>false</default>
+                <label>Pneumatic Rail Car</label>
+            </value>
+            <value>
+                <fullName>Port Dump</fullName>
+                <default>false</default>
+                <label>Port Dump</label>
+            </value>
+            <value>
+                <fullName>Hopper Truck</fullName>
+                <default>false</default>
+                <label>Hopper Truck</label>
+            </value>
+            <value>
+                <fullName>Ocean Vessel</fullName>
+                <default>false</default>
+                <label>Ocean Vessel</label>
+            </value>
+            <value>
+                <fullName>Box Barge</fullName>
+                <default>false</default>
+                <label>Box Barge</label>
+            </value>
+            <value>
+                <fullName>Container-Rail</fullName>
+                <default>false</default>
+                <label>Container-Rail</label>
+            </value>
+            <value>
+                <fullName>Customer Truck</fullName>
+                <default>false</default>
+                <label>Customer Truck</label>
+            </value>
+            <value>
+                <fullName>Pneumatic Truck</fullName>
+                <default>false</default>
+                <label>Pneumatic Truck</label>
+            </value>
+            <value>
+                <fullName>Bag Truck</fullName>
+                <default>false</default>
+                <label>Bag Truck</label>
+            </value>
+            <value>
+                <fullName>Dump Truck</fullName>
+                <default>false</default>
+                <label>Dump Truck</label>
+            </value>
+            <value>
+                <fullName>Tank Truck</fullName>
+                <default>false</default>
+                <label>Tank Truck</label>
+            </value>
+            <value>
+                <fullName>Less than Truckload</fullName>
+                <default>false</default>
+                <label>Less than Truckload</label>
+            </value>
+            <value>
+                <fullName>Intermodal Truck</fullName>
+                <default>false</default>
+                <label>Intermodal Truck</label>
+            </value>
+            <value>
+                <fullName>Control Dump Truck</fullName>
+                <default>false</default>
+                <label>Control Dump Truck</label>
+            </value>
+            <value>
+                <fullName>Flatbed Truck</fullName>
+                <default>false</default>
+                <label>Flatbed Truck</label>
+            </value>
+            <value>
+                <fullName>Backhaul Truck</fullName>
+                <default>false</default>
+                <label>Backhaul Truck</label>
+            </value>
+            <value>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+                <label>Pipeline</label>
+            </value>
+            <value>
+                <fullName>Container-Truck</fullName>
+                <default>false</default>
+                <label>Container-Truck</label>
+            </value>
+            <value>
+                <fullName>Tank Car</fullName>
+                <default>false</default>
+                <label>Tank Car</label>
+            </value>
+            <value>
+                <fullName>Container-Ocean</fullName>
+                <default>false</default>
+                <label>Container-Ocean</label>
+            </value>
+            <value>
+                <fullName>Lake Vessel</fullName>
+                <default>false</default>
+                <label>Lake Vessel</label>
+            </value>
+            <value>
+                <fullName>Cross Gulf Vessel</fullName>
+                <default>false</default>
+                <label>Cross Gulf Vessel</label>
+            </value>
+            <value>
+                <fullName>Rake Barge</fullName>
+                <default>false</default>
+                <label>Rake Barge</label>
+            </value>
+            <value>
+                <fullName>Sulfur Barge</fullName>
+                <default>false</default>
+                <label>Sulfur Barge</label>
+            </value>
+            <value>
+                <fullName>Inland Waterway</fullName>
+                <default>false</default>
+                <label>Inland Waterway</label>
+            </value>
+            <value>
+                <fullName>Rail - TWS</fullName>
+                <default>false</default>
+                <label>Rail - TWS</label>
+            </value>
+            <value>
+                <fullName>Barge - TSW</fullName>
+                <default>false</default>
+                <label>Barge - TSW</label>
+            </value>
+            <value>
+                <fullName>Vessel -TSW</fullName>
+                <default>false</default>
+                <label>Vessel -TSW</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Box Barge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Rake Barge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Sulfur Barge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Inland Waterway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Rail - TWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Barge - TSW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barge</controllingFieldValue>
+            <valueName>Vessel -TSW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>100-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>105-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>110-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>112-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>25-Car Block</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>33-Car Block</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>35-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>50-Car Block</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>64-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>65-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>70-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>75-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>85-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>90-Car Unit Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>Covered Hopper Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>Open Hopper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>Pneumatic Rail Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>Port Dump</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rail</controllingFieldValue>
+            <valueName>Container-Rail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Hopper Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Customer Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Pneumatic Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Bag Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Dump Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Tank Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Less than Truckload</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Intermodal Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Control Dump Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Flatbed Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Backhaul Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Pipeline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Container-Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Truck</controllingFieldValue>
+            <valueName>Tank Car</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vessel</controllingFieldValue>
+            <valueName>Ocean Vessel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vessel</controllingFieldValue>
+            <valueName>Container-Ocean</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vessel</controllingFieldValue>
+            <valueName>Lake Vessel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vessel</controllingFieldValue>
+            <valueName>Cross Gulf Vessel</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

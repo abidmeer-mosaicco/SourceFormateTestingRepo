@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Subscription_Field_with_Original_Values</name>
+        <label>Assign Subscription Field with Original Values</label>
+        <locationX>578</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalAvailableQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RevisedSubscription__r.PMC_CPQ_TotalAvailableQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalOrderedQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RevisedSubscription__r.PMC_CPQ_TotalOrderedQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>This assignment to available quantity and order quantity is to ensure the contract is active in Mosaic Direct and ready to place orders.</description>
+        <name>Assign_Subscription_Fields_with_Initial_Values</name>
+        <label>Assign Subscription Fields with Initial Values</label>
+        <locationX>842</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalAvailableQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__QuoteLine__r.SBQQ__Quantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalOrderedQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SetDefaultQuantityAsZero</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Total_Available_Qty</name>
+        <label>Assign Total Available Qty</label>
+        <locationX>314</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalAvailableQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PMC_DH_TotalAvlQtyAfterAmendment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalOrderedQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__RevisedSubscription__r.PMC_CPQ_TotalOrderedQuantity__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>This assignment to available quantity and order quantity is to ensure the contract is active in Mosaic Direct and ready to place orders.</description>
+        <name>New_QuoteLine</name>
+        <label>New QuoteLine</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalAvailableQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SBQQ__QuoteLine__r.SBQQ__Quantity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_TotalOrderedQuantity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SetDefaultQuantityAsZero</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <name>SetDefaultQuantityAsZero</name>
+        <dataType>Number</dataType>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Bypass_Flow_Decision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Check_Sub_is_Amended_or_not</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Bypassed_Outcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Is Bypassed Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Sub_is_Amended_or_not</name>
+        <label>Check Sub is Amended or not</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Subscription_Fields_with_Initial_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Sub_is_Amended_or_not_If_Record_is_amended</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__QuoteLine__r.SBQQ__Quote__r.SBQQ__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>PMC_DH_IsAmended</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_Quoteline_or_change_on_existing_quoteline</targetReference>
+            </connector>
+            <label>If Record is amended</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>New_Quoteline_or_change_on_existing_quoteline</name>
+        <label>New Quoteline or change on existing quoteline</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Subscription_Field_with_Original_Values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_New_Quoteline</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__RevisedSubscription__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_QuoteLine</targetReference>
+            </connector>
+            <label>Is New Quoteline</label>
+        </rules>
+        <rules>
+            <name>Check_Quantity_Change</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__RevisedSubscription__r.SBQQ__QuoteLine__r.SBQQ__Quantity__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.SBQQ__QuoteLine__r.SBQQ__Quantity__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Total_Available_Qty</targetReference>
+            </connector>
+            <label>Check Quantity Change</label>
+        </rules>
+    </decisions>
+    <description>The Flow Handles Mosaic Direct Related Changes to the subscription records created by CLM process</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>This will store the subtraction of quantity(quoteline) and ordered qty(subscription).</description>
+        <name>PMC_DH_TotalAvlQtyAfterAmendment</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.SBQQ__QuoteLine__r.SBQQ__Quantity__c}-{!$Record.SBQQ__RevisedSubscription__r.PMC_CPQ_TotalOrderedQuantity__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>PMC SS Before Create Insert Subscription Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC DH Before Create Insert Subscription Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Bypass_Flow_Decision</targetReference>
+        </connector>
+        <object>SBQQ__Subscription__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>PMC_DH_IsAmended</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Amendment</stringValue>
+        </value>
+    </variables>
+</Flow>

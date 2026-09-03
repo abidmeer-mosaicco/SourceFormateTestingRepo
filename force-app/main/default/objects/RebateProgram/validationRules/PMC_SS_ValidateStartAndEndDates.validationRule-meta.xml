@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ValidateStartAndEndDates</fullName>
+    <active>true</active>
+    <description>Rule to ensure that Rebate Program Start Date &amp; End Date are within Sales Agreement Dates.</description>
+    <errorConditionFormula>IF(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+OR(
+StartDate &lt; PMC_SS_SalesAgreement__r.StartDate,
+EndDate &gt; PMC_SS_SalesAgreement__r.EndDate
+),
+false
+)</errorConditionFormula>
+    <errorMessage>Please add a Rebate Program that has time duration within the Sales Agreement&apos;s time duration.</errorMessage>
+</ValidationRule>

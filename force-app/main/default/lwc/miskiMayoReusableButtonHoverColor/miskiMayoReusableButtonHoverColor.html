@@ -1,0 +1,12 @@
+<template>
+    <template if:true={showButton}>
+        <div class="slds-align_absolute-center">
+            <button class="custom-button" style={styleButton} 
+                    onmouseover={handleMouseOver} 
+                    onmouseout={handleMouseOut}
+                    onclick={handleClick}>
+                {label}
+            </button>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,121 @@
+<template>
+  <div class="slds-modal__header">
+    <h2 class="slds-text-heading_medium slds-align_absolute-center">Share</h2>
+  </div>
+
+  <div class="slds-modal__content slds-p-around_medium" style="min-height: 200px;">
+    
+    <!-- User Lookup -->
+    <div class="slds-form-element slds-m-bottom_medium">
+    
+     <div class="slds-form-element__control"> 
+     
+        <c-user-lookup onusersselected={handleUserSelected}></c-user-lookup>
+        
+   </div> 
+     
+    </div>
+
+    <!-- Access Level Dropdown -->
+    <div class="slds-form-element slds-m-bottom_medium">
+      <label class="slds-form-element__label" for="accessLevel">
+        <abbr class="slds-required" title="required">*</abbr>
+        CPQ Quote Access Level
+      </label>
+      <div class="slds-form-element__control">
+        <lightning-combobox
+          name="accessLevel"
+          value={accessLevel}
+          options={accessOptions}
+          onchange={handleAccessChange}
+        ></lightning-combobox>
+      </div>
+    </div>
+
+    <!-- Shared Count -->
+    <div class="slds-text-body_regular slds-m-top_medium">
+      {shareCountMessage}
+      <lightning-button
+        variant="base"
+        label={editButtonLabel}
+        onclick={toggleEditShares}
+        class="slds-text-link slds-m-left_x-small"
+      ></lightning-button>
+    </div>
+
+    <!-- Editable Table -->
+    <template if:true={editMode}>
+      <lightning-input
+        type="search"
+        placeholder="Filter groups of users"
+        value={filterText}
+        onchange={handleFilterChange}
+        class="slds-m-bottom_small"
+      ></lightning-input>
+
+      <div class="slds-table_edit_container slds-is-relative">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <thead>
+            <tr class="slds-line-height_reset">
+              <th><div class="slds-truncate">Name</div></th>
+              <th><div class="slds-truncate">Type</div></th>
+              <th><div class="slds-truncate">CPQ Quote Access Level</div></th>
+              <th><div class="slds-truncate">Remove</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <template for:each={filteredShares} for:item="row">
+              <tr key={row.id}>
+                <td><div class="slds-truncate">{row.name}</div></td>
+                <td><div class="slds-truncate">{row.type}</div></td>
+                <td>
+                  <lightning-combobox
+                    value={row.accessLevel}
+                    options={accessOptions}
+                    data-id={row.id}
+                    onchange={handleInlineAccessChange}
+                    class="slds-size_small"
+                  ></lightning-combobox>
+                </td>
+                <td>
+                  <lightning-button-icon
+                    icon-name="utility:close"
+                    alternative-text="Remove"
+                    title="Remove"
+                    data-id={row.id}
+                    onclick={handleRemoveShare}
+                   
+                  ></lightning-button-icon>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </template>
+  </div>
+
+  <div class="slds-modal__footer">
+  <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+
+  <template if:true={editMode}>
+    <lightning-button
+      label="Save"
+      variant="brand"
+      class="slds-m-left_small"
+      onclick={handleSave}
+    ></lightning-button>
+  </template>
+
+  <template if:false={editMode}>
+    <lightning-button
+      variant="brand"
+      label="Share"
+      class="slds-m-left_small"
+      onclick={handleShare}
+      disabled={disableShare}
+    ></lightning-button>
+  </template>
+</div>
+
+</template>

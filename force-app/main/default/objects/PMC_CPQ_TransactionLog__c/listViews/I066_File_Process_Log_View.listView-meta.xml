@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I066_File_Process_Log_View</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PMC_CPQ_IntegrationStatus__c</columns>
+    <columns>PMC_CPQ_ResponseBody__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_InterfaceURL__c</field>
+        <operation>equals</operation>
+        <value>Order</value>
+    </filters>
+    <label>I066 File Process Log View</label>
+</ListView>

@@ -1,0 +1,310 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6ab68bda-cfff-471c-9f12-5d793dc956a3",
+  "label" : "Consulta",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6f27266a-49be-4762-a2ad-120c7ab96a74",
+          "columns" : [ {
+            "UUID" : "635576d9-0913-48c0-a0aa-a363dde57a43",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6f27266a-49be-4762-a2ad-120c7ab96a74",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 36px;\">Consulta</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "04564fa9-f490-4244-966d-119d9c3a5172",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "635576d9-0913-48c0-a0aa-a363dde57a43",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d5f10c98-03a7-400a-93f2-d6eb9b51fdbe",
+          "columns" : [ {
+            "UUID" : "3fc8c897-b66d-4f0c-aefd-94923bb69c49",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1cc36882-f17f-4c04-9544-540af01c5239",
+            "columnKey" : "2c9d1",
+            "columnName" : "Column 2",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d5f10c98-03a7-400a-93f2-d6eb9b51fdbe",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "Miski_Mayo_Consultas_Case"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "d24fa5ee-633e-4218-b25f-b374785487b3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3fc8c897-b66d-4f0c-aefd-94923bb69c49",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Toma en cuenta las siguientes indicaciones antes de completar el proceso que llevarás a cabo:</p><ul><li>Si requieres adjuntar algún documento, debe estar en formato PDF.</li><li>El peso de los archivos que adjuntes debe sumar máximo 50 MB.</li><li>Tomaremos en cuenta el orden y plazo de recepción de consultas, solicitudes/documentos o reclamos según el siguiente horario:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Entre las 08:00 horas y las 18:30 horas de un día hábil, se consideran presentados</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;mismo día hábil.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Después de las 18:30 horas y las 23:59 horas, se considerarán presentados el día hábil</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siguiente.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- En caso ingreses una consulta, solicitud/documento o reclamo un día inhábil, se</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;considerará presentado al día hábil siguiente.</p><ul><li>Después de registrar tu trámite, te enviaremos un correo con tu número de caso para que puedas hacerle seguimiento.</li></ul><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f1d51f59-2470-43f6-ac87-04138f26ea64",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCCOHYTKH3WRFQRKNDUK57GV4CCY",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "top center",
+                  "backgroundSize" : "contain",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : 450,
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "none",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0)",
+                  "showButton" : false,
+                  "showCaption" : false,
+                  "showDateTime" : false,
+                  "showEyebrow" : false,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : false,
+                  "showMetadata1" : false,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : false,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : false,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "center center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "83e4ed3e-3beb-4d2e-980c-eb5ff40e56bc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "1cc36882-f17f-4c04-9544-540af01c5239",
+        "regionLabel" : "Column 2",
+        "regionName" : "2c9d1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "875f3fc3-f77f-4ffe-b91a-9937506efb08",
+          "columns" : [ {
+            "UUID" : "5133425e-17e3-4371-b2bd-9e39decf2b32",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "875f3fc3-f77f-4ffe-b91a-9937506efb08",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 20px;\">Preguntas Frecuentes&nbsp;</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d8df5a98-6597-44fc-a050-f61f27699e61",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Para más información sobre la venta de nuestro concentrado de fosfato, escríbenos a través de nuestra Mesa de Partes Virtual. Elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área “Comercial”. Ingresa todos tus datos y tu consulta. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.   ",
+            "headerText" : "¿Cómo puedo comprar fosfato de Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "000e1d43-c50e-4e8b-b351-a43608a51b54",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Quiero conocer los reportes ambientales o algún tema específico ambiental",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "a227f3c5-7158-49be-9ed2-bb80e87317be",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si no tienes claro a quien dirigir tu consulta, puedes hacerla llegar al área de Comunicación para que derive tu consulta al área respectiva. Elige la opción de “Consulta”, luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. Esta área se encargará de retransmitir tu consulta al área respectiva para que atienda tu comunicación, dándote respuesta al correo electrónico que registraste.  ",
+            "headerText" : "Deseo información adicional sobre el proceso de operación",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "8f0cae43-bcdc-4864-8db3-44f43f620f28",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Quiero hacer una consulta, pero no tengo claro a quien dirigirla en su mesa de partes. ¿Cómo hago?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "c5279c09-b48d-46d4-818f-c556b50cb33a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5133425e-17e3-4371-b2bd-9e39decf2b32",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ae5533a3-d752-4864-8f32-a5a3a25fab71",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Consulta"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "de169db2-bacd-4984-b409-81f08a96a463",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5951279c-5ceb-4463-8d93-5e764347c7de",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-consulta"
+}

@@ -1,0 +1,15 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "3a00be3b-cd66-4bc8-8d4b-0454a56c87f3"
+      } ]
+    }
+  },
+  "urlName" : "order-detail"
+}

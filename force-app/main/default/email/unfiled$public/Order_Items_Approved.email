@@ -1,0 +1,17 @@
+<messaging:emailTemplate subject="FPD Order Approved - Order {!relatedTo.OrderNumber}" recipientType="User" relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+            <head>
+                <meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+                <meta name="Template" content="Response"/>
+            </head>
+            <body>
+                Hello {!Recipient.Name}, <br/><br/>
+                <p>Some items from a order for {!relatedTo.Account.Name} have been Approved by {!$User.FirstName}.</p>
+                <c:PMC_CPQ_OrderApprovedOrRejectedEmail orderRecordId="{!relatedTo.Id}"
+                    approvalReqStatus="Approved"
+                />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

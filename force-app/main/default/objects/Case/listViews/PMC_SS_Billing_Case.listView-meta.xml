@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Billing_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>PMC_SS_ApprovalStatus__c</columns>
+    <filterScope>Queue</filterScope>
+    <label>Billing</label>
+    <queue>PMC_SS_Billing</queue>
+    <sharedTo>
+        <role>PMC_NA_Billing</role>
+        <role>PMC_NA_MarketingManager</role>
+        <role>PMC_NA_MarketingTeam</role>
+        <role>PMC_NA_ProductManager</role>
+        <role>PMC_NA_SalesManager</role>
+        <role>PMC_NA_SalesTeam</role>
+        <role>PMC_NA_TechnicalSalesManager</role>
+        <role>PMC_SS_NACustomerServiceLead</role>
+        <role>PMC_SS_NARebatesandCommissionsAnalyst</role>
+        <role>PMC_SS_NASalesServiceAnalystSSA</role>
+        <role>PMC_SS_NASalesServiceRepresentativeSSR</role>
+        <role>PMC_ServiceDirector</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,1246 @@
+<template>
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+    <h3 class="slds-m-bottom_large slds-m-top_medium">
+      {labels.pmc_quoteDetailsFlow_quoteLabel} {quoteNumber}
+    </h3>
+
+    <template if:true={showProgressBarTracker}>
+      <div class="slds-m-bottom--large">
+        <c-pmc_dh_progress-bar-tracker steps={steps}></c-pmc_dh_progress-bar-tracker>
+      </div>
+    </template>
+
+    <template if:true={showMessageBanner}>
+      <div class="message-container">
+        <c-pmc_dh_message-banner type={messageBannerType} message={messageForBanner}>
+        </c-pmc_dh_message-banner>
+      </div>
+    </template>
+
+    <template if:true={errorMessage}>
+      <div class="slds-size_1-of-1 slds-m-bottom_medium">
+        <c-pmc_dh_message-banner type="error" message={errorMessage}>
+        </c-pmc_dh_message-banner>
+      </div>
+    </template>
+
+    <template if:true={isQuoteSubmittedScreen}>
+      <div class="slds-grid slds-gutters slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+          <div class="custom-card quoteSummary-card">
+            <div class="card-header">
+              {labels.pmc_quoteDetailsFlow_quoteSummary}
+            </div>
+            <div class="card-body">
+              <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_1 slds-large-order_1 quote-id">
+                  <c-pmc_dh_input-element text-label={labels.pmc_requestForQuote_quoteId} data-id="strQuoteId"
+                    data-name="strQuoteId" parent-name="quoteSummaryWrapper"
+                    default-value={pageObj.quoteSummaryWrapper.strQuoteId} is-required max-length=10
+                    pattern="[A-Za-z0-9]*" is-disabled={isEditDisabled.quoteSummary}
+                    text-placeholder={labels.pmc_requestForQuote_quoteId} data-parent-id="quoteSummaryWrapper"
+                    oninputdatachange={handleDataChange}></c-pmc_dh_input-element>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_2 slds-large-order_2 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteDetailsFlow_customerName}
+                  </div>
+                  <div class="lbl-field-value">
+                    {pageObj.quoteSummaryWrapper.strCustomerName}
+                  </div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_3 slds-large-order_3 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_addNewUser_soldToAccount}
+                  </div>
+                  <div class="lbl-field-value">
+                    {pageObj.quoteSummaryWrapper.strSoldToAccount}
+                  </div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_4 slds-large-order_4 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteDetailsFlow_requestedDate}
+                  </div>
+                  <div class="lbl-field-value">{formattedRequestedDate}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_5 slds-large-order_5 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteDetailsFlow_expiresIn}
+                  </div>
+                  <div class="lbl-field-value">{remainingTime}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 slds-order_7 slds-large-order_6 badge-info">
+                  <div class="lbl-field-name hidden-sm">
+                    {labels.pmc_addresses_status}
+                  </div>
+                  <div class="lbl-field-value slds-size_1-of-1">
+                    <span class="badge badge-font" data-status={pageObj.quoteSummaryWrapper.strDataSummaryStatus}>
+                      {pageObj.quoteSummaryWrapper.updatedStatus}
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_1-of-7 slds-order_8 slds-large-order_7 action-button">
+                  <template if:true={isBuyerOrSuperBuyer}>
+                    <div class="mobile-button-style">
+                      <button class="slds-button quote-summary-btn slds-align_absolute-center slds-size_1-of-1"
+                        onclick={openCancelQuoteModalHandler}>
+                        {labels.pmc_quoteDetailsFlow_cancelQuote}
+                      </button>
+                    </div>
+                  </template>
+                  <template if:true={isBuyerOrSuperBuyer}>
+                    <div class="desktop-button edit-icon-style">
+                      <template if:true={isEditDisabled.quoteSummary}>
+                        <lightning-button-icon icon-name="utility:edit" alternative-text={labels.pmc_userDetails_edit}
+                          title={labels.pmc_userDetails_edit} data-btn-id="quoteSummary" class="slds-m-left_x-large"
+                          onclick={handleEditInfo}></lightning-button-icon>
+                      </template>
+                      <template if:false={isEditDisabled.quoteSummary}>
+                        <lightning-button-icon icon-name="utility:close"
+                          alternative-text={labels.pmc_miniCartModal_closeLabel} class="slds-m-left_x-large"
+                          title={labels.pmc_miniCartModal_closeLabel} data-btn-id="quoteSummary"
+                          data-parent-id="quoteSummary-card" onclick={handleCloseEdit}
+                          onmousedown={handleCloseEdit}></lightning-button-icon>
+                        <lightning-button-icon icon-name="utility:check"
+                          alternative-text={labels.pmc_quoteDetailsFlow_check} title={labels.pmc_quoteDetailsFlow_check}
+                          data-btn-id="quoteSummary" data-parent-id="quoteSummary-card" onclick={handleSaveEditInfo}
+                          class="save-icon-style"></lightning-button-icon>
+                      </template>
+                    </div>
+                  </template>
+                </div>
+                <template if:true={isBuyerOrSuperBuyer}>
+                  <div
+                    class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-order_6 mobile-actions edit-icon-style">
+                    <template if:true={isEditDisabled.quoteSummary}>
+                      <lightning-button-icon icon-name="utility:edit" alternative-text={labels.pmc_userDetails_edit}
+                        title={labels.pmc_userDetails_edit} data-btn-id="quoteSummary"
+                        onclick={handleEditInfo}></lightning-button-icon>
+                    </template>
+                    <template if:false={isEditDisabled.quoteSummary}>
+                      <lightning-button-icon icon-name="utility:close" class="slds-m-left_x-large"
+                        alternative-text={labels.pmc_miniCartModal_closeLabel}
+                        title={labels.pmc_miniCartModal_closeLabel} data-btn-id="quoteSummary"
+                        data-btn-name="cancelEdit" data-parent-id="quoteSummary-card" onclick={handleCloseEdit}
+                        onmousedown={handleCloseEdit}></lightning-button-icon>
+                      <lightning-button-icon icon-name="utility:check"
+                        alternative-text={labels.pmc_quoteDetailsFlow_check} title={labels.pmc_quoteDetailsFlow_check}
+                        data-btn-id="quoteSummary" data-parent-id="quoteSummary-card" onclick={handleSaveEditInfo}
+                        class="save-icon-style"></lightning-button-icon>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slds-grid slds-gutters slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 slds-p-around--none">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card paymentInfo-card">
+                <div class="card-header">
+                  {labels.pmc_quoteCheckoutFlow_paymentInfo}
+                </div>
+                <div class="card-body">
+                  <template if:false={isPrepaymentDateField}>
+                    <div class="slds-grid slds-wrap">
+                      <template if:true={isLocationBrazil}>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                          <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_paymentTerms}
+                            combobox-list-json={paymentTermsOptions} data-id="strPaymentTermSelected"
+                            default-value={pageObj.paymentInformationWrapper.strPaymentTermSelected} is-required
+                            is-disabled={isEditDisabled.paymentInfo} parent-name="paymentInformationWrapper"
+                            data-parent-id="paymentInformationWrapper" oninputdatachange={handleDataChange}>
+                          </c-pmc_dh_selection-picklist>
+                        </div>
+                      </template>
+                      <template if:false={isLocationBrazil}>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                          <div class="lbl-field-name">
+                            {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                          </div>
+                          <div class="lbl-field-value">
+                            {strPaymentTermSelectedLabel}
+                          </div>
+                        </div>
+                      </template>
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_quoteCheckoutFlow_currency}
+                        </div>
+                        <div class="lbl-field-value">
+                          {pageObj.paymentInformationWrapper.strCurrencySelected}
+                        </div>
+                      </div>
+                      <template if:true={isBuyerOrSuperBuyer}>
+                        <template if:true={isLocationBrazil}>
+                          <div
+                            class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_1-of-3 edit-icon-style">
+                            <template if:true={isEditDisabled.paymentInfo}>
+                              <lightning-button-icon icon-name="utility:edit"
+                                alternative-text={labels.pmc_userDetails_edit} data-btn-id="paymentInfo"
+                                title={labels.pmc_userDetails_edit} onclick={handleEditInfo}></lightning-button-icon>
+                            </template>
+                            <template if:false={isEditDisabled.paymentInfo}>
+                              <lightning-button-icon icon-name="utility:close"
+                                alternative-text={labels.pmc_miniCartModal_closeLabel} data-btn-id="paymentInfo"
+                                title={labels.pmc_miniCartModal_closeLabel} data-parent-id="paymentInfo-card"
+                                data-btn-name="cancelEdit" onclick={handleCloseEdit}
+                                onmousedown={handleCloseEdit}></lightning-button-icon>
+                              <lightning-button-icon icon-name="utility:check"
+                                alternative-text={labels.pmc_quoteDetailsFlow_check} data-btn-id="paymentInfo"
+                                data-parent-id="paymentInfo-card" title={labels.pmc_quoteDetailsFlow_check}
+                                onclick={handleSaveEditInfo} class="save-icon-style"></lightning-button-icon>
+                            </template>
+                          </div>
+                        </template>
+                      </template>
+                    </div>
+                  </template>
+                  <template if:true={isPrepaymentDateField}>
+                    <div class="slds-grid slds-wrap">
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
+                        <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_paymentTerms}
+                          combobox-list-json={paymentTermsOptions} data-id="strPaymentTermSelected"
+                          default-value={pageObj.paymentInformationWrapper.strPaymentTermSelected} is-required
+                          is-disabled={isEditDisabled.paymentInfo} parent-name="paymentInformationWrapper"
+                          data-parent-id="paymentInformationWrapper" oninputdatachange={handleDataChange}>
+                        </c-pmc_dh_selection-picklist>
+                      </div>
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_quoteCheckoutFlow_currency}
+                        </div>
+                        <div class="lbl-field-value">
+                          {pageObj.paymentInformationWrapper.strCurrencySelected}
+                        </div>
+                      </div>
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
+                        <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_paymentDate} type="date"
+                          data-id="datPrepaymentDate" data-parent-id="paymentInformationWrapper" class="inputDate"
+                          default-value={pageObj.paymentInformationWrapper.datPrepaymentDate}
+                          parent-name="datPrepaymentDate" min-value={minPrepaymentDate} max-value={maxPrepaymentDate}
+                          message-when-range-high={paymentDateErrorMsg} message-when-range-low={paymentDateErrorMsg}
+                          is-required is-disabled={isEditDisabled.paymentInfo} oninputdatachange={handleDataChange}>
+                        </c-pmc_dh_input-element>
+                      </div>
+                      <template if:true={isBuyerOrSuperBuyer}>
+                        <div
+                          class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_1-of-4 edit-icon-style">
+                          <template if:true={isEditDisabled.paymentInfo}>
+                            <lightning-button-icon icon-name="utility:edit"
+                              alternative-text={labels.pmc_userDetails_edit} data-btn-id="paymentInfo"
+                              title={labels.pmc_userDetails_edit} onclick={handleEditInfo}></lightning-button-icon>
+                          </template>
+                          <template if:false={isEditDisabled.paymentInfo}>
+                            <lightning-button-icon icon-name="utility:close"
+                              alternative-text={labels.pmc_miniCartModal_closeLabel} data-btn-id="paymentInfo"
+                              title={labels.pmc_miniCartModal_closeLabel} data-parent-id="paymentInfo-card"
+                              data-btn-name="cancelEdit" onclick={handleCloseEdit}
+                              onmousedown={handleCloseEdit}></lightning-button-icon>
+                            <lightning-button-icon icon-name="utility:check"
+                              alternative-text={labels.pmc_quoteDetailsFlow_check} data-btn-id="paymentInfo"
+                              data-parent-id="paymentInfo-card" title={labels.pmc_quoteDetailsFlow_check}
+                              onclick={handleSaveEditInfo} class="save-icon-style"></lightning-button-icon>
+                          </template>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card productInfo-card">
+                <div class="card-header">
+                  <div>
+                    {labels.pmc_requestForQuote_productsInformation}
+                  </div>
+                  <template if:true={isCadenceSuggestionAllowed}>
+                    <div>
+                      <a onclick={openCadenceSuggestionModal}>
+                        {cadenceHyperLinkText}
+                      </a>
+                    </div>
+                  </template>
+                </div>
+                <div class="card-body">
+                  <div class="slds-p-horizontal_medium slds-border_bottom slds-m-bottom--medium product-section"
+                    for:each={pageObj.productInfoWrapper.lstCartWrapper} for:item="product" for:index="indexProduct"
+                    key={product.strProductId}>
+                    <div class="product-content slds-scrollable_x" tabindex="0">
+                      <div class="product-grid" data-product-index={indexProduct}>
+                        <div class="product-col slds-p-left_none slds-m-bottom_x-small">
+                          <div class="product-image slds-m-right--medium">
+                            <template if:true={isBuyerOrSuperBuyer}>
+                              <a href={product.pdpUrl} target="_self">
+                                <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                              </a>
+                            </template>
+                            <template if:false={isBuyerOrSuperBuyer}>
+                              <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                            </template>
+                          </div>
+                          <div class="product-info">
+                            <div class="slds-m-bottom_xx-small product-name">
+                              <template if:true={isBuyerOrSuperBuyer}>
+                                <a href={product.pdpUrl} target="_self">
+                                  {product.strProductName}
+                                </a>
+                              </template>
+                              <template if:false={isBuyerOrSuperBuyer}>
+                                <div class="text-bold-large text-color-primary-green">
+                                  {product.strProductName}
+                                </div>
+                              </template>
+                            </div>
+                            <div class="">{product.strSku}</div>
+                          </div>
+                        </div>
+                        <div class="content-info">
+                          <div class="lbl-field-name">
+                            {labels.pmc_requestForQuote_totalQty}
+                          </div>
+                          <div class="lbl-field-value">
+                            {product.strTotalQty}
+                          </div>
+                        </div>
+                        <div class="content-info product-uom">
+                          <c-pmc_dh_selection-picklist text-label={labels.pmc_requestForQuote_unitOfMeasure}
+                            combobox-list-json={product.lstProductUOM} data-id="strProductUOM"
+                            default-value={product.strProductUOM} is-required data-product-index={indexProduct}
+                            parent-name="skuInfoWrapper" is-disabled={product.isEditDisabled}
+                            data-parent-id="skuInfoWrapper" oninputdatachange={handleDataChange}>
+                          </c-pmc_dh_selection-picklist>
+                        </div>
+                        <template if:true={priceLoaded}>
+                          <div class="content-info avg-price-per-unit">
+                            <div class="lbl-field-name">
+                              {labels.pmc_contractDetails_averagePricePerUnit}
+                            </div>
+                            <div class="lbl-field-value">
+                              {product.avgPricePerUnit}
+                            </div>
+                          </div>
+                        </template>
+                        <template if:true={isBuyerOrSuperBuyer}>
+                          <div class="edit-icon-style">
+                            <template if:true={product.isEditDisabled}>
+                              <lightning-button-icon icon-name="utility:edit"
+                                alternative-text={labels.pmc_userDetails_edit} title={labels.pmc_userDetails_edit}
+                                data-btn-id="productInfo" data-product-index={indexProduct}
+                                disabled={product.isEditSkuUOMDisabled}
+                                onclick={handleEditInfo}></lightning-button-icon>
+                            </template>
+                            <template if:false={product.isEditDisabled}>
+                              <lightning-button-icon icon-name="utility:close"
+                                alternative-text={labels.pmc_miniCartModal_closeLabel}
+                                title={labels.pmc_miniCartModal_closeLabel} data-btn-id="productInfo"
+                                data-product-index={indexProduct} data-parent-id="product-grid"
+                                data-btn-name="cancelEdit" onclick={handleCloseEdit}
+                                onmousedown={handleCloseEdit}></lightning-button-icon>
+                              <lightning-button-icon icon-name="utility:check"
+                                alternative-text={labels.pmc_quoteDetailsFlow_check}
+                                title={labels.pmc_quoteDetailsFlow_check} data-btn-id="productInfo"
+                                data-parent-id="product-grid" data-product-index={indexProduct} class="save-icon-style"
+                                onclick={handleSaveEditInfo}></lightning-button-icon>
+                            </template>
+                          </div>
+                        </template>
+                      </div>
+                      <div class="slds-m-top_x-small slds-p-bottom_medium mobile-scroll" tabindex="0">
+                        <table class="slds-table">
+                          <thead>
+                            <tr class="slds-line-height_reset table-heading">
+                              <th scope="col">
+                                <div title={labels.pmc_requestForQuote_qty}>
+                                  {labels.pmc_requestForQuote_qty}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                  {labels.pmc_quoteCheckoutFlow_shipTo}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                  {labels.pmc_quoteCheckoutFlow_incoterms}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                  {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                                  {labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                                </div>
+                              </th>
+                              <template if:true={priceLoaded}>
+                                <th scope="col">
+                                  <div title={labels.pmc_contractDetails_pricePerUnit}>
+                                    {labels.pmc_contractDetails_pricePerUnit}
+                                  </div>
+                                </th>
+                              </template>
+                              <template if:true={isLocationBrazil}>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packType}>
+                                    {labels.pmc_requestForQuote_packType}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packagingType}>
+                                    {labels.pmc_requestForQuote_packagingType}
+                                  </div>
+                                </th>
+                              </template>
+                              <template if:true={isBuyerOrSuperBuyer}>
+                                <th scope="col">
+                                  <div title={labels.pmc_userDetails_edit}></div>
+                                </th>
+                              </template>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="slds-hint-parent" for:each={product.lstCartItems} for:item="item"
+                              for:index="indexShipment" key={item.strCartItemId}>
+                              <td data-label={labels.pmc_requestForQuote_qty} scope="row">
+                                <c-pmc_dh_input-element class="strQuantity" text-label={labels.pmc_requestForQuote_qty}
+                                  data-id="strQuantity" parent-name="strQuantity" default-value={item.strQuantity}
+                                  is-number max-length=10 data-product-index={indexProduct}
+                                  data-parent-id="productInfoWrapper" data-shipment-index={indexShipment} is-required
+                                  is-disabled={item.isEditDisabled} text-placeholder={labels.pmc_requestForQuote_qty}
+                                  oninputdatachange={handleDataChange}></c-pmc_dh_input-element>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                <c-pmc_dh_selection-picklist class="strShipTo"
+                                  text-label={labels.pmc_quoteCheckoutFlow_shipTo}
+                                  combobox-list-json={product.lstShipTo} data-id="strShipTo"
+                                  default-value={item.strShipTo} is-required parent-name="strShipTo"
+                                  is-disabled={item.isEditDisabled} data-parent-id="productInfoWrapper"
+                                  data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                  oninputdatachange={handleDataChange}>
+                                </c-pmc_dh_selection-picklist>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                <c-pmc_dh_selection-picklist class="strIncoterms"
+                                  text-label={labels.pmc_quoteCheckoutFlow_incoterms}
+                                  combobox-list-json={product.lstIncoterms} data-id="strIncoterms"
+                                  default-value={item.strIncoterms} is-required data-product-index={indexProduct}
+                                  data-parent-id="productInfoWrapper" data-shipment-index={indexShipment}
+                                  parent-name="strIncoterms" is-disabled={item.isEditDisabled}
+                                  oninputdatachange={handleDataChange}>
+                                </c-pmc_dh_selection-picklist>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                <c-pmc_dh_selection-picklist class="strDeliveryMode"
+                                  text-label={labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                  combobox-list-json={item.lstDeliveryModes} data-id="strDeliveryMode"
+                                  default-value={item.strDeliveryMode} is-required data-product-index={indexProduct}
+                                  data-parent-id="productInfoWrapper" data-shipment-index={indexShipment}
+                                  parent-name="strDeliveryMode" is-disabled={item.isEditDisabled}
+                                  oninputdatachange={handleDataChange}>
+                                </c-pmc_dh_selection-picklist>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                                <c-pmc_dh_selection-picklist class="strShipFrom"
+                                  text-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                                  combobox-list-json={product.lstShipFrom} data-id="strShipFrom"
+                                  default-value={item.strShipFrom} is-required data-product-index={indexProduct}
+                                  data-parent-id="productInfoWrapper" data-shipment-index={indexShipment}
+                                  parent-name="strShipFrom" is-disabled={item.isEditDisabled}
+                                  oninputdatachange={handleDataChange}>
+                                </c-pmc_dh_selection-picklist>
+                              </td>
+                              <template if:true={priceLoaded}>
+                                <td data-label={labels.pmc_contractDetails_pricePerUnit} class="slds-p-top_none">
+                                  {item.pricePerUnit}
+                                </td>
+                              </template>
+                              <template if:true={isLocationBrazil}>
+                                <td data-label={labels.pmc_requestForQuote_packType}>
+                                  <c-pmc_dh_selection-picklist class="strPackType"
+                                    text-label={labels.pmc_requestForQuote_packType}
+                                    combobox-list-json={product.lstPackType} data-id="strPackType"
+                                    default-value={item.strPackType} is-required data-product-index={indexProduct}
+                                    data-parent-id="productInfoWrapper" data-shipment-index={indexShipment}
+                                    parent-name="strPackType" is-disabled={item.isPackTypeDisabled}
+                                    oninputdatachange={handleDataChange}>
+                                  </c-pmc_dh_selection-picklist>
+                                </td>
+                                <td data-label={labels.pmc_requestForQuote_packagingType}>
+                                  <div class="table-content strPackageTypeCol" data-product-index={indexProduct}
+                                    data-shipment-index={indexShipment}>
+                                    {item.strPackageType}
+                                  </div>
+                                </td>
+                              </template>
+                              <template if:true={isBuyerOrSuperBuyer}>
+                                <td data-label={labels.pmc_userDetails_edit}
+                                  class="slds-p-top--none slds-p-right--none">
+                                  <div
+                                    class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-p-right--none edit-icon-style">
+                                    <template if:true={item.isEditDisabled}>
+                                      <lightning-button-icon icon-name="utility:edit"
+                                        alternative-text={labels.pmc_userDetails_edit}
+                                        disabled={item.isEditQuoteLineItemDisabled} title={labels.pmc_userDetails_edit}
+                                        data-btn-id="productInfo" data-product-index={indexProduct}
+                                        data-shipment-index={indexShipment}
+                                        onclick={handleEditInfo}></lightning-button-icon>
+                                    </template>
+                                    <template if:false={item.isEditDisabled}>
+                                      <lightning-button-icon icon-name="utility:close"
+                                        alternative-text={labels.pmc_miniCartModal_closeLabel}
+                                        title={labels.pmc_miniCartModal_closeLabel} data-btn-id="productInfo"
+                                        data-product-index={indexProduct} data-shipment-index={indexShipment}
+                                        data-parent-id="productInfo-card" data-btn-name="cancelEdit"
+                                        onclick={handleCloseEdit} onmousedown={handleCloseEdit}></lightning-button-icon>
+                                      <lightning-button-icon icon-name="utility:check"
+                                        alternative-text={labels.pmc_quoteDetailsFlow_check}
+                                        title={labels.pmc_quoteDetailsFlow_check} data-btn-id="productInfo"
+                                        data-parent-id="productInfo-card" data-product-index={indexProduct}
+                                        data-shipment-index={indexShipment} onclick={handleSaveEditInfo}
+                                        class="save-icon-style"></lightning-button-icon>
+                                    </template>
+                                  </div>
+                                </td>
+                              </template>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <template lwc:if={product.isDuplicate}>
+                        <div class="slds-p-left--x-small slds-p-bottom_small shipment-line-error">
+                          {labels.pmc_quoteCheckoutFlow_duplicateProductsMessage}
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-p-around--none">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card contractDateInfo-card">
+                <div class="card-header">
+                  {labels.pmc_requestForQuote_requestedContractInfo}
+                </div>
+                <div class="card-body">
+                  <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-3">
+                      <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_startingFrom} type="date"
+                        data-id="datStartDate" data-parent-id="requestedContractInfoWrapper" class="inputDate"
+                        default-value={pageObj.requestedContractInfoWrapper.datStartDate} is-required
+                        parent-name="datStartDate" is-disabled={isEditDisabled.contractInfo} min-value={today}
+                        oninputdatachange={handleDataChange}>
+                      </c-pmc_dh_input-element>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-3">
+                      <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_endDate} type="date"
+                        data-id="datEndDate" data-parent-id="requestedContractInfoWrapper" class="inputDate"
+                        is-disabled={isEndDateDisabl} min-value={minEndDate} max-value={maxEndDate}
+                        default-value={pageObj.requestedContractInfoWrapper.datEndDate} is-required
+                        parent-name="datEndDate" oninputdatachange={handleDataChange}
+                        message-when-range-low={labels.pmc_quoteCheckout_endDateErrorMsg}
+                        message-when-range-high={labels.pmc_quoteCheckoutFlow_maxEndDateError}>
+                      </c-pmc_dh_input-element>
+                    </div>
+                    <template if:true={isBuyerOrSuperBuyer}>
+                      <div
+                        class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-large-size_1-of-3 edit-icon-style">
+                        <template if:true={isEditDisabled.contractInfo}>
+                          <lightning-button-icon icon-name="utility:edit" alternative-text={labels.pmc_userDetails_edit}
+                            data-btn-id="contractInfo" title={labels.pmc_userDetails_edit}
+                            onclick={handleEditInfo}></lightning-button-icon>
+                        </template>
+                        <template if:false={isEditDisabled.contractInfo}>
+                          <lightning-button-icon icon-name="utility:close"
+                            alternative-text={labels.pmc_miniCartModal_closeLabel} data-btn-id="contractInfo"
+                            title={labels.pmc_miniCartModal_closeLabel} data-parent-id="contractDateInfo-card"
+                            data-btn-name="cancelEdit" onclick={handleCloseEdit}
+                            onmousedown={handleCloseEdit}></lightning-button-icon>
+                          <lightning-button-icon icon-name="utility:check"
+                            alternative-text={labels.pmc_quoteDetailsFlow_check} data-btn-id="contractInfo"
+                            data-parent-id="contractDateInfo-card" title={labels.pmc_quoteDetailsFlow_check}
+                            onclick={handleSaveEditInfo} class="save-icon-style"></lightning-button-icon>
+                        </template>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card contracts-card">
+                <div class="card-header">
+                  {labels.pmc_quoteDetailsFlow_contracts}
+                </div>
+                <div class="card-body">
+                  <div class="slds-grid slds-wrap">
+                    <div class="slds-p-horizontal--medium contract-message">
+                      {labels.pmc_quoteDetailsFlow_contractInfoText}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <template if:true={priceLoaded}>
+            <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-size_1-of-1">
+                <div class="price-summary-card">
+                  <c-pmc_dh_price-summary-section price-summary-data={priceSummaryData} flow="Quote Details">
+                  </c-pmc_dh_price-summary-section>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card conversation_history-card">
+                <div class="card-header">
+                  {labels.pmc_quoteDetails_updates}
+                </div>
+                <div class="card-body slds-scrollable_y conversation_history-content" tabindex="0">
+                  <template if:true={historyLoaded}>
+                    <template if:true={conversationHistoryResults.length}>
+                      <template for:each={conversationHistoryResults} for:item="changeItem">
+                        <div key={changeItem.id} class="slds-grid slds-wrap slds-p-horizontal_medium">
+                          <div class="lbl-field-name slds-m-bottom_x-small">
+                            {changeItem.changeRequesterInfo}
+                          </div>
+                          <div class="lbl-field-value slds-m-bottom_small">
+                            {changeItem.changeInfo}
+                          </div>
+                        </div>
+                      </template>
+                    </template>
+                    <template if:false={conversationHistoryResults.length}>
+                      <div class="slds-p-horizontal--medium contract-message">
+                        {labels.pmc_quoteDetailsFlow_noUpdateMsg}
+                      </div>
+                    </template>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template if:true={isInProgressScreen}>
+      <div class="slds-grid slds-gutters slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+          <div class="custom-card quoteSummary-card">
+            <div class="card-header">
+              {labels.pmc_quoteDetailsFlow_quoteSummary}
+            </div>
+            <div class="card-body">
+              <div class="quote-summary-scrollable-container">
+                <div class="slds-grid slds-wrap quote-summary-scrollable-content">
+                  <div
+                    class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_1 slds-large-order_1 quote-id content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_requestForQuote_quoteId}
+                    </div>
+                    <div class="lbl-field-value">
+                      {pageObj.quoteSummaryWrapper.strQuoteId}
+                    </div>
+                  </div>
+
+                  <div
+                    class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_2 slds-large-order_2 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_quoteDetailsFlow_customerName}
+                    </div>
+                    <div class="lbl-field-value">
+                      {pageObj.quoteSummaryWrapper.strCustomerName}
+                    </div>
+                  </div>
+
+                  <div
+                    class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_3 slds-large-order_3 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_addNewUser_soldToAccount}
+                    </div>
+                    <div class="lbl-field-value">
+                      {pageObj.quoteSummaryWrapper.strSoldToAccount}
+                    </div>
+                  </div>
+
+                  <div
+                    class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_4 slds-large-order_4 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_quoteDetailsFlow_requestedDate}
+                    </div>
+                    <div class="lbl-field-value">{formattedRequestedDate}</div>
+                  </div>
+
+                  <template if:true={showExpiresInField}>
+                    <div
+                      class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_5 slds-large-order_5 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteDetailsFlow_expiresIn}
+                      </div>
+                      <div class="lbl-field-value">{remainingTime}</div>
+                    </div>
+                  </template>
+                  <template if:false={showExpiresInField}>
+                    <div
+                      class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_5 slds-large-order_5 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteDetailsFlow_reason}
+                      </div>
+                      <div class="lbl-field-value">
+                        {pageObj.quoteSummaryWrapper.strSummaryReason}
+                      </div>
+                    </div>
+                  </template>
+
+                  <div
+                    class="slds-col slds-size_1-of-1 slds-large-size_1-of-8 slds-order_7 slds-large-order_6 badge-info">
+                    <div class="lbl-field-name hidden-sm">
+                      {labels.pmc_addresses_status}
+                    </div>
+                    <div class="lbl-field-value slds-size_1-of-1">
+                      <span class="badge badge-font" data-status={pageObj.quoteSummaryWrapper.strDataSummaryStatus}>
+                        {pageObj.quoteSummaryWrapper.updatedStatus}
+                      </span>
+                    </div>
+                  </div>
+
+                  <template if:true={showCancelQuoteBtn}>
+                    <div
+                      class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_2-of-8 slds-order_8 slds-large-order_7 action-button">
+                      <template if:true={isBuyerOrSuperBuyer}>
+                        <div class="mobile-button-style">
+                          <button class="slds-button quote-summary-btn slds-align_absolute-center slds-size_1-of-1"
+                            onclick={openCancelQuoteModalHandler}>
+                            {labels.pmc_quoteDetailsFlow_cancelQuote}
+                          </button>
+                        </div>
+                      </template>
+                    </div>
+                  </template>
+                  <template if:true={actionPendingStatusBtns}>
+                    <template if:true={isBuyerOrSuperBuyer}>
+                      <template if:false={showRequoteOnlyBtn}>
+                        <div
+                          class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_2-of-8 slds-order_8 slds-large-order_7 action-button">
+                          <div class="quote-summary-buttons">
+                            <button
+                              class="slds-button quote-summary-btn slds-size_1-of-1 slds-large-size_1-of-3 primary-green-btn accept-quote-btn"
+                              onclick={openAcceptQuoteModalHandler}>
+                              {labels.pmc_quoteDetailsFlow_acceptQuote}
+                            </button>
+                            <button
+                              class="slds-button quote-summary-btn slds-size_1-of-1 slds-large-size_1-of-3 reject-quote-btn"
+                              onclick={openRejectQuoteModalHandler}>
+                              {labels.pmc_quoteDetailsFlow_rejectQuote}
+                            </button>
+                            <button
+                              class="slds-button quote-summary-btn slds-size_1-of-1 slds-large-size_1-of-3 requote-btn"
+                              onclick={openRequoteModalHandler}>
+                              {labels.pmc_quoteDetailsFlow_requote}
+                            </button>
+                          </div>
+                        </div>
+                      </template>
+                      <template if:true={showRequoteOnlyBtn}>
+                        <div
+                          class="slds-col slds-align_absolute-center slds-size_1-of-1 slds-large-size_2-of-8 slds-order_8 slds-large-order_7 action-button">
+                          <div class="quote-summary-buttons">
+                            <button class="slds-button quote-summary-btn slds-size_1-of-1 requote-btn primary-green-btn"
+                              onclick={openRequoteModalHandler}>
+                              {labels.pmc_quoteDetailsFlow_requote}
+                            </button>
+                          </div>
+                        </div>
+                      </template>
+                    </template>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <c-pmc_dh_custom-modal open-modal={isAcceptQuoteModal} modal-heading={labels.pmc_quote_acceptQuote}
+        modal-width="500px" onclosemodalevent={closeHandler}>
+        <div class="modal-wrapper">
+          <div class="slds-grid slds-wrap slds-m-around_medium">
+            <div class="slds-col slds-size_1-of-1 slds-m-bottom_medium text-heading-bold">
+              <lightning-formatted-rich-text value={labels.pmc_quote_aceptQuoteText}>
+              </lightning-formatted-rich-text>
+            </div>
+            <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+              <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+                title={labels.pmc_addressDetails_cancel} onclick={closeHandler}></lightning-button>
+            </div>
+            <div
+              class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button requote-button-style">
+              <lightning-button variant="brand" label={labels.pmc_quote_acceptQuote}
+                title={labels.pmc_quote_acceptQuote} onclick={acceptQuoteHandler}></lightning-button>
+            </div>
+          </div>
+        </div>
+      </c-pmc_dh_custom-modal>
+
+      <c-pmc_dh_custom-requote-modal is-modal={isRequoteModal} modal-heading={labels.pmc_requote_title}
+        modal-text={labels.pmc_requote_text} onclosemodal={closeRequoteHandler}
+        onhandleproductaction={requoteProductHandler}>
+      </c-pmc_dh_custom-requote-modal>
+
+      <c-pmc_dh_custom-modal open-modal={isRejectQuoteModal} modal-heading={labels.pmc_quoteDetailsFlow_rejectQuote}
+        modal-width="537px" onclosemodalevent={closeRejectQuoteHandler}>
+        <div class="modal-wrapper">
+          <div class="slds-grid slds-wrap">
+            <c-pmc_dh_feedback-form reason-label={labels.pmc_quoteDetailsFlow_reasonForRejecting}
+              comment-label={labels.pmc_caseMgmt_reopenComments} picklist-options={rejectQuotePicklistOptions}
+              reason-field-name="strReason" comment-field-name="strOthersComment"
+              textarea-placeholder={labels.pmc_caseMgmt_commentPlaceholder} data-id="rejectQuoteModal"
+              oninputchange={handleDataChange}>
+            </c-pmc_dh_feedback-form>
+          </div>
+          <div class="slds-grid slds-wrap slds-m-around_medium slds-m-top--none">
+            <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+              <lightning-button variant="neutral" label={labels.pmc_quoteDetailsFlow_rejectAndRequote}
+                title={labels.pmc_quoteDetailsFlow_rejectAndRequote} disabled={disableQuoteBtn}
+                onclick={rejectAndRequoteHandler}></lightning-button>
+            </div>
+            <div
+              class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button requote-button-style">
+              <lightning-button variant="brand" label={labels.pmc_quoteDetailsFlow_rejectQuote}
+                title={labels.pmc_quoteDetailsFlow_rejectQuote} disabled={disableQuoteBtn}
+                onclick={rejectQuoteHandler}></lightning-button>
+            </div>
+          </div>
+        </div>
+      </c-pmc_dh_custom-modal>
+
+      <div class="slds-grid slds-gutters slds-wrap in-progress">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 slds-p-around--none">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card paymentInfo-card">
+                <div class="card-header">
+                  {labels.pmc_quoteCheckoutFlow_paymentInfo}
+                </div>
+                <div class="card-body">
+                  <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                      </div>
+                      <div class="lbl-field-value">
+                        {strPaymentTermSelectedLabel}
+                      </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_currency}
+                      </div>
+                      <div class="lbl-field-value">
+                        {pageObj.paymentInformationWrapper.strCurrencySelected}
+                      </div>
+                    </div>
+                    <template if:true={isFormattedPrepaymentDateField}>
+                      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                        <div class="lbl-field-name">
+                          {labels.pmc_quoteCheckoutFlow_paymentDate}
+                        </div>
+                        <div class="lbl-field-value">
+                          {formattedPrePayementDate}
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card productInfo-card">
+                <div class="card-header">
+                  <div>
+                    {labels.pmc_requestForQuote_productsInformation}
+                  </div>
+                  <template if:true={isCadenceSuggestionAllowed}>
+                    <div>
+                      <a onclick={openCadenceSuggestionModal}>
+                        {cadenceHyperLinkText}
+                      </a>
+                    </div>
+                  </template>
+                </div>
+                <div class="card-body">
+                  <div class="slds-p-horizontal_medium slds-border_bottom slds-m-bottom--medium product-section"
+                    for:each={pageObj.productInfoWrapper.lstCartWrapper} for:item="product" for:index="indexProduct"
+                    key={product.strProductId}>
+                    <div class="product-content slds-scrollable_x" tabindex="0">
+                      <div class="product-grid" data-product-index={indexProduct}>
+                        <div class="product-col slds-p-left_none slds-m-bottom_x-small">
+                          <div class="product-image slds-m-right--medium">
+                            <template if:true={isBuyerOrSuperBuyer}>
+                              <a href={product.pdpUrl} target="_self">
+                                <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                              </a>
+                            </template>
+                            <template if:false={isBuyerOrSuperBuyer}>
+                              <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                            </template>
+                          </div>
+                          <div class="product-info">
+                            <div class="slds-m-bottom_xx-small product-name">
+                              <template if:true={isBuyerOrSuperBuyer}>
+                                <a href={product.pdpUrl} target="_self">
+                                  {product.strProductName}
+                                </a>
+                              </template>
+                              <template if:false={isBuyerOrSuperBuyer}>
+                                <div class="text-bold-large text-color-primary-green">
+                                  {product.strProductName}
+                                </div>
+                              </template>
+                            </div>
+                            <div class="">{product.strSku}</div>
+                          </div>
+                        </div>
+                        <div class="content-info">
+                          <div class="lbl-field-name">
+                            {labels.pmc_requestForQuote_totalQty}
+                          </div>
+                          <div class="lbl-field-value">
+                            {product.strTotalQty}
+                          </div>
+                        </div>
+                        <div class="content-info product-uom">
+                          <div class="lbl-field-name">
+                            {labels.pmc_requestForQuote_unitOfMeasure}
+                          </div>
+                          <div class="lbl-field-value">
+                            {product.strProductUOM}
+                          </div>
+                        </div>
+                        <template if:true={priceLoaded}>
+                          <div class="content-info avg-price-per-unit">
+                            <div class="lbl-field-name">
+                              {labels.pmc_contractDetails_averagePricePerUnit}
+                            </div>
+                            <div class="lbl-field-value">
+                              {product.avgPricePerUnit}
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                      <div class="slds-m-top_x-small slds-p-bottom_medium mobile-scroll" tabindex="0">
+                        <table class="slds-table">
+                          <thead>
+                            <tr class="slds-line-height_reset table-heading">
+                              <th scope="col">
+                                <div title={labels.pmc_requestForQuote_qty}>
+                                  {labels.pmc_requestForQuote_qty}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                  {labels.pmc_quoteCheckoutFlow_shipTo}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                  {labels.pmc_quoteCheckoutFlow_incoterms}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                  {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                </div>
+                              </th>
+                              <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                                  {labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                                </div>
+                              </th>
+                              <template if:true={priceLoaded}>
+                                <th scope="col">
+                                  <div title={labels.pmc_contractDetails_pricePerUnit}>
+                                    {labels.pmc_contractDetails_pricePerUnit}
+                                  </div>
+                                </th>
+                              </template>
+                              <template if:true={isLocationBrazil}>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packType}>
+                                    {labels.pmc_requestForQuote_packType}
+                                  </div>
+                                </th>
+                                <th scope="col">
+                                  <div title={labels.pmc_requestForQuote_packagingType}>
+                                    {labels.pmc_requestForQuote_packagingType}
+                                  </div>
+                                </th>
+                              </template>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="slds-hint-parent" for:each={product.lstCartItems} for:item="item"
+                              for:index="indexShipment" key={item.strCartItemId}>
+                              <td data-label={labels.pmc_requestForQuote_qty} scope="row">
+                                <div class="table-content strQtyCol">
+                                  {item.strQuantity}
+                                </div>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                <div class="table-content strShipToCol">
+                                  {item.strShipTo}
+                                </div>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_incoterms}>
+                                <div class="table-content strIncotermsCol">
+                                  {item.strIncoterms}
+                                </div>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                <div class="table-content strDeliveryCol">
+                                  {item.strDeliveryMode}
+                                </div>
+                              </td>
+                              <td data-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                                <div class="table-content strShipFromCol">
+                                  {item.strShipFrom}
+                                </div>
+                              </td>
+                              <template if:true={priceLoaded}>
+                                <td data-label={labels.pmc_contractDetails_pricePerUnit}>
+                                  <div class="table-content strPriceCol">
+                                    {item.pricePerUnit}
+                                  </div>
+                                </td>
+                              </template>
+                              <template if:true={isLocationBrazil}>
+                                <td data-label={labels.pmc_requestForQuote_packType}>
+                                  <div class="table-content strPackTypeCol">
+                                    {item.strPackType}
+                                  </div>
+                                </td>
+                                <td data-label={labels.pmc_requestForQuote_packagingType}>
+                                  <div class="table-content strPackageTypeCol" data-product-index={indexProduct}
+                                    data-shipment-index={indexShipment}>
+                                    {item.strPackageType}
+                                  </div>
+                                </td>
+                              </template>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-p-around--none">
+          <template if:false={showExpiresInField}>
+            <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-size_1-of-1">
+                <div class="custom-card rejectionQuote-card">
+                  <div class="card-header">{reasonForLabel}</div>
+                  <div class="card-body">
+                    <div class="slds-grid slds-wrap">
+                      <div class="slds-p-horizontal--medium lbl-field-value">
+                        {pageObj.quoteSummaryWrapper.strRejectionReason}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card contractDateInfo-card">
+                <div class="card-header">
+                  {labels.pmc_requestForQuote_requestedContractInfo}
+                </div>
+                <div class="card-body">
+                  <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_startingFrom}
+                      </div>
+                      <div class="lbl-field-value">
+                        {formattedStartingFromDate}
+                      </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_quoteCheckoutFlow_endDate}
+                      </div>
+                      <div class="lbl-field-value">{formattedEndDate}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card contracts-card">
+                <div class="card-header">
+                  {labels.pmc_quoteDetailsFlow_contracts}
+                </div>
+                <div class="card-body">
+                  <template if:false={isQuoteApproved}>
+                    <div class="slds-grid slds-wrap">
+                      <div class="slds-p-horizontal--medium contract-message">
+                        {labels.pmc_quoteDetailsFlow_contractInfoText}
+                      </div>
+                    </div>
+                  </template>
+                  <template if:true={isQuoteApproved}>
+                    <div class="contract-details" for:each={pageObj.lstContracts} for:item="contract"
+                      key={contract.strContractNumber}>
+                      <div>
+                        <a
+                          href={contract.contractDetailsUrl}>{labels.pmc_contractDetails_contract}&nbsp;{contract.strContractNumber}</a>
+                      </div>
+                      <div class="badge-info">
+                        <span class="badge" data-status={contract.dataStatus}>
+                          {contract.strContractStatus}
+                        </span>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <template if:true={priceLoaded}>
+            <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-size_1-of-1">
+                <div class="price-summary-card">
+                  <c-pmc_dh_price-summary-section price-summary-data={priceSummaryData} flow="Quote Details">
+                  </c-pmc_dh_price-summary-section>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1">
+              <div class="custom-card conversation_history-card">
+                <div class="card-header">
+                  {labels.pmc_quoteDetails_updates}
+                </div>
+                <div class="card-body slds-scrollable_y conversation_history-content" tabindex="0">
+                  <template if:true={historyLoaded}>
+                    <template if:true={conversationHistoryResults.length}>
+                      <template for:each={conversationHistoryResults} for:item="changeItem">
+                        <div key={changeItem.id} class="slds-grid slds-wrap slds-p-horizontal_medium">
+                          <div class="lbl-field-name slds-m-bottom_x-small">
+                            {changeItem.changeRequesterInfo}
+                          </div>
+                          <div class="lbl-field-value slds-m-bottom_small">
+                            {changeItem.changeInfo}
+                          </div>
+                        </div>
+                      </template>
+                    </template>
+                    <template if:false={conversationHistoryResults.length}>
+                      <div class="slds-p-horizontal--medium contract-message">
+                        {labels.pmc_quoteDetailsFlow_noUpdateMsg}
+                      </div>
+                    </template>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template if:true={isCadenceSuggestionModal}>
+      <c-pmc_dh_cadence-suggestion-modal is-read-only={isCadenceReadOnly} quote-id={quoteId}
+        onclosemodal={handleCloseCadenceSuggestionModal}>
+      </c-pmc_dh_cadence-suggestion-modal>
+    </template>
+
+    <c-pmc_dh_custom-modal open-modal={isCancelQuoteModal} modal-heading={labels.pmc_quoteDetailsFlow_cancelQuote}
+      modal-width="537px" onclosemodalevent={closeCancelQuoteHandler}>
+      <div class="modal-wrapper">
+        <div class="slds-grid slds-wrap">
+          <c-pmc_dh_feedback-form reason-label={labels.pmc_quoteDetailsFlow_reasonForCanceling}
+            comment-label={labels.pmc_caseMgmt_reopenComments} picklist-options={cancelQuotePicklistOptions}
+            reason-field-name="strReason" comment-field-name="strOthersComment"
+            textarea-placeholder={labels.pmc_caseMgmt_commentPlaceholder} data-id="cancelQuoteModal"
+            oninputchange={handleDataChange}>
+          </c-pmc_dh_feedback-form>
+        </div>
+        <div class="slds-grid slds-wrap slds-m-around_medium slds-m-top--none">
+          <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+            <lightning-button variant="neutral" label={labels.pmc_quoteDetailsFlow_cancelAndRequote}
+              title={labels.pmc_quoteDetailsFlow_cancelAndRequote} disabled={disableQuoteBtn}
+              onclick={cancelAndRequoteHandler}></lightning-button>
+          </div>
+          <div
+            class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button requote-button-style">
+            <lightning-button variant="brand" label={labels.pmc_quoteDetailsFlow_cancelQuote}
+              title={labels.pmc_quoteDetailsFlow_cancelQuote} disabled={disableQuoteBtn}
+              onclick={cancelQuoteHandler}></lightning-button>
+          </div>
+        </div>
+      </div>
+    </c-pmc_dh_custom-modal>
+  </template>
+
+  <template if:true={isUnauthorizedAccess}>
+    <c-pmc_dh_unauthorized-access-page
+      message={labels.pmc_unauthorizedAccess_restrictedAccessText2}></c-pmc_dh_unauthorized-access-page>
+  </template>
+
+  <template if:true={isSpinner}>
+    <lightning-spinner variant="brand" size="medium"></lightning-spinner>
+  </template>
+</template>

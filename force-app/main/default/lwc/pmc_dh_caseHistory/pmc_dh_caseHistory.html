@@ -1,0 +1,85 @@
+<template>
+  <div class="slds-grid slds-wrap case-doc">
+    <div class="slds-col slds-size_1-of-1">
+      <div class="custom-card">
+        <div class="card-header">{labels.pmc_caseDetails_caseDocuments}</div>
+        <div class="card-body">
+          <template lwc:if={caseDocuments.length}>
+            <template for:each={caseDocuments} for:item="documnt" for:index="index">
+              <div key={index.index} class="slds-grid case-documents-wrapper">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-7 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_caseMgmt_caseNumber}
+                  </div>
+                  <div class="lbl-field-value">{documnt.strCaseNumber}</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-7 content-info">
+                  <div class="lbl-field-name">{labels.pmc_caseDetails_docName}</div>
+                  <div class="lbl-field-value">{documnt.strDocumentName}</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-7 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_caseDetails_docDateAdded}
+                  </div>
+                  <div class="lbl-field-value">{documnt.strDateAdded}</div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-7 download-icon">
+                  <a tabindex="0" href={documnt.strDocDownloadUrl} data-url={documnt.strDocDownloadUrl}>
+                    <img src={iconUrlObj.download} alt="download" />
+                  </a>
+                </div>
+              </div>
+            </template>
+          </template>
+          <template lwc:else>
+            <p class="slds-p-horizontal_medium text-na">NA</p>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slds-grid slds-wrap case-comments">
+    <div class="slds-col slds-size_1-of-1">
+      <div class="custom-card">
+        <div class="card-header">{labels.pmc_caseDetails_caseComments}</div>
+        <div class="card-body">
+          <template lwc:if={caseComments.length}>
+            <div class="message-container">
+              <template for:each={caseComments} for:item="comment" for:index="index">
+                <template lwc:if={comment.boolIsCustomerCreated}>
+                  <div key={index.index} class="case-message business-usr">{comment.strCaseComment}</div>
+                </template>
+                <template lwc:else>
+                  <div key={comment} class="case-message">{comment.strCaseComment}</div>
+                </template>
+              </template>
+            </div>
+          </template>
+          <template lwc:if={canAddComment}>
+            <div class="slds-grid slds-wrap message-text">
+              <div class="slds-col">
+                <c-pmc_dh_input-element class="strCaseComment" data-id="strCaseComment" data-name="strCaseComment"
+                  parent-name="strCaseComment" variant="label-hidden"
+                  text-placeholder={labels.pmc_caseDetails_commentPlaceholder} onkeydown={handleKeyDown}
+                  oninputdatachange={handleDataChange} max-length=500 default-value={newComment}
+                  message-when-value-missing={labels.pmc_caseDetails_caseCommentRequired}></c-pmc_dh_input-element>
+              </div>
+              <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4 send-btn">
+                <button class="slds-button slds-button_brand" title={labels.pmc_caseDetails_send}
+                  onclick={handleComment}>
+                  {labels.pmc_caseDetails_send}
+                </button>
+              </div>
+            </div>
+          </template>
+          <template lwc:else>
+            <p class="slds-p-around_small no-access">{labels.pmc_caseDetails_caseCommentText}</p>
+          </template>
+        </div>
+        <template if:true={isSpinner}>
+          <lightning-spinner variant="brand" size="medium" class="widget-spinner"></lightning-spinner>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>

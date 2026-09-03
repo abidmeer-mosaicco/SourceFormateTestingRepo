@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_OrderNumberCannotBeEmpty</fullName>
+    <active>true</active>
+    <description>Checks whether order number is empty or not</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),
+OR(ISPICKVAL( Status , &apos;Closed&apos;),
+ISPICKVAL( Status , &apos;Closure Pending&apos;)),
+ISPICKVAL(PMC_SS_OrderClassification__c , &apos;New Order&apos;),
+ISBLANK( PMC_SS_SAPOrderNumber__c ))</errorConditionFormula>
+    <errorDisplayField>PMC_SS_SAPOrderNumber__c</errorDisplayField>
+    <errorMessage>SAP Order Number must be entered for the New Order before Closing the Case.</errorMessage>
+</ValidationRule>

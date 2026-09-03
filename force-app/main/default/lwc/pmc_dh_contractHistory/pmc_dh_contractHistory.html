@@ -1,0 +1,39 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+    </div>
+    <div class="slds-col">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">
+        {labels.pmc_contractDetails_myContractsHistory}
+      </p>
+    </div>
+  </div>
+
+  <c-pmc_dh_search-filters search-input-label={labels.pmc_contractMgmt_searchContracts} filters={filters}
+    onsearchev={handleSearch} onapplyfilterev={handleApplyFilter} onclearfilterev={clearFilters}
+    onclearsearchinputsev={clearSearchInputs}>
+  </c-pmc_dh_search-filters>
+
+  <template if:true={pageLoaded}>
+    <template if:false={isResultSetEmpty}>
+      <c-pmc_dh_custom-datatable table-description="Contract History" columns={columns} table-data={filteredData}
+        default-sort-order={defaultSortOrder} ondynamiclinkclick={navigateToContractDetails}>
+      </c-pmc_dh_custom-datatable>
+    </template>
+    <template if:true={contractsData.length}>
+      <div class="pagination slds-m-bottom_medium">
+        <c-pmc_dh_pagination generickey="id" genericdata={contractsData} class="slds-table_striped"
+          no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData} modal-theme>
+        </c-pmc_dh_pagination>
+      </div>
+    </template>
+    <div lwc:if={isResultSetEmpty} class="no-results-msg">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

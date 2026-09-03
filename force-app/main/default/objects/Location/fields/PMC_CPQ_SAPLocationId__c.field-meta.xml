@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SAPLocationId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Created as part of GDASF-8811 - This holds the 4-digit Plant id and acts as external unique key to relate with Product Location object. This fields should hold a value during import.</description>
+    <externalId>true</externalId>
+    <label>SAP Location Id</label>
+    <length>4</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

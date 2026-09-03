@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Suscripción</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Suscripciones</value>
+    </caseValues>
+    <fieldSets>
+        <label>Filtros de búsqueda de suscripciones</label>
+        <name>SBQQ__SubscriptionSearchFilters</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Resultados de la búsqueda de suscripciones</label>
+        <name>SBQQ__SubscriptionSearchResults</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Suscripción #</nameFieldLabel>
+    <validationRules>
+        <errorMessage>&quot;Si se marca Conservar estructura de paquete en Contrato, la Cantidad de renovación no puede ser diferente de la Cantidad.&quot;</errorMessage>
+        <name>SBQQ__Renewal_Quantity_cannot_be_editable</name>
+    </validationRules>
+</CustomObjectTranslation>

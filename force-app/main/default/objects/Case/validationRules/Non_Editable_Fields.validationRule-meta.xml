@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Editable_Fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()),ISPICKVAL(ApprovalStatus__c, &apos;Pending&apos;), 
+OR(ISCHANGED(AccountId),ISCHANGED(Subject),
+ISCHANGED(Description),
+ISCHANGED(PMC_SS_ActionReason__c),
+ISCHANGED(PMC_SS_AtFaultParty__c),
+ISCHANGED(PMC_SS_Order__c),
+ISCHANGED(PMC_SS_OrderProduct__c),
+ISCHANGED(PMC_SS_OriginalInvoiceAmount__c),
+ISCHANGED(PMC_SS_InvoiceDifference__c),
+ISCHANGED(PMC_SS_RebillAmount__c),
+ISCHANGED(PMC_SS_Location__c),
+ISCHANGED(PMC_SS_MOT__c),
+ISCHANGED(PMC_SS_Invoice__c)
+)
+)</errorConditionFormula>
+    <errorMessage>You cannot modify the details of this case while it is pending approval.</errorMessage>
+</ValidationRule>

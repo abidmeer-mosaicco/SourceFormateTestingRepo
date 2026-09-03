@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Division__c</fullName>
+    <inlineHelpText>For domestic sales, select “Domestic”. For international sales, select “Export”. For transfers between centers or warehouses, select “Intercompany”.</inlineHelpText>
+    <label>Division</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Domestic</fullName>
+                <default>false</default>
+                <label>Domestic</label>
+            </value>
+            <value>
+                <fullName>Export</fullName>
+                <default>false</default>
+                <label>Export</label>
+            </value>
+            <value>
+                <fullName>Intercompany</fullName>
+                <default>false</default>
+                <label>Intercompany</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

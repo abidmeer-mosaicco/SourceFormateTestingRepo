@@ -1,0 +1,25 @@
+<template>
+    <div if:true={isLoading} class="loading">
+        <div class="demo-only demo-only_viewport" style="height:6rem; position: relative;">
+            <div role="status" class="slds-spinner slds-spinner_medium">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+
+    <div if:true={isOrchestratorLoading} class="loading">
+        <div class="orchestrator-content">
+            <div class="demo-only demo-only_viewport" style="height:4.5rem; position: relative;">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                    <span class="slds-assistive-text">Carregando</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+            <span class="orchestrator-title">{orchestratorTitle}</span>
+            <span class="orchestrator-progress">{orchestratorProgressLabel}</span>
+        </div>
+    </div>
+</template>

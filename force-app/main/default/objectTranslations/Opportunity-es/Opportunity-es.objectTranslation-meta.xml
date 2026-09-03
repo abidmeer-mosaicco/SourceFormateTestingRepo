@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Deal Desk --></label>
+        <name>sbaa__DealDesk</name>
+    </fieldSets>
+    <recordTypes>
+        <description>Tipo de registro de oportunidad por defecto</description>
+        <label>Oportunidad</label>
+        <name>PMC_SS_Opportunity</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- PMC Marketing User&apos;s can&apos;t change Opportunity Owner --></errorMessage>
+        <name>Opportunity_Owner_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Indique el motivo por el que se ha perdido esta oportunidad en el campo &quot;Motivo de la pérdida&quot;.&quot;</errorMessage>
+        <name>PMC_SS_ReasonLostRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Sold-to Accounts can have Opportunities. Please select a Sold-to Account to create an Opportunity. --></errorMessage>
+        <name>PMC_SS_RestrictOppForNonSoldToAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Las cuentas potenciales no pueden optar a la etapa que está seleccionando. Inicie el proceso de verificación de crédito para convertir esta cuenta en una cuenta de cliente.</errorMessage>
+        <name>PMC_SS_RestrictOpportunityStageUpdate</name>
+    </validationRules>
+    <webLinks>
+        <label>Modificar activos</label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label>Modificar el contrato</label>
+        <name>SBQQ__Amend_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label>Crear pedido</label>
+        <name>SBQQ__CreateOrder</name>
+    </webLinks>
+    <webLinks>
+        <label>Incluir documento</label>
+        <name>SBQQ__Include_Document</name>
+    </webLinks>
+    <webLinks>
+        <label>Vista previa de las aprobaciones</label>
+        <name>sbaa__PreviewApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label>Aprobaciones de retirada</label>
+        <name>sbaa__RecallApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label>Reenviar solicitud</label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+    <webLinks>
+        <label>Enviar para aprobación</label>
+        <name>sbaa__SubmitForApproval</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,39 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+    </div>
+    <div class="slds-col">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">{labels.pmc_breadcrumb_support}</p>
+    </div>
+    <div class="slds-col">
+      <div class="icon-button">
+        <img src={buttonUrl} alt={labels.pmc_caseMgmt_createNewCase} tabindex="0" onclick={openCreateCaseModal}
+          onkeydown={handleIconKeyDown} onmouseenter={handleMouseEnter} onmouseleave={handleMouseLeave} />
+        <template if:true={isMouseOver}>
+          <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom-right btn-tooltip" role="tooltip" id="help">
+            <div class="slds-popover__body tooltip-text">{labels.pmc_caseMgmt_createNewCase}</div>
+          </div>
+        </template>
+      </div>
+      <template if:true={isCreateCaseEnabled}>
+        <c-pmc_dh_create-case is-create-case-enabled={isCreateCaseEnabled}
+          onclosecreatecasepopup={closeCreateCaseModal}></c-pmc_dh_create-case>
+      </template>
+    </div>
+  </div>
+
+  <div class="menu-wrapper">
+    <ul class="menu">
+      <li class="item dxp-text-body" for:each={tabsArray} for:item="item" for:index="index" key={item.value}
+        data-state="active" data-value={item.value}>
+        {item.label}
+      </li>
+    </ul>
+  </div>
+  <div class="slds-grid">
+    <div class="slds-col slds-size_1-of-1">
+      <c-pmc_dh_case-list></c-pmc_dh_case-list>
+    </div>
+  </div>
+</template>

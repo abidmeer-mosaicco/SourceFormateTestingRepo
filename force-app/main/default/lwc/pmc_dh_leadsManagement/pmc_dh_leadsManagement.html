@@ -1,0 +1,374 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <ul class="order-menu slds-m-top_x-small">
+        <li class="menu-list new dynamic-border" onclick={newLeadsHandler}>
+          {labels.pmc_leadManagement_newLeads}
+        </li>
+        <li class="menu-list accepted" onclick={acceptedLeadsHandler}>
+          {labels.pmc_leadManagement_acceptedLeads}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Search Filters -->
+  <div class="custom-card">
+    <div class="card-header">
+      <div class="search-filter-header">
+        <div>{labels.pmc_addresses_searchFilters}</div>
+        <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+          icon-name="utility:filterList" alternative-text={labels.pmc_searchFilters_filter} onclick={showSearchFilters}>
+        </lightning-icon>
+      </div>
+    </div>
+    <template if:true={showFilter}>
+      <div class="card-body">
+        <div class="slds-grid slds-wrap search-section">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_3-of-12 slds-m-bottom_none">
+            <c-pmc_dh_search-input-element text-label={labels.pmc_leadManagement_searchLists} text-name={labels.pmc_leadManagement_searchLists}
+              text-placeholder="" data-id="strSearchInput" default-value={searchFormObject.strSearchInput}
+              oninputdatachange={handleDataChange} oninputkeyup={handleEnterKeyUp} onsearchclick={searchDataHandler}>
+            </c-pmc_dh_search-input-element>
+          </div>
+          <div class="filter-buttons slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+            <div class="mobile-button">
+              <lightning-button variant="brand" label={labels.pmc_addresses_apply} title={labels.pmc_addresses_apply}
+                onclick={searchDataHandler}></lightning-button>
+            </div>
+            <div class="clear-link">
+              <a onclick={clearSearchInputs} class="text-regular-small">{labels.pmc_addresses_clear}</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slds-grid slds-wrap sort-section">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_5-of-12">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_leadManagement_sortBy}
+              combobox-list-json={sortByPicklist} data-id="sortBy" parent-name="sortBy"
+              oninputdatachange={sortEventHandler}>
+            </c-pmc_dh_selection-picklist>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+  <!-- Lead Records -->
+  <template if:true={pageLoaded}>
+    <template if:false={isResultSetEmpty}>
+      <div class="scrollable-container slds-m-bottom_medium" tabindex="0">
+        <div class="scrollable-content">
+          <template for:each={leadsFilteredList.lstRecordsData} for:item="lead">
+            <div key={lead.strRecordId} data-record-index={lead.strRecordId}
+              class="lead-data-section slds-m-bottom_medium">
+              <div class="slds-grid slds-wrap header-content slds-p-around_medium">
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_1 slds-medium-order_1 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_userDetails_lastName}
+                  </div>
+                  <div class="lbl-field-value">{lead.strLastName}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_3 slds-medium-order_2 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_userDetails_firstName}
+                  </div>
+                  <div class="lbl-field-value">{lead.strFirstName}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_4 slds-medium-order_3 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_userDetails_email}
+                  </div>
+                  <div class="lbl-field-value email-info">{lead.strEmail}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_5 slds-medium-order_4 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_userDetails_phone}
+                  </div>
+                  <div class="lbl-field-value">{lead.strPhone}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_6 slds-medium-order_5 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_leadManagement_region}
+                  </div>
+                  <div class="lbl-field-value">{lead.strRegion}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_7 slds-medium-order_6 content-info">
+                  <div class="lbl-field-name slds-m-bottom_x-small">
+                    {labels.pmc_leadManagement_creationDate}
+                  </div>
+                  <div class="lbl-field-value">{lead.datCreatedDate}</div>
+                </div>
+
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_8 slds-medium-order_7 content-info">
+                  <template if:false={isNewLeadsList}>
+                    <c-pmc_dh_selection-picklist text-label={labels.pmc_leadManagement_stage}
+                      combobox-list-json={leadsFilteredList.lstStage} data-id="strStage" is-required
+                      data-record-index={lead.strRecordId} parent-name="strStage" is-disabled={lead.isEditDisabled}
+                      default-value={lead.strStage} oninputdatachange={handleLeadDataChange}>
+                    </c-pmc_dh_selection-picklist>
+                  </template>
+                </div>
+                <div
+                  class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 slds-order_2 slds-medium-order_8 accordion-icon slds-align--absolute-center">
+                  <a>
+                    <img src={iconUrlObj.arrowRightIconUrl} alt={labels.pmc_leadManagement_accordion} data-record-index={lead.strRecordId}
+                      onclick={openAccordion} />
+                  </a>
+                </div>
+              </div>
+              <div class="accordion-content" data-record-index={lead.strRecordId}>
+                <div
+                  class="slds-grid slds-wrap slds-p-horizontal_medium slds-p-top_medium slds-p-bottom_x-large slds-border_bottom">
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_addresses_city}
+                    </div>
+                    <div class="lbl-field-value">{lead.strCity}</div>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_leadManagement_stateProvince}
+                    </div>
+                    <div class="lbl-field-value">{lead.strState}</div>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_leadManagement_product}
+                    </div>
+                    <template lwc:if={lead.isMultipleProductAvailable}>
+                      <c-pmc_dh_multiple-menu-list list-items={lead.lstProductFamiles}></c-pmc_dh_multiple-menu-list>
+                    </template>
+                    <template lwc:else>
+                      <div class="lbl-field-value">{lead.strProductFamily}</div>
+                    </template>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_leadManagement_crop}
+                    </div>
+                    <template lwc:if={lead.isMultipleCropAvailable}>
+                      <c-pmc_dh_multiple-menu-list list-items={lead.lstCrops}></c-pmc_dh_multiple-menu-list>
+                    </template>
+                    <template lwc:else>
+                      <div class="lbl-field-value">{lead.strCrop}</div>
+                    </template>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_requestToDeliver_qty}
+                    </div>
+                    <div class="lbl-field-value">{lead.strQty}</div>
+                  </div>
+
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_leadManagement_dealOwner}
+                    </div>
+                    <div class="lbl-field-value">{lead.strDealOwner}</div>
+                  </div>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_leadManagement_farmSize}
+                    </div>
+                    <div class="lbl-field-value">{lead.strFarmSize}</div>
+                  </div>
+                </div>
+                <template if:false={isNewLeadsList}>
+                  <div
+                    class="slds-grid slds-wrap slds-p-horizontal_medium slds-p-top_medium slds-border_bottom contact-info">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_leadManagement_contactPreference}
+                      </div>
+                      <div class="lbl-field-value">
+                        {lead.strContactPreferences}
+                      </div>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 input-info">
+                      <div class="">
+                        <c-pmc_dh_input-element text-label={labels.pmc_leadManagement_lastContacted} type="date"
+                          data-id="datContactedDate" data-record-index={lead.strRecordId}
+                          default-value={lead.datContactedDate} parent-name="datContactedDate" max-value={maxDate}
+                          is-disabled={lead.isEditDisabled} message-when-range-high={labels.pmc_leadManagement_contactedDateErrorMsg}
+                          oninputdatachange={handleLeadDataChange}></c-pmc_dh_input-element>
+                      </div>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-8 input-info">
+                      <div class="">
+                        <c-pmc_dh_selection-picklist text-label={labels.pmc_leadManagement_contactMethod}
+                          combobox-list-json={leadsFilteredList.lstContactMethods} data-id="strContactMethod"
+                          data-record-index={lead.strRecordId} is-disabled={lead.isEditDisabled}
+                          parent-name="strContactMethod" default-value={lead.strContactMethod}
+                          oninputdatachange={handleLeadDataChange}>
+                        </c-pmc_dh_selection-picklist>
+                      </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-8"></div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3">
+                      <lightning-textarea name="strComments" data-name="strComments" data-id="strComments"
+                        data-record-index={lead.strRecordId} maxlength="1000" label={labels.pmc_caseMgmt_reopenComments}
+                        value={lead.strComments} disabled={lead.isEditDisabled} placeholder=""
+                        onchange={handleLeadDataChange}></lightning-textarea>
+                    </div>
+                  </div>
+                  <div class="slds-grid action-buttons">
+                    <template if:false={lead.isEditDisabled}>
+                      <div class="slds-size_1-of-1 mobile-button slds-order_2 slds-medium-order_1">
+                        <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+                          title={labels.pmc_addressDetails_cancel} data-record-index={lead.strRecordId}
+                          onclick={cancelLeadEdit}></lightning-button>
+                      </div>
+                      <div class="slds-size_1-of-1 mobile-button slds-order_1 slds-medium-order_2">
+                        <lightning-button variant="brand" label={labels.pmc_userDetails_saveChanges}
+                          title={labels.pmc_userDetails_saveChanges} data-record-index={lead.strRecordId}
+                          onclick={submitLeadInfo}></lightning-button>
+                      </div>
+                    </template>
+                    <template if:true={lead.isEditDisabled}>
+                      <div class="slds-size_1-of-1 mobile-button">
+                        <lightning-button variant="neutral" label={labels.pmc_userDetails_edit}
+                          data-record-index={lead.strRecordId} title={labels.pmc_userDetails_edit}
+                          onclick={editLeadInfo}></lightning-button>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+              <template if:true={isNewLeadsList}>
+                <div class="slds-grid action-buttons">
+                  <div class="slds-size_1-of-1 mobile-button">
+                    <lightning-button variant="neutral" label={labels.pmc_leadManagement_rejectLead}
+                      title={labels.pmc_leadManagement_rejectLead} data-record-index={lead.strRecordId}
+                      onclick={openRejectLeadModal}></lightning-button>
+                  </div>
+                  <div class="slds-size_1-of-1 mobile-button">
+                    <lightning-button variant="brand" label={labels.pmc_leadManagement_acceptLead}
+                      title={labels.pmc_leadManagement_acceptLead} data-record-index={lead.strRecordId}
+                      onclick={openAcceptLeadModal}></lightning-button>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </template>
+        </div>
+      </div>
+    </template>
+    <template if:true={leadsList.lstRecordsData}>
+      <template if:true={leadsList.lstRecordsData.length}>
+        <div class="pagination slds-m-bottom_medium">
+          <c-pmc_dh_pagination genericdata={leadsList.lstRecordsData} class="slds-table_striped"
+            no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData}
+            modal-theme>
+          </c-pmc_dh_pagination>
+        </div>
+      </template>
+    </template>
+    <!-- No search results msg -->
+    <div lwc:if={isResultSetEmpty} class="no-results-msg slds-m-bottom_medium">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+  <!-- Loading spinner -->
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+  <!-- Reject Lead Modal -->
+  <c-pmc_dh_custom-modal open-modal={isRejectLeadModalOpen} modal-heading={labels.pmc_leadManagement_rejectLead}
+    modal-width={rejectModalWidth} onclosemodalevent={closeRejectLeadModal}>
+    <div class="slds-p-around_medium">
+      <lightning-radio-group name="rejectionReason" data-name="rejectionReason" data-parent-id="rejectLeadModal"
+        data-id="rejectionReason" label={labels.pmc_leadManagement_rejectReason}
+        options={leadsFilteredList.lstRejectionResons} onchange={handleLeadDataChange} type="radio" value="">
+      </lightning-radio-group>
+    </div>
+    <div class="slds-grid slds-p-horizontal_medium slds-p-bottom_medium modal-cta">
+      <div class="mobile-button slds-order_2 slds-medium-order_1">
+        <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+          title={labels.pmc_addressDetails_cancel} onclick={closeRejectLeadModal}></lightning-button>
+      </div>
+      <div class="mobile-button slds-order_1 slds-medium-order_2">
+        <lightning-button variant="brand" label={labels.pmc_leadManagement_rejectLead}
+          title={labels.pmc_leadManagement_rejectLead} disabled={disableRejectCTA}
+          onclick={rejectLead}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+  <!-- Confirm Edits Modal -->
+  <c-pmc_dh_custom-modal open-modal={isConfirmEditModalOpen} modal-heading={labels.pmc_leadManagement_confirmEdits}
+    modal-width="500px" onclosemodalevent={cancelEdit}>
+    <div class="slds-p-around_medium edit-confirmation-msg">
+      {labels.pmc_leadManagement_editChangeMsg}
+    </div>
+    <div class="slds-grid slds-p-horizontal_medium slds-p-bottom_medium modal-cta">
+      <div class="mobile-button slds-order_2 slds-medium-order_1">
+        <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+          title={labels.pmc_addressDetails_cancel} onclick={cancelEdit}></lightning-button>
+      </div>
+      <div class="mobile-button slds-order_1 slds-medium-order_2">
+        <lightning-button variant="brand" label={labels.pmc_leadManagement_confirm}
+          title={labels.pmc_leadManagement_confirm} onclick={confirmEdit}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+  <!-- Closed Lost Modal -->
+  <c-pmc_dh_custom-modal open-modal={isClosedLostModal} modal-heading={labels.pmc_leadManagement_lostLead}
+    modal-width="500px" onclosemodalevent={cancelClosedLostModel}>
+    <div class="slds-p-around_medium closed-lost">
+      <lightning-radio-group name="closedLost" data-name="closedLost" data-parent-id="closedLost" data-id="closedLost"
+        label={labels.pmc_leadManagement_lostLeadText} options={lstClosedLost} onchange={handleLeadDataChange}
+        type="radio" value="">
+      </lightning-radio-group>
+      <lightning-textarea name="strStageComments" data-name="strStageComments" data-id="strStageComments"
+        maxlength="255" disabled={disableStageComment} placeholder={labels.pmc_leadManagement_comment}
+        onchange={handleLeadDataChange} value={lostLeadComment}></lightning-textarea>
+    </div>
+    <div class="slds-grid slds-p-horizontal_medium slds-p-bottom_medium modal-cta">
+      <div class="mobile-button slds-order_2 slds-medium-order_1">
+        <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+          title={labels.pmc_addressDetails_cancel} onclick={cancelClosedLostModel}></lightning-button>
+      </div>
+      <div class="mobile-button slds-order_1 slds-medium-order_2">
+        <lightning-button variant="brand" label={labels.pmc_leadManagement_confirm}
+          title={labels.pmc_leadManagement_confirm} disabled={disableConfirmCTA}
+          onclick={confirmClosedLost}></lightning-button>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+  <!-- Accept lead modal -->
+  <c-pmc_dh_custom-modal open-modal={isAcceptModalOpen} modal-heading={labels.pmc_leadManagement_acceptLead}
+    modal-width="500px" onclosemodalevent={closeAcceptModalHandler}>
+    <div class="modal-wrapper">
+      <div class="slds-p-bottom_medium modal-message">
+        {labels.pmc_leadManagement_acceptLeadMsg}
+      </div>
+      <div class="slds-grid slds-wrap slds-m-top--none">
+        <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+          <lightning-button variant="neutral" label={labels.pmc_deleteAddress_no} title={labels.pmc_deleteAddress_no}
+            onclick={closeAcceptModalHandler}></lightning-button>
+        </div>
+        <div
+          class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button button-style">
+          <lightning-button variant="brand" label={labels.pmc_leadManagement_yes} title={labels.pmc_leadManagement_yes}
+            onclick={acceptLeadHandler}></lightning-button>
+        </div>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+</template>

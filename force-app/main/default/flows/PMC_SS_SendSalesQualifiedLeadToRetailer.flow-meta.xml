@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Invocable Apex Action to send out an email to Retailer for the review of Lead</description>
+        <name>RetailerLeadEmailAction</name>
+        <label>Retailer Lead Email Action</label>
+        <locationX>110</locationX>
+        <locationY>350</locationY>
+        <actionName>PMC_SS_SalesQualifiedLeadController</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>LeadFieldUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>lstLead</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>PMC_SS_SalesQualifiedLeadController</nameSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>SalesQualifiedLeadDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Element to check if Lead status is Sales Qualified and Lead Owner&apos;s profile name is either Digital Hub Buyer or Digital Hub Super Buyer.</description>
+        <name>SalesQualifiedLeadDecision</name>
+        <label>Sales Qualified Lead Decision</label>
+        <locationX>506</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>LeadOwnerNotRetailerScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SalesQualifiedLeadDecision_SalesQualifiedLeadOutcome</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Qualified</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordId.Owner:User.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Hub Buyer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>recordId.Owner:User.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Digital Hub Super Buyer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RetailerLeadEmailAction</targetReference>
+            </connector>
+            <label>Sales Qualified Lead Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow will be executed when user will click on Send Lead to Retailer quick action from Lead record page to send out an email to Retailer to review the Lead.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>to store today&apos;s date</description>
+        <name>datTodayDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>PMC SS Send Sales Qualified Lead To Retailer {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Send Sales Qualified Lead To Retailer</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Log an error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>638</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>SendEmailFailureScreen</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>strFlowName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Update Accepted By Retailer to Pending once email sent successfully.</description>
+        <name>LeadFieldUpdate</name>
+        <label>Lead Field Update</label>
+        <locationX>110</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>SendEmailSuccessfulScreen</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_SS_AcceptedByRetailer__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_RetailerEmailSentDate__c</field>
+            <value>
+                <elementReference>datTodayDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <runInMode>DefaultMode</runInMode>
+    <screens>
+        <description>screen to display error message when Lead Owner is not Retailer</description>
+        <name>LeadOwnerNotRetailerScreen</name>
+        <label>Lead Owner Not Retailer Screen</label>
+        <locationX>902</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>RetailerNotLeadOwner</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_RetailerLead_OwnerNotRetailer}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Screen to display failure message to user</description>
+        <name>SendEmailFailureScreen</name>
+        <label>Send Email Failure Screen</label>
+        <locationX>638</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>FailureMessage</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_SendLeadToRetailer_EmailSendFailure} {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Screen to display success message to user</description>
+        <name>SendEmailSuccessfulScreen</name>
+        <label>Send Email Successful Screen</label>
+        <locationX>110</locationX>
+        <locationY>566</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessMessage</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_SendLeadToRetailer_EmailSendSuccess}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>To store Lead record from where quick action was fired</description>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <description>To store current flow name</description>
+        <name>strFlowName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>PMC_SS_SendSalesQualifiedLeadToRetailer</stringValue>
+        </value>
+    </variables>
+</Flow>

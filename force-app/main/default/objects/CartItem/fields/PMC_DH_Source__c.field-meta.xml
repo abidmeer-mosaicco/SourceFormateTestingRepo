@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_Source__c</fullName>
+    <label>Source</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RFQ</fullName>
+                <default>true</default>
+                <label>RFQ</label>
+            </value>
+            <value>
+                <fullName>RTD</fullName>
+                <default>false</default>
+                <label>RTD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

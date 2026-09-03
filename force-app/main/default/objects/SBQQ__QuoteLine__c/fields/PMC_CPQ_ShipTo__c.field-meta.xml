@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ShipTo__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is created  to check the shipping address value of the line item.</description>
+    <label>Ship To</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Quote Lines (Ship To)</relationshipLabel>
+    <relationshipName>Quote_Lines2</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

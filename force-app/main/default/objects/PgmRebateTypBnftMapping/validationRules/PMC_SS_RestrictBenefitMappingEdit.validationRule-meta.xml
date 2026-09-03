@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictBenefitMappingEdit</fullName>
+    <active>true</active>
+    <description>This validation rule is used to restrict the user from editing or creating Program Rebate Type Benefit Mapping for Under Revision or Approved Sales Agreement.</description>
+    <errorConditionFormula>AND( 
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) ,
+OR(
+OR( 
+ISPICKVAL(  ProgramRebateType.RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c  , &apos;Approved&apos;), 
+ISPICKVAL( ProgramRebateType.RebateProgram.PMC_SS_SalesAgreement__r.PMC_SS_ApprovalStatus__c , &apos;Under Revision&apos;)  
+),
+ISPICKVAL( ProgramRebateType.RebateProgram.Status  , &apos;Inactive&apos;)
+)
+
+)</errorConditionFormula>
+    <errorMessage>Rebate Type Benefit Mappings can’t be created/edited at this stage. Please Amend the Sales Agreement to make revisions to Rebate Type Benefit Mappings.</errorMessage>
+</ValidationRule>

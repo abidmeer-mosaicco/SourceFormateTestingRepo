@@ -1,0 +1,84 @@
+<template>
+  <template if:true={templateSelector.type1}>
+    <div class="type1">
+      <div class="draggable-area" ondragenter={handleDragEnter} ondragleave={handleDragLeave}
+        ondragover={handleDragOver} ondrop={handleDrop}>
+        <div class="uploaded-files">
+          <div for:each={uploadedFiles} for:item="item" key={item.id} class="uploaded-file">
+            <div class="icon-wrapper">
+              <img src={iconUrlObj.file} alt="" />
+            </div>
+            {item.fileName}
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <input type="file" id="file" name="file" accept={acceptedFormats} multiple={isMultiple}
+            onchange={handleChange} />
+          <label for="file" class="label-desktop">
+            {labels.pmc_fileUpload_dropFiles}
+          </label>
+          <label for="file" class="label-mobile">
+            {labels.pmc_fileUpload_uploadDocument}
+          </label>
+        </div>
+      </div>
+
+      <template if:true={isWrongFormat}>
+        <div class="slds-has-error">
+          <div class="slds-form-element__help">
+            <template if:true={invalidFormatFilesError}>
+              {invalidFormatFilesError}<br>
+            </template>
+            <template if:true={invalidFileNameErr}>
+              {invalidFileNameErr}<br>
+            </template>
+            {invalidFileSizeErr}
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <template if:true={templateSelector.type2}>
+    <div class="type2">
+      <div class="draggable-area slds-m-bottom_small" ondragenter={handleDragEnter} ondragleave={handleDragLeave}
+        ondragover={handleDragOver} ondrop={handleDrop}>
+        <div class="input-wrapper">
+          <input type="file" id="file2" name="file2" accept={acceptedFormats} multiple={isMultiple}
+            onchange={handleChange} />
+          <label for="file2" class="label">
+            {labels.pmc_fileUpload_uploadDocument}
+          </label>
+        </div>
+      </div>
+      <hr>
+      <div class="uploaded-files slds-m-top_x-small">
+        <div for:each={uploadedFiles} for:item="item" key={item.id} class="uploaded-file">
+          <div class="icon-wrapper">
+            <img src={iconUrlObj.file} alt="" />
+          </div>
+          {item.fileName}
+        </div>
+      </div>
+
+      <template if:true={isWrongFormat}>
+        <div class="slds-has-error">
+          <div class="slds-form-element__help">
+            <template if:true={invalidFormatFilesError}>
+              {invalidFormatFilesError}<br>
+            </template>
+            <template if:true={invalidFileNameErr}>
+              {invalidFileNameErr}<br>
+            </template>
+            {invalidFileSizeErr}
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <template if:true={loadSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

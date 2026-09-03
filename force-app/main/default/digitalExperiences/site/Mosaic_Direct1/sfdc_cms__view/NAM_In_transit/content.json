@@ -1,0 +1,87 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "NAM In transit",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "1rem",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "1rem",
+            "sectionConfig" : "{\"UUID\":\"d7ba5135-d8c8-4b7d-8517-83211a9aa931\",\"columns\":[{\"UUID\":\"f890f37c-a787-4c8f-961e-bbf748500f15\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "buttonNames" : "Barge, Rail",
+                "dxpStyle" : { }
+              },
+              "definition" : "c:mosaicBargeRail",
+              "id" : "4bd11cee-1022-4f58-b289-a969af6890ee",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "accountNamePath" : "PMC_CPQ_OrderProduct__r.Order.Account.Name",
+                "baseWhereClause" : "isVisible__c = TRUE AND Shipment.PMC_CPQ_DeliveryActualGIDate__c >= 2026-04-01 AND (PMC_CPQ_OrderProduct__r.PMC_CPQ_Incoterms__c != 'FOB' AND PMC_CPQ_OrderProduct__r.PMC_CPQ_Incoterms__c != 'FCA')",
+                "dxpStyle" : { },
+                "filterFieldName" : "PMC_CPQ_OrderProduct__r.Order.Account.PMC_SS_SAPCustomerNumber__c",
+                "manualFieldApiNames" : "Id, PMC_CPQ_OrderProduct__r.OrderId, PMC_CPQ_OrderProduct__r.Order.Account.Name, PMC_CPQ_OrderProduct__r.Order.PMC_CPQ_SAPOrderNumber__c, PMC_CPQ_OrderProduct__r.OrderItemNumber__c, PMC_CPQ_OrderProduct__r.SBQQ__Contract__r.SBQQ__Quote__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_LinePONumber__c, Product2.Name, Shipment.DestinationFormula__c, Shipment.PMC_CPQ_DeliveryActualGIDate__c, Shipment.PMC_CPQ_VehicleID__c, Shipment.PMC_CPQ_CurrentLocation__c, Shipment.PMC_CPQ_ETA__c, PMC_CPQ_DeliveryQuantity__c, PMC_CPQ_ProductLocation__r.Name, Shipment.DaysNotMoved__c, Shipment.PMC_CPQ_ShipToAccount__r.ShipToFormula__c, Shipment.StatusCode__c, Shipment.PMC_CPQ_TowName__c, Shipment.PMC_CPQ_CurrentCarrier__c, Shipment.PMC_CPQ_Comments__c",
+                "manualFieldLabelNames" : "Id, OrderId, Account name, Order Number, Order Item, Contract, PO Number, Product, Destination, Ship Date, Vehicle ID, Current Location, ETA, Weight, Origin, Days not Moved, Ship To, Status, Fleet/Tow Name, Current Carrier,  Last Comment",
+                "objectApiName" : "ShipmentItem",
+                "pageSize" : 50,
+                "tableType" : "In Transit"
+              },
+              "definition" : "c:mosaicDirectList",
+              "id" : "38971f66-172c-4d7b-a8c4-f2a328add75a",
+              "type" : "component"
+            } ],
+            "id" : "f890f37c-a787-4c8f-961e-bbf748500f15",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "d7ba5135-d8c8-4b7d-8517-83211a9aa931",
+          "type" : "component"
+        } ],
+        "id" : "6c711bba-ef1f-43d5-a035-86f9058f8141",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "NAM In transit",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "a18dc8b6-1a60-42c2-a9fe-26487c81f1ef",
+          "type" : "component"
+        } ],
+        "id" : "cf43e3bd-5498-4fa1-bbbc-e02f2bb85a26",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "caa721e4-827a-425c-96de-c059f1cbb99d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "boyHQnfOS2WtkjDrgBWLvYjS4Toy9f",
+    "viewType" : "custom-intransit"
+  },
+  "urlName" : "nam-in-transit"
+}

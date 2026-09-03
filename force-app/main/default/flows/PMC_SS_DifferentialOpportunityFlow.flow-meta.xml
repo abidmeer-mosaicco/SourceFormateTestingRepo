@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Call Apex class to create Opportunity Line Items</description>
+        <name>PMC_SS_CreateOpportunityLineItemsRemoteAction</name>
+        <label>PMC_SS_CreateOpportunityLineItemsRemoteAction</label>
+        <locationX>2260</locationX>
+        <locationY>4712</locationY>
+        <actionName>PMC_SS_CreateOpportunityLineItems</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>OutputCheckDecision</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>idOpportunity</name>
+            <value>
+                <elementReference>objOpportunity.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>lstOpportunityLineItem</name>
+            <value>
+                <elementReference>OpportunityLineItemGet</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>lstSalesAgreementProducts</name>
+            <value>
+                <elementReference>lstSalesAgreementProducts</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>lstSalesAgreementProductSchedules</name>
+            <value>
+                <elementReference>lstSalesAgreementProductSchedules</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>PMC_SS_CreateOpportunityLineItems</nameSegment>
+        <outputParameters>
+            <assignToReference>strMessage</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Add product Id to collection</description>
+        <name>AddtoCollectionAssignment</name>
+        <label>Add to Collection Assignment</label>
+        <locationX>50</locationX>
+        <locationY>1382</locationY>
+        <assignmentItems>
+            <assignToReference>lstRecordId</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>strFirstIdFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>strSelectedIds</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strRemoveFirstIdFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>CheckIfMoreRecordsDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign values to Opportunity Line Items</description>
+        <name>AssignValuesToOpportunityLineItemsAssignment</name>
+        <label>Assign values to Opportunity Line Items Assignment</label>
+        <locationX>2172</locationX>
+        <locationY>5468</locationY>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.Product2Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SalesAgreementProductsSelectedForOpportunityLoop.PricebookEntry.Product2Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.Quantity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.UnitPrice</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SalesAgreementProductsSelectedForOpportunityLoop.SalesPrice</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.PricebookEntryId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SalesAgreementProductsSelectedForOpportunityLoop.PricebookEntryId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.OpportunityId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objOpportunity.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOppLineItem.Quantity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopThroughQuantities</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>OppLineItemstobecreated</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>objOppLineItem</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>SalesAgreementProductsSelectedForOpportunityLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get count of selected products</description>
+        <name>CountofSelectedProductAssignment</name>
+        <label>Count of Selected Product Assignment</label>
+        <locationX>1536</locationX>
+        <locationY>4820</locationY>
+        <assignmentItems>
+            <assignToReference>intCountOfSelectedProducts</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>SalesAgreementProductCollection</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>GetCountOfQuantityArrayAssignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign values to Differential Opportunity</description>
+        <name>DifferentialOpportunityValuesAssignment</name>
+        <label>Differential Opportunity Values Assignment</label>
+        <locationX>1898</locationX>
+        <locationY>4172</locationY>
+        <assignmentItems>
+            <assignToReference>objOpportunity.PMC_SS_SalesAgreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strUserIdFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.PMC_SS_Crops__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.Account.PMC_SS_Crops__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.Pricebook2Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.PricebookId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.PMC_SS_ProductFamilies__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strFamily</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Prospecting</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CloseDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objOpportunity.CurrencyIsoCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId.CurrencyIsoCode</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OpportunityCreate</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Store Product Family</description>
+        <name>FamilyAssignment</name>
+        <label>Family Assignment</label>
+        <locationX>2162</locationX>
+        <locationY>3812</locationY>
+        <assignmentItems>
+            <assignToReference>strFamily</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>strProductFamily</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>strFamily</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SalesAgreementProductsSelectedLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get count of Quantity array</description>
+        <name>GetCountOfQuantityArrayAssignment</name>
+        <label>Get count of Quantity array Assignment</label>
+        <locationX>1536</locationX>
+        <locationY>4928</locationY>
+        <assignmentItems>
+            <assignToReference>intCountOfQuantityArray</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>lstQuantity</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuantityCountEqualsSelectedProductCountDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get Product Family of current item</description>
+        <name>GetProductFamilyAssignment</name>
+        <label>Get Product Family Assignment</label>
+        <locationX>2074</locationX>
+        <locationY>3596</locationY>
+        <assignmentItems>
+            <assignToReference>strProductFamily</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SalesAgreementProductsSelectedLoop.PricebookEntry.Product2.PMC_CPQ_ProductFamily__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AdditionDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign to Opportunity Collection</description>
+        <name>OpportunityCollectionAssignment</name>
+        <label>Opportunity Collection Assignment</label>
+        <locationX>1986</locationX>
+        <locationY>3080</locationY>
+        <assignmentItems>
+            <assignToReference>lstOpportunities</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>OpportunitiesLoop.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OpportunitiesLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Store Opportunity Id</description>
+        <name>OpportunityIdAssignment</name>
+        <label>Opportunity Id Assignment</label>
+        <locationX>1898</locationX>
+        <locationY>4388</locationY>
+        <assignmentItems>
+            <assignToReference>strOpportunityId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objOpportunity.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>OpportunityLineItemGet</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign selected products to variable</description>
+        <name>ProductAssignment</name>
+        <label>Product Assignment</label>
+        <locationX>974</locationX>
+        <locationY>1166</locationY>
+        <assignmentItems>
+            <assignToReference>strSelectedIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ChooseProductsMultiCheckboxes</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>strSelectedIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CheckIfMoreRecordsDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Product to collection</description>
+        <name>ProductCollectionAssignment</name>
+        <label>Product Collection Assignment</label>
+        <locationX>1062</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>lstProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>SalesAgreementProductsLoop.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SalesAgreementProductsLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign Ids to collection</description>
+        <name>ProductIdsAssignment</name>
+        <label>Product Ids Assignment</label>
+        <locationX>2954</locationX>
+        <locationY>1814</locationY>
+        <assignmentItems>
+            <assignToReference>lstProductIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ScheduleLoop.SalesAgreementProduct.PricebookEntry.Product2Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>StartandEndDatesAssignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get Sales Agreement Product Schedule</description>
+        <name>SalesAgreementProductScheduleAssignment</name>
+        <label>Sales Agreement Product Schedule Assignment</label>
+        <locationX>2954</locationX>
+        <locationY>2030</locationY>
+        <assignmentItems>
+            <assignToReference>objSalesAgreementProductSchedule</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ScheduleLoop</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AddToListDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Add to collection variable</description>
+        <name>SalesAgreementProductSchedulesAssignment</name>
+        <label>Sales Agreement Product Schedules Assignment</label>
+        <locationX>3086</locationX>
+        <locationY>2246</locationY>
+        <assignmentItems>
+            <assignToReference>lstSalesAgreementProductSchedules</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>objSalesAgreementProductSchedule</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ScheduleLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Add</description>
+        <name>SelectedSalesAgreementProductAssignment</name>
+        <label>Selected Sales Agreement Product Assignment</label>
+        <locationX>2074</locationX>
+        <locationY>3488</locationY>
+        <assignmentItems>
+            <assignToReference>objSalesAgreementProduct</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SalesAgreementProductsSelectedLoop</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstSalesAgreementProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>objSalesAgreementProduct</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>SalesAgreementProductCollection</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>objSalesAgreementProduct</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>GetProductFamilyAssignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get start and end dates of schedule</description>
+        <name>StartandEndDatesAssignment</name>
+        <label>Start and End Dates Assignment</label>
+        <locationX>2954</locationX>
+        <locationY>1922</locationY>
+        <assignmentItems>
+            <assignToReference>datStartDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ScheduleLoop.StartDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>datEndDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ScheduleLoop.EndDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SalesAgreementProductScheduleAssignment</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <description>Select differential / manual opportunity creation</description>
+        <name>DifferentialChoice</name>
+        <choiceText>{!$Label.PMC_SS_DifferentialOpportunityChoice}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <description>Select differential / manual opportunity creation</description>
+        <name>ManualChoice</name>
+        <choiceText>{!$Label.PMC_SS_ManualOpportunityChoice}</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_DifferentialOpportunityFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Decide whether to add to collection</description>
+        <name>AdditionDecision</name>
+        <label>Addition Decision</label>
+        <locationX>2074</locationX>
+        <locationY>3704</locationY>
+        <defaultConnector>
+            <targetReference>FamilyAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>AdditionDecision_DontAddOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strFamily</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>strProductFamily</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SalesAgreementProductsSelectedLoop</targetReference>
+            </connector>
+            <label>Don&apos;t Add Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Schedule already present in List</description>
+        <name>AddToListDecision</name>
+        <label>Add To List Decision</label>
+        <locationX>2954</locationX>
+        <locationY>2138</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductSchedulesAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>AddToListDecision_DontAddOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstSalesAgreementProductSchedules</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>objSalesAgreementProductSchedule</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <isGoTo>true</isGoTo>
+                <targetReference>ScheduleLoop</targetReference>
+            </connector>
+            <label>Don&apos;t Add Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>380</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductsGet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check If Current Schedule</description>
+        <name>CheckIfCurrentScheduleDecision</name>
+        <label>Check If Current Schedule Decision</label>
+        <locationX>3152</locationX>
+        <locationY>1706</locationY>
+        <defaultConnector>
+            <targetReference>ScheduleLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfCurrentScheduleDecision_CurrentOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ScheduleLoop.EndDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>datCurrentDateFormula</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ScheduleLoop.SalesAgreementProductId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ProductLoop</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ScheduleLoop.StartDate</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>datCurrentDateFormula</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ProductIdsAssignment</targetReference>
+            </connector>
+            <label>Current Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Differential or Manual opportunity is being created</description>
+        <name>CheckIfDifferentialOrManualOpportunityDecision</name>
+        <label>Check if Differential or Manual Opportunity Decision</label>
+        <locationX>1898</locationX>
+        <locationY>4604</locationY>
+        <defaultConnector>
+            <targetReference>PMC_SS_CreateOpportunityLineItemsRemoteAction</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfDifferentialOrManualOpportunityDecision_ManualOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ManualChoice</leftValueReference>
+                <operator>WasSelected</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuantityInputScreen</targetReference>
+            </connector>
+            <label>Manual Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if more records are remaining in variable</description>
+        <name>CheckIfMoreRecordsDecision</name>
+        <label>Check If More Records Decision</label>
+        <locationX>974</locationX>
+        <locationY>1274</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductSchedulesGet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfMoreRecordsDecision_YesOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strSelectedIds</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AddtoCollectionAssignment</targetReference>
+            </connector>
+            <label>Yes Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Product selected</description>
+        <name>CheckIfProductSelectedDecision</name>
+        <label>Check if Product Selected Decision</label>
+        <locationX>2192</locationX>
+        <locationY>5252</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductsSelectedForOpportunityLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfProductSelectedDecision_SelectedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstProductIds</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>SalesAgreementProductsSelectedForOpportunityLoop.ProductId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LoopThroughQuantities</targetReference>
+            </connector>
+            <label>Selected Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Display Terms for Differential Opportunity Creation if user selected differential option</description>
+        <name>DisplayTermsDecision</name>
+        <label>Display Terms Decision</label>
+        <locationX>974</locationX>
+        <locationY>758</locationY>
+        <defaultConnector>
+            <targetReference>TermsScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>DisplayTermsDecision_ManualOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ManualChoice</leftValueReference>
+                <operator>WasSelected</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ProductSelectionScreen</targetReference>
+            </connector>
+            <label>Manual Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check output of Apex action</description>
+        <name>OutputCheckDecision</name>
+        <label>Output Check Decision</label>
+        <locationX>1898</locationX>
+        <locationY>6218</locationY>
+        <defaultConnector>
+            <targetReference>SuccessScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OutputCheckDecision_FailureOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strMessage</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Failed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <isGoTo>true</isGoTo>
+                <targetReference>ErrorLogCreate</targetReference>
+            </connector>
+            <label>Failure Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Product selected</description>
+        <name>ProductSelectedDecision</name>
+        <label>Product Selected Decision</label>
+        <locationX>2250</locationX>
+        <locationY>3380</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductsSelectedLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ProductSelectedDecision_SelectedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>lstProductIds</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>SalesAgreementProductsSelectedLoop.ProductId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SelectedSalesAgreementProductAssignment</targetReference>
+            </connector>
+            <label>Selected Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Quantity count equals Selected Product count</description>
+        <name>QuantityCountEqualsSelectedProductCountDecision</name>
+        <label>Quantity count equals Selected Product count Decision</label>
+        <locationX>1536</locationX>
+        <locationY>5036</locationY>
+        <defaultConnector>
+            <targetReference>SalesAgreementProductsSelectedForOpportunityLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>QuantityCountEqualsSelectedProductCountDecision_NotEqualOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>intCountOfSelectedProducts</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>intCountOfQuantityArray</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>OpportunityCreateRollback</targetReference>
+            </connector>
+            <label>Not Equal Outcome</label>
+        </rules>
+    </decisions>
+    <description>Generate differential opportunity</description>
+    <dynamicChoiceSets>
+        <description>Store Products from Sales Agreement</description>
+        <name>ProductsMultiPicklist</name>
+        <collectionReference>SalesAgreementProductsGet</collectionReference>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <object>SalesAgreementProduct</object>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <description>Get Current Date</description>
+        <name>datCurrentDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <description>Get first Id</description>
+        <name>strFirstIdFormula</name>
+        <dataType>String</dataType>
+        <expression>TRIM(LEFT({!strSelectedIds}, FIND(&quot;;&quot;,{!strSelectedIds})-1))</expression>
+    </formulas>
+    <formulas>
+        <description>Opportunity Record Link</description>
+        <name>strLinkFormula</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_510}, FIND( &apos;/services&apos;,
+    {!$Api.Enterprise_Server_URL_510}))  &amp; {!strOpportunityId}</expression>
+    </formulas>
+    <formulas>
+        <description>Remove first id</description>
+        <name>strRemoveFirstIdFormula</name>
+        <dataType>String</dataType>
+        <expression>TRIM(SUBSTITUTE({!strSelectedIds},{!strFirstIdFormula}+&quot;;&quot;,&quot;&quot;))</expression>
+    </formulas>
+    <formulas>
+        <description>Get Id of current user</description>
+        <name>strUserIdFormula</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Id}</expression>
+    </formulas>
+    <interviewLabel>PMC_SS_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Differential Opportunity Flow</label>
+    <loops>
+        <description>Loop through entered quantities</description>
+        <name>LoopThroughQuantities</name>
+        <label>Loop through Quantities</label>
+        <locationX>2084</locationX>
+        <locationY>5360</locationY>
+        <collectionReference>lstQuantity</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AssignValuesToOpportunityLineItemsAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>SalesAgreementProductsSelectedForOpportunityLoop</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through Opportunities</description>
+        <name>OpportunitiesLoop</name>
+        <label>Opportunities Loop</label>
+        <locationX>1898</locationX>
+        <locationY>2972</locationY>
+        <collectionReference>OpportunityGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>OpportunityCollectionAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>SalesAgreementProductsSelectedLoop</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through the products</description>
+        <name>ProductLoop</name>
+        <label>Product Loop</label>
+        <locationX>1898</locationX>
+        <locationY>1490</locationY>
+        <collectionReference>lstRecordId</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>ScheduleLoop</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>OpportunityDetailScreen</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through Sales Agreement Products</description>
+        <name>SalesAgreementProductsLoop</name>
+        <label>Sales Agreement Products Loop</label>
+        <locationX>974</locationX>
+        <locationY>350</locationY>
+        <collectionReference>SalesAgreementProductsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>ProductCollectionAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>DifferentialManualChoiceScreen</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through Sales Agreement Products</description>
+        <name>SalesAgreementProductsSelectedForOpportunityLoop</name>
+        <label>Sales Agreement Products Selected for Opportunity Loop</label>
+        <locationX>1908</locationX>
+        <locationY>5144</locationY>
+        <collectionReference>SalesAgreementProductsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckIfProductSelectedDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>OpportunityLineItemCreate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through Sales Agreement Products</description>
+        <name>SalesAgreementProductsSelectedLoop</name>
+        <label>Sales Agreement Products Selected Loop</label>
+        <locationX>1898</locationX>
+        <locationY>3272</locationY>
+        <collectionReference>SalesAgreementProductsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>ProductSelectedDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>DifferentialOpportunityValuesAssignment</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop through Sales Agreement Product Schedules</description>
+        <name>ScheduleLoop</name>
+        <label>Schedule Loop</label>
+        <locationX>2734</locationX>
+        <locationY>1598</locationY>
+        <collectionReference>SalesAgreementProductSchedulesGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckIfCurrentScheduleDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ProductLoop</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Create an Error Log record when there is a flow error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>2524</locationX>
+        <locationY>4604</locationY>
+        <connector>
+            <targetReference>FailureScreen</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Create Differential Opportunity</description>
+        <name>OpportunityCreate</name>
+        <label>Opportunity Create</label>
+        <locationX>1898</locationX>
+        <locationY>4280</locationY>
+        <connector>
+            <targetReference>OpportunityIdAssignment</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>objOpportunity</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <description>Create Opportunity Line Items</description>
+        <name>OpportunityLineItemCreate</name>
+        <label>Opportunity Line Item Create</label>
+        <locationX>1536</locationX>
+        <locationY>5978</locationY>
+        <connector>
+            <targetReference>OutputCheckDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>OppLineItemstobecreated</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get Opportunity Records</description>
+        <name>OpportunityGet</name>
+        <label>Opportunity Get</label>
+        <locationX>1898</locationX>
+        <locationY>2864</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>OpportunitiesLoop</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_SS_SalesAgreement__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CloseDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>datEndDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CloseDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>datStartDate</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Opportunity Line Items</description>
+        <name>OpportunityLineItemGet</name>
+        <label>Opportunity Line Item Get</label>
+        <locationX>1898</locationX>
+        <locationY>4496</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckIfDifferentialOrManualOpportunityDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstOpportunities</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Product2Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstProductIds</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Sales Agreement Product Schedule Records</description>
+        <name>SalesAgreementProductSchedulesGet</name>
+        <label>Sales Agreement Product Schedules Get</label>
+        <locationX>1898</locationX>
+        <locationY>1382</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ProductLoop</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SalesAgreementProductId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstProducts</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SalesAgreementProductId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstRecordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>SalesAgreementProductSchedule</object>
+        <sortField>EndDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Sales Agreement Product Records</description>
+        <name>SalesAgreementProductsGet</name>
+        <label>Sales Agreement Products Get</label>
+        <locationX>974</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SalesAgreementProductsLoop</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SalesAgreementId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>SalesAgreementProduct</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordRollbacks>
+        <description>Rollback created Opportunity record</description>
+        <name>OpportunityCreateRollback</name>
+        <label>Opportunity Create Rollback</label>
+        <locationX>1164</locationX>
+        <locationY>5144</locationY>
+        <connector>
+            <targetReference>OpportunityLineItemCreate</targetReference>
+        </connector>
+    </recordRollbacks>
+    <screens>
+        <description>Display terms for differential opportunity creation</description>
+        <name>DifferentialManualChoiceScreen</name>
+        <label>Differential Manual Choice Screen</label>
+        <locationX>974</locationX>
+        <locationY>650</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Cancel</backButtonLabel>
+        <connector>
+            <targetReference>DisplayTermsDecision</targetReference>
+        </connector>
+        <fields>
+            <name>DifferentialManualOpportunityLabel</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_DifferentialManualOpportunitySelection}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>strManualDifferentialOpportunityRadioButtons</name>
+            <choiceReferences>DifferentialChoice</choiceReferences>
+            <choiceReferences>ManualChoice</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Choose Manual or Differential Opportunity</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Show success message</description>
+        <name>FailureScreen</name>
+        <label>Failure Screen</label>
+        <locationX>2524</locationX>
+        <locationY>4712</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>FailureLabel</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_DifferentialOpportunityFailureMessage} {!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Allow user to select opportunity details</description>
+        <name>OpportunityDetailScreen</name>
+        <label>Opportunity Detail Screen</label>
+        <locationX>1898</locationX>
+        <locationY>2756</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>OpportunityGet</targetReference>
+        </connector>
+        <fields>
+            <fieldType>ObjectProvided</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <objectFieldReference>objOpportunity.Name</objectFieldReference>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>CloseDate</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>datEndDate</elementReference>
+            </defaultValue>
+            <fieldText>Close Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Allow user to select products</description>
+        <name>ProductSelectionScreen</name>
+        <label>Product Selection Screen</label>
+        <locationX>974</locationX>
+        <locationY>1058</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>ProductAssignment</targetReference>
+        </connector>
+        <fields>
+            <name>ChooseProductsMultiCheckboxes</name>
+            <choiceReferences>ProductsMultiPicklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Choose Products</fieldText>
+            <fieldType>MultiSelectCheckboxes</fieldType>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Allow user to enter quantities for selected products</description>
+        <name>QuantityInputScreen</name>
+        <label>Quantity Input Screen</label>
+        <locationX>1536</locationX>
+        <locationY>4712</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CountofSelectedProductAssignment</targetReference>
+        </connector>
+        <fields>
+            <name>PMC_SS_ProductQuantityLWC</name>
+            <dataTypeMappings>
+                <typeName>PT</typeName>
+                <typeValue>SalesAgreementProduct</typeValue>
+            </dataTypeMappings>
+            <extensionName>c:pmc_ss_productQuantityLWC</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>lstRecords</name>
+                <value>
+                    <elementReference>SalesAgreementProductCollection</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>lstQuantity</assignToReference>
+                <name>lstValue</name>
+            </outputParameters>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Show success message</description>
+        <name>SuccessScreen</name>
+        <label>Success Screen</label>
+        <locationX>2030</locationX>
+        <locationY>6326</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SuccessLabel</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_DifferentialOpportunitySuccessMessageStart} {!objOpportunity.Name} {!$Label.PMC_SS_DifferentialOpportunitySuccessMessageEnd} &lt;a href=&quot;{!strLinkFormula}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!objOpportunity.Name}&lt;/a&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display terms for differential opportunity creation</description>
+        <name>TermsScreen</name>
+        <label>Terms Screen</label>
+        <locationX>1062</locationX>
+        <locationY>866</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Cancel</backButtonLabel>
+        <connector>
+            <targetReference>ProductSelectionScreen</targetReference>
+        </connector>
+        <fields>
+            <name>TermsLabel</name>
+            <fieldText>&lt;p&gt;{!$Label.PMC_SS_DifferentialOpportunityTerms}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Store End Date</description>
+        <name>datEndDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Start Date</description>
+        <name>datStartDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store count of array</description>
+        <name>intCountOfQuantityArray</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Store count of selected products</description>
+        <name>intCountOfSelectedProducts</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Store Opportunities</description>
+        <name>lstOpportunities</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Product Ids</description>
+        <name>lstProductIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Products</description>
+        <name>lstProducts</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store quantities of products</description>
+        <name>lstQuantity</name>
+        <dataType>Number</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Store Record Ids</description>
+        <name>lstRecordId</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Sales Agreement Products</description>
+        <name>lstSalesAgreementProducts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProduct</objectType>
+    </variables>
+    <variables>
+        <description>Store Sales Agreement Product Schedules</description>
+        <name>lstSalesAgreementProductSchedules</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProductSchedule</objectType>
+    </variables>
+    <variables>
+        <name>lstSalesAreaIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>objOppLineItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <description>Store Opportunity</description>
+        <name>objOpportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>Store Sales Agreement Product</description>
+        <name>objSalesAgreementProduct</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProduct</objectType>
+    </variables>
+    <variables>
+        <description>Store Sales Agreement Product Schedule Record</description>
+        <name>objSalesAgreementProductSchedule</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProductSchedule</objectType>
+    </variables>
+    <variables>
+        <description>Store Sales Area</description>
+        <name>objSalesArea</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>PMC_SS_SalesArea__c</objectType>
+    </variables>
+    <variables>
+        <name>OppLineItemstobecreated</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OpportunityLineItem</objectType>
+    </variables>
+    <variables>
+        <description>Store record id of triggering record</description>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreement</objectType>
+    </variables>
+    <variables>
+        <name>SalesAgreementProductCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProduct</objectType>
+    </variables>
+    <variables>
+        <description>Store Product Families</description>
+        <name>strFamily</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Apex output message</description>
+        <name>strMessage</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Opportunity Id</description>
+        <name>strOpportunityId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Product Family</description>
+        <name>strProductFamily</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Selected Ids</description>
+        <name>strSelectedIds</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

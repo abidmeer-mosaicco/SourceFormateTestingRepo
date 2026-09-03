@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ExpirationDuration__c</fullName>
+    <description>This field populates the duration this quote will expire and is populated only when the Quote status!=Accpeted or rejected</description>
+    <inlineHelpText>When the Quote status is not accepted or rejected this field indicates the duration with in which the quote will be expired</inlineHelpText>
+    <label>Expiration Duration</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Time</type>
+</CustomField>

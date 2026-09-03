@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pull_Reqeuest</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT( copado__Pull_Requests_Approved__c),
+    OR(
+         copado__Promote_Change__c,
+         copado__Promote_and_Deploy__c 
+    )
+)</errorConditionFormula>
+    <errorMessage>Pull Request must be approved before selecting Promote or Deploy.</errorMessage>
+</ValidationRule>

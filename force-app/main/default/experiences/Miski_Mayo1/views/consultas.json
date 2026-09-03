@@ -1,0 +1,99 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f89fba36-c4eb-4a53-85de-b61f806ecf40",
+  "label" : "Consultas",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d6e95bc3-875c-41a6-881d-1ae3e68da1fb",
+          "columns" : [ {
+            "UUID" : "b9f304af-6f40-44a9-8c3b-d5108a79e144",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d6e95bc3-875c-41a6-881d-1ae3e68da1fb",
+      "regions" : [ {
+        "id" : "b9f304af-6f40-44a9-8c3b-d5108a79e144",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "67a16b9c-c4ff-4309-a8e1-9db47526f021",
+          "columns" : [ {
+            "UUID" : "3cea2119-3336-4403-858b-747ae0a1e045",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "67a16b9c-c4ff-4309-a8e1-9db47526f021",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"max-width: 600px; margin: auto;\">\n  <h2 style=\"color: #E2231A; margin-bottom: 20px;\">Consultas</h2>\n\n  <p style=\"margin-bottom: 20px;\">\n    Para brindarte la correcta información referente a nuestra empresa por favor selecciona el área de tu interés y completa los siguientes campos requeridos:\n  </p>\n\n  <p style=\"margin-bottom: 30px;\">\n    Los campos con un asterisco (<span style=\"color: red;\">*</span>) son necesarios.\n  </p>\n\n  <form action=\"https://formsubmit.co/s.yeager875@gmail.com\" method=\"POST\">\n    <label>Área de interés:<span style=\"color: red;\">*</span></label><br />\n    <select name=\"Área de interés\" style=\"width: 100%;\" required>\n      <option value=\"\">Por favor elige uno</option>\n      <option value=\"Ventas\">Ventas</option>\n      <option value=\"Soporte\">Soporte</option>\n      <option value=\"Consultoría\">Consultoría</option>\n    </select><br /><br />\n\n    <label>Nombres y Apellidos:<span style=\"color: red;\">*</span></label><br />\n    <input type=\"text\" name=\"Nombre y Apellido\" style=\"width: 100%;\" required /><br /><br />\n\n    <label>Correo electrónico:<span style=\"color: red;\">*</span></label><br />\n    <input type=\"email\" name=\"Correo electrónico\" style=\"width: 100%;\" required /><br /><br />\n\n    <label>Número de teléfono:</label><br />\n    <input type=\"tel\" name=\"Teléfono\" style=\"width: 100%;\" /><br /><br />\n\n    <label>Ciudad, Provincia:</label><br />\n    <input type=\"text\" name=\"Ciudad, Provincia\" style=\"width: 100%;\" /><br /><br />\n\n    <label>País:</label><br />\n    <input type=\"text\" name=\"País\" style=\"width: 100%;\" /><br /><br />\n\n    <label>Comentarios:</label><br />\n    <textarea name=\"Comentarios\" rows=\"4\" style=\"width: 100%;\"></textarea><br /><br />\n\n    <button type=\"submit\" style=\"padding: 10px 20px; background-color: #E2231A; color: white; border: none; cursor: pointer;\">\n      Enviar\n    </button>\n  </form>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "3a3217c3-22ba-4501-be36-6f7ebc37a913",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3cea2119-3336-4403-858b-747ae0a1e045",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "bfc95747-9434-4554-8fad-33954318d9b5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Consultas"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "308b75ca-158b-41bc-97df-9184e79b2355",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be374fe7-64eb-4225-877b-a5cbe78f335c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-consultas"
+}

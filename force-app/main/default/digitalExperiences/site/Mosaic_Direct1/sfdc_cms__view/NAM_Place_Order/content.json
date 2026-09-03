@@ -1,0 +1,79 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "NAM Place Order",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"8ddeb572-a0c9-4ea3-9667-14b164cf4ede\",\"columns\":[{\"UUID\":\"3a698e30-4bd4-426c-8854-711f4d64748f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "accountNamePath" : "",
+                "baseWhereClause" : "",
+                "dateFilterFieldName" : "StartDate",
+                "dxpStyle" : { },
+                "endDateFilterFieldName" : "EndDate",
+                "manualFieldApiNames" : "[]",
+                "manualFieldLabelNames" : "[]",
+                "objectApiName" : "SBQQ__Quote__c",
+                "pageSize" : 50
+              },
+              "definition" : "c:mosaicDirectListPlace",
+              "id" : "146b8240-90e8-4b6d-bfd2-d8389518c256",
+              "type" : "component"
+            } ],
+            "id" : "3a698e30-4bd4-426c-8854-711f4d64748f",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "8ddeb572-a0c9-4ea3-9667-14b164cf4ede",
+          "type" : "component"
+        } ],
+        "id" : "8a7ef8ec-47ac-486a-9cd7-9ac64e532164",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "NAM Place Order",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "a799da0b-b6db-4db9-874d-9846878ca4d6",
+          "type" : "component"
+        } ],
+        "id" : "db6363b8-2a40-4d07-ad5f-552d9b60a793",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "bcc289a2-443b-44d4-beb4-a913a2b2430d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "boyHQnfOS2WtkjDrgBWLvYjS4Toy9f",
+    "viewType" : "custom-placeorder"
+  },
+  "urlName" : "nam-place-order"
+}

@@ -1,0 +1,190 @@
+<template>
+  <a href="#maincontent" class="skip slds-show_large" tabindex=0>{labels.pmc_header_skipToContent}</a>
+
+  <template if:false={isGuestUser}>
+    <div
+      class="slds-grid slds-gutters_direct slds-grid_vertical-align-center slds-grid_align-spread slds-p-left_none slds-p-right_none slds-show_large header-container">
+      <div class="slds-col slds-size_2-of-12 slds-grid slds-grid_align-spread">
+        <template lwc:if={iconUrlObj.mosaicLogoUrl}>
+          <a href={basePath}>
+            <img src={iconUrlObj.mosaicLogoUrl} alt={labels.pmc_header_mosaicLogoText} class="brand-logo" />
+          </a>
+        </template>
+      </div>
+      <div class="slds-col slds-size_4-of-12">
+        <c-pmc_dh_search-bar></c-pmc_dh_search-bar>
+      </div>
+      <div
+        class="slds-col slds-size_6-of-12 slds-grid slds-gutters_direct slds-grid_vertical-align-center slds-grid_align-end">
+        <template if:true={showNutrivantagensButton}>
+          <template if:false={isSeedzError}>
+            <div class="slds-col slds-grid slds-grid_vertical-align-center slds-grid_align-center" tabindex="0"
+              if:false={showSeedzPoints}>
+              <a class="vantagens-wrapper" href={nutrivantagensData.strCTALink} target="_blank">
+                <svg width="16" height="16">
+                  <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                </svg>
+                <lightning-formatted-text value={labels.pmc_header_nutivantagens}
+                  class="vantagens-text"></lightning-formatted-text>
+              </a>
+            </div>
+            <div class="slds-col slds-grid slds-grid_vertical-align-center slds-grid_align-center" tabindex="0"
+              if:true={showSeedzPoints}>
+              <a class="vantagens-wrapper seedz-wrapper" href={nutrivantagensData.strCTALink} target="_blank">
+                <svg width="16" height="16">
+                  <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                </svg>
+                <lightning-formatted-rich-text value={labels.pmc_header_nutrivantagensPoints}
+                  class="vantagens-text"></lightning-formatted-rich-text>
+              </a>
+            </div>
+          </template>
+          <template if:true={isSeedzError}>
+            <template if:true={isSeedzSpinner}>
+              <div class="seedz-spinner">
+                <c-pmc_dh_spinner is-spinner size="small"> </c-pmc_dh_spinner>
+              </div>
+            </template>
+            <div class="slds-col slds-grid slds-grid_vertical-align-center slds-grid_align-center" tabindex="0">
+              <div class="seedz-error-wrapper">
+                <div class="vantagens-icon-wrapper">
+                  <svg width="16" height="16">
+                    <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                  </svg>
+                  <div class="text-medium-normal text-color-dark-primary-green">
+                    {labels.pmc_header_error}
+                  </div>
+                </div>
+                <div>
+                  <span class="text-medium-normal text-color-dark-primary-green">
+                    {labels.pmc_header_click}&nbsp;
+                    <template if:false={isRefreshVantagensDisabled}>
+                      <a onclick={handleClickRefreshVantagens}>{labels.pmc_header_here}</a>
+                    </template>
+                    <template if:true={isRefreshVantagensDisabled}>
+                      <a class="refresh-vantagens-disabled">{labels.pmc_header_here}</a>
+                    </template>
+                    &nbsp;{labels.pmc_header_toRefresh}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </template>
+        </template>
+        <template if:true={headerDetails.langPrefeWrapper}>
+          <div class="slds-col slds-grid slds-grid_vertical-align-center">
+            <c-pmc_dh_language-dropdown lang-pref-data={headerDetails.langPrefeWrapper}></c-pmc_dh_language-dropdown>
+          </div>
+        </template>
+        <div class="slds-col slds-p-left_none">
+          <c-pmc_dh_account-details-menu user-account-options={headerDetails.myAccountNavItems} lang-keys={headerDetails.langPrefeWrapper.lstUrlLanguage}
+            user-data={headerDetails.userData}></c-pmc_dh_account-details-menu>
+        </div>
+        <div class="header-icons cart-icon" if:true={headerDetails.boolIsCart}>
+          <c-pmc_dh_user-mini-cart-modal></c-pmc_dh_user-mini-cart-modal>
+        </div>
+      </div>
+    </div>
+    <div class="slds-grid slds-wrap page-container slds-hide_large">
+      <div class="slds-col slds-grow-none">
+        <template lwc:if={iconUrlObj.mosaicLogoUrl}>
+          <a href={basePath}>
+            <img src={iconUrlObj.mosaicLogoUrl} alt={labels.pmc_header_mosaicLogoText} tabindex="0"
+              class="brand-logo" />
+          </a>
+        </template>
+      </div>
+      <div class="slds-col slds-grow-none slds-col_bump-left slds-grid">
+        <div class="mobile-icon">
+          <img src={iconUrlObj.searchIconUrl} alt={labels.pmc_header_search} class="clickable-icon"
+            onclick={notificationClickHandler} />
+        </div>
+        <div class="mobile-icon cart-icon" if:true={headerDetails.boolIsCart}>
+          <c-pmc_dh_user-mini-cart-modal></c-pmc_dh_user-mini-cart-modal>
+        </div>
+        <div class="mobile-icon">
+          <img src={iconUrlObj.hamburgerUrl} alt={labels.pmc_dh_hamburger} class="clickable-icon"
+            onclick={hamburgerClickHandler} />
+        </div>
+      </div>
+      <div class="slds-col slds-size_12-of-12 search-bar-mobile slds-hide">
+        <c-pmc_dh_search-bar></c-pmc_dh_search-bar>
+      </div>
+    </div>
+    <div class="slds-grid slds-grid_align-center">
+      <nav class="mobile-nav slds-show_large" onclick={ignore}>
+        <template if:true={showNutrivantagensButton}>
+          <template if:false={isSeedzError}>
+            <div class="mosaic-width-fit-content mosaic-m-r-18p slds-hide_large" if:false={showSeedzPoints}>
+              <a class="vantagens-wrapper" href={nutrivantagensData.strCTALink} target="_blank">
+                <svg width="16" height="16">
+                  <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                </svg>
+                <lightning-formatted-text value={labels.pmc_header_nutivantagens}
+                  class="vantagens-text"></lightning-formatted-text>
+              </a>
+            </div>
+            <div class="mosaic-width-fit-content mosaic-m-r-18p slds-hide_large" if:true={showSeedzPoints}>
+              <a class="vantagens-wrapper seedz-wrapper" href={nutrivantagensData.strCTALink} target="_blank">
+                <svg width="16" height="16">
+                  <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                </svg>
+                <lightning-formatted-rich-text value={labels.pmc_header_nutrivantagensPoints}
+                  class="vantagens-text"></lightning-formatted-rich-text>
+              </a>
+            </div>
+          </template>
+          <template if:true={isSeedzError}>
+            <div class="mosaic-width-fit-content mosaic-m-r-18p slds-hide_large">
+              <template if:true={isSeedzSpinner}>
+                <div class="seedz-spinner">
+                  <c-pmc_dh_spinner is-spinner size="small"> </c-pmc_dh_spinner>
+                </div>
+              </template>
+            </div>
+            <div class="mosaic-width-fit-content mosaic-m-r-18p slds-hide_large">
+              <div class="seedz-error-wrapper">
+                <div class="vantagens-icon-wrapper">
+                  <svg width="16" height="16">
+                    <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+                  </svg>
+                  <div class="text-medium-normal text-color-dark-primary-green">
+                    {labels.pmc_header_error}
+                  </div>
+                </div>
+                <div>
+                  <span class="text-medium-normal text-color-dark-primary-green">
+                    {labels.pmc_header_click}&nbsp;
+                    <template if:false={isRefreshVantagensDisabled}>
+                      <a onclick={handleClickRefreshVantagens}>{labels.pmc_header_here}</a>
+                    </template>
+                    <template if:true={isRefreshVantagensDisabled}>
+                      <a class="refresh-vantagens-disabled">{labels.pmc_header_here}</a>
+                    </template>
+                    &nbsp;{labels.pmc_header_toRefresh}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </template>
+        </template>
+        <c-pmc_dh_header-menu-items main-menu-list={headerDetails.navigationMenuItems} lang-keys={headerDetails.langPrefeWrapper.lstUrlLanguage}
+          onmenuitemclicked={hamburgerClickHandler}></c-pmc_dh_header-menu-items>
+        <div class="slds-hide_large">
+          <c-pmc_dh_account-details-menu user-account-options={headerDetails.myAccountNavItems} lang-keys={headerDetails.langPrefeWrapper.lstUrlLanguage}
+            user-data={headerDetails.userData}></c-pmc_dh_account-details-menu>
+          <template if:true={headerDetails.langPrefeWrapper}>
+            <c-pmc_dh_language-dropdown lang-pref-data={headerDetails.langPrefeWrapper}></c-pmc_dh_language-dropdown>
+          </template>
+        </div>
+      </nav>
+    </div>
+  </template>
+  
+  <a class="main-content slds-assistive-text" href="javascript:void(0);"
+    id="maincontent">{labels.pmc_header_skipToContent}</a>
+
+  <template if:true={isSpinner}>
+    <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+  </template>
+</template>

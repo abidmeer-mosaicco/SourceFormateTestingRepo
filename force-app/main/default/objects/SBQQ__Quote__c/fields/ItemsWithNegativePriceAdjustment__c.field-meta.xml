@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ItemsWithNegativePriceAdjustment__c</fullName>
+    <description>Quantity of line items that have a negative price adjustment value.</description>
+    <inlineHelpText>Quantity of line items that have a negative price adjustment value.</inlineHelpText>
+    <label>Items With Negative Price Adjustment</label>
+    <summaryFilterItems>
+        <field>SBQQ__QuoteLine__c.PMC_CPQ_Discount__c</field>
+        <operation>lessThan</operation>
+        <value>0</value>
+    </summaryFilterItems>
+    <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

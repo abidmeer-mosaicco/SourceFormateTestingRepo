@@ -1,0 +1,15 @@
+<template>
+  <nav class="stepper__wrapper slds-m-top--x-large">
+    <ul class="stepper">
+      <template for:each={stepClasses} for:item="item" for:index="index">
+        <li key={item.title} class={item.class} data-status={item.status}>
+          <span class="stepper_text">{item.title}</span>
+          <span class="stepper_icon">
+            <lightning-icon icon-name="utility:check" size="x-small" class="slds-icon" alternative-text="">
+            </lightning-icon>
+          </span>
+        </li>
+      </template>
+    </ul>
+  </nav>
+</template>

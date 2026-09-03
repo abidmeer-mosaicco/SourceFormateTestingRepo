@@ -1,0 +1,24 @@
+.icon-button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.icon-button img {
+  cursor: pointer;
+}
+
+.btn-tooltip {
+  position: absolute;
+  top: -44px;
+  background: var(--primary-green);
+}
+
+.btn-tooltip .tooltip-text {
+  font-size: var(--x-small-font-size);
+}
+
+.country-phone-user-fields-wrapper {
+  padding: 0;
+  align-items: baseline;
+}

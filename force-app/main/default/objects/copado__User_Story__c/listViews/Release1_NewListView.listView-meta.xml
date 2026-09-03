@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release1_NewListView</fullName>
+    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6</booleanFilter>
+    <columns>NAME</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>contains</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>contains</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>4</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>5</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>6</value>
+    </filters>
+    <label>PMC_Mosaic_Salesforce_Release1</label>
+</ListView>

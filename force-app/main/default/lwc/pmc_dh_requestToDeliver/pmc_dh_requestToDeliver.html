@@ -1,0 +1,33 @@
+<template>
+  <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+
+  <h3 class="slds-m-bottom_medium slds-m-top_medium">
+    {labels.pmc_requestToDeliverShippingInformation_requestToDeliver}
+  </h3>
+
+  <template lwc:if={pageLoaded}>
+    <div class="slds-m-top_x-large">
+      <c-pmc_dh_quote-checkout-steps-tracker steps-data={stepsData}>
+      </c-pmc_dh_quote-checkout-steps-tracker>
+    </div>
+
+    <template if:true={rtdFlowHandler.isShipmentInfo}>
+      <c-pmc_dh_request-to-deliver-shipping-information onbuttonclick={onClickHandler} flag={backButtonTriggered}>
+      </c-pmc_dh_request-to-deliver-shipping-information>
+    </template>
+
+    <template if:true={rtdFlowHandler.isOrderReview}>
+      <c-pmc_dh_request-to-deliver-order-review shipment-info-obj={shipmentInfoObj} ship-to-obj={shipToObj} picklist-obj={picklistObj} onbuttonclick={onClickHandler}>
+      </c-pmc_dh_request-to-deliver-order-review>
+    </template>
+
+    <template if:true={rtdFlowHandler.isOrderSubmitted}>
+      <c-pmc_dh_request-to-deliver-order-submitted order-obj={orderObj}>
+      </c-pmc_dh_request-to-deliver-order-submitted>
+    </template>
+  </template>
+
+  <template if:false={pageLoaded}>
+    <c-pmc_dh_spinner is-spinner></c-pmc_dh_spinner>
+  </template>
+</template>

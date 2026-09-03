@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>false</active>
+    <description>This entitlement process includes functionality that was built out by Deloitte - we will only be utilizing this process for North/South America going forward</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>false</isVersionDefault>
+    <milestones>
+        <businessHours>NA Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND (3 OR 4 OR 5 OR 6 OR 7) AND 8 AND 9</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Internal, Invoice, Mosaic Direct, Other, Product, Shipping, Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Account Issues, Amendment, Article Request, Call by Date, Cancellation, Change to loading priorities, Consignment, Contract Validity Dates, Credit Request, Data Entry</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Delivery Delay, Demurrage, Destination Change, Diversion, Document Request, Driver Verification/Change, Equipment Failure, Exchange Closing, Export prioritization, Financial Solution</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>General Order Updates, Incorrect Destination, Incorrect Label, Incorrect Product, Incorrect UOM, IncoTerms, IntelliTrans, Invoice Adjustments, MDM Verification, Missing Cargo</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Mode of transportation, Order Date, Origin Change, Other, Payer Change, Payment Terms, Planning, Product Concern, Product Request, Rebate</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Reclaim rates (mechanical breakdown/lower than typical rates), Route / Directions, Ship Date / Scheduling, Stock Out / Plant Outage, Unblock Contract, Volume Change, Warehouse, Weight Discrepancy</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Resolution</milestoneName>
+        <minutesToComplete>1620</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_ResolutionMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_ResolutionMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-810</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_ResolutionMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>NA Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4 AND 5</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Mosaic Direct</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Account Issues, Other</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Contact</milestoneName>
+        <minutesToComplete>60</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>NA Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND ((2 AND 4) OR (3 OR 5)) AND 6 AND 7</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Mosaic Direct</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Document Request</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Contact</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-120</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>NA Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND (3 OR 4) AND 5 AND 6</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Internal, Invoice, Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Amendment, Article Request, Call by Date, Cancellation, Consignment, Credit Request, Data Entry, Financial Solution, Invoice Adjustments, MDM Verification, Planning, Stock Out / Plant Outage</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Contract Validity Dates, Destination Change, Exchange Closing, General Order Updates, IncoTerms, Order Date, Origin Change, Payer Change, Payment Terms, Rebate, Unblock Contract, Volume Change</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Contact</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-120</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>NA Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND (2 OR 5) AND (3 OR 4) AND 6 AND 7</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Change to loading priorities, Delivery Delay, Demurrage, Diversion, Driver Verification/Change, Equipment Failure, Incorrect Label, Incorrect Product, Product Concern, Product Request, Weight Discrepancy</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Shipping</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Product</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Export prioritization, Incorrect Destination, Incorrect UOM, IntelliTrans, Missing Cargo, Mode of transportation, Reclaim rates (mechanical breakdown/lower than typical rates), Route / Directions, Ship Date / Scheduling, Warehouse</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>notEqual</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Contact</milestoneName>
+        <minutesToComplete>120</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-60</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND (3 OR 4) AND 5</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Contact</milestoneName>
+        <minutesToComplete>240</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND (4 OR 5) AND (6 AND 7)</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Unblock Contract</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Issue_Sub_Reason__c</field>
+            <operation>equals</operation>
+            <value>Truck at Factory</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 2 hours</milestoneName>
+        <minutesToComplete>120</minutesToComplete>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND (4 OR 5) AND (6 OR (7 AND 8) OR (9 AND 10))</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Include Script CIF, Issue of Advance Invoicing (FA), Sales order changes</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Sales Returns (SADM)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Issue_Sub_Reason__c</field>
+            <operation>equals</operation>
+            <value>Truck at the plant - YES</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Unblock Contract</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Issue_Sub_Reason__c</field>
+            <operation>equals</operation>
+            <value>Replan</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 1 day</milestoneName>
+        <minutesToComplete>480</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-60</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND (4 OR 5) AND (6 OR (7 AND 8) OR (9 AND 10))</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Consignment, Donation Order/Bonus, Deactivation</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Unblock Contract</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Issue_Sub_Reason__c</field>
+            <operation>equals</operation>
+            <value>Booked Sales Block</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Sales Returns (SADM)</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Issue_Sub_Reason__c</field>
+            <operation>equals</operation>
+            <value>Truck at the plant - NO</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 2 days</milestoneName>
+        <minutesToComplete>960</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6)</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Amendment, Cambio Exhange, Credit Note Request, Debit Note Request, Split sales order</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 3 days</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_ResolutionMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_ResolutionMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_ResolutionMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-810</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6)</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Cancellation, Invoice Adjustments, Rebate</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 5 days</milestoneName>
+        <minutesToComplete>2400</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-120</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <businessHours>BR Business Hours</businessHours>
+        <criteriaBooleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6)</criteriaBooleanFilter>
+        <isDisplayedOnLinkedEntity>false</isDisplayedOnLinkedEntity>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Working, Pending, Escalated</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer Service</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Transactions</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.PMC_SS_IssueReason__c</field>
+            <operation>equals</operation>
+            <value>Export Documentation</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Account.BillingCountry</field>
+            <operation>equals</operation>
+            <value>Paraguay</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA - 7 days</milestoneName>
+        <minutesToComplete>3360</minutesToComplete>
+        <successActions>
+            <name>PMC_SS_CaseNearbyMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <successActions>
+            <name>PMC_SS_FirstContactMilestoneCompleted</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneViolated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>PMC_SS_FirstContactMilestoneNearby</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>-120</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>true</useCriteriaStartTime>
+    </milestones>
+    <name>Case Entitlement Process</name>
+    <versionMaster>552DT0000012MZC</versionMaster>
+    <versionNumber>4</versionNumber>
+</EntitlementProcess>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Stories_in_UAT</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Progress__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Team__c</columns>
+    <columns>copado__Status__c</columns>
+    <columns>copado__Project__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Environment__c</field>
+        <operation>equals</operation>
+        <value>UATMain</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2025 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>copado__Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>User Stories in UAT</label>
+</ListView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="objectApiName" type="String" label="Object API Name" description="e.g., Opportunity, OrderItem" required="true" />
+            <property name="filterFieldName" type="String" label="Search Field (API)" description="API field used by the backend for text search" />
+            <property name="dateFilterFieldName" type="String" label="Date Filter Field (From - API)" description="Date field for the 'From' filter" />
+            <property name="endDateFilterFieldName" type="String" label="End Date Filter Field (To - API)" description="Date field for the 'To' filter" />
+            <property name="accountNamePath" type="String" label="Account Name/Id Path" description="Path used for account filtering, e.g., Order.Account.Id or AccountId" />
+            <property name="manualFieldApiNames" type="String" label="Manual Field API Names" description="CSV with API field paths, e.g., Order.OrderNumber, OrderItemNumber, PMC_CPQ_LinePONumber__c" required="true" />
+            <property name="manualFieldLabelNames" type="String" label="Manual Field Labels (CSV)" description="Column labels in the same order as Manual Field API Names, e.g., 'Label 1, Label 2, Label 3'" />
+            <property name="tableType" type="String" label="Report Name/Datatable Type" description="Used to identify table behavior, e.g., In Transit or Documents" />
+            <property name="showDownloadButton" type="Boolean" label="Show Download Button" default="false" />
+            <property name="showTableTitle" type="Boolean" label="Show Table Title" default="true" />
+            <property name="baseWhereClause" type="String" label="Base WHERE (SOQL fragment)" description="Without the word WHERE, e.g., Order.Status = 'Activated'" />
+            <property name="pageSize" type="Integer" label="Page Size" default="50" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_OpportunitySource__c</fullName>
+    <description>This is the source of the Opportunity to indicate where the Opportunity comes from.</description>
+    <label>Opportunity Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Company Inbox</fullName>
+                <default>false</default>
+                <label>Company Inbox</label>
+            </value>
+            <value>
+                <fullName>Cross-Selling - Aftermarket</fullName>
+                <default>false</default>
+                <label>Cross-Selling - Aftermarket</label>
+            </value>
+            <value>
+                <fullName>Cross-Sellin - Rental</fullName>
+                <default>false</default>
+                <label>Cross-Sellin - Rental</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Personal Visit</fullName>
+                <default>false</default>
+                <label>Personal Visit</label>
+            </value>
+            <value>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+                <label>Phone Call</label>
+            </value>
+            <value>
+                <fullName>Public Relation</fullName>
+                <default>false</default>
+                <label>Public Relation</label>
+            </value>
+            <value>
+                <fullName>Recommendation</fullName>
+                <default>false</default>
+                <label>Recommendation</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

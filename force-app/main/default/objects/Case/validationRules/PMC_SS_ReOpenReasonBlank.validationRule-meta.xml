@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReOpenReasonBlank</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+ISCHANGED(Status),
+ISPICKVAL(Status, &apos;Re-Open&apos;),
+ISPICKVAL(PRIORVALUE(Status), &apos;Closed&apos;),
+ISBLANK(TEXT(PMC_SS_ReOpenReason__c))
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_ReOpenReason__c</errorDisplayField>
+    <errorMessage>Re-Open reason is required in order to re-open a Case.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,306 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f6aa9a94-3923-4bef-a757-d427e0e7f7ed",
+  "label" : "News Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9b92ea51-20de-4b89-9fce-88ed70791775",
+          "columns" : [ {
+            "UUID" : "c98d2ecb-9313-4c78-b5a6-20aef9e482bc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9b92ea51-20de-4b89-9fce-88ed70791775",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "ab98b859-d790-4f8d-abbf-0446507c0480",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c98d2ecb-9313-4c78-b5a6-20aef9e482bc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "9f0fa6d5-f791-457e-b85f-8bdee7b6e7ef",
+          "columns" : [ {
+            "UUID" : "a14eaa5a-1f05-47a5-9025-1c80610a8c79",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9f0fa6d5-f791-457e-b85f-8bdee7b6e7ef",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "layoutDefinition" : {
+                "attributes" : {
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "",
+                  "datetimeTextDecoration" : "{\"bold\":true}",
+                  "displayDayOfWeek" : false,
+                  "featuredContent" : "{!CurrentItem.body}",
+                  "featuredImageHeight" : "450",
+                  "featuredImageLayout" : "contain",
+                  "featuredImagePosition" : "center center",
+                  "featuredImageUrl" : "{!CurrentItem.bannerImage.url}",
+                  "featuredImageWidth" : 100,
+                  "featuredVideoAspectRatio" : "16:9",
+                  "featuredVideoHeight" : 450,
+                  "featuredVideoUrl" : "",
+                  "featuredVideoUseAspectRatio" : false,
+                  "footerMetadata1Text" : "",
+                  "footerMetadata2Text" : "",
+                  "footerMetadata3Text" : "",
+                  "footerMetadataFontSize" : "regular",
+                  "footerMetadataTextColor" : "",
+                  "footerMetadataTextDecoration" : "",
+                  "headerMetadata1Text" : "",
+                  "headerMetadata2Text" : "",
+                  "headerMetadata3Text" : "",
+                  "headerMetadataFontSize" : "regular",
+                  "headerMetadataTextColor" : "",
+                  "headerMetadataTextDecoration" : "",
+                  "headerTextAlignment" : "center",
+                  "section1Content" : "",
+                  "section1ImageAlignment" : "center",
+                  "section1ImageBorderColor" : "#ffffff",
+                  "section1ImageBorderStyles" : "",
+                  "section1ImageHeight" : "450",
+                  "section1ImageLayout" : "cover",
+                  "section1ImageOffset" : "medium",
+                  "section1ImagePosition" : "center center",
+                  "section1ImageUrl" : "",
+                  "section1ImageWidth" : 50,
+                  "section1Title" : "",
+                  "section1TitleFontSize" : "regular",
+                  "section1TitleTextColor" : "",
+                  "section1TitleTextDecoration" : "",
+                  "section2Content" : "",
+                  "section2ImageAlignment" : "center",
+                  "section2ImageBorderColor" : "#ffffff",
+                  "section2ImageBorderStyles" : "",
+                  "section2ImageHeight" : "450",
+                  "section2ImageLayout" : "cover",
+                  "section2ImageOffset" : "medium",
+                  "section2ImagePosition" : "center center",
+                  "section2ImageUrl" : "",
+                  "section2ImageWidth" : 50,
+                  "section2Title" : "",
+                  "section2TitleFontSize" : "regular",
+                  "section2TitleTextColor" : "",
+                  "section2TitleTextDecoration" : "",
+                  "showDateTime" : true,
+                  "showFeaturedContent" : true,
+                  "showFeaturedImage" : true,
+                  "showFeaturedSection" : true,
+                  "showFeaturedVideo" : true,
+                  "showFooterMetadata" : false,
+                  "showHeaderMetadata" : true,
+                  "showSection1" : false,
+                  "showSection1Content" : true,
+                  "showSection1Image" : true,
+                  "showSection1Title" : true,
+                  "showSection2" : false,
+                  "showSection2Content" : true,
+                  "showSection2Image" : true,
+                  "showSection2Title" : true,
+                  "showSubTitle" : true,
+                  "showTitle" : true,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "subTitleTextColor" : "",
+                  "subTitleTextDecoration" : "",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "{!CurrentItem.title}",
+                  "titleFontSize" : "medium",
+                  "titleHeadingTag" : "h2",
+                  "titleTextColor" : "rgb(226, 35, 26)",
+                  "titleTextDecoration" : "{\"bold\":true,\"textTransform\":\"none\",\"strike\":false}"
+                },
+                "componentName" : "forceCommunity:detailLayoutWithSections"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContentDetail",
+          "id" : "2b96c20a-d967-438f-849e-60ad1c7b702c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a14eaa5a-1f05-47a5-9025-1c80610a8c79",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 82,
+        "sectionConfig" : {
+          "UUID" : "73f5ff0c-6124-4bc6-a783-00589f33400f",
+          "columns" : [ {
+            "UUID" : "853e4f7d-271c-4f25-b553-7f0bc59adfcb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "fbcb600b-cffa-4fc7-a89f-4ed93306a490",
+            "columnKey" : "29ebf",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "523cd301-2385-468a-b7fe-e3e38349dc03",
+            "columnKey" : "23752",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "a5914cb4-6741-47ca-84fd-35688de1dd05",
+            "columnKey" : "289e9",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f6e769db-8a60-4422-8e78-7b354225d518",
+            "columnKey" : "50db2",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "81a150d7-f6ee-4768-a569-097f8c41c8e5",
+            "columnKey" : "59904",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "73f5ff0c-6124-4bc6-a783-00589f33400f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1",
+            "label" : "REGRESAR",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/notas-de-prensa"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "6f7675d8-20b1-4def-a0a7-a0b8b1e3a6c9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "853e4f7d-271c-4f25-b553-7f0bc59adfcb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "fbcb600b-cffa-4fc7-a89f-4ed93306a490",
+        "regionLabel" : "Column 2",
+        "regionName" : "29ebf",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "523cd301-2385-468a-b7fe-e3e38349dc03",
+        "regionLabel" : "Column 3",
+        "regionName" : "23752",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "a5914cb4-6741-47ca-84fd-35688de1dd05",
+        "regionLabel" : "Column 4",
+        "regionName" : "289e9",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f6e769db-8a60-4422-8e78-7b354225d518",
+        "regionLabel" : "Column 5",
+        "regionName" : "50db2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "81a150d7-f6ee-4768-a569-097f8c41c8e5",
+        "regionLabel" : "Column 6",
+        "regionName" : "59904",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d00942bb-fe6c-48b4-9ef9-9b281958cec2",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Content.title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "47a06f9a-9519-4d96-ba58-ae2d48a2b0ad",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ff3c79f6-80b7-4b31-9748-f3f0b7c33654",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "managed-content-news"
+}

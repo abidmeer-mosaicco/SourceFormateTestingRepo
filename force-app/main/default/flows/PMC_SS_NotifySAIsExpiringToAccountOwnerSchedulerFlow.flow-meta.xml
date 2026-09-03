@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store Account Owner Id</description>
+        <name>NotificationDetailsAssignment</name>
+        <label>Notification Details Assignment</label>
+        <locationX>242</locationX>
+        <locationY>468</locationY>
+        <assignmentItems>
+            <assignToReference>lstRecipientIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Account.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>NotifyAccountOwnerSubFlow</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check if Bypass flow condition enabled for user</description>
+        <name>ConfigurationSettingDecision</name>
+        <label>Configuration Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>SAExpiresIn10DaysDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigurationSettingDecision_BypassNotificationOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Notification Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks if the Sales Agreement expires in 10 days.</description>
+        <name>SAExpiresIn10DaysDecision</name>
+        <label>SA Expires In 10 Days Decision</label>
+        <locationX>374</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SAExpiresIn10DaysDecision_NotifyAccountOwnerOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.EndDate</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>dateAdd10Days</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>NotificationDetailsAssignment</targetReference>
+            </connector>
+            <label>Notify Account Owner Outcome</label>
+        </rules>
+    </decisions>
+    <description>Notify Account Owner on 7:00 AM IST before 10 days of Agreement expiration</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Return date for 10 days from current date.</description>
+        <name>dateAdd10Days</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() +10</expression>
+    </formulas>
+    <formulas>
+        <description>Contains the body of the notification</description>
+        <name>strNotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Your Sales Agreement &apos; + {!$Record.Name} + &apos; is set to expire in 10 days. Please review details around that.&apos;</expression>
+    </formulas>
+    <formulas>
+        <description>Holds the Notification Title</description>
+        <name>strNotificationTitle</name>
+        <dataType>String</dataType>
+        <expression>&apos;Sales Agreement &apos; + {!$Record.Name} + &apos; is expiring in 10 days.&apos;</expression>
+    </formulas>
+    <interviewLabel>PMC SS Notify Accound {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Notify SA Is Expiring To Account Owner Scheduler Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigurationSettingDecision</targetReference>
+        </connector>
+        <object>SalesAgreement</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-06-01</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Sends notification to Account Owner.</description>
+        <name>NotifyAccountOwnerSubFlow</name>
+        <label>Notify Account Owner Sub Flow</label>
+        <locationX>242</locationX>
+        <locationY>576</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>lstRecipientIds</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>strNotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <elementReference>strNotificationTitle</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <description>List of Users to whom the notification has to be sent.</description>
+        <name>lstRecipientIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

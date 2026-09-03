@@ -1,0 +1,81 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "NAM Documents",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"4c7a994d-43eb-437b-ae61-682a055e2a54\",\"columns\":[{\"UUID\":\"f663aab0-61f2-4c8c-84e8-1250c7bd450a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "accountNamePath" : "PMC_CPQ_OrderProduct__r.Order.Account.Name",
+                "baseWhereClause" : "",
+                "dateFilterFieldName" : "PMC_CPQ_ShippedDate__c",
+                "dxpStyle" : { },
+                "endDateFilterFieldName" : "PMC_CPQ_ShippedDate__c",
+                "filterFieldName" : "PMC_CPQ_OrderProduct__r.Order.Account.PMC_SS_SAPCustomerNumber__c",
+                "manualFieldApiNames" : "Id, PMC_CPQ_OrderProduct__r.OrderId, PMC_CPQ_OrderProduct__r.Order.Account.Name, PMC_CPQ_OrderProduct__r.Order.PMC_CPQ_SAPOrderNumber__c, PMC_CPQ_OrderProduct__r.OrderItemNumber__c, PMC_CPQ_OrderProduct__r.SBQQ__Contract__r.SBQQ__Quote__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_LinePONumber__c, PMC_CPQ_ShippedDate__c ,PMC_CPQ_OrderProduct__r.PMC_CPQ_ProductLocation__r.Name, PMC_CPQ_OrderProduct__r.PMC_CPQ_ShipTo__r.PMC_SS_CityState__c, PMC_CPQ_OrderProduct__r.PMC_CPQ_ModeofTransportation__c, Shipment.PMC_CPQ_VehicleID__c",
+                "manualFieldLabelNames" : "Id, OrderId, Account name, Order Number, Order Item, Contract Number,PO Number, Shipment date, Origin, Ship To, MOT, Vehicle ID",
+                "objectApiName" : "ShipmentItem",
+                "pageSize" : 50,
+                "tableType" : "Documents"
+              },
+              "definition" : "c:mosaicDirectList",
+              "id" : "1473023d-50f6-486d-a940-34f8cf413be5",
+              "type" : "component"
+            } ],
+            "id" : "f663aab0-61f2-4c8c-84e8-1250c7bd450a",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4c7a994d-43eb-437b-ae61-682a055e2a54",
+          "type" : "component"
+        } ],
+        "id" : "3badabda-29ab-496b-bb7f-44dc2f75828f",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "NAM Documents",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "16625d1a-42e4-4c4a-924f-ea81fd427548",
+          "type" : "component"
+        } ],
+        "id" : "13eb8263-ddd0-4258-91e9-b614a98fcde1",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "daa36eba-68a4-4988-982b-6b52c4a6211f",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "boyHQnfOS2WtkjDrgBWLvYjS4Toy9f",
+    "viewType" : "custom-documents-1"
+  },
+  "urlName" : "nam-documents"
+}

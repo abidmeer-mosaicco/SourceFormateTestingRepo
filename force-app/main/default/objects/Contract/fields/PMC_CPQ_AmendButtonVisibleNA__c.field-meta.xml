@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_AmendButtonVisibleNA__c</fullName>
+    <formula>AND(
+    ISPICKVAL(SBQQ__Quote__r.PMC_CPQ_Region__c, &apos;North America&apos;),
+   
+    TODAY() &lt; EndDate + 7
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PMC_CPQ_AmendButtonVisibleNA</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

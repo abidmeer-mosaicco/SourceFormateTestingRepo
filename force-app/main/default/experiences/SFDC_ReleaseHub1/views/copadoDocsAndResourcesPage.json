@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "99cd5c5b-4278-42cd-a981-e6ab207ff7ec",
+  "label" : "Copado Docs and Resources Page",
+  "regions" : [ {
+    "id" : "e30de715-2a80-4c3d-90f7-458005a94b3b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:copadoDocumentsAndResources",
+      "id" : "f1da8c0b-d5a6-4d22-b699-63a835b6f566",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3714b69a-567c-4719-a0ee-1b68e1d31939",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cfa4d20e-c9a3-440a-a478-ee63318f41f8",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Copado Docs and Resources Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "149a5e5d-6d04-4a76-a54e-160cf10d8a02",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9e26278c-32c1-4a22-b2f5-c2cfdd6d3699",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-copado-docs-and-resources-page"
+}

@@ -1,0 +1,331 @@
+/* ---------------------------
+   MODAL CONTAINER
+   --------------------------- */
+.add-members-modal .add-members-container {
+  max-width: 74rem; /* ~1180px */
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ---------------------------
+   HEADER + ACTIONS
+   --------------------------- */
+.add-members-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--divider-color, #c9c9c9);
+  padding-bottom: 0.25rem;
+}
+
+.add-members-header .slds-modal__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.add-members-actions {
+  display: inline-flex;
+  gap: 0.5rem;
+
+  /* Button theme overrides */
+  --slds-c-button-brand-color-background: #1589ee;
+  --slds-c-button-brand-color-border: #137cca;
+  --slds-c-button-brand-text-color: #fff;
+
+  --slds-c-button-neutral-color-background: #f3f3f3;
+  --slds-c-button-neutral-color-border: #c9c9c9;
+  --slds-c-button-neutral-text-color: #1b1b1b;
+
+  --slds-c-button-sizing-border: 1px;
+  --slds-c-button-spacing-inline: 0.75rem;
+  --slds-c-button-line-height: 1.75rem;
+}
+
+/* Compact corners for Classic feel */
+:host {
+  --slds-c-button-radius-border: 2px;
+  --slds-c-input-radius-border: 2px;
+  --slds-c-combobox-radius-border: 2px;
+}
+
+/* ---------------------------
+   BODY
+   --------------------------- */
+.add-members-content {
+  background: #fff;
+  padding-top: 0.75rem;
+
+  /* Input & Combobox styling */
+  --slds-c-input-color-border: #8a8a8a;
+  --slds-c-input-color-background: #fff;
+  --slds-c-input-color-text: #1b1b1b;
+  --slds-c-input-shadow-focus: none;
+  --slds-c-input-color-border-focus: #4e4e4e;
+
+  --slds-c-combobox-color-border: #8a8a8a;
+  --slds-c-combobox-color-background: #fff;
+  --slds-c-combobox-color-text: #1b1b1b;
+  --slds-c-combobox-color-border-focus: #4e4e4e;
+}
+
+/* Intro text */
+.add-members-intro {
+  max-width: 68rem;
+}
+
+/* ---------------------------
+   GRID WRAPPER
+   --------------------------- */
+.add-members-grid-wrapper {
+  background: #f7f7f2;
+  padding: 0.75rem;
+  border-radius: 2px;
+}
+
+.add-members-grid {
+  border: 1px solid #c9c9c9;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Table header & row */
+.add-members-header-row,
+.add-members-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dddbda;
+  padding: 0.5rem 0;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.add-col-user { flex: 0 0 56%; min-width: 240px; }
+.add-col-access,
+.add-col-role { flex: 0 0 22%; }
+
+/* ---------------------------
+   USER INPUT AREA
+   --------------------------- */
+.add-user-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.add-user-type { flex: 0 0 26%; min-width: 10rem; }
+.add-user-input { flex: 1 1 auto; }
+
+.add-user-input-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.add-user-search-btn {
+  --slds-c-button-icon-color-background: #f3f3f3;
+  --slds-c-button-icon-color-border: #c9c9c9;
+  --slds-c-button-icon-color-foreground: #444;
+  --slds-c-button-icon-radius-border: 2px;
+  --slds-c-button-icon-line-height: 1.75rem;
+}
+
+/* Search dropdown */
+/*
+.add-user-results {
+  margin-top: 0.25rem;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}*/
+
+.add-user-result-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid #dddbda;
+}
+
+.add-user-result-row:last-child { border-bottom: 0; }
+.add-user-result-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.add-user-result-empty { padding: 0.5rem 0.75rem; color: #706e6b; }
+
+/* ---------------------------
+   RESPONSIVE
+   --------------------------- */
+@media (max-width: 980px) {
+  .add-members-modal .add-members-container { max-width: 62rem; width: 96%; }
+  .add-col-user { flex: 0 0 100%; }
+  .add-col-access, .add-col-role { flex: 0 0 50%; margin-top: 0.5rem; }
+}
+
+
+/* Ensure grid stays single-line and scrolls if needed */
+.add-members-grid-wrapper {
+  overflow-x: auto; /* horizontal scroll for narrow screens */
+}
+
+/* Lock column widths and allow truncation */
+.add-col-access,
+.add-col-role {
+  flex: 0 0 220px; /* fixed width instead of percentage */
+  max-width: 240px;
+  overflow: hidden; /* clip content */
+}
+
+/* Truncate combobox display text */
+.add-col-access lightning-combobox,
+.add-col-role lightning-combobox {
+   display: block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Tooltip for full value */
+.add-col-access lightning-combobox,
+.add-col-role lightning-combobox {
+  cursor: help;
+}
+/*
+.add-user-results {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: .25rem;
+  background: #fff;
+  border: 1px solid #dddbda; /* SLDS border */
+/*  border-radius: .25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 10; /* sit above the row */
+/*}*/
+
+/* Anchor: the input wrapper must be relative */
+.add-user-input-wrap {
+  position: relative; /* you already have this; leave as-is */
+}
+
+/* Results panel: below the input, full width of wrapper */
+.add-user-results {
+  position: absolute;
+  top: calc(100% + 0.25rem);  /* directly below the input, with a small gap */
+  left: 0;
+  right: 0;
+
+  background: #fff;
+  border: 1px solid #dddbda;           /* SLDS border */
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 20;                          /* above row content */
+}
+
+/* Optional: make options clickable and pretty */
+.add-user-option {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  cursor: pointer;
+}
+.add-user-option:hover,
+.add-user-option:focus {
+  background: #f3f2f2;
+  outline: none;
+}
+
+/* If you observe clipping, relax overflow ONLY on the specific container */
+.add-members-row,
+.add-user-input,
+.add-user-row {
+  overflow: visible;
+}
+
+
+
+.add-user-option:hover,
+.add-user-option:focus {
+  background: #f3f2f2;
+  outline: none;
+}
+
+.add-user-option__avatar {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-user-option__avatar-img {
+  width: 28px;
+   height: 28px;
+  border-radius: 50%;
+}
+
+.add-user-option__text {
+  min-width: 0; /* allow truncation */
+  display: flex;
+  flex-direction: column;
+}
+
+.add-user-option__name {
+  font-weight: 600;
+  color: #0b5cab; /* SLDS link blue */
+  line-height: 1.2;
+}
+
+.add-user-option__meta {
+  font-size: .75rem;
+}
+
+.add-user-option--empty {
+  padding: .5rem .75rem;
+}
+
+.dot {
+  color: #9e9e9e;
+  padding: 0 .25rem;
+}
+
+.add-user-input-wrap {
+  position: relative; /* or use slds-position_relative */
+}
+
+/* Totally hide it from the layout (more robust than just slds-hide) */
+.visually-hidden {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* If you prefer SLDS utility, this also works for most cases: */
+/* .slds-hide { display: none; } */
+
+/* panel styles as before */
+/*
+.add-user-results {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: .25rem;
+  background: #fff;
+  border: 1px solid #dddbda;
+  border-radius: .25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 10;
+}*/

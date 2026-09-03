@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SettlementDocumentType__c</fullName>
+    <description>Classifies various types of documents in Settlement Management. Eg, Sales Rebate Credit, Sales Rebate Delta Accruals</description>
+    <label>Settlement Document Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0S12</fullName>
+                <default>false</default>
+                <label>Sales Rebate</label>
+            </value>
+            <value>
+                <fullName>0S14</fullName>
+                <default>false</default>
+                <label>Sales Rebate Reversal</label>
+            </value>
+            <value>
+                <fullName>0S32</fullName>
+                <default>false</default>
+                <label>Sales Rebate Manual</label>
+            </value>
+            <value>
+                <fullName>0S34</fullName>
+                <default>false</default>
+                <label>Sales Manual Rebate Reversal</label>
+            </value>
+            <value>
+                <fullName>0S42</fullName>
+                <default>false</default>
+                <label>Sales Rebate Delta Accruals</label>
+            </value>
+            <value>
+                <fullName>0S44</fullName>
+                <default>false</default>
+                <label>Sales Rebate Delta Accruals Reversal</label>
+            </value>
+            <value>
+                <fullName>0S4B</fullName>
+                <default>false</default>
+                <label>Sales Rebate Manual Delta Accruals</label>
+            </value>
+            <value>
+                <fullName>0S4D</fullName>
+                <default>false</default>
+                <label>Sales Rebate Manual Delta Accruals Rev</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

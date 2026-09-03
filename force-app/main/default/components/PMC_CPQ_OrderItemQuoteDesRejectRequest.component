@@ -1,0 +1,101 @@
+<!--
+* @description This VF component is used in Reject Request Email Template on Order Line
+* @author Kaushik Gohain
+* @storynumber : GCPM-2633
+-->
+<apex:component controller="OrderItemApprovalEmailReq" access="global" >
+    <apex:slds />
+    
+    <style>
+        table{width:100%;}th{background-color:#CCCCCC;}
+        .lineTablequote{padding:4px;border:1px;border-spacing: 0;}
+        table,tr,th,td{padding:4px;border:1px;border-spacing: 0;border-style: solid;border-collapse: collapse;}
+    </style>
+    
+    
+    <apex:attribute name="quote" description="quote id"  assignTo="{!quoteId}" type="String"/> 
+    <apex:attribute name="userrole" description="Submit by" type="String"/>
+    <apex:attribute name="approverName" description="Approver Name" type="String"/>
+   	<apex:attribute name="orderid" description="Order id" type="String"/>
+    <apex:attribute name="ordernumber" description="Order Number" type="String"/>
+    
+    <br/>
+    <br/>
+    
+     
+    <apex:outputPanel > 
+        Hi , <br /> <br />
+        This requested approval {!approverName} for the order line {!ordernumber}  was REJECTED,
+        You may select the order Line and price it again and submit to reevaluate the need for an approval <br /> <br />
+        <apex:outputLink value="/{!quote}" target="_blank">View Quote</apex:outputLink> <br/>
+    </apex:outputPanel>
+    
+    <!-- Quote info -->
+   <h4><b>Quote Summary</b></h4>
+    <table class="lineTablequote">
+        <tr class="lineTablequote">
+            <tr class="lineTablequote"> <b> Customer Name :&nbsp; </b><apex:outputText value="{!quoteInfo.SBQQ__Account__r.Name}"/></tr><br />
+           
+            <tr class="lineTablequote"><b> Quote Description :&nbsp;</b>               
+                <apex:outputText value="{!quoteInfo.PMC_CPQ_QuoteShortNameDescription__c}"/><br /></tr>
+          <!--  <tr class="lineTablequote"> <b> Quote Issue Date :&nbsp;</b><apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!quoteInfo.Approvals1__r[0].CreatedDate}" /> 
+                </apex:outputText><br /></tr> -->
+            
+            <tr class="lineTablequote"><b>Contract Validity :&nbsp;</b><apex:outputText value="{0,date,MM/dd/yyyy}">
+                <apex:param value="{!quoteInfo.PMC_CPQ_ContractEnd__c}" />
+                </apex:outputText><br /></tr>
+        </tr>   
+        <tr class="lineTablequote">
+            <td class="lineTablequote"><b>Currency :&nbsp;</b><apex:outputText value="{!quoteInfo.CurrencyIsoCode}"/></td>
+        </tr>
+        <tr class="lineTablequote">
+        </tr>
+    </table>
+    
+  	<p>
+        <b>Submitter Comments: </b><apex:outputField label="Submitter Comments: " value="{!quoteInfo.PMC_AdditionalComments__c}"/>
+    </p>
+    
+    <!-- Quote Line info --> 
+    <apex:outputPanel rendered="{!userrole != 'Service Director'}">  
+    <h4><b>Quote Line Information</b></h4>
+    <table id="lineTable">
+        <tr >
+            <th>Product Name</th>
+            <th>Contract Type</th>
+            <th>Price Book Value</th>
+            <th>Price per Ton</th>
+            <th>Target Price</th>
+            <th>Floor Price</th>
+            <th>Volume Discount</th>
+            <th>Price Adjustment (USD)</th>
+            <th>Ex-Space Indicator</th>
+        </tr>
+        <apex:repeat value="{!qLines}" var="line">
+            <tr>
+                <td><apex:outputText value="{!line.SBQQ__ProductName__c}"/></td>   <!-- Order line -->                        
+                <td><apex:outputText value="{!line.PMC_CPQ_ContractType__c}"/></td> <!-- Order line -->
+                <td><apex:outputText value="{!line.PMC_CPQ_PriceBookValue__c}"/></td> <!-- Order line -->
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}"> 
+                    <apex:param value="{!line.PMC_CPQ_FinalPricePerTonne__c}" />
+                    </apex:outputText></td> <!-- Order line -->
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceTarget__c}" />
+                    </apex:outputText></td> <!-- Order line -->
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_PriceGuidanceFloor__c}" />
+                    </apex:outputText></td> <!-- Order line -->
+                <td><apex:outputText value="{0, number,###,###,###,##0.00 }">
+                    <apex:param value="{!line.PMC_CPQ_VolumeDiscount__c}" />    
+                    </apex:outputText></td> <!-- Order line -->
+                <td><apex:outputText value="{0, number, ###,###,###,##0.00}">
+                    <apex:param value="{!line.PMC_CPQ_Discount__c}" />
+                    </apex:outputText></td> <!-- Order line -->
+                <td><apex:outputText value="{!line.PMC_CPQ_ExspaceIndicator__c}"/></td>
+            </tr>
+        </apex:repeat>
+    </table>
+ </apex:outputPanel>
+ 
+</apex:component>

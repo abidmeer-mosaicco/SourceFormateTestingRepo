@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missed_Deployment_Mosaic_Direct</fullName>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>copado__Team__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Project__c</columns>
+    <columns>Jira_Key__c</columns>
+    <columns>copado__Has_Apex_Code__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Developer__c</field>
+        <operation>contains</operation>
+        <value>Siddharth,Sugunakar,Humera,Hemant,Himanshu,Lohitha,Ajeet,Rohan,Vanshika,Krishan,Nikhilesh,Dishari,Raghu,Anjali,Manisha</value>
+    </filters>
+    <filters>
+        <field>copado__Environment__c</field>
+        <operation>contains</operation>
+        <value>SIT3</value>
+    </filters>
+    <label>Missed Deployment - Mosaic Direct</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Doc_Topic__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Doc_Topic</label>
+    <referenceTo>Doc_Topic__c</referenceTo>
+    <relationshipLabel>Doc_Articles</relationshipLabel>
+    <relationshipName>Doc_Articles</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

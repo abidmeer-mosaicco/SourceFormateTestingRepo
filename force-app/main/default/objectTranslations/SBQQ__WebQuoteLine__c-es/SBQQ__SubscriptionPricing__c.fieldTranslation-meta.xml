@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Determina cómo se calcula el precio de la suscripción. Si está en blanco, el ítem de línea no es un producto de suscripción.&quot;</help>
+    <label>Precios de suscripción</label>
+    <name>SBQQ__SubscriptionPricing__c</name>
+    <picklistValues>
+        <masterLabel>Fixed Price</masterLabel>
+        <translation>Precio fijo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Percent Of Total</masterLabel>
+        <translation>Porcentaje del total</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,103 @@
+<template>
+  <div class="md-filters-container" lwc:if={showFilters}>
+    <div class="md-header">
+      <p>{headerText}</p>
+    </div>
+
+    <div class="md-p-1">
+      <div class="md-primary-filters" lwc:if={hasPrimaryFields}>
+        <div class="md-filter-row md-input-box" style={primaryGridStyle}>
+          <template for:each={composedPrimaryFields} for:item="field">
+            <div key={field.key} class="md-filter-item">
+              <template if:true={field.isPicklist}>
+                <c-mosaic-direct-multi-picklist
+                  data-name={field.name}
+                  label={field.label}
+                  options={field.options}
+                  value={field.value}
+                  placeholder={field.placeholder}
+                  onchange={handlePrimaryChange}
+                ></c-mosaic-direct-multi-picklist>
+              </template>
+              <template if:false={field.isPicklist}>
+                <template if:true={field.isDate}>
+                  <div class="slds-form-element">
+                    <label class="slds-form-element__label" for={field.name}>{field.label}</label>
+                    <div class="slds-form-element__control">
+                      <input
+                        type="date"
+                        id={field.name}
+                        data-name={field.name}
+                        class="slds-input"
+                        value={field.value}
+                        onchange={handlePrimaryChange}
+                      />
+                    </div>
+                  </div>
+                </template>
+                <template if:false={field.isDate}>
+                  <lightning-input
+                    data-name={field.name}
+                    label={field.label}
+                    placeholder={field.placeholder}
+                    type={field.type}
+                    value={field.value}
+                    onchange={handleTextFieldChange}
+                  ></lightning-input>
+                </template>
+              </template>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <div lwc:if={showAdvancedFilterButton} class="md-mt-1">
+        <button class="button-no-style" label={advancedText} onclick={handleToggleAdvanced}>
+          <lightning-icon icon-name="utility:filterList" size="xx-small"></lightning-icon>
+          <span>{advancedText}</span>
+        </button>
+      </div>
+
+      <div if:true={showAdvanced} class={advancedContainerClass}>
+        <template for:each={advancedFieldRows} for:item="row">
+          <div key={row.key} class="md-filter-row md-filter-row-advanced md-input-box">
+            <template for:each={row.fields} for:item="section">
+              <div key={section.key} class="md-filter-item md-filter-item-advanced">
+                <template if:true={section.isDate}>
+                  <div class="slds-form-element">
+                    <label class="slds-form-element__label" for={section.name}>{section.label}</label>
+                    <div class="slds-form-element__control">
+                      <input
+                        type="date"
+                        id={section.name}
+                        data-name={section.name}
+                        class="slds-input"
+                        value={section.value}
+                        onchange={handleAdvancedChange}
+                      />
+                    </div>
+                  </div>
+                </template>
+                <template if:false={section.isDate}>
+                  <c-mosaic-direct-multi-picklist
+                    data-name={section.name}
+                    label={section.label}
+                    options={section.options}
+                    value={section.value}
+                    placeholder={section.placeholder}
+                    onchange={handleAdvancedChange}
+                  ></c-mosaic-direct-multi-picklist>
+                </template>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+
+      <div class="md-filter-actions">
+        <button class="md-button md-light-button" title={clearText} onclick={handleClearFilter}>{clearText}</button>
+        <button class="md-button md-default-button" title={applyText} onclick={handleApplyFilter}>{applyText}</button>
+      </div>
+    </div>
+  </div>
+</template>

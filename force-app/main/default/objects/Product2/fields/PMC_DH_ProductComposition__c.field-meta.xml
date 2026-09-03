@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_ProductComposition__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  OR(
+    NOT(ISBLANK(PMC_CPQ_Nitrogen__c)) &amp;&amp; PMC_CPQ_Nitrogen__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Phosphorous__c)) &amp;&amp; PMC_CPQ_Phosphorous__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Potassium__c)) &amp;&amp; PMC_CPQ_Potassium__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Boron__c)) &amp;&amp; PMC_CPQ_Boron__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Calcium__c)) &amp;&amp; PMC_CPQ_Calcium__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Chlorine__c)) &amp;&amp; PMC_CPQ_Chlorine__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Cobalt__c)) &amp;&amp; PMC_CPQ_Cobalt__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Copper__c)) &amp;&amp; PMC_CPQ_Copper__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Iron__c)) &amp;&amp; PMC_CPQ_Iron__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Magnesium__c)) &amp;&amp; PMC_CPQ_Magnesium__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Manganese__c)) &amp;&amp; PMC_CPQ_Manganese__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Molybdenum__c)) &amp;&amp; PMC_CPQ_Molybdenum__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Sulfur__c)) &amp;&amp; PMC_CPQ_Sulfur__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Zinc__c)) &amp;&amp; PMC_CPQ_Zinc__c &gt; 0,
+    NOT(ISBLANK(PMC_CPQ_Silicone__c)) &amp;&amp; PMC_CPQ_Silicone__c&gt; 0
+
+  ),
+TEXT(PMC_CPQ_Nitrogen__c * 100) &amp; &quot;-&quot; &amp; TEXT(PMC_CPQ_Phosphorous__c * 100) &amp; &quot;-&quot; &amp; TEXT(PMC_CPQ_Potassium__c * 100) &amp; &quot; &quot; &amp; 
+IF(PMC_CPQ_Boron__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Boron__c * 100) &amp; &quot;%B&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Calcium__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Calcium__c * 100) &amp; &quot;%Ca&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Chlorine__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Chlorine__c * 100) &amp; &quot;%Cl&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Cobalt__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Cobalt__c * 100) &amp; &quot;%Co&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Copper__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Copper__c * 100) &amp; &quot;%Cu&quot;, &quot;&quot;) &amp;
+IF(PMC_CPQ_Iron__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Iron__c * 100) &amp; &quot;%Fe&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Magnesium__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Magnesium__c * 100) &amp; &quot;%Mg&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Manganese__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Manganese__c * 100) &amp; &quot;%Mn&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Molybdenum__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Molybdenum__c * 100) &amp; &quot;%Mo&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Sulfur__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Sulfur__c * 100) &amp; &quot;%S&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Zinc__c &gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Zinc__c * 100) &amp; &quot;%Zn&quot;, &quot;&quot;) &amp; 
+IF(PMC_CPQ_Silicone__c&gt; 0, &quot;, &quot; &amp; TEXT(PMC_CPQ_Silicone__c* 100) &amp; &quot;%Si&quot;, &quot;&quot;),&quot;&quot; 
+)</formula>
+    <label>PMC DH ProductComposition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

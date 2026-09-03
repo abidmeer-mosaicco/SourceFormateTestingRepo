@@ -1,0 +1,41 @@
+<apex:page showHeader="false" sidebar="false" docType="html-5.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            color: #444;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            margin: auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+
+    <div class="container">
+        <h1 id="title">🛠️ Maintenance Mode</h1>
+        <p id="message">We are performing scheduled updates to improve your experience.<br/>
+           Please try again later.</p>
+    </div>
+
+    <script>
+        // Check browser language and translate only if it's Portuguese
+        const lang = navigator.language || navigator.userLanguage;
+        if (lang.startsWith('pt')) {
+            document.getElementById('title').textContent = '🛠️ Sistema em Manutenção';
+            document.getElementById('message').innerHTML = 'Estamos realizando atualizações programadas para melhorar sua experiência.<br/>Por favor, tente novamente mais tarde.';
+        }
+    </script>
+</apex:page>

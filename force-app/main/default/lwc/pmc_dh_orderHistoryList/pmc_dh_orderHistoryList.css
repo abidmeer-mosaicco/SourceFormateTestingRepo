@@ -1,0 +1,30 @@
+.order-menu {
+  display: flex;
+  font-family: var(--medium-font);
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+.menu-list {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dynamic-border {
+  border-bottom: 3px solid #1D625C;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.no-results-msg {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .pagination {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_NumberOfContractsServed</fullName>
+    <active>true</active>
+    <description>Validation_Number_of_Contracts_Served</description>
+    <errorConditionFormula>AND(
+    OR(
+       ISPICKVAL(Status, &apos;Closed&apos;) ,
+       ISPICKVAL(Status, &apos;Closure Pending&apos;)
+    ),
+    RecordType.DeveloperName = &apos;CustomerService&apos;,
+    ISBLANK(Number_of_Contracts_Served__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Number_of_Contracts_Served__c</errorDisplayField>
+    <errorMessage>Please indicate how many contracts you have served.</errorMessage>
+</ValidationRule>

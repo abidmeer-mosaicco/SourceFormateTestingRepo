@@ -1,0 +1,40 @@
+<template>
+  <div if:true={hasIntransitPermission} class="md-intransit-datatable">
+    <c-mosaic-direct-list
+      object-api-name="ShipmentItem"
+      manual-field-api-names={manualFieldApiNames}
+      manual-field-label-names={manualFieldLabelNames}
+      table-title={tableTitle}
+      show-table-title={showTableTitle}
+      show-legacy-filters={showLegacyFilters}
+      is-in-transit-table={isInTransitTable}
+      show-advanced-filters={showAdvancedFilters}
+      in-transit-text-fields={inTransitTextFields}
+      in-transit-advanced-fields={inTransitAdvancedFields}
+      is-loading={isLoading}
+      has-records={hasRecords}
+      data={data}
+      columns={columns}
+      draft-values={draftValues}
+      sort-field={sortField}
+      sort-dir-lower={sortDirLower}
+      no-results-message={noResultsMessage}
+      page-number={pageNumber}
+      total-pages={totalPages}
+      page-buttons={pageButtons}
+      is-prev-disabled={isPrevDisabled}
+      is-next-disabled={isNextDisabled}
+      is-first-page-active={isFirstPageActive}
+      is-last-page-active={isLastPageActive}
+      show-left-ellipsis={showLeftEllipsis}
+      show-right-ellipsis={showRightEllipsis}
+      show-last-page={showLastPage}
+      onfilterchange={handleInTransitFilterChange}
+      ontoggleadvanced={handleToggleAdvanced}
+      onapplyfilters={handleApplyFilters}
+      onclearfilters={handleClearInTransitFilters}
+      onsort={handleSort}
+      onpagechange={handlePageChange}
+    ></c-mosaic-direct-list>
+  </div>
+</template>

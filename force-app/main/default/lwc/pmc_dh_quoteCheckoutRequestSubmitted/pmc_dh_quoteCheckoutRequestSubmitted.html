@@ -1,0 +1,18 @@
+<template>
+  <h1 class="slds-align_absolute-center slds-text-align_center slds-m-top_large slds-m-bottom_medium">
+    {labels.pmc_quoteCheckoutFlow_thankyouForSubmitting}
+  </h1>
+  <p class="quote-request-number slds-m-bottom_large">
+    {labels.pmc_quoteCheckoutFlow_quoteRequestNumber}&nbsp;{quoteInfo.quoteNumber}
+  </p>
+  <div class="mobile-button">
+    <a href={productPageUrl} target="_self">
+      <lightning-button label={labels.pmc_quoteCheckoutFlow_requestAnotherQuote}>
+      </lightning-button>
+    </a>
+    <a href={quotePageUrl} target="_self">
+      <lightning-button variant="brand" label={labels.pmc_quoteCheckoutFlow_viewMyRequestedQuote}>
+      </lightning-button>
+    </a>
+  </div>
+</template>

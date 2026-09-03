@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_RestrictUserToApproveQuote</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+AND(
+ISCHANGED( SBQQ__Status__c ),
+ISPICKVAL(SBQQ__Status__c, &apos;Approved&apos;)
+),
+NOT(ISPICKVAL(ApprovalStatus__c, &apos;Approved&apos;))
+)</errorConditionFormula>
+    <errorMessage>A Quote can only be &apos;Approved&apos; by clicking the &apos;Submit for Approval&apos; button and after receiving the required set of approvals</errorMessage>
+</ValidationRule>

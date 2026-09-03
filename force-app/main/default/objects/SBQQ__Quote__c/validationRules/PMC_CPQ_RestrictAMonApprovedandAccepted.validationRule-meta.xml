@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_RestrictAMonApprovedandAccepted</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+NOT(ISCHANGED(PMC_CPQ_FlowVRByPassToggle__c)),
+OR(
+ISPICKVAL(SBQQ__Status__c, &quot;Approved&quot;),
+ISPICKVAL(SBQQ__Status__c, &quot;Accepted&quot;),
+ISPICKVAL(SBQQ__Status__c, &quot;Presented&quot;)
+),
+NOT(ISPICKVAL(PRIORVALUE(SBQQ__Status__c), &quot;Draft&quot;)),
+NOT(ISCHANGED(SBQQ__Status__c)),
+NOT(ISCHANGED(ApprovalStatus__c)),
+NOT(ISCHANGED(PMC_CPQ_ExpiresOn__c)),
+NOT(ISCHANGED(PMC_CPQ_ExpirationDate__c)),
+NOT(ISCHANGED(PMC_CPQ_ExpirationTime__c)),
+NOT(ISCHANGED(PMC_CPQ_IntegrationStatus__c)),
+NOT(ISCHANGED(PMC_CPQ_IntegrationMessage__c)),
+NOT(ISCHANGED(PMC_CPQ_SAPContractReference__c)),
+NOT(ISCHANGED(PMC_CPQ_ContractShippingInstructions__c)),
+NOT(ISCHANGED(PMC_CPQ_Docusign__c))
+)</errorConditionFormula>
+    <errorMessage>A Quote can only be edited while in the &apos;Draft&apos; Status. Please set the Quote Status to &apos;Draft&apos; in order to continue with any modifications</errorMessage>
+</ValidationRule>

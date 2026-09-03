@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Quote_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>PMC_CPQ_QuoteShortNameDescription__c</columns>
+    <columns>SBQQ__Status__c</columns>
+    <columns>SBQQ__Account__c</columns>
+    <columns>PMC_CPQ_ExpiresOn__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>PMC_CPQ_QuoteRecordSubType__c</columns>
+    <columns>PMC_CPQ_ContractStart__c</columns>
+    <columns>PMC_CPQ_ContractEnd__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Quote Requests</label>
+</ListView>

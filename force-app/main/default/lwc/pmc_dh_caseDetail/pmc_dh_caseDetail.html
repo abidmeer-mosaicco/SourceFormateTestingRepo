@@ -1,0 +1,23 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+    </div>
+    <div class="slds-col slds-size_8-of-12">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">{caseStr}</p>
+    </div>
+    <div class="slds-col slds-size_4-of-12 widget-section">
+      <template if:true={showReopenCaseOption}>
+        <c-pmc_dh_reopen-case></c-pmc_dh_reopen-case>
+      </template>
+      <template if:true={showUploadDocumentWidget}>
+        <c-pmc_dh_upload-case-document case-id={caseId}>
+        </c-pmc_dh_upload-case-document>
+      </template>
+    </div>
+    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-m-bottom_x-small">
+      <c-pmc_dh_message-banner type="info" message={labels.pmc_caseDetails_msg}>
+      </c-pmc_dh_message-banner>
+    </div>
+  </div>
+</template>

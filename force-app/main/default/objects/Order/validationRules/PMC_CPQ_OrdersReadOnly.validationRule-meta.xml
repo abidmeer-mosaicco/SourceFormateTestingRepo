@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_OrdersReadOnly</fullName>
+    <active>true</active>
+    <description>This rule is to prevent users from editing Order record except Integration User and System Administrator.</description>
+    <errorConditionFormula>AND( NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c), AND( NOT($Profile.Name = &quot;System Administrator&quot;), NOT($Profile.Name = &quot;API Only profile&quot;), NOT($Profile.Name = &quot;Salesforce API Only System Integrations&quot;), NOT(CONTAINS( LOWER($Profile.Name), &quot;digital hub&quot;)), NOT(CONTAINS( LOWER($Profile.Name), &quot;partner community&quot;)) ), NOT(ISNEW()) )</errorConditionFormula>
+    <errorMessage>This Order has been placed and is therefore locked from further modifications. Any updates from SAP will be reflected here.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,298 @@
+<template>
+  <!-- Info message banner -->
+  <div class="message-container">
+    <c-pmc_dh_message-banner type="info" message={labels.pmc_requestForQuote_reviewInfo}>
+    </c-pmc_dh_message-banner>
+  </div>
+  <template if:true={pageLoaded}>
+    <div class="slds-grid slds-wrap slds-gutters request-review-section">
+      <div class="slds-col payment-section slds-medium-size_8-of-12 slds-size_12-of-12">
+        <!-- Payment Information Section -->
+        <div class="custom-card">
+          <div class="card-header">
+            {labels.pmc_quoteCheckoutFlow_paymentInfo}
+          </div>
+          <div class="card-body">
+            <template if:false={isPrepaymentDateField}>
+              <div class="slds-grid slds-wrap payment-info">
+                <template if:true={isLocationBrazil}>
+                  <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                    </div>
+                    <div class="lbl-field-value">
+                      {_paymentInfoObj.strPaymentTermSelectedLabel}
+                    </div>
+                  </div>
+                </template>
+                <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteCheckoutFlow_currency}
+                  </div>
+                  <div class="lbl-field-value">{_paymentInfoObj.strCurrencyIsoCode}</div>
+                </div>
+              </div>
+            </template>
+            <template if:true={isPrepaymentDateField}>
+              <div class="slds-grid slds-wrap payment-info">
+                <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteCheckoutFlow_paymentTerms}
+                  </div>
+                  <div class="lbl-field-value">
+                    {_paymentInfoObj.strPaymentTermSelectedLabel}
+                  </div>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteCheckoutFlow_currency}
+                  </div>
+                  <div class="lbl-field-value">{_paymentInfoObj.strCurrencyIsoCode}</div>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-3 slds-size_1-of-1 content-info">
+                  <div class="lbl-field-name">
+                    {labels.pmc_quoteCheckoutFlow_paymentDate}
+                  </div>
+                  <div class="lbl-field-value">{_paymentInfoObj.datPrepaymentDate}</div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+      <div class="slds-col quote-section slds-medium-size_4-of-12 slds-size_12-of-12">
+        <!-- Quote ID Section -->
+        <div class="custom-card">
+          <div class="card-header">{labels.pmc_requestForQuote_quoteId}</div>
+          <div class="card-body slds-p-bottom_none">
+            <div class="slds-grid slds-wrap slds-p-horizontal_xx-small">
+              <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <div class="lbl-field-value">
+                  <c-pmc_dh_input-element text-label={labels.pmc_requestForQuote_identifyQuote} data-id="quoteName"
+                    parent-name="quoteName" is-required default-value={quoteInfoObj.quoteName} type="text"
+                    text-placeholder=" " max-length=10 pattern="[A-Za-z0-9]*"
+                    message-when-pattern-mismatch={labels.pmc_requestForQuote_patternMismatchErr}
+                    message-when-value-missing={labels.pmc_requestForQuote_mandatoryFieldErr}
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_input-element>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-gutters">
+      <div class="slds-col slds-medium-size_8-of-12 slds-size_12-of-12">
+        <!-- Products Information Section -->
+        <div class="product-section custom-card">
+          <div class="card-header">
+            {labels.pmc_requestForQuote_productsInformation}
+          </div>
+          <div class="card-body slds-m-horizontal_medium">
+            <div for:each={_productInfoArray} for:item="product" key={product.strProductId}
+              class="slds-border--bottom slds-m-bottom_medium slds-p-bottom--medium">
+              <div class="product-content slds-scrollable_x" tabindex="0">
+                <div class="product-grid">
+                  <div class="product-col slds-p-left_none">
+                    <div class="product-image">
+                      <img src={product.strImgSrc} alt={product.strProductName} onerror={handleImageError} />
+                    </div>
+                    <div class="product-info">
+                      <div class="product-name">
+                        <a href={product.href} target="_self"> {product.strProductName}</a>
+                      </div>
+                      <div class="product-sku">{product.strSku}</div>
+                    </div>
+                  </div>
+                  <div class="content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_requestForQuote_totalQty}
+                    </div>
+                    <div class="lbl-field-value">
+                      {product.strTotalQty}
+                    </div>
+                  </div>
+                  <div class="content-info">
+                    <div class="lbl-field-name">
+                      {labels.pmc_requestForQuote_unitOfMeasure}
+                    </div>
+                    <div class="lbl-field-value">
+                      {product.strProductUOM}
+                    </div>
+                  </div>
+                  <template lwc:if={priceSummaryData}>
+                    <div class="content-info">
+                      <div class="lbl-field-name">
+                        {labels.pmc_contractDetails_averagePricePerUnit}
+                      </div>
+                      <div class="lbl-field-value">
+                        {product.avgPricePerUnit}
+                      </div>
+                    </div>
+                  </template>
+                </div>
+                <div class="slds-m-top_x-small slds-p-bottom_medium mobile-scroll" tabindex="0">
+                  <table class="slds-table" aria-label="">
+                    <thead>
+                      <tr class="slds-line-height_reset">
+                        <th scope="col">
+                          <div title={labels.pmc_requestForQuote_qty}>
+                            {labels.pmc_requestForQuote_qty}
+                          </div>
+                        </th>
+                        <th scope="col">
+                          <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                            {labels.pmc_quoteCheckoutFlow_shipTo}
+                          </div>
+                        </th>
+                        <th scope="col">
+                          <div title={labels.pmc_quoteCheckoutFlow_incoterms}>
+                            {labels.pmc_quoteCheckoutFlow_incoterms}
+                          </div>
+                        </th>
+                        <th scope="col">
+                          <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                            {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                          </div>
+                        </th>
+                        <th scope="col">
+                          <div title={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                            {labels.pmc_quoteCheckoutFlow_preferredShipFrom}
+                          </div>
+                        </th>
+                        <template if:true={isLocationBrazil}>
+                          <th scope="col">
+                            <div title="Pack Type">
+                              {labels.pmc_requestForQuote_packType}
+                            </div>
+                          </th>
+                        </template>
+                        <template lwc:if={priceSummaryData}>
+                          <th scope="col">
+                            <div title={labels.pmc_contractDetails_pricePerUnit}>
+                              {labels.pmc_contractDetails_pricePerUnit}
+                            </div>
+                          </th>
+                        </template>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <template for:each={product.shipmentInfoArray} for:item="shipdata" for:index="index">
+                        <tr key={index.index} class="slds-hint-parent">
+                          <td data-label={labels.pmc_requestForQuote_qty} scope="row">
+                            <div title={shipdata.strQuantity}>
+                              {shipdata.strQuantity}
+                            </div>
+                          </td>
+                          <td data-label={labels.pmc_quoteCheckoutFlow_shipTo}>
+                            <div class="shipping-info" title={shipdata.strShipTo}>
+                              {shipdata.strShipTo}
+                            </div>
+                          </td>
+                          <td data-label={labels.pmc_quoteCheckoutFlow_incoterms}>
+                            <div title="shipdata.strIncoterms}">
+                              {shipdata.strIncoterms}
+                            </div>
+                          </td>
+                          <td data-label={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                            <div title={shipdata.strDeliveryMode}>
+                              {shipdata.strDeliveryMode}
+                            </div>
+                          </td>
+                          <td data-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                            <div class="shipping-info" title={shipdata.strShipFrom}>
+                              {shipdata.strShipFrom}
+                            </div>
+                          </td>
+                          <template if:true={isLocationBrazil}>
+                            <td data-label={labels.pmc_quoteCheckoutFlow_preferredShipFrom}>
+                              <div title={shipdata.strPackType}>
+                                {shipdata.strPackType}
+                              </div>
+                            </td>
+                          </template>
+                          <template lwc:if={priceSummaryData}>
+                            <td data-label={labels.pmc_contractDetails_pricePerUnit}>
+                              <div title={shipdata.pricePerUnit}>
+                                {shipdata.pricePerUnit}
+                              </div>
+                            </td>
+                          </template>
+                        </tr>
+                      </template>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-col slds-medium-size_4-of-12 slds-size_12-of-12">
+        <!-- Requested Contract Information -->
+        <div class="contract-info_section custom-card">
+          <div class="card-header">
+            {labels.pmc_requestForQuote_requestedContractInfo}
+          </div>
+          <div class="card-body">
+            <div class="slds-grid slds-wrap contract-info_content">
+              <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+                <div class="lbl-field-name">
+                  {labels.pmc_quoteCheckoutFlow_startingFrom}
+                </div>
+                <div class="lbl-field-value">
+                  <lightning-formatted-text value={_paymentInfoObj.datContractStartDate}></lightning-formatted-text>
+                </div>
+              </div>
+              <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 content-info">
+                <div class="lbl-field-name">
+                  {labels.pmc_quoteCheckoutFlow_endDate}
+                </div>
+                <div class="lbl-field-value">
+                  <lightning-formatted-text value={_paymentInfoObj.datContractEndDate}></lightning-formatted-text>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Price Summary -->
+        <template lwc:if={priceLoaded}>
+          <template lwc:if={priceSummaryValidation}>
+            <div class="slds-col slds-size_1-of-1 padding-none">
+              <c-pmc_dh_price-summary-section price-summary-data={priceSummaryData}
+                legal-msg={labels.pmc_priceSummary_priceSummaryMessage} flow="RFQ">
+              </c-pmc_dh_price-summary-section>
+            </div>
+          </template>
+        </template>
+        <!-- Legal Info notes -->
+        <div class="note-message">
+          <lightning-icon size="xx-small"
+            class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" icon-name="utility:info">
+          </lightning-icon>
+          <div class="slds-m-left_x-small">
+            <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_requestForQuote_legalInfo}>
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+        <!-- Action CTA's -->
+        <div class="slds-grid slds-wrap slds-gutters action-items">
+          <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 back-btn slds-m-bottom_medium">
+            <button class="slds-button slds-button_neutral slds-button_stretch" onclick={goBack}>
+              {labels.pmc_quoteCheckoutFlow_back}
+            </button>
+          </div>
+          <div class="slds-col slds-medium-size_1-of-2 slds-size_1-of-1 submit-btn slds-m-bottom_medium">
+            <button class="slds-button slds-button_brand slds-button_stretch" onclick={submitRequest}>
+              {labels.pmc_requestForQuote_submitQuoteRequest}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template if:false={pageLoaded}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

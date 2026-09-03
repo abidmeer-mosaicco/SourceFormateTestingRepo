@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="Order Record Integration to SAP Completed Successfully - {!relatedTo.OrderNumber}" recipientType="User" relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+            <head>
+                <meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+                <meta name="Template" content="SAP Integration Notification"/>
+            </head>
+            <body>
+                Hello {!Recipient.Name},<br/><br/>
+
+                <p>The order <b>{!relatedTo.OrderNumber}</b> for customer <b>{!relatedTo.Account.Name}</b> has been processed through the SAP integration.</p>
+
+                <p>Below you will find a summary of the order, including both successfully integrated lines and any lines that encountered errors during the process:</p>
+
+                <c:PMC_CPQ_OrderItemsSentToSAP orderRecordId="{!relatedTo.Id}" />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

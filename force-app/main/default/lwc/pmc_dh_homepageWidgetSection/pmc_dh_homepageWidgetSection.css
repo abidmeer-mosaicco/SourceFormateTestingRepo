@@ -1,0 +1,100 @@
+.card-body .content-section {
+  border-bottom: 1px solid #D4DFDE;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.card-body .content-section:last-child {
+  padding-bottom: 0;
+}
+
+.card-body .content-section:first-child {
+  padding-top: 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header a {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: 'Barlow-Regular';
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.recent-updates-card .card-body .content-section:last-child,
+.card-body .content-section:last-child {
+  border-bottom: none;
+}
+
+.recent-updates-card .card-body .content-section .lbl-field-value a {
+  color: #093532;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  width: 100%;
+  justify-content: center;
+  line-height: unset;
+}
+
+.badge-info {
+  align-self: center;
+}
+
+.icon-wrapper img {
+  cursor: pointer;
+  width: 36px;
+}
+
+.icon-wrapper {
+  align-items: end;
+}
+
+.content-info .lbl-field-value a {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .scrollable-container {
+    max-width: calc(91.6vw);
+    overflow-x: scroll;
+  }
+
+  .scrollable-content {
+    min-width: calc(91.6/100*1440px);
+    max-width: calc(91.6/100*1440px);
+  }
+
+  .padding-right-none-medium {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 16px;
+  }
+
+  .lbl-field-value {
+    text-align: end;
+  }
+
+  .lbl-field-name {
+    min-width: max-content;
+  }
+}

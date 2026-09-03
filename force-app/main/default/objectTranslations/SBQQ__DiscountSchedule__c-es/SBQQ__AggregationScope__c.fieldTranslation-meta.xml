@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Especifique cómo agregar cantidades de líneas de presupuesto para productos que utilizan este programa. Por defecto, la cantidad de cada línea (incluso para el mismo producto) se considera de forma independiente.&quot;</help>
+    <label>Alcance de agregación</label>
+    <name>SBQQ__AggregationScope__c</name>
+    <picklistValues>
+        <masterLabel>Group</masterLabel>
+        <translation>Grupo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote</masterLabel>
+        <translation>Presupuesto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

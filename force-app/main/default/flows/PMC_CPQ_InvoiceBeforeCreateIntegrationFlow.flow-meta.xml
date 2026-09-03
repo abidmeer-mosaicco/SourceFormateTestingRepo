@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>OwnerAssignment</name>
+        <label>Owner Assignment</label>
+        <locationX>220</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PMC_CPQ_Order__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>RegionAssignment</name>
+        <label>Region Assignment</label>
+        <locationX>506</locationX>
+        <locationY>827</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_Region__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RegionCustomMetadataLoop.PMC_CPQ_Region__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>RegionCustomMetadataLoop</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>CheckIfInvoiceHasOrder</name>
+        <label>Check If Invoice Has Order</label>
+        <locationX>352</locationX>
+        <locationY>1295</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfInvoiceHasOrderHasOrder</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Order__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Order__r.Owner:User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>OwnerAssignment</targetReference>
+            </connector>
+            <label>Has Order</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckIfOrderHasSalesArea</name>
+        <label>Check If Order Has Sales Area</label>
+        <locationX>550</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>IfInvoiceRecordCreateOrUpdatedDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IfSalesAreaExists</name>
+            <conditionLogic>1 AND 2</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Order__r.PMC_CPQ_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_Region__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RegionCustomMetadataGet</targetReference>
+            </connector>
+            <label>If Sales Area Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>ConfigSettingDecision</name>
+        <label>Config Setting Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>CheckIfOrderHasSalesArea</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ConfigSetting_DontRunOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Don&apos;t Run Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks if the Invoice records is created of updated</description>
+        <name>IfInvoiceRecordCreateOrUpdatedDecision</name>
+        <label>If Invoice Record Create Or Updated Decision</label>
+        <locationX>550</locationX>
+        <locationY>1187</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IfInvoiceNewOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNewBoolean</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CheckIfInvoiceHasOrder</targetReference>
+            </connector>
+            <label>If Invoice New Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>RegionDecision</name>
+        <label>Region Decision</label>
+        <locationX>638</locationX>
+        <locationY>719</locationY>
+        <defaultConnector>
+            <targetReference>RegionCustomMetadataLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RegionDecision_RegionMatches</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolRegionMatch</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RegionAssignment</targetReference>
+            </connector>
+            <label>Region Matches</label>
+        </rules>
+    </decisions>
+    <description>Automation related to create/update of Invoices.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Compares region in loop to region on related Order</description>
+        <name>boolRegionMatch</name>
+        <dataType>Boolean</dataType>
+        <expression>VALUE(LEFT({!$Record.PMC_CPQ_Order__r.PMC_CPQ_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c},4))&gt;= {!RegionCustomMetadataLoop.PMC_CPQ_StartValue__c}&amp;&amp;VALUE(LEFT({!$Record.PMC_CPQ_Order__r.PMC_CPQ_SalesArea__r.PMC_CPQ_SAPSalesOrganization__c},4))&lt;={!RegionCustomMetadataLoop.PMC_CPQ_EndValue__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Returns true if the Invoice is being created</description>
+        <name>IsNewBoolean</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>PMC CPQ Invoice Before Create Integration Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC CPQ Invoice Before Create/Update Integration Flow</label>
+    <loops>
+        <description>Loop through region custom metadata records.</description>
+        <name>RegionCustomMetadataLoop</name>
+        <label>RegionCustomMetadataLoop</label>
+        <locationX>418</locationX>
+        <locationY>611</locationY>
+        <collectionReference>RegionCustomMetadataGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>RegionDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>IfInvoiceRecordCreateOrUpdatedDecision</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>RegionCustomMetadataGet</name>
+        <label>Sales Region Range Setting</label>
+        <locationX>418</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>RegionCustomMetadataLoop</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>PMC_CPQ_SalesRegionRangeSetting__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ConfigSettingDecision</targetReference>
+        </connector>
+        <object>PMC_CPQ_Invoice__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

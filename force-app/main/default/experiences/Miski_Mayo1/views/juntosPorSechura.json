@@ -1,0 +1,564 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "74e53103-9761-4831-9ff5-adedb3401d23",
+  "label" : "Juntos por Sechura",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "80484117-b953-482f-aa06-b204ce9b5927",
+          "columns" : [ {
+            "UUID" : "6f177fc9-14cb-4dd8-ba5b-5a7755b7c356",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "80484117-b953-482f-aa06-b204ce9b5927",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "f931ff1e-0533-4f27-a664-457e36d6f979",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6f177fc9-14cb-4dd8-ba5b-5a7755b7c356",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a963cc97-6ad5-4344-9939-3a250cf943c2",
+          "columns" : [ {
+            "UUID" : "a6e47984-4dd1-49ca-a740-4d38eb1a26ff",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a963cc97-6ad5-4344-9939-3a250cf943c2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP11"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "43ccef05-5c4b-411a-822e-ee315d7d2fbf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a6e47984-4dd1-49ca-a740-4d38eb1a26ff",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "003b7f74-a9b4-44c9-8148-471b699ac107",
+          "columns" : [ {
+            "UUID" : "c5f51bd0-ac79-4325-865a-6899b95a568b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "003b7f74-a9b4-44c9-8148-471b699ac107",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a\n  href=\"https://www.miskimayo.com/s/gestion-social?#programas-sociales\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n \n\n  VOLVER"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "4858eb13-b7ed-4c6b-a0d8-09390e5cbf6c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c5f51bd0-ac79-4325-865a-6899b95a568b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "73362816-2e08-4cb3-bc0f-e6b25e7490ff",
+          "columns" : [ {
+            "UUID" : "0bade4f9-fe99-43f4-ab10-dd1f22e4eaba",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ca9873c0-24ab-4250-822f-3c7f504060b1",
+            "columnKey" : "573fe",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bc243d2f-e5ff-4d8e-973d-1b3dcb2d7d10",
+            "columnKey" : "e4667",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "73362816-2e08-4cb3-bc0f-e6b25e7490ff",
+      "regions" : [ {
+        "id" : "0bade4f9-fe99-43f4-ab10-dd1f22e4eaba",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.logomiskimayojuntosporsechura1e1674.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8f505758-cde4-4257-a27b-570a69d5c417",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ca9873c0-24ab-4250-822f-3c7f504060b1",
+        "regionLabel" : "Column 2",
+        "regionName" : "573fe",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "bc243d2f-e5ff-4d8e-973d-1b3dcb2d7d10",
+        "regionLabel" : "Column 3",
+        "regionName" : "e4667",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "f2fdaecf-c53d-4331-b2ad-81d7b3877271",
+          "columns" : [ {
+            "UUID" : "24f90f56-b0d9-40e5-adf5-8645f99a2760",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e7fb4cef-2b57-40a9-b5e9-645ab329bf92",
+            "columnKey" : "ac8de",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1a1abde1-2f86-4c0b-81c2-16040194696f",
+            "columnKey" : "84a9b",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "223414cd-3a25-4a8e-86b5-754c22972056",
+            "columnKey" : "e1987",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0ed6d66f-a636-44de-9b10-2a7b202f6ac7",
+            "columnKey" : "2848a",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "9ff53080-8c51-4938-8819-7d2f551d198a",
+            "columnKey" : "ce68c",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f2fdaecf-c53d-4331-b2ad-81d7b3877271",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "a61d3ea1-1984-4b6c-a685-9c6729542192",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "24f90f56-b0d9-40e5-adf5-8645f99a2760",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e7fb4cef-2b57-40a9-b5e9-645ab329bf92",
+        "regionLabel" : "Column 2",
+        "regionName" : "ac8de",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1a1abde1-2f86-4c0b-81c2-16040194696f",
+        "regionLabel" : "Column 3",
+        "regionName" : "84a9b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "223414cd-3a25-4a8e-86b5-754c22972056",
+        "regionLabel" : "Column 4",
+        "regionName" : "e1987",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0ed6d66f-a636-44de-9b10-2a7b202f6ac7",
+        "regionLabel" : "Column 5",
+        "regionName" : "2848a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "9ff53080-8c51-4938-8819-7d2f551d198a",
+        "regionLabel" : "Column 6",
+        "regionName" : "ce68c",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "1be7837a-1374-43f5-9dcf-22b732b36a7d",
+          "columns" : [ {
+            "UUID" : "7cd280dc-f98a-4341-9137-ccafcf8f205f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 150
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1be7837a-1374-43f5-9dcf-22b732b36a7d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "59fd37e5-a053-46f2-aeea-9d4c341dc897",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Ejecución de acciones sociales en favor de la población vulnerable del área de influencia directa.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "a80ad8eb-8430-4a0d-acb1-be42a279c419",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7cd280dc-f98a-4341-9137-ccafcf8f205f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "0a73fa77-9e14-4b12-bfde-f0be947afe06",
+          "columns" : [ {
+            "UUID" : "ce0c45ea-bf7d-495a-b044-2f52addd5616",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ac71e0cc-acfb-474b-ae0c-6ce13e11ac2f",
+            "columnKey" : "27726",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0d724547-ed49-469f-8cc3-6f1264db238a",
+            "columnKey" : "31f1b",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8273ccd6-c40f-4e69-ad4b-e0dd193cb62a",
+            "columnKey" : "d218b",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "28e6d31f-1121-4dbd-93f5-64fdc52d0e91",
+            "columnKey" : "c1dd7",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "552f53c9-f0a5-43a3-94e4-c93ec6988b36",
+            "columnKey" : "b5243",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0a73fa77-9e14-4b12-bfde-f0be947afe06",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Clipboard2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "dac233f1-fe78-47db-be99-d0239b01c9c9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ce0c45ea-bf7d-495a-b044-2f52addd5616",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ac71e0cc-acfb-474b-ae0c-6ce13e11ac2f",
+        "regionLabel" : "Column 2",
+        "regionName" : "27726",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0d724547-ed49-469f-8cc3-6f1264db238a",
+        "regionLabel" : "Column 3",
+        "regionName" : "31f1b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8273ccd6-c40f-4e69-ad4b-e0dd193cb62a",
+        "regionLabel" : "Column 4",
+        "regionName" : "d218b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "28e6d31f-1121-4dbd-93f5-64fdc52d0e91",
+        "regionLabel" : "Column 5",
+        "regionName" : "c1dd7",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "552f53c9-f0a5-43a3-94e4-c93ec6988b36",
+        "regionLabel" : "Column 6",
+        "regionName" : "b5243",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "10850152-6305-4ac4-8aa1-6b3b2dbbc814",
+          "columns" : [ {
+            "UUID" : "6e00f3ae-472f-43b8-bdfe-3788ba1d8a7a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "10850152-6305-4ac4-8aa1-6b3b2dbbc814",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Acciones:</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7194cf65-8f5c-449c-8743-321756984179",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Equipamiento y capacitación a comités de vaso de leche y comedores populares.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Donación de útiles escolares.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Ejecución de campañas navideñas.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Apoyo en implementos de oficinas y transporte a la PNP en su Unidad I Región Policial Piura para el desarrollo óptimo de sus actividades en materia de seguridad ciudadana.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Contribución al trabajo de prevención realizado por la Demuna y CEM Sechura.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "2744977a-d72f-4fa2-b20c-526bf806f6c1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6e00f3ae-472f-43b8-bdfe-3788ba1d8a7a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a7d71d09-0c5b-4c78-ae2c-7294c92e3b99",
+          "columns" : [ {
+            "UUID" : "c96ac3e9-d147-45c7-a788-61bf8ff562ce",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a7d71d09-0c5b-4c78-ae2c-7294c92e3b99",
+      "regions" : [ {
+        "id" : "c96ac3e9-d147-45c7-a788-61bf8ff562ce",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d811a433-83f5-4b2c-82c6-88d1b9837848",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Juntos por Sechura"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "091d3d92-59e8-4bda-9371-049f4915c1a3",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6bd45a10-ef24-45e9-907a-e2354346745e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-juntos-por-sechura"
+}

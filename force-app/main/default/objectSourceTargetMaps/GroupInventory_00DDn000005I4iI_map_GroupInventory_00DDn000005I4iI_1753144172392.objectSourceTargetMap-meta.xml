@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectSourceTargetMap xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <creationType>Custom</creationType>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Available_to_Fulfill__c</sourceField>
+        <sourceFormula>Available to Fulfill</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Available_to_Fulfill__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Available_to_Order__c</sourceField>
+        <sourceFormula>Available to Order</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Available_to_Order__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.On_Hand__c</sourceField>
+        <sourceFormula>On Hand</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.On_Hand__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>true</isSourceFormula>
+        <sourceField xsi:nil="true"/>
+        <sourceFormula>CONCAT(sourceField[&apos;Group&apos;],sourceField[&apos;SKU&apos;],sourceField[&apos;Last Modified Date&apos;])</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Location_Grp_Product_Inventory_Change_Id__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Group__c</sourceField>
+        <sourceFormula>Group</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Group__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Shared_Soft_Reserved__c</sourceField>
+        <sourceFormula>Shared Soft Reserved</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Shared_Soft_Reserved__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.SKU__c</sourceField>
+        <sourceFormula>SKU</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.SKU__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Is_Deleted__c</sourceField>
+        <sourceFormula>Is Deleted</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Is_Deleted__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Reserved__c</sourceField>
+        <sourceFormula>Reserved</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Reserved__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Safety_Stock_Count__c</sourceField>
+        <sourceFormula>Safety Stock Count</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Safety_Stock_Count__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Soft_Reserved__c</sourceField>
+        <sourceFormula>Soft Reserved</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Soft_Reserved__c</targetField>
+    </fieldSourceTargetMaps>
+    <fieldSourceTargetMaps>
+        <creationType>Custom</creationType>
+        <filterApplied>false</filterApplied>
+        <isSourceFormula>false</isSourceFormula>
+        <sourceField>GroupInventory_00DDn000005I4iI.Last_Modified_Date__c</sourceField>
+        <sourceFormula>Last Modified Date</sourceFormula>
+        <targetField>GroupInventory_00DDn000005I4iI__dll.Last_Modified_Date__c</targetField>
+    </fieldSourceTargetMaps>
+    <masterLabel>GroupInventory_00DDn000005I4iI_map_GroupInventory_00DDn000005I4iI_1753144172392</masterLabel>
+    <sourceObjectName>GroupInventory_00DDn000005I4iI</sourceObjectName>
+    <targetObjectName>GroupInventory_00DDn000005I4iI__dll</targetObjectName>
+</ObjectSourceTargetMap>

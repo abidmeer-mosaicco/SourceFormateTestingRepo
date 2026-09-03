@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_HarvestPeriod__c</fullName>
+    <description>This field is created  to check Harvest period.</description>
+    <label>Harvest Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Future</fullName>
+                <default>false</default>
+                <label>Future</label>
+            </value>
+            <value>
+                <fullName>Present</fullName>
+                <default>false</default>
+                <label>Present</label>
+            </value>
+            <value>
+                <fullName>Special</fullName>
+                <default>false</default>
+                <label>Special</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

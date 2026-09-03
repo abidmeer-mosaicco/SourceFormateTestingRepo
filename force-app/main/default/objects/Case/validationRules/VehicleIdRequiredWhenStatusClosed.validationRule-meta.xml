@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VehicleIdRequiredWhenStatusClosed</fullName>
+    <active>true</active>
+    <description>Vehicle ID is required when the Status is &apos;Closed&apos; or &apos;Pending Closure&apos; the associated Account is not a South American customer, and the Mode of Transportation is not &apos;Truck&apos;.</description>
+    <errorConditionFormula>AND(
+				NOT(
+								OR(
+												Account.BillingCountry = &quot;Brazil&quot;,
+												Account.BillingCountry = &quot;Paraguay&quot;
+								)
+				),
+				OR(
+								ISPICKVAL(Status, &quot;Closed&quot;),
+								ISPICKVAL(Status, &quot;Closure Pending&quot;)
+				),
+				NOT(
+								OR(
+												ISPICKVAL(Type, &quot;Master Data&quot;),
+												ISPICKVAL(Type, &quot;EDI&quot;)
+								)
+				),
+				NOT(
+								AND(
+												ISPICKVAL(PMC_SS_IssueReason__c, &quot;MDM Verification&quot;),
+												ISPICKVAL(Type, &quot;Internal&quot;)
+								)
+				),			
+				NOT(ISPICKVAL(PMC_SS_MOT__c, &quot;Truck&quot;)),
+				ISBLANK(PMC_SS_VehicleId__c),
+				RecordType.DeveloperName = &quot;PMC_SS_CaseGeneral&quot;
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_VehicleId__c</errorDisplayField>
+    <errorMessage>Vehicle ID is required to close your case.</errorMessage>
+</ValidationRule>

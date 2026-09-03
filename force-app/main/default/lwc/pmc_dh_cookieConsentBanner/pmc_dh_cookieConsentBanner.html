@@ -1,0 +1,20 @@
+<template>
+  <div class="cookie-consent-banner" if:true={openConsentModal}>
+    <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" padding="around-small">
+        <p class="cookie-title slds-m-bottom_small">{labels.CookieConsentHeaderLabel}</p>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="7"
+        padding="around-small">
+        <p class="cookie-consent-text"> {labels.CookieConsentMessageLabel}</p>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="5"
+        padding="around-small" class="cookie-consent-buttons">
+        <button class="slds-button slds-button_brand" title={labels.AcceptButtonLabel}
+          onclick={handleAccept}>{labels.AcceptButtonLabel}</button>
+        <button class="slds-button slds-button_outline-brand" title={labels.RejectButtonLabel}
+          onclick={handleReject}>{labels.RejectButtonLabel}</button>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>

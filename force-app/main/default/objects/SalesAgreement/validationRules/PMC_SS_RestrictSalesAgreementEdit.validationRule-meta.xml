@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictSalesAgreementEdit</fullName>
+    <active>true</active>
+    <description>Prevents user from editing a Sales Agreement if it is Under Revision or Approved.</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) , 
+OR( ISCHANGED(OwnerId),
+ISCHANGED(Name),
+ISCHANGED(StartDate),
+ISCHANGED(AccountId),
+ISCHANGED(ScheduleFrequency),
+ISCHANGED(ScheduleCount),
+ISCHANGED(CurrencyIsoCode),
+ISCHANGED(EndDate),
+ISCHANGED(ProductLevel),
+ISCHANGED(Description),
+ISCHANGED(ActualsCalculationMode),
+ISCHANGED(PMC_SS_UnitofMeasure__c),
+ISCHANGED(PMC_SS_AgreementType__c),
+ISCHANGED(PMC_SS_Pricing__c),
+ISCHANGED(PMC_SS_TotalPotentialIncentives__c),
+ISCHANGED(PMC_SS_TotalGrowthIncentives__c),
+ISCHANGED(PMC_SS_TotalExSpaceIncentives__c),
+ISCHANGED(PMC_SS_TotalVolumeIncentives__c),
+ISCHANGED(PMC_SS_PreviousStatus__c  ),
+ISCHANGED(PMC_SS_AgreementType__c ),
+ISCHANGED(PMC_SS_SalesAgreementExternalId__c )
+),
+NOT(OR(ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Not Submitted&apos;), ISPICKVAL(PMC_SS_ApprovalStatus__c,&apos;Denied&apos;)))
+)</errorConditionFormula>
+    <errorMessage>This Sales Agreement can’t be edited at this stage. Please reach out to your Salesforce Administrator for assistance.</errorMessage>
+</ValidationRule>

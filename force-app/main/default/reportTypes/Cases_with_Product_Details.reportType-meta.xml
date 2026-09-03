@@ -1,0 +1,2463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Case</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on Cases with Product Details</description>
+    <label>Cases with Product Details</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>24 Hour Notice</displayNameOverride>
+            <field>PMC_SS_24HourNotice__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Abatement Contract Number</displayNameOverride>
+            <field>PMC_SS_SNOW_AbatementContractNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accessorial Costs Detail</displayNameOverride>
+            <field>PMC_SS_AccessorialCostDetail__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accessorial Level 1 Costs</displayNameOverride>
+            <field>PMC_SS_AccessorialLevel1Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accessorial Level 2 Costs</displayNameOverride>
+            <field>PMC_SS_AccessorialLevel2Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accessorial Level 3 Costs</displayNameOverride>
+            <field>PMC_SS_AccessorialLevel3Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Type</displayNameOverride>
+            <field>PMC_SS_AccountType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Action Reason</displayNameOverride>
+            <field>PMC_SS_ActionReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actions To Resolve</displayNameOverride>
+            <field>PMC_SS_ActionsToResolve__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Action Token</displayNameOverride>
+            <field>PMC_SS_ActionToken__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Affected Part of Load</displayNameOverride>
+            <field>PMC_SS_AffectedPartofLoad__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Article Type</displayNameOverride>
+            <field>PMC_SS_ArticleType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Asset</displayNameOverride>
+            <field>Asset</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Assist Customer</displayNameOverride>
+            <field>PMC_SS_AssistCustomer__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>At Fault Party</displayNameOverride>
+            <field>PMC_SS_AtFaultParty__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bad Order</displayNameOverride>
+            <field>PMC_SS_BadOrder__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business</displayNameOverride>
+            <field>PMC_SS_SNOW_Business__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Hours</displayNameOverride>
+            <field>BusinessHours</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Currency</displayNameOverride>
+            <field>CurrencyIsoCode</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case ID</displayNameOverride>
+            <field>Id</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Case Number</displayNameOverride>
+            <field>CaseNumber</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Origin</displayNameOverride>
+            <field>Origin</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Reason</displayNameOverride>
+            <field>Reason</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Status</displayNameOverride>
+            <field>PMC_SS_CaseStatus__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Circularization Letter Details</displayNameOverride>
+            <field>PMC_SS_SNOW_CircularizationLetterDetails__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Circularization Letter Name</displayNameOverride>
+            <field>PMC_SS_SNOW_CircularizationLetterName__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Claim Payment Amount</displayNameOverride>
+            <field>PMC_SS_ClaimPaymentAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Denied</displayNameOverride>
+            <field>PMC_SS_ClientDenied__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed</displayNameOverride>
+            <field>IsClosed</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed When Created</displayNameOverride>
+            <field>IsClosedOnCreate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Comment</displayNameOverride>
+            <field>PMC_SS_Comment__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Information On-site</displayNameOverride>
+            <field>PMC_SS_ContactInformationOnSite_c__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Name</displayNameOverride>
+            <field>Contact</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract</displayNameOverride>
+            <field>PMC_SS_Contract__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Amendment Justification</displayNameOverride>
+            <field>PMC_SS_ContractAmendmentJustificationVal__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Amendment Type</displayNameOverride>
+            <field>PMC_SS_ContractAmendmentType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Cancellation</displayNameOverride>
+            <field>PMC_SS_ContractCancellation__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Cancellation Sub Reason</displayNameOverride>
+            <field>PMC_SS_ContractCancellationSubReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Value</displayNameOverride>
+            <field>PMC_SS_SNOW_ContractValue__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Corrected Weight</displayNameOverride>
+            <field>PMC_SS_CorrectedWeight__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cost Per Day</displayNameOverride>
+            <field>PMC_SS_CostPerDay__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CPR</displayNameOverride>
+            <field>PMC_SS_SNOW_CPR__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit/Debit Amount</displayNameOverride>
+            <field>PMC_SS_CreditDebitAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Memo Number</displayNameOverride>
+            <field>PMC_SS_CreditMemoNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Destination(Location)</displayNameOverride>
+            <field>PMC_SS_CurrentDestinationLocation__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Destination(Ship To)</displayNameOverride>
+            <field>PMC_SS_CurrentDestinationShipTo__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Location</displayNameOverride>
+            <field>PMC_SS_CurrentLocation__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Code</displayNameOverride>
+            <field>PMC_SS_SNOW_CustomerCode__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Credits Detail</displayNameOverride>
+            <field>PMC_SS_CustomerCreditsDetail__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Credits Level 1</displayNameOverride>
+            <field>PMC_SS_CustomerCreditsLevel1__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Credits Level 2</displayNameOverride>
+            <field>PMC_SS_CustomerCreditsLevel2__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Credits Level 3</displayNameOverride>
+            <field>PMC_SS_CustomerCreditsLevel3__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Impact</displayNameOverride>
+            <field>PMC_SS_CustomerImpact__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Impacted</displayNameOverride>
+            <field>PMC_SS_CustomerImpacted__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Incurred Costs Detail</displayNameOverride>
+            <field>PMC_SS_CustomerIncurredCostsDetail__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Incurred Level 1 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerIncurredLevel1Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Incurred Level 2 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerIncurredLevel2Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Incurred Level 3 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerIncurredLevel3Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Waived Costs Details</displayNameOverride>
+            <field>PMC_SS_CustomerWaivedCostsDetails__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Waived Level 1 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerWaivedLevel1Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Waived Level 2 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerWaivedLevel2Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Waived Level 3 Cost</displayNameOverride>
+            <field>PMC_SS_CustomerWaivedLevel3Cost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date/Time Closed</displayNameOverride>
+            <field>ClosedDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date/Time Opened</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days of Demurrage</displayNameOverride>
+            <field>PMC_SS_DaysOfDemurrage_c__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Debit Amount</displayNameOverride>
+            <field>PMC_SS_DebitAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Delivery</displayNameOverride>
+            <field>PMC_SS_Delivery__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Document</displayNameOverride>
+            <field>PMC_SS_Document__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dollar Amount</displayNameOverride>
+            <field>PMC_SS_DollarAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Endorsement Value</displayNameOverride>
+            <field>PMC_SS_SNOW_EndorsementValue__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entitlement Name</displayNameOverride>
+            <field>Entitlement</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entitlement Process End Time</displayNameOverride>
+            <field>SlaExitDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Entitlement Process Start Time</displayNameOverride>
+            <field>SlaStartDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Equipment Inspected?</displayNameOverride>
+            <field>PMC_SS_EquipmentInspected__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Escalated</displayNameOverride>
+            <field>IsEscalated</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Exact Date To Be Paid</displayNameOverride>
+            <field>PMC_SS_SNOW_ExactDateToBePaid__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Final Date</displayNameOverride>
+            <field>PMC_SS_SNOW_FinalDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Financial Operation Value</displayNameOverride>
+            <field>PMC_SS_SNOW_FinancialOperationValue__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fiori Connection</displayNameOverride>
+            <field>PMC_SS_HyperLinkFormula__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Date</displayNameOverride>
+            <field>PMC_SS_IncidentDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Frequency</displayNameOverride>
+            <field>PMC_SS_IncidentFrequency__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Probability</displayNameOverride>
+            <field>PMC_SS_IncidentProbability__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Quantity</displayNameOverride>
+            <field>PMC_SS_IncidentQuantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Severity</displayNameOverride>
+            <field>PMC_SS_IncidentSeverity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Incident Tons K1% / K2%</displayNameOverride>
+            <field>PMC_SS_IncidentTonsK1K2__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Date</displayNameOverride>
+            <field>PMC_SS_SNOW_InitialDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Initial Request Period</displayNameOverride>
+            <field>PMC_SS_SNOW_InitialRequestPeriod__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Internal / External Impact</displayNameOverride>
+            <field>PMC_SS_InternalExternalImpact__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice</displayNameOverride>
+            <field>PMC_SS_Invoice__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Delta Cancel</displayNameOverride>
+            <field>PMC_SS_CancelAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Rebill Amount</displayNameOverride>
+            <field>PMC_SS_RebillAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Case Owner Manager</displayNameOverride>
+            <field>PMC_SS_IsCaseOwnerManager__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Product Usable?</displayNameOverride>
+            <field>PMC_SS_IsProductUsable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Issue Reason</displayNameOverride>
+            <field>PMC_SS_IssueReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Language</displayNameOverride>
+            <field>Language</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead</displayNameOverride>
+            <field>PMC_SS_Lead__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loading Date</displayNameOverride>
+            <field>PMC_SS_LoadingDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Location</displayNameOverride>
+            <field>PMC_SS_Location__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost Revenue Detail</displayNameOverride>
+            <field>PMC_SS_LostRevenueDetail__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost Revenue Level 1</displayNameOverride>
+            <field>PMC_SS_LostRevenueLevel1__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost Revenue Level 2</displayNameOverride>
+            <field>PMC_SS_LostRevenueLevel2__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost Revenue Level 3</displayNameOverride>
+            <field>PMC_SS_LostRevenueLevel3__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Master Data Rejection Details</displayNameOverride>
+            <field>PMC_SS_MasterDataRejectionDetails__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MDM Status</displayNameOverride>
+            <field>PMC_SS_MDMStatus__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Milestone Is Nearby</displayNameOverride>
+            <field>PMC_SS_MilestoneIsNearby__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Milestone Is Violated</displayNameOverride>
+            <field>PMC_SS_MilestoneIsViolated__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mode of Transportation</displayNameOverride>
+            <field>PMC_SS_MOT__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mortage</displayNameOverride>
+            <field>PMC_SS_SNOW_Mortage__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mosaic Paying / Receiving Company</displayNameOverride>
+            <field>PMC_SS_SNOW_MosaicPayingReceivingCompany__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>National Director</displayNameOverride>
+            <field>PMC_SS_NationalDirector__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>New Contract</displayNameOverride>
+            <field>PMC_SS_NewContract__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>New Destination(Location)</displayNameOverride>
+            <field>PMC_SS_NewDestinationLocation__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>New Destination(Ship To)</displayNameOverride>
+            <field>PMC_SS_NewDestinationShipTo__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Invoice Delta</displayNameOverride>
+            <field>PMC_SS_InvoiceDifference__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Nitrogen %</displayNameOverride>
+            <field>PMC_SS_Nitrogen__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Operations Reportable?</displayNameOverride>
+            <field>PMC_SS_OperationsReportable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order</displayNameOverride>
+            <field>PMC_SS_Order__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Classification</displayNameOverride>
+            <field>PMC_SS_OrderClassification__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Number or Contract Number</displayNameOverride>
+            <field>PMC_SS_SNOW_OrderNumberorContractNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Summary</displayNameOverride>
+            <field>PMC_SS_OrderSummary__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Original Contract</displayNameOverride>
+            <field>PMC_SS_OriginalContract__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Original Invoice Amount</displayNameOverride>
+            <field>PMC_SS_OriginalInvoiceAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Original Weight</displayNameOverride>
+            <field>PMC_SS_OriginalWeight__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other At Fault Party</displayNameOverride>
+            <field>PMC_SS_OtherAtFaultParty__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Issue Reason</displayNameOverride>
+            <field>PMC_SS_OtherIssueReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Re-Open Reason</displayNameOverride>
+            <field>PMC_SS_OtherReOpenReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner’s Country</displayNameOverride>
+            <field>PMC_SS_OwnersCountry__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Case</displayNameOverride>
+            <field>Parent</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payee Name</displayNameOverride>
+            <field>PMC_SS_SNOW_PayeeName__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Request Type</displayNameOverride>
+            <field>PMC_SS_PaymentRequestType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PGI Date</displayNameOverride>
+            <field>PMC_SS_PGIDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Phosphorous %</displayNameOverride>
+            <field>PMC_SS_Phosphorous__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Plant</displayNameOverride>
+            <field>PMC_SS_Plant__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Point of Failure Sub-Category</displayNameOverride>
+            <field>PMC_SS_PointofFailureSubCategory__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Post Investigation Cause</displayNameOverride>
+            <field>PMC_SS_PostInvestigationCause__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Potassium %</displayNameOverride>
+            <field>PMC_SS_Potassium__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Priority</displayNameOverride>
+            <field>Priority</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product</displayNameOverride>
+            <field>Product</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Description</displayNameOverride>
+            <field>PMC_SS_ProductDescription__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Production Facility</displayNameOverride>
+            <field>PMC_SS_ProductionFacility__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Issue</displayNameOverride>
+            <field>PMC_SS_ProductIssue__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (City)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__City__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (Country/Territory)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__CountryCode__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (Geocode Accuracy)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__GeocodeAccuracy__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (Latitude)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__Latitude__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (Longitude)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__Longitude__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (State/Province)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__StateCode__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (Street)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__Street__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Location (ZIP/Postal Code)</displayNameOverride>
+            <field>PMC_SS_ProductLocation__PostalCode__s</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Number</displayNameOverride>
+            <field>PMC_SS_ProductNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Segregated</displayNameOverride>
+            <field>PMC_SS_ProductSegregated__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Product Type</displayNameOverride>
+            <field>PMC_SS_ProductType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Program</displayNameOverride>
+            <field>PMC_SS_SNOW_Program__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quality Action Summary</displayNameOverride>
+            <field>PMC_SS_QualityActionSummary__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quality Findings Summary</displayNameOverride>
+            <field>PMC_SS_QualityFindingsSummary__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quality Status</displayNameOverride>
+            <field>PMC_SS_QualityStatus__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity</displayNameOverride>
+            <field>PMC_SS_Quantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quick Customer Satisfaction</displayNameOverride>
+            <field>PMC_SS_QuickCustomerSatisfaction__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ready For Deletion</displayNameOverride>
+            <field>PMC_SS_ReadyForDeletion__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reason</displayNameOverride>
+            <field>PMC_SS_SNOW_Reason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Recipients of Circularization Letter</displayNameOverride>
+            <field>PMC_SS_SNOW_RecipientsofCirLetter__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Regional Director</displayNameOverride>
+            <field>PMC_SS_RegionalDirector__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Regional Manager</displayNameOverride>
+            <field>PMC_SS_RegionalManager__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Re-Open Reason</displayNameOverride>
+            <field>PMC_SS_ReOpenReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Request Type</displayNameOverride>
+            <field>PMC_SS_SNOW_RequestType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Return Amount</displayNameOverride>
+            <field>PMC_SS_ReturnAmount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Return Quantity</displayNameOverride>
+            <field>PMC_SS_ReturnQuantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Root Cause Analysis</displayNameOverride>
+            <field>PMC_SS_RootCauseAnalysis__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Route to Quality</displayNameOverride>
+            <field>PMC_SS_RouteToQuality__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Samples Available?</displayNameOverride>
+            <field>PMC_SS_SamplesAvailable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Customer Number</displayNameOverride>
+            <field>PMC_SS_SAP_CustomerNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP ID</displayNameOverride>
+            <field>PMC_SS_SAPID__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Invoice Number</displayNameOverride>
+            <field>PMC_SS_SAPInvoiceNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SAP Order Number</displayNameOverride>
+            <field>PMC_SS_SAPOrderNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Segment Manager</displayNameOverride>
+            <field>PMC_SS_SNOW_SegmentManager__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Contract</displayNameOverride>
+            <field>ServiceContract</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Now Status</displayNameOverride>
+            <field>PMC_SS_SNOW_Status__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Now Status Label</displayNameOverride>
+            <field>PMC_SS_SNOW_StatusLabel__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ServiceNow Status Value</displayNameOverride>
+            <field>PMC_SS_SNOW_StatusValue__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ServiceNow Ticket Link</displayNameOverride>
+            <field>PMC_SS_SNOW_TicketLink__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ServiceNow Ticket Number</displayNameOverride>
+            <field>PMC_SS_SNOW_ServiceNowTicketNumber__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ServiceNow Ticket Sync Id</displayNameOverride>
+            <field>PMC_SS_SNOW_ServiceNowTicketSyncId__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Now Ticket Type</displayNameOverride>
+            <field>PMC_SS_ServiceNowTicketType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship From</displayNameOverride>
+            <field>PMC_SS_ShipFrom__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Shipment Date</displayNameOverride>
+            <field>PMC_SS_ShipmentDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship To</displayNameOverride>
+            <field>PMC_SS_ShipToAccount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SMS Opt-out</displayNameOverride>
+            <field>PMC_SS_SMSOptOut__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sold To</displayNameOverride>
+            <field>PMC_SS_SoldToAccount__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Solution Type</displayNameOverride>
+            <field>PMC_SS_SolutionType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Status</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stock out/Plant Outage Contracts</displayNameOverride>
+            <field>PMC_SS_StockOutPlantOutageContracts__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stock out/Plant Outage End Date</displayNameOverride>
+            <field>PMC_SS_StockOutPlantOutageEndDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stock out/Plant Outage Orders</displayNameOverride>
+            <field>PMC_SS_StockOutPlantOutageOrders__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stock out/Plant Outage Start Date</displayNameOverride>
+            <field>PMC_SS_StockOutPlantOutageStartDate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stock - Out Reason</displayNameOverride>
+            <field>PMC_SS_StockOutReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stopped</displayNameOverride>
+            <field>IsStopped</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stopped Since</displayNameOverride>
+            <field>StopStartDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>STO Ship To</displayNameOverride>
+            <field>PMC_SS_ShipTo__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Subject</displayNameOverride>
+            <field>Subject</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Suboptimal Costs Details</displayNameOverride>
+            <field>PMC_SS_SuboptimalCostsDetails__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Suboptimal Level 1 Costs</displayNameOverride>
+            <field>PMC_SS_SuboptimalLevel1Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Suboptimal Level 2 Costs</displayNameOverride>
+            <field>PMC_SS_SuboptimalLevel2Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Suboptimal Level 3 Costs</displayNameOverride>
+            <field>PMC_SS_SuboptimalLevel3Costs__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tons</displayNameOverride>
+            <field>PMC_SS_Ton__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Cost</displayNameOverride>
+            <field>PMC_SS_TotalCost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Score</displayNameOverride>
+            <field>PMC_SS_TotalScore__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Tonnage Impacted</displayNameOverride>
+            <field>PMC_SS_TotalTonnageImpacted__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unit of Measurement Conversion?</displayNameOverride>
+            <field>PMC_SS_SNOW_UnitofMeasurementConversion__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>UOM</displayNameOverride>
+            <field>PMC_SS_UOM__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vehicle Id</displayNameOverride>
+            <field>PMC_SS_VehicleId__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Warranty Type</displayNameOverride>
+            <field>PMC_SS_SNOW_WarrantyType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Web Company</displayNameOverride>
+            <field>SuppliedCompany</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Web Email</displayNameOverride>
+            <field>SuppliedEmail</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Web Name</displayNameOverride>
+            <field>SuppliedName</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Web Phone</displayNameOverride>
+            <field>SuppliedPhone</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weight Delta</displayNameOverride>
+            <field>PMC_SS_WeightDelta__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Offspec Sale</displayNameOverride>
+            <field>PMC_SS_Offspec_Sale__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Issue_Sub_Reason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Lot__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Packing_Sent_to_Analysis__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Easy_Checklist_Sent__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Date_Investigation_Sent_to_CS__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Sample_Post_Office_Code__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Total_Cost_to_Satisfy__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Purchase_Order__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_QuantityClaimed__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_DateMosaicVisitedCustomer__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_InvestigationSummary__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_PostInvestigationQuantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_QualityCommitteesTechAnalysis__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_ActionPlanforResolution__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_SolutionGiventoCustomer__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_CostCenter__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_ProductCost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_CreditCost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_FreightCost__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_EvidenceConfirmed__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_AccountOwner__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_CostProvision__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AccountManagerManager__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Link__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_CPQ_MasterProduct__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Sales_Channel__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>PMC_SS_Product_Group__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.PMC_SS_AccountOwnerFullName__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.PMC_SS_SalesOffice__c</field>
+            <table>Case</table>
+        </columns>
+        <masterLabel>Cases</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Zinc [Zn] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Zinc__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Active</displayNameOverride>
+            <field>Product.IsActive</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Archived</displayNameOverride>
+            <field>Product.IsArchived</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Asset Amendment Behavior</displayNameOverride>
+            <field>Product.SBQQ__AssetAmendmentBehavior__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Billing Frequency</displayNameOverride>
+            <field>Product.SBQQ__BillingFrequency__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Block Pricing Field</displayNameOverride>
+            <field>Product.SBQQ__BlockPricingField__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Business Application</displayNameOverride>
+            <field>Product.PMC_CPQ_BusinessApplication__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Archived</displayNameOverride>
+            <field>Product.PMC_CPQ_IsArchived__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Batch Quantity</displayNameOverride>
+            <field>Product.SBQQ__BatchQuantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : BA</displayNameOverride>
+            <field>Product.PMC_CPQ_Business_Application__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Asset Conversion</displayNameOverride>
+            <field>Product.SBQQ__AssetConversion__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Boron [B] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Boron__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Industry</displayNameOverride>
+            <field>Product.PMC_CPQ_Industry__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Business Brand</displayNameOverride>
+            <field>Product.BusinessBrand</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Billing Type</displayNameOverride>
+            <field>Product.SBQQ__BillingType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Is Processed</displayNameOverride>
+            <field>Product.PMC_DH_isProcessed__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Netback Material</displayNameOverride>
+            <field>Product.PMC_CPQ_NetbackMaterial__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Model Year</displayNameOverride>
+            <field>Product.ModelYear</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Iron [FE] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Iron__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Calcium [Ca] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Calcium__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Family</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductFamily__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Classification</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductClassification__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Class</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductTypes__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Percent Of Total Constraint</displayNameOverride>
+            <field>Product.SBQQ__DynamicPricingConstraint__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Description</displayNameOverride>
+            <field>Product.Description</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Concentration / Composition</displayNameOverride>
+            <field>Product.PMC_CPQ_Composition__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Nitrogen(N)</displayNameOverride>
+            <field>Product.PMC_DH_Nitrogen__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Code</displayNameOverride>
+            <field>Product.ProductCode</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product ID</displayNameOverride>
+            <field>Product.Id</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Currency</displayNameOverride>
+            <field>Product.CurrencyIsoCode</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Magnesium [Mg] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Magnesium__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Chlorine [Cl] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Chlorine__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Phosphorous (P)</displayNameOverride>
+            <field>Product.PMC_DH_Phosphorous__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Display URL</displayNameOverride>
+            <field>Product.DisplayUrl</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Molybdenum [MO] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Molybdenum__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Name</displayNameOverride>
+            <field>Product.Name</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : PMC DH Keywords</displayNameOverride>
+            <field>Product.PMC_DH_Keywords__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Sales Area</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductSalesArea__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Picture Id</displayNameOverride>
+            <field>Product.SBQQ__ProductPictureID__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Group</displayNameOverride>
+            <field>Product.PMC_CPQ_MaterialGroup__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Family</displayNameOverride>
+            <field>Product.Family</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Phosphorous %</displayNameOverride>
+            <field>Product.PMC_CPQ_Phosphorous__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Percent Of Total Target</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionTarget__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Id</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductId__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : PMC DH ProductComposition</displayNameOverride>
+            <field>Product.PMC_DH_ProductComposition__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Optional</displayNameOverride>
+            <field>Product.SBQQ__Optional__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Non Discountable</displayNameOverride>
+            <field>Product.SBQQ__NonDiscountable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Component</displayNameOverride>
+            <field>Product.SBQQ__Component__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Potassium (K)</displayNameOverride>
+            <field>Product.PMC_DH_Potassium__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Price Editable</displayNameOverride>
+            <field>Product.SBQQ__PriceEditable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Pricing Method</displayNameOverride>
+            <field>Product.SBQQ__PricingMethod__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Pricing Guidance</displayNameOverride>
+            <field>Product.SBQQ__PricingGuidance__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Serialized</displayNameOverride>
+            <field>Product.IsSerialized</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Seedz Points</displayNameOverride>
+            <field>Product.PMC_CPQ_SeedzPoints__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Alias</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductAlias__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Potassium %</displayNameOverride>
+            <field>Product.PMC_CPQ_Potassium__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Term Discount Schedule</displayNameOverride>
+            <field>Product.SBQQ__TermDiscountSchedule__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Shipping Charge Not Applicable</displayNameOverride>
+            <field>Product.IsShippingChargeNotApplicable</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Shipping Weight</displayNameOverride>
+            <field>Product.ShippingWeight</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Pricing Method Editable</displayNameOverride>
+            <field>Product.SBQQ__PricingMethodEditable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Class</displayNameOverride>
+            <field>Product.ProductClass</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Universal Product Code</displayNameOverride>
+            <field>Product.UniversalProductCode</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Upgrade Ratio</displayNameOverride>
+            <field>Product.SBQQ__UpgradeRatio__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Upgrade Source</displayNameOverride>
+            <field>Product.SBQQ__UpgradeSource__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Sell only with other products</displayNameOverride>
+            <field>Product.IsSoldOnlyWithOtherProds</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Silicone [SI] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Silicone__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Transfer Record Mode</displayNameOverride>
+            <field>Product.TransferRecordMode</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Upgrade Credit</displayNameOverride>
+            <field>Product.SBQQ__UpgradeCredit__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Shipping Weight Unit Of Measure</displayNameOverride>
+            <field>Product.ShippingWeightUnitOfMeasure</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Sort Order</displayNameOverride>
+            <field>Product.SBQQ__SortOrder__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Upgrade Target</displayNameOverride>
+            <field>Product.SBQQ__UpgradeTarget__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Segment</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductSegment__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Packaging Type</displayNameOverride>
+            <field>Product.PMC_CPQ_PackageType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Category</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductCategory__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product SKU</displayNameOverride>
+            <field>Product.StockKeepingUnit</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Subscription Pricing</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionPricing__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Specifications</displayNameOverride>
+            <field>Product.SBQQ__Specifications__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : PMC DH Synonyms</displayNameOverride>
+            <field>Product.PMC_DH_Synonyms__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : New Quote Group</displayNameOverride>
+            <field>Product.SBQQ__NewQuoteGroup__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Subscription Term</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionTerm__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Taxable</displayNameOverride>
+            <field>Product.SBQQ__Taxable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Tax code</displayNameOverride>
+            <field>Product.SBQQ__TaxCode__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Subscription Type</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Sulfur [S] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Sulfur__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Nitrogen %</displayNameOverride>
+            <field>Product.PMC_CPQ_Nitrogen__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Term Discount Level</displayNameOverride>
+            <field>Product.SBQQ__TermDiscountLevel__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Quantity Editable</displayNameOverride>
+            <field>Product.SBQQ__QuantityEditable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Sub Family</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductSubFamily__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Quantity Unit Of Measure</displayNameOverride>
+            <field>Product.PMC_CPQ_QuantityUnitOfMeasure__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Option Layout</displayNameOverride>
+            <field>Product.SBQQ__OptionLayout__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Short Description</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductShortDescription__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Type</displayNameOverride>
+            <field>Product.Type</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Non Partner Discountable</displayNameOverride>
+            <field>Product.SBQQ__NonPartnerDiscountable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Quantity Unit Of Measure</displayNameOverride>
+            <field>Product.QuantityUnitOfMeasure</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : SAP Product Code</displayNameOverride>
+            <field>Product.PMC_CPQ_SAPProductCode__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Status</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductStatus__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Seasonality</displayNameOverride>
+            <field>Product.PMC_CPQ_Seasonality__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Renewal Product</displayNameOverride>
+            <field>Product.SBQQ__RenewalProduct__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Option Selection Method</displayNameOverride>
+            <field>Product.SBQQ__OptionSelectionMethod__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Region</displayNameOverride>
+            <field>Product.PMC_CPQ_Region__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Quantity Scale</displayNameOverride>
+            <field>Product.SBQQ__QuantityScale__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Sales Org</displayNameOverride>
+            <field>Product.PMC_CPQ_SalesOrg__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Type</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Percent Of Total (%)</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionPercent__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Percent Of Total Category</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionCategory__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Last Modified Date</displayNameOverride>
+            <field>Product.LastModifiedDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Record Type</displayNameOverride>
+            <field>Product.RecordType</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Product Sales Org</displayNameOverride>
+            <field>Product.PMC_CPQ_ProductSalesOrg__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Event</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationEvent__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Location Name</displayNameOverride>
+            <field>Product.PMC_CPQ_LocationName__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Pack Type</displayNameOverride>
+            <field>Product.PMC_CPQ_PackType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Last Modified By</displayNameOverride>
+            <field>Product.LastModifiedBy</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Enable Large Configuration</displayNameOverride>
+            <field>Product.SBQQ__EnableLargeConfiguration__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Percent Of Total Base</displayNameOverride>
+            <field>Product.SBQQ__SubscriptionBase__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Manganese [MN] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Manganese__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Exclude From Opportunity</displayNameOverride>
+            <field>Product.SBQQ__ExcludeFromOpportunity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Field Set</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationFieldSet__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Location</displayNameOverride>
+            <field>Product.PMC_CPQ_Location__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Lock Description</displayNameOverride>
+            <field>Product.SBQQ__DescriptionLocked__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Externally Configurable</displayNameOverride>
+            <field>Product.SBQQ__ExternallyConfigurable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Model Name</displayNameOverride>
+            <field>Product.ModelName</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Manufacturer Part Number</displayNameOverride>
+            <field>Product.ManufacturerPartNumber</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Make Name</displayNameOverride>
+            <field>Product.MakeName</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Type</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configured Code Pattern</displayNameOverride>
+            <field>Product.SBQQ__ConfiguredCodePattern__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configure During Sale</displayNameOverride>
+            <field>Product.ConfigureDuringSale</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Include In Percent Of Total</displayNameOverride>
+            <field>Product.SBQQ__IncludeInMaintenance__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Hide Price in Search Results</displayNameOverride>
+            <field>Product.SBQQ__HidePriceInSearchResults__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Generate Contracted Price</displayNameOverride>
+            <field>Product.SBQQ__GenerateContractedPrice__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Exclude From Percent Of Total</displayNameOverride>
+            <field>Product.SBQQ__ExcludeFromMaintenance__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Has Configuration Attributes</displayNameOverride>
+            <field>Product.SBQQ__HasConfigurationAttributes__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : External ID</displayNameOverride>
+            <field>Product.ExternalId</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Charge Type</displayNameOverride>
+            <field>Product.SBQQ__ChargeType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Hidden</displayNameOverride>
+            <field>Product.SBQQ__Hidden__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Crop Type</displayNameOverride>
+            <field>Product.PMC_CPQ_CropType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Has Consumption Schedules</displayNameOverride>
+            <field>Product.SBQQ__HasConsumptionSchedule__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Granular Type</displayNameOverride>
+            <field>Product.PMC_CPQ_GranularType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Inactive Reason</displayNameOverride>
+            <field>Product.PMC_CPQ_InactiveReason__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Created Date</displayNameOverride>
+            <field>Product.CreatedDate</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Cobalt [CO] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Cobalt__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Customer Community Availability</displayNameOverride>
+            <field>Product.SBQQ__CustomerCommunityAvailability__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Fields</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationFields__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Crop Type</displayNameOverride>
+            <field>Product.PMC_DH_CropType__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Compound Discount (%)</displayNameOverride>
+            <field>Product.SBQQ__CompoundDiscountRate__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Cost Schedule</displayNameOverride>
+            <field>Product.SBQQ__CostSchedule__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Deleted</displayNameOverride>
+            <field>Product.PMC_CPQ_IsDeleted__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Custom Configuration Required</displayNameOverride>
+            <field>Product.SBQQ__CustomConfigurationRequired__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Form Title</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationFormTitle__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Default Pricing Table</displayNameOverride>
+            <field>Product.SBQQ__DefaultPricingTable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configuration Validator</displayNameOverride>
+            <field>Product.SBQQ__ConfigurationValidator__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Configured Description Pattern</displayNameOverride>
+            <field>Product.SBQQ__ConfiguredDescriptionPattern__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Copper [CU] %</displayNameOverride>
+            <field>Product.PMC_CPQ_Copper__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Discount Schedule</displayNameOverride>
+            <field>Product.SBQQ__DiscountSchedule__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Cost Editable</displayNameOverride>
+            <field>Product.SBQQ__CostEditable__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Default Quantity</displayNameOverride>
+            <field>Product.SBQQ__DefaultQuantity__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Created By</displayNameOverride>
+            <field>Product.CreatedBy</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Custom Configuration Page</displayNameOverride>
+            <field>Product.SBQQ__CustomConfigurationPage__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Disable Reconfiguration</displayNameOverride>
+            <field>Product.SBQQ__ReconfigurationDisabled__c</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case : Product : Discount Category</displayNameOverride>
+            <field>Product.SBQQ__DiscountCategory__c</field>
+            <table>Case</table>
+        </columns>
+        <masterLabel>Products</masterLabel>
+    </sections>
+</ReportType>

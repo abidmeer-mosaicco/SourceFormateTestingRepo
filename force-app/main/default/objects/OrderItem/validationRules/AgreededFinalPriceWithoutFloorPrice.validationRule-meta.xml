@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AgreededFinalPriceWithoutFloorPrice</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+AND(
+NOT($Profile.Name = &quot;System Administrator&quot;),
+NOT($Profile.Name = &quot;Administrador do sistema&quot;),
+NOT($Profile.Name = &quot;API Only profile&quot;),
+NOT($Profile.Name = &quot;Salesforce API Only System Integrations&quot;),
+NOT( CONTAINS($Profile.Name,&apos;Digital Hub&apos;))
+),
+ISCHANGED( PMC_CPQ_FinalAgreedPrice__c ),
+ISBLANK( PMC_CPQ_Floorprice__c )
+)</errorConditionFormula>
+    <errorDisplayField>PMC_CPQ_FinalAgreedPrice__c</errorDisplayField>
+    <errorMessage>You should run &quot;Get Prices&quot; again before setting the Final Agreeded Price.</errorMessage>
+</ValidationRule>

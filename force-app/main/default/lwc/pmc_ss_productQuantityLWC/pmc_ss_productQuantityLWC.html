@@ -1,0 +1,27 @@
+<template>
+    <lightning-datatable data={lstRecords} 
+    columns={fieldColumns} 
+    key-field="id"
+    onsave={handleSave}
+    oncancel={handleCancel}
+    oncellchange={handleChange}
+    draft-values={lstSaveDraftValues} 
+    hide-checkbox-column
+    show-row-number-column >
+
+    </lightning-datatable>
+  
+    <template if:true={boolShowError}>
+        <label style="color:red;" id="idErrorLabel">
+            Please enter a valid quantity
+        </label>
+    </template>
+
+
+    <div>
+        <lightning-button label="Next" onclick={handleNext} variant="brand" disabled={boolShowNext}>
+        </lightning-button>
+    </div>
+    
+    
+    </template>

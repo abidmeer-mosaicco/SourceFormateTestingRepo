@@ -1,0 +1,31 @@
+<template>
+  <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+  
+  <h3 class="slds-m-bottom_large slds-m-top_medium">{labels.pmc_quoteCheckoutFlow_title}</h3>
+
+  <c-pmc_dh_quote-checkout-steps-tracker steps-data={stepsData}>
+  </c-pmc_dh_quote-checkout-steps-tracker>
+
+  <template if:true={checkoutFlowHandler.isDeliveryInfo}>
+    <c-pmc_dh_quote-checkout-delivery-info onbuttonclick={onClickHandler}>
+    </c-pmc_dh_quote-checkout-delivery-info>
+  </template>
+
+  <template if:true={checkoutFlowHandler.isPaymentInfo}>
+    <c-pmc_dh_quote-checkout-payment-info onbuttonclick={onClickHandler} payment-info-obj={paymentInfoObj}
+      cart-id={cartId} product-families-list={lstProductFamilies}>
+    </c-pmc_dh_quote-checkout-payment-info>
+  </template>
+
+  <template if:true={checkoutFlowHandler.isRequestReview}>
+    <c-pmc_dh_quote-checkout-request-review onbuttonclick={onClickHandler} payment-info-obj={paymentInfoObj}
+      product-info-array={productInfoArray} cart-id={cartId} quote-info={quoteInfo}>
+    </c-pmc_dh_quote-checkout-request-review>
+  </template>
+
+  <template if:true={checkoutFlowHandler.isRequestSubmitted}>
+    <c-pmc_dh_quote-checkout-request-submitted quote-info={quoteInfo}>
+    </c-pmc_dh_quote-checkout-request-submitted>
+  </template>
+
+</template>

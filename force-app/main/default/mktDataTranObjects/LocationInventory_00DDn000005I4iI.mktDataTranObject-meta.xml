@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MktDataTranObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connector>Omnichannel_Inventory_00DSu000008XUabMAS</connector>
+    <creationType>Custom</creationType>
+    <dataSource>Omnichannel_Inventory_00DDn000005I4iIMAS</dataSource>
+    <dataSourceObject>LocationInventory_00DDn000005I4iI</dataSourceObject>
+    <masterLabel>LocationInventory_00DDn000005I4iI</masterLabel>
+    <mktDataTranFields>
+        <fullName>Available_to_Fulfill</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>Available to Fulfill</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Available to Fulfill</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>6</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Available_to_Order</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>Available to Order</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Available to Order</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>5</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Effective_Date</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd</dateFormat>
+        <externalName>Effective Date</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Effective Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>4</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Is_Deleted</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Is Deleted</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Is Deleted</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>10</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Last_Modified_Date</fullName>
+        <creationType>Custom</creationType>
+        <datatype>F</datatype>
+        <dateFormat>yyyy-MM-dd</dateFormat>
+        <externalName>Last Modified Date</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Last Modified Date</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>9</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Location</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Location</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Location</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Location_Product_Inventory_Change_Id</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>Location_Product_Inventory_Change_Id__c</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Location_Product_Inventory_Change_Id</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>0</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>On_Hand</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>On Hand</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>On Hand</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>2</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Reserved</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>Reserved</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Reserved</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>8</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Safety_Stock_Count</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>Safety Stock Count</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Safety Stock Count</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>3</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>SKU</fullName>
+        <creationType>Custom</creationType>
+        <datatype>S</datatype>
+        <externalName>SKU</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>SKU</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>1</sequence>
+    </mktDataTranFields>
+    <mktDataTranFields>
+        <fullName>Soft_Reserved</fullName>
+        <creationType>Custom</creationType>
+        <datatype>N</datatype>
+        <externalName>Soft Reserved</externalName>
+        <isDataRequired>false</isDataRequired>
+        <length>0</length>
+        <masterLabel>Soft Reserved</masterLabel>
+        <precision>0</precision>
+        <primaryIndexOrder>0</primaryIndexOrder>
+        <scale>0</scale>
+        <sequence>7</sequence>
+    </mktDataTranFields>
+    <objectCategory>Salesforce_SFDCReferenceModel_0_93.Related</objectCategory>
+</MktDataTranObject>

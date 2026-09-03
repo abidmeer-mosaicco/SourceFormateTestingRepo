@@ -1,0 +1,564 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "604d60d9-6a0e-48f1-9248-83abaff19a30",
+  "label" : "Promoción de la cultura",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2a429aec-2552-482d-89e1-4da00962b1a9",
+          "columns" : [ {
+            "UUID" : "08735a02-8d66-4e32-8f19-cab9b30621f5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2a429aec-2552-482d-89e1-4da00962b1a9",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "23612bc3-32f5-4fe4-b520-b815746cf141",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "08735a02-8d66-4e32-8f19-cab9b30621f5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ec7334d1-545b-416e-a013-81f5c81a56ca",
+          "columns" : [ {
+            "UUID" : "b72eda6f-35a5-423f-9bc3-6835c18c350f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ec7334d1-545b-416e-a013-81f5c81a56ca",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP17"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "2a0af190-a556-4cdd-a00c-d9eac8b92322",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b72eda6f-35a5-423f-9bc3-6835c18c350f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "01724e69-f9c6-4d30-9492-d59f50204724",
+          "columns" : [ {
+            "UUID" : "8f2997d5-6265-4827-ac76-1d018b656821",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "01724e69-f9c6-4d30-9492-d59f50204724",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a\n  href=\"https://www.miskimayo.com/s/gestion-social?#programas-sociales\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n \n\n  VOLVER"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "5902bf15-91c1-4bfc-a411-67ff5ad90e74",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8f2997d5-6265-4827-ac76-1d018b656821",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "59d64141-f709-4891-ab85-fb982f99ce7b",
+          "columns" : [ {
+            "UUID" : "6330829b-809a-4259-b74a-1ec679f2b73d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5b4e77c9-47e1-4b5e-be70-7322f3c39055",
+            "columnKey" : "ec694",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "279cd66c-a60d-4c01-b7b6-261efa83e01f",
+            "columnKey" : "40bcd",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "59d64141-f709-4891-ab85-fb982f99ce7b",
+      "regions" : [ {
+        "id" : "6330829b-809a-4259-b74a-1ec679f2b73d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.logomosaicqfnn2lnhhtw6j06gtbuvrik8k.1}\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6678fc3a-968b-4d5e-b925-5cfd075a2ff9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5b4e77c9-47e1-4b5e-be70-7322f3c39055",
+        "regionLabel" : "Column 2",
+        "regionName" : "ec694",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "279cd66c-a60d-4c01-b7b6-261efa83e01f",
+        "regionLabel" : "Column 3",
+        "regionName" : "40bcd",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "55822a7d-29d3-439d-9427-3f75ad97eb48",
+          "columns" : [ {
+            "UUID" : "a46e61a3-1086-4037-943a-1ff4a4066e82",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "808f4f32-67c1-4243-9ca7-4435585fa6d7",
+            "columnKey" : "094c4",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5a762ad3-7c98-4152-99ec-90ea33f090cb",
+            "columnKey" : "db27f",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "10494066-e07a-44bc-9b9c-fd67938c3178",
+            "columnKey" : "1e05e",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4cabebc0-a9d5-4e07-b037-3b2fdd62665b",
+            "columnKey" : "caa4f",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0d0ff3d4-d81b-4b65-b971-7bb072452a81",
+            "columnKey" : "5acc1",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "55822a7d-29d3-439d-9427-3f75ad97eb48",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "eb611a4c-b2c6-42f4-b8b4-9035965c899c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a46e61a3-1086-4037-943a-1ff4a4066e82",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "808f4f32-67c1-4243-9ca7-4435585fa6d7",
+        "regionLabel" : "Column 2",
+        "regionName" : "094c4",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5a762ad3-7c98-4152-99ec-90ea33f090cb",
+        "regionLabel" : "Column 3",
+        "regionName" : "db27f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "10494066-e07a-44bc-9b9c-fd67938c3178",
+        "regionLabel" : "Column 4",
+        "regionName" : "1e05e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4cabebc0-a9d5-4e07-b037-3b2fdd62665b",
+        "regionLabel" : "Column 5",
+        "regionName" : "caa4f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0d0ff3d4-d81b-4b65-b971-7bb072452a81",
+        "regionLabel" : "Column 6",
+        "regionName" : "5acc1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "aecdfbe8-46b4-4c0b-9dd0-39fc821d8b83",
+          "columns" : [ {
+            "UUID" : "bdbb22fc-7fdf-4940-a6ef-1110bcdf8712",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 150
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "aecdfbe8-46b4-4c0b-9dd0-39fc821d8b83",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8edf7726-2369-4358-baf7-f52e71c08e95",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Promover y difundir los valores, tradiciones, formas de expresión así como el turismo sostenible de la provincia de Sechura para resaltar su cultura, generando identidad y respeto.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "7b3492e8-133a-4d9c-a3b9-2834f647bb59",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bdbb22fc-7fdf-4940-a6ef-1110bcdf8712",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "1f4bde1e-b4c1-4945-83b2-f6bc9fc301a7",
+          "columns" : [ {
+            "UUID" : "033c9fdc-d6a2-4613-a651-a7d8d0b3be59",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3e0be41d-44dc-423d-92db-997c07f03b3c",
+            "columnKey" : "2cbd6",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e05feff8-3e67-43da-b4c6-054abb533e7b",
+            "columnKey" : "7e6e1",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "58bbc779-369d-448f-829b-7b92b00b8adb",
+            "columnKey" : "31343",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b0f8abfa-ccbf-4592-8d67-dba495393b24",
+            "columnKey" : "016b1",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ebb27122-d006-4478-b409-42e8a29d8855",
+            "columnKey" : "fd21f",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1f4bde1e-b4c1-4945-83b2-f6bc9fc301a7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Clipboard2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "a3793f08-76da-4247-9772-4e9e84e9f198",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "033c9fdc-d6a2-4613-a651-a7d8d0b3be59",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3e0be41d-44dc-423d-92db-997c07f03b3c",
+        "regionLabel" : "Column 2",
+        "regionName" : "2cbd6",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e05feff8-3e67-43da-b4c6-054abb533e7b",
+        "regionLabel" : "Column 3",
+        "regionName" : "7e6e1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "58bbc779-369d-448f-829b-7b92b00b8adb",
+        "regionLabel" : "Column 4",
+        "regionName" : "31343",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "b0f8abfa-ccbf-4592-8d67-dba495393b24",
+        "regionLabel" : "Column 5",
+        "regionName" : "016b1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "ebb27122-d006-4478-b409-42e8a29d8855",
+        "regionLabel" : "Column 6",
+        "regionName" : "fd21f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "179c6dc6-ca69-4c2d-b1dc-7fe47194d214",
+          "columns" : [ {
+            "UUID" : "2218dbb2-0c50-4525-a046-26285221e26b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "179c6dc6-ca69-4c2d-b1dc-7fe47194d214",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Acciones:</strong></h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "445c69f1-9fbd-4041-a7a0-77c858dff858",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Auspicios de eventos culturales en aniversarios de la provincia de Sechura, algunos distritos y Centros Poblados, así como de algunas festividades religiosas representativas de la zona.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Mejoramiento del Museo de Chusis a través del mantenimiento de bases de esculturas y limpieza especializada de sus piezas en exhibición, así como la mejora de su Centro de Información Turístico a través de la renovación de sus vitrinas, paneles informativos e infografías.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Restauración y puesta en valor de la Iglesia San Martín de Tours, con una inversión aproximada de un millón y medio de dólares.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Colocación de sombrillas en las playas de Chulliyache, Ñapique, Playa Blanca y Bayóvar.</span>\n  </div>\n<div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Difusión de videos sobre lugares turísticos, platos típicos, costumbres y fiestas típicas y religiosas de la provincia de Sechura.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "4b59432f-d358-42d0-953a-073cdfd81230",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2218dbb2-0c50-4525-a046-26285221e26b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "6b3478fc-31cc-47da-9cc6-0ef4f88e4d6f",
+          "columns" : [ {
+            "UUID" : "ec6ab167-ca9b-41c6-8dc1-d8d123a07926",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6b3478fc-31cc-47da-9cc6-0ef4f88e4d6f",
+      "regions" : [ {
+        "id" : "ec6ab167-ca9b-41c6-8dc1-d8d123a07926",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "10970900-d625-41b7-b86d-5d943819f3a9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Promoción de la cultura"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "61352f55-229b-4bb4-977d-2684e5bfd3ea",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "be788ca8-b369-4d3c-a986-3f28a21209a9",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-promocin-de-la-cultura"
+}

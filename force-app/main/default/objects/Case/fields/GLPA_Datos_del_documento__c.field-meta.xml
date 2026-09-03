@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GLPA_Datos_del_documento__c</fullName>
+    <description>GLPA-1017 - Necessary to fulfill the business needs of the Miski Mayo in case creation and case management.</description>
+    <label>Datos del documento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Carta</fullName>
+                <default>false</default>
+                <label>Carta</label>
+            </value>
+            <value>
+                <fullName>Certificado</fullName>
+                <default>false</default>
+                <label>Certificado</label>
+            </value>
+            <value>
+                <fullName>Informe</fullName>
+                <default>false</default>
+                <label>Informe</label>
+            </value>
+            <value>
+                <fullName>Notificacion</fullName>
+                <default>false</default>
+                <label>Notificacion</label>
+            </value>
+            <value>
+                <fullName>Oficio</fullName>
+                <default>false</default>
+                <label>Oficio</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>Requerimiento</fullName>
+                <default>false</default>
+                <label>Requerimiento</label>
+            </value>
+            <value>
+                <fullName>Resolucion</fullName>
+                <default>false</default>
+                <label>Resolucion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

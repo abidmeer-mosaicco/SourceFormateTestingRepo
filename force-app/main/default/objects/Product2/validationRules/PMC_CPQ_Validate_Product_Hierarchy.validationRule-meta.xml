@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Validate_Product_Hierarchy</fullName>
+    <active>true</active>
+    <description>prevent to type characters in this field</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(PMC_CPQ_Product_Hierarchy__c)),
+  NOT(REGEX(PMC_CPQ_Product_Hierarchy__c, &quot;^[0-9]+$&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>PMC_CPQ_Product_Hierarchy__c</errorDisplayField>
+    <errorMessage>The Product Hierarchy field must contain numbers only.</errorMessage>
+</ValidationRule>

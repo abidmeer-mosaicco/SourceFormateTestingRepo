@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_is_approved_field_cannot_be_edited</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+ISPICKVAL( PMC_CPQ_Region__c , &apos;Brazil&apos;),
+PMC_CPQ_QuoteApproved__c,
+OR(
+ISCHANGED(PMC_CPQ_VCOQuotation__c),
+ISCHANGED(PMC_CPQ_AdvanceBilling__c),
+ISCHANGED(PMC_CPQ_SoldToShipToJunction__c),
+ISCHANGED(PMC_CPQ_UnitOfMeasure__c),
+ISCHANGED(PMC_CPQ_DiscountMarkup__c),
+ISCHANGED(PMC_CPQ_DeliveryStartDate__c),
+ISCHANGED(PMC_CPQ_DeliveryEndDate__c),
+ISCHANGED(PMC_CPQ_CropType__c),
+ISCHANGED(SBQQ__PaymentTerms__c),
+ISCHANGED(PMC_CPQ_PaymentDate__c),
+ISCHANGED(PMC_CPQ_PriceBookType__c),
+ISCHANGED(PMC_CPQ_SalesAreaCombination__c)
+))</errorConditionFormula>
+    <errorMessage>User cannot change the approved quote field value</errorMessage>
+</ValidationRule>

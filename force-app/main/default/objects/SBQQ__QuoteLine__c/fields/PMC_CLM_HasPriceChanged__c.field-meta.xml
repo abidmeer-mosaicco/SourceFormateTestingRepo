@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_HasPriceChanged__c</fullName>
+    <description>This field will indicate if Price has Changed in an Amendment or if a new line was adeed</description>
+    <formula>IF(
+AND(
+TEXT(SBQQ__Quote__r.SBQQ__Type__c)=&apos;Amendment&apos;,
+SBQQ__UpgradedSubscription__r.SBQQ__QuoteLine__r.PMC_CPQ_FinalPricePerTonne__c  &lt;&gt; PMC_CPQ_FinalPricePerTonne__c), 
+true, 
+false
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has Price Changed</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

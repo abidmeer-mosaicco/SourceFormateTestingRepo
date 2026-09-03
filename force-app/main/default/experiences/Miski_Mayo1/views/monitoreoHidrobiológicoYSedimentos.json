@@ -1,0 +1,469 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "27ab0c3b-8934-4636-81db-32042c75aae3",
+  "label" : "Monitoreo hidrobiológico y sedimentos",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "66e2eb11-fbcd-4890-a0fe-dcce2cd8063d",
+          "columns" : [ {
+            "UUID" : "4a413787-7be1-41dd-a735-51015a460730",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "66e2eb11-fbcd-4890-a0fe-dcce2cd8063d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "18a4c44d-db30-4707-bc1a-216d71f6ec6a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4a413787-7be1-41dd-a735-51015a460730",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "2b51f378-ef55-4131-a839-1d3b4aed1e0d",
+          "columns" : [ {
+            "UUID" : "5782d809-4c91-421c-a5df-05ca72b4e37b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "2b51f378-ef55-4131-a839-1d3b4aed1e0d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP24"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "a774de90-562b-4305-a657-07641173a88f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5782d809-4c91-421c-a5df-05ca72b4e37b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 88,
+        "sectionConfig" : {
+          "UUID" : "4c1cf334-eb6c-4e32-88cd-da965b6c44c5",
+          "columns" : [ {
+            "UUID" : "84708f15-3538-4327-b13f-09c9c7bfb038",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2a62c9f1-b36a-44e0-8954-418e749b45eb",
+            "columnKey" : "8ade5",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2023afda-82b5-4d55-ab92-ee5abaf0b304",
+            "columnKey" : "1cc94",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5183e512-6aab-4050-85c1-c9c0952fb56f",
+            "columnKey" : "eda94",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2f85bb79-16de-48ed-b2f7-0ec7df98b57b",
+            "columnKey" : "1491d",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "fdad61d1-6186-420e-9676-e1f15ed5ac0e",
+            "columnKey" : "46c49",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4c1cf334-eb6c-4e32-88cd-da965b6c44c5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "6dcbd438-50d7-4d66-8ba1-82c790c2b7f5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "84708f15-3538-4327-b13f-09c9c7bfb038",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2a62c9f1-b36a-44e0-8954-418e749b45eb",
+        "regionLabel" : "Column 2",
+        "regionName" : "8ade5",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2023afda-82b5-4d55-ab92-ee5abaf0b304",
+        "regionLabel" : "Column 3",
+        "regionName" : "1cc94",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5183e512-6aab-4050-85c1-c9c0952fb56f",
+        "regionLabel" : "Column 4",
+        "regionName" : "eda94",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2f85bb79-16de-48ed-b2f7-0ec7df98b57b",
+        "regionLabel" : "Column 5",
+        "regionName" : "1491d",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "fdad61d1-6186-420e-9676-e1f15ed5ac0e",
+        "regionLabel" : "Column 6",
+        "regionName" : "46c49",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "6fe42e5f-9c7b-4687-a1e2-af817c82b643",
+          "columns" : [ {
+            "UUID" : "4fb7d4ab-d91e-4d4e-8060-67d64b217ccd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6fe42e5f-9c7b-4687-a1e2-af817c82b643",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Monitoreo Hidrobiológico y Sedimentos</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1730a3ac-387c-40d1-830c-6578433625a4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4fb7d4ab-d91e-4d4e-8060-67d64b217ccd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "1c1f182a-2acd-4989-afea-66192ab005e6",
+          "columns" : [ {
+            "UUID" : "2053be60-8ed0-4dda-9b18-347511226328",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e381f813-69ea-4b37-97fe-d0a73ae4924e",
+            "columnKey" : "87ecc",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f52efccb-46a3-44d8-868d-aec36e0c677a",
+            "columnKey" : "a25f7",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "828aed3c-ad0d-4c02-877c-38457fe09c7a",
+            "columnKey" : "46412",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2d0e47b6-9648-47bd-804b-31830934f379",
+            "columnKey" : "42bf7",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d5a8b161-c007-4de5-80ec-d3a2b86f77ef",
+            "columnKey" : "3ac52",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1c1f182a-2acd-4989-afea-66192ab005e6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "a11a1e9f-e10f-4c6f-b37a-64899ad48392",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2053be60-8ed0-4dda-9b18-347511226328",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e381f813-69ea-4b37-97fe-d0a73ae4924e",
+        "regionLabel" : "Column 2",
+        "regionName" : "87ecc",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f52efccb-46a3-44d8-868d-aec36e0c677a",
+        "regionLabel" : "Column 3",
+        "regionName" : "a25f7",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "828aed3c-ad0d-4c02-877c-38457fe09c7a",
+        "regionLabel" : "Column 4",
+        "regionName" : "46412",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2d0e47b6-9648-47bd-804b-31830934f379",
+        "regionLabel" : "Column 5",
+        "regionName" : "42bf7",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d5a8b161-c007-4de5-80ec-d3a2b86f77ef",
+        "regionLabel" : "Column 6",
+        "regionName" : "3ac52",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "73c071d1-e178-4b46-8d11-027ea4fe6161",
+          "columns" : [ {
+            "UUID" : "cfe89814-0781-4ed4-9de1-bdfc24257d76",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "73c071d1-e178-4b46-8d11-027ea4fe6161",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "09de6e43-4b34-49eb-ad3d-bec33375d879",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Realizar el seguimiento de sedimentos y de fauna marina (macrobentos, peces y cetáceos) durante la etapa de nuestra operación; indicando las especies de fauna marina según lo identificado en la línea base que fue monitoreada al realizar nuestro EIA, de las cuales existe un grupo de especies con una mayor abundancia y frecuencia de observación, y que serán monitoreadas con especial énfasis (CONCHA DE ABANICO).</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "00af2206-52e7-4970-a241-751da6264926",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cfe89814-0781-4ed4-9de1-bdfc24257d76",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "77992996-03f8-491f-ac30-530130996500",
+          "columns" : [ {
+            "UUID" : "4958e12a-70c6-449a-9f69-959f28eb76a2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "77992996-03f8-491f-ac30-530130996500",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "2",
+            "pageName" : "pageP32"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "e9ace38b-32e6-4c31-94ea-b767b7eb2fb0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "4958e12a-70c6-449a-9f69-959f28eb76a2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "40448248-3059-4c77-a607-d1e8087929b5",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo hidrobiológico y sedimentos"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7770a49e-3e56-4af8-b951-1429922e6514",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e3ef85ce-2dbb-4a62-bdd4-6f13591f58be",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-hidrobiolgico-y-sedimentos"
+}

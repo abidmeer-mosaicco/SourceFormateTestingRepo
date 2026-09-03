@@ -1,0 +1,104 @@
+<template>
+  <div class="slds-m-top_large">
+    <c-pmc_dh_message-banner type="info" message={labels.pmc_quoteCheckoutFlow_enterRequestedContract}>
+    </c-pmc_dh_message-banner>
+  </div>
+
+  <template if:true={isPageLoaded}>
+    <div class="slds-grid slds-gutters slds-wrap">
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-order_2 slds-medium-order_1">
+        <div class="custom-card">
+          <div class="card-header">
+            {labels.pmc_quoteCheckoutFlow_contractPeriod}
+          </div>
+          <div class="card-body">
+            <div class="slds-grid slds-wrap">
+              <div class="slds-col slds-size_1-of-2">
+                <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_startingFrom} type="date"
+                  data-id="datContractStartDate" default-value={pageObj.datContractStartDate} is-required
+                  parent-name="datContractStartDate" min-value={today}
+                  message-when-range-low={labels.pmc_quoteCheckout_startDateErrorMsg}
+                  oninputdatachange={handleDataChange}>
+                </c-pmc_dh_input-element>
+              </div>
+              <div class="slds-col slds-size_1-of-2">
+                <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_endDate} type="date" class="inputDate"
+                  data-id="datContractEndDate" is-disabled={isEndDateDisabled} min-value={minEndDate}
+                  default-value={pageObj.datContractEndDate} is-required parent-name="datContractEndDate"
+                  oninputdatachange={handleDataChange} max-value={maxEndDate}
+                  message-when-range-low={labels.pmc_quoteCheckout_endDateErrorMsg}
+                  message-when-range-high={labels.pmc_quoteCheckoutFlow_maxEndDateError}>
+                </c-pmc_dh_input-element>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-order_1 slds-medium-order_2">
+        <div class="custom-card">
+          <div class="card-header">
+            {labels.pmc_quoteCheckoutFlow_paymentInfo}
+          </div>
+          <div class="card-body">
+            <template if:false={isPrepaymentDateField}>
+              <div class="slds-grid slds-wrap">
+                <template if:true={isLocationBrazil}>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_paymentTerms}
+                      combobox-list-json={paymentTermsOptions} is-required data-id="strPaymentTerms"
+                      default-value={pageObj.strPaymentTerms} parent-name="strPaymentTerms"
+                      oninputdatachange={handleDataChange}>
+                    </c-pmc_dh_selection-picklist>
+                  </div>
+                </template>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                  <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_currency}
+                    combobox-list-json={currencyOptions} is-required data-id="strCurrencyIsoCode"
+                    default-value={pageObj.strCurrencyIsoCode} parent-name="strCurrencyIsoCode"
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_selection-picklist>
+                </div>
+              </div>
+            </template>
+            <template if:true={isPrepaymentDateField}>
+              <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                  <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_paymentTerms}
+                    combobox-list-json={paymentTermsOptions} is-required data-id="strPaymentTerms"
+                    default-value={pageObj.strPaymentTerms} parent-name="strPaymentTerms"
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_selection-picklist>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                  <c-pmc_dh_selection-picklist text-label={labels.pmc_quoteCheckoutFlow_currency}
+                    combobox-list-json={currencyOptions} is-required data-id="strCurrencyIsoCode"
+                    default-value={pageObj.strCurrencyIsoCode} parent-name="strCurrencyIsoCode"
+                    oninputdatachange={handleDataChange}>
+                  </c-pmc_dh_selection-picklist>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                  <c-pmc_dh_input-element text-label={labels.pmc_quoteCheckoutFlow_paymentDate} type="date"
+                    class="inputDate" data-id="datPrepaymentDate" default-value={pageObj.datPrepaymentDate}
+                    parent-name="datPrepaymentDate" oninputdatachange={handleDataChange} is-required
+                    min-value={minPrepaymentDate} max-value={maxPrepaymentDate}
+                    message-when-range-high={paymentDateErrorMsg} message-when-range-low={paymentDateErrorMsg}>
+                  </c-pmc_dh_input-element>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-button slds-m-bottom_large">
+      <lightning-button label={labels.pmc_quoteCheckoutFlow_back} onclick={backButtonHandler}></lightning-button>
+      <lightning-button label={labels.pmc_quoteCheckoutFlow_proceed} variant="brand"
+        onclick={proceedButtonHandler}></lightning-button>
+    </div>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

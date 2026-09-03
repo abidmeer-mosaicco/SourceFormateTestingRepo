@@ -1,0 +1,301 @@
+<template>
+  <template if:true={pageLoaded}>
+    <div class="scrollable-container" tabindex="0">
+      <div class="scrollable-content">
+        <div class="slds-grid slds-gutters slds-wrap">
+          <template if:false={templateSelectorObj.hideContractsQuotesOrderWrapper}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-p-around_none">
+              <div class="slds-grid slds-wrap">
+                <template if:true={templateSelectorObj.isActiveContractsWidget}>
+                  <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                    <div class="custom-card">
+                      <div class="card-header">
+                        <div>
+                          {labels.pmc_homepage_activeContracts}
+                        </div>
+                        <div>
+                          <a href={contractListPageUrl} target="_self">
+                            {labels.pmc_homepage_viewMyContracts}
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div for:each={pageObj.activeContracts} for:item="contract" for:index="contractIndex"
+                          key={contract.strContractId} class="content-section slds-grid slds-wrap">
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_requestToDeliver_contractNumber}
+                            </div>
+                            <div class="lbl-field-value">
+                              <a href={contract.contractDetailsUrl} target="_self">
+                                {contract.strContractNumber}
+                              </a>
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_homepage_product}
+                            </div>
+                            <div class="lbl-field-value">
+                              {contract.strProduct}
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_contractDetails_availableQty}
+                            </div>
+                            <div class="lbl-field-value">
+                              {contract.intAvailableQty}
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_contractDetails_poNumber}
+                            </div>
+                            <div class="lbl-field-value">
+                              {contract.strPoNumber}
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_quoteCheckoutFlow_shipTo}
+                            </div>
+                            <div class="lbl-field-value">
+                              {contract.strShipto}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+                <template if:true={templateSelectorObj.isRecentQuotesWidget}>
+                  <template lwc:if={templateSelectorObj.isContractManager}>
+                    <div class="slds-col slds-size_1-of-1">
+                      <div class="custom-card quote-card">
+                        <div class="card-header">
+                          <div>
+                            {labels.pmc_homepage_recentQuotes}
+                          </div>
+                          <div>
+                            <a href={quoteListPageUrl} target="_self">
+                              {labels.pmc_homepage_viewMyQuotes}
+                            </a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div for:each={pageObj.recentQuotes} for:item="quote" key={quote.strQuoteNumber}
+                            for:index="quoteIndex" class="content-section slds-grid slds-wrap">
+                            <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-name">
+                                {labels.pmc_quoteHistory_quoteNumber}
+                              </div>
+                              <div class="lbl-field-value">
+                                <a href={quote.quoteDetailsUrl} target="_self">
+                                  {quote.strQuoteNumber}
+                                </a>
+                              </div>
+                            </div>
+                            <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-name">
+                                {labels.pmc_quoteDetailsFlow_requestedDate}
+                              </div>
+                              <div class="lbl-field-value">
+                                {quote.datRequestedDate}
+                              </div>
+                            </div>
+                            <div class="badge-info content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-value slds-size_1-of-1">
+                                <span class="badge" data-index={quoteIndex}>
+                                  {quote.strQuoteStatus}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                  <template lwc:else>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                      <div class="custom-card quote-card">
+                        <div class="card-header">
+                          <div>
+                            {labels.pmc_homepage_recentQuotes}
+                          </div>
+                          <div>
+                            <a href={quoteListPageUrl} target="_self">
+                              {labels.pmc_homepage_viewMyQuotes}
+                            </a>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <div for:each={pageObj.recentQuotes} for:item="quote" key={quote.strQuoteNumber}
+                            for:index="quoteIndex" class="content-section slds-grid slds-wrap">
+                            <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-name">
+                                {labels.pmc_quoteHistory_quoteNumber}
+                              </div>
+                              <div class="lbl-field-value">
+                                <a href={quote.quoteDetailsUrl} target="_self">
+                                  {quote.strQuoteNumber}
+                                </a>
+                              </div>
+                            </div>
+                            <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-name">
+                                {labels.pmc_quoteDetailsFlow_requestedDate}
+                              </div>
+                              <div class="lbl-field-value">
+                                {quote.datRequestedDate}
+                              </div>
+                            </div>
+                            <div class="badge-info content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                              <div class="lbl-field-value slds-size_1-of-1">
+                                <span class="badge" data-index={quoteIndex}>
+                                  {quote.strQuoteStatus}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+                </template>
+                <template if:true={templateSelectorObj.isOrdersWidget}>
+                  <div class="slds-col slds-size_1-of-1">
+                    <div class="custom-card order-card">
+                      <div class="card-header">
+                        <div>
+                          {labels.pmc_homepage_ordersInTransit}
+                        </div>
+                        <div>
+                          <a href={orderListPageUrl} target="_self">
+                            {labels.pmc_requestToDeliver_viewMyOrders}
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div for:each={pageObj.orders} for:item="order" key={order.strOrderId} for:index="orderIndex"
+                          class="content-section slds-grid slds-wrap">
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_requestToDeliver_orderNumber}
+                            </div>
+                            <div class="lbl-field-value">
+                              <a href={order.orderDetailsUrl} target="_self">
+                                {order.strOrderNumber}
+                              </a>
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_requestToDeliverShippingInformation_deliveryMode}
+                            </div>
+                            <div class="lbl-field-value">
+                              {order.strDeliveryMode}
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_quoteCheckoutFlow_products}
+                            </div>
+                            <div class="lbl-field-value">
+                              {order.strProduct}
+                            </div>
+                          </div>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name">
+                              {labels.pmc_homepage_nextShipment}
+                            </div>
+                            <div class="lbl-field-value">
+                              {order.datShipment}
+                            </div>
+                          </div>
+                          <div class="badge-info content-info slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <div class="lbl-field-value slds-size_1-of-1">
+                              <span class="badge" data-index={orderIndex}>
+                                {order.strStatus}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </template>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_none">
+            <div class="slds-grid slds-wrap">
+              <template if:true={templateSelectorObj.isRecentUpdatesWidget}>
+                <div class="slds-col slds-size_1-of-1 padding-right-none-medium">
+                  <div class="custom-card recent-updates-card">
+                    <div class="card-header">
+                      {labels.pmc_homepage_recentUpdates}
+                    </div>
+                    <div class="card-body">
+                      <div class="content-section slds-grid slds-wrap">
+                        <template if:true={templateSelectorObj.isRecentUpdatesWidget_quotes}>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                            <div class="lbl-field-value">
+                              <a href={quoteListPageUrl} target="_self">
+                                {pageObj.recentUpdates.intNoOfActionPendingQuotes}
+                              </a>
+                            </div>
+                            <div class="lbl-field-name">
+                              {labels.pmc_homepage_actionPendingQuotes}
+                            </div>
+                          </div>
+                        </template>
+                        <template if:true={templateSelectorObj.isRecentUpdatesWidget_leads}>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                            <div class="lbl-field-value">
+                              <a href={leadManagementPageUrl} target="_self">
+                                {pageObj.recentUpdates.intNoOfNewLeads}
+                              </a>
+                            </div>
+                            <div class="lbl-field-name">
+                              {labels.pmc_homepage_newLeads}
+                            </div>
+                          </div>
+                        </template>
+                        <template if:true={templateSelectorObj.isRecentUpdatesWidget_contracts}>
+                          <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                            <div class="lbl-field-value">
+                              <a href={contractListPageUrl} target="_self">
+                                {pageObj.recentUpdates.intNoOfActionPendingContracts}
+                              </a>
+                            </div>
+                            <div class="lbl-field-name">
+                              {labels.pmc_homepage_signaturePendingContracts}
+                            </div>
+                          </div>
+                        </template>
+                        <div class="content-info slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                          <div class="lbl-field-value">
+                            <a href={caseListPageUrl} target="_self">
+                              {pageObj.recentUpdates.intNoOfNewCaseComments}
+                            </a>
+                          </div>
+                          <div class="lbl-field-name">
+                            {labels.pmc_homepage_caseComments}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

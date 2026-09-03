@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="FPD Order Rejected - Order {!relatedTo.OrderNumber}" recipientType="User" relatedToType="Order">
+    <messaging:htmlEmailBody >
+        <html>
+            <head>
+                <meta content="text/css;charset=utf-8" http-equiv="Content-Type"/>
+                <meta name="Template" content="Response"/>
+            </head>
+            <body>
+                <apex:outputPanel >
+                    Hello {!Recipient.Name}, <br/><br/>
+                </apex:outputPanel>
+                <p>Some items from a order for {!relatedTo.Account.Name} have been Rejected by {!$User.FirstName}.</p>
+                <c:PMC_CPQ_OrderApprovedOrRejectedEmail orderRecordId="{!relatedTo.Id}"
+                    approvalReqStatus="Rejected"
+                />
+            </body>
+        </html>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

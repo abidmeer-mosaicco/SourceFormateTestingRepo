@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>61.0</apiVersion>
+  <isExposed>true</isExposed>
+  <masterLabel>Appointment Intake Form (Flow - Mobile Compact)</masterLabel>
+  <targets>
+    <target>lightning__FlowScreen</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightning__FlowScreen">
+      <!-- INPUTS (somente exibição) -->
+      <property name="serviceResourceName" type="String" role="inputOnly" label="Service Resource"/>
+      <property name="workTypeName" type="String" role="inputOnly" label="Work Type"/>
+      <property name="appointmentTypeName" type="String" role="inputOnly" label="Appointment Type"/>
+      <property name="scheduleStart" type="String" role="inputOnly" label="Schedule Start (ISO)"/>
+      <property name="scheduleEnd" type="String" role="inputOnly" label="Schedule End (ISO)"/>
+      <property name="timeZone" type="String" role="inputOnly" label="Timezone (IANA)" default="America/Catamarca"/>
+
+      <!-- INPUTS/OUTPUTS: Lead -->
+      <property name="leadFirstName" type="String" label="Lead First Name"/>
+      <property name="leadLastName" type="String" label="Lead Last Name"/>
+      <property name="leadEmail" type="String" label="Lead Email"/>
+      <property name="leadMobilePhone" type="String" label="Lead Mobile Phone"/>
+      <property name="leadCompany" type="String" label="Lead Company"/>
+      <property name="leadSize" type="String" label="Lead Size"/>
+      <property name="leadType" type="String" label="Lead Type"/>
+      <property name="leadCrops" type="String" label="Lead Crops (semicolon-separated)"/>
+
+
+      <!-- INPUTS/OUTPUTS: Service Appointment -->
+      <property name="saSubject" type="String" label="Service Appointment Subject"/>      
+      <property name="saDescription" type="String" label="Service Appointment Description"/>
+      
+      <!-- OUTPUTS: Service Appointment -->
+      <property name="messages" type="String" role="outputOnly" label="Messages"/>
+
+
+      
+    </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "fd897f51-7685-4ca6-9d11-3211b9b50d25",
+  "label" : "Deploying Changes Page",
+  "regions" : [ {
+    "id" : "1d06f53b-04db-4241-9fea-a76e7d8456f9",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:documentDeployingChanges",
+      "id" : "54c90b05-833d-41af-8aaf-0130f11636e4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3f9c7e58-091a-4e04-8f1c-69de03363a3e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "7f1bdae4-99da-4b44-9f44-5b7e80f9b775",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Deploying Changes Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "36c95754-4de1-4f04-9412-53a4fab1438e",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6e04fe07-5e21-4884-af60-4435b0220008",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-deploying-changes-page"
+}

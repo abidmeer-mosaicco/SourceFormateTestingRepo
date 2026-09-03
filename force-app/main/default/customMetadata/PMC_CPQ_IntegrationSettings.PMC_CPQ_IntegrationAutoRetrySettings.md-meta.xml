@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PMC_CPQ_IntegrationAutoRetrySettings</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_CPQ_Description__c</field>
+        <value xsi:type="xsd:string">Integration Failure auto retrigger scenario. Setting Value Long Text Area is the list of &apos;&amp;&apos; delimeter separated messages for which auto retrigger is applicable. 
+Setting Value Number is the no of retrigger attempts. SettingTwoValueNumber is  Timeout val</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_SettingName__c</field>
+        <value xsi:type="xsd:string">PMC_CPQ_IntegrationAutoRetrySettings</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_SettingTwoValueNumber_c__c</field>
+        <value xsi:type="xsd:double">120000.0</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_SettingValueLongTextArea__c</field>
+        <value xsi:type="xsd:string">Read timed out&amp;Apex CPU time limit exceeded</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_SettingValueNumber__c</field>
+        <value xsi:type="xsd:double">3.0</value>
+    </values>
+</CustomMetadata>

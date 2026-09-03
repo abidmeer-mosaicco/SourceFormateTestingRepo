@@ -1,0 +1,20 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Case Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "mainTitleText" : "Seu texto"
+        },
+        "id" : "9e6b00e8-9402-4d9b-9c90-4795f77fe818"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "01e9fc77-7dbd-4c8b-95a6-8f544b00d555"
+      } ]
+    }
+  },
+  "urlName" : "case-detail"
+}

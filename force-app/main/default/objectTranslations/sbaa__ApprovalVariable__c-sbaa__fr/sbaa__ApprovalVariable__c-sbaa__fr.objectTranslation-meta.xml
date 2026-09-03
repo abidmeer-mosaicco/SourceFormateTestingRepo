@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Variable d’approbation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Variables d’approbation</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nom de la variable</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>Les valeurs Variable de liste et Variable nette sont requises pour les Variable de remise</errorMessage>
+        <name>sbaa__Discount_Variable_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Les valeurs Champ agrégé et Fonction agrégée sont requises pour les Variable de synthèse</errorMessage>
+        <name>sbaa__Summary_Variable_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

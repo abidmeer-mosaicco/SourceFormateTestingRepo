@@ -1,0 +1,25 @@
+<template>
+  <div class="footer-container">
+    <template if:true={footerNav}>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 brand-logo">
+          <img src={mosaicLogoUrl} alt={labels.pmc_footer_mosaicLogo}>
+        </div>
+        <div class="slds-col slds-size_1-of-1">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-medium-size_8-of-12 slds-small-size_1-of-1">
+              <div class="footer-links">
+                <template for:each={navItems} for:item="nav">
+                  <a key={nav.strRecId} href={nav.strTarget} target="_blank">{nav.strLabel}</a>
+                </template>
+              </div>
+            </div>
+            <div class="slds-col slds-medium-size_4-of-12 slds-small-size_1-of-1 copyright">
+              {labels.pmc_footer_copyright}
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</template>

@@ -1,0 +1,347 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f8d4796d-f5de-4490-afd9-ec812cfda8f3",
+  "label" : "Ingreso a Puerto",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "fea61249-1e0d-4671-8c0b-2d1533e89ff3",
+          "columns" : [ {
+            "UUID" : "8fe2212e-f394-437d-a364-47575c6d746c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fea61249-1e0d-4671-8c0b-2d1533e89ff3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "46e84122-3323-4456-9ae4-1bbdc2620865",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8fe2212e-f394-437d-a364-47575c6d746c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "fc63e410-347b-4e6a-a51e-ffe287f1c88d",
+          "columns" : [ {
+            "UUID" : "934a820c-a5f2-4833-89ca-4a25be272960",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "302ea21e-424b-4b22-b80d-4140df6fc385",
+            "columnKey" : "c0d8f",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 349
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "fc63e410-347b-4e6a-a51e-ffe287f1c88d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 28px;\">Solicitud de ingreso a la </strong></h3><h3><strong style=\"font-size: 28px;\">instalación portuaria</strong></h3><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3286ee47-f507-46d1-928c-4e3023cce90e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 20px;\">En Miski Mayo nos preocupamos por tu seguridad cuando te encuentres dentro de nuestra empresa, por tal motivo, es importante que cumplas con los pasos a seguir para ingresar a nuestro puerto, llenando en primer lugar el siguiente formato de ingreso a la Instalación Portuaria, tomando en cuenta todas las indicaciones dadas a detalle para una correcta coordinación.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e217d536-45f3-4ad3-9678-7ec918943a0f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<a \n  href=\"https://forms.office.com/Pages/ResponsePage.aspx?id=98pzErcTiUq0Sjln1FugqZS6Tl2lG5NAtL0ZDZTdnWhUQjJOU0lISUlGUDEzVk9aSDc2NEg0MEJTVC4u\" \n  target=\"_blank\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    border-radius: 2px;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n  FORMATO INGRESO VISITA PUERTO\n</a>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "1b0874dc-ae35-45e1-a2a1-c506cfa9de0d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "934a820c-a5f2-4833-89ca-4a25be272960",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCBWXLBI4WPVDKTA4OKE62LBTCSQ",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center right",
+                  "backgroundSize" : "cover",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : 450,
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "none",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0)",
+                  "showButton" : false,
+                  "showCaption" : true,
+                  "showDateTime" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "center center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "e7a24d29-2a75-4213-bc00-d9c5cfe2e7ac",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "302ea21e-424b-4b22-b80d-4140df6fc385",
+        "regionLabel" : "Column 2",
+        "regionName" : "c0d8f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "00854400-7c78-4f3e-8afb-60d82c412df2",
+          "columns" : [ {
+            "UUID" : "08079a36-b703-48b6-acd5-26fd2f0baf58",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6e233535-b046-46a2-b267-1864bb28b757",
+            "columnKey" : "3573b",
+            "columnName" : "Column 2",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d6043ff4-c747-4716-941e-217a8720ba66",
+            "columnKey" : "5886a",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c2f51f7b-4c5d-4eaf-b7e8-8d24a802e692",
+            "columnKey" : "b99a0",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "eb612cb1-d20c-404c-9254-12f1f53a2513",
+            "columnKey" : "6d1b4",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1639bbc4-aaea-4bd2-afab-94f48e8b50e9",
+            "columnKey" : "a4e28",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "00854400-7c78-4f3e-8afb-60d82c412df2",
+      "regions" : [ {
+        "id" : "08079a36-b703-48b6-acd5-26fd2f0baf58",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6e233535-b046-46a2-b267-1864bb28b757",
+        "regionLabel" : "Column 2",
+        "regionName" : "3573b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "d6043ff4-c747-4716-941e-217a8720ba66",
+        "regionLabel" : "Column 3",
+        "regionName" : "5886a",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "c2f51f7b-4c5d-4eaf-b7e8-8d24a802e692",
+        "regionLabel" : "Column 4",
+        "regionName" : "b99a0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "eb612cb1-d20c-404c-9254-12f1f53a2513",
+        "regionLabel" : "Column 5",
+        "regionName" : "6d1b4",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1639bbc4-aaea-4bd2-afab-94f48e8b50e9",
+        "regionLabel" : "Column 6",
+        "regionName" : "a4e28",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "518d892c-192d-4a3d-955d-b311e1bc2700",
+          "columns" : [ {
+            "UUID" : "2b19182c-4560-40bd-9520-ccf7433c4ec4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "518d892c-192d-4a3d-955d-b311e1bc2700",
+      "regions" : [ {
+        "id" : "2b19182c-4560-40bd-9520-ccf7433c4ec4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fd1677e4-c688-4bfd-b545-b926ce0cd398",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Ingreso a Puerto"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "5f80effd-75b8-484a-ba5b-18b8975da23f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "94022b76-38df-437d-ba5c-469a47f5a458",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-ingreso-a-puerto"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RequiredRejectionReason</fullName>
+    <active>true</active>
+    <description>This validation rule checks that the Rejection Reason field is populated before the Lead status is changed to &quot;Lost&quot;</description>
+    <errorConditionFormula>AND(
+ NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) ,
+  OR ( ISCHANGED ( Status ), ISNEW() ) ,
+ ISPICKVAL( Status , &apos;Lost&apos;),
+ ISBLANK(  TEXT(PMC_SS_RejectionReason__c) )  
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_RejectionReason__c</errorDisplayField>
+    <errorMessage>Please enter a “Rejection Reason” indicating why this Lead status is “Lost”</errorMessage>
+</ValidationRule>

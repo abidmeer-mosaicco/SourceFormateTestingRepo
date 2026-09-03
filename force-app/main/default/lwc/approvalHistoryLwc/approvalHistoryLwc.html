@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Approval History" icon-name="standard:approval">
+        <template if:true={approvalItems.length}>
+            <lightning-datatable
+                key-field="id"
+                data={approvalItems}
+                columns={columns}
+                hide-checkbox-column
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-text-color_error slds-p-around_medium">
+                {errorMessage}
+            </div>
+        </template>
+
+        <template if:true={noApprovalItemsAndNoError}>
+            <p class="slds-p-around_medium">No approval history found.</p>
+        </template>
+    </lightning-card>
+
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-modal__title">Comment Details</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-formatted-text value={selectedComment}></lightning-formatted-text>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Close" onclick={closeModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

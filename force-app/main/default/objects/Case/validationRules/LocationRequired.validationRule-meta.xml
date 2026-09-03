@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LocationRequired</fullName>
+    <active>true</active>
+    <description>Location is required when At Fault Party is &apos;Plant / Operations&apos; or &apos;Warehouse&apos;.</description>
+    <errorConditionFormula>IF(
+				AND(
+								OR(
+							    	ISPICKVAL(PMC_SS_AtFaultParty__c, &apos;Plant / Operations&apos;) ,
+								    ISPICKVAL(PMC_SS_AtFaultParty__c, &apos;Warehouse&apos;)
+				    ),
+								 ISBLANK(PMC_SS_Location__c) 
+				),
+				true,
+				false
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_Location__c</errorDisplayField>
+    <errorMessage>Location is required when At Fault Party is &apos;Plant / Operations&apos; or &apos;Warehouse&apos;.</errorMessage>
+</ValidationRule>

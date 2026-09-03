@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assignment element to add rebate type id to rebate type id list.</description>
+        <name>RebateTypeIdAssignment</name>
+        <label>Rebate Type Id Assignment</label>
+        <locationX>402</locationX>
+        <locationY>1224</locationY>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypeIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateTypeRecords.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughRebateTypeRecords</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Rebate Type Status Assignment</description>
+        <name>RebateTypeStatusAssignment</name>
+        <label>Rebate Type Status Assignment</label>
+        <locationX>138</locationX>
+        <locationY>1224</locationY>
+        <assignmentItems>
+            <assignToReference>IterateThroughRebateTypeRecords.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypes</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateTypeRecords</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypeIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateTypeRecords.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughRebateTypeRecords</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Variable to store the api name of the flow</description>
+        <name>STRING_FLOW_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_InactivateRebateRecordsScheduledFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Decision element to check if flow is bypassed</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>369</locationX>
+        <locationY>252</locationY>
+        <defaultConnector>
+            <targetReference>InactivateRebateProgramDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_IsBypassedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Is Byassed Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to see if related program rebate type records are present</description>
+        <name>CheckRebateTypeDecision</name>
+        <label>Check Rebate Type Decision</label>
+        <locationX>446</locationX>
+        <locationY>900</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckRebateTypeDecision_RebateTypeExists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetRelatedRebateTypeRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IterateThroughRebateTypeRecords</targetReference>
+            </connector>
+            <label>Rebate Type Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to check if today is the expiration date of rebate program and related records</description>
+        <name>InactivateRebateProgramDecision</name>
+        <label>Inactivate Rebate Program Decision</label>
+        <locationX>1304</locationX>
+        <locationY>360</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>InactivateRebateProgramDecision_InactivateRecordsOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolExpirationDateFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_SalesAgreement__r.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Expired</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RebateProgramStatusUpdate</targetReference>
+            </connector>
+            <label>Inactivate Records Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the rebate type is active status</description>
+        <name>RebateTypeStatusDecision</name>
+        <label>Rebate Type Status Decision</label>
+        <locationX>270</locationX>
+        <locationY>1116</locationY>
+        <defaultConnector>
+            <targetReference>RebateTypeIdAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RebateTypeStatusDecision_NotInactiveOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IterateThroughRebateTypeRecords.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Inactive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RebateTypeStatusAssignment</targetReference>
+            </connector>
+            <label>Not Inactive Outcome</label>
+        </rules>
+    </decisions>
+    <description>Scheduled flow to inactive rebate related records for expired sales agreement records.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula resource to check if today is the expiration date of rebate program.</description>
+        <name>boolExpirationDateFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>IF( ISBLANK( {!$Record.GracePeriodDayCount} ), 
+{!$Record.PMC_SS_SalesAgreement__r.EndDate} &lt;= TODAY(),
+({!$Record.PMC_SS_SalesAgreement__r.EndDate} + {!$Record.GracePeriodDayCount} ) &lt;= TODAY() )</expression>
+    </formulas>
+    <interviewLabel>PMC SS Inactivate Rebate Records Scheduled Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Inactivate Rebate Records Scheduled Flow</label>
+    <loops>
+        <description>Iteration element to loop though rebate type records</description>
+        <name>IterateThroughRebateTypeRecords</name>
+        <label>Iterate Through Rebate Type Records</label>
+        <locationX>50</locationX>
+        <locationY>1008</locationY>
+        <collectionReference>GetRelatedRebateTypeRecords</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>RebateTypeStatusDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ProgramRebateTypeStatusUpdate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Element to create error log records if case of failure</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>1898</locationX>
+        <locationY>576</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOW_API_NAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Decision element to query related program rebate type records</description>
+        <name>GetRelatedRebateTypeRecords</name>
+        <label>Get Related Rebate Type Records</label>
+        <locationX>446</locationX>
+        <locationY>792</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckRebateTypeDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ProgramRebateType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Element to update the status of rebate programs to inactive</description>
+        <name>ProgramRebateTypeStatusUpdate</name>
+        <label>Program Rebate Type Status Update</label>
+        <locationX>50</locationX>
+        <locationY>1500</locationY>
+        <connector>
+            <targetReference>UpdateRebateTypeBenefitRecords</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>lstProgramRebateTypes</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update status of related rebate program members.</description>
+        <name>RebateProgramMemberStatusUpdate</name>
+        <label>Rebate Program Member Status Update</label>
+        <locationX>446</locationX>
+        <locationY>576</locationY>
+        <connector>
+            <targetReference>RebateProgramPayoutPeriodStatusUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MemberStatus</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MemberStatus</field>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </inputAssignments>
+        <object>RebateProgramMember</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update records element to update the status of related payout periods</description>
+        <name>RebateProgramPayoutPeriodStatusUpdate</name>
+        <label>Rebate Program Payout Period Status Update</label>
+        <locationX>446</locationX>
+        <locationY>684</locationY>
+        <connector>
+            <targetReference>GetRelatedRebateTypeRecords</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </inputAssignments>
+        <object>RebateProgramPayoutPeriod</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update record element to inactivate rebate program.</description>
+        <name>RebateProgramStatusUpdate</name>
+        <label>Rebate Program Status Update</label>
+        <locationX>446</locationX>
+        <locationY>468</locationY>
+        <connector>
+            <targetReference>RebateProgramMemberStatusUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update record element to update the rebate type benefit status to inactive.</description>
+        <name>UpdateRebateTypeBenefitRecords</name>
+        <label>Update Rebate Type Benefit Records</label>
+        <locationX>50</locationX>
+        <locationY>1608</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProgramRebateTypeId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstProgramRebateTypeIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </inputAssignments>
+        <object>ProgramRebateTypeBenefit</object>
+    </recordUpdates>
+    <start>
+        <locationX>243</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <object>RebateProgram</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-08-11</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable to store the list of program rebate type ids</description>
+        <name>lstProgramRebateTypeIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>List of program rebate types.</description>
+        <name>lstProgramRebateTypes</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ProgramRebateType</objectType>
+    </variables>
+</Flow>

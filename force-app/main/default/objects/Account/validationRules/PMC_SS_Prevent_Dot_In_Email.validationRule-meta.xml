@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_Prevent_Dot_In_Email</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    REGEX( PMC_DH_Email__c , &quot;^\\..*&quot;),  /* Checks if the email starts with a dot */
+    REGEX(PMC_DH_Email__c, &quot;.*\\.$&quot;)   /* Checks if the email ends with a dot */
+)</errorConditionFormula>
+    <errorDisplayField>PMC_DH_Email__c</errorDisplayField>
+    <errorMessage>&quot;The Email field cannot start or end with a dot (.)&quot;</errorMessage>
+</ValidationRule>

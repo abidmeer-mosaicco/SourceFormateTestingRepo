@@ -1,0 +1,11 @@
+<template>
+  <lightning-input class={className} name={textName} type={type} label={textLabel} placeholder={_textPlaceholder}
+    pattern={pattern} min-length={minLength} max-length={maxLength} date-style="short" variant={variant}
+    message-when-pattern-mismatch={_messageWhenPatternMismatch} message-when-too-long={_messageWhenTooLong}
+    message-when-too-short={messageWhenTooShort} message-when-value-missing={_messageWhenValueMissing}
+    message-when-type-mismatch={messageWhenTypeMismatch} message-when-range-underflow={messageWhenRangeLow}
+    message-when-range-overflow={messageWhenRangeHigh} value={_defaultValue} required={isRequiredCheck}
+    disabled={_isDisabled} readonly={isReadOnly} data-value={_defaultValue} data-name={parentName}
+    onchange={handleChange} onblur={handleBlur} onkeyup={handleKeyup} onfocus={handleFocus} min={minValue}
+    max={maxValue} onkeypress={handleKeyPress} ></lightning-input>
+</template>

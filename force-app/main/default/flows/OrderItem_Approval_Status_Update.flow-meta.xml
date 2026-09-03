@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Approval_Status_Update</name>
+        <label>Approval Status Update</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.ApprovalStatus__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Pending Approval</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Integration_Approved</name>
+        <label>Assign Integration Approved</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_OrderItemIntegrationMessage__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Integration_Message_if_Rejected</name>
+        <label>Assign Integration Message if Rejected</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_CPQ_OrderItemIntegrationMessage__c</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check</name>
+        <label>Check for Approval Process</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Agreed_Price_Lower_Floor_Price_and_over_10K_ST</name>
+            <conditionLogic>(1 OR 2) AND 3 AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_FinalAgreedPrice__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>FloorPlusFreight</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Quantity</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>10000.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ApprovalStatus__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Order.PMC_CPQ_Region__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>North America</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Approval_Status_Update</targetReference>
+            </connector>
+            <label>If Agreed Price Lower Floor Price and over 10K ST</label>
+        </rules>
+        <rules>
+            <name>Check_If_OrderLine_Approved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ApprovalStatus__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ApprovalStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Integration_Approved</targetReference>
+            </connector>
+            <label>Check If OrderLine Approved</label>
+        </rules>
+        <rules>
+            <name>If_OrderLine_Rejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ApprovalStatus__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ApprovalStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Integration_Message_if_Rejected</targetReference>
+            </connector>
+            <label>If OrderLine Rejected</label>
+        </rules>
+    </decisions>
+    <description>PMC_SS_NASalesServiceRepresentativeSSRRole role removed</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>FloorPlusFreight</name>
+        <dataType>Number</dataType>
+        <expression>BLANKVALUE({!$Record.PMC_CPQ_Floorprice__c} , 0) + BLANKVALUE({!$Record.PMC_CPQ_EstFreightPrice__c}, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>OrderItem Approval Status Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>OrderItem Approval Status Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3 AND 4</filterLogic>
+        <filters>
+            <field>PMC_CPQ_FinalAgreedPrice__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Quantity</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>PMC_CPQ_FinalAgreedPrice__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Quantity</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>OrderItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

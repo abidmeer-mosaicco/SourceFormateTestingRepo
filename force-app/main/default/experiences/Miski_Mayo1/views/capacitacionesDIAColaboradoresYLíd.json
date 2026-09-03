@@ -1,0 +1,559 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "9e81d07b-126a-409e-84e6-17bd286fa376",
+  "label" : "Capacitaciones D I a colaboradores y líd",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "b330881f-a73c-4ddb-bad5-e277d484f054",
+          "columns" : [ {
+            "UUID" : "695f3762-92a8-4279-b985-b29342b441d2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b330881f-a73c-4ddb-bad5-e277d484f054",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "afd5d5bf-5018-4afc-a231-054add5455e0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "695f3762-92a8-4279-b985-b29342b441d2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a94c83c1-da2d-45e6-abb4-7b8b3c9937b9",
+          "columns" : [ {
+            "UUID" : "83cad631-ec47-4b0a-a700-af2bbc0023c2",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a94c83c1-da2d-45e6-abb4-7b8b3c9937b9",
+      "regions" : [ {
+        "id" : "83cad631-ec47-4b0a-a700-af2bbc0023c2",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "f710262c-1f2e-4326-9ea8-729f308db5c7",
+          "columns" : [ {
+            "UUID" : "dd17a002-faf0-4b6c-9605-a70eceda697a",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "1b05d065-109a-4ed2-a099-d3c22c68d7af",
+            "columnKey" : "72277",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "43573fe3-36fe-49b9-9e51-f66330b4287d",
+            "columnKey" : "e4175",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5e856cac-08f6-412e-87e6-116a9ab09885",
+            "columnKey" : "5977e",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "51fb7207-beb2-459e-b8f9-d5b871604260",
+            "columnKey" : "146a4",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4aa1ae16-2834-45c6-bd1e-d40864e12bad",
+            "columnKey" : "50583",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 115
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f710262c-1f2e-4326-9ea8-729f308db5c7",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : " Volver",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/diversidad-e-inclusion"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "c1534ee3-f988-4a25-9681-743c1b773879",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dd17a002-faf0-4b6c-9605-a70eceda697a",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "1b05d065-109a-4ed2-a099-d3c22c68d7af",
+        "regionLabel" : "Column 2",
+        "regionName" : "72277",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "43573fe3-36fe-49b9-9e51-f66330b4287d",
+        "regionLabel" : "Column 3",
+        "regionName" : "e4175",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5e856cac-08f6-412e-87e6-116a9ab09885",
+        "regionLabel" : "Column 4",
+        "regionName" : "5977e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "51fb7207-beb2-459e-b8f9-d5b871604260",
+        "regionLabel" : "Column 5",
+        "regionName" : "146a4",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4aa1ae16-2834-45c6-bd1e-d40864e12bad",
+        "regionLabel" : "Column 6",
+        "regionName" : "50583",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7c67450c-0609-41d0-99ba-296fce858b08",
+          "columns" : [ {
+            "UUID" : "6f406a6b-d5e2-45dd-a92e-92b0177142c7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 128
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7c67450c-0609-41d0-99ba-296fce858b08",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Capacitaciones D&amp;I a Colaboradores y Líderes </strong></h1><h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">de Miski Mayo</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "82b6310a-d04c-4867-9820-1e96bf9596b4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6f406a6b-d5e2-45dd-a92e-92b0177142c7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "42693122-d243-4721-961d-42e5fb4a0c2d",
+          "columns" : [ {
+            "UUID" : "a2b024b4-c64d-4a43-9b2a-926273d74217",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 128
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "42693122-d243-4721-961d-42e5fb4a0c2d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 20px;\">Logramos sensibilizar en temas de D&amp;I a 681 colaboradores y líderes. A través de charlas virtuales y presenciales, y mediante el apoyo de los líderes de área, alcanzamos el 100% de nuestra meta. Asimismo fueron más de 1100 horas de capacitación a todo nivel.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e85fbcb7-bffd-447f-ad4b-b068b28a4fe2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a2b024b4-c64d-4a43-9b2a-926273d74217",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "15fc0a4a-b1e0-497f-bb04-f0a8782d0320",
+          "columns" : [ {
+            "UUID" : "85d76aac-054e-4994-b8fd-33f577addfd4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8ee8604d-d831-4d35-9cb4-c19fbbd6ccaf",
+            "columnKey" : "5824e",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "15fc0a4a-b1e0-497f-bb04-f0a8782d0320",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.capacitaciontrabajadoresdi21.1}\" alt=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.capacitaciontrabajadoresdi211.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "6ea7b177-0bdc-4f79-b052-ede397215930",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "85d76aac-054e-4994-b8fd-33f577addfd4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.capacitaciontrabajadoresdi1.1}\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "40d91e7b-4cb3-4b11-8eb8-b45c770f9834",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8ee8604d-d831-4d35-9cb4-c19fbbd6ccaf",
+        "regionLabel" : "Column 2",
+        "regionName" : "5824e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "adc42e93-e314-4255-8958-08cc441e931b",
+          "columns" : [ {
+            "UUID" : "622a4c14-c83f-4ba0-8d0f-84ab9e1c55fb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f9ae39d6-3088-4a35-917b-aa9a2d381014",
+            "columnKey" : "07a6f",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 339
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "adc42e93-e314-4255-8958-08cc441e931b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p>\n<p><br></p>\n<p><br></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.torta2.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c3e18ac5-0891-4329-b56e-42ddcd513851",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h4 style=\"text-align: center;\"><strong style=\"font-size: 22px; color: rgb(230, 0, 0);\">681 Trabajadores Capacitados</strong></h4><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "dc243c25-74bf-4a00-a038-a77cbe9ae577",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "622a4c14-c83f-4ba0-8d0f-84ab9e1c55fb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.barras2.1}\" alt=\"\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.barras21.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "17ab9c62-f41e-400a-9273-f942ade2914f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<h4 style=\"text-align: center;\"><strong style=\"font-size: 22px; color: rgb(230, 0, 0);\">1100 horas de capacitación</strong></h4><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e0ea3970-6a3f-401c-a102-c2df30f28a19",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f9ae39d6-3088-4a35-917b-aa9a2d381014",
+        "regionLabel" : "Column 2",
+        "regionName" : "07a6f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "6a30996f-0c36-4ffc-a940-b8869094854c",
+          "columns" : [ {
+            "UUID" : "8294b820-0695-4653-bc1b-08d9ac60edbc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 225
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6a30996f-0c36-4ffc-a940-b8869094854c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Temario De Entrenamiento en D&amp;I</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7e0ec174-e0ac-4af0-a448-2d25be867324",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 20px;\">A nivel de toda la corporación, el primer paso fue capacitar a nuestros colaboradores en conceptos básicos sobre Diversidad e Inclusión y así sensibilizar e involucrar a todos en esta importante política de la empresa.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "626fe26d-f0af-4443-8943-1cd77094ab78",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8294b820-0695-4653-bc1b-08d9ac60edbc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "d4e667bb-18bd-475a-a2dd-b7d675e285c8",
+          "columns" : [ {
+            "UUID" : "92b8f69a-49f3-4c1b-956f-0eed9d17e5be",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "062cda3c-1760-49c8-93dc-bd3d9ce480c1",
+            "columnKey" : "eb0d8",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d4e667bb-18bd-475a-a2dd-b7d675e285c8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Importancia y beneficios de D&I.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Diversidad, inclusión e identidad.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Dimensiones de la identidad.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Construyendo un mejor lugar de trabajo.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Sesgos inconscientes.</span>\n       </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Inclusión consciente.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Interruptores de sesgos.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "e25a00ae-e2cb-4f68-adf9-ffc638002baa",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "92b8f69a-49f3-4c1b-956f-0eed9d17e5be",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.capacitaciontrabajadoresdi31.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9ca60f97-4298-4206-8f81-ee49316258e0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "062cda3c-1760-49c8-93dc-bd3d9ce480c1",
+        "regionLabel" : "Column 2",
+        "regionName" : "eb0d8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9411b884-d907-47b1-a534-7563793ca152",
+          "columns" : [ {
+            "UUID" : "11fc15af-9f3a-4a3c-9c94-8a5d5f4207fd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9411b884-d907-47b1-a534-7563793ca152",
+      "regions" : [ {
+        "id" : "11fc15af-9f3a-4a3c-9c94-8a5d5f4207fd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ff5dfe47-eddb-4771-9a85-30ccf456ec7e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Capacitaciones D I a colaboradores y líd"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "36ee06ad-37e6-4dcd-ae44-000b2fa5abbf",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "57e8ec85-7abc-4610-8e0f-8e139677f2ff",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-capacitaciones-d-i-a-colaboradores-y-ld"
+}

@@ -1,0 +1,110 @@
+@font-face {
+   /*
+       font family is used to give a name to the custom font,
+        you use this for referencing the custom font later
+   */
+   font-family: "customfont";
+
+   /*
+       This is the location of the Custom Font, note, I have stored in a ZIP file
+    */
+   src: url('/resource/Barlow/Barlow-Medium.otf')format('TrueType');
+}
+
+
+.test1{
+
+  font-family: "customfont";
+}
+.footer-container {
+  background: #F0F0F0;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  line-height: 27px;
+}
+
+.brand-logo {
+  margin-bottom: 40px;
+}
+
+.brand-logo img {
+  width: 180px;
+  height: auto;
+}
+
+.footer-links {
+  //display: flex;
+  gap: 48px;
+}
+
+.footer-links * {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "customfont";
+  //text-decoration: underline;
+}
+
+.footer-links *:hover {
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 18px;
+  color: #093532;
+  font-family: "customfont";
+  
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .brand-logo img {
+    min-width: 114px;
+    width: 114px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-links {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .brand-logo img {
+    min-width: 72px;
+    width: 72px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-links {
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    margin: 0px;
+    display: none;
+  }
+
+  .footer-links * {
+    font-family: "customfont";
+    font-size: 18px;
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "customfont";
+    font-size: 18px;
+  }
+
+  .footer-container {
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    padding: 20px 0;
+  }
+
+  
+}

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>service-1-18.ungvlrckbtwz@mosaicco.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>service-11-6.1twhkujyeegh.pzvxagslqqfb@mosaicco.com</submitter>
+        <type>user</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount &lt; $25,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &lt; $25,000 by Product Management Queue</label>
+        <name>PMC_QualityCreditLessThan25000ByProductManagement</name>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount &lt; $25,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &lt; $25,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditLessThan25000ByCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagementLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount is between $25,000 and $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality $25,000 &lt; Credit Approval &lt; $50,000 by Product Management Leadership Queue</label>
+        <name>PMC_QualityCreditBetween25000And50000ByProductManagementLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount is between $25,000 and $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 25,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>lessOrEqual</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality $25,000 &lt; Credit Approval &lt; $50,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditBetween25000And50000ByCreditServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFirstlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_ProductManagement</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>First level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &gt; $50,000 by Product Management Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByProductManagement</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforSecondlevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_QualityLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Second level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 1 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Quality Credit Approval &gt; $50,000 by Quality Leadership Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByQualityLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>PMC_QualityApprovalforFinallevel</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>PMC_SS_CustomerServiceLeadership</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Third level of approval for when Credit Amount &gt; $50,000</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.PMC_SS_CreditDebitAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 50,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_OriginalInvoiceAmount__c</field>
+                <operation>greaterThan</operation>
+                <value>&quot;USD 1,000,000&quot;</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_ApprovalStatus__c</field>
+                <operation>equals</operation>
+                <value>Level 2 Approved</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.PMC_SS_RouteToQuality__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Quality Credit Approval &gt; $50,000 by Customer Service Leadership Queue</label>
+        <name>PMC_QualityCreditGreaterThan50000ByCustomerServiceLeadership</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+        <rejectionActions>
+            <action>
+                <name>PMC_QualityRejection</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <description>Approval process to route Cases to appropriate Queues based on credit approval.</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Case Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

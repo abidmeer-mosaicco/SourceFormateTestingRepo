@@ -1,0 +1,29 @@
+.icon-button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.icon-button img {
+  cursor: pointer;
+}
+
+.btn-tooltip {
+  position: absolute;
+  top: -44px;
+  background: var(--primary-green);
+}
+
+.btn-tooltip .tooltip-text {
+  font-size: var(--x-small-font-size);
+}
+
+.m-content {
+  padding: 16px;
+}
+
+.duplicate-error {
+  font-size: 12px;
+  color: var(--error-orange);
+  padding-bottom: 16px;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Assignment_Group__c</fullName>
+    <label>Account Assignment Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>01</fullName>
+                <default>false</default>
+                <label>01 - Domestic Revenues</label>
+            </value>
+            <value>
+                <fullName>02</fullName>
+                <default>false</default>
+                <label>02 - Foreign Revenues</label>
+            </value>
+            <value>
+                <fullName>03</fullName>
+                <default>false</default>
+                <label>03 - Affiliat Comp Revenu</label>
+            </value>
+            <value>
+                <fullName>P1</fullName>
+                <default>false</default>
+                <label>P1 - PY - Serviço Buffet</label>
+            </value>
+            <value>
+                <fullName>P2</fullName>
+                <default>false</default>
+                <label>P2 - PY - Serviço Limpiez</label>
+            </value>
+            <value>
+                <fullName>P3</fullName>
+                <default>false</default>
+                <label>P3 - PY - Enfermería</label>
+            </value>
+            <value>
+                <fullName>Z1</fullName>
+                <default>false</default>
+                <label>Z1 - Mosaic Domestic Rev</label>
+            </value>
+            <value>
+                <fullName>Z2</fullName>
+                <default>false</default>
+                <label>Z2 - Mosaic Foreign Rev</label>
+            </value>
+            <value>
+                <fullName>Z3</fullName>
+                <default>false</default>
+                <label>Z3 - Mosaic Inter-Company</label>
+            </value>
+            <value>
+                <fullName>Z4</fullName>
+                <default>false</default>
+                <label>Z4 - Cargill Domestic</label>
+            </value>
+            <value>
+                <fullName>Z6</fullName>
+                <default>false</default>
+                <label>Z6 - Mosaic Affl Domestic</label>
+            </value>
+            <value>
+                <fullName>Z7</fullName>
+                <default>false</default>
+                <label>Z7 - Mosaic Affl Foreign</label>
+            </value>
+            <value>
+                <fullName>Z8</fullName>
+                <default>false</default>
+                <label>Z8 - CargillAffl Domestic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

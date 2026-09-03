@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>China New Leads</name>
+    <queueMembers>
+        <roles>
+            <role>PMC_NA_TechnicalSalesManager</role>
+            <role>PMC_NA_SalesManager</role>
+            <role>PMC_NA_SalesTeam</role>
+            <role>PMC_SA_B2BSalesManager</role>
+            <role>PMC_SA_B2BSalesTeam</role>
+            <role>PMC_SA_B2BTechnicalSalesManager</role>
+            <role>PMC_SA_B2CSalesManager</role>
+            <role>PMC_SA_B2CSalesTeam</role>
+            <role>PMC_SA_B2CTechnicalSalesManager</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

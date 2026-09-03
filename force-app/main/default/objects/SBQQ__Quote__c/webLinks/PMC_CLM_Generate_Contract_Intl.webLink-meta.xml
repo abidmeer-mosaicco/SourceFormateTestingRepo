@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_Generate_Contract_Intl</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Generate Contract</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://na11.springcm.com/atlas/doclauncher/OneClickDocGen?aid=31298&amp;&amp;config=International Sales Contract&amp;eos[0].Id={!SBQQ__Quote__c.Id}&amp;eos[0].System=Salesforce&amp;eos[0].Type=SBQQ__Quote__c&amp;eos[0].Name={!SBQQ__Quote__c.Name}&amp;eos[0].ScmPath=/Salesforce/Quote/</url>
+</WebLink>

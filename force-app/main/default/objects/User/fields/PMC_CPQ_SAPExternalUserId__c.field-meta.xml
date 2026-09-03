@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SAPExternalUserId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field stores the user reference that will be used for Integration purposes with SAP.</description>
+    <externalId>true</externalId>
+    <label>SAP External User Id</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

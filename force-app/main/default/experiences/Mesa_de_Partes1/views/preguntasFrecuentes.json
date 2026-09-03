@@ -1,0 +1,166 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "1e5870b1-99b9-43bf-84fd-c4370b40483f",
+  "label" : "Preguntas Frecuentes",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a70f44a8-edcf-453a-b0e2-131f2caaf851",
+          "columns" : [ {
+            "UUID" : "64752963-fc52-4c6b-9794-28e8d50bf9a4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a70f44a8-edcf-453a-b0e2-131f2caaf851",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 20px;\">Preguntas Frecuentes</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f4783fb9-cdfd-4228-8fea-70562f7768a2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "<p>Para conocer nuestras ofertas laborales vigentes y postular a ellas, visita la plataforma Bumeran, donde podr&aacute;s ingresar tu CV o informaci&oacute;n personal. Para postular es necesario que crees una cuenta en dicha plataforma.</p> <p>Las convocatorias abiertas, as&iacute; como la culminaci&oacute;n de la selecci&oacute;n son publicadas en nuestras redes sociales de Facebook y LinkedIn. Te invitamos a seguirnos en estas plataformas para recibir alertas cada vez que haya una convocatoria laboral vigente.</p> <p><a href=\"https://www.facebook.com/MineraMiskiMayo\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa |Facebook</a></p> <p><a href=\"https://www.linkedin.com/company/miski-mayo/posts/?feedView=all\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa | LinkedIn</a></p> <p><strong>Recuerda que:</strong></p> <p>Ninguno de nuestros procesos de contrataci&oacute;n se realiza a cambio de dinero.</p> <p>No realizamos convocatorias laborales a trav&eacute;s de correo electr&oacute;nico o WhatsApp. \"<br />&nbsp;</p>",
+            "headerText" : "¿Cómo puedo trabajar con ustedes o postular para trabajar en la empresa?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "d87dd7aa-2b56-42f4-a948-a0b5eee4662c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "<p>Si deseas darnos a conocer tu empresa te invitamos a que ingreses al siguiente link que se encuentra en nuestra p&aacute;gina web:  <a href=\"https://www.miskimayo.com/s/proveedores?language=es_PE\">Proveedores</a><br /> Completa el formulario proporcionando informaci&oacute;n detallada de tu empresa para que podamos tenerla presente en futuros procesos de licitaci&oacute;n.&nbsp;</p>",
+            "headerText" : "¿Cómo mi empresa puede brindar servicios a Compañía Minera Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "2d30291f-1862-42fc-8ae5-f500243860ca",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Haz clic en la opción de “Registra tu solicitud y/o, luego ubica la sección “Área a la que dirige su documento”, has clic y selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste. ",
+            "headerText" : "Si quiero solicitar una donación o apoyo, ¿con quién me puedo contactar?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "6eb88cea-98e4-419f-9fae-504b21a191d9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Para más información sobre la venta de nuestro concentrado de fosfato, escríbenos a través de nuestra Mesa de Partes Virtual. Elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área “Comercial”. Ingresa todos tus datos y tu consulta. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.   ",
+            "headerText" : "¿Cómo puedo comprar fosfato de Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "2d592f05-e697-44c0-b6a8-e7279392c1d1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Quiero conocer los reportes ambientales o algún tema específico ambiental",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "68ee22de-902d-47e0-9d9e-dcbfe1d34e20",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres visitar la operación debes registrar una solicitud en nuestra Mesa de Partes Virtual.  Elige la opción “Registra tu solicitud y/o documento”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Gestión Social”. Ingresa todos tus datos y adjunta tu solicitud. Esta será evaluada por el área respectiva y la respuesta será enviada al correo electrónico que registraste.",
+            "headerText" : "¿Cómo puedo visitar la operación?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "1ded2b98-cde1-470c-99e9-316029ea6580",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si no tienes claro a quien dirigir tu consulta, puedes hacerla llegar al área de Comunicación para que derive tu consulta al área respectiva. Elige la opción de “Consulta”, luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. Esta área se encargará de retransmitir tu consulta al área respectiva para que atienda tu comunicación, dándote respuesta al correo electrónico que registraste.  ",
+            "headerText" : "Deseo información adicional sobre el proceso de operación",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "8564d16c-8693-4c4a-b11f-71dc74e32a21",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Si quieres información sobre reportes ambientales o temas similares escríbenos a través de nuestra Mesa de Partes Virtual y elige la opción de “Consulta”, haz clic y luego de desplegar las opciones de la sección “Área a la que dirige su documento”, selecciona el área de “Comunicación”. Ingresa todos tus datos y tu consulta. La evaluará el área respectiva y la respuesta se enviará al correo electrónico registrado.",
+            "headerText" : "Quiero hacer una consulta, pero no tengo claro a quien dirigirla en su mesa de partes. ¿Cómo hago?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "9746c5ce-6055-40e1-b675-c692cad80c7b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "64752963-fc52-4c6b-9794-28e8d50bf9a4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6287b79e-ab9c-4bae-bebe-219a459e2bdb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Preguntas Frecuentes"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "224aac20-31ca-4a9d-97ae-d8d40ca3fe32",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "67f53850-6737-49b9-a124-3c8bc6d52bc8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-preguntas-frecuentes"
+}

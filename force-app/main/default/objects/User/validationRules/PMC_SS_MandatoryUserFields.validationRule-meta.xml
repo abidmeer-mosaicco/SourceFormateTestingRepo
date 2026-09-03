@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_MandatoryUserFields</fullName>
+    <active>false</active>
+    <description>This validation rule is used to ensure that Federation ID and Mobile No. fields are filled while creating/updating user records.</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ),
+
+NOT( OR( BEGINS(Profile.Name, &apos;Digital Hub&apos;),(Profile.Name == &apos;API Only profile&apos;), (Profile.Name == &apos;Partner Community User&apos;)  ) ),
+OR(
+ISBLANK( FederationIdentifier ),
+ISBLANK(  MobilePhone ),
+ISBLANK(   TEXT(PMC_CPQ_SalesRegion__c)  )
+)
+
+)</errorConditionFormula>
+    <errorMessage>Please fill the mandatory fields, Mobile No., Federation ID &amp; Sales Region in order to save the record.</errorMessage>
+</ValidationRule>

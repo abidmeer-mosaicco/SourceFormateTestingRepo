@@ -1,0 +1,409 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "af24aa7e-807d-433c-a8d8-f9bfa90fa560",
+  "label" : "Salud",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "47f6ceed-2190-4126-9223-42bf3f7ffe6b",
+          "columns" : [ {
+            "UUID" : "dcff18b0-5d17-4d17-b69c-776d591f81ee",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "47f6ceed-2190-4126-9223-42bf3f7ffe6b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "0a425c97-9367-482d-a1ce-0f73f3faecc3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "dcff18b0-5d17-4d17-b69c-776d591f81ee",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "307a3a8f-e57a-4eea-9302-5f36ab74f296",
+          "columns" : [ {
+            "UUID" : "da51cf33-f012-45b6-abce-266963ba8ac0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "307a3a8f-e57a-4eea-9302-5f36ab74f296",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageH",
+            "textDescription" : "Cuidamos de la salud física y mental de nuestros colaboradores"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "dbc3a0b9-dfcd-4334-9359-974cb1df9316",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "da51cf33-f012-45b6-abce-266963ba8ac0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "e2ca9445-3a54-479c-ad67-5e8cfa4740fe",
+          "columns" : [ {
+            "UUID" : "32caf588-858f-4e58-b931-de7a1c896a67",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "489876d4-f783-4284-b455-7da25909aecb",
+            "columnKey" : "7599e",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e2ca9445-3a54-479c-ad67-5e8cfa4740fe",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 28px; color: rgb(230, 0, 0);\">SALUD</strong></h3><p><br></p><p><span style=\"font-size: 20px;\">En Miski Mayo nos preocupamos por la salud y el bienestar físico y psicológico de nuestros colaboradores, por ello, el servicio de Salud Ocupacional de nuestra empresa trabaja en pro de nuestro mayor valor que es CUIDAR Y PRESERVAR LA VIDA de los trabajadores, mediante la prevención y la aplicación de los avances de la ciencia y tecnología médica.&nbsp;&nbsp;A continuación, te mostramos nuestros principales indicadores de salud:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f0e3ef70-9b6d-4e0d-8526-653199e35455",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "32caf588-858f-4e58-b931-de7a1c896a67",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageH1"
+          },
+          "componentName" : "c:miskiMayoCustomCarousel",
+          "id" : "4a2874a7-7894-4d06-81bf-6a9128788833",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "489876d4-f783-4284-b455-7da25909aecb",
+        "regionLabel" : "Column 2",
+        "regionName" : "7599e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "9e4cb3d7-e373-4578-8428-aba12f60d576",
+          "columns" : [ {
+            "UUID" : "d9798898-f8b1-4d18-a0dc-b819bad306ac",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "baf28128-32eb-4cca-b3b1-10a50802e760",
+            "columnKey" : "0bf97",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "b750d177-3262-40a9-9189-f083443c4ce1",
+            "columnKey" : "7bf6f",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 185
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9e4cb3d7-e373-4578-8428-aba12f60d576",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "En Miski Mayo realizamos anualmente más de 3,000 atenciones y/o consultas a nuestros colaboradores, con el fin de atender cualquier enfermedad y puedan solucionarla con el tratamiento médico correspondiente.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "Stetoscope",
+            "title" : "Atenciones Médicas"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "92000215-51e1-44d6-bf99-3f51e4fa5c6f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Como parte de nuestra responsabilidad social y compromiso con las comunidades del área de influencia directa, Miski Mayo también brinda atención y servicio a las comunidades cercanas a la operación mediante consultas, referencias médicas y auxilio rápido en casos de emergencia. Nuestra empresa realiza más de 200 atenciones cada año a la Comunidad.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "GroupHands",
+            "title" : "Atenciones a la Comunidad"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "579e344e-091c-41f4-9d4e-91b7f5802c91",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "En diversas zonas estratégicas de Miski Mayo, se han implementado y reabastecido alrededor de 410 botiquines para usar en casos de emergencia o primeros auxilios.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "DoctorBag",
+            "title" : "Reabastecimiento de Botiquines"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "162152a2-cd8e-411c-b954-4e6c2dfc1e12",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d9798898-f8b1-4d18-a0dc-b819bad306ac",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Nuestra empresa realiza más de 1,000 atenciones de fisioterapia a nuestros trabajadores cada año con el objetivo de prevenir y/o curar algunas lesiones músculo esqueléticas.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "DoctorKnee",
+            "title" : "Atenciones de Fisioterapia"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "5b880d69-96ba-49c8-9f8b-40b728b04a67",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Año tras año realizamos exámenes médicos anuales a nuestros colaboradores con el objetivo de llevar un control de su estado de salud y poder prevenir y/o curar alguna lesión o problema de salud que se pueda detectar. Anualmente realizamos un promedio de 700 exámenes médicos ocupacionales a personal Miski Mayo y más de 6,300 a personal de contratistas.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "Chart",
+            "title" : "Exámenes Médicos Ocupacionales"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "495cff98-3f63-42d9-8e4b-afbef13937bd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Periódicamente renovamos los equipos de las áreas de emergencia de nuestros policlínicos en la operación habiendo renovado hace poco un coche de paro para emergencia, un equipo de evaluación psicosensométrica, monitor multiparámetros para control continuo de funciones vitales de los pacientes, desfibrilador automático y equipos para mediciones de higiene ocupacional.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "ambulance",
+            "title" : "Equipamiento de Servicio de Emergencia"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "01eb8507-e37e-4512-9cc8-04b349aeae89",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "baf28128-32eb-4cca-b3b1-10a50802e760",
+        "regionLabel" : "Column 2",
+        "regionName" : "0bf97",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Referimos a nuestros colaboradores a clínicas especializadas de la región cuando es necesario tratar alguna lesión o enfermedad que lo requiera por su complejidad. Esto con el fin de que el trabajador tenga la atención oportuna con el equipamiento y especialistas adecuados.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "Doctor1",
+            "title" : "Referencias Médicas"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "17a25a49-09ef-4307-bcbc-1a845f38f27d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Anualmente Miski Mayo realiza alrededor de 150 pruebas psicosensométricas con el fin de evaluar las aptitudes visuales y sensoriales de nuestros colaboradores que operan unidades en diferentes áreas de la mina, como operadores de camión, tractores, motoniveladoras, camionetas, buses, etc.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "HardhatWorker",
+            "title" : "Pruebas Psicosensométricas a Operadores"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "e5f8064a-12a7-4865-ac8a-ec784115ae25",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundColorMouseHover" : "#e32e12",
+            "cardHeight" : "300",
+            "description" : "Durante la pandemia se elaboró el Plan de Vigilancia y el Programa de Control y Prevención de la Covid-19. Estas acciones fueron desplegadas para poder retomar las labores con los máximos cuidados de bioseguridad. Asimismo, nuestra empresa implementó la realización de pruebas de antígeno mediante la adquisición de cabinas especiales para este fin. Se logró también implementar un área Covid-19 en Secado para mayor comodidad de los pacientes. En el año 2022 se realizaron 2915 pruebas antígenas.",
+            "fontSizeDescription" : "12",
+            "fontSizeTitle" : "16",
+            "iconName" : "PersonMask",
+            "title" : "Tratamiento de la COVID-19"
+          },
+          "componentName" : "c:miskiMayoReusableTileHoverCard",
+          "id" : "ee91b06e-25e1-4ac6-b1ed-3509848cb803",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b750d177-3262-40a9-9189-f083443c4ce1",
+        "regionLabel" : "Column 3",
+        "regionName" : "7bf6f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1ab1c62e-bd9a-494e-bc88-1472779adf32",
+          "columns" : [ {
+            "UUID" : "94fdb559-41e1-4642-85dd-06be344bac05",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 100
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1ab1c62e-bd9a-494e-bc88-1472779adf32",
+      "regions" : [ {
+        "id" : "94fdb559-41e1-4642-85dd-06be344bac05",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2e67d258-a94d-43ac-8951-0545c13fb83c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Salud"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "b482db63-bbeb-46ed-88e8-81c779f677ec",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d8869e8e-0827-48ff-ba15-940b1dfe3881",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-salud"
+}

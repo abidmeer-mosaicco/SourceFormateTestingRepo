@@ -1,0 +1,178 @@
+.rebate-top-section,
+.rebate-period-section,
+.proj-incentives-head,
+.pagination {
+  display: flex;
+}
+
+.rebate-top-section {
+  justify-content: space-between;
+}
+
+.rebate-prog-summary {
+  width: 100%;
+  margin-right: 24px;
+}
+
+.rebate-prog {
+  width: 100%;
+  margin-right: 0;
+}
+
+.rebate-prog-summary-body,
+.rebate-prog-body {
+  padding-left: 16px;
+}
+
+.rebate-period-section {
+  align-items: center;
+  margin: auto 0 auto 24px;
+}
+
+.rebate-prog-summary-item {
+  padding-right: 16px;
+}
+
+.rebate-prog-summary-item-head {
+  padding-bottom: 8px;
+}
+
+.reb-prog-dropdown {
+  margin-right: 24px;
+}
+
+.rebates-apply-btn {
+  margin-right: 16px;
+}
+
+.clear-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.individual-card {
+  background-color: #d4dfde;
+  font-size: 16px;
+}
+
+.products-cont {
+  padding: 16px 32px 16px 16px;
+}
+
+.info-icon {
+  margin-left: 8px;
+}
+
+.products-cont:last-child,
+.tiers-body-grid:last-child {
+  border-bottom: none;
+}
+
+.tiers-body-grid {
+  padding: 16px 16px;
+}
+
+.products-cont,
+.tiers-body-grid {
+  border-bottom: 1px solid #BFD0CE;
+  min-height: 90px;
+}
+
+.tiers-data {
+  margin-bottom: 10px;
+}
+
+.tiers-data-color {
+  color: #093532;
+}
+
+.products-card-cont {
+  padding-right: 12px;
+}
+
+.product-content-heading {
+  min-height: 2.5rem;
+  padding-right: 16px;
+}
+
+.tiers-card-cont {
+  padding-left: 12px;
+}
+
+.pagination {
+  justify-content: end;
+}
+
+.order-menu {
+  display: flex;
+  font-family: var(--medium-font);
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+.menu-list {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dynamic-border {
+  border-bottom: 3px solid var(--primary-green);
+}
+
+.cultivar-text {
+  margin: 24px 0;
+}
+
+.cultivar-container {
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .rebate-top-section {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .reb-prog-dropdown {
+    padding-right: 16px;
+  }
+
+  .rebates-apply-btn {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .clear-link {
+    padding-top: 16px;
+  }
+
+  .rebate-period-section {
+    flex-direction: column;
+    margin: auto;
+    padding-right: 16px;
+  }
+
+  .rebate-prog-summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 16px 0;
+  }
+
+  .rebate-prog-summary-item:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .prod-tier-cont {
+    overflow-x: scroll;
+    margin-bottom: 32px;
+  }
+
+  .products-card-cont,
+  .tiers-card-cont {
+    width: 831px;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+}

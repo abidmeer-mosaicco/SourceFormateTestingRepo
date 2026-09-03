@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Your contract is ready for review.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Your contract is ready for review</name>
+    <relatedEntityType>SBQQ__Quote__c</relatedEntityType>
+    <style>none</style>
+    <subject>Your contract is ready for review.</subject>
+    <textOnly>[Image alt text: Mosaic] 
+
+{labels.pmc_emailTemplate_contractReadyTitle}
+
+{labels.pmc_emailTemplate_contractNumber} {{{SBQQ__Quote__c.PMC_CLM_DocumentNumber__c}}}
+
+{labels.pmc_emailTemplate_contractType} {{{SBQQ__Quote__c.PMC_CPQ_ContractType__c}}}
+
+{labels.pmc_emailTemplate_companyName} {{{SBQQ__Quote__c.SBQQ__Account__c}}}
+
+{labels.pmc_emailTemplate_viewContract} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contractReadyLink}{{{SBQQ__Quote__c.Id}}} &gt; 
+
+{labels.pmc_emailTemplate_copyPasteLink1}
+
+{labels.pmc_emailTemplate_copyPasteLink2}
+
+{labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contractReadyLink}{{{SBQQ__Quote__c.Id}}} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contractReadyLink}{{{SBQQ__Quote__c.Id}}} &gt; 
+
+{labels.pmc_emailTemplate_customerService1} {labels.pmc_emailTemplate_customerService2} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contactUsLink} &gt; {labels.pmc_emailTemplate_customerService3}
+
+{labels.pmc_emailTemplate_contactUs} &lt; {labels.pmc_emailTemplate_basePath}{labels.pmc_emailTemplate_contactUsLink} &gt; 
+
+{labels.pmc_emailTemplate_copyright}</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

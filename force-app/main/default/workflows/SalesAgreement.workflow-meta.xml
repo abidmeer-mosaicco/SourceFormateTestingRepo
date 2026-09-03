@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>PMC_SS_NotifyOpportunityOwnerOnOpportunityCreation</fullName>
+        <description>Notify Opportunity Owner that Opportunities have been generated</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>noreply.customer.service@mosaicco.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/PMC_SS_NotifyOpportunityOwnerOnOpportunityCreation</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>PMC_SS_MarkStatusApprovedAction</fullName>
+        <field>Status</field>
+        <literalValue>Pending with Customer</literalValue>
+        <name>Mark Status Approved Action</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_MarkStatusApprovedActionForPlanSA</fullName>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>Mark Status as Approved For Plan SA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PMC_SS_MarkStatusAsReviewed</fullName>
+        <field>Status</field>
+        <literalValue>Approved</literalValue>
+        <name>Mark Status As Reviewed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetApprovalStatustoApproved</fullName>
+        <description>Set the approval status of triggering sales agreement to approved.</description>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Set Approval Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetApprovalStatustoDenied</fullName>
+        <description>Set the approval status of triggering record to denied in case of rejection.</description>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Denied</literalValue>
+        <name>Set Approval Status to Denied</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetApprovalStatustoUnderRevision</fullName>
+        <description>Set the approval status of the triggering sales agreement to under revision</description>
+        <field>PMC_SS_ApprovalStatus__c</field>
+        <literalValue>Under Revision</literalValue>
+        <name>Set Approval Status to Under Revision</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <tasks>
+        <fullName>RequiresApproval</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>-3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>SalesAgreement.StartDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>requires Approval</subject>
+    </tasks>
+</Workflow>

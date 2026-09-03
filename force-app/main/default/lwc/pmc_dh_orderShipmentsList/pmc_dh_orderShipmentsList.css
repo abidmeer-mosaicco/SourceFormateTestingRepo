@@ -1,0 +1,189 @@
+.order-menu {
+  display: flex;
+  font-family: var(--medium-font);
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+.menu-list {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dynamic-border {
+  border-bottom: 3px solid var(--primary-green);
+}
+
+.shipment-card-head {
+  background-color: var(--light-green);
+  padding: 16px 16px 25px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-icon {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.accordion-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.accordion-icon img.down {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.slds-gutters {
+  margin: 0;
+  border-bottom: 1px solid #D4DFDE;
+  margin-bottom: 16px;
+}
+
+.slds-gutters:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px;
+}
+
+.wrap-text {
+  word-break: break-all;
+}
+
+.order-link {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.order-link a, .order-link span {
+  color: var(--dark-primary-green);
+}
+
+.badge-style {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.badge-font {
+  font-family: var(--medium-font);
+}
+
+.delayed {
+  color: #A61A14;
+  border-color: #A61A14;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-message .dxp-text-body {
+  width: 100%;
+}
+
+.info-message a {
+  font-family: var(--medium-font);
+  font-size: var(--large-font-size);
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: underline;
+  float: right;
+}
+
+.content-info.doc-download-section {
+  flex-direction: row;
+}
+
+.content-info.doc-download-section c-pmc_dh_selection-picklist {
+  width: 100%;
+}
+
+.content-info.doc-download-section .download-icon {
+  display: flex;
+    align-items: end;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+}
+
+.brazil-shipments .content-info {
+  width: 11%;
+}
+
+.brazil-shipments .badge-style,
+.brazil-shipments .doc-download-section {
+  width: 17%;
+} 
+
+@media screen and (max-width: 767px) {
+  .pagination {
+    justify-content: center;
+  }
+
+  .info-message {
+    align-items: flex-start;
+  }
+
+  .info-message a {
+    font-size: var(--x-small-font-size);
+    line-height: 14px;
+    float: none;
+  }
+
+  .info-message .dxp-text-body {
+    width: unset;
+  }
+
+  .info-message img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 1889px){
+  .scrollable-container {
+    max-width: calc(91.6vw);
+    overflow-x: scroll;
+  }
+
+  .scrollable-content {
+    min-width: calc(91.6/100*1890px);
+    max-width: calc(91.6/100*1890px);
+    padding: 0 2px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1749px) {
+
+  .info-message {
+    align-items: flex-start;
+  }
+
+  .info-message a {
+    float: none;
+    min-width: fit-content;
+  }
+
+  .info-message .dxp-text-body {
+    display: flex;
+    justify-content: space-between;
+  }
+}

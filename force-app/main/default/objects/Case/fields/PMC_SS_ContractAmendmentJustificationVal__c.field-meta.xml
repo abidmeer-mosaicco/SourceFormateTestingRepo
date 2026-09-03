@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ContractAmendmentJustificationVal__c</fullName>
+    <description>This field is to indicate the Contract Amendment Justification</description>
+    <label>Contract Amendment Justification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_SS_ContractAmendmentType__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial Input Error</fullName>
+                <default>false</default>
+                <label>Commercial Input Error</label>
+            </value>
+            <value>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+                <label>Customer Request</label>
+            </value>
+            <value>
+                <fullName>Manufacturing Capacity Restriction</fullName>
+                <default>false</default>
+                <label>Manufacturing Capacity Restriction</label>
+            </value>
+            <value>
+                <fullName>Quality Restriction</fullName>
+                <default>false</default>
+                <label>Quality Restriction</label>
+            </value>
+            <value>
+                <fullName>Raw Material / Product Restriction</fullName>
+                <default>false</default>
+                <label>Raw Material / Product Restriction</label>
+            </value>
+            <value>
+                <fullName>Truck Restriction</fullName>
+                <default>false</default>
+                <label>Truck Restriction</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Plant/Origin</controllingFieldValue>
+            <controllingFieldValue>Due Date</controllingFieldValue>
+            <controllingFieldValue>Product Exchange</controllingFieldValue>
+            <controllingFieldValue>Contract End Date</controllingFieldValue>
+            <controllingFieldValue>Contract Start Date</controllingFieldValue>
+            <valueName>Customer Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant/Origin</controllingFieldValue>
+            <controllingFieldValue>Contract End Date</controllingFieldValue>
+            <controllingFieldValue>Contract Start Date</controllingFieldValue>
+            <valueName>Manufacturing Capacity Restriction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant/Origin</controllingFieldValue>
+            <controllingFieldValue>Contract End Date</controllingFieldValue>
+            <controllingFieldValue>Contract Start Date</controllingFieldValue>
+            <valueName>Quality Restriction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant/Origin</controllingFieldValue>
+            <controllingFieldValue>Contract End Date</controllingFieldValue>
+            <controllingFieldValue>Contract Start Date</controllingFieldValue>
+            <valueName>Raw Material / Product Restriction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant/Origin</controllingFieldValue>
+            <controllingFieldValue>Contract End Date</controllingFieldValue>
+            <controllingFieldValue>Contract Start Date</controllingFieldValue>
+            <valueName>Truck Restriction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Due Date</controllingFieldValue>
+            <valueName>Commercial Input Error</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

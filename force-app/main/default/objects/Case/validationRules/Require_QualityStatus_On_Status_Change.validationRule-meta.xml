@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_QualityStatus_On_Status_Change</fullName>
+    <active>true</active>
+    <description>Update the Quality Status before saving the Status change.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Quality&quot;,
+ISCHANGED(Status),
+    ISBLANK(TEXT(PMC_SS_QualityStatus__c))
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_QualityStatus__c</errorDisplayField>
+    <errorMessage>Quality Status is required when changing Case Status.</errorMessage>
+</ValidationRule>

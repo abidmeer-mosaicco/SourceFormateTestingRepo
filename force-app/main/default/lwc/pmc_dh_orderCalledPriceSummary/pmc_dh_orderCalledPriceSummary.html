@@ -1,0 +1,108 @@
+<template>
+  <div class="called-price-wrapper">
+    <div class="custom-card contract-card called-price-section">
+      <div class="card-header">{labels.pmc_orderDetails_calledPriceSummary}</div>
+      <div class="card-body">
+        <template for:each={pageObj.productWrapper} for:item="product">
+          <div class="product-wrapper" key={product.strprodId}>
+            <div class="slds-grid slds-wrap order-prod-head">
+              <div class="slds-col slds-size_4-of-12">
+                <div class="text-medium-normal text-color-dark-primary-green">
+                  {labels.pmc_quoteCheckoutFlow_products}</div>
+              </div>
+              <div class="slds-col slds-size_1-of-12"></div>
+              <div class="slds-col slds-size_4-of-12">
+                <div class="text-medium-normal text-color-dark-primary-green tab-data-align">
+                  {labels.pmc_orderDetails_unpricedQty}</div>
+              </div>
+              <div class="slds-col slds-size_3-of-12">
+                <div class="text-medium-normal text-color-dark-primary-green tab-data-align">
+                  {labels.pmc_orderDetails_pricedQty}</div>
+              </div>
+            </div>
+            <div class="slds-grid slds-wrap order-prod-body">
+              <div class="slds-col slds-size_4-of-12">
+                <div class="text-medium-normal text-color-primary-green">{product.strprodName}</div>
+              </div>
+              <div class="slds-col slds-size_1-of-12"></div>
+              <div class="slds-col slds-size_4-of-12">
+                <div class="text-medium-normal text-color-primary-green tab-data-align">
+                  {product.strunpricedQty}</div>
+              </div>
+              <div class="slds-col slds-size_3-of-12">
+                <div class="text-medium-normal text-color-primary-green tab-data-align">
+                  {product.strpricedQty}</div>
+              </div>
+            </div>
+            <div class="slds-grid slds-wrap order-line-head">
+              <div
+                class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-medium-normal text-color-dark-primary-green">
+                {labels.pmc_orderDetails_orderLine}
+              </div>
+              <div
+                class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-medium-normal text-color-dark-primary-green tab-data-align">
+                {labels.pmc_contractDetails_volume}
+              </div>
+              <div
+                class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-medium-normal text-color-dark-primary-green tab-data-align">
+                {labels.pmc_contractDetails_pricePerUnit}
+              </div>
+              <div
+                class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-medium-normal text-color-dark-primary-green tab-data-align">
+                {labels.pmc_quoteHistory_totalPrice}
+              </div>
+            </div>
+            <div class="slds-grid slds-wrap order-line-body">
+              <template for:each={product.lstOrderLineData} for:item="ordLine">
+                <div class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-regular-normal"
+                  key={ordLine.strOrderId}>{ordLine.strOrderLineNo}</div>
+                <div class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-regular-normal tab-data-align"
+                  key={ordLine.strOrderId}>{ordLine.strVolume}&nbsp;{ordLine.strUOM}</div>
+                <div class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-regular-normal tab-data-align"
+                  key={ordLine.strOrderId}>{ordLine.strPricePerTon}</div>
+                <div class="slds-col slds-size_1-of-4 slds-medium-size_1-of-4 text-regular-normal tab-data-align"
+                  key={ordLine.strOrderId}>{ordLine.strTotalPrice}</div>
+              </template>
+            </div>
+            <div class="slds-grid slds-wrap total-container">
+              <div class="slds-col slds-size_2-of-12 slds-medium-size_2-of-12 content-info">
+                <div class="text-medium-normal text-color-dark-primary-green">
+                  {labels.pmc_contractDetails_total}</div>
+              </div>
+              <div class="slds-col slds-size_4-of-12 slds-medium-size_4-of-12 content-info">
+                <div class="text-medium-normal text-color-dark-primary-green tab-data-align">
+                  {product.totalVolume}</div>
+              </div>
+              <div class="slds-col slds-size_3-of-12 slds-medium-size_3-of-12 content-info">
+                <div class="text-medium-normal text-color-dark-primary-green tab-data-align">
+                  {product.totalPricePerTon}</div>
+              </div>
+              <div class="slds-col slds-size_3-of-12 slds-medium-size_3-of-12 content-info">
+                <div class="text-medium-normal text-color-dark-primary-green tab-data-align">
+                  {product.totalPrice}</div>
+              </div>
+            </div>
+          </div>
+        </template>
+        <div class="legal-message">
+          <lightning-icon size="xx-small" icon-name="utility:info">
+          </lightning-icon>
+          <div class="slds-m-left_x-small">
+            <lightning-formatted-rich-text class="dxp-text-body" value={labels.pmc_orderDetails_calledPriceSummaryMsg}>
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+        <template lwc:if={errorMsg}>
+          <div class="error-msg">
+            <lightning-icon size="xx-small" icon-name="utility:info">
+            </lightning-icon>
+            <div class="slds-m-left_x-small">
+              <lightning-formatted-rich-text class="dxp-text-body" value={errorMsg}>
+              </lightning-formatted-rich-text>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>

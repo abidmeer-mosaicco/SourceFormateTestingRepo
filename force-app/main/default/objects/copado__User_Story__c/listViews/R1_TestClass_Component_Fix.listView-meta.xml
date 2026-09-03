@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R1_TestClass_Component_Fix</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Last_Promotion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>R1_TestClass_Fix</value>
+    </filters>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>R1_Component_Fix</value>
+    </filters>
+    <label>R1_TestClass_Component_Fix</label>
+    <language>en_US</language>
+</ListView>

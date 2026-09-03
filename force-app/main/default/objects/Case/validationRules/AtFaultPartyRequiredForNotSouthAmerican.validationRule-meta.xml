@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AtFaultPartyRequiredForNotSouthAmerican</fullName>
+    <active>true</active>
+    <description>At Fault Party is required when the Account associated is not a South American customer.</description>
+    <errorConditionFormula>AND(
+    NOT(
+        OR(
+            RecordType.DeveloperName = &quot;Consulta&quot;,
+            RecordType.DeveloperName = &quot;Reclamo&quot;,
+            RecordType.DeveloperName = &quot;Solicitud&quot;
+        )
+    ),
+    NOT(
+        OR(
+            Account.BillingCountry = &quot;Brazil&quot;,
+            Account.BillingCountry = &quot;Paraguay&quot;
+        )
+    ),
+    OR(
+        ISPICKVAL(Status, &quot;Closed&quot;),
+        ISPICKVAL(Status, &quot;Closure Pending&quot;)
+    ),
+    NOT(
+        OR(
+            ISPICKVAL(Type, &quot;Master Data&quot;),
+            ISPICKVAL(Type, &quot;EDI&quot;)
+        )
+    ),
+    NOT(
+        AND(
+            ISPICKVAL(PMC_SS_IssueReason__c, &quot;MDM Verification&quot;),
+            ISPICKVAL(Type, &quot;Internal&quot;)
+        )
+    ),
+    ISBLANK(TEXT(PMC_SS_AtFaultParty__c)),
+    RecordType.DeveloperName = &quot;PMC_SS_CaseGeneral&quot;
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_AtFaultParty__c</errorDisplayField>
+    <errorMessage>At Fault Party is required to close out your case.</errorMessage>
+</ValidationRule>

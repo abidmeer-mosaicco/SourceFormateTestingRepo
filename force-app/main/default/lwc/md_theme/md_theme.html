@@ -1,0 +1,26 @@
+<template>
+  <header data-f6-region class="page-header">
+    <div class="container">
+      <slot name="header"></slot>
+    </div>
+  </header>
+
+  <section data-f6-region class="page-container">
+    <div class="container">
+      <div lwc:if={isEvaluating} style="height: 40vh; display: flex; align-items: center; justify-content: center;">
+        <lightning-spinner alternative-text="Loading..." size="medium" variant="brand"></lightning-spinner>
+      </div>
+
+      <template lwc:elseif={hasAccess}>
+        <slot></slot>
+      </template>
+    </div>
+  </section>
+
+  <footer data-f6-region class="page-footer">
+    <div class="container">
+      <slot name="footer"></slot>
+      <slot name="cookie"></slot>
+    </div>
+  </footer>
+</template>

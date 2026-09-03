@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_RequiredFreight_BasedOnPriceList</fullName>
+    <active>true</active>
+    <description>GCPM-2706</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+NOT(ISCLONE()),
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+SBQQ__Quote__r.PMC_CPQ_QuoteOrigin__c &lt;&gt; &quot;DH Request&quot;,
+NOT(SBQQ__Quote__r.PMC_CPQ_IsCloned__c),
+ISPICKVAL(SBQQ__Quote__r.PMC_CPQ_Region__c, &apos;North America&apos;),
+NOT(AND(ISNEW(), ISPICKVAL(SBQQ__Quote__r.SBQQ__Type__c, &quot;Amendment&quot;))),
+OR(
+ISBLANK(PMC_CPQ_EstFreightPrice__c),
+PMC_CPQ_EstFreightPrice__c = 0
+),
+
+
+OR(
+ISPICKVAL(PMC_CPQ_Incoterms1__c, &quot;CPT&quot;),
+ISPICKVAL(PMC_CPQ_Incoterms1__c, &quot;CIF&quot;),
+ISPICKVAL(PMC_CPQ_Incoterms1__c, &quot;CFR&quot;)
+),
+
+
+OR(
+AND(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductSegment__c, &quot;FEED&quot;),
+OR(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_MaterialGroup__c, &quot;POTASH&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_MaterialGroup__c, &quot;PHOSPHATE&quot;)
+)
+),
+
+
+AND(
+OR(
+
+AND(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductSegment__c, &quot;FERTILIZER&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_MaterialGroup__c, &quot;PHOSPHATE&quot;),
+NOT(ISPICKVAL(SBQQ__Product__r.PMC_CPQ_Industry__c, &quot;INDUSTRIAL&quot;)),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductTypes__c, &quot;PERFORMANCE&quot;)
+),
+
+AND(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductSegment__c, &quot;FERTILIZER&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_MaterialGroup__c, &quot;PHOSPHATE&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_Industry__c, &quot;INDUSTRIAL&quot;)
+),
+
+AND(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_MaterialGroup__c, &quot;POTASH&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_Industry__c, &quot;INDUSTRIAL&quot;)
+),
+
+OR(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductTypes__c, &quot;COMMODITY&quot;),
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductTypes__c, &quot;PERFORMANCE&quot;)
+)
+),
+
+NOT(
+OR(
+ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductFamily__c, &quot;K-MAG&quot;),
+AND(ISPICKVAL(SBQQ__Product__r.PMC_CPQ_ProductFamily__c, &quot;MOP&quot;),NOT(ISPICKVAL(SBQQ__Quote__r.PMC_CPQ_QuoteRecordSubType__c, &quot;Industrial&quot;)))
+)
+)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Freight is required for the selected product and incoterm combination.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,55 @@
+<template>
+    <section class="wrap">
+        <div class="card">
+            <div class="logoRow">
+                <!-- Logo Session if necessary-->
+                <!--<img if:true={logoUrl} src={logoUrl} alt="Logo" class="logo" />
+                <div if:false={logoUrl} class="logoPlaceholder">Miski Mayo</div>-->
+            </div>
+
+            <div class="fields">
+                <lightning-input type="email" variant="label-hidden" placeholder={usernameLabel} value={username} onchange={handleUsernameChange} onkeyup={handleKeyUp} class="input"></lightning-input>
+
+                <lightning-input
+                    type="password"
+                    variant="label-hidden"
+                    placeholder={passwordLabel}
+                    value={password}
+                    onchange={handlePasswordChange}
+                    onkeyup={handleKeyUp}
+                    class="input"
+                ></lightning-input>
+            </div>
+
+            <div class="actionsRow">
+                <button
+                    class="btn btnPrimary"
+                    disabled={isLoginDisabled}
+                    onclick={handleLogin}
+                >
+                    {loginButtonLabel}
+                </button>
+
+                <button class="btn btnSecondary" onclick={goToSelfRegister}>
+                    {selfRegisterLabel}
+                </button>
+            </div>
+
+            <div class="links">
+                {forgotPasswordLabel}
+            </div>
+
+            <div class="resetRow">
+                <button class="btn btnSecondaryWide" onclick={goToForgotPassword}>
+                    {resetPasswordButtonLabel}
+                </button>
+            </div>
+
+            <template if:true={errorMessage}>
+                <div class="errorBox">
+                    {errorMessage}
+                </div>
+            </template>
+        </div>
+    </section>
+</template>

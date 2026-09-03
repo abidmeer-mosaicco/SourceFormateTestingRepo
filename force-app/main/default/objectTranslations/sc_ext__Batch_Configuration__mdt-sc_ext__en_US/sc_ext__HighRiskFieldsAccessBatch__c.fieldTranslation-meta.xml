@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Controls the batch size for the HighRiskFieldAccessBatch and HighRiskObjectAccessbatch in the Security Insights Analysis process. Defaults to 15 if nothing specified. Raising this will allow fewer files to be written. It may need to be lowered for orgs with lots of High Risk Fields in Permission Sets. --></help>
+    <label><!-- HighRiskFieldsAccessBatch --></label>
+    <name>sc_ext__HighRiskFieldsAccessBatch__c</name>
+</CustomFieldTranslation>

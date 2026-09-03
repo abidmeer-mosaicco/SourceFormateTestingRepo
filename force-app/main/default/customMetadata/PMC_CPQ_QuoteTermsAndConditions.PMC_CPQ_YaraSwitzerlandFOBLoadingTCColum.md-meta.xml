@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Yara Switzerland FOB Loading T&amp;C Columbi</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_CPQ_TermsConditionsData__c</field>
+        <value xsi:type="xsd:string">Guaranteed load rate on a per shipment basis determined by total quantity loaded. In the event contract fulfilled on multiple vessels, laytime will be calculated for each vessel using total bill of lading quantity on that ship only.
+&lt;br&gt;
+&lt;br&gt;
+SHIPMENT SIZE: 0 thru 6,000 MT - 1 WWD SHINC 
+SHIPMENT SIZE: OVER 6,000 MT - 6,000 MT PER WWD SHINC 
+&lt;br&gt;
+&lt;br&gt;
+Buyer to secure written agreement from the Seller on the specifications of the vessel; the quantity and grade of product to be loaded, as well as the laydays. Buyer to give Seller a minimum of 10 days written notice of vessel eta stating laydays, vessel name, airdraft, cargo stem, demurrage rate, name of vessels agent, vessel characteristics including LOA, beam and deadweight. 
+&lt;br&gt;
+&lt;br&gt;
+Vessel to be single deck, self-trimming bulk carrier only; classed not lower than 100a1 in Lloyds register or equivalent with a full classification society member of the international association of classification societies (IACS). Vessel to be entered with a P and I club member of the international group of P and I clubs. All vessels will be accepted at the sole discretion of the shipper and must meet all physical requirements of the load berth and port and including but not limited to rightship vetting recommendation. Vessels over the age of 25 years are subject to a mandatory physical condition survey prior to arrival at the nominated load berth at owner’s or charterer’s expense.
+&lt;br&gt;
+&lt;br&gt;
+The captain, vessel&apos;s agent, or charterers to provide exact quantity intake and stowage plan with sailing draft to Mosaic at least 7 days prior to vessel&apos;s arrival at loadport. Failure to do so release shipper from responsibility of time lost to secure same.
+&lt;br&gt;
+&lt;br&gt;
+The master or vessel&apos;s agents shall provide Seller written notice of vessel&apos;s eta 10 days, 7 days, 5 days, 3 days, 2 days, 1 day, and 12 hours prior to vessel&apos;s arrival at Seller&apos;s terminal, as appropriate. Seller shall be allowed extra laytime equivalent to each day&apos;s delay should vessel&apos;s agent fail to comply with above.
+&lt;br&gt;
+&lt;br&gt;
+Time to count from first working period on the next business day following vessel&apos;s custom clearance and receipt of written notice of readiness. Nor to be tendered during business hours only. Working period, business hours and days defined as Monday to Friday 0800 to 1700. Time used for loading between Friday 1700 until Monday 0800 to count as laytime. If vessel at load is unable to berth upon arrival on account of congestion, the vessel shall be permitted to present notice of readiness in accordance with above terms. Time from berth becoming available at load port until vessel’s arrival in the berth is not to count as laytime.
+&lt;br&gt;
+&lt;br&gt;
+Vessel must be clean and all holds ready to load as certified by independent third party surveyor appointed by Seller. Should vessel fail such inspection, Seller reserves the right to order vessel to vacate berth, any shifting charges are for Buyers account and time not to count as laytime or time on demurrage. 
+&lt;br&gt;
+&lt;br&gt;
+Time for loading not to commence before agreed opening layday, unless at Seller’s option, in which case actual time used is to count. Should the vessel not be passed by coast guard and/or any regulatory body including independent surveyors and a valid written notice of readiness is not received before agreed cancelling layday, Seller shall within six hours of receiving such passes have the option of cancelling the contract.
+&lt;br&gt;
+&lt;br&gt;
+Cargo to be loaded and spout trimmed. Any special trimming and leveling shall be borne by the Buyer and time not to count as laytime or time on demurrage. Stowage in unobstructed self-trimming main holds only. The vessel master or agent to advise final tonnage declaration (if at Buyer&apos;s option), in writing, a minimum of 7 days prior to vessel eta or actual arrival, whichever is earlier. Failure to timely provide a final tonnage declaration shall be deemed to constitute a waiver of Seller&apos;s liability for dead freight. Seller may load within 100 metric tons of the final declared quantity without liability for dead freight.
+&lt;br&gt;
+&lt;br&gt;
+Shifting costs for any vessel which requires top-off or multiple products at a second berth in Tampa range are for the account of Buyer, actual shifting time not to count as laytime. Seller shall have the right to name top-off berth. Shipper will make best efforts to load single grade vessels at one berth.
+&lt;br&gt;
+&lt;br&gt;
+Seller will not be responsible for demurrage or despatch unless a claim is filed in writing, by the Buyer, within 90 days of the vessel bill of lading date. Such claim to include amount due, laytime calculations and applicable time sheets. 
+&lt;br&gt;
+&lt;br&gt;
+After Buyer has received the laytime calculations for demurrage or despatch Buyer will have 30 days to notify Seller of their agreement or disagreement; if Seller does not receive any response within this period, it is understood that Buyer accepts the calculations and agrees to pay any demurrage at sight without further recourse. 
+&lt;br&gt;
+&lt;br&gt;
+Notwithstanding the fact that Seller may retain an independent surveyor to perform a vessel inspection prior to loading (whether or not required by this contract), Seller shall have no obligation or liability to Buyer with respect to the results thereof and all contamination, damage or loss of or to the commodity occurring as a result of an unclean or otherwise unsuitable vessel shall be for the Buyer&apos;s account. Any delay may result in a fine of $1000 per hour or vessel ordered to vacate berth.
+&lt;br&gt;
+&lt;br&gt;
+If cargo cannot be produced, loaded in or transported to the vessel due to any restriction such as war, riots, civil commotions, strikes, floods, hurricanes, fire, or by reason beyond the control of shippers, situation shall be deemed “force majeure” and any time lost by the vessel shall not be counted as laytime. Shipments may be suspended until such hindrances are overcome or removed.
+&lt;br&gt;
+&lt;br&gt;
+Please note that the U.S. coast guard has announced that it will aggressively inspect vessels entering U.S. ports. Vessel owners and brokers should be aware of this new system; however, please note that inspection time (if any) should be for the vessel account. Should the coast guard prevent or insist a vessel cure any deficiencies prior to being able to load cargoes, any railcar demurrage incurred will be for the Buyer&apos;s account.
+&lt;br&gt;
+&lt;br&gt;
+Please also note that vessels entering the U.S. must be in compliance with the trade act of 2002 which requires the carrier to have the following in place:
+1. International carrier bond,
+2. SCAC code (standard carrier alpha code),
+3. Electronic interface with customs.</value>
+    </values>
+</CustomMetadata>

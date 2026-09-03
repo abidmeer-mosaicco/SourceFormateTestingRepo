@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ContractTypeRequired</fullName>
+    <active>true</active>
+    <description>This rule will trigger when Contract Type is not populated.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT( CONTAINS($Profile.Name,&apos;Digital Hub&apos;)),
+ISBLANK( TEXT( PMC_CPQ_ContractType__c )),
+OR(
+ISBLANK(PMC_CPQ_OpportunityLineItemId__c ),
+AND(NOT(ISBLANK(PMC_CPQ_OpportunityLineItemId__c )),NOT(ISNEW()))),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c ))
+)</errorConditionFormula>
+    <errorMessage>Contract Type is Required.</errorMessage>
+</ValidationRule>

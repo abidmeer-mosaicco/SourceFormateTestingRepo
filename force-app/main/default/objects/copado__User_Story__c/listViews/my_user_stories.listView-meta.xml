@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>my_user_stories</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Jira_Key__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__User_Story_Title__c</columns>
+    <columns>copado__Status__c</columns>
+    <columns>copado__Apex_Code_Coverage__c</columns>
+    <columns>copado__Apex_Tests_Passed__c</columns>
+    <columns>copado__Pull_Requests_Approved__c</columns>
+    <columns>copado__View_in_Git__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>6/1/2025 12:00 AM</value>
+    </filters>
+    <label>CPQ User stories</label>
+</ListView>

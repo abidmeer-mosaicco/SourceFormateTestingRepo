@@ -1,0 +1,33 @@
+<template>
+    <div class="md-nav-bar">
+        <a href="/"><img src={mosaicLogo} alt="Logo" class="md-logo" /></a>
+
+        <c-md_menu-controller></c-md_menu-controller>
+
+        <div class="iconsContainer">
+            <div class="d-grid rows">
+                <div class="userInfoBox nameTitle">{userName}</div>
+
+                <template lwc:if={showSwitchAccounts}>
+                    <span lwc:if={hasSelected} class="selectedAccounts">{selectedCount} {labels.md_switchaccount_totalaccounts}</span>
+                </template>
+            </div>
+
+            <div class="d-grid twoColumns">
+                <div class="dropdown" onmouseleave={closeDropdown} onmouseenter={cancelLeaveEvent}>
+                    <div class="bgIcon">
+                        <lightning-icon icon-name='utility:account' alternative-text='account' size='small'
+                            title='account' onclick={handleDropdown}></lightning-icon>
+                    </div>
+
+                    <div lwc:if={showDropdown} class="container">
+                        <ul>
+                            <li lwc:if={showSwitchAccounts} onclick={handleSwitchAccounts}>{labels.md_switchaccount}</li>
+                            <li onclick={handleLogout}>Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

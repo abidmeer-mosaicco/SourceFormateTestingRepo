@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Procedure</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Recommended_Compact_Layout</compactLayoutAssignment>
+    <description>Standard procedures related to order and customer management.</description>
+    <label>Procedure</label>
+    <picklistValues>
+        <picklist>PMC_SS_Region__c</picklist>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

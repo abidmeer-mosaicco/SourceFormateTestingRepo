@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store the Account SAP Customer and Product SKU</description>
+        <name>Account_Product_Name_Updated</name>
+        <label>Account Product Name Updated</label>
+        <locationX>374</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PMC_DH_AccountProductName__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>{!$Record.PMC_DH_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c}-{!$Record.PMC_DH_Product__r.StockKeepingUnit}</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Created</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>By Pass Flow Decision</description>
+        <name>By_Pass_Flow_Decision</name>
+        <label>By Pass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Account_Product_Name_Updated</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>By_Pass_Flow_OutCome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>By Pass Flow OutCome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Created</name>
+        <label>Is Created</label>
+        <locationX>374</locationX>
+        <locationY>503</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Record_Updated</name>
+            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_DH_SoldToAccount__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_DH_Product__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_DH_Type__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IsProcessed_Field_Update</targetReference>
+            </connector>
+            <label>Is Record Updated</label>
+        </rules>
+    </decisions>
+    <description>Account SAP Number and Product SKU Updated</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>isProcessed Field Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC DH isProcessed Field Update on Entitlement Rule</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>IsProcessed_Field_Update</name>
+        <label>IsProcessed Field Update</label>
+        <locationX>242</locationX>
+        <locationY>611</locationY>
+        <inputAssignments>
+            <field>PMC_DH_isProcessed__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>By_Pass_Flow_Decision</targetReference>
+        </connector>
+        <object>PMC_DH_EntitlementRules__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

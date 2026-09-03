@@ -1,0 +1,32 @@
+<template>
+  <div class="bgContainer container-adjust">
+    <div class="wrapper slds-p-horizontal_large slds-p-vertical_large slds-grid slds-wrap slds-grid_align-center">
+      <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+        <div class="registration-wrapper" if:true={pageLoaded}>
+          <template if:true={registrationWidgetHandler.isRegistration}>
+            <c-pmc_dh_registration onproceedbuttonclick={proceedButtonHandler}
+              picklist-data={regsitrationDetails.lstCountryState}
+              counrty-code-data={regsitrationDetails.countryCodePhoneFormat.lstCountryCode}>
+            </c-pmc_dh_registration>
+          </template>
+          <template if:true={registrationWidgetHandler.isAccountInformation}>
+            <c-pmc_dh_account-information onproceedbuttonclick={proceedButtonHandler}>
+            </c-pmc_dh_account-information>
+          </template>
+          <template if:true={registrationWidgetHandler.isDigitalHubProfile}>
+            <c-pmc_dh_digital-hub-profile onproceedbuttonclick={proceedButtonHandler}
+              preference-list={regsitrationDetails.lstPreferenceValuesList}>
+            </c-pmc_dh_digital-hub-profile>
+          </template>
+          <template if:true={registrationWidgetHandler.isThankYouForRegistration}>
+            <c-pmc_dh_thank-you-for-registration>
+            </c-pmc_dh_thank-you-for-registration>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+  <template if:true={isLoading}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

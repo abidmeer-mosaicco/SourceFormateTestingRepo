@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductIssue__c</fullName>
+    <description>Select a more specific problem with a product when Issue Reason &quot;Product Concern&quot; is selected.</description>
+    <inlineHelpText>Select a more specific problem you are facing with the product.</inlineHelpText>
+    <label>Product Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Adulteration</fullName>
+                <default>false</default>
+                <label>Adulteration</label>
+            </value>
+            <value>
+                <fullName>Bagging Issue</fullName>
+                <default>false</default>
+                <label>Bagging Issue</label>
+            </value>
+            <value>
+                <fullName>Complaint Dismissed</fullName>
+                <default>false</default>
+                <label>Complaint Dismissed</label>
+            </value>
+            <value>
+                <fullName>Crust</fullName>
+                <default>false</default>
+                <label>Crust</label>
+            </value>
+            <value>
+                <fullName>Dust</fullName>
+                <default>false</default>
+                <label>Dust</label>
+            </value>
+            <value>
+                <fullName>Failure to Meet Specifications</fullName>
+                <default>false</default>
+                <label>Failure to Meet Specifications</label>
+            </value>
+            <value>
+                <fullName>Fines</fullName>
+                <default>false</default>
+                <label>Fines</label>
+            </value>
+            <value>
+                <fullName>Foreign Contamination</fullName>
+                <default>false</default>
+                <label>Foreign Contamination</label>
+            </value>
+            <value>
+                <fullName>Lumps</fullName>
+                <default>false</default>
+                <label>Lumps</label>
+            </value>
+            <value>
+                <fullName>Multiple Factors</fullName>
+                <default>false</default>
+                <label>Multiple Factors</label>
+            </value>
+            <value>
+                <fullName>Other Reason</fullName>
+                <default>false</default>
+                <label>Other Reason</label>
+            </value>
+            <value>
+                <fullName>Set-up</fullName>
+                <default>false</default>
+                <label>Set-up</label>
+            </value>
+            <value>
+                <fullName>Temperature</fullName>
+                <default>false</default>
+                <label>Temperature</label>
+            </value>
+            <value>
+                <fullName>Treatment</fullName>
+                <default>false</default>
+                <label>Treatment</label>
+            </value>
+            <value>
+                <fullName>Wet Product</fullName>
+                <default>false</default>
+                <label>Wet Product</label>
+            </value>
+            <value>
+                <fullName>Wrong Product</fullName>
+                <default>false</default>
+                <label>Wrong Product</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

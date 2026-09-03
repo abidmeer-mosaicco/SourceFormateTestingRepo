@@ -1,0 +1,69 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Forgot Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"ea8e150a-9661-4815-8679-60266a578fcb\",\"columns\":[{\"UUID\":\"715948a4-55a4-4954-b3b6-c656c4efdfd8\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "cancelButtonLabel" : "Cancel",
+                "checkEmailUrl" : "./CheckPasswordResetEmail",
+                "dxpStyle" : { },
+                "instructionsLabel" : "To reset your password, enter your email associated with your account and we’ll send a reset password link",
+                "submitButtonLabel" : "Reset",
+                "titleLabel" : "Forgot your password?",
+                "usernameLabel" : "Username"
+              },
+              "definition" : "community_login:forgotPassword",
+              "id" : "0d10de6f-bbd4-44e6-a0a1-420c40d192ed",
+              "type" : "component"
+            } ],
+            "id" : "715948a4-55a4-4954-b3b6-c656c4efdfd8",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "ea8e150a-9661-4815-8679-60266a578fcb",
+          "type" : "component"
+        } ],
+        "id" : "180d5f17-e1b2-4732-9259-01ecca175b0d",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Forgot Password",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "b0e77abc-6573-42df-95f1-377412f94be2",
+          "type" : "component"
+        } ],
+        "id" : "340291a1-77f5-4b6c-854f-364305ff3fd4",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "3464df66-6d67-4bd7-86e6-c91f22c307e5",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "aCSRUDPRXgfJDgnCncIUTzWSc4f675",
+    "viewType" : "forgot-password"
+  },
+  "urlName" : "forgot-password"
+}

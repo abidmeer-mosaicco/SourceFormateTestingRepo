@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SAPNumberCannotBeBlank</fullName>
+    <active>false</active>
+    <description>Checks whether Sap Customer Number is blank or not</description>
+    <errorConditionFormula>AND(
+NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),NOT(CONTAINS( $Profile.Name , &apos;Digital Hub&apos; )),NOT( PMC_SS_ClientDenied__c),
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;MDM Verification&apos;),
+AND(OR(ISPICKVAL( Status , &apos;Closed&apos;),ISPICKVAL( Status , &apos;Closure Pending&apos;)), ISBLANK( PMC_SS_SAP_CustomerNumber__c )))</errorConditionFormula>
+    <errorDisplayField>PMC_SS_SAP_CustomerNumber__c</errorDisplayField>
+    <errorMessage>Please fill the SAP Number before closing the Case</errorMessage>
+</ValidationRule>

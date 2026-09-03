@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinishedSteps__c</fullName>
+    <label>FinishedSteps</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Generate Amendments</fullName>
+                <default>false</default>
+                <label>Generate Amendments</label>
+            </value>
+            <value>
+                <fullName>Check Eligibility</fullName>
+                <default>false</default>
+                <label>Check Eligibility</label>
+            </value>
+            <value>
+                <fullName>Submit for Approval</fullName>
+                <default>false</default>
+                <label>Submit for Approval</label>
+            </value>
+            <value>
+                <fullName>Generate Contracts</fullName>
+                <default>false</default>
+                <label>Generate Contracts</label>
+            </value>
+            <value>
+                <fullName>Update Quotes</fullName>
+                <default>false</default>
+                <label>Update Quotes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

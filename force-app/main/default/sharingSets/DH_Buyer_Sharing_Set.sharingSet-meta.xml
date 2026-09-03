@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Account</object>
+        <objectField>Id</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Contact</object>
+        <objectField>Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>Order</object>
+        <objectField>Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>PMC_CPQ_Invoice__c</object>
+        <objectField>PMC_CPQ_Order__c.Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>RebateProgram</object>
+        <objectField>PMC_SS_SalesAgreement__c.Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>SBQQ__Quote__c</object>
+        <objectField>SBQQ__Account__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>SBQQ__Subscription__c</object>
+        <objectField>SBQQ__Account__c</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>SalesAgreement</object>
+        <objectField>Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Edit</accessLevel>
+        <object>User</object>
+        <objectField>Account</objectField>
+        <userField>Contact.RelatedAccount</userField>
+    </accessMappings>
+    <description>This will give exclusive record access for the site buyer members</description>
+    <name>DH Buyer Sharing Set</name>
+    <profiles>digital hub buyer</profiles>
+</SharingSet>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .order-table th, .order-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .order-table th {
+            background-color: #f5f5f5;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>{!customerName},</p>
+            <p><strong>Apologies, your recent order did not process successfully. Our service team at Mosaic is actively working behind the scenes to resolve the issue and will reply to you promptly.</strong></p>
+
+            <p>If you have urgent questions, please feel free to contact your SSR directly.</p>
+            <p>Thank you for your patience and understanding.</p>
+            <p>Internal ref: {!OrderNumber}</p>
+            <br>
+            <p>Please, do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+</html>

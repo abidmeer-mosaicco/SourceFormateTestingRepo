@@ -1,0 +1,315 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "fc2233e0-9ad0-431c-9d6a-d31d690462e6",
+  "label" : "Política de Protección de Datos Personal",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "1d618b57-97e9-4c84-9b30-0fe5894f88d3",
+          "columns" : [ {
+            "UUID" : "8f67ecb6-7414-4d06-abf7-e90b72df8df6",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "1d618b57-97e9-4c84-9b30-0fe5894f88d3",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "0b6f4177-967e-481f-a709-79c133360370",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8f67ecb6-7414-4d06-abf7-e90b72df8df6",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0f287bdf-471d-4c75-a877-27adfc876675",
+          "columns" : [ {
+            "UUID" : "c246be5a-31a7-44d3-bc2c-7775e13763a9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 252
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0f287bdf-471d-4c75-a877-27adfc876675",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "3",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageK",
+            "textDescription" : "Transparencia y seguridad en cada paso"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "a61f729d-3da0-42e8-97b1-08c59e7dc2b1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c246be5a-31a7-44d3-bc2c-7775e13763a9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "20eb8769-d5b1-4f71-bd1b-783f8e56f269",
+          "columns" : [ {
+            "UUID" : "12898bab-fa48-4802-9c5a-78f84571e2a7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 190
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "20eb8769-d5b1-4f71-bd1b-783f8e56f269",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"color: red; font-size: 36px;\">Política de Protección de Datos Personales</strong></p><p><br></p><p style=\"text-align: center;\"><span style=\"color: black; font-size: 20px;\">En Miski Mayo garantizamos el cumplimiento de la Ley Nº 29733 – Ley de Protección de Datos Personales (LPDP) y su Reglamento aprobado por el Decreto Supremo Nº 016-2024-JUS.</span></p><p style=\"text-align: center;\"><span style=\"color: black; font-size: 20px;\">﻿</span></p><p style=\"text-align: center;\"><span style=\"color: black; font-size: 20px;\">Reafirmamos nuestro compromiso con la transparencia, la seguridad de la información y el respeto de los derechos de nuestros colaboradores, garantizando que el tratamiento se realice de manera ética, responsable y conforme a la normativa vigente, aplicando las medidas necesarias para prevenir cualquier uso indebido.</span></p><p><br></p><p><br></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ad8a18f8-2a40-475c-a635-a5d7975c7353",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "12898bab-fa48-4802-9c5a-78f84571e2a7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "55f3dea5-8eb3-4cd6-bdb7-799a4be4a3ea",
+          "columns" : [ {
+            "UUID" : "11b9de81-8339-4dc6-bdc0-453a42b90545",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3f22b5cd-d7cc-4a8d-9ad3-f4a959106d0a",
+            "columnKey" : "721f1",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "c7626daf-7024-456e-9b62-1a5875b1095d",
+            "columnKey" : "e094a",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "55f3dea5-8eb3-4cd6-bdb7-799a4be4a3ea",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.X1b6.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2e9c8bea-cf27-43fc-838e-3427935046d4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 14px;\">Política de protección de datos personales</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "19222691-1d18-4bcb-bc76-ef3a4c2e22d6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(226, 35, 26)",
+            "borderColor" : "white",
+            "borderRadius" : "6",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "Descargar PDF",
+            "textColor" : "white",
+            "url" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000002sEXt/u.LhOiO_Vxi3007y.qjyrtt.mJ4e.Se5jX89.gYeHyg"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "adb8e84b-7ea3-41fa-9a1b-d1a29d83b9e1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "11b9de81-8339-4dc6-bdc0-453a42b90545",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.X2b5.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b9720094-020d-417d-ba85-f421114ab1a5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 14px;\">Solicitud de ejercicio de derechos ARCO</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "08661f2d-594c-4e82-8384-afcd4b364005",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(226, 35, 26)",
+            "borderColor" : "white",
+            "borderRadius" : "6",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "Descargar PDF",
+            "textColor" : "white",
+            "url" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000002sEUf/azoJ0CU1FQKgKEx4VgItAaiX5zfE0bVQlW1A16x9HfQ"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "86b9fcfe-e945-43a5-95ab-d78e0af02744",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3f22b5cd-d7cc-4a8d-9ad3-f4a959106d0a",
+        "regionLabel" : "Column 2",
+        "regionName" : "721f1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.X3b5.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "840d2378-522c-48af-8b2a-a2eb7e9d38eb",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 12px;\">Documento de Seguridad de Protección de Datos Personales</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "5c011b7b-a1d9-487a-99a6-32e3e1c0cc34",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backgroundColor" : "rgb(226, 35, 26)",
+            "borderColor" : "white",
+            "borderRadius" : "6",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "Descargar PDF",
+            "textColor" : "white",
+            "url" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000002sEOD/9sT5ZsNiC81q8aTOn.yzAIk6HLzkABuM47QMqiW48r4"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "5332a31d-b377-43aa-a183-acc98146f2a2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c7626daf-7024-456e-9b62-1a5875b1095d",
+        "regionLabel" : "Column 3",
+        "regionName" : "e094a",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "917201b8-c0ef-4718-b0b8-eebce0956163",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Política de Protección de Datos Personal"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "53819e95-4b87-4b57-92da-28bea0745579",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e541d2ff-78be-4b13-aa10-e3d7df204597",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-poltica-de-proteccin-de-datos-personal"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Active_Rules</fullName>
+    <columns>NAME</columns>
+    <columns>sbaa__TargetObject__c</columns>
+    <columns>sbaa__Active__c</columns>
+    <columns>sbaa__ConditionsMet__c</columns>
+    <columns>sbaa__ApprovalStep__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>sbaa__Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>sbaa__TargetObject__c</field>
+        <operation>equals</operation>
+        <value>Order_Line_Approval__c</value>
+    </filters>
+    <label>Order Line Active Approval Rules</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Default</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>PMC_CPQ_DeliveryLineCompactLayout</compactLayoutAssignment>
+    <label>Default</label>
+    <picklistValues>
+        <picklist>PMC_CPQ_AlternateSubstituteProduct__c</picklist>
+        <values>
+            <fullName>Alternate Product%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Substitute Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_DeliveryLineStatus__c</picklist>
+        <values>
+            <fullName>Completely Shipped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Yet Shipped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Shipped</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_DeliveryStatus__c</picklist>
+        <values>
+            <fullName>Completely Shipped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Yet Shipped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Shipped</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_GoodsIssueStatusDescription__c</picklist>
+        <values>
+            <fullName>Completely Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not yet processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Processed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ModeofTransportation__c</picklist>
+        <values>
+            <fullName>Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Transport  Req</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vessel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_OrderDocument__c</picklist>
+        <values>
+            <fullName>Bill of Lading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificate of Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_UnitofMeasure__c</picklist>
+        <values>
+            <fullName>L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WMT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

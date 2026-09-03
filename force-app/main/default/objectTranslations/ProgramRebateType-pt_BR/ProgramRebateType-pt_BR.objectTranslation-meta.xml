@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <label>Brasil</label>
+        <name>PMC_SS_Brazil</name>
+    </recordTypes>
+    <recordTypes>
+        <label>América do Norte</label>
+        <name>PMC_SS_NorthAmerica</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>O tipo de bônus não pode ser criado/editado nesse estágio. Altere o Contrato de Vendas para fazer revisões no Tipo de Desconto.</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível criar/atualizar o tipo de desconto de programa quando o programa de desconto estiver inativo</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeModification</name>
+    </validationRules>
+</CustomObjectTranslation>

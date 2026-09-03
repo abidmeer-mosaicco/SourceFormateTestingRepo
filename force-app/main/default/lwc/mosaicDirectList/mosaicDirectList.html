@@ -1,0 +1,136 @@
+<template>
+  <div class="md-list-container">
+    <p class="md-big-title" lwc:if={showTableTitle}>{tableTitle}</p>
+
+    <div class="md-box" lwc:if={showLegacyFilters}>
+      <div class="md-header">
+        <p>{labels.md_reportfilters_headertitle}</p>
+      </div>
+
+      <div class="md-p-1">
+        <div class="md-grid md-align-flex-end md-input-box" style="grid-template-columns: auto auto auto 1fr">
+          <div>
+            <p>Search</p>
+            <input type="text" placeholder="Type to search" value={searchTerm} onchange={handleSearchInput} />
+          </div>
+
+          <template lwc:if={dateFilterFieldName}>
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="dateFrom">From</label>
+              <div class="slds-form-element__control">
+                <input type="date" id="dateFrom" data-id="dateFrom" class="slds-input" value={dateFromValue} onchange={handleDateFromChange} />
+              </div>
+            </div>
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="dateTo">To</label>
+              <div class="slds-form-element__control">
+                <input type="date" id="dateTo" data-id="dateTo" class="slds-input" value={dateToValue} onchange={handleDateToChange} />
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="md-filter-actions">
+          <button class="md-button md-light-button" onclick={handleClearFilters}>{labels.md_reportfilters_clear_btn}</button>
+          <button class="md-button md-default-button" onclick={handleSearch} disabled={disableSearchBtn}>{labels.md_reportfilters_apply_btn}</button>
+        </div>
+      </div>
+    </div>
+    <template lwc:else>
+      <div class="xls-btn-container">
+        <c-mosaic-direct-xls-download-btn
+          object-api-name={objectApiName}
+          rows={data}
+          all-rows={allRowsForDownload}
+          onrequestdownload={handleRequestDownload}
+          manual-field-api-names={manualFieldApiNames}
+          manual-field-label-names={manualFieldLabelNames}
+        ></c-mosaic-direct-xls-download-btn>
+      </div>
+      <div class="md-box">
+        <c-mosaic-direct-in-transit-filters
+          is-visible={isInTransitTable}
+          show-advanced={showAdvancedFilters}
+          text-fields={inTransitTextFields}
+          advanced-fields={inTransitAdvancedFields}
+          onfilterchange={handleInTransitFilterChange}
+          ontoggleadvanced={handleToggleAdvanced}
+          onapplyfilters={handleApplyFilters}
+          onclearfilters={handleClearInTransitFilters}
+          header-label="Filters"
+          apply-label="Apply filters"
+          clear-label="Clear filters"
+          advanced-label="Advanced filters"
+        ></c-mosaic-direct-in-transit-filters>
+      </div>
+    </template>
+
+    <div class="md-datatable-container">
+      <div if:true={hasRecords} class="md-table-container">
+        <c-mosaic-direct-list-datatable
+          if:true={hasRecords}
+          key-field="Id"
+          data={data}
+          columns={columns}
+          draft-values={draftValues}
+          onrowaction={handleRowAction}
+          onsort={handleSort}
+          sorted-by={sortField}
+          sorted-direction={sortDirLower}
+          ondocumentdownloaderror={handleDocumentDownloadError}
+          wrap-text-max-lines="3"
+          wrap-table-header="all"
+          hide-checkbox-column
+        >
+        </c-mosaic-direct-list-datatable>
+      </div>
+
+      <template if:false={isLoading}>
+        <div class="md-info-message" if:false={hasRecords}>
+          <lightning-icon icon-name="utility:info" size="x-small" alternative-text="Info"></lightning-icon>
+          <span>{noResultsMessage}</span>
+        </div>
+      </template>
+
+      <div if:true={hasRecords} class="slds-m-top_small slds-grid slds-grid_align-spread slds-align_absolute-center">
+        <div class="md-pagination slds-grid slds-grid_align-center slds-wrap">
+          <div>
+            <button class="md-pagination-button" onclick={handlePrevPage} disabled={isPrevDisabled}>
+              <lightning-icon size="x-small" icon-name="utility:chevronleft"></lightning-icon>
+            </button>
+          </div>
+
+          <div class="slds-grid slds-grid_vertical-align-center slds-m-horizontal_x-small">
+            <button class="md-pagination-button" onclick={handlePageClick} data-page="1" data-active={isFirstPageActive}>1</button>
+
+            <template if:true={showLeftEllipsis}>
+              <span class="slds-m-horizontal_x-small slds-align_absolute-center" style="text-align: center">...</span>
+            </template>
+
+            <template for:each={pageButtons} for:item="pageBtn">
+              <button key={pageBtn.page} class="md-pagination-button" onclick={handlePageClick} data-active={pageBtn.active} data-page={pageBtn.page}>
+                {pageBtn.label}
+              </button>
+            </template>
+
+            <template if:true={showRightEllipsis}>
+              <span class="slds-m-horizontal_x-small slds-align_absolute-center" style="text-align: center">...</span>
+            </template>
+
+            <template if:true={showLastPage}>
+              <button class="md-pagination-button" onclick={handlePageClick} data-page={totalPages} data-active={isLastPageActive}>
+                {totalPages}
+              </button>
+            </template>
+          </div>
+
+          <div>
+            <button class="md-pagination-button" onclick={handleNextPage} disabled={isNextDisabled}>
+              <lightning-icon size="x-small" icon-name="utility:chevronright"></lightning-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

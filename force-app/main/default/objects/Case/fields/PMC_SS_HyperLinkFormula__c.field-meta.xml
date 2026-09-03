@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_HyperLinkFormula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(ISPICKVAL( Type , &apos;Product&apos;),ISPICKVAL( PMC_SS_IssueReason__c , &apos;Product Request&apos;)), HYPERLINK($Label.PMC_SS_SAPProductRequest_FioriLink,  &apos;Product Request Fiori Link&apos;), 
+	IF( AND(OR(ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Final Approved&apos;),ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Auto Approved&apos;)),ISPICKVAL( PMC_SS_ActionReason__c , &apos;Cancel&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriCancelLink,&apos;Cancel Fiori Link&apos;  ),
+		IF( AND(OR(ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Final Approved&apos;),ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Auto Approved&apos;)),ISPICKVAL( PMC_SS_ActionReason__c , &apos;Credit&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriCreditLink,&apos;Credit Fiori Link&apos; ),
+			IF( ISPICKVAL( PMC_SS_ActionReason__c , &apos;Debit&apos;), HYPERLINK($Label.PMC_SS_SAPFioriDebitLink,&apos;Debit Fiori Link&apos; ),
+				IF( AND(OR(ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Final Approved&apos;),ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Auto Approved&apos;)),ISPICKVAL( PMC_SS_ActionReason__c , &apos;Rebill&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriRebillLink,&apos;Rebill Fiori Link&apos;),
+					IF( AND(OR(ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Final Approved&apos;),ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Auto Approved&apos;)),ISPICKVAL( PMC_SS_ActionReason__c , &apos;Return&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriReturnLink,&apos;Return Fiori Link&apos;),
+						IF( AND(OR(ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Final Approved&apos;),ISPICKVAL( PMC_SS_ApprovalStatus__c, &apos;Auto Approved&apos;)),ISPICKVAL( PMC_SS_ActionReason__c , &apos;Reverse Shipment&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriReverseShipmentLink,&apos;Reverse Shipment Fiori Link&apos;),
+							IF( AND(NOT(ISBLANK(ParentId)), ISPICKVAL( Type , &apos;Internal&apos;),ISPICKVAL( PMC_SS_IssueReason__c , &apos;Stock Out / Plant Outage&apos;)), HYPERLINK($Label.PMC_SS_SAPFioriStockOutageLink,&apos;Stock Out / Plant Outage Fiori Link&apos;),
+									&apos;&apos;
+									)
+							)
+						)		
+					)
+				)
+			)
+		)
+	)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Fiori Connection</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

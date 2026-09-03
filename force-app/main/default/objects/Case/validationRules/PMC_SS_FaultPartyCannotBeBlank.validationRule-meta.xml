@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_FaultPartyCannotBeBlank</fullName>
+    <active>false</active>
+    <description>At Fault Party is Mandatory to Close the Case when the Account associated is a South American Customer</description>
+    <errorConditionFormula>AND(
+NOT($RecordType.Name =&apos;Customer Service&apos;),
+    NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+    NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+    NOT(CONTAINS($Profile.Name, &apos;API Only profile&apos;)),
+    OR( 
+        Account.BillingCountry = &apos;Brazil&apos;,
+        Account.BillingCountry = &apos;Paraguay&apos;
+    ),
+    OR(
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Incorrect Label&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c , &apos;Incorrect Product&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Product Concern&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Weight Discrepancy&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Delivery Delay&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Demurrage&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Diversion&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Driver Verification/Change&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Equipment Failure&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect Destination&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Incorrect UOM&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Missing Cargo&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Mode of Transportation&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Route / Directions&apos;),
+ISPICKVAL( PMC_SS_IssueReason__c ,&apos;Ship Date / Scheduling&apos;),
+        ISPICKVAL(PMC_SS_IssueReason__c, &apos;Warehouse&apos;)
+    ),
+    AND(
+        OR(
+            ISPICKVAL(Status, &apos;Closed&apos;),
+            ISPICKVAL(Status, &apos;Closure Pending&apos;)
+        ),
+        ISBLANK(TEXT(PMC_SS_AtFaultParty__c))
+    )
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_AtFaultParty__c</errorDisplayField>
+    <errorMessage>At Fault Party is required to close out your case.</errorMessage>
+</ValidationRule>

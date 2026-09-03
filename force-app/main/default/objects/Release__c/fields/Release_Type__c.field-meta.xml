@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Type__c</fullName>
+    <label>Release Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mosaic Regular Release</fullName>
+                <default>false</default>
+                <label>Mosaic Regular Release</label>
+            </value>
+            <value>
+                <fullName>Blackout</fullName>
+                <default>false</default>
+                <label>Blackout</label>
+            </value>
+            <value>
+                <fullName>Salesforce Seasonal</fullName>
+                <default>false</default>
+                <label>Salesforce Seasonal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

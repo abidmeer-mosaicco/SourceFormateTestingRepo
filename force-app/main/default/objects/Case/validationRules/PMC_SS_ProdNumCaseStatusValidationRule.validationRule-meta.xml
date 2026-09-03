@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProdNumCaseStatusValidationRule</fullName>
+    <active>true</active>
+    <description>This validation is used to check if product number is added when case is closed</description>
+    <errorConditionFormula>AND
+(
+	ISBLANK( PMC_SS_ProductNumber__c ),   
+	OR
+	(
+		ISPICKVAL( Status , &quot;Closed&quot;),
+		ISPICKVAL( Status , &quot;Closure Pending&quot;)
+	), 
+	ISPICKVAL( Type , &quot;Product&quot;),  
+	ISPICKVAL( PMC_SS_IssueReason__c , &quot;Product Request&quot;),
+	NOT
+	(
+		OR(
+			ISPICKVAL( Issue_Sub_Reason__c , &quot;Blend Material Creation&quot;),
+			ISPICKVAL( Issue_Sub_Reason__c , &quot;Blend Material Extension&quot;),
+			ISPICKVAL( Issue_Sub_Reason__c , &quot;Straight Material Creation&quot;),
+			ISPICKVAL( Issue_Sub_Reason__c , &quot;Straight Material Extension&quot;)
+		)
+	)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_ProductNumber__c</errorDisplayField>
+    <errorMessage>Product number is required when closing this type of case</errorMessage>
+</ValidationRule>

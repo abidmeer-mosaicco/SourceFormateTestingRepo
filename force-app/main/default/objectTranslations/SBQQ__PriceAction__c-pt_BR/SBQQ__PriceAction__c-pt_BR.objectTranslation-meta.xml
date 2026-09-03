@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ação de preço</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ações de preços</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nº da ação</nameFieldLabel>
+    <validationRules>
+        <errorMessage>&quot;Para usar a Orientação para determinação do preço da linha de cotação como o objeto de destino, selecione After Calculate (Após cálculo) na lista suspensa Calculator Evaluation Event (Evento de avaliação da calculadora).&quot;</errorMessage>
+        <name>SBQQ__Event_Evaluation_Pricing_Guidance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>O objeto alvo da ação de preço não corresponde ao escopo da avaliação</errorMessage>
+        <name>SBQQ__Target_Object_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

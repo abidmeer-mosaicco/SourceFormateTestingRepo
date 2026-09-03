@@ -1,0 +1,29 @@
+<template>
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+  <template if:true={pageLoaded}>
+    <c-pmc_dh_custom-datatable columns={columns} table-data={myUserData} onrowactionselection={rowActionsHandler}>
+    </c-pmc_dh_custom-datatable>
+  </template>
+  <c-pmc_dh_custom-modal open-modal={isDeleteUserModal} modal-heading={labels.pmc_user_deleteUserText}
+    modal-width="400px" onclosemodalevent={closeHandler}>
+    <div class="modal-wrapper">
+      <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-m-bottom_medium">
+          <lightning-formatted-rich-text value={userDeleteText}
+            class="text-regular-small text-color-dark-primary-green delete-text">
+          </lightning-formatted-rich-text>
+        </div>
+        <div class="slds-grid slds-col slds-size_1-of-1 mobile-button slds-grid_align-spread">
+          <lightning-button variant="neutral" title={labels.pmc_user_doNotDelete} onclick={closeHandler}
+            label={labels.pmc_user_doNotDelete}>
+          </lightning-button>
+          <lightning-button variant="brand" title={labels.pmc_user_deleteUser} onclick={deleteUserHandler}
+            label={labels.pmc_user_deleteUser}>
+          </lightning-button>
+        </div>
+      </div>
+    </div>
+  </c-pmc_dh_custom-modal>
+</template>

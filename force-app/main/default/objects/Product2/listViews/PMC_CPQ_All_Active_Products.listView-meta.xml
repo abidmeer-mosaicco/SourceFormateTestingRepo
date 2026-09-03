@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_All_Active_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.SKU</columns>
+    <columns>PMC_CPQ_ProductSegment__c</columns>
+    <columns>PRODUCT2.LAST_UPDATE</columns>
+    <columns>PMC_CPQ_MaterialGroup__c</columns>
+    <columns>PMC_CPQ_ProductTypes__c</columns>
+    <columns>PMC_CPQ_ProductFamily__c</columns>
+    <columns>PMC_CPQ_ProductSubFamily__c</columns>
+    <columns>PMC_CPQ_ProductType__c</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PMC_CPQ_Sales_Org__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PMC_CPQ_Material_Type__c</field>
+        <operation>contains</operation>
+    </filters>
+    <filters>
+        <field>PMC_CPQ_MaterialGroup__c</field>
+        <operation>equals</operation>
+        <value>Co-Product</value>
+    </filters>
+    <filters>
+        <field>PMC_CPQ_ProductTypes__c</field>
+        <operation>equals</operation>
+        <value>Co-Product</value>
+    </filters>
+    <filters>
+        <field>PMC_CPQ_ProductFamily__c</field>
+        <operation>equals</operation>
+        <value>Co-Product</value>
+    </filters>
+    <filters>
+        <field>PRODUCT2.CUSTOMER_PRODUCT_ID</field>
+        <operation>lessOrEqual</operation>
+        <value>1999999</value>
+    </filters>
+    <label>All Active Products</label>
+</ListView>

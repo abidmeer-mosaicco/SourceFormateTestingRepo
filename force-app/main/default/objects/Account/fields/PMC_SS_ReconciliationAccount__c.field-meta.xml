@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReconciliationAccount__c</fullName>
+    <description>Picklist value for Reconciliation Account</description>
+    <label>Reconciliation Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>111001</fullName>
+                <default>false</default>
+                <label>A/R Non-Trade - External Receivables</label>
+            </value>
+            <value>
+                <fullName>110201</fullName>
+                <default>false</default>
+                <label>A/R Rec Account - Affiliate Trade Receivables</label>
+            </value>
+            <value>
+                <fullName>110003</fullName>
+                <default>false</default>
+                <label>A/R Rec Account - External Trade Receivables</label>
+            </value>
+            <value>
+                <fullName>110101</fullName>
+                <default>false</default>
+                <label>A/R Rec Account - Intercompany Trade Receivables</label>
+            </value>
+            <value>
+                <fullName>110104</fullName>
+                <default>false</default>
+                <label>AR Intercompany Other</label>
+            </value>
+            <value>
+                <fullName>244003</fullName>
+                <default>false</default>
+                <label>Downpayments from Customers</label>
+            </value>
+            <value>
+                <fullName>244005</fullName>
+                <default>false</default>
+                <label>Downpayments from Customers for Contracts</label>
+            </value>
+            <value>
+                <fullName>141019</fullName>
+                <default>false</default>
+                <label>Inter State AR Clearing A/C</label>
+            </value>
+            <value>
+                <fullName>111201</fullName>
+                <default>false</default>
+                <label>Load A/R Non-Trade - Affiliate Receivables</label>
+            </value>
+            <value>
+                <fullName>190002</fullName>
+                <default>false</default>
+                <label>Notes Rec - External LT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

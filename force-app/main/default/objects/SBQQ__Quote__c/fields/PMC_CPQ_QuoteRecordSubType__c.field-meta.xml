@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteRecordSubType__c</fullName>
+    <description>This field is used to capture the record type for the Quote</description>
+    <inlineHelpText>Business area Segmentation.</inlineHelpText>
+    <label>Business Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PMC_CPQ_Region__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Feed</fullName>
+                <default>false</default>
+                <label>Feed</label>
+            </value>
+            <value>
+                <fullName>Fertilizer</fullName>
+                <default>false</default>
+                <label>Fertilizer</label>
+            </value>
+            <value>
+                <fullName>Industrial</fullName>
+                <default>false</default>
+                <label>Industrial</label>
+            </value>
+            <value>
+                <fullName>Raw Material</fullName>
+                <default>false</default>
+                <label>Raw Material</label>
+            </value>
+            <value>
+                <fullName>Co-Products</fullName>
+                <default>false</default>
+                <label>Co-Products</label>
+            </value>
+            <value>
+                <fullName>B2B - Specialties</fullName>
+                <default>false</default>
+                <label>B2B - Specialties</label>
+            </value>
+            <value>
+                <fullName>B2C - Fertilizer</fullName>
+                <default>false</default>
+                <label>B2C - Fertilizer</label>
+            </value>
+            <value>
+                <fullName>B2B - Feed</fullName>
+                <default>false</default>
+                <label>B2B - Feed</label>
+            </value>
+            <value>
+                <fullName>B2B - Fertilizer</fullName>
+                <default>false</default>
+                <label>B2B - Fertilizer</label>
+            </value>
+            <value>
+                <fullName>B2C - Paraguay</fullName>
+                <default>false</default>
+                <label>B2C - Paraguay</label>
+            </value>
+            <value>
+                <fullName>B2B - Potash</fullName>
+                <default>false</default>
+                <label>B2B - Potash</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Paraguay</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paraguay</label>
+            </value>
+            <value>
+                <fullName>Potash</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Potash</label>
+            </value>
+            <value>
+                <fullName>Potassio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Potassio</label>
+            </value>
+            <value>
+                <fullName>Raw Materials</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Raw Materials</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Specialties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2C - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2C - Paraguay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <valueName>B2B - Potash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brazil</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Fertilizer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Raw Material</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Co-Products</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

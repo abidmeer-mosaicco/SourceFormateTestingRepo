@@ -1,0 +1,898 @@
+{
+  "version" : "60.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "OwnerId", "Name", "CreatedDate", "LastModifiedDate", "AdvAcctForecastSetPartnerId", "AccountId", "PeriodId", "Status", "OpportunityQuantity", "OpportunityRevenue", "OrderQuantity", "OrderRevenue", "LastYearOrderQuantity", "LastYearOrderRevenue", "ProductId", "ForecastedQuantity", "ForecastedRevenue", "SalesAgreementQuantity", "SalesAgreementRevenue", "PeriodStartDate", "AdvAcctForecastSetUseId", "PMC_SS_AccountManager__c", "PMC_SS_ActiveContracts__c", "PMC_SS_ConsensusDemandPlan__c", "PMC_SS_CurrentSalesPlan__c", "PMC_SS_Location__c", "PMC_SS_OpenOrders__c", "PMC_SS_OpenQuotes__c", "PMC_SS_ShippedQuantity__c", "PMC_SS_StatisticalBaselineForecast__c", "PMC_SS_UnitofMeasure__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "AdvAccountForecastFact",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "AdvAccountForecastFact"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "LOAD_DATASET1" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_Location__c" ],
+        "rightQualifier" : "Location",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "PMC_CPQ_Region__c", "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Location",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Location"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "JOIN0", "LOAD_DATASET2" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "ProductId" ],
+        "rightQualifier" : "Product2",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name", "PMC_CPQ_ProductFamily__c", "PMC_CPQ_ProductSegment__c", "PMC_CPQ_ProductCategory__c" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Product2",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Product2"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN2" : {
+      "action" : "join",
+      "sources" : [ "JOIN1", "LOAD_DATASET3" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "AccountId" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET3" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "PMC_SS_Segmentation__c", "PMC_CPQ_Region__c", "Id", "Name", "ParentId" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN3" : {
+      "action" : "join",
+      "sources" : [ "JOIN6", "LOAD_DATASET4" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_UnitofMeasure__c" ],
+        "rightQualifier" : "UnitOfMeas",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET4" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "UnitOfMeasure",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "UnitOfMeasure"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN4" : {
+      "action" : "join",
+      "sources" : [ "JOIN3", "LOAD_DATASET5" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PMC_SS_AccountManager__c" ],
+        "rightQualifier" : "User",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET5" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "PMC_CPQ_SalesRegion__c", "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "User",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "User"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN5" : {
+      "action" : "join",
+      "sources" : [ "JOIN4", "LOAD_DATASET6" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "PeriodId" ],
+        "rightQualifier" : "Period",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET6" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Type", "StartDate", "EndDate", "FullyQualifiedLabel" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Period",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Period"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "JOIN7" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "AdvAccForecastFactJoinedDataSet",
+          "name" : "AdvAccForecastFactJoinedDataSet",
+          "folderName" : "Sales_Forecasting_App"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "EXTRACT0" : {
+      "action" : "extractGrains",
+      "sources" : [ "JOIN5" ],
+      "parameters" : {
+        "grainExtractions" : [ {
+          "source" : "Period.StartDate",
+          "targets" : [ {
+            "name" : "Period.Year",
+            "label" : "Period.Year",
+            "grainType" : "YEAR"
+          } ]
+        } ]
+      }
+    },
+    "FORMULA14" : {
+      "action" : "formula",
+      "sources" : [ "EXTRACT0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "AccountType",
+          "label" : "Account Type",
+          "formulaExpression" : "case \r\n\twhen\r\n    \"Account.PMC_SS_Segmentation__c\" = 'Strategic'\r\n\tthen 'B2B'\r\n\twhen\r\n  \t\"Account.PMC_SS_Segmentation__c\" = 'Core' \r\n\tthen 'B2B'\r\n\twhen\r\n    \"Account.PMC_SS_Segmentation__c\" = 'Base' \r\n\tthen 'B2B'\r\n\telse\r\n\t'B2C'\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "EXTRACT1" : {
+      "action" : "extractGrains",
+      "sources" : [ "FORMULA14" ],
+      "parameters" : {
+        "grainExtractions" : [ {
+          "source" : "Period.StartDate",
+          "targets" : [ {
+            "name" : "Period.StartDate_extract",
+            "label" : "Period.Month",
+            "grainType" : "MONTH"
+          } ]
+        } ]
+      }
+    },
+    "FORMULA1" : {
+      "action" : "formula",
+      "sources" : [ "EXTRACT1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "PeriodMonthYear",
+          "label" : "Period Month Year",
+          "formulaExpression" : "concat(\r\n    case\r\n    When \"Period.StartDate_extract\" = 1\r\n    then concat(\"Period.Year\",' 01', ' (','January')\r\n     When \"Period.StartDate_extract\" = 2\r\n    then concat(\"Period.Year\",' 02',' (','February')\r\n     When \"Period.StartDate_extract\" = 3\r\n    then concat(\"Period.Year\",' 03',' (','March')\r\n     When \"Period.StartDate_extract\" = 4\r\n    then concat(\"Period.Year\",' 04',' (','April')\r\n     When \"Period.StartDate_extract\" = 5\r\n    then concat(\"Period.Year\",' 05',' (','May')\r\n     When \"Period.StartDate_extract\" = 6\r\n    then concat(\"Period.Year\",' 06',' (','June')\r\n     When \"Period.StartDate_extract\" = 7\r\n    then concat(\"Period.Year\",' 07',' (','July')\r\n     When \"Period.StartDate_extract\" = 8\r\n    then concat(\"Period.Year\",' 08',' (','August')\r\n     When \"Period.StartDate_extract\" = 9\r\n    then concat(\"Period.Year\",' 09',' (','September')\r\n     When \"Period.StartDate_extract\" = 10\r\n    then concat(\"Period.Year\",' 10',' (','October')\r\n     When \"Period.StartDate_extract\" = 11\r\n    then concat(\"Period.Year\",' 11',' (','November')\r\n    else\r\n    concat(\"Period.Year\",' 12',' (','December')\r\nend,\r\n')')",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA4" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA1" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "CurrentSalesPlan_STN",
+          "label" : "Current Sales Plan (STN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'MTN'\r\n\tthen round( PMC_SS_CurrentSalesPlan__c * 1.10231131, 2)\r\n\telse\r\n\tround(PMC_SS_CurrentSalesPlan__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA6" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA10" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "StatisticalBaselineForecast_STN",
+          "label" : "Statistical Baseline Forecast (STN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'MTN'\r\n\tthen round(PMC_SS_StatisticalBaselineForecast__c * 1.10231131,2)\r\n\telse\r\n\tround(PMC_SS_StatisticalBaselineForecast__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA8" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA4" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "UnitOfMeasure_STN",
+          "label" : "Unit Of Measure STN",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'MTN' \r\n\tthen 'STN'\r\n\telse\r\n\t\"UnitOfMeas.Name\"\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA9" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA8" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "ShippedQuantity_STN",
+          "label" : "Shipped Quantity (STN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'MTN'\r\n\tthen round(PMC_SS_ShippedQuantity__c * 1.10231131,2)\r\n\telse\r\n\tround(PMC_SS_ShippedQuantity__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA10" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA9" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "OpenOrders_STN",
+          "label" : "Open Orders (STN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'MTN'\r\n\tthen round(PMC_SS_OpenOrders__c * 1.10231131,2)\r\n\telse\r\n\tround(PMC_SS_OpenOrders__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA5" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA6" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "CurrentSalesPlan_MTN",
+          "label" : "Current Sales Plan (MTN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'STN'\r\n\tthen round(PMC_SS_CurrentSalesPlan__c * 0.9071847,2)\r\n\telse\r\n\tround(PMC_SS_CurrentSalesPlan__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA7" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA5" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "StatisticalBaselineForecast_MTN",
+          "label" : "Statistical Baseline Forecast (MTN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'STN'\r\n\tthen round(PMC_SS_StatisticalBaselineForecast__c * 0.9071847,2)\r\n\telse\r\n\tround(PMC_SS_StatisticalBaselineForecast__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA11" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA7" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "ShippedQuantity_MTN",
+          "label" : "Shipped Quantity (MTN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'STN'\r\n\tthen round(PMC_SS_ShippedQuantity__c * 0.9071847,2)\r\n\telse\r\n\tround(PMC_SS_ShippedQuantity__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA12" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA11" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "OpenOrders_MTN",
+          "label" : "Open Orders (MTN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'STN'\r\n\tthen round(PMC_SS_OpenOrders__c * 0.9071847,2)\r\n\telse\r\n\tround(PMC_SS_OpenOrders__c,2)\r\nend",
+          "precision" : 10,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "FORMULA13" : {
+      "action" : "formula",
+      "sources" : [ "FORMULA12" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "TEXT",
+          "name" : "UnitOfMeasure_MTN",
+          "label" : "Unit Of Measure (MTN)",
+          "formulaExpression" : "case \r\n\twhen \"UnitOfMeas.Name\" = 'STN'\r\n\tthen 'MTN'\r\n\telse\r\n\t\"UnitOfMeas.Name\"\r\nend",
+          "precision" : 255,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "JOIN6" : {
+      "action" : "join",
+      "sources" : [ "JOIN2", "LOAD_DATASET7" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Account.ParentId" ],
+        "rightQualifier" : "Account1",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET7" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN7" : {
+      "action" : "join",
+      "sources" : [ "FORMULA13", "LOAD_DATASET8" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "AdvAcctForecastSetUseId" ],
+        "rightQualifier" : "AdvAcctFor",
+        "rightKeys" : [ "Id" ]
+      }
+    },
+    "LOAD_DATASET8" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Id", "AdvAccountForecastSetId", "ForecastContextId", "Status" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "AdvAcctForecastSetUse",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "AdvAcctForecastSetUse"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "AdvAccountForecastFact",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "ForecastFactAndLocationJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 252
+      },
+      "LOAD_DATASET1" : {
+        "label" : "Location",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN1" : {
+        "label" : "ForecastFactAndProductJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 392
+      },
+      "LOAD_DATASET2" : {
+        "label" : "Product2",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN2" : {
+        "label" : "ForecastFactAndAccountJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 532
+      },
+      "LOAD_DATASET3" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 532,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN3" : {
+        "label" : "ForecastFactAndUOMJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 672
+      },
+      "LOAD_DATASET4" : {
+        "label" : "UnitOfMeasure",
+        "type" : "LOAD_DATASET",
+        "top" : 672,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN4" : {
+        "label" : "ForecastFactAndUserJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 812
+      },
+      "LOAD_DATASET5" : {
+        "label" : "User",
+        "type" : "LOAD_DATASET",
+        "top" : 812,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN5" : {
+        "label" : "ForecastFactAndPeriodJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 952
+      },
+      "LOAD_DATASET6" : {
+        "label" : "Period",
+        "type" : "LOAD_DATASET",
+        "top" : 952,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "OUTPUT0" : {
+        "label" : "Output 0",
+        "type" : "OUTPUT",
+        "top" : 112,
+        "left" : 1372
+      },
+      "TRANSFORM0" : {
+        "label" : "Transform 0",
+        "type" : "TRANSFORM",
+        "top" : 112.80000000000001,
+        "left" : 1092.2,
+        "graph" : {
+          "EXTRACT0" : {
+            "label" : "Extract Date Component"
+          },
+          "FORMULA14" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "EXTRACT0",
+          "target" : "FORMULA14"
+        } ]
+      },
+      "TRANSFORM1" : {
+        "label" : "Transform 1",
+        "type" : "TRANSFORM",
+        "top" : 112.69999999999999,
+        "left" : 1232,
+        "graph" : {
+          "EXTRACT1" : {
+            "label" : "Extract Date Component"
+          }
+        },
+        "connectors" : [ ]
+      },
+      "TRANSFORM2" : {
+        "label" : "Transform 2",
+        "type" : "TRANSFORM",
+        "top" : 392.4,
+        "left" : 1372,
+        "graph" : {
+          "FORMULA1" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ ]
+      },
+      "TRANSFORM4" : {
+        "label" : "Transform 4",
+        "type" : "TRANSFORM",
+        "top" : 393.4,
+        "left" : 1652,
+        "graph" : {
+          "FORMULA4" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA6" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA8" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA9" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA10" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA4",
+          "target" : "FORMULA8"
+        }, {
+          "source" : "FORMULA8",
+          "target" : "FORMULA9"
+        }, {
+          "source" : "FORMULA10",
+          "target" : "FORMULA6"
+        }, {
+          "source" : "FORMULA9",
+          "target" : "FORMULA10"
+        } ]
+      },
+      "TRANSFORM5" : {
+        "label" : "Transform 5",
+        "type" : "TRANSFORM",
+        "top" : 392,
+        "left" : 1792,
+        "graph" : {
+          "FORMULA5" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA7" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA11" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA12" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          },
+          "FORMULA13" : {
+            "parameters" : {
+              "type" : "BASE_FORMULA_UI"
+            },
+            "label" : "Formula"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA5",
+          "target" : "FORMULA7"
+        }, {
+          "source" : "FORMULA7",
+          "target" : "FORMULA11"
+        }, {
+          "source" : "FORMULA11",
+          "target" : "FORMULA12"
+        }, {
+          "source" : "FORMULA12",
+          "target" : "FORMULA13"
+        } ]
+      },
+      "JOIN6" : {
+        "label" : "AccountAndParentAccountJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 252.7,
+        "left" : 672
+      },
+      "LOAD_DATASET7" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 1092,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN7" : {
+        "label" : "ForecastSetJoin",
+        "description" : "",
+        "type" : "JOIN",
+        "top" : 393.3,
+        "left" : 1932
+      },
+      "LOAD_DATASET8" : {
+        "label" : "AdvAcctForecastSetUse",
+        "type" : "LOAD_DATASET",
+        "top" : 1232,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      }
+    },
+    "connectors" : [ {
+      "source" : "JOIN6",
+      "target" : "JOIN3"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN0"
+    }, {
+      "source" : "JOIN0",
+      "target" : "JOIN1"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "JOIN1",
+      "target" : "JOIN2"
+    }, {
+      "source" : "LOAD_DATASET3",
+      "target" : "JOIN2"
+    }, {
+      "source" : "LOAD_DATASET4",
+      "target" : "JOIN3"
+    }, {
+      "source" : "JOIN3",
+      "target" : "JOIN4"
+    }, {
+      "source" : "LOAD_DATASET5",
+      "target" : "JOIN4"
+    }, {
+      "source" : "JOIN4",
+      "target" : "JOIN5"
+    }, {
+      "source" : "LOAD_DATASET6",
+      "target" : "JOIN5"
+    }, {
+      "source" : "JOIN5",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "TRANSFORM1"
+    }, {
+      "source" : "TRANSFORM1",
+      "target" : "TRANSFORM2"
+    }, {
+      "source" : "TRANSFORM4",
+      "target" : "TRANSFORM5"
+    }, {
+      "source" : "JOIN2",
+      "target" : "JOIN6"
+    }, {
+      "source" : "LOAD_DATASET7",
+      "target" : "JOIN6"
+    }, {
+      "source" : "TRANSFORM5",
+      "target" : "JOIN7"
+    }, {
+      "source" : "LOAD_DATASET8",
+      "target" : "JOIN7"
+    }, {
+      "source" : "JOIN7",
+      "target" : "OUTPUT0"
+    }, {
+      "source" : "TRANSFORM2",
+      "target" : "TRANSFORM4"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

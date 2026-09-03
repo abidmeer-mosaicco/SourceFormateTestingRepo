@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CLM_isAmendment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field will be used for the backend purpose of indicating that the sales agreement has been created as a product of the amendment flow, and used in CLM to control visibility of fields in the intake form and in the workflow</description>
+    <label>isAmendment</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

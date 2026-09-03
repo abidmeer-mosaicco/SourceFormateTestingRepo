@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReasonLostRequired</fullName>
+    <active>true</active>
+    <description>This validation rule checks that the Reason Lost field is populated before the Opportunity Stage is changed to &quot;Closed Lost&quot;.</description>
+    <errorConditionFormula>AND(
+ NOT( $Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c ) ,
+ ISPICKVAL( StageName , &apos;Closed Lost&apos;) ,
+ ISBLANK( TEXT( PMC_SS_ReasonLost__c ) ) 
+
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_ReasonLost__c</errorDisplayField>
+    <errorMessage>Please indicate the reason why this opportunity was lost in the field “Reason Lost”</errorMessage>
+</ValidationRule>

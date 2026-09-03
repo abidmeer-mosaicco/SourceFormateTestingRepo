@@ -1,0 +1,23 @@
+.slds-path__link:focus {
+    /* Remove problematic box-shadow coming from global SLDS overrides */
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    outline: 0;
+    text-decoration: none;
+}
+
+.slds-path .slds-path__nav .slds-is-complete .slds-path__title .path__title {
+    display: block;
+    transform: none !important;
+    color: white;
+}
+
+.slds-path__stage {
+    position: relative;
+    left: 0;
+}
+
+.white-utility-icon,
+.slds-path__nav .slds-is-complete > .white-utility-icon {
+    --sds-c-icon-color-foreground-default: #ffffff;
+}

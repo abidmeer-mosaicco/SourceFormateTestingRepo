@@ -1,0 +1,28 @@
+.download-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.download-container lightning-spinner {
+  margin-left: 0.5rem;
+}
+
+.md-button {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media (max-width: 480px) {
+  .download-container {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Error_Message_5</label>
+    <protected>false</protected>
+    <values>
+        <field>PMC_CPQ_ConvertedErrorMessage__c</field>
+        <value xsi:type="xsd:string">Issue in the response parsing format sent from CPI. Please contact the administrator.</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_RegexExpression__c</field>
+        <value xsi:type="xsd:string">^.*Unexpected character.*$</value>
+    </values>
+    <values>
+        <field>PMC_CPQ_SampleErrorMessage__c</field>
+        <value xsi:type="xsd:string">Unexpected character</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>PMC_SS_StockOutsLetterHead</letterhead>
+    <name>PMC SS STOCK WITH ETA</name>
+    <style>freeForm</style>
+    <subject>STOCK WITH ETA</subject>
+    <textOnly>Dear {!Case.Account},
+{!Case.PMC_SS_Location__c} has reported a low stock or no stock of {!Case.Product} . To prevent immediate inconvenience to your
+shipping plans we wish to advise the following orders identified.
+
+Customer PO number
+Mosaic order number
+
+We apologize for the impact to your business. Resupply is currently in progress and ETA is scheduled for MM/DD/YY. As product becomes available, we will notify you once you can resume pick-up. Please
+reach out to your Customer Service Representative for further questions
+
+{!Case.OwnerFullName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

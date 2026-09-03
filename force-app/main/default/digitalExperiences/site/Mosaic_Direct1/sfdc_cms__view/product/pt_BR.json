@@ -1,0 +1,73 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "identifierName" : "SKU#",
+          "productDetailSummaryFieldMapping" : "[{\"name\":\"Description\",\"label\":\"Descrição do Produto\",\"type\":\"TEXTAREA\"}]"
+        },
+        "id" : "de1b08d3-d471-4693-ac07-6664cbd85285"
+      }, {
+        "attributes" : {
+          "text" : ">{!Product.Details.fields.Name}"
+        },
+        "id" : "32ad1ef8-babf-4933-a911-0943c83b27c7"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Adicionando...",
+          "addToCartButtonText" : "Adicionar ao carrinho de cotações",
+          "addToListButtonText" : "Adicionado a lista",
+          "incrementValueGuideText" : "A quantidade de incremento é {0}",
+          "maximumValueGuideText" : "A quantidade máxima é {0}",
+          "minimumValueGuideText" : "A quantidade mínima é {0}",
+          "outOfStockText" : "Fora de estoque",
+          "quantitySelectorLabel" : "Quantidade"
+        },
+        "id" : "15408e0b-2f50-431b-8b0c-be7e67464804"
+      }, {
+        "attributes" : {
+          "text" : "Quantidade Mínima é {!Product.Details.purchaseQuantityRule.minimumNumber} • Quantidade máxima é {!Product.Details.purchaseQuantityRule.maximumNumber} • Vendido em incrementos de {!Product.Details.purchaseQuantityRule.incrementNumber}"
+        },
+        "id" : "82ec0e62-fc60-4f00-a947-0daac082fcbf"
+      }, {
+        "attributes" : {
+          "text" : "Especificações"
+        },
+        "id" : "00ee9df3-c6b6-4c9a-9c73-dd8711d6845f"
+      }, {
+        "attributes" : {
+          "text" : "Composição Geral"
+        },
+        "id" : "3bbf2cbc-db4f-4fc3-831c-03bdb77a0076"
+      }, {
+        "attributes" : {
+          "productDetailDataContentMapping" : "[{\"name\":\"PMC_DH_ProductComposition__c\",\"label\":\"Composição\",\"type\":\"STRING\"},{\"name\":\"PMC_CPQ_BusinessApplication__c\",\"label\":\"Aplicação\",\"type\":\"PICKLIST\"},{\"name\":\"PMC_DH_CropType__c\",\"label\":\"Crop Type\",\"type\":\"PICKLIST\"},{\"name\":\"PMC_CPQ_Seasonality__c\",\"label\":\"Sazonalidade\",\"type\":\"STRING\"}]"
+        },
+        "id" : "681ba6b7-e799-426f-938f-de61df4f0638"
+      }, {
+        "attributes" : {
+          "text" : "Detalhes técnicos"
+        },
+        "id" : "6b96601c-0199-4567-b969-c15229ce2e55"
+      }, {
+        "attributes" : {
+          "productDetailDataContentMapping" : "[{\"name\":\"PMC_DH_Micronutrients__c\",\"label\":\"Chemical Elements\",\"type\":\"PICKLIST\"},{\"name\":\"PMC_CPQ_PackageType__c\",\"label\":\"Package\",\"type\":\"PICKLIST\"}]"
+        },
+        "id" : "192095a8-0ad3-4c16-905e-f3e85fac5db5"
+      }, {
+        "attributes" : {
+          "text" : "Documentos do produto"
+        },
+        "id" : "fbbff051-9c84-4ad5-a9f8-af3404d36b3e"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "057015a9-b6ae-41a9-b1ed-883c780f3e99"
+      } ]
+    }
+  },
+  "urlName" : "product"
+}

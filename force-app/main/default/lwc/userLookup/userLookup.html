@@ -1,0 +1,94 @@
+<template>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label" for="userSearch">Search</label>
+
+    <div
+      class={computedComboboxClass}
+      role="combobox"
+      aria-expanded={isDropdownOpen}
+      aria-haspopup="listbox"
+    >
+      <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right">
+        <lightning-icon
+          icon-name="standard:user"
+          size="x-small"
+          class="slds-input__icon slds-input__icon_left slds-icon-text-default"
+        ></lightning-icon>
+
+        <lightning-input
+          type="search"
+          variant="label-hidden"
+          placeholder="Search User..."
+          value={searchKey}
+          onchange={handleInputChange}
+        ></lightning-input>
+
+        <lightning-icon
+          icon-name="utility:search"
+          size="x-small"
+          class="slds-input__icon slds-input__icon_right slds-icon-text-default"
+        ></lightning-icon>
+      </div>
+
+      <!-- Spinner -->
+      <template if:true={isLoading}>
+        <div class="slds-is-relative slds-m-top_x-small">
+          <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+        </div>
+      </template>
+
+      <!-- Dropdown -->
+      <template if:true={userList}>
+        <div
+          id="user-listbox"
+          class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+          role="listbox"
+        >
+          <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+            <template for:each={userList} for:item="user">
+              <li
+                key={user.Id}
+                role="presentation"
+                class="slds-listbox__item"
+                onclick={handleSelect}
+                data-id={user.Id}
+                data-name={user.Name}
+              >
+                <div
+                  class="slds-media slds-listbox__option slds-listbox__option_entity slds-media_center"
+                  role="option"
+                >
+                  <span class="slds-media__figure slds-listbox__option-icon">
+                    <lightning-icon icon-name="standard:user" size="small"></lightning-icon>
+                  </span>
+                  <span class="slds-media__body">
+                    <span class="slds-listbox__option-text slds-listbox__option-text_entity">
+                      {user.Name}
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- Selected User Pills -->
+  <template if:true={hasSelectedUsers}>
+    <div class="slds-m-top_x-small slds-grid slds-wrap">
+      <template for:each={selectedUsers} for:item="user">
+        <lightning-pill
+          key={user.id}
+          label={user.name}
+          name={user.name}
+          onremove={handleRemoveUser}
+          data-id={user.id}
+        >
+          <lightning-icon icon-name="standard:user" variant="circle" size="x-small"></lightning-icon>
+        </lightning-pill>
+      </template>
+    </div>
+  </template>
+</template>

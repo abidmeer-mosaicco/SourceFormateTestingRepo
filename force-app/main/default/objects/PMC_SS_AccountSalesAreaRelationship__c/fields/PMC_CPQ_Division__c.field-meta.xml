@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Division__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( TEXT(PMC_SS_SalesArea__r.PMC_SS_Division__c),
+&quot;10&quot;,&quot;Domestic&quot;,
+&quot;20&quot;,&quot;Export&quot;,
+&quot;30&quot;,&quot;Intercompany&quot;,&quot;&quot;)</formula>
+    <label>Division</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,18 @@
+<template>
+  <div class="slds-align_absolute-center">
+    <ul class="slds-grid slds-gutters slds-size_1-of-1">
+      <li class="slds-col" for:each={stepsData} for:item="item" key={item.title}>
+        <div>
+          <c-pmc_dh_quote-checkout-flow-icons icon={item.icon} status={item.status}>
+          </c-pmc_dh_quote-checkout-flow-icons>
+        </div>
+        <div class="title slds-align_absolute-center" data-status={item.status}>{item.title}</div>
+        <div class="status-icon">
+          <c-pmc_dh_quote-checkout-flow-icons status-icon=true status={item.status}>
+          </c-pmc_dh_quote-checkout-flow-icons>
+        </div>
+        <hr class="border">
+      </li>
+    </ul>
+  </div>
+</template>

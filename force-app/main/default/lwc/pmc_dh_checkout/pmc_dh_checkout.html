@@ -1,0 +1,11 @@
+<template>
+  <template if:true={checkoutPageHandler.RFQ}>
+    <c-pmc_dh_quote-checkout-flow>
+    </c-pmc_dh_quote-checkout-flow>
+  </template>
+
+  <template if:true={checkoutPageHandler.RTD}>
+    <c-pmc_dh_request-to-deliver>
+    </c-pmc_dh_request-to-deliver>
+  </template>
+</template>

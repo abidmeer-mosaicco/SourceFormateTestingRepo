@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>PMC_SS_CaseAutoResponse</letterhead>
+    <name>PMC SS Case Auto-Response</name>
+    <style>freeForm</style>
+    <subject>Mosaic Case #{!Case.CaseNumber}:{!Case.Subject}</subject>
+    <textOnly>Dear {!Case.Contact},
+
+Thank you for submitting your inquiry. Case {!Case.CaseNumber}:{!Case.Subject} has been created and a representative will review and respond to you during business hours (8:00 AM EST - 5:00 PM EST or 8:00 AM BST - 5:00 PM BST), Monday through Friday.
+
+We do our best to reply quickly and appreciate your patience.
+
+Best Regards,
+Mosaic Customer Care</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

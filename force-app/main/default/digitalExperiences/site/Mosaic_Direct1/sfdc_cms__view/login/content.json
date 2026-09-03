@@ -1,0 +1,63 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Login",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"d371af01-829a-448b-99c7-7ee93321b34d\",\"columns\":[{\"UUID\":\"92485602-269b-4bdf-8bff-2ef6e9bb58ce\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { }
+              },
+              "definition" : "c:pmc_dh_landingPage",
+              "id" : "55387b50-636c-4916-9117-a58f91ac9486",
+              "type" : "component"
+            } ],
+            "id" : "92485602-269b-4bdf-8bff-2ef6e9bb58ce",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "d371af01-829a-448b-99c7-7ee93321b34d",
+          "type" : "component"
+        } ],
+        "id" : "ac3452b7-9925-40cb-9dd3-c3b33dccaec4",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Login",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "37da7cb1-d47a-4431-baae-266df193cff1",
+          "type" : "component"
+        } ],
+        "id" : "6ecc0176-b703-4ab6-b9b2-5c16a1ba304a",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "edadeae9-66e7-46a6-be3a-03299a2c67de",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "aCSRUDPRXgfJDgnCncIUTzWSc4f675",
+    "viewType" : "login-main"
+  },
+  "urlName" : "login"
+}

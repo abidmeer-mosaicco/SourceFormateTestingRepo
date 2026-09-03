@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteSavedFromQLE__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to find whether the Save happened from inside QLE or not. If checked, the Save was from QLE.</description>
+    <inlineHelpText>Indicates Save happened from inside QLE or not. If checked, the Save was from QLE.</inlineHelpText>
+    <label>Quote Saved From QLE</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_AccessorialCostDetail__c</fullName>
+    <label>Accessorial Costs Detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Equipment Rental</fullName>
+                <default>false</default>
+                <label>Equipment Rental</label>
+            </value>
+            <value>
+                <fullName>Insurance Costs</fullName>
+                <default>false</default>
+                <label>Insurance Costs</label>
+            </value>
+            <value>
+                <fullName>Legal Costs</fullName>
+                <default>false</default>
+                <label>Legal Costs</label>
+            </value>
+            <value>
+                <fullName>Samples Shipped</fullName>
+                <default>false</default>
+                <label>Samples Shipped</label>
+            </value>
+            <value>
+                <fullName>Transportation Costs/Labor</fullName>
+                <default>false</default>
+                <label>Transportation Costs/Labor</label>
+            </value>
+            <value>
+                <fullName>Travel Expenses</fullName>
+                <default>false</default>
+                <label>Travel Expenses</label>
+            </value>
+            <value>
+                <fullName>Warehouse Cost/Labor</fullName>
+                <default>false</default>
+                <label>Warehouse Cost/Labor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

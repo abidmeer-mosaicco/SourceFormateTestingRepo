@@ -1,0 +1,53 @@
+.switch-accounts-modal-body {
+  padding: 16px 0px;
+  max-height: 320px;
+}
+.section-title {
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  line-height: 19px;
+  border-bottom: 1px solid var(--tertiary-green);
+}
+.search-address__list {
+  padding-bottom: 16px;
+  padding-left: var(--dxp-g-spacing-medium);
+  padding-right: var(--dxp-g-spacing-medium);
+  max-height: 188px;
+  overflow: auto;
+}
+.search-address__list .slds-radio {
+  margin:0;
+  display: table-caption;
+}
+.search-address__list .slds-radio:last-child .slds-radio__label {
+  border-bottom: none;
+}
+.search-address__list .slds-radio__label {
+  border-bottom: 1px solid #D4DFDE;
+  margin: 0;
+  padding: 9px 12px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+.search-address__list .slds-radio__label .slds-form-element__label{
+  font-size: var(--small-font-size);
+}
+
+
+/* .switch-accounts-modal-body .slds-form-element .slds-form-element__control .slds-radio {
+  margin:0;
+  display: table-caption;
+}
+.switch-accounts-modal-body .slds-form-element .slds-form-element__control .slds-radio:last-child .slds-radio__label {
+  border-bottom: none;
+}
+.switch-accounts-modal-body .slds-form-element .slds-form-element__control .slds-radio .slds-radio__label {
+  border-bottom: 1px solid #D4DFDE;
+  margin: 0;
+  padding: 12px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+} */

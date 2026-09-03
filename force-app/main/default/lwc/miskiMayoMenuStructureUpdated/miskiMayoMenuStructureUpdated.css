@@ -1,0 +1,219 @@
+/* Top bar */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2231a;
+  padding: 0.3rem;
+  position: relative;
+  font-family: Arial, sans-serif;
+  z-index: 999999;
+}
+
+/* LOGO */
+.brand { cursor: pointer; display: flex; align-items: center; }
+.logo-img { max-width:220px; max-height:45px; }
+
+/* HAMBURGER */
+.hamburger { display:none; border:0; background:transparent; padding:0; cursor:pointer; flex-direction:column; gap:5px; }
+.hamburger span { width:25px; height:3px; background-color:white; display:block; }
+
+/* MENU DESKTOP */
+.menu {
+  list-style:none;
+  display:flex;
+  gap:1.5rem;
+  margin:0;
+  padding:0;
+  font-size:0.9rem;
+}
+.menu.open { display:block; flex-direction:column; font-size:0.68rem; }
+
+.menu-item { position:relative; text-wrap-mode:nowrap !important; }
+.menu-item > span { color:white; font-weight:500; cursor:pointer; }
+
+.submenu {
+  display:none;
+  position:absolute;
+  top:100%; left:0;
+  background:#fff;
+  list-style:none;
+  min-width:220px;
+  z-index:10;
+  padding:0; margin:0;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.menu-item:hover .submenu { display:block; }
+
+.submenu-item { position:relative; white-space:pre-wrap !important; }
+.submenu-item > span,
+.sub-submenu li > span {
+  display:block;
+  padding:10px 16px;
+  color:#222; cursor:pointer;
+  transition:background-color 0.3s ease;
+}
+.submenu-item > span:hover,
+.sub-submenu li > span:hover { background-color:#e2231a; color:white; cursor:pointer; }
+
+.sub-submenu {
+  display:none;
+  position:absolute;
+  top:0; left:100%;
+  background:#fff;
+  min-width:220px;
+  list-style:none;
+  padding:0; margin:0;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.submenu-item:hover .sub-submenu { display:block; }
+
+/* Label submenu (desktop base) */
+.submenu-label {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 16px;
+  color:#222;
+  cursor:pointer;
+  transition:background-color 0.3s ease;
+  width:100%;
+}
+.submenu-label:hover { background-color:#e2231a; color:white; }
+
+
+.arrow-right { display:none; }
+
+/* ---- LARGE DESKTOP TUNING ---- */
+@media screen and (min-width: 2000px) {
+  .brand { margin-left:5rem; }
+  .menu  { margin-right:5rem!important; font-size:0.9rem; }
+  .logo-img { max-width:220px; max-height:45px; }
+}
+@media screen and (min-width: 1401px) and (max-width: 1999px) {
+  .menu  { margin-right:2.5rem!important; }
+  .brand { margin-left:2.5rem!important; }
+}
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .brand { margin-left:0; }
+  .menu  { margin-right:3rem!important; font-size:0.8rem; }
+  .logo-img { max-width:200px; }
+}
+@media screen and (min-width: 970px) and (max-width: 1250px) {
+  .brand { margin-left:0; }
+  .menu  { margin-right:3rem!important; font-size:0.62rem; }
+  .logo-img { max-width:160px; }
+}
+@media screen and (min-width: 769px) and (max-width: 969px) {
+  .brand { margin-left:0; }
+  .menu  { margin-right:0!important; font-size:0.50rem; }
+  .logo-img { max-width:96px; }
+}
+
+/* -------- MOBILE (≤768px) -------- */
+@media screen and (max-width:768px) {
+  .menu-container { padding:.75rem 1rem; }
+  .logo-img { max-width:160px; }
+  .hamburger { display:flex; margin-left:auto; }
+
+  /* MOBILE MENU */
+  .menu {
+    display:none;
+    flex-direction:column;
+    background-color:#e2231a;
+    position:absolute;
+    top:calc(100% + 10px);
+    left:0; width:100%;
+    margin:0; padding-top:8px;
+    z-index:999999;
+    padding-left:1rem; padding-bottom:.7rem;
+  }
+  .menu.open { display:flex; }
+
+  /* Disable hover on mobile */
+  .menu-item:hover .submenu { display:none; }
+  .submenu-item:hover .sub-submenu { display:none; }
+
+  /* 1st level — fixed down arrow on the right (always “v”) */
+  .top-label {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.6rem .9rem .6rem 0;
+    color:#fff;
+    /*test*/
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-height: 28px;
+  }
+  .top-label .mobile-arrow::after { 
+    content:'›';
+    font-size:250%;
+    rotate: 90deg;
+    position:unset; rotate: 90deg;
+    opacity:.9;
+  }
+
+  .mobile-arrow
+  {
+    position:unset; rotate: 90deg;
+  }
+
+  .menu-item { font-size:.95rem; }
+  .menu-item.open > .submenu {
+    display:block;
+    position:relative;
+    top:0; left:0;
+    background:#fff;
+    box-shadow:none;
+    width:100%;
+  }
+
+  /* 2nd level — left arrow “›” + fixed down arrow on the right when you have children */
+  .submenu-item { font-size:.95rem; }
+  .submenu-label {
+    position:relative;
+    padding:12px 40px 12px 28px; /* space for left and right arrow*/
+    display:flex; align-items:center;
+  }
+  .submenu-label::before {
+    content:'›';                 /* left arrow (all items clickable) */
+    display:inline-block;
+    margin-right:10px;
+    opacity:.8;
+  }
+
+  .submenu-label[data-has-children]::after {
+    content:'›';               /* right arrow always down */
+    font-size:250%;
+    position:absolute; right:40px; top:-15%; transform:translateY(-50%); rotate: 90deg;
+    opacity:.7;
+  }
+
+  /* 3rd level — left arrow “›” before the text */
+  .sub-submenu {
+    position:relative;
+    left:0; top:0;
+    background:#fff;
+    box-shadow:none;
+    width:100%;
+    margin:0; padding:0 0 .5rem 0;
+    display:none;
+  }
+  .sub-submenu li > span { padding:10px 16px 10px 28px; display:block; }
+  .sub-submenu li > span::before {
+    content:'›';
+    display:inline-block;
+    margin-right:10px;
+    opacity:.8;
+  }
+  .submenu-item.open > .sub-submenu { display:block; }
+
+  .arrow { font-size:2.5rem; }
+}
+
+/* Outside of mobile, we only hide the arrows created for mobile. */
+@media screen and (min-width:769px) {
+  .mobile-arrow { display:none; }
+  .arrow { display:none; }
+}

@@ -1,0 +1,77 @@
+.flow-section {
+    padding: 30px;
+    background: #f0f8f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.flow-title {
+    text-align: center;
+    font-size: 28px;
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+/* Default → Desktop Horizontal Layout */
+.flow-container {
+    display: flex;
+    flex-direction: row;         /* ✅ Horizontal */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.flow-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.flow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Icon & Text Styling */
+.step-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Mobile → Vertical Layout */
+@media (max-width: 768px) {
+    .flow-container {
+        flex-direction: column;      /* ✅ Vertical on Mobile */
+        align-items: center;
+        max-width: 95%;
+    }
+
+    .flow-card {
+        width: 100%;
+        min-width: unset;
+        max-width: 400px;
+    }
+}

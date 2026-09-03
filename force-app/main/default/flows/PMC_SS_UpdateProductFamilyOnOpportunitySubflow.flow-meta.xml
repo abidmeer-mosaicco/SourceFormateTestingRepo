@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Add Product Families to list</description>
+        <name>AddProductFamiliesToList</name>
+        <label>Add Product Families to list</label>
+        <locationX>704</locationX>
+        <locationY>974</locationY>
+        <assignmentItems>
+            <assignToReference>strOldProductFamily</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>strProductFamily</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>strOldProductFamily</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>;</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLinesLoop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get Current Product Family</description>
+        <name>GetCurrentProductFamilyAssignment</name>
+        <label>Get Current Product Family Assignment</label>
+        <locationX>616</locationX>
+        <locationY>758</locationY>
+        <assignmentItems>
+            <assignToReference>strProductFamily</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>QuoteLinesLoop.SBQQ__Product__r.PMC_CPQ_ProductFamily__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>AdditionDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get Old Product Families from Opportunity</description>
+        <name>GetOldProductFamiliesAssignment</name>
+        <label>Get Old Product Families Assignment</label>
+        <locationX>528</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>strOldProductFamily</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objCurrentQuote.SBQQ__Opportunity2__r.PMC_SS_ProductFamilies__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteLinesLoop</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_UpdateProductFamilyOnOpportunitySubflow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Decide whether to add to Product Families on Opportunity</description>
+        <name>AdditionDecision</name>
+        <label>Addition Decision</label>
+        <locationX>616</locationX>
+        <locationY>866</locationY>
+        <defaultConnector>
+            <targetReference>AddProductFamiliesToList</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>AdditionDecision_SkipOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>strOldProductFamily</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>strProductFamily</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuoteLinesLoop</targetReference>
+            </connector>
+            <label>Skip Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Opportunity is not related to Sales Agreement</description>
+        <name>CheckIfOpportunityIsNotRelatedToSalesAgreementDecision</name>
+        <label>Check if Opportunity is not related to Sales Agreement Decision</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>QuoteLinesGet</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfOpportunityIsNotRelatedToSalesAgreementDecision_RelatedOutcome</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>objCurrentQuote.SBQQ__Opportunity2__r.PMC_SS_SalesAgreement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>objCurrentQuoteLine.SBQQ__Quote__r.SBQQ__Opportunity2__r.PMC_SS_SalesAgreement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Related Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Primary Quote is Changed</description>
+        <name>CheckIfPrimaryQuoteIsChangedDecision</name>
+        <label>Check if Primary Quote is Changed Decision</label>
+        <locationX>440</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>GetOldProductFamiliesAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfPrimaryQuoteIsChangedDecision_ChangedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolPrimaryQuoteChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>objCurrentQuote.SBQQ__Opportunity2__r.PMC_SS_SalesAgreement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QuoteLinesLoop</targetReference>
+            </connector>
+            <label>Changed Outcome</label>
+        </rules>
+    </decisions>
+    <description>Update Product Family on Opportunity from Quote Line</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC SS Update Product Family on Opportunity Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Update Product Family on Opportunity Subflow</label>
+    <loops>
+        <description>Loop through Quote Lines</description>
+        <name>QuoteLinesLoop</name>
+        <label>Quote Lines Loop</label>
+        <locationX>440</locationX>
+        <locationY>650</locationY>
+        <collectionReference>QuoteLinesGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>GetCurrentProductFamilyAssignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>OpportunityUpdate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>792</locationX>
+        <locationY>1358</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get Quote Lines Related to Quote</description>
+        <name>QuoteLinesGet</name>
+        <label>Quote Lines Get</label>
+        <locationX>440</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckIfPrimaryQuoteIsChangedDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>SBQQ__Quote__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>objCurrentQuote.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>SBQQ__Quote__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>objCurrentQuoteLine.SBQQ__Quote__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>SBQQ__QuoteLine__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update related Opportunity</description>
+        <name>OpportunityUpdate</name>
+        <label>Opportunity Update</label>
+        <locationX>440</locationX>
+        <locationY>1250</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>objCurrentQuote.SBQQ__Opportunity2__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>objCurrentQuoteLine.SBQQ__Quote__r.SBQQ__Opportunity2__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_SS_ProductFamilies__c</field>
+            <value>
+                <elementReference>strOldProductFamily</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckIfOpportunityIsNotRelatedToSalesAgreementDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Stores whether Primary Quote was Changed</description>
+        <name>boolPrimaryQuoteChanged</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Current Quote Record</description>
+        <name>objCurrentQuote</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
+    </variables>
+    <variables>
+        <description>Triggering Quote Line</description>
+        <name>objCurrentQuoteLine</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>SBQQ__QuoteLine__c</objectType>
+    </variables>
+    <variables>
+        <description>Already existing values in Product Family</description>
+        <name>strOldProductFamily</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Product Families</description>
+        <name>strProductFamily</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

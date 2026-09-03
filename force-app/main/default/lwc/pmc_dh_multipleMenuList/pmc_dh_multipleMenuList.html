@@ -1,0 +1,15 @@
+<template>
+  <div class="lbl-field-value multiple">
+    {labels.pmc_requestToDeliverShippingInformation_multiple}
+    <a class="slds-m-left--xx-small acc-icon" data-record-index={recordIndex} onclick={openMenu}>
+      <img src={iconUrlObj.arrowRightIconUrl} alt={labels.pmc_leadManagement_accordion} />
+    </a>
+    <div data-record-index={recordIndex} class="list-info">
+      <ul>
+        <li title={item} class="slds-truncate" for:each={listItems} for:item="item" for:index="index" key={index.index}>
+          {item}
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>

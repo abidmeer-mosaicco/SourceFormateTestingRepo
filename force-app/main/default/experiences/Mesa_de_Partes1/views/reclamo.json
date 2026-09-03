@@ -1,0 +1,298 @@
+{
+  "appPageId" : "b5ad9a3e-2604-4090-819b-6820c429dc83",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "6b060494-cecd-4dfe-9a1f-f9965aeec58b",
+  "label" : "Reclamo",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "ca99f7ea-c55a-4c7d-b6e6-032041399969",
+          "columns" : [ {
+            "UUID" : "695e402f-f89c-46f3-8212-a4cc7b7a2e84",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ca99f7ea-c55a-4c7d-b6e6-032041399969",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><strong style=\"font-size: 36px;\">Reclamo</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a16cc92d-1581-45eb-84bc-01da2844d17e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "695e402f-f89c-46f3-8212-a4cc7b7a2e84",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e3d5e875-7e5d-4391-8417-c6794117774b",
+          "columns" : [ {
+            "UUID" : "e8664221-8573-40be-8796-8268789bda7c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "86501ae2-72c8-44e5-b7ff-33a96449195d",
+            "columnKey" : "cc337",
+            "columnName" : "Column 2",
+            "columnWidth" : "5",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e3d5e875-7e5d-4391-8417-c6794117774b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "flowArguments" : "",
+            "flowName" : "Miski_Mayo_Reclamos_Case"
+          },
+          "componentName" : "forceCommunity:flowCommunity",
+          "id" : "3ddbbb72-d4ca-4d71-a45a-d1498d40877c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e8664221-8573-40be-8796-8268789bda7c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Toma en cuenta las siguientes indicaciones antes de completar el proceso que llevarás a cabo:</p><ul><li>Si requieres adjuntar algún documento, debe estar en formato PDF.</li><li>El peso de los archivos que adjuntes debe sumar máximo 50 MB.</li><li>Tomaremos en cuenta el orden y plazo de recepción de consultas, solicitudes/documentos o reclamos según el siguiente horario:</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Entre las 08:00 horas y las 18:30 horas de un día hábil, se consideran presentados</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;mismo día hábil.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Después de las 18:30 horas y las 23:59 horas, se considerarán presentados el día hábil</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;siguiente.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- En caso ingreses una consulta, solicitud/documento o reclamo un día inhábil, se</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;considerará presentado al día hábil siguiente.</p><ul><li>Después de registrar tu trámite, te enviaremos un correo con tu número de caso para que puedas hacerle seguimiento.</li></ul>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "972271ce-fefb-458d-8c28-c406e14c2590",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCUCOKOY5W5VC7JD3DL6WJUNLHBU",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "top center",
+                  "backgroundSize" : "contain",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : 450,
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "none",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0)",
+                  "showButton" : false,
+                  "showCaption" : false,
+                  "showDateTime" : false,
+                  "showEyebrow" : false,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : false,
+                  "showMetadata1" : false,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : false,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : false,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "center center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "d4bc2834-7d32-4c5b-949f-a5eede7a07de",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "86501ae2-72c8-44e5-b7ff-33a96449195d",
+        "regionLabel" : "Column 2",
+        "regionName" : "cc337",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 75,
+        "sectionConfig" : {
+          "UUID" : "63a60303-3bd8-41b3-a411-503d37f981a5",
+          "columns" : [ {
+            "UUID" : "13040c0d-823f-4988-bba8-1655be6780e9",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "63a60303-3bd8-41b3-a411-503d37f981a5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><strong style=\"font-size: 20px;\">Preguntas Frecuentes&nbsp;</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "99610b32-9d48-4b40-958e-1aa330065605",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "<p>Para conocer nuestras ofertas laborales vigentes y postular a ellas, visita la plataforma Bumeran, donde podr&aacute;s ingresar tu CV o informaci&oacute;n personal. Para postular es necesario que crees una cuenta en dicha plataforma.</p> <p>Las convocatorias abiertas, as&iacute; como la culminaci&oacute;n de la selecci&oacute;n son publicadas en nuestras redes sociales de Facebook y LinkedIn. Te invitamos a seguirnos en estas plataformas para recibir alertas cada vez que haya una convocatoria laboral vigente.</p> <p><a href=\"https://www.facebook.com/MineraMiskiMayo\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa |Facebook</a></p> <p><a href=\"https://www.linkedin.com/company/miski-mayo/posts/?feedView=all\" target=\"_blank\" rel=\"noopener noreferrer\">Compa&ntilde;&iacute;a Minera Miski Mayo S.R.L.: Mi empresa | LinkedIn</a></p> <p><strong>Recuerda que:</strong></p> <p>Ninguno de nuestros procesos de contrataci&oacute;n se realiza a cambio de dinero.</p> <p>No realizamos convocatorias laborales a trav&eacute;s de correo electr&oacute;nico o WhatsApp. <br />&nbsp;</p>",
+            "headerText" : "¿Cómo puedo trabajar con ustedes o postular para trabajar en la empresa?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "1dfe978c-8ff2-4890-9de8-0b3d3fc0a911",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "<p>Si deseas darnos a conocer tu empresa te invitamos a que ingreses al siguiente link que se encuentra en nuestra p&aacute;gina web:  <a href=\"https://www.miskimayo.com/s/proveedores?language=es_PE\">Proveedores</a><br /> Completa el formulario proporcionando informaci&oacute;n detallada de tu empresa para que podamos tenerla presente en futuros procesos de licitaci&oacute;n.&nbsp;</p>",
+            "headerText" : "¿Cómo mi empresa puede brindar servicios a Compañía Minera Miski Mayo?",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "2bcc3766-9854-45f7-a155-d47145506474",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "activeSectionName" : "",
+            "bodyText" : "Enter Answer Here",
+            "headerText" : "Deseo información adicional sobre el proceso de operación",
+            "rgbColor" : "rgb(226, 35, 26)"
+          },
+          "componentName" : "c:ExperienceAccordion",
+          "id" : "26639a64-2ed6-42d4-af02-b7439c6b8177",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "13040c0d-823f-4988-bba8-1655be6780e9",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e8643797-e4fc-4e43-88b4-05d39f2be552",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Reclamo"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "43d34d46-5333-4729-8fe0-375c4b33e9c7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "0be33d58-e476-4321-97b3-5ca542f424e0",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-reclamo"
+}

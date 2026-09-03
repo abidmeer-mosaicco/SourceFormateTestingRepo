@@ -1,0 +1,41 @@
+<template>
+    <div class="md-list-container">
+        <div class="md-grid" style="grid-template-columns: repeat(2, 1fr); align-items: flex-start;">
+            <div class="md-header">
+                <p class="md-big-title md-mb-0">In Transit</p>
+            </div>
+
+            <div class="info-banner-wrapper" if:true={isVisible}>
+                <div class="slds-notify slds-notify_alert custom-info-banner">
+
+                    <span class="slds-icon_container slds-icon-utility-info">
+                        <lightning-icon icon-name="utility:info" size="x-small" alternative-text="Info"></lightning-icon>
+                    </span>
+
+                    <p class="slds-truncate" style="font-weight: bold; font-size: 14px;">
+                        Delivery records last updated at <strong>{lastUpdateFormatted}</strong>
+                    </p>
+
+                    <!-- <div class="slds-notify__close">
+                        <button class="slds-button slds-button_icon slds-button_icon-small" title="Dismiss"
+                            onclick={handleDismiss}>
+
+                            <lightning-icon icon-name="utility:close" size="x-small" alternative-text="Close">
+                            </lightning-icon>
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-wrapper">
+            <ul class="tabs" style="margin: 1rem 0 -1.2rem 0;">
+                <template for:each={computedTabs} for:item="tab">
+                    <li key={tab.value} class={tab.className} data-value={tab.value} onclick={handleTabClick}>
+                        {tab.label}
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

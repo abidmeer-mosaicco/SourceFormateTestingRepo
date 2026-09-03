@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : @raghu.mothukapally
+  @group             : 
+  @last modified on  : 12-01-2023
+  @last modified by  : @raghu.mothukapally
+-->
+
+<apex:component access="global">
+  <tr>
+    <!-- <td align="center"><img src="{!URLFOR($Resource.pmc_emailStaticResourceLogoMosaic)}" alt="{!$Label.pmc_emailTemplate_mosaic}" width="300" height="150" /></td> -->
+    <!-- <td align="center"><apex:image url="{!URLFOR($Resource.pmc_emailStaticResource, 'images/logo-mosaic.jpg')}" width="300" height="150" /></td> -->
+    <!-- <apex:image id="theImage" value="https://c.<instance>.content.force.com/servlet/servlet.ImageServer?id=<document_id>&oid=<organization_id>" width="200" height="200"/> -->
+    
+    <!-- <td align="center"><img src="https://globaldigitalacceleration--devp1.sandbox.file.force.com/servlet/servlet.ImageServer?id=015DT000001GtJp&oid=00DDT000000Bzj5&lastMod=1684139030000" alt="{!$Label.pmc_emailTemplate_mosaic}" width="300" height="150" /></td> -->
+
+    <td align="center">
+      <img src="{!$Label.pmc_emailTemplate_basePath}{!$Resource.pmc_brandingStaticResource+'/images/email-mosaic.jpg'}" alt="{!$Label.pmc_emailTemplate_mosaic}" width="300" height="150" />
+    </td>
+
+  </tr>
+</apex:component>

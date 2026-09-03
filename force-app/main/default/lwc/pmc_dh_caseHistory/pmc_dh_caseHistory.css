@@ -1,0 +1,119 @@
+.custom-card {
+  margin: 0 0 24px 8px;
+}
+
+.case-doc .custom-card .card-body {
+  padding: 16px 16px 0 0;
+  max-height: 259px;
+  overflow: auto;
+  margin-right: 16px;
+  min-height: 50px;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  word-break: break-word;
+}
+
+.case-doc .card-body .slds-grid {
+  padding-left: 16px;
+  padding-bottom: 26px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #d6d6d6;
+  gap: 8px;
+}
+
+.case-doc .card-body .slds-grid:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.download-icon {
+  width: fit-content;
+}
+
+.download-icon img {
+  max-width: 32px;
+}
+
+.case-comments .card-body {
+  padding: 0;
+}
+
+.case-message {
+  background-color: #f0f0f0;
+  width: 57.5%;
+  padding: 8px;
+  font-size: 12px;
+  font-family: var(--regular-font);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px 6px 6px 0px;
+  float: left;
+}
+
+.case-message.business-usr {
+  background: var(--primary-green);
+  color: white;
+  float: right;
+  border-radius: 6px 6px 0px 6px;
+}
+
+.message-container {
+  padding: 16px;
+  border-bottom: 1px solid #d6d6d6;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.message-text {
+  padding: 16px 16px 0;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.no-access {
+  font-size: var(--x-small-font-size);
+  color: var(--primary-grey);
+}
+
+.send-btn {
+  width: fit-content;
+}
+
+.send-btn .slds-button {
+  padding: 9px 18px;
+  font-family: var(--medium-font);
+  line-height: 14px;
+  font-size: var(--x-small-font-size);
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.text-na {
+  font-size: var(--small-font-size);
+}
+
+@media screen and (max-width: 767px) {
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .download-icon {
+    margin-left: auto;
+  }
+
+  .case-doc .card-body .slds-grid {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .case-documents-wrapper {
+    flex-wrap: wrap;
+  }
+}

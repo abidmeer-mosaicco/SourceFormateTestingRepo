@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SoldToAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to capture Sold To Account for the Order.</description>
+    <inlineHelpText>Sold To Account for the Order.</inlineHelpText>
+    <label>Sold To Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Orders</relationshipLabel>
+    <relationshipName>Orders</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

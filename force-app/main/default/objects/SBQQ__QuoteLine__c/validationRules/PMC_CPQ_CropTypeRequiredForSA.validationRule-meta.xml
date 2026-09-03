@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_CropTypeRequiredForSA</fullName>
+    <active>true</active>
+    <description>This rule will fire when Crop Type is blank for an SA quote line.</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT( CONTAINS($Profile.Name,&apos;Digital Hub&apos;)),
+ISBLANK( TEXT(PMC_CPQ_CropType__c )),
+OR(
+ISBLANK(PMC_CPQ_OpportunityLineItemId__c ),
+AND(NOT(ISBLANK(PMC_CPQ_OpportunityLineItemId__c )),NOT(ISNEW()))),
+NOT( PMC_CPQ_QuoteRegionExtractor__c = &apos;North America&apos;),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c ))
+)</errorConditionFormula>
+    <errorMessage>Crop Type is Required.</errorMessage>
+</ValidationRule>

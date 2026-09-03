@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ProductFamily__c</fullName>
+    <description>Multiselect for Products with which Team member works</description>
+    <label>Product Family</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ammonia</fullName>
+                <default>false</default>
+                <label>Ammonia</label>
+            </value>
+            <value>
+                <fullName>Animal Nutrition</fullName>
+                <default>false</default>
+                <label>Animal Nutrition</label>
+            </value>
+            <value>
+                <fullName>ASPIRE</fullName>
+                <default>false</default>
+                <label>ASPIRE</label>
+            </value>
+            <value>
+                <fullName>ATHOS</fullName>
+                <default>false</default>
+                <label>ATHOS</label>
+            </value>
+            <value>
+                <fullName>Concentrate</fullName>
+                <default>false</default>
+                <label>Concentrate</label>
+            </value>
+            <value>
+                <fullName>DAPMAP</fullName>
+                <default>false</default>
+                <label>DAPMAP</label>
+            </value>
+            <value>
+                <fullName>Fluosilic Acid</fullName>
+                <default>false</default>
+                <label>Fluosilic Acid</label>
+            </value>
+            <value>
+                <fullName>Gravel Rock</fullName>
+                <default>false</default>
+                <label>Gravel Rock</label>
+            </value>
+            <value>
+                <fullName>Gypsum</fullName>
+                <default>false</default>
+                <label>Gypsum</label>
+            </value>
+            <value>
+                <fullName>K Blends</fullName>
+                <default>false</default>
+                <label>K Blends</label>
+            </value>
+            <value>
+                <fullName>KMAG</fullName>
+                <default>false</default>
+                <label>KMAG</label>
+            </value>
+            <value>
+                <fullName>Limestone</fullName>
+                <default>false</default>
+                <label>Limestone</label>
+            </value>
+            <value>
+                <fullName>Liquid Fert</fullName>
+                <default>false</default>
+                <label>Liquid Fert</label>
+            </value>
+            <value>
+                <fullName>Magnetite</fullName>
+                <default>false</default>
+                <label>Magnetite</label>
+            </value>
+            <value>
+                <fullName>MES</fullName>
+                <default>false</default>
+                <label>MES</label>
+            </value>
+            <value>
+                <fullName>MOP</fullName>
+                <default>false</default>
+                <label>MOP</label>
+            </value>
+            <value>
+                <fullName>N Blends</fullName>
+                <default>false</default>
+                <label>N Blends</label>
+            </value>
+            <value>
+                <fullName>Nitrogen</fullName>
+                <default>false</default>
+                <label>Nitrogen</label>
+            </value>
+            <value>
+                <fullName>NPK Blends</fullName>
+                <default>false</default>
+                <label>NPK Blends</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>P Blends</fullName>
+                <default>false</default>
+                <label>P Blends</label>
+            </value>
+            <value>
+                <fullName>Package</fullName>
+                <default>false</default>
+                <label>Package</label>
+            </value>
+            <value>
+                <fullName>Performa</fullName>
+                <default>false</default>
+                <label>Performa</label>
+            </value>
+            <value>
+                <fullName>Phosphoric Acid</fullName>
+                <default>false</default>
+                <label>Phosphoric Acid</label>
+            </value>
+            <value>
+                <fullName>Rock</fullName>
+                <default>false</default>
+                <label>Rock</label>
+            </value>
+            <value>
+                <fullName>SALT</fullName>
+                <default>false</default>
+                <label>SALT</label>
+            </value>
+            <value>
+                <fullName>Salvage Sweepings</fullName>
+                <default>false</default>
+                <label>Salvage Sweepings</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>SOIL Health</fullName>
+                <default>false</default>
+                <label>SOIL Health</label>
+            </value>
+            <value>
+                <fullName>SOP</fullName>
+                <default>false</default>
+                <label>SOP</label>
+            </value>
+            <value>
+                <fullName>SSP</fullName>
+                <default>false</default>
+                <label>SSP</label>
+            </value>
+            <value>
+                <fullName>Steam</fullName>
+                <default>false</default>
+                <label>Steam</label>
+            </value>
+            <value>
+                <fullName>Sulfuric Acid</fullName>
+                <default>false</default>
+                <label>Sulfuric Acid</label>
+            </value>
+            <value>
+                <fullName>Sulphur</fullName>
+                <default>false</default>
+                <label>Sulphur</label>
+            </value>
+            <value>
+                <fullName>TSP</fullName>
+                <default>false</default>
+                <label>TSP</label>
+            </value>
+            <value>
+                <fullName>Water Soluble Blends</fullName>
+                <default>false</default>
+                <label>Water Soluble Blends</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,1155 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "5ef54610-bd80-4fb6-a0d9-b6960586c5f4",
+  "label" : "Seguridad",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c350d825-77ae-4bfe-8a28-56c24c63d9b0",
+          "columns" : [ {
+            "UUID" : "2cbffdd5-f30c-4fe1-b4ca-e1447efcae08",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c350d825-77ae-4bfe-8a28-56c24c63d9b0",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "afafa969-8a09-4e34-bcae-bd2ee851d840",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2cbffdd5-f30c-4fe1-b4ca-e1447efcae08",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "15bd3759-f44a-4ab7-932e-4b5e4a336ec8",
+          "columns" : [ {
+            "UUID" : "db96ec4d-194e-406e-8fb4-146de83682dc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "15bd3759-f44a-4ab7-932e-4b5e4a336ec8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageG",
+            "textDescription" : "Nuestro principal valor es la vida en primer lugar"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "e8fb6171-55c8-424a-867f-8ef30a4e0c2c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "db96ec4d-194e-406e-8fb4-146de83682dc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "d5d98ba9-d498-4462-861c-cc00da9d1260",
+          "columns" : [ {
+            "UUID" : "7fb13efd-3817-4b56-953f-16742b887505",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d5d98ba9-d498-4462-861c-cc00da9d1260",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Seguridad</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "01805cc2-73b4-4aff-907d-882808690374",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7fb13efd-3817-4b56-953f-16742b887505",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "a292b297-fe31-4da0-be9f-dca54ea1ffad",
+          "columns" : [ {
+            "UUID" : "aeb3f9f5-d8f5-49b3-8059-4f5e33bc8256",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a292b297-fe31-4da0-be9f-dca54ea1ffad",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "fontSizeParagraphs" : "16px",
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageG2",
+            "paragraph1" : "Compañía Minera Miski Mayo viene demostrando que la explotación de yacimientos de fosfatos y la producción de concentrado puede hacerse sin pérdidas humanas y materiales.",
+            "paragraph2" : "Durante todos los años de operación nuestro propósito es que cada trabajador regrese sano y salvo a casa después de una jornada laboral.",
+            "paragraph3" : "Todos los que integramos la Familia Miski Mayo guiamos nuestro trabajo basándonos en nuestro principal valor: LA VIDA EN PRIMER LUGAR.",
+            "paragraph4" : "En el Concurso organizado por el Instituto de Seguridad Minera ISEM hemos obtenido el primer puesto en esta categoría, desde los años 2012, 2014, 2019 y de manera consecutiva, desde el 2021 hasta el 2024.",
+            "paragraph5" : "Asimismo, en las ediciones del 2013, 2015, 2016 y 2020, nuestra empresa obtuvo placas de honor en la misma categoría.",
+            "titleparagraph4" : "SOMOS LA MINA A TAJO ABIERTO MÁS SEGURA DEL PERÚ"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithRedSquareWithTextNoCheckMark",
+          "id" : "f0a832d7-6e6c-4cf5-9b2f-d47e18dcdd86",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "aeb3f9f5-d8f5-49b3-8059-4f5e33bc8256",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "f822bca5-9da2-4dba-aae8-cebfa0b4d053",
+          "columns" : [ {
+            "UUID" : "ee39f603-b7ab-4fcd-9447-f11cd8f68269",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f822bca5-9da2-4dba-aae8-cebfa0b4d053",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#sistema-integrado-de-gestión-de-mosaic\" id=\"sistema-integrado-de-gestión-de-mosaic\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(0px);\">\n      <span style=\"color: #E2231A;\">Sistema</span> <span style=\"color: #E2231A;\">Integrado</span> <span style=\"color: #E2231A;\">de</span> <span style=\"color: #E2231A;\"> Gestión </span> <span style=\"color: #E2231A;\"> de </span> <span style=\"color: #E2231A;\"> Mosaic </span>\n         </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "e3fb8c1a-29a0-499b-88bb-b2a0b916f259",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 18px;\">En Miski Mayo estamos alineados al Sistema Integrado de Gestión de Mosaic, iniciativa corporativa que nuestra casa matriz ha implementado, con el propósito de gestionar los riesgos y priorizarlos, tener una planificación y control, medición y evaluación de los riesgos para generar acciones correctivas. Este sistema permite crear consistencia y mejoras en los procesos de Seguridad, Salud y Medio Ambiente dentro de la compañía.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "223ee2ca-8d2e-43d8-b500-e7a2facc6eec",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ee39f603-b7ab-4fcd-9447-f11cd8f68269",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "f43c3df4-4c79-435d-ba87-e55c7acb70b5",
+          "columns" : [ {
+            "UUID" : "95fcec41-1eb5-4d42-8bd4-6bcd71a6f7d3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f43c3df4-4c79-435d-ba87-e55c7acb70b5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageO1"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselStatic",
+          "id" : "7d9490e2-313e-4669-9545-6393f33dca65",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "95fcec41-1eb5-4d42-8bd4-6bcd71a6f7d3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "4668a5c9-7d97-4276-b79f-b609797d0066",
+          "columns" : [ {
+            "UUID" : "85ab0723-6597-4e9d-82f9-216e52bb2915",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "4668a5c9-7d97-4276-b79f-b609797d0066",
+      "regions" : [ {
+        "id" : "85ab0723-6597-4e9d-82f9-216e52bb2915",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "d0592cb8-dc17-4c40-b831-dbabf6cae640",
+          "columns" : [ {
+            "UUID" : "69f6ed3e-d44b-42c3-9fe9-33b39c0d0467",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "d0592cb8-dc17-4c40-b831-dbabf6cae640",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#las-9-reglas-para-salvaguardar-la-vida\" id=\"las-9-reglas-para-salvaguardar-la-vida\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(0px);\">\n      <span style=\"color: #E2231A;\">Las</span> <span style=\"color: #E2231A;\">9</span> <span style=\"color: #E2231A;\">reglas</span> <span style=\"color: #E2231A;\"> para</span> <span style=\"color: #E2231A;\"> salvaguardar </span> <span style=\"color: #E2231A;\"> la </span> <span style=\"color: #E2231A;\"> vida </span>\n    </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "1bf991cf-5167-49ae-ad47-4620d3591cc1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 18px;\">En Miski Mayo implementamos una nueva política de Seguridad que proviene de nuestra corporación Mosaic. Esta nueva política está enfocada en cubrir los 9 riesgos más importantes que pueden ocasionar accidentes con lesiones graves. Estas 9 reglas para salvaguardar la vida están basadas en estándares globales, programas y procedimientos que se enfocan en las áreas de mayor riesgo. Asimismo, estas 9 reglas nos orientan de forma sencilla y clara para mantener a salvo nuestra seguridad y la de los que nos rodean.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "230752d1-2890-4352-b633-c3d72da951e3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "imageEight" : "8",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "9",
+            "imageOne" : "1",
+            "imageSeven" : "7",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageO2"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselStatic",
+          "id" : "71ac6287-1825-4172-a62c-d5e80e13de92",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "69f6ed3e-d44b-42c3-9fe9-33b39c0d0467",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "776af9c4-5908-412b-94cd-d297d9400feb",
+          "columns" : [ {
+            "UUID" : "70a26772-87fb-4cb7-b03e-af77a4111830",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "776af9c4-5908-412b-94cd-d297d9400feb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"text-align: center;\">\n  <a href=\"#herramientas-de-gestión-de-seguridad\" id=\"herramientas-de-gestión-de-seguridad\" style=\"display: inline-block; text-decoration: none; font-weight: bold; font-size: 36px; transform: translateX(-20px);\">\n      <span style=\"color: #E2231A;\">Herramientas</span> <span style=\"color: #E2231A;\">de</span> <span style=\"color: #E2231A;\"> Gestión </span> <span style=\"color: #E2231A;\"> de</span> <span style=\"color: #E2231A;\"> Seguridad </span> \n    </div>\n  </a>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "2c0aed60-5822-4f4b-83e4-1770b816eb7b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 18px;\">El liderazgo en Miski Mayo es visible y perceptible. Se tiene un estilo basado en la transparencia, la comunicación clara y las relaciones interpersonales sinceras entre los líderes y sus equipos. Los supervisores de la empresa y de las contratistas cumplen una función muy importante, pues fomentan la toma de conciencia del personal bajo su control para alcanzar los objetivos y metas mediante el cumplimiento de sus funciones y responsabilidades. Los supervisores constantemente están siendo capacitados para liderar con el ejemplo y bajo las siguientes herramientas de seguridad.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "78f7c3b9-cf86-4c6a-9ce6-d2fa1d5d8fbf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "70a26772-87fb-4cb7-b03e-af77a4111830",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "3b6bcc58-3aeb-4d9a-b961-3a86c3d3a9b5",
+          "columns" : [ {
+            "UUID" : "3b401481-f17e-4fca-bd22-7b29b2ed0f05",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "07f0fa41-1cb9-442e-9ce4-17c07eb188d3",
+            "columnKey" : "dfd4e",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3b6bcc58-3aeb-4d9a-b961-3a86c3d3a9b5",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">HAZ UN PARE POR LA VIDA</span></h2><p style=\"text-align: justify;\"><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 18px;\">“Haz un pare por la vida” es una nueva herramienta de seguridad implementada en Miski Mayo, que nos invita a hacer un análisis de riesgo mental antes de realizar una actividad dentro y fuera de las operaciones. Este análisis, que se convierte en una acción individual y sumamente consciente, implica realizar tres preguntas básicas que podrán salvarnos la vida ante cualquier situación riesgosa o de peligro a la que nos expongamos. Estas interrogantes son las siguientes:</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "1e36a164-695a-4f3d-a294-4f469c69f290",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 13pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span><strong>¿Qué voy a hacer hoy?</strong> Esta pregunta debe plantearse luego de haber identificado la acción a ejecutar.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span><strong>¿Qué podría salir mal en esta actividad?</strong> Aquí identificamos cuáles son las posibles consecuencias de la actividad que voy a realizar.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span><strong>¿Qué voy a hacer al respecto?</strong> Con esta pregunta conseguimos adelantarnos a una posible situación en la que esté comprometida nuestra seguridad, por lo cual, se debería tener una solución al respecto en caso ocurriese algún incidente o eventualidad.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "dfd83bfb-1e70-4ed6-bdb5-8813f86b9eff",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3b401481-f17e-4fca-bd22-7b29b2ed0f05",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.Hazunpareporlavida.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0aa1cfd6-5ba1-4193-a781-9c74956bd499",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "07f0fa41-1cb9-442e-9ce4-17c07eb188d3",
+        "regionLabel" : "Column 2",
+        "regionName" : "dfd4e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "34422d3a-b2d9-4021-a876-05e31e1f652f",
+          "columns" : [ {
+            "UUID" : "80b2f571-c278-4eb7-a189-fe5493648487",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "34422d3a-b2d9-4021-a876-05e31e1f652f",
+      "regions" : [ {
+        "id" : "80b2f571-c278-4eb7-a189-fe5493648487",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "c8655b8f-73b0-4452-aeb6-20b90c2a3d6b",
+          "columns" : [ {
+            "UUID" : "94f89276-0534-40cc-b412-00c91ea3cf64",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "55771726-2fc3-467e-953a-4cf1a4c36ae5",
+            "columnKey" : "ded40",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c8655b8f-73b0-4452-aeb6-20b90c2a3d6b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">DIARIO A BORDO</span></h2><p><br></p><p><span style=\"font-size: 18px;\">El Diario a bordo es una serie de actividades de seguridad, como auditorías de ARA, reporte de observaciones preventivas, diálogos comportamentales e inspecciones, entre otros, realizadas por la supervisión operativa con el asesoramiento del área de SSMA.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c51185bb-70f5-40f4-9158-8748f4716157",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "94f89276-0534-40cc-b412-00c91ea3cf64",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.IMG_0971.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c676a45c-cc00-431c-be89-11d6ccfb174a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "55771726-2fc3-467e-953a-4cf1a4c36ae5",
+        "regionLabel" : "Column 2",
+        "regionName" : "ded40",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "cab2335f-4ad9-4a51-9e86-754b2eed352a",
+          "columns" : [ {
+            "UUID" : "782e9497-6b33-4ab8-a4ad-ce11f749332f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cab2335f-4ad9-4a51-9e86-754b2eed352a",
+      "regions" : [ {
+        "id" : "782e9497-6b33-4ab8-a4ad-ce11f749332f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "968b4c09-5270-4aba-9ec5-1a307310f231",
+          "columns" : [ {
+            "UUID" : "3ed2ba5e-0f12-4b46-96c0-e90291611b1c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "ce0908e5-111b-4c96-96f1-9571ba754dbc",
+            "columnKey" : "ad68f",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "968b4c09-5270-4aba-9ec5-1a307310f231",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">PLAN CENTINELA</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 18px;\">El “Plan Centinela” comprende una serie de actividades, como inspecciones cruzadas, observaciones planificadas de tarea y reporte de cuasi accidentes, etc. El plan es liderado semanalmente por un supervisor o superintendente que tiene la tarea de compilar toda información recibida, hacer el seguimiento del cierre de los desvíos y preparar su reporte semanal.&nbsp;Tanto el “Diario a bordo” como el “Plan Centinela” son revisados semanalmente por la Dirección de Operaciones, para identificar oportunidades de mejora en la operación.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e9f01b8c-0b61-42d1-9d99-ec98ed6674e7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3ed2ba5e-0f12-4b46-96c0-e90291611b1c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.seguridad_1.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "451ebc88-c63e-4ac7-bdaa-ca303df2803a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "ce0908e5-111b-4c96-96f1-9571ba754dbc",
+        "regionLabel" : "Column 2",
+        "regionName" : "ad68f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "70840a8e-0634-452a-b7a0-eb87867b229d",
+          "columns" : [ {
+            "UUID" : "66e5614d-b94e-4232-af30-8ea6b688220d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "70840a8e-0634-452a-b7a0-eb87867b229d",
+      "regions" : [ {
+        "id" : "66e5614d-b94e-4232-af30-8ea6b688220d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "f3c183a3-0e42-4d40-a0ca-4337392c3918",
+          "columns" : [ {
+            "UUID" : "690d0a71-5741-4a8e-a4e3-ebcb61680de0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "12d68e88-0700-404e-835d-8409fdf808a7",
+            "columnKey" : "141c0",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 250
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f3c183a3-0e42-4d40-a0ca-4337392c3918",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">REUNIÓN PAR</span></h2><p><br></p><p><span style=\"font-size: 18px;\">Los jueves de cada semana se lleva a cabo la reunión del Programa PAR, donde participan el personal de Miski Mayo liderado por el Director de Operaciones y sus gerentes, así como el personal de las empresas contratistas. Allí se dan a conocer las estadísticas de seguridad, eventos que se han suscitado en la semana y buenas prácticas, al igual que mejoras operacionales. A través de esta reunión se da a conocer lo que ha acontecido en la operación, buscando aprender y encontrar oportunidades de mejora.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "520533ed-f832-4c57-9630-36126f201c0f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "690d0a71-5741-4a8e-a4e3-ebcb61680de0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.reunin_par.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2b32ef02-1004-4309-865a-20573bbcc8a4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "12d68e88-0700-404e-835d-8409fdf808a7",
+        "regionLabel" : "Column 2",
+        "regionName" : "141c0",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "30674cc8-8683-4a6d-8aa3-cb1f862933a4",
+          "columns" : [ {
+            "UUID" : "9032b543-714b-48d2-899f-fa84275869ee",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "30674cc8-8683-4a6d-8aa3-cb1f862933a4",
+      "regions" : [ {
+        "id" : "9032b543-714b-48d2-899f-fa84275869ee",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "30af1faf-c067-48d1-9c05-32bc7a2d3799",
+          "columns" : [ {
+            "UUID" : "72f0ebc7-5bea-46f1-948c-001ea1bdc456",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6dea441e-83eb-44be-b491-50f7d69c35d9",
+            "columnKey" : "b1026",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "30af1faf-c067-48d1-9c05-32bc7a2d3799",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">L.E.G.O</span></h2><p><br></p><p style=\"text-align: justify;\"><span style=\"font-size: 18px;\">En Miski Mayo implementamos la herramienta de seguridad L.E.G.O (Leaders Engage Go Observe) cuya trad</span><span style=\"font-size: 20px;\">ucción significa “Los líderes involucrados van a observar”. La aplicaci</span><span style=\"font-size: 18px;\">ón L.E.G.O será utilizada por los líderes de las diferentes gerencias, para documentar los riesgos y el reconocimiento en el campo durante las interacciones regulares con los trabajadores.&nbsp;Es importante señalar, que la herramienta L.E.G.O es fundamental debido a lo siguiente:</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "2cb58409-d64b-4f45-b6de-3903976d8982",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.4; margin-top: 10px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 4px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 15pt; margin-right: 10px;\">&#10148;</span>\n    <span>Es una herramienta de gestión preventiva, y nos permite actuar antes que ocurra el evento no deseado.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 4px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 15pt; margin-right: 10px;\">&#10148;</span>\n    <span>Nos ayuda a fortalecer nuestro primer valor: La vida en primer lugar.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 4px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 15pt; margin-right: 10px;\">&#10148;</span>\n    <span>Permite reconocer las buenas prácticas de los trabajadores en campo.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 4px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 15pt; margin-right: 10px;\">&#10148;</span>\n    <span>Nos permite tomar acciones inmediatas para corregir el desvío.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "5d18a0e1-1144-4170-a376-8207370508bc",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "72f0ebc7-5bea-46f1-948c-001ea1bdc456",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "48d7a34d-af85-41fa-ae74-52fd9f0a26ed",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "config" : {
+              "contentItemContentKey" : "MCHVKRY7FSJNBUDC7KJFHKUPQMVA",
+              "layoutDefinition" : {
+                "attributes" : {
+                  "additionalLinks" : "{}",
+                  "backgroundPosition" : "center center",
+                  "backgroundSize" : "contain",
+                  "bannerAspectRatio" : "16:9",
+                  "bannerHeight" : 450,
+                  "bannerSubTitleTextColor" : "#ffffff",
+                  "bannerTitleTextColor" : "#ffffff",
+                  "callToActionButtonBackgroundColor" : "",
+                  "callToActionButtonBackgroundColorHover" : "",
+                  "callToActionButtonBorderColor" : "",
+                  "callToActionButtonBorderColorHover" : "",
+                  "callToActionButtonBorderStyles" : "",
+                  "callToActionButtonTextColor" : "",
+                  "callToActionButtonTextColorHover" : "",
+                  "callToActionLabel" : "View",
+                  "componentHoverEffect" : "none",
+                  "contentWidth" : 80,
+                  "dateFormat" : "none",
+                  "datetime" : "",
+                  "datetimeFontSize" : "regular",
+                  "datetimeTextColor" : "#ffffff",
+                  "datetimeTextDecoration" : "",
+                  "defaultLinksOverrides" : "{}",
+                  "displayDayOfWeek" : false,
+                  "eyebrowFontSize" : "regular",
+                  "eyebrowHighlightColor" : "",
+                  "eyebrowText" : "",
+                  "eyebrowTextColor" : "#ffffff",
+                  "eyebrowTextDecoration" : "",
+                  "flagAlignment" : "top left",
+                  "flagBackgroundColor" : "#ff0000",
+                  "flagBorderColor" : "#ffffff",
+                  "flagBorderStyles" : "{\"borderTopLeftRadius\":{\"value\":\"0\"},\"borderTopRightRadius\":{\"value\":\"0\"},\"borderBottomRightRadius\":{\"value\":\"0\"},\"borderBottomLeftRadius\":{\"value\":\"0\"}}",
+                  "flagRotation" : 0,
+                  "flagSpacing" : "medium",
+                  "flagText" : "",
+                  "flagTextColor" : "#ffffff",
+                  "flagTextDecoration" : "",
+                  "hideTextElementsForVideo" : false,
+                  "imageAltText" : "",
+                  "imageUrl" : "{!CurrentItem.source.url}",
+                  "metadata1HighlightColor" : "",
+                  "metadata1Text" : "",
+                  "metadata2HighlightColor" : "",
+                  "metadata2Text" : "",
+                  "metadataFontSize" : "regular",
+                  "metadataTextColor" : "#ffffff",
+                  "metadataTextDecoration" : "",
+                  "overlayBackgroundColor" : "rgba(0, 0, 0, 0)",
+                  "showButton" : false,
+                  "showCaption" : true,
+                  "showDateTime" : true,
+                  "showEyebrow" : true,
+                  "showEyebrowHighlight" : false,
+                  "showFlag" : true,
+                  "showMetadata1" : true,
+                  "showMetadata1Highlight" : false,
+                  "showMetadata2" : true,
+                  "showMetadata2Highlight" : false,
+                  "showTitle" : true,
+                  "showTitleHighlight" : false,
+                  "subTitle" : "",
+                  "subTitleFontSize" : "regular",
+                  "textAlignment" : "center center",
+                  "timeFormat" : "none",
+                  "timeZoneDisplay" : "short",
+                  "timeZoneOptions" : "none",
+                  "title" : "",
+                  "titleFontSize" : "large",
+                  "titleHeadingTag" : "p",
+                  "titleHighlightColor" : "",
+                  "titleTextDecoration" : "",
+                  "useAspectRatio" : false,
+                  "videoUrl" : ""
+                },
+                "componentName" : "forceCommunity:bannerLayout"
+              },
+              "schemaVersion" : "V2.0"
+            }
+          },
+          "componentName" : "forceCommunity:managedContent",
+          "id" : "35d3aa23-8479-400e-9c2f-f6f6455cfef8",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6dea441e-83eb-44be-b491-50f7d69c35d9",
+        "regionLabel" : "Column 2",
+        "regionName" : "b1026",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f497fe2d-6752-4c89-8521-da7709a8b158",
+          "columns" : [ {
+            "UUID" : "33d1befa-5fcd-4732-9fdf-728a4dc2fe37",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f497fe2d-6752-4c89-8521-da7709a8b158",
+      "regions" : [ {
+        "id" : "33d1befa-5fcd-4732-9fdf-728a4dc2fe37",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "6e47d0e6-393b-48f2-a84b-aa59701af4d6",
+          "columns" : [ {
+            "UUID" : "6343e036-35f9-4cff-bdb1-4f4fd51bb3af",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 66
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6e47d0e6-393b-48f2-a84b-aa59701af4d6",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">DIÁLOGOS COMPORTAMENTALES</span></h2><p><br></p><p><span style=\"font-size: 18px;\">Miski Mayo ha desarrollado el método COACH, una técnica de observación del comportamiento mientras los trabajadores realizan sus actividades, cuyas siglas corresponde a las siguientes acciones: Cuidado activo, Observación, Análisis, Comunicación y Help o Ayuda.&nbsp;Los Diálogos comportamentales son realizados por aquellos colaboradores que lideran equipos de trabajo. En resumen, la idea fundamental de esta herramienta es que los trabajadores sean incentivados y motivados por parte del observador para identificar las oportunidades, corregirlas y de esta manera aprendan haciendo.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0ef6b9ee-f4b5-4ffa-bd9a-ead7ec8ad0bd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6343e036-35f9-4cff-bdb1-4f4fd51bb3af",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 58,
+        "sectionConfig" : {
+          "UUID" : "66472161-4bcd-44fe-80d5-dc0e3f28f2ca",
+          "columns" : [ {
+            "UUID" : "634be841-95c4-48a1-9016-94122fff72dc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "66472161-4bcd-44fe-80d5-dc0e3f28f2ca",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.Screenshot_20250505_1325581.1}\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "90d3e666-2361-4780-92b7-04e1049c3631",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "634be841-95c4-48a1-9016-94122fff72dc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 50,
+        "sectionConfig" : {
+          "UUID" : "3726aba9-2790-479e-a0ff-d8bd83146c50",
+          "columns" : [ {
+            "UUID" : "5d064540-b570-4899-b8c6-8811cc375ccc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "cfdd6f8f-2787-4bfb-a1ad-a4767be44e3e",
+            "columnKey" : "d60f0",
+            "columnName" : "Column 2",
+            "columnWidth" : "7",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "4f5d8a57-bf5b-4ff6-8feb-ce7854637635",
+            "columnKey" : "a0a30",
+            "columnName" : "Column 3",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 200
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3726aba9-2790-479e-a0ff-d8bd83146c50",
+      "regions" : [ {
+        "id" : "5d064540-b570-4899-b8c6-8811cc375ccc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "modalTitle" : "DESCARGAR PDF",
+            "pdfUrl" : "https://globaldigitalacceleration.my.salesforce.com/sfc/p/Dn000005I4iI/a/R7000001kVeX/kpriJyObxdHUDT5OikEyMVKX5akWBsgwR6C17EVZ0dg"
+          },
+          "componentName" : "c:miskiMayoPDFViewerComponent",
+          "id" : "841e65c6-6f93-43a5-85ca-0e620269fb43",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cfdd6f8f-2787-4bfb-a1ad-a4767be44e3e",
+        "regionLabel" : "Column 2",
+        "regionName" : "d60f0",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "4f5d8a57-bf5b-4ff6-8feb-ce7854637635",
+        "regionLabel" : "Column 3",
+        "regionName" : "a0a30",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "393d1a38-fe00-4f7a-929c-f6a53cc59120",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Seguridad"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "3206a855-94c7-4d79-93b8-f0334cacaaf0",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dc6bc131-c092-47a8-bf24-4f5a9893bd2f",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-seguridad"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_SAPMaterialGroup__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is to store the SAP Material group of the product</description>
+    <label>Material Group</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>SAP Material Group</relationshipLabel>
+    <relationshipName>Price_Book_Entries</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

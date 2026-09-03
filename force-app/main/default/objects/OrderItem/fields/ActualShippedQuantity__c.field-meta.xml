@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActualShippedQuantity__c</fullName>
+    <description>Jira card &lt;GMDP-3164&gt; Field for Experience Cloud Direct Portal used to Order Report. Sum of ShipmentItem.PMC_CPQ_DeliveryQuantity__c where isTTVisible__c = TRUE and Shipment.Status != Delivery Deleted.</description>
+    <externalId>false</externalId>
+    <label>Actual Shipped Quantity</label>
+    <precision>15</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

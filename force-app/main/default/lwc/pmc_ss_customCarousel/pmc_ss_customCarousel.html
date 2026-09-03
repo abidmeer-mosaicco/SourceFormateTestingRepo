@@ -1,0 +1,125 @@
+<template>
+
+    <lightning-card title="News &amp; Announcements">
+
+        <lightning-button label="View All" 
+                title="View All" class="slds-m-left_x-small" onclick={openModal}
+                slot="actions"></lightning-button>
+
+        <li class="image_wrapper">
+            <template for:each={slidesData} for:item="slide">
+                <a href={slide.link} key={slide.index} class={slide.slideClass} onmouseover={handleMouseOver}
+                    onmouseout={handleMouseOut}>
+                    <img src={slide.image} style="width: 100%; height: 50%" />
+                </a>
+            </template>
+
+            <template if:true={slidesData}>
+                <div class="text-section-new slds-p-around_medium" style="margin-bottom: 30px;">
+                    <h3 class="slds-text-heading_medium" style="color: white; font-weight:bold; font: size 20px;">{slideTitle}</h3>
+                    <div class="slds-text-heading_x-small" style="color: white;">{slideDescription}</div>
+                </div>    
+            </template>
+
+            <!--a if:false={hideLeftNavButton} class="prev" onclick={slideBackward}>&#10094;</a>
+            <a if:false={hideRightNavButton} class="next" onclick={slideForward}>&#10094;</a-->
+
+            <a if:false={hideNavigationButtons} class="prev" onclick={slideBackward}>&#10094;</a>
+            <a if:false={hideNavigationButtons} class="next" onclick={slideForward}>&#10095;</a>
+        </li>
+    
+        <div if:false={hideNavigationDots} class="slds-text-align_center slds-p-around_medium">
+            <template for:each={slidesData} for:item="slide">
+                <span key={slide.index} class={slide.dotClass} data-id={slide.index} onclick={showSlide}></span>
+            </template>
+        </div>
+
+        <template if:true={isShowModal}>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                   
+                    <!-- Modal/Popup Box LWC header here -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close"
+                                alternative-text="close"
+                                variant="inverse"
+                                size="small" ></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate" style="text-align: left;  font-weight: bold;">Mosaic</h2>
+                    </header>
+
+
+                    <!-- Modal/Popup Box LWC body starts here -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <!--div class="box">
+                            <div class="slds-grid slds-wrap">
+                                <div style="margin: right 10px; width: 20%">
+                                    <select class="slds-select" name = "optionSelect" onchange={handleClick} style="font-weight: bold; font-size: 14px">
+                                        <option value="Top News">Top News</option>
+                                        <option value="Old News">Old News</option>
+                                    </select> 
+                                </div>
+                                <div class="slds-col">
+                                    <button class="slds-button slds-button_icon" onclick={handleClick} style="border: 1px #D3D3D3 solid; margin-left: 10px" >
+                                        <lightning-icon icon-name="utility:refresh"
+                                            alternative-text="refresh"
+                                            size="x-small" 
+                                            style="padding: 5px;"></lightning-icon>
+                                        <span class="slds-assistive-text">Refresh</span>
+                                    </button>
+                                </div>
+                                <div class="slds-col_bump-left">
+                                    <lightning-button variant="brand" label="Create Article" title="Create Article" onclick={handleClick} class="slds-m-left_x-small button"></lightning-button>
+                                </div>
+                            </div>
+                        </div-->
+
+                        <div class="slds slds-p-horizontal--small">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_4-of-12 slds-m-bottom--medium">
+                                    <lightning-Input type="search" placeholder="Search..." id="searchBar" onchange={handleSearchText}></lightning-input>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 slds-m-top--medium" style="margin-top: 19px; margin-left: 10px;">
+                                    <lightning-button label="Search Articles" size="small" variant="neutral" onclick={handleSearchClick} class="button1"></lightning-button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-theme_default slds-p-around_medium">
+                            <table class="slds-table">
+                                <tbody>
+                                    <template for:each={searchResult} for:item="data">
+                                        <tr key={data.index}>
+                                            <th>
+                                                <p class="text-title">{data.title}</p>
+                                                <p class="text-description">{data.description}</p>
+                                                <p class="text-date">Valid till: {data.endDate}</time></p>
+                                                <br/>
+                                            </th>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <!-- Modal/Popup Box LWC footer starts here -->
+                    <footer class="slds-modal__footer">
+                        <lightning-button variant="destructive" label="Close" title="Close" onclick={closeModal} class="slds-m-left_x-small"></lightning-button>
+                    </footer>
+
+
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    
+    </lightning-card>
+
+</template>

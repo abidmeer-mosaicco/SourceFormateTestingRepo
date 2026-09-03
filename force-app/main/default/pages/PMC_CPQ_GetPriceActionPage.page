@@ -1,0 +1,321 @@
+<apex:page standardController="SBQQ__Quote__c" extensions="PMC_CPQ_GetPriceActionClass" lightningStylesheets="true">
+    <apex:slds />
+    <apex:pageMessages id="errmsg" escape="false"/>
+    <br/><br/><br/>
+    
+	<!-- Use iframe bridge instead of connecting directly to CometD -->
+    
+    <div class="slds-scope">
+        <apex:form id="form1">
+            <center>
+				<div id="error-container"></div>
+                <apex:commandButton id="goBkBtn" status="status" value="Back to Editor" 
+                                   action="{!goBack}" rendered="{!showBtn==true}"/>
+				<apex:outputPanel id="spinnerPanel" rendered="{!showSpinner}">
+					<div class="slds-text-heading_medium">
+						<b>Please wait while the request is being processed…</b>
+					</div>
+					<br/>
+					<div class="slds-spinner_container" style="position: fixed">
+						<div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand">
+							<span class="slds-assistive-text">Processing request…</span>
+							<div class="slds-spinner__dot-a"></div>
+							<div class="slds-spinner__dot-b"></div>
+						</div>
+					</div>
+				</apex:outputPanel>
+            </center>
+        </apex:form>
+        
+		<center>
+			<apex:form id="frm">
+				<apex:commandButton id="SpinnerButton"
+				
+					style="background: transparent; border: none; color: transparent"
+					action="{!redirect1}"
+					status="pageStatus"
+					rerender="errmsg,form1,spinnerPanel"
+				/>
+				
+				<apex:inputHidden id="errorMessageField" value="{!platformEventErrorMessage}" />
+				
+				<apex:commandButton id="ErrorButton"
+					style="display: none;"
+					action="{!handleError}"
+					rerender="errmsg,form1,spinnerPanel"
+				/>				   
+			</apex:form>
+		</center>
+    </div>
+	<style>
+		#error-container { margin: 1rem 0; }
+	</style>
+	<!-- Static hidden iframe bridge (added directly to page per request) -->
+	<iframe id="pmcBridgeIframe" src="/apex/PMC_CPQ_EventListenerBridge?event=/event/Get_Price_Response__e" style="display:none;border:0;width:0;height:0;" aria-hidden="true"></iframe>
+	<script>
+		(function() {
+			// Use an iframe bridge page that connects to CometD and forwards events via postMessage
+			let quoteId = "{!SBQQ__Quote__c.Id}";
+
+			if(typeof lineEditor === 'undefined'){
+				var lineEditor = {};
+			}
+			if(!lineEditor[quoteId]) {
+				lineEditor[quoteId] = {};
+			}
+			getFocusedSubTabId();
+			// Start the process automatically
+			document.getElementById("{!$Component.frm.SpinnerButton}").click();
+
+
+			// Message handler from bridge iframe
+			function bridgeMessageHandler(e) {
+				try {
+					var data = e.data || {};
+					if (!data.type) return;
+
+					if (data.type === 'cometd-event') {
+						// bridge sends { type: 'cometd-event', event: eventName, payload: message.data }
+						// adapt to existing handler shape: pass { data: payload }
+						handlePlatformEvent({ data: data.payload }, quoteId);
+					} else if (data.type === 'cometd-error') {
+						showErrorMessage('CometD bridge error: ' + (data.error || 'Unknown'));
+					}
+				} catch (err) {
+					console.error('Bridge message handling error:', err);
+				}
+			}
+
+			window.addEventListener('message', bridgeMessageHandler, false);
+
+			function handlePlatformEvent(message, quoteId) {
+				try {
+					let eventData = message.data;
+					if (!eventData || !eventData.payload) return;
+
+					if (eventData.payload.Quote__c === quoteId) {
+						console.log('handlePlatformEvent.eventData:: ', eventData);
+
+						// Clean up bridge iframe and listener
+						try {
+							var iframe = document.getElementById('pmcBridgeIframe');
+							if (iframe && iframe.parentNode) iframe.parentNode.removeChild(iframe);
+						} catch (e) { /* ignore */ }
+						window.removeEventListener('message', bridgeMessageHandler);
+
+						// Process response
+						if (eventData.payload.StatusCode__c === 200) {
+							// Use replace() to prevent back button issues
+							redirectToLineEditor(quoteId);
+						} else {
+							let errorPayload = eventData.payload.Message__c;
+							console.error(errorPayload);
+							try {
+								if (errorPayload) {
+									const error = JSON.parse(errorPayload);
+									showErrorMessage(error.details || error.error);
+								} else {
+									showErrorMessage('Request failed');
+								}
+							} catch (error) {
+								showErrorMessage('Request failed');
+							}
+							if (eventData.payload.Message__c) {
+								try {
+									const error = JSON.parse(eventData.payload.Message__c);
+									showErrorMessage(error.details);
+								} catch (e) {
+									// ignore parsing error
+								}
+							} else {
+								showErrorMessage('Request failed');
+							}
+						}
+					}
+				} catch (e) {
+					console.error('Event handling error:', e);
+				}
+			}
+
+			function redirectToLineEditor(quoteId) {
+				let url = window.location.protocol + "//" + window.location.host + '/apex/SBQQ__sb?scontrolCaching=1&id=' + quoteId + '#quote/le?qId=' + quoteId + '&_cb=' + Date.now();
+				console.log('redirectToLineEditor > url :: ', url);
+				setTimeout(function() {
+					if (window.sforce && window.sforce.one) {
+						// Attempt to close containing console tab (if in Classic Console)
+						try {
+							closeConsoleTab(url);
+						} catch (e) {
+							console.warn('closeConsoleTab failed', e);
+						}
+					} else {
+						window.top.location.replace(url);
+					}
+				}, 2000);
+			}
+
+			function showErrorMessage(message) {
+				console.error(message);
+
+				// Set the error message in the hidden field
+				try {
+					var hiddenField = document.getElementById("{!$Component.frm.errorMessageField}");
+					if (hiddenField) {
+						hiddenField.value = message;
+					}
+
+					// Click the error button to process the error
+					document.getElementById("{!$Component.frm.ErrorButton}").click();
+				} catch (e) {
+					console.error('Error setting error message:', e);
+					// Fallback to client-side error handling
+					showClientSideError(message);
+				}
+			}
+
+			function showClientSideError(message) {
+				// Fallback client-side error display
+				let errorContainer = document.getElementById('error-container');
+				if (errorContainer) {
+					let errorDiv = document.createElement("div");
+					errorDiv.className = "slds-notify slds-notify_alert slds-theme_error";
+					errorDiv.style.cssText = [
+						'margin: 1rem 0',
+						'padding: 0.5rem 1rem',
+						'max-width: 90%',
+						'text-align: center'
+					].join(';');
+
+					errorDiv.innerHTML = message;
+					errorContainer.innerHTML = ''; // Clear any existing content
+					errorContainer.appendChild(errorDiv);
+				}
+
+				// Hide spinner
+				let spinnerPanel = document.getElementById('{!$Component.spinnerPanel}');
+				if (spinnerPanel) {
+					spinnerPanel.style.display = 'none';
+				}
+			}
+
+			// Clean up on page unload
+			window.addEventListener('beforeunload', function() {
+				try {
+					var iframe = document.getElementById('pmcBridgeIframe');
+					if (iframe && iframe.parentNode) iframe.parentNode.removeChild(iframe);
+				} catch (e) { /* ignore */ }
+				window.removeEventListener('message', bridgeMessageHandler);
+			});
+
+			// --- Console API loader and tab-close helpers ---
+			function loadConsoleAPI(callback) {
+				if (typeof sforce !== 'undefined' && sforce.console) {
+					callback();
+					return;
+				}
+
+				var script = document.createElement('script');
+				script.src = '/support/console/50.0/integration.js';
+				script.onload = callback;
+				script.onerror = function() {
+					console.error('Failed to load Console API');
+					fallbackClose();
+				};
+				document.head.appendChild(script);
+			}
+
+			function closeConsoleTab(url) {
+				loadConsoleAPI(function() {
+					if (sforce.console && sforce.console.isInConsole && sforce.console.isInConsole()) {
+						console.log(sforce.console, Object.keys(sforce.console));
+						try {
+							sforce.console.getFocusedSubtabId(function(result) {
+								refreshTabs(result?.id, url);
+							});
+						} catch (loopErr) {
+							console.warn('Subtab loop error', loopErr);
+						}
+					} else {
+						fallbackClose(url);
+					}
+				});
+			}
+
+			function getFocusedSubTabId(url) {
+				loadConsoleAPI(function() {
+					if (sforce.console && sforce.console.isInConsole && sforce.console.isInConsole()) {
+						console.log(sforce.console, Object.keys(sforce.console));
+						try {
+							sforce.console.getFocusedSubtabId(function(result) {
+								console.log('Focused Subtab ID:', result?.id);
+								if(result?.id){
+									lineEditor[quoteId].subTabId = result?.id;
+								}
+							});
+						} catch (loopErr) {
+							console.warn('getFocusedSubTabId loop error', loopErr);
+						}
+					}
+				});
+			}
+
+			function refreshTabs(focusedTabId, url) {
+				console.log('focusedTabId', focusedTabId, url);
+				if(focusedTabId){
+					lineEditor[quoteId].focusedTabId = focusedTabId;
+				}
+				
+				loadConsoleAPI(function() {
+					try {
+						sforce.console.getSubtabIds(focusedTabId, function(subResult) {
+							console.log('subResult', subResult, subResult.ids);
+							if (subResult && subResult.ids && subResult.ids.length) {
+								console.log('focusedTabId', focusedTabId);
+								let {subTabId} = lineEditor[quoteId];
+								console.log('subTabId', subTabId);
+								if(focusedTabId !== subTabId){
+									if(subResult.ids.length > 2){
+										sforce.console.closeTab(subTabId);
+										sforce.console.openSubtab(focusedTabId, url);
+									} else {
+										sforce.console.getEnclosingPrimaryTabId(function(result) {
+											var primaryId = result && result.id;
+											if (primaryId) {
+												// open a subtab under the primary tab
+												sforce.console.openSubtab(primaryId, url, true);
+											} else {
+												window.sforce.one.navigateToURL(url, true);
+											}
+										});
+									}
+								} else {
+									window.sforce.one.navigateToURL(url, true);
+								}
+								for (var i = 0; i < subResult.ids.length; i++) {
+									try {
+										sforce.console.refreshSubtabById(subResult.ids[i], true, false, true);
+									} catch (eSub) {
+										console.warn('Failed to refresh subtab', subResult.ids[i], eSub);
+									}
+								}
+							}
+						});
+					} catch (loopErr) {
+						console.warn('Subtab loop error', loopErr);
+					}
+				});
+			}
+
+			function fallbackClose(url) {
+				console.log('Using fallback close methods');
+				if (typeof sforce !== 'undefined' && sforce.one && typeof sforce.one.back === 'function') {
+					window.sforce.one.navigateToURL(url);
+				} else if (window.opener) {
+					window.close();
+				} else {
+					window.history.back();
+				}
+			}
+		})();
+	</script>
+</apex:page>

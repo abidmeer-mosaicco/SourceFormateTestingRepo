@@ -1,0 +1,868 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2d33e1aa-bf06-4e63-9fcd-5d57cccedaed",
+  "label" : "Communicacion de Diversidad e Inclusion",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "314d6175-99b3-425f-a31f-b06bbb886912",
+          "columns" : [ {
+            "UUID" : "8f343f06-0a9b-49ad-8f1f-b51b6e86e73b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "314d6175-99b3-425f-a31f-b06bbb886912",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "227c9d57-7123-4071-96f1-4692aea558a5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8f343f06-0a9b-49ad-8f1f-b51b6e86e73b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9b8e80be-8abf-486c-95a3-dcf3cd06e1de",
+          "columns" : [ {
+            "UUID" : "c01a0a74-86be-4425-ad65-7019162bc08f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9b8e80be-8abf-486c-95a3-dcf3cd06e1de",
+      "regions" : [ {
+        "id" : "c01a0a74-86be-4425-ad65-7019162bc08f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "818b4db9-4f17-483f-a439-36cc4aac0dd8",
+          "columns" : [ {
+            "UUID" : "8f55a070-833a-4d03-9d04-db51eadee0f1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "517b7279-883a-49fa-bd44-b1451552c721",
+            "columnKey" : "09549",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "72b2c532-0206-4d25-a2af-cd0798b819ff",
+            "columnKey" : "24ada",
+            "columnName" : "Column 3",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "2438ce6b-dc75-43a6-a420-d5a7efc23bb9",
+            "columnKey" : "8d48e",
+            "columnName" : "Column 4",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 89
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "818b4db9-4f17-483f-a439-36cc4aac0dd8",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : " Volver",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/diversidad-e-inclusion"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "93a4a69d-6dac-438b-a882-8f6e8b3d2749",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8f55a070-833a-4d03-9d04-db51eadee0f1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "517b7279-883a-49fa-bd44-b1451552c721",
+        "regionLabel" : "Column 2",
+        "regionName" : "09549",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "72b2c532-0206-4d25-a2af-cd0798b819ff",
+        "regionLabel" : "Column 3",
+        "regionName" : "24ada",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "2438ce6b-dc75-43a6-a420-d5a7efc23bb9",
+        "regionLabel" : "Column 4",
+        "regionName" : "8d48e",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "b4082a8d-4de1-4aa3-a996-fbd3cdd64a5f",
+          "columns" : [ {
+            "UUID" : "e13662d7-0b5e-4904-b0d2-1886afc476f1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b4082a8d-4de1-4aa3-a996-fbd3cdd64a5f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(230, 0, 0);\">Programas Sociales que promueven </strong></h1><h1 style=\"text-align: center;\"><strong style=\"font-size: 36px; color: rgb(230, 0, 0);\">la Diversidad e Inclusión</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "3506158c-e9fd-4927-84ea-215639796e58",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(26, 26, 26); font-size: 18px;\">En Miski Mayo buscamos la inclusión de la mujer en los distintos tipos de negocios y/o emprendimientos que nuestra empresa realiza a través de su responsabilidad social en el área de influencia directa. A través de los programas sociales, buscamos que la mujer sechurana desarrolle habilidades y aumente su conocimiento en la puesta en marcha de pequeños negocios que le permitan tener un sustento económico, pero, sobre todo, empoderarse y generar en ellas la autoconfianza.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "dddd155b-e0cf-4587-b3d3-6c7f096db359",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e13662d7-0b5e-4904-b0d2-1886afc476f1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7347f288-de78-447d-8d9e-2699a7d23ed2",
+          "columns" : [ {
+            "UUID" : "004c8c8b-7dc5-4958-8763-866acb91eb9b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7347f288-de78-447d-8d9e-2699a7d23ed2",
+      "regions" : [ {
+        "id" : "004c8c8b-7dc5-4958-8763-866acb91eb9b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 95,
+        "sectionConfig" : {
+          "UUID" : "51782b03-db11-475e-bde9-e8c6189a5d3f",
+          "columns" : [ {
+            "UUID" : "7a11a389-18db-44d4-b984-8e9ad418409c",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "d396ee21-47c0-451e-ad74-ff56c68f007b",
+            "columnKey" : "1b346",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "51782b03-db11-475e-bde9-e8c6189a5d3f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><strong style=\"font-size: 28px;\">Programa Empre Rural </strong></h2><h2><strong style=\"font-size: 28px;\">Agricultores</strong></h2><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "96207723-58c3-4d8c-b3c5-9288efc361b7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"font-size: 18px; color: rgb(26, 26, 26);\">Innovación y emprendimiento en el desierto de Sechura a través del Programa nutricional contra la anemia para familias y niños, beneficiando a las familias lideradas por mujeres.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "48d4f87f-3e02-4536-8587-3b01715155a0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7a11a389-18db-44d4-b984-8e9ad418409c",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.X358706204_269129465734596_205563121.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "dbc0edb8-95ab-4152-b30f-0ba8beb067e9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d396ee21-47c0-451e-ad74-ff56c68f007b",
+        "regionLabel" : "Column 2",
+        "regionName" : "1b346",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "7c86f8c8-a284-4373-aca7-8692d829896a",
+          "columns" : [ {
+            "UUID" : "35419746-8e88-43e6-af15-3c15aeb9d36f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "7c86f8c8-a284-4373-aca7-8692d829896a",
+      "regions" : [ {
+        "id" : "35419746-8e88-43e6-af15-3c15aeb9d36f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "5e1f3d78-ccbc-4679-b8e6-a448e94ac99b",
+          "columns" : [ {
+            "UUID" : "9d0fee43-fcb4-48b1-a45f-d983e824566f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "7a480b0f-1a61-42b8-981f-14b45c68a944",
+            "columnKey" : "f6c29",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5e1f3d78-ccbc-4679-b8e6-a448e94ac99b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><strong style=\"font-size: 28px;\">Programa Empre Pesca</strong></h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "13f5e458-ad64-479a-a291-8021707f54a0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 18px;\">Implementación de asociaciones de pescadores artesanales apoyando en la formalización a asociaciones de pescadores artesanales, siendo algunas asociaciones lideradas por mujeres de la zona de Playa Blanca y Sechura.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "13129ad7-0f06-4093-9a6c-c87824d90608",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9d0fee43-fcb4-48b1-a45f-d983e824566f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.EMPREPESCA51024x683.1}\" alt=\"\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.EMPRE_PESCA5.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "daa9e1db-c3fb-48cf-8ffc-35dd8751ad62",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7a480b0f-1a61-42b8-981f-14b45c68a944",
+        "regionLabel" : "Column 2",
+        "regionName" : "f6c29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e2a24b61-fb6a-4bfc-8b50-20d980e0ee6c",
+          "columns" : [ {
+            "UUID" : "ab99838b-5513-4a11-8cbb-9ca3302ff445",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e2a24b61-fb6a-4bfc-8b50-20d980e0ee6c",
+      "regions" : [ {
+        "id" : "ab99838b-5513-4a11-8cbb-9ca3302ff445",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "0fd92b42-5722-4db9-8620-d5d6cd251fa4",
+          "columns" : [ {
+            "UUID" : "6348b42c-059c-49b7-b0f7-0ffbfaf6c9a1",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e8ef9ace-d363-45cf-9ceb-c9214af8c0dc",
+            "columnKey" : "f6c29",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0fd92b42-5722-4db9-8620-d5d6cd251fa4",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><strong style=\"font-size: 28px;\">Programa Miski Educa</strong></h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e3987f66-7e69-4680-afa0-7275cef234b9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(26, 26, 26); font-size: 18px;\">Desarrollo de charlas de voluntariado a través de conferencias virtuales en nuestro fanpage Miski Mayo, relacionadas principalmente con la inclusión y la diversidad (empoderamiento de la mujer / prevención de la violencia familiar) considerando un 95% de público femenino.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ab39e5a9-64bd-449c-a4eb-a27638eb38d3",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "6348b42c-059c-49b7-b0f7-0ffbfaf6c9a1",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.charlasdi1024x759.1}\" alt=\"\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.charlas_di1.1}\">&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8846378f-5ec6-43d5-99e0-51ac22684f85",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e8ef9ace-d363-45cf-9ceb-c9214af8c0dc",
+        "regionLabel" : "Column 2",
+        "regionName" : "f6c29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "438ae7a4-cffa-47d0-9b77-5941794ea0e3",
+          "columns" : [ {
+            "UUID" : "f461966a-ac39-40ee-b4b7-714f5f0e541d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "438ae7a4-cffa-47d0-9b77-5941794ea0e3",
+      "regions" : [ {
+        "id" : "f461966a-ac39-40ee-b4b7-714f5f0e541d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 93,
+        "sectionConfig" : {
+          "UUID" : "5171472b-6179-467a-ab9f-d731407fd0cb",
+          "columns" : [ {
+            "UUID" : "aefb27f5-a999-4bc5-bc90-2ba88f61a1bf",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "93076f63-fbc8-43c8-bd4d-b339774959bf",
+            "columnKey" : "f6c29",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "5171472b-6179-467a-ab9f-d731407fd0cb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><strong style=\"font-size: 28px;\">Programa Juntos por Sechura</strong></h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "197bf45b-f2c1-441a-a641-4ba5a0b82dce",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Realizamos capacitaciones para promover la prevención de la violencia contra los niños, niñas, adolescentes y mujeres en alianza con la DEMUNA y el Centro de Emergencia Mujer.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Llevamos a cabo capacitaciones virtuales en nutrición para madres sechuranas.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Implementamos un programa nutricional contra la anemia para familias y niños. También realizamos conferencias sobre alimentación saludable para madres de Vaso de Leche.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "db5d84e7-9812-408d-b033-da989000aa7b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "aefb27f5-a999-4bc5-bc90-2ba88f61a1bf",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.mujeresjuntos1024x683.1}\" alt=\"\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.mujeres_juntos.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "99e1d6e8-baf9-432e-9889-6098eb806969",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "93076f63-fbc8-43c8-bd4d-b339774959bf",
+        "regionLabel" : "Column 2",
+        "regionName" : "f6c29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0f2353d7-439d-4130-af41-ad446628533b",
+          "columns" : [ {
+            "UUID" : "ed2663ce-1e8d-4aca-8c9a-cea3758f18cf",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0f2353d7-439d-4130-af41-ad446628533b",
+      "regions" : [ {
+        "id" : "ed2663ce-1e8d-4aca-8c9a-cea3758f18cf",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "3c27b9df-e3a3-4e78-83f5-69d9e4746687",
+          "columns" : [ {
+            "UUID" : "f756f0e4-666b-4b2d-b5c6-fcb2a1f73f19",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3bc2a150-cd81-4102-a758-b9302b8a1ab1",
+            "columnKey" : "f6c29",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3c27b9df-e3a3-4e78-83f5-69d9e4746687",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">Programa Mujeres Emprendedoras</span></h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "7c0b982a-b26d-48f6-9474-8bfad1121681",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Capacitación y asistencia técnica en gestión empresarial de acuerdo al giro del negocio.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Implementación de emprendimientos en repostería en la caleta de Playa Blanca. Las beneficiarias ofrecen sus productos al público en general así como pequeños y medianos proveedores en la provincia. También tienen participación en ferias artesanales.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Creación de emprendimientos de cría y producción avícola (patos y pollos) en el centro poblado de Cerritos.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Implementación de un Maquicentro textil ubicado en la caleta de Puerto Rico, emprendimiento de mujeres de la zona que producen y venden sus productos textiles al público en general, así como a pequeños y medianos empresarios de la provincia.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Realización de talleres de fortalecimiento de habilidades blandas, empoderamiento y liderazgo.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "cc8ad31d-44c8-4947-bc4f-2b422dde7b19",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f756f0e4-666b-4b2d-b5c6-fcb2a1f73f19",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8eba7594-6f6d-4d10-b8f6-779ee1f0cfbf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.X391578570_215048314928353_265237280.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "caf34078-4941-4a74-bab8-98a6157805ce",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3bc2a150-cd81-4102-a758-b9302b8a1ab1",
+        "regionLabel" : "Column 2",
+        "regionName" : "f6c29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0fa08a91-7ed5-442a-842f-3592d9b98d86",
+          "columns" : [ {
+            "UUID" : "f2424abe-1850-4e5e-a4ba-be1de0019beb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0fa08a91-7ed5-442a-842f-3592d9b98d86",
+      "regions" : [ {
+        "id" : "f2424abe-1850-4e5e-a4ba-be1de0019beb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "44b7fdb5-495c-43e6-8312-76907f12910a",
+          "columns" : [ {
+            "UUID" : "3ac996e1-6c83-49fe-b345-203cc7934276",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "80158659-a2e2-46d3-beba-1c92e800114d",
+            "columnKey" : "f6c29",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "44b7fdb5-495c-43e6-8312-76907f12910a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h2><span style=\"font-size: 28px;\">Programa Promoción del empleo</span></h2>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "db2b9856-d1be-4470-b329-563f0d3ce88f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>\"Mujeres al volante\" es un programa desarrollado en alianza con nuestra contratista Peruvian Master, cuyo objetivo ha sido brindar capacitación a mujeres de la caleta de Puerto Rico, Bayóvar, a través de sesiones de manejo teórico-prácticos para la obtención de la licencia de conducir, con el fin de promover el desarrollo de nuevas capacidades. Todo ello en el marco de nuestra política de Diversidad e Inclusión.</span>\n  </div>\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>El programa de \"Mujeres Operadoras\" es un programa desarrollado en alianza con nuestra contratista GH Coin, y tiene como objetivo capacitar a mujeres de nuestra área de influencia directa, en algunos casos, incluso, desde cero, para que aprendan a operar volquetes y así brindarles los conocimientos y preparación básica requerida así como la experiencia en campo, para abrirse a nuevas oportunidades laborales, en rubros como el minero u otro sector afín.</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "c169f906-2c03-4a6c-b606-eb36f83a78cf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "3ac996e1-6c83-49fe-b345-203cc7934276",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "debb62f8-978e-49e6-89c9-9d572763ebb9",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.IMG_646611024x683.1}\" alt=\"\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.IMG_6466.1}\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c8383bad-4b72-4e4a-b62f-6380b42af252",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "80158659-a2e2-46d3-beba-1c92e800114d",
+        "regionLabel" : "Column 2",
+        "regionName" : "f6c29",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "8c74b227-7c07-4a31-9e09-a7ccad43be62",
+          "columns" : [ {
+            "UUID" : "5682a809-76b1-4c64-a837-e625d5eb96f5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "8c74b227-7c07-4a31-9e09-a7ccad43be62",
+      "regions" : [ {
+        "id" : "5682a809-76b1-4c64-a837-e625d5eb96f5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "5706f6da-5a8a-4029-922a-d90613744bcb",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Communicacion de Diversidad e Inclusion"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "7fcbe10c-997e-47f0-a8f1-969ee60a3eff",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "93140912-5408-4ec2-88cd-e4821d91e8b8",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-communicacion-de-diversidad-e-inclusion"
+}

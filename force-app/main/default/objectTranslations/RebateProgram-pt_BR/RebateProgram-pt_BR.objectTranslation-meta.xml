@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Os programas de bônus não podem ser criados/editados nesse estágio. Altere o Contrato de Vendas para fazer revisões nos Programas de Rebate.</errorMessage>
+        <name>PMC_SS_RestrictRebateProgramEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Programas de bônus inativos não podem ser atualizados.</errorMessage>
+        <name>PMC_SS_RestrictUpdateOnInactiveRebPrg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Não é possível ativar o programa de descontos até que o contrato de vendas esteja ativo</errorMessage>
+        <name>PMC_SS_RestrictUpdateWhenStatusActive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Adicione um programa de bônus que tenha duração dentro do período de duração do contrato de vendas.</errorMessage>
+        <name>PMC_SS_ValidateStartAndEndDates</name>
+    </validationRules>
+</CustomObjectTranslation>

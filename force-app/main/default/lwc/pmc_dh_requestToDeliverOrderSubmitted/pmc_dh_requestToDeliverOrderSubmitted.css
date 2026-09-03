@@ -1,0 +1,25 @@
+.quote-request-number{
+    font-family: 'Barlow-Medium';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;    
+    color: var(--primary-green);
+}
+
+.mobile-button{
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+}
+
+h1{
+    line-height: 36px;
+}
+
+@media (max-width: 767px) {
+    .mobile-button {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}

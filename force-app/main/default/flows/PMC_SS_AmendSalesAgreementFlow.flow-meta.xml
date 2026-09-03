@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign Amended status to Sales Agreement</description>
+        <name>UpdateStatusToAmendedAssignment</name>
+        <label>Update Status to Amended Assignment</label>
+        <locationX>440</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>recordId.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>recordId.PMC_SS_AmendedReason__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PMC_AmendedReasonPicklist</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CloneSalesAgreementAndRelatedRecords</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AmendSalesAgreementFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>AmendedReasonScreen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Amendment was successful</description>
+        <name>CheckIfAmendmentSuccessDecision</name>
+        <label>Check if Amendment Success Decision</label>
+        <locationX>440</locationX>
+        <locationY>566</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfAmendmentSuccessDecision_SuccessOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolAmendSuccess</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SalesAgreementUpdate</targetReference>
+            </connector>
+            <label>Success Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow enables the users to amend a Sales Agreement and create a cloned copy with its related products.</description>
+    <dynamicChoiceSets>
+        <description>Choose Amended Reason</description>
+        <name>AmendedReasonPicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>PMC_SS_AmendedReason__c</picklistField>
+        <picklistObject>SalesAgreement</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>PMC_SS_Amend Sales Agreement Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Amend Sales Agreement Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>440</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>AmendmentFailureScreen</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Update status of Sales Agreement to Amended.</description>
+        <name>SalesAgreementUpdate</name>
+        <label>Sales Agreement Update</label>
+        <locationX>176</locationX>
+        <locationY>674</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>recordId</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithSharing</runInMode>
+    <screens>
+        <description>Allow users to select Amendment Reason</description>
+        <name>AmendedReasonScreen</name>
+        <label>Amended Reason Screen</label>
+        <locationX>440</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>UpdateStatusToAmendedAssignment</targetReference>
+        </connector>
+        <fields>
+            <name>PMC_AmendedReasonPicklist</name>
+            <choiceReferences>AmendedReasonPicklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Amended Reason</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>Screen to display failure message to user</description>
+        <name>AmendmentFailureScreen</name>
+        <label>Amendment Failure Screen</label>
+        <locationX>440</locationX>
+        <locationY>890</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>AmendmentFailureMessage</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!$Label.PMC_SS_AmendSalesAgreement_AmendFailure} {!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Clone Sales Agreement and Related Records</description>
+        <name>CloneSalesAgreementAndRelatedRecords</name>
+        <label>Clone Sales Agreement and Related Records</label>
+        <locationX>440</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>CheckIfAmendmentSuccessDecision</targetReference>
+        </connector>
+        <flowName>PMC_SS_CloneSalesAgreementAndRelatedRebateRecords</flowName>
+        <inputAssignments>
+            <name>boolAmended</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>boolAmendSuccess</assignToReference>
+            <name>boolAmendSuccess</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <description>Stores true if Amendment was successful</description>
+        <name>boolAmendSuccess</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>lstSalesAgreementProducts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProduct</objectType>
+    </variables>
+    <variables>
+        <description>Cloned Sales Agreement</description>
+        <name>objSalesAgreementClone</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreement</objectType>
+    </variables>
+    <variables>
+        <name>objSalesAgreementProduct</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreementProduct</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SalesAgreement</objectType>
+    </variables>
+</Flow>

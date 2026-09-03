@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="title" type="String" label="Title" />
+            <property name="description" type="String" label="Description" />
+            <property name="iconName" type="String" label="Icon Name" description="Icon Name" required="true" default="fertilizante"/>
+            <!--<property name="backGroundColor" type="String" label="Background Color Card" default="#ffffff;" required="true" />-->
+            <property name="backGroundColorMouseHover" type="String" label="Background Color Hover Mouse"  default="#e32e12" required="true"/>
+            <property name="fontSizeTitle" type="String" label="Font Size Title in Pixels" description="Font Size Title in Pixels" required="true" default="18"/>
+            <property name="fontSizeDescription" type="String" label="Font Size Description in Pixels" description="Font Size Description in Pixels" required="true" default="14"/>
+            <property name="cardHeight" type="String" label="Card Height Size in Pixels" description="Card Height Size in Pixels" required="true" default="450"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

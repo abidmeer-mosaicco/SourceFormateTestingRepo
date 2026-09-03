@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Nullify_FirstQuote</name>
+        <label>Nullify FirstQuote</label>
+        <locationX>842</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FirstQuote__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_FirstQuote_Ammendment</name>
+        <label>Set FirstQuote - Ammendment</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FirstQuote__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AmmendmentFormula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_FirstQuote_OriginalQuoteNumber</name>
+        <label>Set FirstQuote - Original Quote Number</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FirstQuote__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>OriginalQuoteFormula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>SetFirstQuoteOrigAmdmtMasterContractQuote</name>
+        <label>Set FirstQuote - Original Ammendment Master Contract Quote</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.FirstQuote__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>OriginalAmmendmentFormula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Original_Quote_Type</name>
+        <label>Check Original Quote Type</label>
+        <locationX>446</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Set_FirstQuote_OriginalQuoteNumber</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OriginalQuoteAmmendmentPath</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__OriginalQuote__r.SBQQ__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Amendment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SetFirstQuoteOrigAmdmtMasterContractQuote</targetReference>
+            </connector>
+            <label>Original Quote Is Ammendment</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckType</name>
+        <label>Check Type</label>
+        <locationX>446</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Nullify_FirstQuote</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>AmmendmentPath</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Amendment</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_FirstQuote_Ammendment</targetReference>
+            </connector>
+            <label>Ammendment</label>
+        </rules>
+        <rules>
+            <name>QuotePath</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SBQQ__Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Quote</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_LegacyQuoteID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Original_Quote_Type</targetReference>
+            </connector>
+            <label>Quote</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>AmmendmentFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Record.SBQQ__MasterContract__r.SBQQ__Quote__r.Name}, &quot;Q-&quot;,&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>OriginalAmmendmentFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Record.SBQQ__OriginalQuote__r.SBQQ__MasterContract__r.SBQQ__Quote__r.Name}, &quot;Q-&quot;, &quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>OriginalQuoteFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE({!$Record.SBQQ__OriginalQuote__r.Name}, &quot;Q-&quot;, &quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Quote - Fill FirstQuote {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Quote - Fill FirstQuote</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckType</targetReference>
+        </connector>
+        <object>SBQQ__Quote__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

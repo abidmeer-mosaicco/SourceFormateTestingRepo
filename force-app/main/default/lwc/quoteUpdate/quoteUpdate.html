@@ -1,0 +1,56 @@
+<template>
+    <div class="style-container"></div>
+    <iframe src="/apex/PMC_CPQ_EventListenerBridge?event=/event/MassUpdateEvent__e" style="display: none" tabindex="-1"> </iframe>
+
+    <div class="slds-var-m-bottom_large">
+        <c-progress-path stages={stages} onstageclick={handleStageClick}></c-progress-path>
+    </div>
+
+    <div class="slds-card slds-var-m-top_small slds-var-p-around_medium">
+        <!-- Stage: Select -->
+        <template if:true={isSelectStage}>
+            <c-quote-update-selector
+                execution-id={executionId}
+                onrecordsselected={handleRecordsSelected}
+                onexecutioncreated={handleExecutionCreated}
+                columns={columns}
+                account-managers-available={accountManagersAvailable}
+            ></c-quote-update-selector>
+        </template>
+
+        <!-- Stage: Update Quotes -->
+        <template if:true={isUpdateQuotesStage}>
+            <div class="slds-var-m-around_small slds-grid slds-grid_align-end slds-grid_vertical-align-center">
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end" style="gap: 0.5rem">
+                    <!-- <lightning-button
+                        class="slds-var-m-left_x-small"
+                        label={labels.STAGE_UPDATE_QUOTES}
+                        variant="brand"
+                        onclick={handleUpdateQuotes}
+                    ></lightning-button> -->
+                    <lightning-button-icon
+                        class="slds-var-m-left_x-small"
+                        icon-name="utility:refresh"
+                        alternative-text={labels.BUTTON_REFRESH}
+                        onclick={handleRefreshLines}
+                        variant="border-filled"
+                        size="medium"
+                        title={labels.BUTTON_REFRESH}
+                    >
+                        <label></label>
+                    </lightning-button-icon>
+                </div>
+            </div>
+            <c-quote-update-datatable
+                columns={columns}
+                data={orderedLines}
+                key-field="Id"
+                selected-rows={selectedRowIds}
+                onrowselection={handleRowSelection}
+                onrowaction={handleRowAction}
+                onrefreshlines={handleRefreshLines}
+            >
+            </c-quote-update-datatable>
+        </template>
+    </div>
+</template>

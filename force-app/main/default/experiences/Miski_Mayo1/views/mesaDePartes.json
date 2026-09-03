@@ -1,0 +1,116 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "a86c38a4-eea8-4196-b9f4-94e4e563cc60",
+  "label" : "Mesa de Partes",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "153ab59e-4338-4e14-8ea3-50c69fa5022b",
+          "columns" : [ {
+            "UUID" : "2dd06eae-108b-449c-ba56-7d78d213e55f",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "153ab59e-4338-4e14-8ea3-50c69fa5022b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "4bda5c7c-85b4-4e55-b778-750b641285da",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2dd06eae-108b-449c-ba56-7d78d213e55f",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0) url(/sfsites/c/file-asset/OP_MINA_DIA_02_FOTOGRAFIA_CORPORA2?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "0e7a3c62-f045-46f5-8e85-cd1c3fbc04bc",
+          "columns" : [ {
+            "UUID" : "b7494679-93af-4913-8b16-fa52412c1de5",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0e7a3c62-f045-46f5-8e85-cd1c3fbc04bc",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Bienvenido a la Mesa de Partes </strong></p><p style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 48px;\">Virtual de Miski Mayo</strong></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "456c924f-a7ce-4a3c-8472-de435b32ef5f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 22px;\">Si quieres registrar una consulta, solicitud o reclamo, primero debes crear una cuenta con tu correo haciendo clic</span><span style=\"color: rgb(230, 0, 0); font-size: 22px;\"> </span><a href=\"https://globaldigitalacceleration.my.site.com/miskimayomesadepartes/s/login\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(230, 0, 0); font-size: 22px;\"><strong><u>aqui.</u></strong></a></p><p style=\"text-align: center;\"><span style=\"font-size: 22px; color: rgb(255, 255, 255);\">Si ya tienes una cuenta registrada, ingresa con el correo y contrasena que registraste.</span></p><p style=\"text-align: center;\"><span style=\"font-size: 14px;\">&nbsp;</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><br></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "0c7fca38-3a13-4215-9dd4-4c338b5d58d6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b7494679-93af-4913-8b16-fa52412c1de5",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3aba6974-37b9-4df8-b7e3-3f3e65674a86",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Mesa de Partes"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8c64172e-d1ce-4527-a689-90487753b5af",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "606fe3b0-709c-4990-942e-a1978c607305",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-mesa-de-partes"
+}

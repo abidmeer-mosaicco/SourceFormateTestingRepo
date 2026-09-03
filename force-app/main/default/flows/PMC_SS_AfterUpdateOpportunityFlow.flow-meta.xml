@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Store mail id of Opportunity Owner</description>
+        <name>RecipentMailIdAssignment</name>
+        <label>Recipent Mail Id Assignment</label>
+        <locationX>440</locationX>
+        <locationY>1775</locationY>
+        <assignmentItems>
+            <assignToReference>strRecipentId</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>SendOpportunityActivityNotification</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWAPINAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AfterUpdateOpportunityFlow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>CheckRelatedAccountExistsDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassFlowOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Flow Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>To check if the value for StageName, Amount, CloseDate and Type fields are changed</description>
+        <name>CheckFieldsAreChangedDecision</name>
+        <label>Check Fields Are Changed Decision</label>
+        <locationX>616</locationX>
+        <locationY>1343</locationY>
+        <defaultConnectorLabel>Not Changed</defaultConnectorLabel>
+        <rules>
+            <name>IsChanged</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Amount</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CloseDate</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetOpportunityTeamRecordsGet</targetReference>
+            </connector>
+            <label>Is Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if User is part of Opportunity Team</description>
+        <name>CheckIfUserIsTeamMemberDecision</name>
+        <label>Check if user is Team Member Decision</label>
+        <locationX>572</locationX>
+        <locationY>1667</locationY>
+        <defaultConnector>
+            <targetReference>IterateThroughOpportunityTeamLoop</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfUserIsTeamMemberDecision_UserPartOfOpportunityTeamOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IterateThroughOpportunityTeamLoop.UserId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>GetUserIdFormula</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RecipentMailIdAssignment</targetReference>
+            </connector>
+            <label>User part of Opportunity Team Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if triggering account has a related Account</description>
+        <name>CheckRelatedAccountExistsDecision</name>
+        <label>Check Related Account Exists Decision</label>
+        <locationX>616</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>isStageClosedWonDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Related Account</defaultConnectorLabel>
+        <rules>
+            <name>CheckRelatedAccountExists_RelatedAccountExistsOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ModifyAccountLastInteractionDateUpdate</targetReference>
+            </connector>
+            <label>Related Account Exists Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks if the opportunity stage is closed Won and if opportunity Type is Indirect</description>
+        <name>isStageClosedWonDecision</name>
+        <label>is Stage Closed Won Decision</label>
+        <locationX>616</locationX>
+        <locationY>779</locationY>
+        <defaultConnector>
+            <targetReference>CheckFieldsAreChangedDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Closed Won Outcome</defaultConnectorLabel>
+        <rules>
+            <name>isStageClosedWon_ClosedWonOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Indirect Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CustomerRecordTypeIdGet</targetReference>
+            </connector>
+            <label>Closed Won Outcome</label>
+        </rules>
+    </decisions>
+    <description>Notify Opportunity Owner of Opportunity Team Activity</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>boolBypassVRToggleFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Account.PMC_CPQ_FlowAccountVRByPassToggle__c}=true,false , true)</expression>
+    </formulas>
+    <formulas>
+        <description>Get User Id</description>
+        <name>GetUserIdFormula</name>
+        <dataType>String</dataType>
+        <expression>CASESAFEID({!$User.Id})</expression>
+    </formulas>
+    <formulas>
+        <description>Formula for Notification Body</description>
+        <name>NotificationBodyFormula</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.PMC_SS_NotifyOpportunityOwnerStart_TeamMemberActivity} &amp; &apos; &apos; &amp; {!$Record.Name} &amp; &apos; &apos;  &amp;{!$Label.PMC_SS_NotifyOpportunityOwnerEnd_TeamMemberActivity}</expression>
+    </formulas>
+    <interviewLabel>PMC_SS_AfterUpdateOpportunityFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS After Update Opportunity Flow</label>
+    <loops>
+        <description>Loop over Opportunity Team records</description>
+        <name>IterateThroughOpportunityTeamLoop</name>
+        <label>Iterate through Opportunity Team Loop</label>
+        <locationX>352</locationX>
+        <locationY>1559</locationY>
+        <collectionReference>GetOpportunityTeamRecordsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckIfUserIsTeamMemberDecision</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>616</locationX>
+        <locationY>1559</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWAPINAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get the Id of the Customer record Type of Account</description>
+        <name>CustomerRecordTypeIdGet</name>
+        <label>Customer Record Type Id Get</label>
+        <locationX>88</locationX>
+        <locationY>887</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ProspectRecordTypeIdGet</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Account</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PMC_SS_Customer</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>strCustomerRecordTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Opportunity Team related to Opportunity</description>
+        <name>GetOpportunityTeamRecordsGet</name>
+        <label>Get Opportunity Team Records Get</label>
+        <locationX>352</locationX>
+        <locationY>1451</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>IterateThroughOpportunityTeamLoop</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityTeamMember</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the Id of the Prospect Record Type for Account</description>
+        <name>ProspectRecordTypeIdGet</name>
+        <label>Prospect Record Type Id Get</label>
+        <locationX>88</locationX>
+        <locationY>995</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>RelatedProspectAccountUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Account</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>PMC_SS_Prospect</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>strProspectRecordTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>Modify related Account&apos;s Last Interaction Date</description>
+        <name>ModifyAccountLastInteractionDateUpdate</name>
+        <label>Modify Account Last Interaction Date Update</label>
+        <locationX>352</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>isStageClosedWonDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_CPQ_FlowAccountVRByPassToggle__c</field>
+            <value>
+                <elementReference>boolBypassVRToggleFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_LastInteractionDate__c</field>
+            <value>
+                <elementReference>$Record.LastModifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the related Customer Account&apos;s Type as indirect</description>
+        <name>RelatedProspectAccountUpdate</name>
+        <label>Related Prospect Account Update</label>
+        <locationX>88</locationX>
+        <locationY>1103</locationY>
+        <connector>
+            <targetReference>CheckFieldsAreChangedDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>strProspectRecordTypeId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>strCustomerRecordTypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Indirect</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Send Opportunity Activity Notification to Opportunity Owner</description>
+        <name>SendOpportunityActivityNotification</name>
+        <label>Send Opportunity Activity Notification</label>
+        <locationX>440</locationX>
+        <locationY>1883</locationY>
+        <flowName>PMC_SS_CustomNotificationSubFlow</flowName>
+        <inputAssignments>
+            <name>idTargetRecord</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>lstRecipientIds</name>
+            <value>
+                <elementReference>strRecipentId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationBody</name>
+            <value>
+                <elementReference>NotificationBodyFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strCustomNotificationTitle</name>
+            <value>
+                <stringValue>{!$Label.PMC_SS_NotifyOpportunityOwnerTitle_TeamMemberActivity} {!$Record.Name}</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>strCustomerRecordTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This variable to store the id of the Prospect record type of Account</description>
+        <name>strProspectRecordTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Store Recipent Ids</description>
+        <name>strRecipentId</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

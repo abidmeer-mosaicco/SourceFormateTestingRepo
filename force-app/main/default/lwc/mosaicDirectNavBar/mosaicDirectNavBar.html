@@ -1,0 +1,80 @@
+<template>
+	<div class="demo-gauge-nav-bar">
+		<img src={mosaicLogo} alt="Logo" class="demo-gauge-logo" />
+		<!-- <template if:false={hasNewMenu}> -->
+			<ul class="demo-gauge-nav-list">
+				<li lwc:if={showPlaceOrder}><a href="/NAM/placeorder">Place Order</a></li>
+				<li><a href="/NAM/documents">Documents</a></li>
+				<li if:true={hasIntransitPermission}><a href="/NAM/intransit">In Transit</a></li>
+				<li if:true={hasContractPermission}><a href="/NAM/contracts">Contracts</a></li>
+				<li if:true={hasOrderPermission}><a href="/NAM/orders">Orders</a></li>
+			</ul>
+		<!-- </template> -->
+		
+		<!-- <template if:true={hasNewMenu}>
+			<c-md_menu-controller></c-md_menu-controller>
+		</template> -->
+
+		<div class="iconsContainer">
+			<div class="d-grid rows">
+				<div class="userInfoBox nameTitle">{userName}</div>
+				<span lwc:if={hasSelected} class="selectedAccounts">{selectedCount} selected accounts</span>
+			</div>
+
+			<div class="d-grid twoColumns">
+				<div class="dropdown">
+					<div class="bgIcon">
+						<lightning-icon icon-name='utility:account' alternative-text='account' size='small' title='account'
+							onclick={handleDropdown}></lightning-icon>
+					</div>
+
+					<div if:true={showDropdown} onmouseleave={closeDropdown} onmouseenter={cancelLeaveEvent} class="container">
+						<ul>
+							<li onclick={handleSwitchAccounts}>Switch Accounts</li>
+							<li onclick={handleLogout}>Logout</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- <lightning-icon class="cartIcon" icon-name='utility:cart' alternative-text='cart' size='medium'
+					title='cart'></lightning-icon> -->
+			</div>
+		</div>
+
+		<!-- <div class="iconsContainer">
+			<span lwc:if={hasSelected} class="slds-badge mr-1">{selectedCount} selected accounts</span>
+
+			<div lwc:else>
+				<span class="nameTitle r-1">{userName}</span>
+			</div>
+
+			<div class="switchAccountIconContainer" style="position: relative; display: inline-block">
+				<lightning-icon icon-name="utility:adduser" class="switch-account-button" onclick={handleSwitchAccounts}
+					alternative-text="Switch Accounts" style="cursor: pointer">
+				</lightning-icon>
+			</div>
+
+			<a onclick={handleLogout}>
+				<lightning-icon icon-name="utility:logout" alternative-text="Logout"> </lightning-icon>
+			</a>
+		</div> -->
+	</div>
+
+	<!-- <section role="dialog" tabindex="-1" aria-labelledby="modal-heading" class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<header class="slds-modal__header">
+				<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+					onclick={handleSwitchAccounts}>
+					<lightning-icon icon-name="utility:close" alternative-text="Close"></lightning-icon>
+					<span class="slds-assistive-text">Close</span>
+				</button>
+				<h2 id="modal-heading" class="slds-text-heading_medium">Switch Accounts</h2>
+			</header>
+			<div style="overflow-x: visible" class="slds-modal__content slds-p-around_medium">
+				<c-account-access-table onaccountschange={handleAccountsChange}></c-account-access-table>
+			</div>
+		</div>
+	</section>
+
+	<div lwc:if={openSwitchAccountModal} class="slds-backdrop slds-backdrop_open"></div> -->
+</template>

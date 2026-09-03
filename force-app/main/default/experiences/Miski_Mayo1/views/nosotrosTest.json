@@ -1,0 +1,662 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "9a3fc55d-f155-4e49-b7f8-b66595091687",
+  "label" : "Nosotros Test",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "01b286ed-9bf9-460b-9fd5-f93f3c78dc10",
+          "columns" : [ {
+            "UUID" : "20032cf7-b3ae-43c6-8e55-a772096eb92b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "961ff247-5589-45c6-b1b2-ec781785ba5b",
+            "columnKey" : "b57d9",
+            "columnName" : "Column 2",
+            "columnWidth" : "10",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 81
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "01b286ed-9bf9-460b-9fd5-f93f3c78dc10",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>&nbsp;<img src=\"data:image/png;base64,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\" alt=\"\"></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b2f758a3-594f-4a36-bd8b-8f40c9f951dd",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "20032cf7-b3ae-43c6-8e55-a772096eb92b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoMenuStructure",
+          "id" : "0cf5518b-2bb0-4afb-a751-e76baae8ba4c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "961ff247-5589-45c6-b1b2-ec781785ba5b",
+        "regionLabel" : "Column 2",
+        "regionName" : "b57d9",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "48a7b6ad-985a-4f21-a281-4af763fa391b",
+          "columns" : [ {
+            "UUID" : "7b419086-3676-4963-b7d2-7ec59f3d8b90",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 356
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "48a7b6ad-985a-4f21-a281-4af763fa391b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageA1",
+            "textDescription" : "Explotamos yacimientos de fosfatos en medio del desierto de Sechura"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "7dd4ed61-85c7-40fa-ad0b-25731ab9397e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "7b419086-3676-4963-b7d2-7ec59f3d8b90",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "875d500d-55de-41b8-b592-4a5b656faddb",
+          "columns" : [ {
+            "UUID" : "165fc33d-0cd0-47bf-ab8b-79be2335d317",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 55
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "875d500d-55de-41b8-b592-4a5b656faddb",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Nosotros</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "142fc9a2-b507-4e3f-b25e-f11f11fcc936",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "165fc33d-0cd0-47bf-ab8b-79be2335d317",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "a572d201-452b-4934-a07a-d7b1ef732e4e",
+          "columns" : [ {
+            "UUID" : "918cd4b5-b2ce-4836-9035-80ba042c47ac",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "055d777f-a5a8-491b-8227-3650f780da8a",
+            "columnKey" : "0d911",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 192
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a572d201-452b-4934-a07a-d7b1ef732e4e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p><br></p><p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "853196d7-56f4-43e2-b766-203fe59f1a08",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.6; margin-top: 40px;\">\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Iniciamos nuestra operación un 10 de julio de 2010.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Desde 2010 a la fecha, hemos aportado al Estado y la Comunidad en cumplimiento de nuestros compromisos contractuales más de 1,692.2 millones de soles.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">En Miski Mayo contamos con más de 700 trabajadores y el 60% pertenece a nuestra zona de influencia directa en la provincia de Sechura y el 22% son provenientes de otras ciudades de la región, sumando un total de 82% de fuerza laboral perteneciente a la región Piura.</span>\n  </p>\n  <p style=\"margin-bottom: 20px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; display: inline-block; width: 30px;\">&#10003;</span>\n    <span style=\"display: inline-block; vertical-align: top; width: calc(100% - 40px);\">Como Miski Mayo, somos la principal empresa aportante del Fondo Social del Proyecto Integral Bayóvar (FOSPIBAY), contribuyendo el 2024 con el 97.3% del fondo total.</span>\n  </p>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "10932a18-cc19-431b-9008-0dc2237ac20e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "918cd4b5-b2ce-4836-9035-80ba042c47ac",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP3"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithRedSquare",
+          "id" : "7b4e47c7-84e1-42a0-a191-48fdcf6f870a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "055d777f-a5a8-491b-8227-3650f780da8a",
+        "regionLabel" : "Column 2",
+        "regionName" : "0d911",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "f33d2aa1-fdb7-4756-9273-b2c825722467",
+          "columns" : [ {
+            "UUID" : "364d82d9-5a8d-4368-9edd-789387b2f4d4",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 110
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f33d2aa1-fdb7-4756-9273-b2c825722467",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Nuestra Historia</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "728307f9-ea9d-4fc0-8a1a-c0fe1193ef86",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"color: rgb(72, 72, 72); font-size: 20px;\">En Miski Mayo valoramos nuestro pasado y miramos el futuro con optimismo, porque sabemos que cada paso que damos es un peldaño más para alcanzar la excelencia. Cada hito que hemos vivido es una demostración del compromiso y trabajo en equipo, para hacer que las cosas sucedan.</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "f19a5301-4a1d-4108-be9f-0c9857d4e6da",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "364d82d9-5a8d-4368-9edd-789387b2f4d4",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "ce2c1942-db62-4d89-88d3-fa980bfc2f79",
+          "columns" : [ {
+            "UUID" : "5574fdb4-9584-408e-b5c7-b0a7e9e3a9fc",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "ce2c1942-db62-4d89-88d3-fa980bfc2f79",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoGetToKnowUsCustomThirdCarousel",
+          "id" : "c44c2376-596c-4d68-b465-1176c874c643",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5574fdb4-9584-408e-b5c7-b0a7e9e3a9fc",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgb(226, 35, 26)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e21e7108-dfc6-44d8-8713-7eb241769d93",
+          "columns" : [ {
+            "UUID" : "2f855e89-653d-4b1b-be9e-16156ff429af",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "af64da6f-556f-42d4-98c5-77467c0fc66a",
+            "columnKey" : "a3659",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "abb79816-4274-480f-815d-5c994a82f8ae",
+            "columnKey" : "c6be9",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 207
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e21e7108-dfc6-44d8-8713-7eb241769d93",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"font-size: 28px; color: rgb(255, 255, 255);\">Misión</strong></h3><p style=\"text-align: center;\"><span style=\"font-size: 22px; color: rgb(255, 255, 255);\">Transformar recursos naturales en prosperidad y desarrollo sostenible.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c4f119ee-9cc5-4d46-b871-9b466530176b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "2f855e89-653d-4b1b-be9e-16156ff429af",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"color: rgb(255, 255, 255); font-size: 28px;\">Visión</strong></h3><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 22px;\">Ser la empresa peruana líder en creación de valor, con excelencia, pasión por las personas y por el planeta.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "8a204a83-c13a-4812-b89d-94f9bf7a663a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "af64da6f-556f-42d4-98c5-77467c0fc66a",
+        "regionLabel" : "Column 2",
+        "regionName" : "a3659",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: center;\"><strong style=\"font-size: 28px; color: rgb(255, 255, 255);\">Propósito</strong></h3><p style=\"text-align: center;\"><span style=\"color: rgb(255, 255, 255); font-size: 22px;\">Ayudar al mundo a producir los alimentos que necesita.</span></p><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "27c1cea7-cd28-4ff3-a936-53cc405e89c2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "abb79816-4274-480f-815d-5c994a82f8ae",
+        "regionLabel" : "Column 3",
+        "regionName" : "c6be9",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "b99998f4-a722-4f43-b71c-5fd2b67d397e",
+          "columns" : [ {
+            "UUID" : "b582625b-63ad-4a6b-bc91-a6f248328874",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 169
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "b99998f4-a722-4f43-b71c-5fd2b67d397e",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"color: rgb(230, 0, 0); font-size: 48px;\">Nuestros Valores</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "ef140d05-a9e5-4773-87cd-4ddfd8ecac03",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 20px;\">Nuestros 6 valores empresariales reflejan nuestra cultura basada en una política sólida de transparencia y ética, que prioriza la vida, nuestra gente y el respeto por nuestro entorno</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "11c8b624-acd4-4f4a-9d7c-8946e1c036fe",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b582625b-63ad-4a6b-bc91-a6f248328874",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0.44) url(/sfsites/c/file-asset/AREA_DE_SECADO_MISKI_MAYO_ENE_2022?v=1) center center /cover",
+        "backgroundOverlay" : "rgba(0, 0, 0, 0.34)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "f22f3818-0de2-47ff-b164-1a11e3357747",
+          "columns" : [ {
+            "UUID" : "29e4d8f3-2005-4dda-985f-dcd1b30ad339",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "94a42c6d-af5a-4837-8c67-170e2b6737b5",
+            "columnKey" : "23fba",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "debdbb27-031a-4086-b933-897b1496472f",
+            "columnKey" : "162c8",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 400
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f22f3818-0de2-47ff-b164-1a11e3357747",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "342abd9e-b389-469f-881b-2716572b0b05",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "##E2231A",
+            "backGroundColor" : "#E2231A",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "325",
+            "fontSize" : "26",
+            "iconName" : "target",
+            "text" : "La vida en primer lugar",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "480feae1-b91f-4a6d-99d5-bcbcdd4c9fe2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "##E2231A",
+            "backGroundColor" : "#E2231A",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "325",
+            "fontSize" : "26",
+            "iconName" : "target",
+            "text" : "Actuar de manera correcta",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "ffb3fc2b-e506-4bdd-90d2-70efed2ac83d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "29e4d8f3-2005-4dda-985f-dcd1b30ad339",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d3966e7b-b2ea-49d7-b00c-60003972ad36",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "##E2231A",
+            "backGroundColor" : "#E2231A",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "325",
+            "fontSize" : "26",
+            "iconName" : "target",
+            "text" : "Valorar a quien hace nuestra empresa",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "bfe75934-c716-4055-97d6-ed67257c2ccf",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#e32e12",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "200",
+            "cardHeight" : "500",
+            "fontSize" : "20",
+            "fontSizeHead" : "35",
+            "iconName" : "fertilizante",
+            "iconSize" : "12",
+            "text" : "Derecho de vigencia pago para mantener nuestros derechos de exploracion",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "s/ 41.12 Millones"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "6e1efbd9-7235-4e30-b988-c7f122d75f4a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "94a42c6d-af5a-4837-8c67-170e2b6737b5",
+        "regionLabel" : "Column 2",
+        "regionName" : "23fba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><br></p><p> </p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "a5b6ec2d-869e-4124-84e4-70aad9fb706f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "##E2231A",
+            "backGroundColor" : "#E2231A",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "325",
+            "fontSize" : "26",
+            "iconName" : "target",
+            "text" : "Cuidar nuestro planeta",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "b788b201-7341-468c-ace9-709eabe38b5b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "none",
+            "backGroundColor" : "#E2231A",
+            "backgroundOpacity" : "5",
+            "borderColor" : "white",
+            "borderThickness" : "10",
+            "bottonTextHeight" : "200",
+            "cardHeight" : "450",
+            "fontSize" : "30",
+            "iconName" : "target",
+            "iconSize" : "12",
+            "text" : "Hacer que suceda",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTileUpdated",
+          "id" : "b0ff36b7-a7db-4f4e-8625-5845f6b63538",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "debdbb27-031a-4086-b933-897b1496472f",
+        "regionLabel" : "Column 3",
+        "regionName" : "162c8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f7fe96b1-b6d2-475d-974d-fe5556d9821e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Nosotros"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d302111d-d54b-4492-92ae-85f0be64383f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ee3b9500-e12a-42a4-bc92-af63ecb837ee",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-nosotros"
+}

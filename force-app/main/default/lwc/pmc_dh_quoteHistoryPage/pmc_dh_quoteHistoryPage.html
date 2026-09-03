@@ -1,0 +1,14 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+    </div>
+    <div class="slds-col">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">{labels.pmc_quoteHistory_requestedQuotes}</p>
+    </div>
+  </div>
+
+  <div>
+    <c-pmc_dh_quote-history-list></c-pmc_dh_quote-history-list>
+  </div>
+</template>

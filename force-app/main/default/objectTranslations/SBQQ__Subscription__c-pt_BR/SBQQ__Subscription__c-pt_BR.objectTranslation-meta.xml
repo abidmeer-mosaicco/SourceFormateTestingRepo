@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Inscrição</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Inscrições</value>
+    </caseValues>
+    <fieldSets>
+        <label>Filtros de pesquisa de assinatura</label>
+        <name>SBQQ__SubscriptionSearchFilters</name>
+    </fieldSets>
+    <fieldSets>
+        <label>Resultados da pesquisa de assinaturas</label>
+        <name>SBQQ__SubscriptionSearchResults</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nº da assinatura</nameFieldLabel>
+    <validationRules>
+        <errorMessage>&quot;Preserve Bundle Structure (Preservar estrutura do pacote) está marcado em Contract (Contrato), Renewal Quantity (Quantidade de renovação) não pode ser diferente de Quantity (Quantidade).&quot;</errorMessage>
+        <name>SBQQ__Renewal_Quantity_cannot_be_editable</name>
+    </validationRules>
+</CustomObjectTranslation>

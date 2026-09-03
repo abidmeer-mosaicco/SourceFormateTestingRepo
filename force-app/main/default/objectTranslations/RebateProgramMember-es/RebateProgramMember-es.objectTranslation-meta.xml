@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>No se puede crear/actualizar un miembro del programa de rebajas una vez que el programa de rebajas está inactivo.</errorMessage>
+        <name>PMC_SS_RestrictMemberModification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Los Miembros del Programa de rebaja no pueden ser creados/editados en esta etapa. Por favor, modifique el Acuerdo de Venta para hacer revisiones a los Miembros del Programa de rebaja.&quot;</errorMessage>
+        <name>PMC_SS_RestrictRebateProgramMemberEdit</name>
+    </validationRules>
+</CustomObjectTranslation>

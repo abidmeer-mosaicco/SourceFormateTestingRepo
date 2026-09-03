@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tipo de solicitud de pago</label>
+    <name>PMC_SS_PaymentRequestType__c</name>
+    <picklistValues>
+        <masterLabel>ACH</masterLabel>
+        <translation><!-- ACH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Check Request</masterLabel>
+        <translation>Solicitud de cheque</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Account</masterLabel>
+        <translation><!-- On Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wire</masterLabel>
+        <translation>Alambre</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ProductLocation__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Product Location</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.SBQQ__Product__c</field>
+            <operation>equals</operation>
+            <valueField>PMC_CPQ_ProductLocation__c.PMC_CPQ_ProductName__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>PMC_CPQ_ProductLocation__c.PMC_CPQ_Location__r.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Origin Location</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>PMC_CPQ_ProductLocation__c</referenceTo>
+    <relationshipLabel>Subscriptions</relationshipLabel>
+    <relationshipName>Subscriptions</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

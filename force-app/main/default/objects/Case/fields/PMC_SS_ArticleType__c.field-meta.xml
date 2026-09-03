@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ArticleType__c</fullName>
+    <label>Article Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>FAQ</fullName>
+                <default>false</default>
+                <label>FAQ</label>
+            </value>
+            <value>
+                <fullName>Procedure</fullName>
+                <default>false</default>
+                <label>Procedure</label>
+            </value>
+            <value>
+                <fullName>Technical Bulletin/Notice</fullName>
+                <default>false</default>
+                <label>Technical Bulletin/Notice</label>
+            </value>
+            <value>
+                <fullName>Training Document</fullName>
+                <default>false</default>
+                <label>Training Document</label>
+            </value>
+            <value>
+                <fullName>Transition Document</fullName>
+                <default>false</default>
+                <label>Transition Document</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

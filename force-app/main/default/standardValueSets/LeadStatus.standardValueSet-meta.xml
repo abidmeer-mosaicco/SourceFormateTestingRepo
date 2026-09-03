@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Lost</fullName>
+        <default>false</default>
+        <label>Lost (Reject)</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New (Suspect)</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>MQL</fullName>
+        <default>false</default>
+        <label>MQL</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>SAL</fullName>
+        <default>false</default>
+        <label>SAL</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Recycle</fullName>
+        <default>false</default>
+        <label>Recycle</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Converted</fullName>
+        <default>false</default>
+        <label>Converted</label>
+        <converted>true</converted>
+    </standardValue>
+</StandardValueSet>

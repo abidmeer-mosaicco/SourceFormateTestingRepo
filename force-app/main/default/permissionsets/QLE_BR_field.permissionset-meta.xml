@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PMC_SS_AccountPartnerRelationships__c.PMC_CPQ_SAPCustomerNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PMC_SS_AccountPartnerRelationships__c.PMC_CPQ_StateTaxNumber__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PMC_SS_AccountPartnerRelationships__c.PMC_CPQ_TaxIDOrCNPJOrCPF__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PMC_SS_AccountPartnerRelationships__c.PMC_CPQ_TaxID_or_CPF__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>QLE BR field</label>
+    <license>Salesforce</license>
+</PermissionSet>

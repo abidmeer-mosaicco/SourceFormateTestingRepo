@@ -1,0 +1,139 @@
+.md-menu-checkbox {
+  display: none;
+}
+
+.md-nav-bar {
+  display: grid;
+  align-items: center;
+  padding: 0.5rem 0;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1em;
+}
+
+.md-logo {
+  width: 155px;
+  margin: 0 -.55em;
+}
+
+.md-menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+}
+
+.md-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0 auto 0 1em;
+  padding: 0;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.md-nav-list li a {
+  font-family: var(--regular-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  /* font-size: var(--medium-font); */
+  line-height: 27px;
+  color: var(--dark-secondary-green);
+  text-decoration: none;
+  transition: font-weight 0.1s ease;
+  text-transform: uppercase;
+}
+
+.md-nav-list li a:hover {
+  font-weight: 600;
+}
+
+.md-nav-list li a.active {
+  font-weight: 700;
+  color: var(--md-brand-primary-orange);
+}
+
+.iconsContainer {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: .5em;
+  align-items: center;
+}
+
+.nameTitle {
+  font-family: var(--bold-font);
+  line-height: 1.2;
+  color: var(--md-dark-primary-green);
+  font-size: var(--large-font-size);
+  font-weight: 700;
+}
+
+.selectedAccounts {
+  color: var(--md-dark-primary-green);
+}
+
+.d-grid {
+  display: grid;
+  column-gap: .5em;
+
+  &.twoColumns {
+    grid-auto-flow: column;
+  }
+
+  &.rows {
+    grid-auto-flow: row;
+  }
+
+  .dropdown {
+    position: relative;
+
+    .bgIcon {
+      background-color: var(--md-primary-dark-green);
+      border-radius: 50%;
+      padding: .35rem .45rem .45rem;
+      --sds-c-icon-color-foreground-default: white;
+      transform: scale(.93);
+      cursor: pointer;
+    }
+
+    .container {
+      position: absolute;
+      top: 2.6em;
+      right: 0;
+      box-shadow: 0px 0px 15px rgba(9, 53, 50, 0.1);
+      background-color: var(--white);
+      z-index: 99;
+      padding: 0;
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        padding: .75rem;
+        font-size: 13px;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: var(--md-tertiary-gray);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .cartIcon {
+    --sds-c-icon-color-foreground-default: var(--md-primary-dark-green);
+  }
+
+  .userInfoBox {
+    max-width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--medium-font);
+  }
+}

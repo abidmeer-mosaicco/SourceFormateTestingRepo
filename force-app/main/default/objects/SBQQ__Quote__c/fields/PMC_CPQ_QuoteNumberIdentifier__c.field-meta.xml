@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteNumberIdentifier__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field will store the quote number with prefix removed which will serve as an external id for integration.</description>
+    <externalId>true</externalId>
+    <label>Quote Number Identifier</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

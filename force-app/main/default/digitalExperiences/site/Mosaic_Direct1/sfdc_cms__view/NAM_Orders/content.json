@@ -1,0 +1,81 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Orders",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "dxpStyle" : { },
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "none",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"c36d0c17-3123-4636-8b33-745bb5b0069b\",\"columns\":[{\"UUID\":\"2dda9688-6e60-4ba0-a623-b7e8b8c25c0a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "accountNamePath" : "PMC_CPQ_SoldToAccount__r.Name",
+                "baseWhereClause" : "PMC_CPQ_ReasonOfRejectionOfItem__c=null",
+                "dxpStyle" : { },
+                "manualFieldApiNames" : "PMC_CPQ_SoldtoAccount__r.PMC_SS_SAPCustomerNumber__c,PMC_CPQ_SoldtoAccount__r.Name,PMC_CPQ_SAPOrderLineID__c,PMC_CPQ_LinePONumber__c,SBQQ__Contract__r.SBQQ__Quote__r.Name,PMC_CPQ_OrderLineStatus__c,Product2.Name,PMC_CPQ_ProductLocation__r.Name,PMC_CPQ_ShipTo__r.ShipToFormula__c,Order.PMC_DH_SAPOrderCreatedDate__c,PMC_CPQ_RequestedShipDate__c,__SHIPPED_DATE__,PMC_CPQ_Incoterms__c,PMC_CPQ_ModeofTransportation__c,PMC_CPQ_ShippingType__c,__VEHICLE_ID__,PMC_CPQ_UnitOfMeasure__c,Quantity,ActualShippedQuantity__c",
+                "manualFieldLabelNames" : "Customer Number,Account Name,Order Number,PO Number,Contract Number,Order Status,Product,Origin,Ship To,Order Created Date,Scheduled Ship Date,Shipped Date,Incoterm,MOT,Shipping Type,Vehicle ID,UOM,Order Qty,Actual Shipped Qty",
+                "objectApiName" : "OrderItem",
+                "pageSize" : 50,
+                "sapNumberPath" : "PMC_CPQ_SoldToAccount__r.PMC_SS_SAPCustomerNumber__c",
+                "showDownloadButton" : true,
+                "showTableTitle" : true,
+                "tableType" : "Orders"
+              },
+              "definition" : "c:md_reportOrders",
+              "id" : "91b632a4-6696-44cf-86ec-6c5f34d0ba83",
+              "type" : "component"
+            } ],
+            "id" : "2dda9688-6e60-4ba0-a623-b7e8b8c25c0a",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c36d0c17-3123-4636-8b33-745bb5b0069b",
+          "type" : "component"
+        } ],
+        "id" : "ce1242fa-8459-4603-82c0-b70705fa7e73",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Orders",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "028e7274-e302-47d7-88e6-ef353ee4b06f",
+          "type" : "component"
+        } ],
+        "id" : "c9bbfae7-03ca-4c40-b47f-4b1ecbb2e844",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "f1d617d8-9324-44b1-ad2b-7a23e80fb314",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "boyHQnfOS2WtkjDrgBWLvYjS4Toy9f",
+    "viewType" : "custom-nam-orders"
+  },
+  "urlName" : "nam-orders"
+}

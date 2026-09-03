@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign values to New Opportunity</description>
+        <name>AssignValuesToNewOpportunityAssignment</name>
+        <label>Assign values to New Opportunity Assignment</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Direct Sales</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objTriggeringQuote.PMC_CPQ_AccountManager__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>dateCloseDateFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Proposal</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objTriggeringQuote.SBQQ__Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>strOpportunityNameFormula</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objNewOpportunity.PMC_SS_PrimaryContact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objTriggeringQuote.PMC_CPQ_PrimaryContact__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>NewOpportunityCreate</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Assign values to quote</description>
+        <name>AssignValuesToQuoteAssignment</name>
+        <label>Assign values to quote Assignment</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>objTriggeringQuote.SBQQ__Opportunity2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objNewOpportunity.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>objTriggeringQuote.PMC_CPQ_PriceCheckQuote__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>QuoteUpdate</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Get Primary Contact of Quote</description>
+        <name>GetPrimaryContactOfQuoteAssignment</name>
+        <label>Get Primary Contact of Quote Assignment</label>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>strPrimaryContact</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>objTriggeringQuote.PMC_CPQ_PrimaryContact__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>PrimaryContactOnOpportunityUpdate</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_CreateOpportunityFromQuoteSubflow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if opportunity does not already exist for Quote</description>
+        <name>CheckIfOpportunityDoesNotAlreadyExistDecision</name>
+        <label>Check if opportunity does not already exist Decision</label>
+        <locationX>578</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>CheckIfQuoteIsPrimaryDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfOpportunityDoesNotAlreadyExistDecision_DoesNotExistOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>objTriggeringQuote.SBQQ__Opportunity2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignValuesToNewOpportunityAssignment</targetReference>
+            </connector>
+            <label>Does not Exist Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Quote is Primary</description>
+        <name>CheckIfQuoteIsPrimaryDecision</name>
+        <label>Check if Quote is Primary Decision</label>
+        <locationX>1106</locationX>
+        <locationY>242</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckIfQuoteIsPrimaryDecision_PrimaryOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>objTriggeringQuote.SBQQ__Primary__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>objTriggeringQuote.SBQQ__Opportunity2__r.PMC_SS_SalesAgreement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetPrimaryContactOfQuoteAssignment</targetReference>
+            </connector>
+            <label>Primary Outcome</label>
+        </rules>
+    </decisions>
+    <description>Create Opportunity from Quote Subflow</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Close Date of Opportunity</description>
+        <name>dateCloseDateFormula</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 30</expression>
+    </formulas>
+    <formulas>
+        <description>Name for Opportunity</description>
+        <name>strOpportunityNameFormula</name>
+        <dataType>String</dataType>
+        <expression>&apos;Quote Generated for&apos; &amp; &apos; &apos; &amp; {!objTriggeringQuote.SBQQ__Account__r.Name}</expression>
+    </formulas>
+    <interviewLabel>PMC SS Create Opportunity from Quote Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Create Opportunity from Quote Subflow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWNAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Create Opportunity</description>
+        <name>NewOpportunityCreate</name>
+        <label>New Opportunity Create</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>AssignValuesToQuoteAssignment</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>objNewOpportunity</inputReference>
+    </recordCreates>
+    <recordUpdates>
+        <description>Primary Contact on Opportunity Update</description>
+        <name>PrimaryContactOnOpportunityUpdate</name>
+        <label>Primary Contact on Opportunity Update</label>
+        <locationX>842</locationX>
+        <locationY>458</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>objTriggeringQuote.SBQQ__Opportunity2__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_SS_PrimaryContact__c</field>
+            <value>
+                <elementReference>strPrimaryContact</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update quote record</description>
+        <name>QuoteUpdate</name>
+        <label>Quote Update</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>objTriggeringQuote</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckIfOpportunityDoesNotAlreadyExistDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>New Opportunity to be Created</description>
+        <name>objNewOpportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <description>Triggering Quote</description>
+        <name>objTriggeringQuote</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>SBQQ__Quote__c</objectType>
+    </variables>
+    <variables>
+        <description>Store primary contact of quote</description>
+        <name>strPrimaryContact</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

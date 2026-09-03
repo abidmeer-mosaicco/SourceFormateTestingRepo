@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_QuoteRecordType__c</fullName>
+    <description>This picklist will hold the record type of Quote and will be used as a controlling field for many other picklist fields.</description>
+    <label>Quote Record Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Domestic NA</fullName>
+                <default>false</default>
+                <label>Domestic NA</label>
+            </value>
+            <value>
+                <fullName>Domestic SA</fullName>
+                <default>false</default>
+                <label>Domestic SA</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>International Distribution</fullName>
+                <default>false</default>
+                <label>International Distribution</label>
+            </value>
+            <value>
+                <fullName>Domestic BR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Domestic BR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

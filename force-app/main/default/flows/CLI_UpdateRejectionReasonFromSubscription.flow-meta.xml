@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>CheckIfRejected</name>
+        <label>Check If Rejected</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Related_Contract_Line_Items</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Reason Cleared</defaultConnectorLabel>
+        <rules>
+            <name>IsRejected</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CPQ_RejectionReason__c</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Zero_CLI_Quantity_On_Rejection</targetReference>
+            </connector>
+            <label>Is Rejected</label>
+        </rules>
+    </decisions>
+    <description>Updates PMC_CPQ_RejectionReason__c on the related Contract_Line_Item__c records whenever PMC_CPQ_RejectionReason__c changes on a Subscription.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>RestoredQuantityFromSubscription</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.PMC_CPQ_TotalAvailableQuantity__c} + {!$Record.PMC_CPQ_TotalOrderedQuantity__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>CLI - Update Rejection Reason From Subscription {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CLI - Update Rejection Reason From Subscription</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Related_Contract_Line_Items</name>
+        <label>Update Related Contract Line Items</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>1 OR 2</filterLogic>
+        <filters>
+            <field>Subscription__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Original_Subscription_Ref__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_CPQ_RejectionReason__c</field>
+            <value>
+                <elementReference>$Record.PMC_CPQ_RejectionReason__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contract_Line_Item__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Zero_CLI_Quantity_On_Rejection</name>
+        <label>Zero CLI Quantity On Rejection</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>1 OR 2</filterLogic>
+        <filters>
+            <field>Subscription__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Original_Subscription_Ref__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>PMC_CPQ_RejectionReason__c</field>
+            <value>
+                <elementReference>$Record.PMC_CPQ_RejectionReason__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contract_Line_Item__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckIfRejected</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_CPQ_RejectionReason__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>SBQQ__Subscription__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

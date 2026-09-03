@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ProductFamilyFilter__c</fullName>
+    <description>used in search filter on product configuration page</description>
+    <externalId>false</externalId>
+    <formula>IF(  RecordType.DeveloperName =&apos;PMC_CPQ_International&apos; &amp;&amp; ISPICKVAL( PMC_CPQ_Region__c, &apos;North America&apos;),&apos;DAP-MAP&apos;,&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Product Family Filter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

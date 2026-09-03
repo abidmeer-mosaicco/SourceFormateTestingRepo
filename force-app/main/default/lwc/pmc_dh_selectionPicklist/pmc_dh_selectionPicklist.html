@@ -1,0 +1,18 @@
+<template>
+  <template if:true={picklistOptions}>
+    <lightning-combobox name={name} label={textLabel} message-when-value-missing={_messageWhenValueMissing}
+      value={_defaultValue} placeholder={_placeholder} options={picklistOptionsWithOrWthoutPlaceholder}
+      disabled={_isDisabled} required={isRequiredCheck} onchange={handleChange} onblur={handleBlur} class={className}
+      data-value={_defaultValue} data-name={parentName}>
+    </lightning-combobox>
+  </template>
+
+  <!-- Error messages Markup -->
+  <template if:true={_errorMsgs}>
+    <template for:each={_errorMsgs} for:item="message" for:index="index">
+      <div key={index.index} class={errorClassName}>
+        <div class="slds-form-element__help">{message}</div>
+      </div>
+    </template>
+  </template>
+</template>

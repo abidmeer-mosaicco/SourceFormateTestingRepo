@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Basic_Material__c</fullName>
+    <label>Basic Material</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMMON</fullName>
+                <default>false</default>
+                <label>AMMON</label>
+            </value>
+            <value>
+                <fullName>AMMONSASK</fullName>
+                <default>false</default>
+                <label>AMMONSASK</label>
+            </value>
+            <value>
+                <fullName>ASPIRE</fullName>
+                <default>false</default>
+                <label>ASPIRE</label>
+            </value>
+            <value>
+                <fullName>BIOFOS</fullName>
+                <default>false</default>
+                <label>BIOFOS</label>
+            </value>
+            <value>
+                <fullName>DAP</fullName>
+                <default>false</default>
+                <label>DAP</label>
+            </value>
+            <value>
+                <fullName>DNU</fullName>
+                <default>false</default>
+                <label>DNU</label>
+            </value>
+            <value>
+                <fullName>DYNAFOS</fullName>
+                <default>false</default>
+                <label>DYNAFOS</label>
+            </value>
+            <value>
+                <fullName>DYNAK</fullName>
+                <default>false</default>
+                <label>DYNAK</label>
+            </value>
+            <value>
+                <fullName>DYNAKWHITE</fullName>
+                <default>false</default>
+                <label>DYNAKWHITE</label>
+            </value>
+            <value>
+                <fullName>DYNAM</fullName>
+                <default>false</default>
+                <label>DYNAM</label>
+            </value>
+            <value>
+                <fullName>FEED1304</fullName>
+                <default>false</default>
+                <label>FEED1304</label>
+            </value>
+            <value>
+                <fullName>FEEDUREA</fullName>
+                <default>false</default>
+                <label>FEEDUREA</label>
+            </value>
+            <value>
+                <fullName>FEEDUREASK</fullName>
+                <default>false</default>
+                <label>FEEDUREASK</label>
+            </value>
+            <value>
+                <fullName>FSACID</fullName>
+                <default>false</default>
+                <label>FSACID</label>
+            </value>
+            <value>
+                <fullName>GMAP</fullName>
+                <default>false</default>
+                <label>GMAP</label>
+            </value>
+            <value>
+                <fullName>GMAP1050</fullName>
+                <default>false</default>
+                <label>GMAP1050</label>
+            </value>
+            <value>
+                <fullName>GMAP1150</fullName>
+                <default>false</default>
+                <label>GMAP1150</label>
+            </value>
+            <value>
+                <fullName>GTSP</fullName>
+                <default>false</default>
+                <label>GTSP</label>
+            </value>
+            <value>
+                <fullName>IMPFEEDP</fullName>
+                <default>false</default>
+                <label>IMPFEEDP</label>
+            </value>
+            <value>
+                <fullName>K BLENDS</fullName>
+                <default>false</default>
+                <label>K BLENDS</label>
+            </value>
+            <value>
+                <fullName>KMAG</fullName>
+                <default>false</default>
+                <label>KMAG</label>
+            </value>
+            <value>
+                <fullName>KMAG BLENDS</fullName>
+                <default>false</default>
+                <label>KMAG BLENDS</label>
+            </value>
+            <value>
+                <fullName>KS</fullName>
+                <default>false</default>
+                <label>KS</label>
+            </value>
+            <value>
+                <fullName>LIME</fullName>
+                <default>false</default>
+                <label>LIME</label>
+            </value>
+            <value>
+                <fullName>LIQUID BORO SUPER</fullName>
+                <default>false</default>
+                <label>LIQUID BORO SUPER</label>
+            </value>
+            <value>
+                <fullName>LIQUID CALCIUM</fullName>
+                <default>false</default>
+                <label>LIQUID CALCIUM</label>
+            </value>
+            <value>
+                <fullName>LIQUID SEA WEED</fullName>
+                <default>false</default>
+                <label>LIQUID SEA WEED</label>
+            </value>
+            <value>
+                <fullName>LIQUID ZINC</fullName>
+                <default>false</default>
+                <label>LIQUID ZINC</label>
+            </value>
+            <value>
+                <fullName>MES</fullName>
+                <default>false</default>
+                <label>MES</label>
+            </value>
+            <value>
+                <fullName>MES BLENDS S15</fullName>
+                <default>false</default>
+                <label>MES BLENDS S15</label>
+            </value>
+            <value>
+                <fullName>MES BLENDS S9</fullName>
+                <default>false</default>
+                <label>MES BLENDS S9</label>
+            </value>
+            <value>
+                <fullName>MES S15</fullName>
+                <default>false</default>
+                <label>MES S15</label>
+            </value>
+            <value>
+                <fullName>MES S9</fullName>
+                <default>false</default>
+                <label>MES S9</label>
+            </value>
+            <value>
+                <fullName>MISC EXP</fullName>
+                <default>false</default>
+                <label>MISC EXP</label>
+            </value>
+            <value>
+                <fullName>MOP</fullName>
+                <default>false</default>
+                <label>MOP</label>
+            </value>
+            <value>
+                <fullName>MULTIFOS</fullName>
+                <default>false</default>
+                <label>MULTIFOS</label>
+            </value>
+            <value>
+                <fullName>N BLENDS</fullName>
+                <default>false</default>
+                <label>N BLENDS</label>
+            </value>
+            <value>
+                <fullName>NDERIV</fullName>
+                <default>false</default>
+                <label>NDERIV</label>
+            </value>
+            <value>
+                <fullName>NEXFOS</fullName>
+                <default>false</default>
+                <label>NEXFOS</label>
+            </value>
+            <value>
+                <fullName>NITRATE</fullName>
+                <default>false</default>
+                <label>NITRATE</label>
+            </value>
+            <value>
+                <fullName>NOX</fullName>
+                <default>false</default>
+                <label>NOX</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>P BLENDS</fullName>
+                <default>false</default>
+                <label>P BLENDS</label>
+            </value>
+            <value>
+                <fullName>PDERIV</fullName>
+                <default>false</default>
+                <label>PDERIV</label>
+            </value>
+            <value>
+                <fullName>PHACID</fullName>
+                <default>false</default>
+                <label>PHACID</label>
+            </value>
+            <value>
+                <fullName>PHROCK</fullName>
+                <default>false</default>
+                <label>PHROCK</label>
+            </value>
+            <value>
+                <fullName>PMAP</fullName>
+                <default>false</default>
+                <label>PMAP</label>
+            </value>
+            <value>
+                <fullName>SALT</fullName>
+                <default>false</default>
+                <label>SALT</label>
+            </value>
+            <value>
+                <fullName>SALVG</fullName>
+                <default>false</default>
+                <label>SALVG</label>
+            </value>
+            <value>
+                <fullName>SAM</fullName>
+                <default>false</default>
+                <label>SAM</label>
+            </value>
+            <value>
+                <fullName>SERV</fullName>
+                <default>false</default>
+                <label>SERV</label>
+            </value>
+            <value>
+                <fullName>SERVICES</fullName>
+                <default>false</default>
+                <label>SERVICES</label>
+            </value>
+            <value>
+                <fullName>SODA ASH SOLUTION</fullName>
+                <default>false</default>
+                <label>SODA ASH SOLUTION</label>
+            </value>
+            <value>
+                <fullName>SOP</fullName>
+                <default>false</default>
+                <label>SOP</label>
+            </value>
+            <value>
+                <fullName>SSP</fullName>
+                <default>false</default>
+                <label>SSP</label>
+            </value>
+            <value>
+                <fullName>SUFACID</fullName>
+                <default>false</default>
+                <label>SUFACID</label>
+            </value>
+            <value>
+                <fullName>SULFUR</fullName>
+                <default>false</default>
+                <label>SULFUR</label>
+            </value>
+            <value>
+                <fullName>SUS-TERRA FERTILIZER</fullName>
+                <default>false</default>
+                <label>SUS-TERRA FERTILIZER</label>
+            </value>
+            <value>
+                <fullName>UAN</fullName>
+                <default>false</default>
+                <label>UAN</label>
+            </value>
+            <value>
+                <fullName>UANSASK</fullName>
+                <default>false</default>
+                <label>UANSASK</label>
+            </value>
+            <value>
+                <fullName>UREA</fullName>
+                <default>false</default>
+                <label>UREA</label>
+            </value>
+            <value>
+                <fullName>UREASASK</fullName>
+                <default>false</default>
+                <label>UREASASK</label>
+            </value>
+            <value>
+                <fullName>ULTRA BLENDS</fullName>
+                <default>false</default>
+                <label>ULTRA BLENDS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Provides View All, Modify All, Delete Permission on the Case object &amp; Field Level Security for Case object fields</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Manager_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.PMC_SS_OwnersCountry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>VMD Case</label>
+    <license>Salesforce</license>
+</PermissionSet>

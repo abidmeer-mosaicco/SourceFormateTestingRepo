@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ReasonLost__c</fullName>
+    <description>This is the reason why the Opportunity was lost.</description>
+    <label>Reason Lost</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Delivery Timing</fullName>
+                <default>false</default>
+                <label>Delivery Timing</label>
+            </value>
+            <value>
+                <fullName>Desired Product Unavailable</fullName>
+                <default>false</default>
+                <label>Desired Product Unavailable</label>
+            </value>
+            <value>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+                <label>Discovery</label>
+            </value>
+            <value>
+                <fullName>Incorrect Season</fullName>
+                <default>false</default>
+                <label>Incorrect Season</label>
+            </value>
+            <value>
+                <fullName>Insufficient Customer Credit</fullName>
+                <default>false</default>
+                <label>Insufficient Customer Credit</label>
+            </value>
+            <value>
+                <fullName>Lack of Data</fullName>
+                <default>false</default>
+                <label>Lack of Data</label>
+            </value>
+            <value>
+                <fullName>Lost Funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lost Funding</label>
+            </value>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <label>Lost to Competitor</label>
+            </value>
+            <value>
+                <fullName>Misexecution</fullName>
+                <default>false</default>
+                <label>Misexecution</label>
+            </value>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+                <label>No Budget / Lost Funding</label>
+            </value>
+            <value>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+                <label>No Decision / Non-Responsive</label>
+            </value>
+            <value>
+                <fullName>No Longer Interested</fullName>
+                <default>false</default>
+                <label>No Longer Interested</label>
+            </value>
+            <value>
+                <fullName>No Quotation</fullName>
+                <default>false</default>
+                <label>No Quotation</label>
+            </value>
+            <value>
+                <fullName>Not Ready For Purchase</fullName>
+                <default>false</default>
+                <label>Not Ready For Purchase</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Price - too high in comparison to competitor product</fullName>
+                <default>false</default>
+                <label>Price - too high in comparison to competitor product</label>
+            </value>
+            <value>
+                <fullName>Price - too high in current market</fullName>
+                <default>false</default>
+                <label>Price - too high in current market</label>
+            </value>
+            <value>
+                <fullName>Price - too high overall</fullName>
+                <default>false</default>
+                <label>Price - too high overall</label>
+            </value>
+            <value>
+                <fullName>Product Unable to Meet Customer Needs</fullName>
+                <default>false</default>
+                <label>Product Unable to Meet Customer Needs</label>
+            </value>
+            <value>
+                <fullName>Will Consider Next Season</fullName>
+                <default>false</default>
+                <label>Will Consider Next Season</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Delivery Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Desired Product Unavailable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Discovery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Incorrect Season</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Insufficient Customer Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lack of Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost to Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Misexecution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Budget / Lost Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Decision / Non-Responsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Longer Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Quotation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Ready For Purchase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price - too high in comparison to competitor product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price - too high in current market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Price - too high overall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Product Unable to Meet Customer Needs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Will Consider Next Season</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

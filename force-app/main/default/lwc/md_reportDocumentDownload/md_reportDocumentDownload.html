@@ -1,0 +1,56 @@
+<template>
+    <!-- Invoice Button Template -->
+    <template lwc:if={isNFEButton}>
+        <lightning-button-icon
+            icon-name={iconName}
+            variant="bare"
+            size="small"
+            alternative-text="View NFE"
+            title="View NFE"
+            disabled={isLoading}
+            onclick={handleClick}>
+        </lightning-button-icon>
+    </template>
+
+    <!-- ZBQI Button Template -->
+    <template lwc:elseif={isZBQIButton}>
+        <lightning-button-icon
+            icon-name={iconName}
+            variant="bare"
+            size="small"
+            alternative-text="View ZBQI"
+            title="View ZBQI"
+            disabled={isLoading}
+            onclick={handleClick}>
+        </lightning-button-icon>
+    </template>
+
+    <template lwc:elseif={isXMLButton}>
+        <lightning-button-icon
+            icon-name={iconName}
+            variant="bare"
+            size="small"
+            alternative-text="Download XML"
+            title="Download XML"
+            disabled={isLoading}
+            onclick={handleClick}>
+        </lightning-button-icon>
+    </template>
+
+    <!-- Download All Button Template -->
+    <template lwc:elseif={isDownloadAllButton}>
+        <lightning-button-icon
+            icon-name={iconName}
+            variant="bare"
+            size="small"
+            alternative-text="Download All Documents"
+            title="Download All Documents"
+            disabled={isLoading}
+            onclick={handleClick}>
+        </lightning-button-icon>
+    </template>
+
+    <template lwc:else>
+        <div style="min-height: 45px;"></div>
+    </template>
+</template>

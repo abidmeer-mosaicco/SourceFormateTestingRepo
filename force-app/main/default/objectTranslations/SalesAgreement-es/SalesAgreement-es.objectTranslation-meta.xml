@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <description>Acuerdo de venta para usuarios de Brasil.</description>
+        <label>Contrato de venta anual</label>
+        <name>PMC_SS_AnnualSalesAgreement</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Acuerdo de venta para usuarios norteamericanos.</description>
+        <label>Contrato de socio comercial</label>
+        <name>PMC_SS_BusinessPartnerAgreement</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Acuerdo Industrial a Largo Plazo</description>
+        <label>Acuerdo Industrial a Largo Plazo</label>
+        <name>PMC_SS_IndustrialLongTermAgreement</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Acuerdo Internacional a Largo Plazo</description>
+        <label>Acuerdo Internacional a Largo Plazo</label>
+        <name>PMC_SS_InternationalLongTermAgreement</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>El contrato de venta archivado no puede actualizarse.</errorMessage>
+        <name>PMC_SS_RestrictSalesAgmtEditWhenArchived</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Este Acuerdo de venta no puede editarse en esta fase. Póngase en contacto con su administrador de Salesforce para obtener ayuda.</errorMessage>
+        <name>PMC_SS_RestrictSalesAgreementEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;El contrato de venta no se puede mover de Aprobado a otra fase. Por favor, modifique el Acuerdo de Venta para realizar cualquier cambio.&quot;</errorMessage>
+        <name>PMC_SS_RestrictStatusChangeAfterApproved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;El Acuerdo de Venta debe aprobarse internamente antes de enviarlo al cliente, por lo tanto, esta SA no se puede crear/actualizar con el Status de &quot;&quot;Pendiente con el cliente&quot;&quot;&quot;</errorMessage>
+        <name>PMC_SS_RestrictStatusJustPendingWithCust</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Este acuerdo ya ha sido aprobado, por lo que no se puede mover al status de Borrador o Archivado. Por favor, modifique el nuevo Acuerdo de Venta si es necesario realizar modificaciones.&quot;</errorMessage>
+        <name>PMC_SS_RestrictStatusPendingCustToDraft</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;El contrato de venta no puede crearse con el status &quot;Pendiente con el cliente&quot; ni actualizarse manualmente a/desde el status &quot;Pendiente con el cliente&quot;.&quot;</errorMessage>
+        <name>PMC_SS_RestrictStatusPendingWithCustomer</name>
+    </validationRules>
+    <webLinks>
+        <label>Generar un acuerdo anual de suministro</label>
+        <name>PMC_CLM_AnnualSupplyAgreement</name>
+    </webLinks>
+    <webLinks>
+        <label>Generar un acuerdo internacional</label>
+        <name>PMC_CLM_GenerateInternationalAgreement</name>
+    </webLinks>
+    <webLinks>
+        <label>Generar acuerdo</label>
+        <name>PMC_CLM_Generate_Agreement</name>
+    </webLinks>
+    <webLinks>
+        <label>Generar acuerdo de socio comercial</label>
+        <name>PMC_CLM_Generate_BPA</name>
+    </webLinks>
+</CustomObjectTranslation>

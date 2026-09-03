@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Refers to the limit of the query in the start method of DashboardRefreshLoginHistoryBatch. Defaults to no limit if not specified. Set a limit (you can start with 500,000 and keep lowering it if errors persist) if we&apos;re getting a Visualforce Remoting Exception: String length exceeds maximum: 6000000 on the frontend --></help>
+    <label><!-- LoginHistoryBatch Limit --></label>
+    <name>sc_ext__LoginHistoryBatch_Limit__c</name>
+</CustomFieldTranslation>

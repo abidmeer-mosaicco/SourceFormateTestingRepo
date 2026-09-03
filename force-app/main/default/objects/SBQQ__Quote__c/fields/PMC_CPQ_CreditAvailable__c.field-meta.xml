@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_CreditAvailable__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is created as a part of story to handle/store value of Credit Available for any Quote.</description>
+    <label>Credit Available</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Quotes (Credit Available)</relationshipLabel>
+    <relationshipName>Quotes1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

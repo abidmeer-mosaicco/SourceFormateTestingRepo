@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_GoalDescriptionRequired</fullName>
+    <active>true</active>
+    <description>If Goal Description field is empty after I have selected Other as the value in the Goal field.</description>
+    <errorConditionFormula>AND
+(
+ISPICKVAL( PMC_Goal__c , &apos;Other&apos;),
+
+ISBLANK(PMC_Goal_Description__c)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_Goal_Description__c</errorDisplayField>
+    <errorMessage>Please describe your goal with this customer interaction.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>This assignment element is used to store the id of program rebate types in list</description>
+        <name>ProgramRebateTypeIdAssignment</name>
+        <label>Program Rebate Type Id Assignment</label>
+        <locationX>138</locationX>
+        <locationY>1706</locationY>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypeIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughProgramRebateTypeList.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughProgramRebateTypeList</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Updates the status of program rebate type records to active</description>
+        <name>ProgramRebateTypeStatusAssignment</name>
+        <label>Program Rebate Type Status Assignment</label>
+        <locationX>402</locationX>
+        <locationY>1706</locationY>
+        <assignmentItems>
+            <assignToReference>IterateThroughProgramRebateTypeList.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypes</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughProgramRebateTypeList</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstProgramRebateTypeIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughProgramRebateTypeList.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughProgramRebateTypeList</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>This assignment is to add current rebate programs id to the rebate program id list</description>
+        <name>RebateProgramIdAssignment</name>
+        <label>Rebate Program Id Assignment</label>
+        <locationX>534</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>lstRebateProgramIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateProgramList.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughRebateProgramList</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>This element is used to update the status of the rebate programs.</description>
+        <name>RebateProgramStatusAssignment</name>
+        <label>Rebate Program Status Assignment</label>
+        <locationX>798</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>IterateThroughRebateProgramList.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstRebatePrograms</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateProgramList</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>lstRebateProgramIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>IterateThroughRebateProgramList.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>IterateThroughRebateProgramList</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>API name of the flow</description>
+        <name>STRING_FLOW_API_NAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_ActiveSalesAgreementRelatedRecordSubflow</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>This decision element is used to check if rebate type is not null</description>
+        <name>CheckProgramRebateTypeDecision</name>
+        <label>Check Program Rebate Type Decision</label>
+        <locationX>446</locationX>
+        <locationY>1382</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckProgramRebateTypeDecision_RebateTypePresentOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetRelatedProgramRebateTypes</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IterateThroughProgramRebateTypeList</targetReference>
+            </connector>
+            <label>Rebate Type Present Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision element is used to check if the rebate program is present or not.</description>
+        <name>CheckRebateProgramListDecision</name>
+        <label>Check Rebate Program List Decision</label>
+        <locationX>1304</locationX>
+        <locationY>350</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RebateProgramNotNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>RelatedRebateProgramsGet</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IterateThroughRebateProgramList</targetReference>
+            </connector>
+            <label>Rebate Program Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Decision element to check if an Id is passed to the flow</description>
+        <name>CheckSalesAgreementIdDecision</name>
+        <label>Check Sales Agreement Id Decision</label>
+        <locationX>1997</locationX>
+        <locationY>134</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckSalesAgreementIdDecision_IdNotNull</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>salesAgreementId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RelatedRebateProgramsGet</targetReference>
+            </connector>
+            <label>Id Not Null</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision element is used to check if the rebate program status is active</description>
+        <name>RebateProgramActiveDecision</name>
+        <label>Rebate Program Active Decision</label>
+        <locationX>666</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>RebateProgramStatusAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RebateProgramActiveDecision_ActiveOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IterateThroughRebateProgramList.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>RebateProgramIdAssignment</targetReference>
+            </connector>
+            <label>Active Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>This decision element checks if the rebate program is active or not</description>
+        <name>RebateTypeActiveDecision</name>
+        <label>Rebate Type Active Decision</label>
+        <locationX>270</locationX>
+        <locationY>1598</locationY>
+        <defaultConnector>
+            <targetReference>ProgramRebateTypeStatusAssignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>RebateTypeActiveDecision_ActiveOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IterateThroughProgramRebateTypeList.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ProgramRebateTypeIdAssignment</targetReference>
+            </connector>
+            <label>Active Outcome</label>
+        </rules>
+    </decisions>
+    <description>This flow is used to activate all the sales agreement related records when sales agreement is activated.</description>
+    <environments>Default</environments>
+    <interviewLabel>PMC SS Activate Sales Agreement Related Records Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS Activate Sales Agreement Related Records Subflow</label>
+    <loops>
+        <description>Loop through all program rebate types and update status to active.</description>
+        <name>IterateThroughProgramRebateTypeList</name>
+        <label>Iterate Through Program Rebate Type List</label>
+        <locationX>50</locationX>
+        <locationY>1490</locationY>
+        <collectionReference>GetRelatedProgramRebateTypes</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>RebateTypeActiveDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>ProgramRebateTypesStatusUpdate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>This loop will iterate though list of rebate program.</description>
+        <name>IterateThroughRebateProgramList</name>
+        <label>Iterate Through Rebate Program List</label>
+        <locationX>446</locationX>
+        <locationY>458</locationY>
+        <collectionReference>RelatedRebateProgramsGet</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>RebateProgramActiveDecision</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>RebateProgramStatusUpdate</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create error log records in cause of failure</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>2426</locationX>
+        <locationY>350</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOW_API_NAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Query all the related program rebate types.</description>
+        <name>GetRelatedProgramRebateTypes</name>
+        <label>Get Related Program Rebate Types</label>
+        <locationX>446</locationX>
+        <locationY>1274</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckProgramRebateTypeDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstRebateProgramIds</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>ProgramRebateType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get element to fetch all the related rebate program records.</description>
+        <name>RelatedRebateProgramsGet</name>
+        <label>Related Rebate Programs Get</label>
+        <locationX>1304</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CheckRebateProgramListDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_SalesAgreement__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>salesAgreementId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>RebateProgram</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>This element updates the status of all the rebate type benefits to active.</description>
+        <name>ProgramRebateTypeBenefitsStatusUpdate</name>
+        <label>Program Rebate Type Benefits Status Update</label>
+        <locationX>50</locationX>
+        <locationY>2090</locationY>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ProgramRebateTypeId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstProgramRebateTypeIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <object>ProgramRebateTypeBenefit</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the status of program rebate type records.</description>
+        <name>ProgramRebateTypesStatusUpdate</name>
+        <label>Program Rebate Types Status Update</label>
+        <locationX>50</locationX>
+        <locationY>1982</locationY>
+        <connector>
+            <targetReference>ProgramRebateTypeBenefitsStatusUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>lstProgramRebateTypes</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Element to update the status of rebate program members to active.</description>
+        <name>RebateProgramMemberStatusUpdate</name>
+        <label>Rebate Program Member Status Update</label>
+        <locationX>446</locationX>
+        <locationY>1058</locationY>
+        <connector>
+            <targetReference>RebateProgramPayoutPeriodStatusUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstRebateProgramIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>MemberStatus</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>MemberStatus</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <object>RebateProgramMember</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This decision element is used to update the status of payout periods to active</description>
+        <name>RebateProgramPayoutPeriodStatusUpdate</name>
+        <label>Rebate Program Payout Period Status Update</label>
+        <locationX>446</locationX>
+        <locationY>1166</locationY>
+        <connector>
+            <targetReference>GetRelatedProgramRebateTypes</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RebateProgramId</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>lstRebateProgramIds</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <object>RebateProgramPayoutPeriod</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>This element is used to update the rebate programs</description>
+        <name>RebateProgramStatusUpdate</name>
+        <label>Rebate Program Status Update</label>
+        <locationX>446</locationX>
+        <locationY>950</locationY>
+        <connector>
+            <targetReference>RebateProgramMemberStatusUpdate</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputReference>lstRebatePrograms</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1871</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CheckSalesAgreementIdDecision</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Collection variable to store the record ids of all the program rebate types.</description>
+        <name>lstProgramRebateTypeIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Collection variable to update the program rebate type records</description>
+        <name>lstProgramRebateTypes</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>ProgramRebateType</objectType>
+    </variables>
+    <variables>
+        <description>Collection of rebate program ids for querying related records.</description>
+        <name>lstRebateProgramIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This collection is used to store all the rebate programs for update</description>
+        <name>lstRebatePrograms</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>RebateProgram</objectType>
+    </variables>
+    <variables>
+        <description>This variable will store the value of activated sales agreement.</description>
+        <name>salesAgreementId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,115 @@
+<template>
+  <template if:false={isAddressDetailsVisible}>
+    <!-- Search Addresses Filter -->
+    <div class="custom-card slds-m-bottom_none">
+      <div class="card-header">
+        <div class="search-filter-header">
+          <div>{labels.pmc_addresses_searchFilters}</div>
+          <lightning-icon size="x-small"
+            class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+            icon-name="utility:filterList" alternative-text={labels.pmc_searchFilters_filter}
+            onclick={showSearchFilters}>
+          </lightning-icon>
+        </div>
+      </div>
+      <template if:true={showFilter}>
+        <div class="slds-grid slds-gutters slds-wrap card-body">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-form-element search-datatable-container">
+            <c-pmc_dh_search-input-element text-label={labels.pmc_addresses_searchAddresses} text-name="strSearchInput"
+              text-placeholder="" data-id="strSearchInput" default-value={searchFormObject.strSearchInput}
+              oninputdatachange={handleDataChange} oninputkeyup={handleEnterKeyUp} onsearchclick={applyFilterHandler}>
+            </c-pmc_dh_search-input-element>
+          </div>
+
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addresses_status} combobox-list-json={statusOptions}
+              data-id="strStatus" default-value={searchFormObject.strStatus} oninputdatachange={handleDataChange}>
+            </c-pmc_dh_selection-picklist>
+          </div>
+
+          <div class="filter-buttons slds-col slds-size_1-of-1 slds-medium-size_1-of-12">
+            <div class="slds-order_2 slds-medium-order_1">
+              <lightning-button variant="brand" label={labels.pmc_addresses_apply}
+                onclick={applyFilterHandler}></lightning-button>
+            </div>
+            <div class="slds-order_1 slds-medium-order_2">
+              <a onclick={clearFilterHandler} class="text-regular-small">{labels.pmc_addresses_clear}</a>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <!-- Addresses Data -->
+    <template if:true={pageLoaded}>
+      <template if:false={isResultSetEmpty}>
+        <c-pmc_dh_custom-datatable table-description="Address Data" columns={columns} table-data={filteredData}
+          default-sort-order={defaultSortOrder} onrowactionselection={rowActionsHandler}>
+        </c-pmc_dh_custom-datatable>
+      </template>
+      <template if:true={addressData.length}>
+        <div class="pagination slds-m-bottom_medium">
+          <c-pmc_dh_pagination generickey="id" genericdata={addressData} class="slds-table_striped"
+            no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData}
+            modal-theme>
+          </c-pmc_dh_pagination>
+        </div>
+      </template>
+      <div lwc:if={isResultSetEmpty} class="no-results-msg">
+        {labels.pmc_orderHistory_noResultsMsg}
+      </div>
+    </template>
+    <!-- Loading spinner -->
+    <template if:false={pageLoaded}>
+      <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+    </template>
+    <!-- Delete Address Popup -->
+    <c-pmc_dh_custom-modal open-modal={isDeleteAddressModal} modal-heading={labels.pmc_deleteAddress_title}
+      modal-width="500px" onclosemodalevent={closeDeleteAddressHandler}>
+      <div class="modal-wrapper">
+        <template if:false={isDeleteSuccess}>
+          <div class="slds-grid slds-wrap slds-m-around_medium">
+            <div class="slds-size_1-of-1 slds-m-bottom_medium text-heading-bold">
+              <lightning-formatted-rich-text value={labels.pmc_deleteAddress_confirmation}>
+              </lightning-formatted-rich-text>
+            </div>
+            <div class="slds-size_1-of-1 slds-m-bottom_medium address-text">
+              <lightning-formatted-rich-text value={deletedAddress}>
+              </lightning-formatted-rich-text>
+            </div>
+            <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+              <lightning-button variant="neutral" label={labels.pmc_deleteAddress_no}
+                title={labels.pmc_deleteAddress_no} onclick={closeDeleteAddressHandler}></lightning-button>
+            </div>
+            <div
+              class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button delete-button">
+              <lightning-button variant="brand" label={labels.pmc_deleteAddress_delete}
+                title={labels.pmc_deleteAddress_delete} onclick={deleteAddressHandler}></lightning-button>
+            </div>
+          </div>
+        </template>
+        <template if:true={pageLoaded}>
+          <template if:true={isDeleteSuccess}>
+            <div class="slds-m-around_x-large">
+              <div class="slds-align_absolute-center slds-m-bottom_medium">
+                <lightning-icon icon-name="utility:check" alternative-text={labels.pmc_deleteAddress_success}
+                  title={labels.pmc_deleteAddress_success} class="success-icon-style"></lightning-icon>
+              </div>
+              <div class="slds-align_absolute-center slds-m-bottom_medium success-heading-bold">
+                <lightning-formatted-rich-text value={labels.pmc_deleteAddress_successText}>
+                </lightning-formatted-rich-text>
+              </div>
+              <div class="slds-align_absolute-center address-text">
+                <lightning-formatted-rich-text value={labels.pmc_deleteAddress_successMessage}>
+                </lightning-formatted-rich-text>
+              </div>
+            </div>
+          </template>
+        </template>
+      </div>
+    </c-pmc_dh_custom-modal>
+  </template>
+  <!-- Address Details -->
+  <template if:true={isAddressDetailsVisible}>
+    <c-pmc_dh_address-details onbacktoaddress={handleAddressDetail} rec-id={junctionObjId}></c-pmc_dh_address-details>
+  </template>
+</template>

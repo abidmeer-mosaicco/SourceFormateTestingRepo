@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Barge</fullName>
+        <default>false</default>
+        <label>Barge</label>
+    </customValue>
+    <customValue>
+        <fullName>Container</fullName>
+        <default>false</default>
+        <label>Container</label>
+    </customValue>
+    <customValue>
+        <fullName>Rail</fullName>
+        <default>false</default>
+        <label>Rail</label>
+    </customValue>
+    <customValue>
+        <fullName>Truck</fullName>
+        <default>false</default>
+        <label>Truck</label>
+    </customValue>
+    <customValue>
+        <fullName>Vessel</fullName>
+        <default>false</default>
+        <label>Vessel</label>
+    </customValue>
+    <customValue>
+        <fullName>No Transport  Req</fullName>
+        <default>false</default>
+        <label>No Transport  Req</label>
+    </customValue>
+    <customValue>
+        <fullName>Inventory Transfer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Inventory Transfer</label>
+    </customValue>
+    <customValue>
+        <fullName>Purchase in Place</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Purchase in Place</label>
+    </customValue>
+    <description>This is created to hold mode of Transportation value sets</description>
+    <masterLabel>MoT</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

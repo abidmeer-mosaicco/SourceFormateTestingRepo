@@ -1,0 +1,175 @@
+<template>
+	<div class="slds-notify slds-notify_alert" role="alert">
+		<span class="slds-assistive-text">info</span>
+		<lightning-icon class="icon" icon-name="utility:info" alternative-text="Utility info" title="Info" size="small"></lightning-icon>
+		<h2>For optimal performance, choose a single order with a maximum of 50-80 lines pertaining to that specific order.</h2>
+	</div>
+	<div if:true={displayPageSpinner} class="spinner-modal">
+		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+	</div>
+	<div class="sidebar slds-split-view_container slds-is-closed close-panel" data-my-id="leftPanel" style="float: left">
+		<lightning-button-icon
+			onclick={togglePanel}
+			variant="bare"
+			icon-name="utility:left"
+			class="slds-button slds-button_icon slds-button_icon slds-split-view__toggle-button sidebar-button"
+			aria-controls="split-view-id"
+			aria-expanded="true"
+		></lightning-button-icon>
+		<!-- Left Panel - Filters -->
+		<article
+			aria-hidden="false"
+			id="split-view-id"
+			class="slds-split-view slds-grid slds-grid_vertical slds-grow"
+			style="padding-right: 7px"
+		>
+			<lightning-vertical-navigation>
+				<lightning-vertical-navigation-section label="Search Order Products">
+					<lightning-record-edit-form object-api-name="OrderItem">
+						<lightning-input-field
+							class="slds-text-title_bold"
+							field-name="PMC_CPQ_Account__c"
+							data-type="input-field"
+							name="accountId"
+							value={accountId}
+							onchange={handleAccountChange}
+						></lightning-input-field>
+					</lightning-record-edit-form>
+					<lightning-record-edit-form object-api-name="OrderItem">
+						<lightning-input-field
+							class="slds-text-title_bold"
+							field-name="PMC_CPQ_Owner__c"
+							data-type="input-field"
+							name="ownerId"
+							value={ownerId}
+							onchange={handleOwnerChange}
+						></lightning-input-field>
+					</lightning-record-edit-form>
+					<lightning-record-edit-form object-api-name="OrderItem">
+						<lightning-input-field
+							class="slds-text-title_bold"
+							field-name="PMC_CPQ_ShipTo__c"
+							data-type="input-field"
+							name="shipTo"
+							value={shipTo}
+							onchange={handleShipToChange}
+						></lightning-input-field>
+					</lightning-record-edit-form>
+					<lightning-record-edit-form object-api-name="OrderItem">
+						<lightning-input-field
+							class="slds-text-title_bold"
+							field-name="Product2Id"
+							data-type="input-field"
+							name="productId"
+							value={productId}
+							onchange={handleProductChange}
+						></lightning-input-field>
+					</lightning-record-edit-form>
+					<lightning-record-edit-form object-api-name="OrderItem">
+						<lightning-input-field
+							class="slds-text-title_bold"
+							field-name="OrderId"
+							data-type="input-field"
+							name="Order"
+							value={OrderId}
+							onchange={handleOrderChange}
+						></lightning-input-field>
+					</lightning-record-edit-form>
+				</lightning-vertical-navigation-section>
+				<lightning-button label="Search" variant="brand" onclick={handleSearchPrimary}></lightning-button>
+			</lightning-vertical-navigation>
+		</article>
+	</div>
+	<!-- Right Panel - Display Data -->
+	<div style="float: right; padding-left: 12px" data-my-id="rightPanel" class="expand-panel right-panel">
+		<!--Main Right Body Section-->
+		<lightning-card>
+			<h1 slot="title">
+				<lightning-icon icon-name="standard:order_item" size="small" slot="title"></lightning-icon>
+				<strong class="slds-m-left--x-small">Order Products</strong>
+			</h1>
+			<lightning-input
+				class="slds-text-title_bold compact-input"
+				type="search"
+				onchange={handleSearch}
+				slot="actions"
+				variant="label-inline"
+				placeholder="Search this list..."
+			></lightning-input>
+		</lightning-card>
+		<br />
+		<div if:true={showdefault} class="slds-grid slds-grid_vertical slds-scrollable_y slds-size_4-of-4">
+			<lightning-datatable
+				data={filterSearchRecords}
+				columns={columns}
+				key-field="Id"
+				onrowselection={handleRowSelection}
+			></lightning-datatable>
+		</div>
+		<div if:false={showdefault}>
+			<lightning-datatable
+				data={filterSearchRecords}
+				columns={columns}
+				key-field="Id"
+				onrowselection={handleRowSelection}
+			></lightning-datatable>
+		</div>
+		<br />
+		<br />
+		<lightning-card if:true={showConvTable} title="Selected Order Products" class="slds-m-bottom_small">
+			<lightning-button
+				if:true={showConvTable}
+				variant="brand"
+				class="button1"
+				label="Get FPD Price"
+				onclick={handleGetFPD}
+				slot="actions"
+			></lightning-button>
+			<lightning-button
+				if:true={showConvTable}
+				variant="brand"
+				class="button2"
+				label="Save and Send to SAP"
+				onclick={handleSendPriceToSAP}
+				slot="actions"
+				disabled={isSaveAndSendToSapButtonDisabled}
+			></lightning-button>
+		</lightning-card>
+		<br />
+		<div if:true={showConvTable} class="rollup">
+			<div class="rolluptext1">
+				<p>Total Records Selected: {recordCount}</p>
+			</div>
+			<div class="rolluptext2">
+				<p>Total Quantity of Records Selected: {recordQuantity}</p>
+			</div>
+		</div>
+		<br />
+		<div class="slds-grid slds-grid_vertical slds-scrollable_y slds-size_4-of-4">
+			<lightning-datatable
+				if:true={showConvTable}
+				key-field="Id"
+				data={nonPendingData}
+				columns={columns}
+				draft-values={fldsItemValues}
+				oncellchange={handleDraftValues}
+				onrowselection={handleRowSelectionFPD}
+				suppress-bottom-bar="true"
+			></lightning-datatable>
+		</div>
+		<br />
+	</div>
+	<c-pmc_cpq_processing-progress
+		open={progressModal.open}
+		total-rows={progressModal.totalRows}
+		approval-total={progressModal.approvalTotal}
+		sap-total={progressModal.sapTotal}
+		approval-processed={progressModal.approvalProcessed}
+		sap-processed={progressModal.sapProcessed}
+		is-working={progressModal.isWorking}
+		is-success={progressModal.isSuccess}
+		is-error={progressModal.isError}
+		is-partial={progressModal.isPartial}
+		onclose={handleProgressClose}
+	></c-pmc_cpq_processing-progress>
+</template>

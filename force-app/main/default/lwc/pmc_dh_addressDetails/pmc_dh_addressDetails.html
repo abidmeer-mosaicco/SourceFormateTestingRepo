@@ -1,0 +1,276 @@
+<template>
+  <template if:true={pageLoaded}>
+    <div class="custom-card">
+      <div class="card-header">
+        {pageObject.strAddressName}
+      </div>
+      <div class="card-body">
+        <div class="slds-grid slds-gutters slds-wrap slds-p-horizontal_medium">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_addressName} data-id="strAddressName"
+              data-name="strAddressName" parent-name="strAddressName" default-value={pageObject.strAddressName}
+              is-required oninputdatachange={handleDataChange} pattern="[A-Za-z0-9#,.\-\/ ]*"
+              text-placeholder={labels.pmc_addNewAddress_addressName} is-disabled={isDisabled}></c-pmc_dh_input-element>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewAddress_addressType}
+              combobox-list-json={picklistData.lstAddType} data-id="strAddressType" parent-name="strAddressType"
+              data-name="strAddressType" default-value={pageObject.strAddressType} is-required
+              oninputdatachange={handleDataChange} placeholder={labels.pmc_addNewAddress_addressType}
+              is-disabled={isDisabledPermently}></c-pmc_dh_selection-picklist>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewUser_soldToAccount}
+              combobox-list-json={picklistData.lstSoldToAcc} data-id="strSoldToAcc" parent-name="strSoldToAcc"
+              data-name="strSoldToAcc" default-value={pageObject.strSoldToAcc} is-required
+              oninputdatachange={handleDataChange} placeholder={labels.pmc_addNewUser_soldToAccount}
+              is-disabled={isDisabled}></c-pmc_dh_selection-picklist>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5 status-style desktop">
+            <div class="lbl-field-name">{labels.pmc_addresses_status}</div>
+            <div>
+              <lightning-badge class='badge-style' name label={pageObject.strStatus}></lightning-badge>
+            </div>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5 icon-style desktop">
+            <template if:true={isValidated}>
+              <template if:true={isDisabled}>
+                <lightning-button-icon icon-name="utility:edit" alternative-text={labels.pmc_addressDetails_edit}
+                  title={labels.pmc_addressDetails_edit} onclick={handleEditInfo}></lightning-button-icon>
+              </template>
+              <template if:false={isDisabled}>
+                <lightning-button-icon icon-name="utility:close" alternative-text={labels.pmc_addressDetails_cancel}
+                  title={labels.pmc_addressDetails_cancel} onclick={handleCloseEdit}></lightning-button-icon>
+                <lightning-button-icon icon-name="utility:check" alternative-text={labels.pmc_addressDetails_update}
+                  title={labels.pmc_addressDetails_update} onclick={handleSaveInfo} class="save-icon-style">
+                </lightning-button-icon>
+              </template>
+            </template>
+          </div>
+
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <!-- <template if:false={isLocationBrazil}>
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_zipCode} data-id="strZipcode"
+                parent-name="strZipcode" data-name="strZipcode" default-value={pageObject.strZipcode} is-required
+                oninputdatachange={handleDataChange} pattern="^\d{5}?$" max-length={zipCodeMixLength}
+                message-when-too-short={labels.pmc_addressDetails_zipcodeError}
+                message-when-pattern-mismatch={labels.pmc_addressDetails_zipcodeError}
+                text-placeholder={labels.pmc_addNewAddress_zipCode} is-disabled={isDisabled}></c-pmc_dh_input-element>
+            </template> -->
+              <template if:false={isLocationBrazil}>
+            <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_zipCode} data-id="strZipcode"
+              parent-name="strZipcode" data-name="strZipcode" default-value={pageObject.strZipcode} is-required
+              oninputdatachange={handleDataChange}  pattern="^\d{5}?$"  is-number
+              max-length={zipCodeMixLength} message-when-pattern-mismatch={labels.pmc_addressDetails_zipcodeError}
+              message-when-too-short={labels.pmc_addressDetails_zipcodeError}
+              text-placeholder={labels.pmc_addNewAddress_zipCode} is-disabled={isDisabled}></c-pmc_dh_input-element>
+          </template>
+            <!-- <template if:true={isLocationBrazil}>
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_cep} data-id="strZipcode"
+                parent-name="strZipcode" data-name="strZipcode" default-value={pageObject.strZipcode} is-required
+                oninputdatachange={handleDataChange} pattern="^\d{5}(-\d{3})?$" max-length={zipCodeMaxLength}
+              
+                message-when-too-short={labels.pmc_addressDetails_cepError}
+                message-when-pattern-mismatch={labels.pmc_addressDetails_cepError}
+                text-placeholder={labels.pmc_addNewAddress_cep}  is-disabled={isDisabled}>
+              </c-pmc_dh_input-element>
+            </template> -->
+            <template if:true={isLocationBrazil}>
+            <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_cep} data-id="strZipcode"
+              parent-name="strZipcode" data-name="strZipcode" 
+              default-value={pageObject.strZipcode} is-required oninputdatachange={handleDataChange}
+              max-length={cepMaxLength} oninputdatablur={handleBlur} pattern="^\d{5}(-\d{3})?$"
+              message-when-pattern-mismatch={labels.pmc_addressDetails_cepError}
+              text-placeholder={labels.pmc_addNewAddress_cep} is-disabled={isDisabled} ></c-pmc_dh_input-element>
+          </template>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_address} data-id="strAddress"
+              parent-name="strAddress" data-name="strAddress" default-value={pageObject.strAddress} is-required
+              oninputdatachange={handleDataChange} pattern="[A-Za-z0-9#,.\-\/ ]*"
+              text-placeholder={labels.pmc_addNewAddress_address} is-disabled={isDisabled}></c-pmc_dh_input-element>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_input-element text-label={labels.pmc_addressDetails_addressLine} data-id="strNumber"
+              parent-name="strNumber" data-name="strNumber" default-value={pageObject.strNumber} max-length="60"
+              oninputdatachange={handleDataChange} text-placeholder={labels.pmc_addressDetails_addressLine}
+              is-disabled={isDisabled}>
+            </c-pmc_dh_input-element>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_city} data-id="strCity" parent-name="strCity"
+              data-name="strCity" default-value={pageObject.strCity} is-required oninputdatachange={handleDataChange}
+              text-placeholder={labels.pmc_addNewAddress_city} pattern="[A-Za-z\s]*" is-disabled={isDisabled}>
+            </c-pmc_dh_input-element>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5"></div>
+           <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewAddress_country}
+              combobox-list-json={countries} data-id="strCountry" parent-name="strCountry"
+              data-name="strCountry" default-value={pageObject.strCountry} is-required
+              oninputdatachange={handleDataChange} placeholder={labels.pmc_addNewAddress_country}
+              is-disabled={isDisabled}></c-pmc_dh_selection-picklist>
+          </div>
+          <template if:true={isLocationBrazil}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewAddress_personOrOrganization}
+                combobox-list-json={picklistData.lstPersonOrOrganizationWrap} data-id="strPersonOrOrganization"
+                parent-name="strPersonOrOrganization" data-name="strPersonOrOrganization"
+                default-value={pageObject.strPersonOrOrganization} is-required is-disabled={isDisabledPermently}
+                placeholder={labels.pmc_addNewAddress_personOrOrganization}></c-pmc_dh_selection-picklist>
+            </div>
+            <template if:true={cnpjMandate}>
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                <c-pmc_dh_input-element text-label={labels.pmc_addresses_CNPJ_CPF} data-id="strCnpjCpf"
+                  parent-name="strCnpjCpf" data-name="strCnpjCpf" default-value={pageObject.strCnpj}
+                  is-required oninputdatachange={handleDataChange} oninputdatablur={handleBlur}
+                  oninputfocus={handleInputFocus} text-placeholder={labels.pmc_addNewAddress_cnpj}
+                  is-disabled={isDisabledPermently}>
+                </c-pmc_dh_input-element>
+              </div>
+            </template>
+            <template if:false={cnpjMandate}>
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                <!-- <c-pmc_dh_input-element text-label={labels.pmc_addresses_CNPJ_CPF} data-id="strCnpjCpf"
+                  parent-name="strCnpjCpf" data-name="strCnpjCpf" is-number default-value={pageObject.strCnpjCpf}
+                  oninputdatachange={handleDataChange} oninputdatablur={handleBlur} oninputfocus={handleInputFocus}
+                  text-placeholder={labels.pmc_addNewAddress_cnpj} is-disabled={isDisabledPermently}>
+                </c-pmc_dh_input-element> -->
+              </div>
+            </template>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_input-element text-label={labels.pmc_addresses_stateSubscription} data-id="strStateSubscription"
+                data-name="strStateSubscription" parent-name="strStateSubscription"
+                default-value={pageObject.strStateSubscription} is-required is-number
+                max-length={stateSubscriptionMaxLength} oninputdatachange={handleDataChange}
+                text-placeholder={labels.pmc_addresses_stateSubscription} pattern="[A-Za-z0-9#,.\-\/ ]*"
+                is-disabled={isDisabledPermently}>
+              </c-pmc_dh_input-element>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-5">
+              <lightning-textarea name={labels.pmc_addNewAddress_deliveryInstructions}
+                label={labels.pmc_addNewAddress_deliveryInstructions} data-id="strDeliveryInstructions"
+                value={pageObject.strDeliveryInstructions} onchange={handleDataChange} disabled={isDisabled}>
+              </lightning-textarea>
+            </div>
+          </template>
+          <template if:true={isLocationBrazil}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_propertyFarmName}
+                data-id="strPropertyFarmName" data-name="strPropertyFarmName" parent-name="strPropertyFarmName"
+                default-value={pageObject.strPropertyFarmName} oninputdatachange={handleDataChange}
+                max-length={propertyFarmNameMaxLength} text-placeholder={labels.pmc_addNewAddress_propertyFarmName}
+                pattern="[A-Za-z0-9#,.\-\/ ]*" is-disabled={isDisabled}>
+              </c-pmc_dh_input-element>
+            </div>
+            <template if:true={cpfMandate}>
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_cpf} data-id="strCpf" parent-name="strCpf"
+                  data-name="strCpf" is-number default-value={pageObject.strCPF} is-required
+                  text-placeholder={labels.pmc_addNewAddress_cpf} is-disabled={isDisabledPermently}>
+                </c-pmc_dh_input-element>
+              </div>
+            </template>
+            <template if:false={cpfMandate}>
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+                <!-- <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_cpf} data-id="strCpf" parent-name="strCpf"
+                  data-name="strCpf" is-number default-value={pageObject.strCPF}
+                  text-placeholder={labels.pmc_addNewAddress_cpf} is-disabled={isDisabledPermently}>
+                </c-pmc_dh_input-element> -->
+              </div>
+            </template>
+          </template>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <template if:false={isLocationBrazil}>
+
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_contactPhone} data-id="strcontactPhone" type='tel'
+                data-name="strcontactPhone" parent-name="strcontactPhone" default-value={pageObject.strcontactPhone}
+                oninputdatachange={handleDataChange} text-placeholder={labels.pmc_addNewAddress_contactPhone}
+                max-length={contactMaxLength}  is-disabled={isDisabled} is-number pattern="[0-9]{10}" 
+                message-when-pattern-mismatch={labels.pmc_addNewAddress_phoneError}></c-pmc_dh_input-element>
+
+            </template>
+
+          </div>
+          <template if:true={isLocationBrazil}>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_district} data-id="strDistrict"
+                parent-name="strDistrict" data-name="strDistrict" default-value={pageObject.strDistrict} is-required
+                oninputdatachange={handleDataChange} text-placeholder={labels.pmc_addNewAddress_district}
+                pattern="[A-Za-z\s]*" is-disabled={isDisabled}>
+              </c-pmc_dh_input-element>
+            </div>
+
+          </template>
+         
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+            <c-pmc_dh_selection-picklist text-label={labels.pmc_addNewAddress_state}
+              combobox-list-json={states} data-id="strState" parent-name="strState" data-name="strState"
+              default-value={pageObject.strState} is-required oninputdatachange={handleDataChange}
+              placeholder={labels.pmc_addNewAddress_state} is-disabled={isDisabled}></c-pmc_dh_selection-picklist>
+          </div>
+          <template if:false={isLocationBrazil}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_contactEmail} data-id="strcontactEmail"
+                data-name="strcontactEmail" parent-name="strcontactEmail" default-value={pageObject.strcontactEmail}
+                max-length={contactEmailMaxLength} oninputdatachange={handleDataChange}
+                text-placeholder={labels.pmc_addNewAddress_contactEmail} type="email" is-disabled={isDisabled}>
+              </c-pmc_dh_input-element>
+            </div>
+          </template>
+          <template if:true={isLocationBrazil}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5">
+              <c-pmc_dh_input-element text-label={labels.pmc_addNewAddress_addressNumber} data-id="straddressNumber"
+                max-length={addressNumberMaxLength} parent-name="straddressNumber" data-name="straddressNumber"
+                default-value={pageObject.straddressNumber} is-required oninputdatachange={handleDataChange}
+                text-placeholder={labels.pmc_addNewAddress_addressNumber} pattern="[A-Za-z0-9#,.\-\/ ]*"
+                is-disabled={isDisabled}>
+              </c-pmc_dh_input-element>
+            </div>
+          </template>
+          <template if:false={isLocationBrazil}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-5">
+              <lightning-textarea name={labels.pmc_addNewAddress_deliveryInstructions}
+                label={labels.pmc_addNewAddress_deliveryInstructions} data-id="strDeliveryInstructions"
+                value={pageObject.strDeliveryInstructions} onchange={handleDataChange} disabled={isDisabled}>
+              </lightning-textarea>
+            </div>
+          </template>
+          <template if:true={isValidated}>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5 icon-style mobile">
+              <template if:true={isDisabled}>
+                <lightning-button-icon icon-name="utility:edit" alternative-text={labels.pmc_addressDetails_edit}
+                  title={labels.pmc_addressDetails_edit} onclick={handleEditInfo}></lightning-button-icon>
+              </template>
+              <template if:false={isDisabled}>
+                <lightning-button-icon icon-name="utility:close" alternative-text={labels.pmc_addressDetails_cancel}
+                  title={labels.pmc_addressDetails_cancel} onclick={handleCloseEdit}></lightning-button-icon>
+                <lightning-button-icon icon-name="utility:check" alternative-text={labels.pmc_addressDetails_update}
+                  title={labels.pmc_addressDetails_update} onclick={handleSaveInfo} class="save-icon-style">
+                </lightning-button-icon>
+              </template>
+            </div>
+          </template>
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5 status-style mobile">
+            <div class="lbl-field-name">{labels.pmc_addresses_status}</div>
+            <lightning-badge class="badge-style" label={pageObject.strStatus}></lightning-badge>
+          </div>
+          <template if:true={isDuplicateAddress}>
+            <div class="slds-col slds-size_1-of-1">
+              <div class="duplicate-error">{labels.pmc_addressDetails_duplicateAddressError}</div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col mobile-button btn-style slds-m-bottom_x-large">
+      <lightning-button variant="brand" label={labels.pmc_addressDetails_backToAds}
+        title={labels.pmc_addressDetails_backToAds} onclick={backToAddressHandler}></lightning-button>
+    </div>
+  </template>
+  <template if:true={isSpinner}>
+    <lightning-spinner variant="brand" size="medium"></lightning-spinner>
+  </template>
+</template>

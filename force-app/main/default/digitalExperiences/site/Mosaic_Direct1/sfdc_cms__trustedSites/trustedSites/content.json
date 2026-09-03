@@ -1,0 +1,28 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://*.sandbox.vf.force.com",
+      "sourceName" : "CommTrustedSite1"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.content.force.com",
+      "sourceName" : "cms"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.googletagmanager.com",
+      "sourceName" : "*.googletagmanager.com"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.nutricaodesafras.com.br",
+      "sourceName" : "nutricaodesafras"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.image.mkt.mosaicco.com",
+      "sourceName" : "image_mkt_mosaicco"
+    } ]
+  },
+  "urlName" : "trustedsites"
+}

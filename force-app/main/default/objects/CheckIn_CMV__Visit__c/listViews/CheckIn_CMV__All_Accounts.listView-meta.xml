@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CheckIn_CMV__All_Accounts</fullName>
+    <columns>NAME</columns>
+    <columns>CheckIn_CMV__Account__c</columns>
+    <columns>CheckIn_CMV__Compliance_on_Visit__c</columns>
+    <columns>CheckIn_CMV__Visit_Duration__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>CheckIn_CMV__Check_in_Date_Time__c</columns>
+    <columns>CheckIn_CMV__Check_out_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CheckIn_CMV__Account__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All (Accounts)</label>
+</ListView>

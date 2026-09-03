@@ -1,0 +1,142 @@
+:host {
+  --dxp-c-link-text-decoration: none;
+  --dxp-s-link-text-color: var(--dark-primary-green);
+  --sds-c-icon-color-foreground: var(--dark-primary-green);
+}
+
+.tbl-container {
+  box-shadow: 0px 0px 15px rgba(9, 53, 50, 0.1);
+  border-radius: 0.5rem;
+}
+
+.slds-scrollable_x {
+  max-width: 91.6vw;
+}
+
+.slds-table td a {
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--primary-green);
+}
+
+.tbl-column-data,
+.slds-table td .dynamic-link {
+  font-family: var(--medium-font);
+  line-height: 19px;
+  color: var(--dark-primary-green);
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  white-space: pre;
+}
+
+tr[data-disabled="true"] .tbl-column-data,
+tr[data-disabled="true"] td .dynamic-link {
+  color: var(--primary-grey);
+}
+
+.slds-th__action {
+  height: 22px;
+}
+
+.slds-th__action .slds-icon {
+  --sds-c-icon-color-foreground-default: var(--primary-green) !important;
+  width: 16px;
+  height: 22px;
+}
+
+/*Add custom styles for different type of badges you use--> */
+.slds-badge_lightest {
+  --dxp-g-root-contrast: var(--primary-orange);
+  justify-content: center;
+  font-family: var(--medium-font);
+  font-size: var(--x-small-font-size);
+  line-height: 14px;
+  font-weight: 500;
+  padding: 4px 17px;
+}
+
+.success .slds-badge {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.finished .slds-badge {
+  color: var(--error-orange);
+  border-color: var(--error-orange);
+}
+
+/*<--End badge styles--> */
+.slds-table td,
+.slds-table th {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.slds-table_bordered {
+  border: none;
+}
+
+.slds-table_bordered tbody td {
+  border-top: 1px solid var(--secondary-green);
+}
+
+.slds-table_bordered tbody tr:first-child td {
+  border-top: none;
+}
+
+.slds-table thead th {
+  background-color: var(--light-green);
+  padding-top: 14.5px;
+  padding-bottom: 14.5px;
+}
+
+.slds-table thead tr>th:first-child,
+.slds-table tbody tr>td:first-child {
+  padding-left: 1rem;
+}
+
+.slds-table thead tr>th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+.slds-table thead tr>th:last-child,
+.slds-table tbody tr>td:last-child {
+  padding-right: 1rem;
+}
+
+.slds-table thead tr>th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+.fixedWidthCol {
+  width: 287px;
+}
+
+.fixedWidthCol span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 271px;
+}
+
+.rightAlignedButton {
+  display: flex;
+  justify-content: end;
+}
+
+.slds-table td[data-label="Checkbox"] {
+  width: 0;
+  padding-right: 24px;
+}
+
+.slds-table td[data-label="Checkbox"] lightning-input {
+  margin-bottom: 0;
+  width: inherit;
+}
+
+@media screen and (max-width: 767px) {
+  .slds-scrollable_x {
+    max-width: calc(100vw - 32px);
+  }
+}

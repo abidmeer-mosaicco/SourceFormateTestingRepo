@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_MDMStatus__c</fullName>
+    <label>MDM Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Waiting for Customer Form Completion</fullName>
+                <default>false</default>
+                <label>Waiting for Customer Form Completion</label>
+            </value>
+            <value>
+                <fullName>Waiting for Master Data Management</fullName>
+                <default>false</default>
+                <label>Waiting for Master Data Management</label>
+            </value>
+            <value>
+                <fullName>Waiting for Product Form Completion</fullName>
+                <default>false</default>
+                <label>Waiting for Product Form Completion</label>
+            </value>
+            <value>
+                <fullName>Waiting for Product Costing Setup</fullName>
+                <default>false</default>
+                <label>Waiting for Product Costing Setup</label>
+            </value>
+            <value>
+                <fullName>Waiting for Product Routing Creation and Assignment</fullName>
+                <default>false</default>
+                <label>Waiting for Product Routing Creation and Assignment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

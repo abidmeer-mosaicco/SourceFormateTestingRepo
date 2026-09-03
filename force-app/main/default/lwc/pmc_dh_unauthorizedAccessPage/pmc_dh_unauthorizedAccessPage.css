@@ -1,0 +1,33 @@
+.wrapper {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-image {
+  width: auto;
+  height: 74px;
+}
+
+.logo-image img {
+  height: 100%;
+}
+
+.header-text {
+  font-family: var(--bold-font);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #093532;
+}
+
+.body-text {
+  font-family: var(--regular-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: #436462;
+  width: 350px;
+}

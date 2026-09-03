@@ -1,0 +1,15 @@
+.custom-button {
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.custom-button:hover {
+    transform: scale(1.05); /* Zoom */
+    /*filter: brightness(0.5);*/ /* Slightly darkens the button color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.custom-button:focus {
+    outline: none;
+}

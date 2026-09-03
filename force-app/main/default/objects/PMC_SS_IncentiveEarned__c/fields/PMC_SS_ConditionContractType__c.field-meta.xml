@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ConditionContractType__c</fullName>
+    <description>Classification used to differentiate between different types of condition contracts Eg - Individual Rebate, Growth Rebate etc</description>
+    <label>Condition Contract Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ZR01</fullName>
+                <default>false</default>
+                <label>Individual Rebate</label>
+            </value>
+            <value>
+                <fullName>ZR02</fullName>
+                <default>false</default>
+                <label>Portfolio Rebate</label>
+            </value>
+            <value>
+                <fullName>ZR03</fullName>
+                <default>false</default>
+                <label>Growth Rebate</label>
+            </value>
+            <value>
+                <fullName>ZR05</fullName>
+                <default>false</default>
+                <label>Blended Rebate</label>
+            </value>
+            <value>
+                <fullName>ZR04</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ex Space Rebate</label>
+            </value>
+            <value>
+                <fullName>ZC02</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fixed Commission</label>
+            </value>
+            <value>
+                <fullName>Individual Accrual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Individual Accrual</label>
+            </value>
+            <value>
+                <fullName>ZC01</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Volume Commission</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

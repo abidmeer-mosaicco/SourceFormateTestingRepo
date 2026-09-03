@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_ProductType__c</fullName>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ADDITIVE</fullName>
+                <default>false</default>
+                <label>ADDITIVE</label>
+            </value>
+            <value>
+                <fullName>Anhydrous Ammonia</fullName>
+                <default>false</default>
+                <label>Anhydrous Ammonia</label>
+            </value>
+            <value>
+                <fullName>Apatite</fullName>
+                <default>false</default>
+                <label>Apatite</label>
+            </value>
+            <value>
+                <fullName>Aspire</fullName>
+                <default>false</default>
+                <label>Aspire</label>
+            </value>
+            <value>
+                <fullName>Aspire Blends</fullName>
+                <default>false</default>
+                <label>Aspire Blends</label>
+            </value>
+            <value>
+                <fullName>Aspire Fine</fullName>
+                <default>false</default>
+                <label>Aspire Fine</label>
+            </value>
+            <value>
+                <fullName>Athos 02.19.19</fullName>
+                <default>false</default>
+                <label>Athos 02.19.19</label>
+            </value>
+            <value>
+                <fullName>Athos 02.19.21</fullName>
+                <default>false</default>
+                <label>Athos 02.19.21</label>
+            </value>
+            <value>
+                <fullName>Athos 02.22.10</fullName>
+                <default>false</default>
+                <label>Athos 02.22.10</label>
+            </value>
+            <value>
+                <fullName>Athos 02.24.06</fullName>
+                <default>false</default>
+                <label>Athos 02.24.06</label>
+            </value>
+            <value>
+                <fullName>Athos 02.28.00</fullName>
+                <default>false</default>
+                <label>Athos 02.28.00</label>
+            </value>
+            <value>
+                <fullName>Athos 02.28.21</fullName>
+                <default>false</default>
+                <label>Athos 02.28.21</label>
+            </value>
+            <value>
+                <fullName>Athos 03.24.06</fullName>
+                <default>false</default>
+                <label>Athos 03.24.06</label>
+            </value>
+            <value>
+                <fullName>Athos 03.32.08</fullName>
+                <default>false</default>
+                <label>Athos 03.32.08</label>
+            </value>
+            <value>
+                <fullName>Athos Blends</fullName>
+                <default>false</default>
+                <label>Athos Blends</label>
+            </value>
+            <value>
+                <fullName>Basica Pro</fullName>
+                <default>false</default>
+                <label>Basica Pro</label>
+            </value>
+            <value>
+                <fullName>Bayovar</fullName>
+                <default>false</default>
+                <label>Bayovar</label>
+            </value>
+            <value>
+                <fullName>Biofos</fullName>
+                <default>false</default>
+                <label>Biofos</label>
+            </value>
+            <value>
+                <fullName>Biofos Coarse</fullName>
+                <default>false</default>
+                <label>Biofos Coarse</label>
+            </value>
+            <value>
+                <fullName>Boron</fullName>
+                <default>false</default>
+                <label>Boron</label>
+            </value>
+            <value>
+                <fullName>Concentrate</fullName>
+                <default>false</default>
+                <label>Concentrate</label>
+            </value>
+            <value>
+                <fullName>Crystal Granular</fullName>
+                <default>false</default>
+                <label>Crystal Granular</label>
+            </value>
+            <value>
+                <fullName>DAP</fullName>
+                <default>false</default>
+                <label>DAP</label>
+            </value>
+            <value>
+                <fullName>DAP-MAP</fullName>
+                <default>false</default>
+                <label>DAP-MAP</label>
+            </value>
+            <value>
+                <fullName>Dynafos</fullName>
+                <default>false</default>
+                <label>Dynafos</label>
+            </value>
+            <value>
+                <fullName>Dynak</fullName>
+                <default>false</default>
+                <label>Dynak</label>
+            </value>
+            <value>
+                <fullName>Dynamate</fullName>
+                <default>false</default>
+                <label>Dynamate</label>
+            </value>
+            <value>
+                <fullName>Excellen</fullName>
+                <default>false</default>
+                <label>Excellen</label>
+            </value>
+            <value>
+                <fullName>Feed</fullName>
+                <default>false</default>
+                <label>Feed</label>
+            </value>
+            <value>
+                <fullName>Fluorosilicic Acid</fullName>
+                <default>false</default>
+                <label>Fluorosilicic Acid</label>
+            </value>
+            <value>
+                <fullName>Fluosilic 22%</fullName>
+                <default>false</default>
+                <label>Fluosilic 22%</label>
+            </value>
+            <value>
+                <fullName>GDAP</fullName>
+                <default>false</default>
+                <label>GDAP</label>
+            </value>
+            <value>
+                <fullName>GKMAG</fullName>
+                <default>false</default>
+                <label>GKMAG</label>
+            </value>
+            <value>
+                <fullName>GMAP</fullName>
+                <default>false</default>
+                <label>GMAP</label>
+            </value>
+            <value>
+                <fullName>GMAP 1044</fullName>
+                <default>false</default>
+                <label>GMAP 1044</label>
+            </value>
+            <value>
+                <fullName>GMAP 1050</fullName>
+                <default>false</default>
+                <label>GMAP 1050</label>
+            </value>
+            <value>
+                <fullName>GMAP 1052</fullName>
+                <default>false</default>
+                <label>GMAP 1052</label>
+            </value>
+            <value>
+                <fullName>GMAP 1100</fullName>
+                <default>false</default>
+                <label>GMAP 1100</label>
+            </value>
+            <value>
+                <fullName>GMAP 1144</fullName>
+                <default>false</default>
+                <label>GMAP 1144</label>
+            </value>
+            <value>
+                <fullName>GMAP 1152</fullName>
+                <default>false</default>
+                <label>GMAP 1152</label>
+            </value>
+            <value>
+                <fullName>GMAP 1154</fullName>
+                <default>false</default>
+                <label>GMAP 1154</label>
+            </value>
+            <value>
+                <fullName>GMAP 1252</fullName>
+                <default>false</default>
+                <label>GMAP 1252</label>
+            </value>
+            <value>
+                <fullName>GMKP</fullName>
+                <default>false</default>
+                <label>GMKP</label>
+            </value>
+            <value>
+                <fullName>GMOP</fullName>
+                <default>false</default>
+                <label>GMOP</label>
+            </value>
+            <value>
+                <fullName>Gravel</fullName>
+                <default>false</default>
+                <label>Gravel</label>
+            </value>
+            <value>
+                <fullName>GSAM</fullName>
+                <default>false</default>
+                <label>GSAM</label>
+            </value>
+            <value>
+                <fullName>GSAM 2023</fullName>
+                <default>false</default>
+                <label>GSAM 2023</label>
+            </value>
+            <value>
+                <fullName>GSAM 2024</fullName>
+                <default>false</default>
+                <label>GSAM 2024</label>
+            </value>
+            <value>
+                <fullName>GSAM 2050</fullName>
+                <default>false</default>
+                <label>GSAM 2050</label>
+            </value>
+            <value>
+                <fullName>GSAM 2123</fullName>
+                <default>false</default>
+                <label>GSAM 2123</label>
+            </value>
+            <value>
+                <fullName>GSAM 2124</fullName>
+                <default>false</default>
+                <label>GSAM 2124</label>
+            </value>
+            <value>
+                <fullName>GSSP</fullName>
+                <default>false</default>
+                <label>GSSP</label>
+            </value>
+            <value>
+                <fullName>GSSP 03.17.00</fullName>
+                <default>false</default>
+                <label>GSSP 03.17.00</label>
+            </value>
+            <value>
+                <fullName>GSSP 04.14.08</fullName>
+                <default>false</default>
+                <label>GSSP 04.14.08</label>
+            </value>
+            <value>
+                <fullName>GSSP 15</fullName>
+                <default>false</default>
+                <label>GSSP 15</label>
+            </value>
+            <value>
+                <fullName>GSSP 18</fullName>
+                <default>false</default>
+                <label>GSSP 18</label>
+            </value>
+            <value>
+                <fullName>GSSP 19</fullName>
+                <default>false</default>
+                <label>GSSP 19</label>
+            </value>
+            <value>
+                <fullName>GSSP 20</fullName>
+                <default>false</default>
+                <label>GSSP 20</label>
+            </value>
+            <value>
+                <fullName>GSSP 21</fullName>
+                <default>false</default>
+                <label>GSSP 21</label>
+            </value>
+            <value>
+                <fullName>GSSP 23</fullName>
+                <default>false</default>
+                <label>GSSP 23</label>
+            </value>
+            <value>
+                <fullName>GTSP</fullName>
+                <default>false</default>
+                <label>GTSP</label>
+            </value>
+            <value>
+                <fullName>GTSP 0344</fullName>
+                <default>false</default>
+                <label>GTSP 0344</label>
+            </value>
+            <value>
+                <fullName>GTSP 4236</fullName>
+                <default>false</default>
+                <label>GTSP 4236</label>
+            </value>
+            <value>
+                <fullName>GTSP 4336</fullName>
+                <default>false</default>
+                <label>GTSP 4336</label>
+            </value>
+            <value>
+                <fullName>GTSP 4436</fullName>
+                <default>false</default>
+                <label>GTSP 4436</label>
+            </value>
+            <value>
+                <fullName>GTSP 4536</fullName>
+                <default>false</default>
+                <label>GTSP 4536</label>
+            </value>
+            <value>
+                <fullName>GTSP 4537</fullName>
+                <default>false</default>
+                <label>GTSP 4537</label>
+            </value>
+            <value>
+                <fullName>GTSP 4636</fullName>
+                <default>false</default>
+                <label>GTSP 4636</label>
+            </value>
+            <value>
+                <fullName>Gypsum</fullName>
+                <default>false</default>
+                <label>Gypsum</label>
+            </value>
+            <value>
+                <fullName>Gypsum (Cane)</fullName>
+                <default>false</default>
+                <label>Gypsum (Cane)</label>
+            </value>
+            <value>
+                <fullName>Gypsum (Chemical)</fullName>
+                <default>false</default>
+                <label>Gypsum (Chemical)</label>
+            </value>
+            <value>
+                <fullName>Gypsum (Construction)</fullName>
+                <default>false</default>
+                <label>Gypsum (Construction)</label>
+            </value>
+            <value>
+                <fullName>Gypsum (Soy/Corn)</fullName>
+                <default>false</default>
+                <label>Gypsum (Soy/Corn)</label>
+            </value>
+            <value>
+                <fullName>Industrial HQ</fullName>
+                <default>false</default>
+                <label>Industrial HQ</label>
+            </value>
+            <value>
+                <fullName>Industrial Plus</fullName>
+                <default>false</default>
+                <label>Industrial Plus</label>
+            </value>
+            <value>
+                <fullName>Industrial Special</fullName>
+                <default>false</default>
+                <label>Industrial Special</label>
+            </value>
+            <value>
+                <fullName>K10</fullName>
+                <default>false</default>
+                <label>K10</label>
+            </value>
+            <value>
+                <fullName>K9</fullName>
+                <default>false</default>
+                <label>K9</label>
+            </value>
+            <value>
+                <fullName>K Blends</fullName>
+                <default>false</default>
+                <label>K Blends</label>
+            </value>
+            <value>
+                <fullName>KMAG Blends</fullName>
+                <default>false</default>
+                <label>KMAG Blends</label>
+            </value>
+            <value>
+                <fullName>KMAG Granular</fullName>
+                <default>false</default>
+                <label>KMAG Granular</label>
+            </value>
+            <value>
+                <fullName>KMAG Premium</fullName>
+                <default>false</default>
+                <label>KMAG Premium</label>
+            </value>
+            <value>
+                <fullName>KMAG Special</fullName>
+                <default>false</default>
+                <label>KMAG Special</label>
+            </value>
+            <value>
+                <fullName>KMAG Standard</fullName>
+                <default>false</default>
+                <label>KMAG Standard</label>
+            </value>
+            <value>
+                <fullName>Limestone</fullName>
+                <default>false</default>
+                <label>Limestone</label>
+            </value>
+            <value>
+                <fullName>Liqboro</fullName>
+                <default>false</default>
+                <label>Liqboro</label>
+            </value>
+            <value>
+                <fullName>Liqcal</fullName>
+                <default>false</default>
+                <label>Liqcal</label>
+            </value>
+            <value>
+                <fullName>Liqseawee</fullName>
+                <default>false</default>
+                <label>Liqseawee</label>
+            </value>
+            <value>
+                <fullName>Liqzinc</fullName>
+                <default>false</default>
+                <label>Liqzinc</label>
+            </value>
+            <value>
+                <fullName>Magnetite</fullName>
+                <default>false</default>
+                <label>Magnetite</label>
+            </value>
+            <value>
+                <fullName>MES</fullName>
+                <default>false</default>
+                <label>MES</label>
+            </value>
+            <value>
+                <fullName>MES10</fullName>
+                <default>false</default>
+                <label>MES10</label>
+            </value>
+            <value>
+                <fullName>MES10ZN</fullName>
+                <default>false</default>
+                <label>MES10ZN</label>
+            </value>
+            <value>
+                <fullName>MES15</fullName>
+                <default>false</default>
+                <label>MES15</label>
+            </value>
+            <value>
+                <fullName>MES15 Blends</fullName>
+                <default>false</default>
+                <label>MES15 Blends</label>
+            </value>
+            <value>
+                <fullName>MES5</fullName>
+                <default>false</default>
+                <label>MES5</label>
+            </value>
+            <value>
+                <fullName>MES9</fullName>
+                <default>false</default>
+                <label>MES9</label>
+            </value>
+            <value>
+                <fullName>MES9 Blends</fullName>
+                <default>false</default>
+                <label>MES9 Blends</label>
+            </value>
+            <value>
+                <fullName>MES9ZN</fullName>
+                <default>false</default>
+                <label>MES9ZN</label>
+            </value>
+            <value>
+                <fullName>MES Blends</fullName>
+                <default>false</default>
+                <label>MES Blends</label>
+            </value>
+            <value>
+                <fullName>MES Mix</fullName>
+                <default>false</default>
+                <label>MES Mix</label>
+            </value>
+            <value>
+                <fullName>MES Mix Blends</fullName>
+                <default>false</default>
+                <label>MES Mix Blends</label>
+            </value>
+            <value>
+                <fullName>MES OFF SPEC</fullName>
+                <default>false</default>
+                <label>MES OFF SPEC</label>
+            </value>
+            <value>
+                <fullName>MES S5B</fullName>
+                <default>false</default>
+                <label>MES S5B</label>
+            </value>
+            <value>
+                <fullName>MESZ</fullName>
+                <default>false</default>
+                <label>MESZ</label>
+            </value>
+            <value>
+                <fullName>MESZ Blends</fullName>
+                <default>false</default>
+                <label>MESZ Blends</label>
+            </value>
+            <value>
+                <fullName>Micro</fullName>
+                <default>false</default>
+                <label>Micro</label>
+            </value>
+            <value>
+                <fullName>Miski Mayo Phosphate Rock (Concentrate)</fullName>
+                <default>false</default>
+                <label>Miski Mayo Phosphate Rock (Concentrate)</label>
+            </value>
+            <value>
+                <fullName>Miski Mayo Phosphate Rock- MTN</fullName>
+                <default>false</default>
+                <label>Miski Mayo Phosphate Rock- MTN</label>
+            </value>
+            <value>
+                <fullName>Mpasto</fullName>
+                <default>false</default>
+                <label>Mpasto</label>
+            </value>
+            <value>
+                <fullName>Mpasto Max</fullName>
+                <default>false</default>
+                <label>Mpasto Max</label>
+            </value>
+            <value>
+                <fullName>Mpasto Nitro</fullName>
+                <default>false</default>
+                <label>Mpasto Nitro</label>
+            </value>
+            <value>
+                <fullName>Mpasto Super</fullName>
+                <default>false</default>
+                <label>Mpasto Super</label>
+            </value>
+            <value>
+                <fullName>MSE9 Blends</fullName>
+                <default>false</default>
+                <label>MSE9 Blends</label>
+            </value>
+            <value>
+                <fullName>N Blends</fullName>
+                <default>false</default>
+                <label>N Blends</label>
+            </value>
+            <value>
+                <fullName>NEXFOS</fullName>
+                <default>false</default>
+                <label>NEXFOS</label>
+            </value>
+            <value>
+                <fullName>NITROGEN</fullName>
+                <default>false</default>
+                <label>NITROGEN</label>
+            </value>
+            <value>
+                <fullName>NPK</fullName>
+                <default>false</default>
+                <label>NPK</label>
+            </value>
+            <value>
+                <fullName>NPK Blends</fullName>
+                <default>false</default>
+                <label>NPK Blends</label>
+            </value>
+            <value>
+                <fullName>OIL</fullName>
+                <default>false</default>
+                <label>OIL</label>
+            </value>
+            <value>
+                <fullName>ORE</fullName>
+                <default>false</default>
+                <label>ORE</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>P</fullName>
+                <default>false</default>
+                <label>P</label>
+            </value>
+            <value>
+                <fullName>P18</fullName>
+                <default>false</default>
+                <label>P18</label>
+            </value>
+            <value>
+                <fullName>P19</fullName>
+                <default>false</default>
+                <label>P19</label>
+            </value>
+            <value>
+                <fullName>P20</fullName>
+                <default>false</default>
+                <label>P20</label>
+            </value>
+            <value>
+                <fullName>P21</fullName>
+                <default>false</default>
+                <label>P21</label>
+            </value>
+            <value>
+                <fullName>P23</fullName>
+                <default>false</default>
+                <label>P23</label>
+            </value>
+            <value>
+                <fullName>P45</fullName>
+                <default>false</default>
+                <label>P45</label>
+            </value>
+            <value>
+                <fullName>P Blends</fullName>
+                <default>false</default>
+                <label>P Blends</label>
+            </value>
+            <value>
+                <fullName>PDAP</fullName>
+                <default>false</default>
+                <label>PDAP</label>
+            </value>
+            <value>
+                <fullName>Pegasus Fine</fullName>
+                <default>false</default>
+                <label>Pegasus Fine</label>
+            </value>
+            <value>
+                <fullName>Pegasus Granular</fullName>
+                <default>false</default>
+                <label>Pegasus Granular</label>
+            </value>
+            <value>
+                <fullName>Performa</fullName>
+                <default>false</default>
+                <label>Performa</label>
+            </value>
+            <value>
+                <fullName>Performa bio</fullName>
+                <default>false</default>
+                <label>Performa bio</label>
+            </value>
+            <value>
+                <fullName>P Fertilizer</fullName>
+                <default>false</default>
+                <label>P Fertilizer</label>
+            </value>
+            <value>
+                <fullName>Phosphate Rock</fullName>
+                <default>false</default>
+                <label>Phosphate Rock</label>
+            </value>
+            <value>
+                <fullName>Phosphate Rock - Other</fullName>
+                <default>false</default>
+                <label>Phosphate Rock - Other</label>
+            </value>
+            <value>
+                <fullName>Phosphoric (Chemical)</fullName>
+                <default>false</default>
+                <label>Phosphoric (Chemical)</label>
+            </value>
+            <value>
+                <fullName>Phosphoric (Fertilizer)</fullName>
+                <default>false</default>
+                <label>Phosphoric (Fertilizer)</label>
+            </value>
+            <value>
+                <fullName>Phosphoric Acid</fullName>
+                <default>false</default>
+                <label>Phosphoric Acid</label>
+            </value>
+            <value>
+                <fullName>PMAP</fullName>
+                <default>false</default>
+                <label>PMAP</label>
+            </value>
+            <value>
+                <fullName>PSAM</fullName>
+                <default>false</default>
+                <label>PSAM</label>
+            </value>
+            <value>
+                <fullName>PSAM 2023</fullName>
+                <default>false</default>
+                <label>PSAM 2023</label>
+            </value>
+            <value>
+                <fullName>PSAM 2024</fullName>
+                <default>false</default>
+                <label>PSAM 2024</label>
+            </value>
+            <value>
+                <fullName>PSAM21</fullName>
+                <default>false</default>
+                <label>PSAM21</label>
+            </value>
+            <value>
+                <fullName>PSAM 2122</fullName>
+                <default>false</default>
+                <label>PSAM 2122</label>
+            </value>
+            <value>
+                <fullName>PSAM 2123</fullName>
+                <default>false</default>
+                <label>PSAM 2123</label>
+            </value>
+            <value>
+                <fullName>PSAM 2124</fullName>
+                <default>false</default>
+                <label>PSAM 2124</label>
+            </value>
+            <value>
+                <fullName>PSSP 00.15.00</fullName>
+                <default>false</default>
+                <label>PSSP 00.15.00</label>
+            </value>
+            <value>
+                <fullName>PSSP 18</fullName>
+                <default>false</default>
+                <label>PSSP 18</label>
+            </value>
+            <value>
+                <fullName>PSSP 19</fullName>
+                <default>false</default>
+                <label>PSSP 19</label>
+            </value>
+            <value>
+                <fullName>PTSP 4236</fullName>
+                <default>false</default>
+                <label>PTSP 4236</label>
+            </value>
+            <value>
+                <fullName>PTSP 4436</fullName>
+                <default>false</default>
+                <label>PTSP 4436</label>
+            </value>
+            <value>
+                <fullName>PTSP 4438</fullName>
+                <default>false</default>
+                <label>PTSP 4438</label>
+            </value>
+            <value>
+                <fullName>PTSP 4636</fullName>
+                <default>false</default>
+                <label>PTSP 4636</label>
+            </value>
+            <value>
+                <fullName>PTSP ROP</fullName>
+                <default>false</default>
+                <label>PTSP ROP</label>
+            </value>
+            <value>
+                <fullName>Red Granular</fullName>
+                <default>false</default>
+                <label>Red Granular</label>
+            </value>
+            <value>
+                <fullName>Red MOP Standard</fullName>
+                <default>false</default>
+                <label>Red MOP Standard</label>
+            </value>
+            <value>
+                <fullName>Rock</fullName>
+                <default>false</default>
+                <label>Rock</label>
+            </value>
+            <value>
+                <fullName>ROM</fullName>
+                <default>false</default>
+                <label>ROM</label>
+            </value>
+            <value>
+                <fullName>Salt</fullName>
+                <default>false</default>
+                <label>Salt</label>
+            </value>
+            <value>
+                <fullName>Sam</fullName>
+                <default>false</default>
+                <label>Sam</label>
+            </value>
+            <value>
+                <fullName>SERVICES</fullName>
+                <default>false</default>
+                <label>SERVICES</label>
+            </value>
+            <value>
+                <fullName>SOIL HEALTH</fullName>
+                <default>false</default>
+                <label>SOIL HEALTH</label>
+            </value>
+            <value>
+                <fullName>SSP Micro</fullName>
+                <default>false</default>
+                <label>SSP Micro</label>
+            </value>
+            <value>
+                <fullName>Sulfur</fullName>
+                <default>false</default>
+                <label>Sulfur</label>
+            </value>
+            <value>
+                <fullName>Sulfur 70%</fullName>
+                <default>false</default>
+                <label>Sulfur 70%</label>
+            </value>
+            <value>
+                <fullName>Sulfur 80%</fullName>
+                <default>false</default>
+                <label>Sulfur 80%</label>
+            </value>
+            <value>
+                <fullName>Sulfur 90%</fullName>
+                <default>false</default>
+                <label>Sulfur 90%</label>
+            </value>
+            <value>
+                <fullName>Sulfuric (Chemical)</fullName>
+                <default>false</default>
+                <label>Sulfuric (Chemical)</label>
+            </value>
+            <value>
+                <fullName>Sulfuric (Fertilizer)</fullName>
+                <default>false</default>
+                <label>Sulfuric (Fertilizer)</label>
+            </value>
+            <value>
+                <fullName>Sulfuric Acid</fullName>
+                <default>false</default>
+                <label>Sulfuric Acid</label>
+            </value>
+            <value>
+                <fullName>Sulphur, Dry</fullName>
+                <default>false</default>
+                <label>Sulphur, Dry</label>
+            </value>
+            <value>
+                <fullName>Sulphur, Vatted</fullName>
+                <default>false</default>
+                <label>Sulphur, Vatted</label>
+            </value>
+            <value>
+                <fullName>Sulphur Molten</fullName>
+                <default>false</default>
+                <label>Sulphur Molten</label>
+            </value>
+            <value>
+                <fullName>Sulphur Remelted</fullName>
+                <default>false</default>
+                <label>Sulphur Remelted</label>
+            </value>
+            <value>
+                <fullName>Susterra</fullName>
+                <default>false</default>
+                <label>Susterra</label>
+            </value>
+            <value>
+                <fullName>Sweep</fullName>
+                <default>false</default>
+                <label>Sweep</label>
+            </value>
+            <value>
+                <fullName>SWEEPINGS</fullName>
+                <default>false</default>
+                <label>SWEEPINGS</label>
+            </value>
+            <value>
+                <fullName>Truman Blends</fullName>
+                <default>false</default>
+                <label>Truman Blends</label>
+            </value>
+            <value>
+                <fullName>Trumao Blends</fullName>
+                <default>false</default>
+                <label>Trumao Blends</label>
+            </value>
+            <value>
+                <fullName>TSP</fullName>
+                <default>false</default>
+                <label>TSP</label>
+            </value>
+            <value>
+                <fullName>Turf 230</fullName>
+                <default>false</default>
+                <label>Turf 230</label>
+            </value>
+            <value>
+                <fullName>UPM</fullName>
+                <default>false</default>
+                <label>UPM</label>
+            </value>
+            <value>
+                <fullName>Urea</fullName>
+                <default>false</default>
+                <label>Urea</label>
+            </value>
+            <value>
+                <fullName>Water Softener</fullName>
+                <default>false</default>
+                <label>Water Softener</label>
+            </value>
+            <value>
+                <fullName>WHITE COARSE</fullName>
+                <default>false</default>
+                <label>WHITE COARSE</label>
+            </value>
+            <value>
+                <fullName>White MOP Standard</fullName>
+                <default>false</default>
+                <label>White MOP Standard</label>
+            </value>
+            <value>
+                <fullName>WSF</fullName>
+                <default>false</default>
+                <label>WSF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Los periodos de pago no se pueden crear/editar en esta fase. Modifique el contrato de venta para revisar los periodos de pago.</errorMessage>
+        <name>PMC_SS_RestrictPayoutPeriodEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede crear/actualizar el período de pago del programa de rebaja una vez que el programa de rebaja está inactivo.</errorMessage>
+        <name>PMC_SS_RestrictPayoutPeriodModification</name>
+    </validationRules>
+</CustomObjectTranslation>

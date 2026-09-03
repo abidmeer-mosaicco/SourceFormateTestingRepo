@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Planning_Group__c</fullName>
+    <label>Planning Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AS</fullName>
+                <default>false</default>
+                <label>AS - Aspire</label>
+            </value>
+            <value>
+                <fullName>FF</fullName>
+                <default>false</default>
+                <label>FF - Fosfatado</label>
+            </value>
+            <value>
+                <fullName>KC</fullName>
+                <default>false</default>
+                <label>KC - Potássico</label>
+            </value>
+            <value>
+                <fullName>KM</fullName>
+                <default>false</default>
+                <label>KM - Kmag</label>
+            </value>
+            <value>
+                <fullName>S1</fullName>
+                <default>false</default>
+                <label>S1 - Microessentials S15</label>
+            </value>
+            <value>
+                <fullName>S9</fullName>
+                <default>false</default>
+                <label>S9 - Microessentials S9</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>SA - Sulfato de Amônia</label>
+            </value>
+            <value>
+                <fullName>UR</fullName>
+                <default>false</default>
+                <label>UR - Ureia</label>
+            </value>
+            <value>
+                <fullName>VR</fullName>
+                <default>false</default>
+                <label>VR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

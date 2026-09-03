@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- CPQ_Lookup --></label>
+        <name>CPQ_Lookup</name>
+    </fieldSets>
+    <recordTypes>
+        <description><!-- This record type will be used to create Account records of Agent record types --></description>
+        <label><!-- Agent --></label>
+        <name>PMC_SS_Agent</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type will be used to create Account records of Customer record types --></description>
+        <label><!-- Customer --></label>
+        <name>PMC_SS_Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type will be used to create Account records of Prospect record types --></description>
+        <label><!-- Prospect --></label>
+        <name>PMC_SS_Prospect</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type will be used to create Account records of Retailer record types --></description>
+        <label><!-- Retailer --></label>
+        <name>Retailer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for the Legacy Ship to - Transition --></description>
+        <label><!-- Ship-to Customer Legacy --></label>
+        <name>Ship_to_Customer_Legacy</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Create a ship-to customer to register a customer to receive goods (where the goods will be delivered) --></description>
+        <label><!-- Ship-to Customer --></label>
+        <name>Z002</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- CNPJ - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditCNPJ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditCPF</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditCustomerType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Industry - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditIndustry</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Municipal Tax Number - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditMunicipalTaxNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Overdel Tolerance - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditOverdelTolerance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- RUC - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditRUC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Shipping Conditions - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditShippingConditions</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- StateTaxNumber - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditStateTaxNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Transportation Zone - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditTransportationZone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Group - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Underdel Tolerance - Only Master Data or System Administrator team members can edit this field --></errorMessage>
+        <name>PMC_SS_BlockEditUnderdelTolerance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Provide only numbers for Domestic Broker --></errorMessage>
+        <name>PMC_SS_PreventLettersDomBroker</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Provide only numbers for Domestic Broker 2 --></errorMessage>
+        <name>PMC_SS_PreventLettersDomBroker2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;The Email field cannot start or end with a dot (.)&quot; --></errorMessage>
+        <name>PMC_SS_Prevent_Dot_In_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- City Name should not exceed 40 characters. --></errorMessage>
+        <name>PMC_SS_ValidateAddressCityLenght</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill all Address Fields --></errorMessage>
+        <name>PMC_SS_ValidateAddressFieldsPopulated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Postal Code should not exceed 10 characters. For Brazil, please adjust ZIP/Postal Code format to: 00000-000 --></errorMessage>
+        <name>PMC_SS_ValidateAddressPostalCodeFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Complete this field --></errorMessage>
+        <name>PMC_SS_ValidateAddressStatePupuated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Address Street should not exceed 60 characters. --></errorMessage>
+        <name>PMC_SS_ValidateAddressStreetLenght</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Agent accounts are standalone accounts and cannot have parents --></errorMessage>
+        <name>PMC_SS_ValidateAgentAccountParent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please inform CNPJ by using only numbers  and alphabets(14 numbers and alphabets). --></errorMessage>
+        <name>PMC_SS_ValidateCNPJFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please inform CPF by using only numbers (11 numbers). --></errorMessage>
+        <name>PMC_SS_ValidateCPFFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Email Address should not exceed 60 characters. --></errorMessage>
+        <name>PMC_SS_ValidateEmailLenght</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fax number should not exceed 30 characters. --></errorMessage>
+        <name>PMC_SS_ValidateFaxLenght</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- State Tax Number should not exceed 20 characteres and cannot contain special carachters (no dot, no comma, no hifen). --></errorMessage>
+        <name>PMC_SS_ValidateIEFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account Name should not exceed 35 characters. --></errorMessage>
+        <name>PMC_SS_ValidateNameLenght</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Parent Account association is invalid, please add a valid Sold-to/Ship-to Account for Other Account or Sold-to/Other for a Sold-to Account as Parent Account. --></errorMessage>
+        <name>PMC_SS_ValidateParentAccount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Phone Number lenght should not exceed 11 digits. For Brazil, please adjust Phone format to: (00) 00000-0000 --></errorMessage>
+        <name>PMC_SS_ValidatePhoneFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the phone number in the correct format: (XXX) XXX-XXXX or XXX-XXX-XXXX for US --></errorMessage>
+        <name>PMC_SS_ValidatePhoneFormatUS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only numbers are accepted for RUC --></errorMessage>
+        <name>PMC_SS_ValidateRUCFormat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Account you’re on is not a Sold-to/Other Account. Only Sold-to/Other accounts can use the Parent Account field. --></errorMessage>
+        <name>PMC_SS_ValidateSoldToAccount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only numbers are allowed in the State Tax Number field. --></errorMessage>
+        <name>PMC_SS_ValidateStateTaxNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide the City --></errorMessage>
+        <name>RequireBillingCity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide the Zip/Postal Code --></errorMessage>
+        <name>RequireBillingPostalCode</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide the Street Name --></errorMessage>
+        <name>RequireBillingStreet</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_ActivateLegalHold --></label>
+        <name>PMC_CLM_ActivateLegalHold</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PMC_CLM_DeactivateLegalHold --></label>
+        <name>PMC_CLM_DeactivateLegalHold</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Renew_Assets --></label>
+        <name>SBQQ__Renew_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label>Assinar novamente o Marketing Cloud</label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label>Cancelar assinatura do Marketing Cloud</label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label>Enviar email do Marketing Cloud</label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label>Visualizar os dados analíticos do Marketing Cloud</label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+</CustomObjectTranslation>

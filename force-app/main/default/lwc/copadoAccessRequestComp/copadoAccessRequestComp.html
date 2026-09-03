@@ -1,0 +1,75 @@
+<template>
+    <section class="shell">
+        <!-- Animated background blobs -->
+        <div class="bg">
+            <span class="blob b1"></span>
+            <span class="blob b2"></span>
+        </div>
+
+        <!-- Compact animated header -->
+        <header class="banner">
+            <div class="banner-left">
+                <lightning-icon icon-name="utility:shield" size="x-small" class="banner-icon" alternative-text="Copado">
+                </lightning-icon>
+                <div>
+                    <h1 class="title">Copado Access Request</h1>
+                    <p class="subtitle">Provide the details below. <strong>*</strong> indicates required.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Form card -->
+        <div class="card">
+            <lightning-layout multiple-rows pull-to-boundary="small">
+                <!-- Row 1 -->
+                <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-input variant="label-stacked" label="Full Name *" value={fullName} required
+                        onchange={onChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-input variant="label-stacked" type="email" label="Work Email *" value={email} required
+                        onchange={onChange}></lightning-input>
+                </lightning-layout-item>
+
+                <!-- Row 2 -->
+                <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-input variant="label-stacked" type="text" label="Salesforce UserName" value={salesforceUserName} required
+                        onchange={onChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-input variant="label-stacked" type="email" label="Manager Email" value={managerEmail}
+                        required onchange={onChange}></lightning-input>
+                </lightning-layout-item>
+
+                <!-- Row 3 -->
+                <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-textarea variant="label-stacked" label="Project Name" value={projectName} required
+                        onchange={onChange}></lightning-textarea>
+                </lightning-layout-item>
+                 <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small">
+                    <lightning-combobox variant="label-stacked" label="Copado Role" value={copadoRole} required
+                        options={roleOptions} placeholder="Select role" onchange={onChange}></lightning-combobox>
+                </lightning-layout-item>
+
+                <!-- Row 4 -->
+                <lightning-layout-item size="12" padding="horizontal-small">
+                    <lightning-textarea variant="label-stacked" label="Reason *" value={reason} required
+                        onchange={onChange}></lightning-textarea>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <div class="divider"></div>
+            <div class="actions">
+                <lightning-button variant="neutral" label="Reset" onclick={reset}></lightning-button>
+                <lightning-button variant="brand" label="Submit" class="slds-m-left_small" onclick={submit}
+                    disabled={isSubmitting}></lightning-button>
+            </div>
+        </div>
+
+        <template if:true={isSubmitting}>
+            <div class="overlay">
+                <lightning-spinner alternative-text="Submitting" size="medium"></lightning-spinner>
+            </div>
+        </template>
+    </section>
+</template>

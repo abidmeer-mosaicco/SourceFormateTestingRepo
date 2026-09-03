@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_AcceptanceConditionMandatory</fullName>
+    <active>true</active>
+    <description>When moving quote life cycle to Accepted  stage this Customer Acceptance Method and Primary field is mandatory</description>
+    <errorConditionFormula>AND(
+ NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+NOT(ISCHANGED( PMC_CPQ_FlowVRByPassToggle__c )),
+ NOT( RecordType.DeveloperName = &apos;PMC_CPQ_InternationalDistribution&apos;),
+ ISPICKVAL( SBQQ__Status__c , &quot;Accepted&quot;),
+ OR( 
+      ISPICKVAL( PRIORVALUE( SBQQ__Status__c ) , &quot;Approved&quot;),
+       ISPICKVAL( PRIORVALUE( SBQQ__Status__c ) , &quot;Presented&quot;) 
+ ),
+ ISPICKVAL( PMC_CPQ_CustomerAcceptanceMethod__c , &quot;&quot;)
+ )</errorConditionFormula>
+    <errorMessage>Customer Acceptance Method is required for Accepted Quotes
+has context menu</errorMessage>
+</ValidationRule>

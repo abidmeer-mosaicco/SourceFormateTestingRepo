@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RelatedAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field to related Bill-to, Ship-to and Payer to Sold-to accounts</description>
+    <inlineHelpText>Junction Object will be renamed to Related Account’s name on save</inlineHelpText>
+    <label>Related Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Ship-to</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Sold-to</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Bill-to</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Payer</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Account Partner Relationships (Related Account)</relationshipLabel>
+    <relationshipName>PMC_SS_RelatedPartnerAccounts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

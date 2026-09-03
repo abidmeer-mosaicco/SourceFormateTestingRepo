@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Automates the license assignment to the partner community users.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Quote__c.PMC_DH_FilterStatus__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Subscription__c.PMC_CPQ_QuoteLineSelfId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SBQQ__Subscription__c.SBQQ__QuoteLine__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PMC_DH_CPQ_PermissionSetLicense</label>
+    <license>SalesforceCPQ.CPQStandardPerm</license>
+</PermissionSet>

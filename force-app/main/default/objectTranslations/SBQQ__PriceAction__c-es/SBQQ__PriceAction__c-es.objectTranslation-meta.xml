@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Price Action --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Price Action --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Action # --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>&quot;Para utilizar la Orientación de Precios de la Línea de Presupuesto como Objeto de Destino, seleccione Después de Calcular en la lista Evento de Evaluación de Cálculo.&quot;</errorMessage>
+        <name>SBQQ__Event_Evaluation_Pricing_Guidance</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>El Objeto Objetivo de la Acción del Precio no coincide con el Alcance de la Evaluación</errorMessage>
+        <name>SBQQ__Target_Object_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Determina cómo se calculan los precios de las suscripciones dinámicas: Presupuesto utiliza todos los productos sin suscripción del presupuesto, mientras que Grupo utiliza sólo los productos sin suscripción del mismo grupo.&quot;</help>
+    <label>Alcance de la suscripción</label>
+    <name>SBQQ__SubscriptionScope__c</name>
+    <picklistValues>
+        <masterLabel>Group</masterLabel>
+        <translation>Grupo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote</masterLabel>
+        <translation>Presupuesto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDA_PMC_CPQ_CLM_Pricing</fullName>
+    <columns>NAME</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Project__c</columns>
+    <columns>copado__Developer__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Project__c</field>
+        <operation>contains</operation>
+        <value>GDA PMC CPQ,CLM,Pricing</value>
+    </filters>
+    <label>GDA PMC CPQ, CLM, Pricing</label>
+    <sharedTo>
+        <group>Copado_Release_Managers</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,26 @@
+.icon-button {
+    display: flex;
+    justify-content: end;
+}
+
+.icon-button img {
+    cursor: pointer;
+}
+
+.btn-tooltip {
+    position: absolute;
+    top: 8px;
+    background: var(--primary-green);
+}
+
+.btn-tooltip .tooltip-text {
+    font-size: var(--x-small-font-size);
+}
+
+.upload-document-text {
+    font-family: 'Barlow-Bold';
+    font-size: 18px;
+    line-height: 27px;
+    color: #093532;
+    font-weight: 700;
+}

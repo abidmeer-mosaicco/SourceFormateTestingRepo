@@ -1,0 +1,14 @@
+.modal-wrapper {
+  margin: 16px;
+}
+
+@media (max-width: 767px) {
+  .mobile-button {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .mobile-button lightning-button:first-child {
+    margin-top: 16px;
+  }
+}

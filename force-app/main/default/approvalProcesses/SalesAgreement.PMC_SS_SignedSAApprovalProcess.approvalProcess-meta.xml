@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>CreatedDate</field>
+        <field>Status</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Owner</name>
+                <type>relatedUserField</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <criteriaItems>
+                <field>SalesAgreement.PMC_CLM_AgreementDocumentStatus__c</field>
+                <operation>notEqual</operation>
+                <value>Accepted</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Approval Requested</label>
+        <name>Approval_Requested</name>
+    </approvalStep>
+    <description>Auto Approve Sales Agreement on receiving Customer Signature</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>SalesAgreement.Status</field>
+            <operation>equals</operation>
+            <value>Pending with Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SalesAgreement.RecordType</field>
+            <operation>equals</operation>
+            <value>Annual Sales Agreement,Business Partner Agreement,Industrial Long-Term Agreement,International Long-Term Agreement</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SalesAgreement.PMC_CLM_AgreementDocumentStatus__c</field>
+            <operation>equals</operation>
+            <value>Accepted</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>PMC_SS_MarkStatusAsReviewed</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>SetApprovalStatustoApproved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>SetApprovalStatustoDenied</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Signed Sales Agreement Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_DeliveryStatus__c</fullName>
+    <description>This field captures the delivery Delivery  Status.</description>
+    <label>Delivery Line Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Yet Shipped</fullName>
+                <default>false</default>
+                <label>Not Yet Shipped</label>
+            </value>
+            <value>
+                <fullName>Partially Shipped</fullName>
+                <default>false</default>
+                <label>Partially Shipped</label>
+            </value>
+            <value>
+                <fullName>Completely Shipped</fullName>
+                <default>false</default>
+                <label>Completely Shipped</label>
+            </value>
+            <value>
+                <fullName>Delivered</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Delivered</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Picked</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Picked</label>
+            </value>
+            <value>
+                <fullName>Shipped</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shipped</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

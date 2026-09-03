@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_FPDToggleSwitch</fullName>
+    <active>true</active>
+    <description>To Prevent Account Managers from creating FPD Quotes when FPD Toggle Switch is OFF</description>
+    <errorConditionFormula>AND(
+NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+NOT(ISCHANGED( PMC_CPQ_FlowVRBypassToggle__c )),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;API Only profile&apos;,
+$CustomMetadata.PMC_CPQ_FPDToggleSwitch__mdt.PMC_CPQ_FPDQuoting.PMC_CPQ_Switch__c =False, 
+ OR( ISPICKVAL(PMC_CPQ_QuoteRecordType__c,&apos;Domestic NA&apos;),ISPICKVAL(PMC_CPQ_QuoteRecordType__c,&apos;International&apos;)), 
+OR(ISPICKVAL(PMC_CPQ_ContractType__c,&apos;FPD&apos;),ISPICKVAL(PMC_CPQ_ContractType__c,&apos;FPD Ex-Space&apos;)) 
+)</errorConditionFormula>
+    <errorDisplayField>PMC_CPQ_PercentageOfQuantity__c</errorDisplayField>
+    <errorMessage>The ability to Quote FPDs is currently on hold. For more information, please reach out to a Product Manager</errorMessage>
+</ValidationRule>

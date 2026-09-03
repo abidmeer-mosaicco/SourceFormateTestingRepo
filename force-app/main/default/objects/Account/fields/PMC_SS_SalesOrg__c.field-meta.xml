@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SalesOrg__c</fullName>
+    <inlineHelpText>For Brazil, select option “Mosaic Fert Brasil Ltda” for distribution or select option “Mosaic Fert P&amp;K Ltda” for P&amp;K. For Paraguay, select the option “Mosaic Fert Paraguay”. For Canada, select “Mosaic CAN Crop Nutr LP”. For US, select “Mosaic Global Sales, LLC”. For Ammonia, select “Tampa Port Services LLC”</inlineHelpText>
+    <label>Sales Organization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1002</fullName>
+                <default>false</default>
+                <label>1002 - Mosaic Global Sales LLC</label>
+            </value>
+            <value>
+                <fullName>1003</fullName>
+                <default>false</default>
+                <label>1003 - Mosaic Crop Nutrition LLC</label>
+            </value>
+            <value>
+                <fullName>1004</fullName>
+                <default>false</default>
+                <label>1004 - Mosaic Fertilizer LLC</label>
+            </value>
+            <value>
+                <fullName>1005</fullName>
+                <default>false</default>
+                <label>1005 - Mosaic Potash Carlsbad</label>
+            </value>
+            <value>
+                <fullName>1025</fullName>
+                <default>false</default>
+                <label>1025 - Tampa Port Services LLC</label>
+            </value>
+            <value>
+                <fullName>1026</fullName>
+                <default>false</default>
+                <label>1026 - MOS Ag Innovation Sol LLC</label>
+            </value>
+            <value>
+                <fullName>1030</fullName>
+                <default>false</default>
+                <label>1030 - Gulf Sulphur Service, LTD</label>
+            </value>
+            <value>
+                <fullName>2000</fullName>
+                <default>false</default>
+                <label>2000 - Mosaic CAN Crop Nutr LP</label>
+            </value>
+            <value>
+                <fullName>2001</fullName>
+                <default>false</default>
+                <label>2001 - Mosaic Potash COL ULC</label>
+            </value>
+            <value>
+                <fullName>2002</fullName>
+                <default>false</default>
+                <label>2002 - Mosaic Potash EST LP</label>
+            </value>
+            <value>
+                <fullName>2003</fullName>
+                <default>false</default>
+                <label>2003 - Mosaic Canada ULC (BP)</label>
+            </value>
+            <value>
+                <fullName>4000</fullName>
+                <default>false</default>
+                <label>4000 - Mosaic Fert Brasil Ltda</label>
+            </value>
+            <value>
+                <fullName>4001</fullName>
+                <default>false</default>
+                <label>4001 - Fospar SA</label>
+            </value>
+            <value>
+                <fullName>4004</fullName>
+                <default>false</default>
+                <label>4004 - Mosaic Potássio Mineração</label>
+            </value>
+            <value>
+                <fullName>4005</fullName>
+                <default>false</default>
+                <label>4005 - Mosaic Fert P&amp;K Ltda</label>
+            </value>
+            <value>
+                <fullName>4600</fullName>
+                <default>false</default>
+                <label>4600 - Mosaic Fert Bahamas Ltd</label>
+            </value>
+            <value>
+                <fullName>4620</fullName>
+                <default>false</default>
+                <label>4620 - Mosaic Fert Paraguay SRL</label>
+            </value>
+            <value>
+                <fullName>4680</fullName>
+                <default>false</default>
+                <label>4680 - Co Minera Miski Mayo SRL</label>
+            </value>
+            <value>
+                <fullName>1310</fullName>
+                <default>false</default>
+                <label>1310 - Dom. Sales Org CN</label>
+            </value>
+            <value>
+                <fullName>1410</fullName>
+                <default>false</default>
+                <label>1410 - Dom. Sales Org BR</label>
+            </value>
+            <value>
+                <fullName>1710</fullName>
+                <default>false</default>
+                <label>1710 - Dom. Sales Org US</label>
+            </value>
+            <value>
+                <fullName>1810</fullName>
+                <default>false</default>
+                <label>1810 - Dom. Sales Org IN</label>
+            </value>
+            <value>
+                <fullName>2910</fullName>
+                <default>false</default>
+                <label>2910 - Dom. Sales Org CA</label>
+            </value>
+            <value>
+                <fullName>Global Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Global Sales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

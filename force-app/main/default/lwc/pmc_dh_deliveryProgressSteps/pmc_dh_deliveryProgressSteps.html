@@ -1,0 +1,35 @@
+<template>
+  <div class="delivery-progress-bar">
+    <ul class="slds-grid slds-size_1-of-1 del-prog-steps-list">
+      <li class="slds-col del-progress-step" for:each={stepsData} for:item="item" key={item.strTitle}>
+        <div>
+          <c-pmc_dh_delivery-progress-steps-icons icon={item.icon} status={item.strStatus}>
+          </c-pmc_dh_delivery-progress-steps-icons>
+        </div>
+        <div class="status-icon">
+          <c-pmc_dh_delivery-progress-steps-icons status-icon=true status={item.strStatus}>
+          </c-pmc_dh_delivery-progress-steps-icons>
+        </div>
+        <hr class="border" data-status={item.strStatus}>
+        <div class="delivery-progress-details-container">
+          <div class="title slds-align_absolute-center status-text" data-status={item.strStatus}>{item.strTitle}</div>
+          <template if:true={item.strCustOrderNumber}>
+            <div class="title slds-align_absolute-center" data-status={item.strStatus}>{item.strCustOrderNumber}</div>
+          </template>
+          <template if:true={item.strUniqueNumber}>
+            <div class="title slds-align_absolute-center" data-status={item.strStatus}>{item.strUniqueNumber}</div>
+          </template>
+          <template if:true={item.datDate}>
+            <div class="title slds-align_absolute-center" data-status={item.strStatus}>{item.datDate}</div>
+          </template>
+          <template if:true={item.strLocation}>
+            <div class="title slds-align_absolute-center" data-status={item.strStatus}>{item.strLocation}</div>
+          </template>
+          <template if:true={item.strAsOf}>
+            <div class="title slds-align_absolute-center" data-status={item.strStatus}>{item.strAsOf}</div>
+          </template>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>

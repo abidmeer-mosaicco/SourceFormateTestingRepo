@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A</fullName>
+        <default>false</default>
+        <label>A - Arrival-In Transit Yard</label>
+    </customValue>
+    <customValue>
+        <fullName>AO</fullName>
+        <default>false</default>
+        <label>AO - LOADED ON BARGE</label>
+    </customValue>
+    <customValue>
+        <fullName>B</fullName>
+        <default>false</default>
+        <label>B - Bad Orders</label>
+    </customValue>
+    <customValue>
+        <fullName>CPU</fullName>
+        <default>false</default>
+        <label>CPU - Constructive Placed to Unload</label>
+    </customValue>
+    <customValue>
+        <fullName>D</fullName>
+        <default>false</default>
+        <label>D - Arrival-Destination</label>
+    </customValue>
+    <customValue>
+        <fullName>FUL</fullName>
+        <default>false</default>
+        <label>FUL - Finished Unload</label>
+    </customValue>
+    <customValue>
+        <fullName>G</fullName>
+        <default>false</default>
+        <label>G - Bad Order Release</label>
+    </customValue>
+    <customValue>
+        <fullName>INT</fullName>
+        <default>false</default>
+        <label>INT - Interchange</label>
+    </customValue>
+    <customValue>
+        <fullName>J</fullName>
+        <default>false</default>
+        <label>J - Delivery-Junction</label>
+    </customValue>
+    <customValue>
+        <fullName>P</fullName>
+        <default>false</default>
+        <label>P - Departure</label>
+    </customValue>
+    <customValue>
+        <fullName>R</fullName>
+        <default>false</default>
+        <label>R - Received-Junction</label>
+    </customValue>
+    <customValue>
+        <fullName>S</fullName>
+        <default>false</default>
+        <label>S - Storage</label>
+    </customValue>
+    <customValue>
+        <fullName>STO</fullName>
+        <default>false</default>
+        <label>STO - Storage</label>
+    </customValue>
+    <customValue>
+        <fullName>TOW</fullName>
+        <default>false</default>
+        <label>TOW - Towed Event</label>
+    </customValue>
+    <customValue>
+        <fullName>W</fullName>
+        <default>false</default>
+        <label>W - Released</label>
+    </customValue>
+    <customValue>
+        <fullName>*W</fullName>
+        <default>false</default>
+        <label>*W - Waybill Created</label>
+    </customValue>
+    <customValue>
+        <fullName>Y</fullName>
+        <default>false</default>
+        <label>Y - Placement-Constructive</label>
+    </customValue>
+    <customValue>
+        <fullName>Z</fullName>
+        <default>false</default>
+        <label>Z - Placement-Actual</label>
+    </customValue>
+    <description>Intransit Status</description>
+    <masterLabel>Intransit Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

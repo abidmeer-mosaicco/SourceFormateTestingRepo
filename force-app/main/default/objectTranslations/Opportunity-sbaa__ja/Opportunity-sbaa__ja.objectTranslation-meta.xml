@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Deal Desk --></label>
+        <name>sbaa__DealDesk</name>
+    </fieldSets>
+    <recordTypes>
+        <description><!-- Default Opportunity Record Type --></description>
+        <label><!-- Opportunity --></label>
+        <name>PMC_SS_Opportunity</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- PMC Marketing User&apos;s can&apos;t change Opportunity Owner --></errorMessage>
+        <name>Opportunity_Owner_change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please indicate the reason why this opportunity was lost in the field “Reason Lost” --></errorMessage>
+        <name>PMC_SS_ReasonLostRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Sold-to Accounts can have Opportunities. Please select a Sold-to Account to create an Opportunity. --></errorMessage>
+        <name>PMC_SS_RestrictOppForNonSoldToAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Prospect Accounts are not eligible for the stage you’re selecting. Please start the Credit Check Process to convert this account to a Customer Account --></errorMessage>
+        <name>PMC_SS_RestrictOpportunityStageUpdate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Amend_Assets --></label>
+        <name>SBQQ__Amend_Assets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Amend_Contract --></label>
+        <name>SBQQ__Amend_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CreateOrder --></label>
+        <name>SBQQ__CreateOrder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Document --></label>
+        <name>SBQQ__Include_Document</name>
+    </webLinks>
+    <webLinks>
+        <label>承認をプレビュー</label>
+        <name>sbaa__PreviewApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label>承認の取り消し</label>
+        <name>sbaa__RecallApprovals</name>
+    </webLinks>
+    <webLinks>
+        <label>申請の再送信</label>
+        <name>sbaa__ResendRequestEmail</name>
+    </webLinks>
+    <webLinks>
+        <label>承認申請</label>
+        <name>sbaa__SubmitForApproval</name>
+    </webLinks>
+</CustomObjectTranslation>

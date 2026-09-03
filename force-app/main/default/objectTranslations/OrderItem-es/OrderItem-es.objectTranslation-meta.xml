@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- You should run &quot;Get Prices&quot; again before setting the Final Agreeded Price. --></errorMessage>
+        <name>AgreededFinalPriceWithoutFloorPrice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede editar ningún otro campo excepto el Precio Final Acordado para el Producto de Pedido FPD.</errorMessage>
+        <name>PMC_CPQ_FPDOrderItemsReadOnly</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se pueden editar productos de pedidos no FPD.</errorMessage>
+        <name>PMC_CPQ_NonFPDOrderItemsReadOnly</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede editar el status de las reservas en un producto de pedido activado.</errorMessage>
+        <name>SBQQ__CannotChangeBookingIndicatorOnActivation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Cuando el Tipo de Coste es Recurrente, se debe seleccionar un Tipo de Facturación.&quot;</errorMessage>
+        <name>SBQQ__RecurringChargeTypeMustHaveBillingType</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Cuando el Tipo de cargo es &quot;Único&quot;, no se puede seleccionar un valor de Frecuencia de facturación.&quot;</errorMessage>
+        <name>SBQQ__Validate_billing_frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Cuando el Tipo de Coste es Único o de Uso, no se puede seleccionar un valor de Tipo de Facturación.&quot;</errorMessage>
+        <name>SBQQ__Validate_billing_type</name>
+    </validationRules>
+    <webLinks>
+        <label>Obtener precio FPD</label>
+        <name>PMC_CPQ_GetFPDPrice</name>
+    </webLinks>
+    <webLinks>
+        <label>Enviar precio final a SAP</label>
+        <name>PMC_CPQ_Send_Final_Price_to_SAP</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Recall --></label>
+        <name>Recall</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_SalesDistrict__c</fullName>
+    <description>A geographical region that aligns with industry standard sales territories.</description>
+    <label>Sales District</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Z00001</fullName>
+                <default>false</default>
+                <label>Z00001 - AG MBP</label>
+            </value>
+            <value>
+                <fullName>Z00002</fullName>
+                <default>false</default>
+                <label>Z00002 - AG Non – MBP</label>
+            </value>
+            <value>
+                <fullName>CA0002</fullName>
+                <default>false</default>
+                <label>CA0002 - Alberta</label>
+            </value>
+            <value>
+                <fullName>Z00043</fullName>
+                <default>false</default>
+                <label>Z00043 - Asia</label>
+            </value>
+            <value>
+                <fullName>Z00044</fullName>
+                <default>false</default>
+                <label>Z00044 - Australia</label>
+            </value>
+            <value>
+                <fullName>ZCN010</fullName>
+                <default>false</default>
+                <label>ZCN010 - Bend</label>
+            </value>
+            <value>
+                <fullName>ZCN093</fullName>
+                <default>false</default>
+                <label>ZCN093 - B2B</label>
+            </value>
+            <value>
+                <fullName>ZCN037</fullName>
+                <default>false</default>
+                <label>ZCN037 - B2B AG</label>
+            </value>
+            <value>
+                <fullName>BR0005</fullName>
+                <default>false</default>
+                <label>BR0005 - Central West Brazil</label>
+            </value>
+            <value>
+                <fullName>Z00030</fullName>
+                <default>false</default>
+                <label>Z00030 - Corn belt</label>
+            </value>
+            <value>
+                <fullName>Z00032</fullName>
+                <default>false</default>
+                <label>Z00032 - Delta</label>
+            </value>
+            <value>
+                <fullName>Z00040</fullName>
+                <default>false</default>
+                <label>Z00040 - East Coast</label>
+            </value>
+            <value>
+                <fullName>ZCN015</fullName>
+                <default>false</default>
+                <label>ZCN015 - East-B2B</label>
+            </value>
+            <value>
+                <fullName>Z00034</fullName>
+                <default>false</default>
+                <label>Z00034 - Eastern Canada</label>
+            </value>
+            <value>
+                <fullName>CN0004</fullName>
+                <default>false</default>
+                <label>CN0004 - Eastern China</label>
+            </value>
+            <value>
+                <fullName>Z00031</fullName>
+                <default>false</default>
+                <label>Z00031 - Eastern Corn Belt</label>
+            </value>
+            <value>
+                <fullName>IN0004</fullName>
+                <default>false</default>
+                <label>IN0004 - Eastern Indian</label>
+            </value>
+            <value>
+                <fullName>ZCN008</fullName>
+                <default>false</default>
+                <label>ZCN008 - Export</label>
+            </value>
+            <value>
+                <fullName>Z00004</fullName>
+                <default>false</default>
+                <label>Z00004 - Feed Key</label>
+            </value>
+            <value>
+                <fullName>Z00005</fullName>
+                <default>false</default>
+                <label>Z00005 - Feed Opportunistic</label>
+            </value>
+            <value>
+                <fullName>Z00003</fullName>
+                <default>false</default>
+                <label>Z00003 - Feed Strategic</label>
+            </value>
+            <value>
+                <fullName>ZBR004</fullName>
+                <default>false</default>
+                <label>ZBR004 - Fospar BR</label>
+            </value>
+            <value>
+                <fullName>ZBR008</fullName>
+                <default>false</default>
+                <label>ZBR008 - Frederico Seckler</label>
+            </value>
+            <value>
+                <fullName>ZCN003</fullName>
+                <default>false</default>
+                <label>ZCN003 - HB-HN</label>
+            </value>
+            <value>
+                <fullName>Z00021</fullName>
+                <default>false</default>
+                <label>Z00021 - India</label>
+            </value>
+            <value>
+                <fullName>Z00006</fullName>
+                <default>false</default>
+                <label>Z00006 - Industrial Tier I</label>
+            </value>
+            <value>
+                <fullName>Z00007</fullName>
+                <default>false</default>
+                <label>Z00007 - Industrial Tier II</label>
+            </value>
+            <value>
+                <fullName>Z00008</fullName>
+                <default>false</default>
+                <label>Z00008 - Industrial Tier III</label>
+            </value>
+            <value>
+                <fullName>ZBR002</fullName>
+                <default>false</default>
+                <label>ZBR002 - João Sampaio</label>
+            </value>
+            <value>
+                <fullName>ZCN013</fullName>
+                <default>false</default>
+                <label>ZCN013 - JS-AH</label>
+            </value>
+            <value>
+                <fullName>ZBR007</fullName>
+                <default>false</default>
+                <label>ZBR007 - Leandro Dotto</label>
+            </value>
+            <value>
+                <fullName>CENTRE</fullName>
+                <default>false</default>
+                <label>CENTRE - Lower North Island</label>
+            </value>
+            <value>
+                <fullName>ZBR001</fullName>
+                <default>false</default>
+                <label>ZBR001 - Marcio Tortorelli</label>
+            </value>
+            <value>
+                <fullName>CA0006</fullName>
+                <default>false</default>
+                <label>CA0006 - Maritimes</label>
+            </value>
+            <value>
+                <fullName>CN0005</fullName>
+                <default>false</default>
+                <label>CN0005 - Middle China</label>
+            </value>
+            <value>
+                <fullName>IN0005</fullName>
+                <default>false</default>
+                <label>IN0005 - Middle Indian</label>
+            </value>
+            <value>
+                <fullName>US0006</fullName>
+                <default>false</default>
+                <label>US0006 - Midwest</label>
+            </value>
+            <value>
+                <fullName>ZBR006</fullName>
+                <default>false</default>
+                <label>ZBR006 - Mosaic BR</label>
+            </value>
+            <value>
+                <fullName>Z00041</fullName>
+                <default>false</default>
+                <label>Z00041 - N Latin America</label>
+            </value>
+            <value>
+                <fullName>ZCN006</fullName>
+                <default>false</default>
+                <label>ZCN006 - NE-B2B</label>
+            </value>
+            <value>
+                <fullName>ZCN001</fullName>
+                <default>false</default>
+                <label>ZCN001 - NE-DA</label>
+            </value>
+            <value>
+                <fullName>US0004</fullName>
+                <default>false</default>
+                <label>US0004 - Northeast</label>
+            </value>
+            <value>
+                <fullName>BR0004</fullName>
+                <default>false</default>
+                <label>BR0004 - Northeastern Brazil</label>
+            </value>
+            <value>
+                <fullName>BR0001</fullName>
+                <default>false</default>
+                <label>BR0001 - Northern Brazil</label>
+            </value>
+            <value>
+                <fullName>CN0001</fullName>
+                <default>false</default>
+                <label>CN0001 - Northern China</label>
+            </value>
+            <value>
+                <fullName>IN0001</fullName>
+                <default>false</default>
+                <label>IN0001 - Northern Indian</label>
+            </value>
+            <value>
+                <fullName>Z00033</fullName>
+                <default>false</default>
+                <label>Z00033 - Northern Plains</label>
+            </value>
+            <value>
+                <fullName>Z00037</fullName>
+                <default>false</default>
+                <label>Z00037 - Northwest</label>
+            </value>
+            <value>
+                <fullName>ZCN002</fullName>
+                <default>false</default>
+                <label>ZCN002 - NW</label>
+            </value>
+            <value>
+                <fullName>ZBR005</fullName>
+                <default>false</default>
+                <label>ZBR005 - OffShore BR</label>
+            </value>
+            <value>
+                <fullName>CA0004</fullName>
+                <default>false</default>
+                <label>CA0004 - Ontario</label>
+            </value>
+            <value>
+                <fullName>Z00020</fullName>
+                <default>false</default>
+                <label>Z00020 - Other</label>
+            </value>
+            <value>
+                <fullName>ZCN009</fullName>
+                <default>false</default>
+                <label>ZCN009 - Other3</label>
+            </value>
+            <value>
+                <fullName>Z00038</fullName>
+                <default>false</default>
+                <label>Z00038 - Pacific</label>
+            </value>
+            <value>
+                <fullName>CA0001</fullName>
+                <default>false</default>
+                <label>CA0001 - Pacific Canada</label>
+            </value>
+            <value>
+                <fullName>US0001</fullName>
+                <default>false</default>
+                <label>US0001 - Pacific Northwest</label>
+            </value>
+            <value>
+                <fullName>ZPY001</fullName>
+                <default>false</default>
+                <label>ZPY001 - Paraguay General</label>
+            </value>
+            <value>
+                <fullName>CA0005</fullName>
+                <default>false</default>
+                <label>CA0005 - Quebec</label>
+            </value>
+            <value>
+                <fullName>ZBR003</fullName>
+                <default>false</default>
+                <label>ZBR003 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>ZBR010</fullName>
+                <default>false</default>
+                <label>ZBR010 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>ZBR012</fullName>
+                <default>false</default>
+                <label>ZBR012 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>ZBR013</fullName>
+                <default>false</default>
+                <label>ZBR013 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>ZBR014</fullName>
+                <default>false</default>
+                <label>ZBR014 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>ZBR011</fullName>
+                <default>false</default>
+                <label>ZBR011 - Renato Costa</label>
+            </value>
+            <value>
+                <fullName>US0005</fullName>
+                <default>false</default>
+                <label>US0005 - Rockies</label>
+            </value>
+            <value>
+                <fullName>ZCN004</fullName>
+                <default>false</default>
+                <label>ZCN004 - SD</label>
+            </value>
+            <value>
+                <fullName>ZCN012</fullName>
+                <default>false</default>
+                <label>ZCN012 - South</label>
+            </value>
+            <value>
+                <fullName>SOUTH</fullName>
+                <default>false</default>
+                <label>SOUTH - South Island</label>
+            </value>
+            <value>
+                <fullName>Z00036</fullName>
+                <default>false</default>
+                <label>Z00036 - Southeast</label>
+            </value>
+            <value>
+                <fullName>CA0003</fullName>
+                <default>false</default>
+                <label>CA0003 - Southeast Canada</label>
+            </value>
+            <value>
+                <fullName>US0003</fullName>
+                <default>false</default>
+                <label>US0003 - Southeast US</label>
+            </value>
+            <value>
+                <fullName>BR0003</fullName>
+                <default>false</default>
+                <label>BR0003 - Southeastern Brazil</label>
+            </value>
+            <value>
+                <fullName>BR0002</fullName>
+                <default>false</default>
+                <label>BR0002 - Southern Brazil</label>
+            </value>
+            <value>
+                <fullName>CN0002</fullName>
+                <default>false</default>
+                <label>CN0002 - Southern China</label>
+            </value>
+            <value>
+                <fullName>Z00042</fullName>
+                <default>false</default>
+                <label>Z00042 - Southern Cone</label>
+            </value>
+            <value>
+                <fullName>IN0002</fullName>
+                <default>false</default>
+                <label>IN0002 - Southern Indian</label>
+            </value>
+            <value>
+                <fullName>Z00039</fullName>
+                <default>false</default>
+                <label>Z00039 - Southern Plains</label>
+            </value>
+            <value>
+                <fullName>US0002</fullName>
+                <default>false</default>
+                <label>US0002 - Southwest</label>
+            </value>
+            <value>
+                <fullName>ZCN017</fullName>
+                <default>false</default>
+                <label>ZCN017 - Strategic</label>
+            </value>
+            <value>
+                <fullName>ZCN014</fullName>
+                <default>false</default>
+                <label>ZCN014 - Tolling</label>
+            </value>
+            <value>
+                <fullName>ZBR009</fullName>
+                <default>false</default>
+                <label>ZBR009 - Troy Hobbs</label>
+            </value>
+            <value>
+                <fullName>NORTH</fullName>
+                <default>false</default>
+                <label>NORTH - Upper North Island</label>
+            </value>
+            <value>
+                <fullName>Z00035</fullName>
+                <default>false</default>
+                <label>Z00035 - Western Canada</label>
+            </value>
+            <value>
+                <fullName>CN0003</fullName>
+                <default>false</default>
+                <label>CN0003 - Western China</label>
+            </value>
+            <value>
+                <fullName>IN0003</fullName>
+                <default>false</default>
+                <label>IN0003 - Western Indian</label>
+            </value>
+            <value>
+                <fullName>ZCN016</fullName>
+                <default>false</default>
+                <label>ZCN016 - WFSS</label>
+            </value>
+            <value>
+                <fullName>ZCN005</fullName>
+                <default>false</default>
+                <label>ZCN005 - ma001</label>
+            </value>
+            <value>
+                <fullName>ZCN011</fullName>
+                <default>false</default>
+                <label>ZCN011 - ma005</label>
+            </value>
+            <value>
+                <fullName>ZCN018</fullName>
+                <default>false</default>
+                <label>ZCN018 - ma006</label>
+            </value>
+            <value>
+                <fullName>ZCN019</fullName>
+                <default>false</default>
+                <label>ZCN019 - ma007</label>
+            </value>
+            <value>
+                <fullName>ZCN020</fullName>
+                <default>false</default>
+                <label>ZCN020 - ma008</label>
+            </value>
+            <value>
+                <fullName>ZCN021</fullName>
+                <default>false</default>
+                <label>ZCN021 - ma011</label>
+            </value>
+            <value>
+                <fullName>ZCN022</fullName>
+                <default>false</default>
+                <label>ZCN022 - ma012</label>
+            </value>
+            <value>
+                <fullName>ZCN023</fullName>
+                <default>false</default>
+                <label>ZCN023 - ma013</label>
+            </value>
+            <value>
+                <fullName>ZCN024</fullName>
+                <default>false</default>
+                <label>ZCN024 - ma014</label>
+            </value>
+            <value>
+                <fullName>ZCN025</fullName>
+                <default>false</default>
+                <label>ZCN025 - ma015</label>
+            </value>
+            <value>
+                <fullName>ZCN026</fullName>
+                <default>false</default>
+                <label>ZCN026 - ma016</label>
+            </value>
+            <value>
+                <fullName>ZCN027</fullName>
+                <default>false</default>
+                <label>ZCN027 - ma017</label>
+            </value>
+            <value>
+                <fullName>ZCN028</fullName>
+                <default>false</default>
+                <label>ZCN028 - ma018</label>
+            </value>
+            <value>
+                <fullName>ZCN029</fullName>
+                <default>false</default>
+                <label>ZCN029 - mb001</label>
+            </value>
+            <value>
+                <fullName>ZCN030</fullName>
+                <default>false</default>
+                <label>ZCN030 - ma020</label>
+            </value>
+            <value>
+                <fullName>ZCN031</fullName>
+                <default>false</default>
+                <label>ZCN031 - mb002</label>
+            </value>
+            <value>
+                <fullName>ZCN032</fullName>
+                <default>false</default>
+                <label>ZCN032 - mb003</label>
+            </value>
+            <value>
+                <fullName>ZCN033</fullName>
+                <default>false</default>
+                <label>ZCN033 - mb004</label>
+            </value>
+            <value>
+                <fullName>ZCN034</fullName>
+                <default>false</default>
+                <label>ZCN034 - ma002</label>
+            </value>
+            <value>
+                <fullName>ZCN035</fullName>
+                <default>false</default>
+                <label>ZCN035 - ma025</label>
+            </value>
+            <value>
+                <fullName>ZCN036</fullName>
+                <default>false</default>
+                <label>ZCN036 - ma026</label>
+            </value>
+            <value>
+                <fullName>ZCN038</fullName>
+                <default>false</default>
+                <label>ZCN038 - mc001</label>
+            </value>
+            <value>
+                <fullName>ZCN039</fullName>
+                <default>false</default>
+                <label>ZCN039 - mc002</label>
+            </value>
+            <value>
+                <fullName>ZCN040</fullName>
+                <default>false</default>
+                <label>ZCN040 - mc003</label>
+            </value>
+            <value>
+                <fullName>ZCN041</fullName>
+                <default>false</default>
+                <label>ZCN041 - mc004</label>
+            </value>
+            <value>
+                <fullName>ZCN042</fullName>
+                <default>false</default>
+                <label>ZCN042 - mc005</label>
+            </value>
+            <value>
+                <fullName>ZCN043</fullName>
+                <default>false</default>
+                <label>ZCN043 - mc006</label>
+            </value>
+            <value>
+                <fullName>ZCN044</fullName>
+                <default>false</default>
+                <label>ZCN044 - mc007</label>
+            </value>
+            <value>
+                <fullName>ZCN045</fullName>
+                <default>false</default>
+                <label>ZCN045 - mc008</label>
+            </value>
+            <value>
+                <fullName>ZCN046</fullName>
+                <default>false</default>
+                <label>ZCN046 - mc009</label>
+            </value>
+            <value>
+                <fullName>ZCN047</fullName>
+                <default>false</default>
+                <label>ZCN047 - mc010</label>
+            </value>
+            <value>
+                <fullName>ZCN048</fullName>
+                <default>false</default>
+                <label>ZCN048 - mc011</label>
+            </value>
+            <value>
+                <fullName>ZCN049</fullName>
+                <default>false</default>
+                <label>ZCN049 - mc012</label>
+            </value>
+            <value>
+                <fullName>ZCN050</fullName>
+                <default>false</default>
+                <label>ZCN050 - mc013</label>
+            </value>
+            <value>
+                <fullName>ZCN051</fullName>
+                <default>false</default>
+                <label>ZCN051 - mc014</label>
+            </value>
+            <value>
+                <fullName>ZCN052</fullName>
+                <default>false</default>
+                <label>ZCN052 - mc015</label>
+            </value>
+            <value>
+                <fullName>ZCN053</fullName>
+                <default>false</default>
+                <label>ZCN053 - mc016</label>
+            </value>
+            <value>
+                <fullName>ZCN054</fullName>
+                <default>false</default>
+                <label>ZCN054 - mc017</label>
+            </value>
+            <value>
+                <fullName>ZCN055</fullName>
+                <default>false</default>
+                <label>ZCN055 - mc018</label>
+            </value>
+            <value>
+                <fullName>ZCN056</fullName>
+                <default>false</default>
+                <label>ZCN056 - mc019</label>
+            </value>
+            <value>
+                <fullName>ZCN057</fullName>
+                <default>false</default>
+                <label>ZCN057 - mc020</label>
+            </value>
+            <value>
+                <fullName>ZCN058</fullName>
+                <default>false</default>
+                <label>ZCN058 - mc021</label>
+            </value>
+            <value>
+                <fullName>ZCN059</fullName>
+                <default>false</default>
+                <label>ZCN059 - mc022</label>
+            </value>
+            <value>
+                <fullName>ZCN060</fullName>
+                <default>false</default>
+                <label>ZCN060 - mc023</label>
+            </value>
+            <value>
+                <fullName>ZCN061</fullName>
+                <default>false</default>
+                <label>ZCN061 - mc024</label>
+            </value>
+            <value>
+                <fullName>ZCN062</fullName>
+                <default>false</default>
+                <label>ZCN062 - mc025</label>
+            </value>
+            <value>
+                <fullName>ZCN063</fullName>
+                <default>false</default>
+                <label>ZCN063 - mc026</label>
+            </value>
+            <value>
+                <fullName>ZCN064</fullName>
+                <default>false</default>
+                <label>ZCN064 - mc027</label>
+            </value>
+            <value>
+                <fullName>ZCN065</fullName>
+                <default>false</default>
+                <label>ZCN065 - mc028</label>
+            </value>
+            <value>
+                <fullName>ZCN066</fullName>
+                <default>false</default>
+                <label>ZCN066 - mc029</label>
+            </value>
+            <value>
+                <fullName>ZCN067</fullName>
+                <default>false</default>
+                <label>ZCN067 - mc030</label>
+            </value>
+            <value>
+                <fullName>ZCN068</fullName>
+                <default>false</default>
+                <label>ZCN068 - mc031</label>
+            </value>
+            <value>
+                <fullName>ZCN069</fullName>
+                <default>false</default>
+                <label>ZCN069 - mc032</label>
+            </value>
+            <value>
+                <fullName>ZCN070</fullName>
+                <default>false</default>
+                <label>ZCN070 - mc033</label>
+            </value>
+            <value>
+                <fullName>ZCN071</fullName>
+                <default>false</default>
+                <label>ZCN071 - mc034</label>
+            </value>
+            <value>
+                <fullName>ZCN072</fullName>
+                <default>false</default>
+                <label>ZCN072 - mc035</label>
+            </value>
+            <value>
+                <fullName>ZCN073</fullName>
+                <default>false</default>
+                <label>ZCN073 - mc036</label>
+            </value>
+            <value>
+                <fullName>ZCN074</fullName>
+                <default>false</default>
+                <label>ZCN074 - mc037</label>
+            </value>
+            <value>
+                <fullName>ZCN075</fullName>
+                <default>false</default>
+                <label>ZCN075 - mc038</label>
+            </value>
+            <value>
+                <fullName>ZCN076</fullName>
+                <default>false</default>
+                <label>ZCN076 - mc039</label>
+            </value>
+            <value>
+                <fullName>ZCN077</fullName>
+                <default>false</default>
+                <label>ZCN077 - mc040</label>
+            </value>
+            <value>
+                <fullName>ZCN078</fullName>
+                <default>false</default>
+                <label>ZCN078 - mc041</label>
+            </value>
+            <value>
+                <fullName>ZCN079</fullName>
+                <default>false</default>
+                <label>ZCN079 - mc042</label>
+            </value>
+            <value>
+                <fullName>ZCN080</fullName>
+                <default>false</default>
+                <label>ZCN080 - mc043</label>
+            </value>
+            <value>
+                <fullName>ZCN081</fullName>
+                <default>false</default>
+                <label>ZCN081 - mc044</label>
+            </value>
+            <value>
+                <fullName>ZCN082</fullName>
+                <default>false</default>
+                <label>ZCN082 - mc045</label>
+            </value>
+            <value>
+                <fullName>ZCN083</fullName>
+                <default>false</default>
+                <label>ZCN083 - mc046</label>
+            </value>
+            <value>
+                <fullName>ZCN084</fullName>
+                <default>false</default>
+                <label>ZCN084 - mc047</label>
+            </value>
+            <value>
+                <fullName>ZCN085</fullName>
+                <default>false</default>
+                <label>ZCN085 - mc048</label>
+            </value>
+            <value>
+                <fullName>ZCN086</fullName>
+                <default>false</default>
+                <label>ZCN086 - mc049</label>
+            </value>
+            <value>
+                <fullName>ZCN087</fullName>
+                <default>false</default>
+                <label>ZCN087 - mc050</label>
+            </value>
+            <value>
+                <fullName>ZCN088</fullName>
+                <default>false</default>
+                <label>ZCN088 - mc051</label>
+            </value>
+            <value>
+                <fullName>ZCN089</fullName>
+                <default>false</default>
+                <label>ZCN089 - mc052</label>
+            </value>
+            <value>
+                <fullName>ZCN090</fullName>
+                <default>false</default>
+                <label>ZCN090 - mc053</label>
+            </value>
+            <value>
+                <fullName>ZCN091</fullName>
+                <default>false</default>
+                <label>ZCN091 - mc054</label>
+            </value>
+            <value>
+                <fullName>ZCN092</fullName>
+                <default>false</default>
+                <label>ZCN092 - mc055</label>
+            </value>
+            <value>
+                <fullName>AG MBP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AG MBP</label>
+            </value>
+            <value>
+                <fullName>AG Non – MBP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AG Non – MBP</label>
+            </value>
+            <value>
+                <fullName>Alberta</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Alberta</label>
+            </value>
+            <value>
+                <fullName>Asia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Asia</label>
+            </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>Bend</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bend</label>
+            </value>
+            <value>
+                <fullName>Central West Brazil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Central West Brazil</label>
+            </value>
+            <value>
+                <fullName>Corn belt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Corn belt</label>
+            </value>
+            <value>
+                <fullName>Delta</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Delta</label>
+            </value>
+            <value>
+                <fullName>East Coast</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>East Coast</label>
+            </value>
+            <value>
+                <fullName>East-B2B</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>East-B2B</label>
+            </value>
+            <value>
+                <fullName>Eastern Canada</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eastern Canada</label>
+            </value>
+            <value>
+                <fullName>Eastern China</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eastern China</label>
+            </value>
+            <value>
+                <fullName>Eastern Corn Belt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eastern Corn Belt</label>
+            </value>
+            <value>
+                <fullName>Eastern Indian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eastern Indian</label>
+            </value>
+            <value>
+                <fullName>Export</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Export</label>
+            </value>
+            <value>
+                <fullName>Feed Key</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feed Key</label>
+            </value>
+            <value>
+                <fullName>Feed Opportunistic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feed Opportunistic</label>
+            </value>
+            <value>
+                <fullName>Feed Strategic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feed Strategic</label>
+            </value>
+            <value>
+                <fullName>Fospar BR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fospar BR</label>
+            </value>
+            <value>
+                <fullName>Frederico Seckler</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Frederico Seckler</label>
+            </value>
+            <value>
+                <fullName>HB-HN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>HB-HN</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>Industrial Tier I</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Industrial Tier I</label>
+            </value>
+            <value>
+                <fullName>Industrial Tier II</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Industrial Tier II</label>
+            </value>
+            <value>
+                <fullName>Industrial Tier III</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Industrial Tier III</label>
+            </value>
+            <value>
+                <fullName>JS-AH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>JS-AH</label>
+            </value>
+            <value>
+                <fullName>João Sampaio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>João Sampaio</label>
+            </value>
+            <value>
+                <fullName>Leandro Dotto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Leandro Dotto</label>
+            </value>
+            <value>
+                <fullName>Lower North Island</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lower North Island</label>
+            </value>
+            <value>
+                <fullName>Marcio Tortorelli</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marcio Tortorelli</label>
+            </value>
+            <value>
+                <fullName>Maritimes</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Maritimes</label>
+            </value>
+            <value>
+                <fullName>Middle China</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Middle China</label>
+            </value>
+            <value>
+                <fullName>Middle Indian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Middle Indian</label>
+            </value>
+            <value>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Midwest</label>
+            </value>
+            <value>
+                <fullName>Mosaic BR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mosaic BR</label>
+            </value>
+            <value>
+                <fullName>N Latin America</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N Latin America</label>
+            </value>
+            <value>
+                <fullName>NE-B2B</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NE-B2B</label>
+            </value>
+            <value>
+                <fullName>NE-DA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NE-DA</label>
+            </value>
+            <value>
+                <fullName>NW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NW</label>
+            </value>
+            <value>
+                <fullName>Northeast</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northeast</label>
+            </value>
+            <value>
+                <fullName>Northeastern Brazil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northeastern Brazil</label>
+            </value>
+            <value>
+                <fullName>Northern Brazil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northern Brazil</label>
+            </value>
+            <value>
+                <fullName>Northern China</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northern China</label>
+            </value>
+            <value>
+                <fullName>Northern Indian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northern Indian</label>
+            </value>
+            <value>
+                <fullName>Northern Plains</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northern Plains</label>
+            </value>
+            <value>
+                <fullName>Northwest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Northwest</label>
+            </value>
+            <value>
+                <fullName>OffShore BR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OffShore BR</label>
+            </value>
+            <value>
+                <fullName>Ontario</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ontario</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other2</label>
+            </value>
+            <value>
+                <fullName>Other3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other3</label>
+            </value>
+            <value>
+                <fullName>Pacific</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pacific</label>
+            </value>
+            <value>
+                <fullName>Pacific Northwest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pacific Northwest</label>
+            </value>
+            <value>
+                <fullName>Paraguay General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Paraguay General</label>
+            </value>
+            <value>
+                <fullName>Quebec</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quebec</label>
+            </value>
+            <value>
+                <fullName>Renato Costa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Renato Costa</label>
+            </value>
+            <value>
+                <fullName>Rockies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rockies</label>
+            </value>
+            <value>
+                <fullName>SD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SD</label>
+            </value>
+            <value>
+                <fullName>South Island</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>South Island</label>
+            </value>
+            <value>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southeast</label>
+            </value>
+            <value>
+                <fullName>Southeastern Brazil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southeastern Brazil</label>
+            </value>
+            <value>
+                <fullName>Southern Brazil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southern Brazil</label>
+            </value>
+            <value>
+                <fullName>Southern China</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southern China</label>
+            </value>
+            <value>
+                <fullName>Southern Cone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southern Cone</label>
+            </value>
+            <value>
+                <fullName>Southern Indian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southern Indian</label>
+            </value>
+            <value>
+                <fullName>Southern Plains</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southern Plains</label>
+            </value>
+            <value>
+                <fullName>Southwest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Southwest</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>Tolling</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tolling</label>
+            </value>
+            <value>
+                <fullName>Troy Hobbs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Troy Hobbs</label>
+            </value>
+            <value>
+                <fullName>Upper North Island</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Upper North Island</label>
+            </value>
+            <value>
+                <fullName>WFSS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WFSS</label>
+            </value>
+            <value>
+                <fullName>Western Canada</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Western Canada</label>
+            </value>
+            <value>
+                <fullName>Western China</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Western China</label>
+            </value>
+            <value>
+                <fullName>Western Indian</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Western Indian</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

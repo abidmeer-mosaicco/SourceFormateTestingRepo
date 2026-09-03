@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_Goal__c</fullName>
+    <label>Goal</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Biosciences</fullName>
+                <default>false</default>
+                <label>Biosciences</label>
+            </value>
+            <value>
+                <fullName>Client Prospecting</fullName>
+                <default>false</default>
+                <label>Client Prospecting</label>
+            </value>
+            <value>
+                <fullName>Demand Generation</fullName>
+                <default>false</default>
+                <label>Demand Generation</label>
+            </value>
+            <value>
+                <fullName>Demand Planning</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demand Planning</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Rebate</fullName>
+                <default>false</default>
+                <label>Rebate</label>
+            </value>
+            <value>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+                <label>Relationship Building</label>
+            </value>
+            <value>
+                <fullName>Safety</fullName>
+                <default>false</default>
+                <label>Safety</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+            <value>
+                <fullName>Water Soluble</fullName>
+                <default>false</default>
+                <label>Water Soluble</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

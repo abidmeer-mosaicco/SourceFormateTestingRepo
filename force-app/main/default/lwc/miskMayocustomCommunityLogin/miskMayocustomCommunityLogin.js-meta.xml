@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="minPasswordLength" type="Integer" default="8" />
+            <property name="forgotPasswordUrl" type="String" default="/ForgotPassword"/>
+            <property name="selfRegisterUrl" type="String" default="/SelfRegister" description="Insert the URL for self registration"/>
+            <property name="logoUrl" type="String"/>
+            <property name="usernameLabel" type="String" default="Correo"/>
+            <property name="passwordLabel" type="String" default="Contraseña"/>
+            <property name="loginButtonLabel" type="String" default="INGRESA"/>
+            <property name="selfRegisterLabel" type="String" default="REGÍSTRATE"/>
+            <property name="forgotPasswordLabel" type="String" default="¿Olvidaste tu contraseña?"/>
+            <property name="resetPasswordButtonLabel" type="String" default="RESTABLECER CONTRASEÑA"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

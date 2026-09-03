@@ -1,0 +1,15 @@
+<template>
+    <div class="feature-button slds-card" role="button" tabindex="0" onclick={handleClick} onkeydown={handleKey} title={description}>
+        <div class="slds-card__body">
+            <div class="slds-media slds-media_center">
+                <div class="slds-media__figure slds-var-p-left_medium" if:true={iconName}>
+                    <lightning-icon icon-name={iconName} size="small" alternative-text={label}></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h3 class="slds-text-heading_small slds-truncate" title={label}>{label}</h3>
+                    <p class="slds-text-body_small slds-truncate" title={description}>{description}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

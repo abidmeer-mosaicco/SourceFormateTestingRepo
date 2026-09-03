@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_RestrictOpportunityStageUpdate</fullName>
+    <active>true</active>
+    <description>This validation rules restricts the Stage updates on opportunities related to Prospect Accounts</description>
+    <errorConditionFormula>IF(
+	AND(
+		NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+        ISCHANGED(StageName),
+        Account.RecordType.DeveloperName = &apos;PMC_SS_Prospect&apos;,
+        NOT( ISPICKVAL( Type , &apos;Indirect Sales&apos;) ), 
+		OR(
+		  ISPICKVAL(StageName,&apos;Proposal&apos;),
+		  ISPICKVAL(StageName,&apos;Finalize Quote&apos;),
+		  ISPICKVAL(StageName,&apos;Closed Won&apos;)
+		)    
+       
+    ), 
+true, 
+false
+)</errorConditionFormula>
+    <errorMessage>Prospect Accounts are not eligible for the stage you’re selecting. Please start the Credit Check Process to convert this account to a Customer Account</errorMessage>
+</ValidationRule>

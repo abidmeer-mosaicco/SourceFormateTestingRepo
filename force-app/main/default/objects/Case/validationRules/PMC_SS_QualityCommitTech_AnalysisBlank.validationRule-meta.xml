@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_QualityCommitTech_AnalysisBlank</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;Quality&quot;,
+ISPICKVAL(Status, &quot;Closed&quot;),
+LEN(PMC_SS_QualityCommitteesTechAnalysis__c)&lt;5
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_QualityCommitteesTechAnalysis__c</errorDisplayField>
+    <errorMessage>Quality Committee’s Tech Analysis is required in order to close a Case.</errorMessage>
+</ValidationRule>

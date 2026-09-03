@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This invoked an Approval Process &apos;Signed Sales Agreement Approval&apos;</description>
+        <name>SalesAgreementAutoApproval</name>
+        <label>SalesAgreement Auto Approval</label>
+        <locationX>776</locationX>
+        <locationY>1235</locationY>
+        <actionName>submit</actionName>
+        <actionType>submit</actionType>
+        <connector>
+            <targetReference>CheckStatusDecision</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>objectId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>processDefinitionNameOrId</name>
+            <value>
+                <elementReference>STRING_APPROVALPROCESSNAME</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>submit</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Rebate_Program_Order_in_the_List_of_Rebate_Programs_Assignment</name>
+        <label>Update Rebate Program Order in the List of Rebate Programs</label>
+        <locationX>138</locationX>
+        <locationY>2483</locationY>
+        <assignmentItems>
+            <assignToReference>Adding_Rebate_Program_Order_Values.PMC_CLM_RebateProgramOrder__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RebateProgramOrderNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RebateProgramOrderNumber</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>RebateProgreamUpdateList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Adding_Rebate_Program_Order_Values</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Adding_Rebate_Program_Order_Values</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>Stores the Approval Process Name for Auto Approval of Sales Agreement once the Agreement Document Status is Accepted</description>
+        <name>STRING_APPROVALPROCESSNAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_SignedSAApprovalProcess	</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Constant to store Flow API Name</description>
+        <name>STRING_FLOWAPINAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_AfterCreateUpdateSalesAgreementFlow</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Stores the API Name of &quot;Sales Agreement Approvals&quot; queue for task</description>
+        <name>STRING_QUEUE_APINAME</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>PMC_SS_SalesAgreementApprovals</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Check if Approval Status has been updated</description>
+        <name>Approval_Status_Check</name>
+        <label>Approval Status Check</label>
+        <locationX>446</locationX>
+        <locationY>2159</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Checking_Approval_Status</name>
+            <conditionLogic>1</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_ApprovalStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Rebate_Programs</targetReference>
+            </connector>
+            <label>Checking Approval Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Approval Status has been updated</description>
+        <name>ApprovalStatusDecision</name>
+        <label>Approval Status Decision</label>
+        <locationX>908</locationX>
+        <locationY>1835</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>ApprovalStatusDecision_IsChangedOutcome</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_ApprovalStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_ApprovalStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Denied</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_SS_ApprovalStatus__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetSalesAgreementApprovalsQueue</targetReference>
+            </connector>
+            <label>Is Changed Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Bypass Flow checkbox is true on Process Switches Configuration Setting</description>
+        <name>BypassFlowDecision</name>
+        <label>Bypass Flow Decision</label>
+        <locationX>303</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>NewRecordCreatedDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BypassFlowDecision_BypassOpportunityCreationOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Setup.PMC_ProcessSwitches__c.PMC_BypassFlow__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Bypass Opportunity Creation Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if Agreement Document Status field is Accepeted</description>
+        <name>CheckAgreementDocumentStatusDecision</name>
+        <label>Check Agreement Document StatusDecision</label>
+        <locationX>908</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>CheckStatusDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckAgreementDocumentStatusDecision_AccepetedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.PMC_CLM_AgreementDocumentStatus__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Accepted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.PMC_CLM_AgreementDocumentStatus__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SalesAgreementAutoApproval</targetReference>
+            </connector>
+            <label>Accepeted Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if triggering account has a related Account</description>
+        <name>CheckRelatedAccountExists</name>
+        <label>Check Related Account Exists</label>
+        <locationX>908</locationX>
+        <locationY>779</locationY>
+        <defaultConnector>
+            <targetReference>CheckAgreementDocumentStatusDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Related Account</defaultConnectorLabel>
+        <rules>
+            <name>RelatedAccountExists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.AccountId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ModifyAccountLastInteractionDateUpdate</targetReference>
+            </connector>
+            <label>Related Account Exists</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks Sales Agreement&apos;s Status</description>
+        <name>CheckStatusDecision</name>
+        <label>Check Status Decision</label>
+        <locationX>908</locationX>
+        <locationY>1427</locationY>
+        <defaultConnector>
+            <targetReference>ApprovalStatusDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>CheckStatusDecision_ActivatedOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Activated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ActivateRelatedRecordsSubflow</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Activated Outcome</label>
+        </rules>
+        <rules>
+            <name>CheckStatusDecision_ArchivedOrAmendedOutcome</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Archived</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>InactivateRebateProgramsSubflow</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Archived OR Amended Outcome</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if record triggering the flow is a new record</description>
+        <name>NewRecordCreatedDecision</name>
+        <label>New Record Created Decision</label>
+        <locationX>908</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>CheckRelatedAccountExists</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NewRecordCreatedDecision_NewOutcome</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>boolIsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SalesAgreementExternalIdUpdate</targetReference>
+            </connector>
+            <label>New Outcome</label>
+        </rules>
+    </decisions>
+    <description>Create Opportunities and notify Owners after Sales Agreement is activated</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>boolBypassVRToggleFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Account.PMC_CPQ_FlowAccountVRByPassToggle__c}=true,false , true)</expression>
+    </formulas>
+    <formulas>
+        <description>Check if record which triggers flow is a new record</description>
+        <name>boolIsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>Formula to populate the subject of approval task.</description>
+        <name>strTaskSubject</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &apos; &apos; + {!$Label.PMC_SS_SalesAgreementTaskInitialSubject}</expression>
+    </formulas>
+    <interviewLabel>PMC SS Before Create/Update Task Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>PMC SS After Create/Update Sales Agreement Flow</label>
+    <loops>
+        <name>Adding_Rebate_Program_Order_Values</name>
+        <label>Adding Rebate Program Order Values</label>
+        <locationX>50</locationX>
+        <locationY>2375</locationY>
+        <collectionReference>Get_Rebate_Programs</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Update_Rebate_Program_Order_in_the_List_of_Rebate_Programs_Assignment</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Rebate_Program_Order_Value</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>Error_Log_Create</name>
+        <label>Error Log Create</label>
+        <locationX>578</locationX>
+        <locationY>2375</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWAPINAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>Error_Log_Create_for_Rebate_Program_Order_Update</name>
+        <label>Error Log Create for Rebate Program Order</label>
+        <locationX>314</locationX>
+        <locationY>2783</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWAPINAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <description>Log an Error</description>
+        <name>ErrorLogCreate</name>
+        <label>Error Log Create</label>
+        <locationX>1106</locationX>
+        <locationY>2051</locationY>
+        <inputAssignments>
+            <field>PMC_FlowName__c</field>
+            <value>
+                <elementReference>STRING_FLOWAPINAME</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Message__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_Type__c</field>
+            <value>
+                <stringValue>Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <object>PMC_ErrorLog__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Rebate_Programs</name>
+        <label>Get Rebate Programs</label>
+        <locationX>50</locationX>
+        <locationY>2267</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Adding_Rebate_Program_Order_Values</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Log_Create</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PMC_SS_SalesAgreement__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>RebateProgram</object>
+        <sortField>EndDate</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Queries the queue for assigning as the task owner</description>
+        <name>GetSalesAgreementApprovalsQueue</name>
+        <label>Get Sales Agreement Approvals Queue</label>
+        <locationX>446</locationX>
+        <locationY>1943</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UpdateRelatedTaskStatusToCompletedSubflow</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>STRING_QUEUE_APINAME</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Modify related Account&apos;s Last Interaction Date</description>
+        <name>ModifyAccountLastInteractionDateUpdate</name>
+        <label>Modify Account Last Interaction Date Update</label>
+        <locationX>644</locationX>
+        <locationY>887</locationY>
+        <connector>
+            <targetReference>CheckAgreementDocumentStatusDecision</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_CPQ_FlowAccountVRByPassToggle__c</field>
+            <value>
+                <elementReference>boolBypassVRToggleFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PMC_SS_LastInteractionDate__c</field>
+            <value>
+                <elementReference>$Record.LastModifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Account</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update external id field on record to value of CLM auto number field</description>
+        <name>SalesAgreementExternalIdUpdate</name>
+        <label>Sales Agreement External Id Update</label>
+        <locationX>644</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>CheckRelatedAccountExists</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>ErrorLogCreate</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>PMC_SS_SalesAgreementExternalId__c</field>
+            <value>
+                <elementReference>$Record.PMC_CLM_SalesAgreementAutoNumber__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Rebate_Program_Order_Value</name>
+        <label>Update Rebate Program Order Value</label>
+        <locationX>50</locationX>
+        <locationY>2675</locationY>
+        <faultConnector>
+            <targetReference>Error_Log_Create_for_Rebate_Program_Order_Update</targetReference>
+        </faultConnector>
+        <inputReference>RebateProgreamUpdateList</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>177</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>BypassFlowDecision</targetReference>
+        </connector>
+        <object>SalesAgreement</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>This subflow will activate the related records of sales agreement.</description>
+        <name>ActivateRelatedRecordsSubflow</name>
+        <label>Activate Related Records Subflow</label>
+        <locationX>644</locationX>
+        <locationY>1535</locationY>
+        <connector>
+            <targetReference>ApprovalStatusDecision</targetReference>
+        </connector>
+        <flowName>PMC_SS_ActivateSalesAgreementRelatedRecordsSubflow</flowName>
+        <inputAssignments>
+            <name>salesAgreementId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Subflow to Inactivate Related Rebate Programs</description>
+        <name>InactivateRebateProgramsSubflow</name>
+        <label>Inactivate Rebate Programs Subflow</label>
+        <locationX>908</locationX>
+        <locationY>1535</locationY>
+        <flowName>PMC_SS_InactivateSalesAgreementRelatedRebateRecordsSubflow</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>This element will call the task status update subflow</description>
+        <name>UpdateRelatedTaskStatusToCompletedSubflow</name>
+        <label>Update Related Task Status To Completed Subflow</label>
+        <locationX>446</locationX>
+        <locationY>2051</locationY>
+        <connector>
+            <targetReference>Approval_Status_Check</targetReference>
+        </connector>
+        <flowName>PMC_SS_MarkTaskStatusToCompletedSubflow</flowName>
+        <inputAssignments>
+            <name>strTaskRelatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>strTaskSubject</name>
+            <value>
+                <elementReference>strTaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>RebateProgramOrderNumber</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>1.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>RebateProgreamUpdateList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>RebateProgram</objectType>
+    </variables>
+</Flow>

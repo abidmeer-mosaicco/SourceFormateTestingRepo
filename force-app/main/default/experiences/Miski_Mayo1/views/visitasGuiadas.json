@@ -1,0 +1,535 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "c564213b-505f-4816-90ef-4c96d2ed9cf4",
+  "label" : "Visitas Guiadas",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "43eb83f5-2348-4928-9a00-91d8a0009819",
+          "columns" : [ {
+            "UUID" : "9bbe1400-db4b-4697-8d1a-e9c5c872ffcf",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "43eb83f5-2348-4928-9a00-91d8a0009819",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "3ce94327-0dc1-4f7d-a72c-f14ee0801409",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9bbe1400-db4b-4697-8d1a-e9c5c872ffcf",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "05474e6b-77cb-464c-9c24-36518271178b",
+          "columns" : [ {
+            "UUID" : "d1678e67-44c8-476d-90e5-050b3d27fecb",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 157
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "05474e6b-77cb-464c-9c24-36518271178b",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "5",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "7",
+            "imageSix" : "6",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP16"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "785e9580-249d-4d15-8fc2-d6d8f0b183c2",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d1678e67-44c8-476d-90e5-050b3d27fecb",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 80,
+        "sectionConfig" : {
+          "UUID" : "a604351f-d063-4b00-84bc-1b5017d7602c",
+          "columns" : [ {
+            "UUID" : "e6c9cdf1-f336-42b2-9bba-72ffcf2e8b67",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "a604351f-d063-4b00-84bc-1b5017d7602c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<a\n  href=\"https://www.miskimayo.com/s/gestion-social?#programas-sociales\" \n  rel=\"noopener noreferrer\"\n  style=\"\n    display: inline-block;\n    background-color: #e6241f;\n    color: white;\n    font-weight: bold;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 12px 20px;\n    text-decoration: none;\n    font-family: sans-serif;\n    font-size: 14px;\n  \"\n>\n \n\n  VOLVER"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "d015897c-df1e-4cef-9429-ec06db772c42",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "e6c9cdf1-f336-42b2-9bba-72ffcf2e8b67",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "436c1d7b-01cb-446a-a2e6-5f42197e5062",
+          "columns" : [ {
+            "UUID" : "2d155007-b488-4c52-a14c-bf4fbb585ea7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "cc1e785e-ca39-4d93-89c7-48dc3d5ef33c",
+            "columnKey" : "6baaf",
+            "columnName" : "Column 2",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "89c88aa2-d585-4613-b1ec-988b0f7e29cc",
+            "columnKey" : "4011b",
+            "columnName" : "Column 3",
+            "columnWidth" : "4",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "436c1d7b-01cb-446a-a2e6-5f42197e5062",
+      "regions" : [ {
+        "id" : "2d155007-b488-4c52-a14c-bf4fbb585ea7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.VISITASGUIADAS300x8qfnmvrdrr8jc9gsb.1}\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "b43c823c-77a8-49ca-939a-47872b507ba7",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "cc1e785e-ca39-4d93-89c7-48dc3d5ef33c",
+        "regionLabel" : "Column 2",
+        "regionName" : "6baaf",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "89c88aa2-d585-4613-b1ec-988b0f7e29cc",
+        "regionLabel" : "Column 3",
+        "regionName" : "4011b",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "0d50b504-d9d4-435e-aed3-f8a60f20781c",
+          "columns" : [ {
+            "UUID" : "8c2d1034-453b-48d4-9987-7911e2f7a431",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "19c45f37-2224-4120-861a-a77825aed2c2",
+            "columnKey" : "3bc38",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "03e48f02-eea5-4c1e-9508-4fcc2cfdade6",
+            "columnKey" : "6496f",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "bd35c5a7-5fc4-40b1-8c8b-f8a379487f4d",
+            "columnKey" : "79fef",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "8418c274-9d0c-4ea7-a8a6-a3c50f23f5f7",
+            "columnKey" : "c5562",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3757123b-920e-4ea6-bbd5-c4ee45bbf305",
+            "columnKey" : "f15e4",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "0d50b504-d9d4-435e-aed3-f8a60f20781c",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "2a8210d8-1d48-454d-b0b2-627ac506dbe1",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8c2d1034-453b-48d4-9987-7911e2f7a431",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "19c45f37-2224-4120-861a-a77825aed2c2",
+        "regionLabel" : "Column 2",
+        "regionName" : "3bc38",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "03e48f02-eea5-4c1e-9508-4fcc2cfdade6",
+        "regionLabel" : "Column 3",
+        "regionName" : "6496f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "bd35c5a7-5fc4-40b1-8c8b-f8a379487f4d",
+        "regionLabel" : "Column 4",
+        "regionName" : "79fef",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "8418c274-9d0c-4ea7-a8a6-a3c50f23f5f7",
+        "regionLabel" : "Column 5",
+        "regionName" : "c5562",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3757123b-920e-4ea6-bbd5-c4ee45bbf305",
+        "regionLabel" : "Column 6",
+        "regionName" : "f15e4",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "3e18b6a5-41ab-49ed-9489-80a1fe097290",
+          "columns" : [ {
+            "UUID" : "21a6efcb-1fd7-46bf-988b-f89583a28bcd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 200
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "3e18b6a5-41ab-49ed-9489-80a1fe097290",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3 style=\"text-align: justify;\"><strong style=\"font-size: 36px;\">Objetivo:</strong>&nbsp;&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "df2c3bc8-7351-4ea3-b69a-b820b86e59db",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Dar a conocer el proceso productivo de nuestra mina Fosfatos de Bayóvar, destacando sus fases de explotación y concentrado, así como la tecnología empleada y las actividades socioambientales ejecutadas constantemente en beneficio de nuestra área de influencia directa.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "c900072a-2fe3-437e-88dc-103f4ab15304",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "21a6efcb-1fd7-46bf-988b-f89583a28bcd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "75a7b3a2-8cec-4249-84a5-a362b09a1d69",
+          "columns" : [ {
+            "UUID" : "32afaba8-9cdc-4c79-9c28-a8e220970f29",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6a0ca334-2aad-4683-8bbc-b7f8199772e8",
+            "columnKey" : "1ffba",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "67eb5aeb-bb90-4e6b-b960-b7b2306e3262",
+            "columnKey" : "659ef",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "da84e48e-b8af-4406-876d-9f97a403e61e",
+            "columnKey" : "ab0b2",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "3b029dff-6201-4ed1-8741-71cf2b90599f",
+            "columnKey" : "337a2",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "5e0d3efe-7a66-441d-96aa-3ddce9ed4370",
+            "columnKey" : "c616f",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "75a7b3a2-8cec-4249-84a5-a362b09a1d69",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Clipboard2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "8c58d8a4-2387-435b-8aa9-74ba9fa02b76",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "32afaba8-9cdc-4c79-9c28-a8e220970f29",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6a0ca334-2aad-4683-8bbc-b7f8199772e8",
+        "regionLabel" : "Column 2",
+        "regionName" : "1ffba",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "67eb5aeb-bb90-4e6b-b960-b7b2306e3262",
+        "regionLabel" : "Column 3",
+        "regionName" : "659ef",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "da84e48e-b8af-4406-876d-9f97a403e61e",
+        "regionLabel" : "Column 4",
+        "regionName" : "ab0b2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "3b029dff-6201-4ed1-8741-71cf2b90599f",
+        "regionLabel" : "Column 5",
+        "regionName" : "337a2",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "5e0d3efe-7a66-441d-96aa-3ddce9ed4370",
+        "regionLabel" : "Column 6",
+        "regionName" : "c616f",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "12a0314f-ffcf-4c84-b45f-1cd546690408",
+          "columns" : [ {
+            "UUID" : "17224201-0835-4277-85ae-da2a6302c14d",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 259
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "12a0314f-ffcf-4c84-b45f-1cd546690408",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Acciones:</strong>&nbsp;</h3>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "c542dacd-9976-4713-a062-ea7b3a2473b5",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">➤</span>\n    <span>Desarrollo de visitas guiadas a universitarios, entidades y asociaciones dentro de las instalaciones operativas.\n</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "3eaff8b4-7871-496d-85fd-d98a6119e8f6",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "17224201-0835-4277-85ae-da2a6302c14d",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b87970a2-a674-4c84-8505-f059bd64e581",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Visitas Guiadas"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "d9a209ca-e3b6-4b5d-b58b-121e37a7b3c2",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "4060595a-3995-4e76-8a89-8f51c0cf2a3c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-visitas-guiadas"
+}

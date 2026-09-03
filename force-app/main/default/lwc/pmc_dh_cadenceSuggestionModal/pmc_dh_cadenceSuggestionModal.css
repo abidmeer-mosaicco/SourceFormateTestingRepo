@@ -1,0 +1,105 @@
+.monthly-quantity-section {
+  padding: 0px 16px;
+}
+
+.button-style {
+  display: flex;
+  justify-content: end;
+}
+
+.monthly-quantity-section .input-section .lbl-field-value {
+  margin-top: 6px;
+}
+
+.header-text {
+  font-family: 'Barlow-Medium';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #093532;
+}
+
+.info-section,
+.header-text {
+  border-top: 1px solid #D4DFDE;
+}
+
+.header-text:first-child {
+  border-top: none;
+}
+
+.warning-msg {
+  color: #A61A14;
+}
+
+.input-section div.slds-col:nth-child(even),
+.label-section div.slds-col:nth-child(even) {
+  padding-left: 16px;
+}
+
+.read-only-qty {
+  margin-bottom: 8px;
+}
+
+.slds-table thead tr,
+.slds-table thead tr th {
+  background: #D4DFDE;
+}
+
+.slds-table thead tr th div {
+  font-family: 'Barlow-Semibold';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #093532;
+}
+
+.slds-table tbody tr td {
+  font-size: 14px;
+  line-height: 20px;
+  color: #093532;
+}
+
+@media screen and (max-width: 767px) {
+  .button-style {
+    padding-bottom: 16px;
+  }
+
+  .label-section .hide-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .table-wrapper {
+    overflow-x: scroll;
+    max-width: calc(91.6vw - 32px);
+  }
+
+  .info-section div {
+    margin-bottom: 8px;
+  }
+
+  .info-section div:last-child {
+    margin-bottom: 0;
+  }
+
+  .wrap-text {
+    max-width: 20vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .product-col {
+    max-width: 10vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .shipment-col {
+    max-width: 20vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

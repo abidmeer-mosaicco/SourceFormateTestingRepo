@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style>
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style>
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style>
+ </head>
+ <body>
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0">
+   
+    <tr>
+     <td width="100%" align="center">
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0">
+       
+        <tr>
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;">
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           
+            <tr valign="top">
+             <td width="50%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <div class="columnDiv" style="margin-right: 5px;margin-bottom: 5px;">
+               <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+                
+                 <tr>
+                  <td>
+                   <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0">
+                    
+                     <tr>
+                      <td style="padding-top: 45px;padding-right: 45px;padding-bottom: 30px;padding-left: 50px;" align="right"><img style="width: 100%; display: block; border: none; max-width: 100%; object-fit: fill;" src="" alt="Mosaic" width="200" /></td>
+                     </tr>
+                    
+                   </table></td>
+                 </tr>
+                
+               </table>
+              </div></td>
+             <td width="50%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <div class="columnDiv" style="margin-right: 5px;margin-bottom: 5px;">
+               <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;"></table>
+              </div></td>
+            </tr>
+           
+          </table>
+          <table class="contentbuilderBaseColumnRow" style="align-items: flex-start; width: 100%; background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0">
+           
+            <tr valign="top">
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block; float:left">
+              <table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; word-break:break-word;">
+               
+                <tr>
+                 <td>
+                  <table style="font-size:14px; width: 100%; border-collapse: collapse; word-break: break-word;" role="presentation" cellspacing="0" cellpadding="0" id="contentregion" locked="0">
+                   
+                    <tr>
+                     <td class="contentbuilder-html" style="padding: 0;">
+                      <table width="600" border="0" cellspacing="0" cellpadding="0" align="left">
+                       
+                        <tr>
+                         <td>
+                          <table width="600" border="0" cellspacing="0" cellpadding="0">
+                           
+                            <tr>
+                             <td width="40">&nbsp;</td>
+                             <td>
+                              <table width="520" border="0" cellspacing="0" cellpadding="0">
+                              
+                              <tr>
+                              <td height="16px">&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_HelloText} <span style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{{{Recipient.PMC_SS_OwnerFullName__c}}},</span></p></td>
+                              </tr>
+                              <tr>
+                              <td height="20px">&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_LeadInformation}</p></td>
+                              </tr>
+                              <tr>
+                              <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_LeadName} <span style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{{{Recipient.FirstName}}} {{{Recipient.LastName}}}</span></p></td>
+                              </tr>
+                              <tr>
+                              <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_LeadProdInterest} <span style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{{{Recipient.PMC_SS_LatestProductInterests__c}}}</span></p></td>
+                              </tr>
+                              <tr>
+                              <td height="20px">&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_LeadReviewText} <span style="margin-top:-25px;margin-left:18.5rem;width:240px;font-size:14px;line-height:17px;color:#ffffff;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;background-color:#1D625C;display: block;text-align:center;border-radius:6px;"><a href="{Label.PMC_SS_MosaicDirect_SiteBaseURL}{Label.PMC_SS_MosaicDirect_SiteURLPath}" style="width:240px;color:#ffffff;font-weight:400;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;padding:0;display:block;width: 240px;border-top: 8px solid #1d625c;border-bottom: 8px solid #1d625c;border-radius: 6px;">{Label.PMC_SS_MosaicDirect_SiteName}</a></span></p></td>
+                              </tr>
+                              <tr>
+                              <td height="35">&nbsp;</td>
+                              </tr>
+                              <tr>
+                              <td><p style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">{Label.PMC_SS_RetailerLeadEmailTemplate_ThankYouText}<br /><br /> {Label.PMC_SS_RetailerLeadEmailTemplate_SalesforceTeamText}</p></td>
+                              </tr>
+                              
+                              </table></td>
+                             <td width="40">&nbsp;</td>
+                            </tr>
+                           
+                          </table></td>
+                        </tr>
+                       
+                      </table></td>
+                    </tr>
+                   
+                  </table></td>
+                </tr>
+               
+              </table></td>
+            </tr>
+           
+          </table></td>
+        </tr>
+       
+      </table></td>
+    </tr>
+   
+  </table>
+ </body>
+</html>

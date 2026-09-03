@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Sales Agreement Sales Area Relation --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Sales Agreement Sales Area Relation --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Sales Agreement Sales Area Relation Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>&quot;El Acuerdo de Ventas Relación de Área de Ventas no puede ser creado/editado en esta etapa. Por favor, modifique el Acuerdo de Ventas para hacer revisiones al Acuerdo de Ventas Relación de Área de Ventas.&quot;</errorMessage>
+        <name>PMC_SS_SalesAreaChangeValidation</name>
+    </validationRules>
+</CustomObjectTranslation>

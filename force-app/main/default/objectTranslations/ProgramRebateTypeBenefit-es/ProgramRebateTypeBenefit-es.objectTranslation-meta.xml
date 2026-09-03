@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>No se puede crear/actualizar la prestación de tipo de rebaja una vez que el programa de rebaja está inactivo.</errorMessage>
+        <name>PMC_SS_RebateTypeBenefitModification</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;El tipo de rebaja Beneficio no se puede crear/editar en esta fase. Por favor, modifique el Acuerdo de Venta para hacer revisiones al Beneficio de Tipo de rebaja.&quot;</errorMessage>
+        <name>PMC_SS_RestrictRebateTypeBenefitEdit</name>
+    </validationRules>
+</CustomObjectTranslation>

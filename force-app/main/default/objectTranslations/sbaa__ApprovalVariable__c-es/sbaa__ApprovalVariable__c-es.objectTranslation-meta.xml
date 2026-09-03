@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Approval Variable --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Approval Variable --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Variable Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Los valores de Variable de lista y Variable neta son necesarios para Variables de descuento</errorMessage>
+        <name>sbaa__Discount_Variable_Required_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Los valores del campo agregado y de la función agregada son necesarios para las variables de resumen.</errorMessage>
+        <name>sbaa__Summary_Variable_Required_Fields</name>
+    </validationRules>
+</CustomObjectTranslation>

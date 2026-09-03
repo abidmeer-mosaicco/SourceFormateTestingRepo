@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="pageName" type="String" label="Insert the Name of the Page" description="Insert the Name of the Page" default="pageF" required="true"/>
+            <property name="imageOne" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageTwo" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageThree" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageFour" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageFive" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageSix" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageSeven" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageEight" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageNine" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageTen" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

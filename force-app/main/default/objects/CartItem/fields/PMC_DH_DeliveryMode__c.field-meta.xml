@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_DH_DeliveryMode__c</fullName>
+    <label>Delivery Mode</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barge</fullName>
+                <default>false</default>
+                <label>Barge</label>
+            </value>
+            <value>
+                <fullName>Truck</fullName>
+                <default>false</default>
+                <label>Truck</label>
+            </value>
+            <value>
+                <fullName>Rail</fullName>
+                <default>false</default>
+                <label>Rail</label>
+            </value>
+            <value>
+                <fullName>Vessel</fullName>
+                <default>false</default>
+                <label>Vessel</label>
+            </value>
+            <value>
+                <fullName>Inventory Transfer</fullName>
+                <default>false</default>
+                <label>Inventory Transfer</label>
+            </value>
+            <value>
+                <fullName>Container</fullName>
+                <default>false</default>
+                <label>Container</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

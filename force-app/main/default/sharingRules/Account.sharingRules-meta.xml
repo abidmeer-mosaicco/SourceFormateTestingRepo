@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>NA_SSR_Write_Access_on_Account</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>This rule share NA Account record to NA SSR with Read/Write access.</description>
+        <label>NA SSR Write Access on Account</label>
+        <sharedTo>
+            <role>PMC_SS_NASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_NASSAWriteAccessonAccount</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>This rule share NA Account record to NA SSR with Read/Write access.</description>
+        <label>NA SSA Write Access on Account</label>
+        <sharedTo>
+            <role>PMC_SS_NASalesServiceAnalystSSA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_OpportunityAccessSSR</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide the Read/Write Access to SSR</description>
+        <label>PMC_CPQ_OpportunityAccessSSR</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceRepresentativeSSR</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_CPQ_SASSAWriteAccessonAccount</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>This rule share Brazil Account record to SA SSR with Read/Write access.</description>
+        <label>SA SSA Write Access on Account</label>
+        <sharedTo>
+            <role>PMC_SS_SASalesServiceAnalystSSA</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>PMC_CPQ_Region__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PMC_SS_ReadAccessforAllInternalUsers</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>This rule share Account record to all the internal users with Read access</description>
+        <label>Read Access for All Internal Users</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Retailer,Customer,Agent</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Cancel_Replace_Sales_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for Sales Team (PartnerUsers)</description>
+        <label>Cancel Replace Sales Team</label>
+        <sharedTo>
+            <group>Cancel_Replace_Contract_Sales_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Cancel_Replace_Sales_Team_InternalUser</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for Sales Team (Internal Users)</description>
+        <label>Cancel Replace Sales Team Internal User</label>
+        <sharedTo>
+            <group>Cancel_Replace_Contract_Sales_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForProductManagerInternal</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All  Access for Product Managers (Internal Users)</description>
+        <label>R Access for Product Manager Internal</label>
+        <sharedTo>
+            <group>PMC_SS_ProductManagerAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RAccessForProductManagerPartner</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All  Access for Product Managers (Partner Users)</description>
+        <label>R Access for Product Manager Partner</label>
+        <sharedTo>
+            <group>PMC_SS_ProductManagerAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSAInternal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for SSAs (Internal Users)</description>
+        <label>RW Access for SSA Internal</label>
+        <sharedTo>
+            <group>PMC_SS_SSAAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSAPartner</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for SSAs (Partner Users)</description>
+        <label>RW Access for SSA Partner</label>
+        <sharedTo>
+            <group>PMC_SS_SSAAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSRInternal</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for SSRs (Internal Users)</description>
+        <label>RW Access for SSR Internal</label>
+        <sharedTo>
+            <group>PMC_SS_SSRAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessForSSRPartner</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <description>Provide View All, Edit All Access for SSRs (PartnerUsers)</description>
+        <label>RW Access for SSR Partner</label>
+        <sharedTo>
+            <group>PMC_SS_SSRAccessGroup</group>
+        </sharedTo>
+        <sharedFrom>
+            <allPartnerUsers></allPartnerUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PMC_SS_RWAccessforLeadershipRolefromAdminRole</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>This rule share Account record to all the Leadership role users with Read Write access from Admin Role users</description>
+        <label>RW Access for Leadership Role from Admin Role</label>
+        <sharedTo>
+            <role>PMC_Leadership</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Admin</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

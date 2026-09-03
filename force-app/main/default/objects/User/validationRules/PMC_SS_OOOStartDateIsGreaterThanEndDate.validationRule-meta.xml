@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_OOOStartDateIsGreaterThanEndDate</fullName>
+    <active>true</active>
+    <description>This validation rule throws an error message if the start date is greater than end date</description>
+    <errorConditionFormula>AND(
+	NOT(CONTAINS($Profile.Name, &apos;Digital Hub&apos;)),
+	NOT($Setup.PMC_ProcessSwitches__c.PMC_BypassValidationRule__c),
+	PMC_SS_OutOfOfficeEndDate__c &lt; PMC_SS_OutOfOfficeStartDate__c,
+	OR(
+		ISCHANGED(PMC_SS_OutOfOfficeStartDate__c),
+		ISCHANGED(PMC_SS_OutOfOfficeEndDate__c)
+		),
+	NOT(ISNEW())
+
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_OutOfOfficeStartDate__c</errorDisplayField>
+    <errorMessage>Out Of Office Start Date cannot be after the Out of Office End Date</errorMessage>
+</ValidationRule>

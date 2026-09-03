@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="pageName" type="String" label="Insert the Name of the Page" description="Insert the Name of the Page" default="pageF" required="true"/>
+            <property name="imageOne" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageTwo" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageThree" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageFour" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageFive" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageSix" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageSeven" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageEight" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageNine" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+            <property name="imageTen" type="String" label="Insert the Number of the Image" description="Insert the Number of the Image" default="empty"/>
+
+            <!-- Paragraph Text -->
+            <property name="paragraph1" type="String" label="Paragraph 1" description="Bullet text 1"/>
+            <property name="paragraph2" type="String" label="Paragraph 2" description="Bullet text 2"/>
+            <property name="paragraph3" type="String" label="Paragraph 3" description="Bullet text 3"/>
+            <property name="paragraph4" type="String" label="Paragraph 4" description="Bullet text 4"/>
+            <property name="paragraph5" type="String" label="Paragraph 5" description="Bullet text 5"/>
+            <property name="paragraph6" type="String" label="Paragraph 6" description="Bullet text 6"/>
+            <property name="paragraph7" type="String" label="Paragraph 7" description="Bullet text 7"/>
+            <property name="paragraph8" type="String" label="Paragraph 8" description="Bullet text 8"/>
+            <property name="paragraph9" type="String" label="Paragraph 9" description="Bullet text 9"/>
+            <property name="paragraph10" type="String" label="Paragraph 10" description="Bullet text 10"/>
+            
+            <!-- Paragraph titles -->
+            <property name="titleparagraph1" type="String" label="Title Paragraph 1"/>
+            <property name="titleparagraph2" type="String" label="Title Paragraph 2"/>
+            <property name="titleparagraph3" type="String" label="Title Paragraph 3"/>
+            <property name="titleparagraph4" type="String" label="Title Paragraph 4"/>
+            <property name="titleparagraph5" type="String" label="Title Paragraph 5"/>
+            <property name="titleparagraph6" type="String" label="Title Paragraph 6"/>
+            <property name="titleparagraph7" type="String" label="Title Paragraph 7"/>
+            <property name="titleparagraph8" type="String" label="Title Paragraph 8"/>
+            <property name="titleparagraph9" type="String" label="Title Paragraph 9"/>
+            <property name="titleparagraph10" type="String" label="Title Paragraph 10"/>
+            <property name="fontSizeParagraphs" type="String" label="Paragraphs Font Size" description="Ex.: 16px, 1rem, 1.1em" default="16px"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

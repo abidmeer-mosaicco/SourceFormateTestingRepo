@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Search Filter --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Search Filter --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Filter Name --></nameFieldLabel>
+    <validationRules>
+        <errorMessage>Debe seleccionar Filtrar objeto de origen cuando se selecciona Filtrar campo de origen.</errorMessage>
+        <name>SBQQ__Require_filter_object_for_filter_field</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Debe seleccionar Objeto Fuente Oculto cuando se selecciona Campo Fuente Oculto.</errorMessage>
+        <name>SBQQ__Require_hidden_object_for_hidden_field</name>
+    </validationRules>
+</CustomObjectTranslation>

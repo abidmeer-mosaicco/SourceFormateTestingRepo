@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRs_and_Enhancements_GDA_Salesforce</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>copado__Release__c</columns>
+    <columns>copado__Sprint__c</columns>
+    <columns>copado__Environment__c</columns>
+    <columns>copado__Org_Credential__c</columns>
+    <columns>copado__Developer__c</columns>
+    <columns>copado__Last_Promotion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>copado__Sprint__c</field>
+        <operation>equals</operation>
+        <value>CRs and Enhancements</value>
+    </filters>
+    <filters>
+        <field>copado__Release__c</field>
+        <operation>equals</operation>
+        <value>CRs and Enhancements</value>
+    </filters>
+    <label>CRs and Enhancements_GDA_Salesforce</label>
+    <language>en_US</language>
+</ListView>

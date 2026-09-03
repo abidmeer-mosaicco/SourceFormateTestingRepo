@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__SetupAudTrailImpBatch_DisableFullQuery__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>With this unchecked, the batch will query the full setup audit trail table. It is unchecked by default.
+
+If this batch fails due to a query timeout (REQUEST_RUNNING_TOO_LONG), checking this box will enable a query that will look at only a subset of the records in the setup audit trail table. This will allow the batch to succeed. The number of records examined in this smaller query is configurable using the SetupAuditTrailImpersonated Batch configuration.
+
+NOTE: With this configuration disabled/unchecked, the SetupAuditTrailImpersonated Batch configuration will have no effect.</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Unchecked by default. Check if the SetupAuditTrailImpersonatedBatch is failing with REQUEST_RUNNING_TOO_LONG.</inlineHelpText>
+    <label>SetupAudTrailImpBatch DisableFullQuery</label>
+    <type>Checkbox</type>
+</CustomField>

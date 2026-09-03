@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ServiceNowTicketType__c</fullName>
+    <description>Ticket type for ServiceNow</description>
+    <label>Service Now Ticket Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Análise de Contratos AR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Análise de Contratos AR</label>
+            </value>
+            <value>
+                <fullName>Análise de Crédito de Cliente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Análise de Crédito de Cliente</label>
+            </value>
+            <value>
+                <fullName>Análise para Exceção de Faturamento no Prazo Rotativo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Análise para Exceção de Faturamento no Prazo Rotativo</label>
+            </value>
+            <value>
+                <fullName>Aprovação do Comitê de Crédito Brasil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aprovação do Comitê de Crédito Brasil</label>
+            </value>
+            <value>
+                <fullName>Aproveitamento de créditos</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aproveitamento de créditos</label>
+            </value>
+            <value>
+                <fullName>Aproveitamento de créditos, Devolução, Recibo de Quitação e Relatórios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aproveitamento de créditos, Devolução, Recibo de Quitação e Relatórios</label>
+            </value>
+            <value>
+                <fullName>Baixa de Garantia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Baixa de Garantia</label>
+            </value>
+            <value>
+                <fullName>Cadastro de Produto Acabado ou Matéria Prima</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cadastro de Produto Acabado ou Matéria Prima</label>
+            </value>
+            <value>
+                <fullName>Carta de Circularização - Cliente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Carta de Circularização - Cliente</label>
+            </value>
+            <value>
+                <fullName>Circularization Letters – Clients</fullName>
+                <default>false</default>
+                <label>Circularization Letters – Clients</label>
+            </value>
+            <value>
+                <fullName>Collections Portal</fullName>
+                <default>false</default>
+                <label>Collections Portal</label>
+            </value>
+            <value>
+                <fullName>Customer Credit Analysis</fullName>
+                <default>false</default>
+                <label>Customer Credit Analysis</label>
+            </value>
+            <value>
+                <fullName>Debit or Credit Notes</fullName>
+                <default>false</default>
+                <label>Debit or Credit Notes</label>
+            </value>
+            <value>
+                <fullName>Devolução</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Devolução</label>
+            </value>
+            <value>
+                <fullName>Emissão de faturamento antecipado / Geração da ordem de venda</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Emissão de faturamento antecipado / Geração da ordem de venda</label>
+            </value>
+            <value>
+                <fullName>Emissão de notas de crédito ou débito</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Emissão de notas de crédito ou débito</label>
+            </value>
+            <value>
+                <fullName>Envio de informações de Dados Bancários</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Envio de informações de Dados Bancários</label>
+            </value>
+            <value>
+                <fullName>Fechamento de Câmbio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fechamento de Câmbio</label>
+            </value>
+            <value>
+                <fullName>Formalização de Garantia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Formalização de Garantia</label>
+            </value>
+            <value>
+                <fullName>Manutenção de Acesso e Documentações de Instituições Financeiras</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Manutenção de Acesso e Documentações de Instituições Financeiras</label>
+            </value>
+            <value>
+                <fullName>Operações Financeiras e Bancárias Especiais</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operações Financeiras e Bancárias Especiais</label>
+            </value>
+            <value>
+                <fullName>Perform Warranty</fullName>
+                <default>false</default>
+                <label>Perform Warranty</label>
+            </value>
+            <value>
+                <fullName>Portal de Cobranças</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Portal de Cobranças</label>
+            </value>
+            <value>
+                <fullName>Receipt of Discharge and Reports</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Receipt of Discharge and Reports</label>
+            </value>
+            <value>
+                <fullName>Recibo de Quitação e Relatórios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recibo de Quitação e Relatórios</label>
+            </value>
+            <value>
+                <fullName>Relatórios ou Swift</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Relatórios ou Swift</label>
+            </value>
+            <value>
+                <fullName>Release of Paid Contracts</fullName>
+                <default>false</default>
+                <label>Release of Paid Contracts</label>
+            </value>
+            <value>
+                <fullName>Return</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Return</label>
+            </value>
+            <value>
+                <fullName>Use of Credits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Use of Credits</label>
+            </value>
+            <value>
+                <fullName>Use of Credits, Return, Receipt of Discharge and Reports</fullName>
+                <default>false</default>
+                <label>Use of Credits, Return, Receipt of Discharge and Reports</label>
+            </value>
+            <value>
+                <fullName>Warranty Formalization</fullName>
+                <default>false</default>
+                <label>Warranty Formalization</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

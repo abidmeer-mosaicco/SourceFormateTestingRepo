@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants the ability for users to send emails from the customer.service@mosaicco.com email address.</description>
+    <emailRoutingAddressAccesses>
+        <enabled>true</enabled>
+        <name>customer.service@mosaicco.com</name>
+    </emailRoutingAddressAccesses>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Case NA Email Access</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EmailSingle</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,43 @@
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #eef0f2;
+    color: #4b5563;
+}
+
+.status-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-rascunho {
+    background: #ececec;
+    color: #5c5c5c;
+}
+
+.status-novo {
+    background: #e8f0fe;
+    color: #1a56b0;
+}
+
+.status-agendamento {
+    background: #fff5ec;
+    color: #c76814;
+}
+
+.status-concluido {
+    background: #d8eee6;
+    color: #1c6b5a;
+}
+
+.status-cancelado {
+    background: #fbe4e4;
+    color: #b0272b;
+}

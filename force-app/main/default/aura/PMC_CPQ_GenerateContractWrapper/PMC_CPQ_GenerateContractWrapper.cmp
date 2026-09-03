@@ -1,0 +1,4 @@
+<!-- generateContractWrapper.cmp -->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" access="global">
+    <c:pmc_cpq_generateContractScreen recordId="{!v.recordId}" />
+</aura:component>

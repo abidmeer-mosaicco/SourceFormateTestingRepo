@@ -1,0 +1,61 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Cart",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Carrinho"
+        },
+        "id" : "374cd289-8736-45ba-97ca-642194931a61"
+      }, {
+        "attributes" : {
+          "text" : "Seu carrinho está vazio"
+        },
+        "id" : "fdcc1c21-da2b-4e07-9d25-1b77f149ed88"
+      }, {
+        "attributes" : {
+          "text" : "Pesquise ou navegue pelos produtos e adicione-os ao seu carrinho. Suas seleções aparecem aqui."
+        },
+        "id" : "8701b368-2e20-4e71-bf13-3f487b1e1bb3"
+      }, {
+        "attributes" : {
+          "text" : "Continue comprando"
+        },
+        "id" : "5a21781d-f53d-4732-9fcd-ecf86b41af9b"
+      }, {
+        "attributes" : {
+          "text" : "Carrinho({!Cart.Details.uniqueProductCount})"
+        },
+        "id" : "5686401e-05b6-4fa0-a15c-779f58f0a4ce"
+      }, {
+        "attributes" : {
+          "currencyIsoCode" : "{!Cart.Details.currencyIsoCode}",
+          "incrementValueGuideText" : "Vendido em incrementos de {0}",
+          "items" : "{!Cart.Items}",
+          "maximumValueGuideText" : "A quantidade máxima é {0}",
+          "minimumValueGuideText" : "A quantidade mínima é {0}",
+          "promotionsAppliedSavingsButtonText" : "Economizado {quantia}",
+          "skuLabel" : "SKU# {0}"
+        },
+        "id" : "fe055829-697c-4075-aa96-549afaa4987d"
+      }, {
+        "attributes" : {
+          "text" : "Mostre mais"
+        },
+        "id" : "725c8ee2-8246-4442-92fa-9e1ca8dcd8b9"
+      }, {
+        "attributes" : {
+          "text" : "Continue comprando"
+        },
+        "id" : "bae6b3f3-d635-49c7-b71b-f1087e7275e5"
+      }, {
+        "attributes" : {
+          "text" : "Limpar carrinho"
+        },
+        "id" : "6bbf1dbf-877b-4f1d-8622-9a8a14f4967f"
+      } ]
+    }
+  },
+  "urlName" : "cart"
+}

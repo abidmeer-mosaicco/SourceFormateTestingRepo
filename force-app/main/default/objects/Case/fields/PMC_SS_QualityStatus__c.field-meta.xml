@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_QualityStatus__c</fullName>
+    <label>Quality Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Awaiting Pricing / Costs (NA)</fullName>
+                <default>false</default>
+                <label>Awaiting Pricing / Costs</label>
+            </value>
+            <value>
+                <fullName>Awaiting Release of Claims (NA)</fullName>
+                <default>false</default>
+                <label>Awaiting Release of Claims</label>
+            </value>
+            <value>
+                <fullName>Awaiting Samples / Analysis / Inspection (NA)</fullName>
+                <default>false</default>
+                <label>Awaiting Samples / Analysis / Inspection</label>
+            </value>
+            <value>
+                <fullName>Awaiting Shipment / Regulatory Information (NA)</fullName>
+                <default>false</default>
+                <label>Awaiting Shipment / Regulatory Information</label>
+            </value>
+            <value>
+                <fullName>Mitigation (NA)</fullName>
+                <default>false</default>
+                <label>Mitigation</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Awaiting Details from AM</fullName>
+                <default>false</default>
+                <label>Awaiting Details from AM</label>
+            </value>
+            <value>
+                <fullName>Awaiting Sample</fullName>
+                <default>false</default>
+                <label>Awaiting Sample</label>
+            </value>
+            <value>
+                <fullName>Sample in Analysis</fullName>
+                <default>false</default>
+                <label>Sample in Analysis</label>
+            </value>
+            <value>
+                <fullName>Awaiting Committee</fullName>
+                <default>false</default>
+                <label>Awaiting Committee</label>
+            </value>
+            <value>
+                <fullName>Awaiting Commercial Agreement</fullName>
+                <default>false</default>
+                <label>Awaiting Commercial Agreement</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Investigation (NA / SA)</fullName>
+                <default>false</default>
+                <label>Under Investigation</label>
+            </value>
+            <value>
+                <fullName>Concluded with Customer</fullName>
+                <default>false</default>
+                <label>Concluded with Customer</label>
+            </value>
+            <value>
+                <fullName>Checklist &amp; Sample Delivery (SA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Checklist &amp; Sample Delivery (SA)</label>
+            </value>
+            <value>
+                <fullName>Committee Judgement (SA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Committee Judgement (SA)</label>
+            </value>
+            <value>
+                <fullName>Feedback &amp; Agreement (SA)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Feedback &amp; Agreement (SA)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed</controllingFieldValue>
+            <valueName>Concluded with Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escalated</controllingFieldValue>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <valueName>Awaiting Committee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working</controllingFieldValue>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <valueName>Sample in Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working</controllingFieldValue>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <valueName>Investigation (NA / SA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <valueName>Awaiting Details from AM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending</controllingFieldValue>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <valueName>Awaiting Sample</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Re-Open</controllingFieldValue>
+            <controllingFieldValue>Closure Pending</controllingFieldValue>
+            <valueName>Awaiting Commercial Agreement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rejected</controllingFieldValue>
+            <valueName>Rejected</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

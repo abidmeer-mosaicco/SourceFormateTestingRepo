@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_ContractAmendmentType__c</fullName>
+    <description>This field is to indicate the Contract Amendment Type</description>
+    <label>Contract Amendment Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agent Code</fullName>
+                <default>false</default>
+                <label>Agent Code</label>
+            </value>
+            <value>
+                <fullName>Agent’s Commission</fullName>
+                <default>false</default>
+                <label>Agent’s Commission</label>
+            </value>
+            <value>
+                <fullName>Contract End Date</fullName>
+                <default>false</default>
+                <label>Contract End Date</label>
+            </value>
+            <value>
+                <fullName>Contract Start Date</fullName>
+                <default>false</default>
+                <label>Contract Start Date</label>
+            </value>
+            <value>
+                <fullName>Culture Exchange</fullName>
+                <default>false</default>
+                <label>Culture</label>
+            </value>
+            <value>
+                <fullName>Due Date</fullName>
+                <default>false</default>
+                <label>Due Date</label>
+            </value>
+            <value>
+                <fullName>Freight Cost</fullName>
+                <default>false</default>
+                <label>Freight Cost</label>
+            </value>
+            <value>
+                <fullName>Incoterm</fullName>
+                <default>false</default>
+                <label>Incoterm</label>
+            </value>
+            <value>
+                <fullName>Packing</fullName>
+                <default>false</default>
+                <label>Packing</label>
+            </value>
+            <value>
+                <fullName>Plant/Origin</fullName>
+                <default>false</default>
+                <label>Plant/Origin</label>
+            </value>
+            <value>
+                <fullName>Price List</fullName>
+                <default>false</default>
+                <label>Price List</label>
+            </value>
+            <value>
+                <fullName>Product Exchange</fullName>
+                <default>false</default>
+                <label>Product Exchange;(Different Composition)</label>
+            </value>
+            <value>
+                <fullName>Sales Office</fullName>
+                <default>false</default>
+                <label>Sales Office</label>
+            </value>
+            <value>
+                <fullName>Ship To</fullName>
+                <default>false</default>
+                <label>Ship To</label>
+            </value>
+            <value>
+                <fullName>Unit Price</fullName>
+                <default>false</default>
+                <label>Unit Price</label>
+            </value>
+            <value>
+                <fullName>Volume Change</fullName>
+                <default>false</default>
+                <label>Volume Change</label>
+            </value>
+            <value>
+                <fullName>Payment Terms</fullName>
+                <default>false</default>
+                <label>Payment Terms</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

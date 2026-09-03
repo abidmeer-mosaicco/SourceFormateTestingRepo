@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>&quot;Tipo de configuração deste produto: Escolha Allowed (Permitido) se o usuário tiver permissão para configurar o produto/pacote, mas não for obrigado a fazê-lo, Disabled (Desativado) quando o pacote selecionar automaticamente as opções ou Required (Obrigatório) se o produto/pacote precisar ser configurado.&quot;</help>
+    <label><!-- Configuration Type --></label>
+    <name>SBQQ__ConfigurationType__c</name>
+    <picklistValues>
+        <masterLabel>Allowed</masterLabel>
+        <translation>Permitido</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disabled</masterLabel>
+        <translation>Desativado</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Required</masterLabel>
+        <translation>Necessário</translation>
+    </picklistValues>
+</CustomFieldTranslation>

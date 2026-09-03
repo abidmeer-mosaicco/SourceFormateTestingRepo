@@ -1,0 +1,55 @@
+.icon-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Icon aligned to the top of the text */
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Icon always on the left */
+.icon-wrapper {
+    flex: 0 0 auto;
+}
+
+/* Ensures that the image respects the size coming via inline style */
+.icon {
+    display: block;
+    object-fit: contain;
+}
+
+/* Text on the right, taking up the rest of the space */
+.text-wrapper {
+    flex: 1 1 auto;
+    min-width: 0; /* avoids overflow in narrow layouts */
+}
+
+/* Consistent vertical spacing */
+.header-text + .body-text {
+    margin-top: 0.5rem;
+}
+
+/* RESPONSIVENESS
+We keep the icon on the left and text on the right for all widths,
+but smooth out the sizes on smaller screens to avoid breaking the layout. */
+@media (max-width: 1024px) {
+    .header-text {
+        /* slight adjustment on tablets */
+        /* (actual sizes come from inline style; here we only smooth if necessary) */
+    }
+}
+
+@media (max-width: 600px) {
+    .icon-text-wrapper {
+        /* Keeps side by side, but breaks gracefully if necessary */
+        flex-wrap: wrap;
+    }
+
+    .icon-wrapper {
+        /* On very narrow screens, if there is not enough space, the text will fall below naturally */
+    }
+
+    .text-wrapper {
+        /* When you break the line, take a breath */
+        margin-top: 0.5rem;
+    }
+}

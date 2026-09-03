@@ -1,0 +1,68 @@
+<template>
+    <br>
+    <h1 class="slds-align_absolute-center title-text">{labels.MMmiskiMayoOurLeadersCardsWithModalTitle}</h1>
+    <br><br><br>
+    <!-- CARDS START -->
+    <div class="card-container">
+        <template for:each={cards} for:item="card">
+            <div key={card.id}>
+
+                <div class={card.modalContent.classImageCard}>
+                    <img src={card.modalContent.image} alt={card.title} class={card.modalContent.classImage}/>
+                </div>
+
+                <div slot="footer" class={card.modalContent.classFooter}
+                    onmouseover={handleMouseOver}
+                    onmouseout={handleMouseOut}
+                    onclick={handleClick}
+                    data-id={card.id}>
+                    
+                    <div class="footer-content slds-p-around_medium">
+                        <div>
+                            <h1 class="name-text">{card.modalContent.name}</h1>
+                            <h3 class="description-text">{card.modalContent.text}</h3>
+                        </div>
+                        <span class="arrow-icon">›</span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    <!-- CARDS FINISH -->
+    <!-- MODAL START -->
+    <template if:true={isShowModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open custom-modal">
+            <div class="slds-modal__container full-width-modal">
+
+                <!-- CLOSE -->
+                <button class="custom-close-button" title="Fechar" onclick={hideModalBox}>
+                    <lightning-icon icon-name="utility:close" alternative-text="close"
+                        variant="inverse" size="small"></lightning-icon>
+                </button>
+
+                <!-- MODAL CONTENT -->
+                <div class="modal-content-two-columns">
+                    
+                    <!-- PHOTO -->
+                    <div class="modal-image-container">
+                        <img src={selectedCard.image} alt="Imagem" class="modal-image-full" />
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="modal-text-container">
+                        <h2 class="modal-name">{selectedCard.name}</h2>
+                        <h3 class="modal-role">{selectedCard.text}</h3>
+
+                        <template if:true={selectedCard.description}>
+                            <template for:each={selectedCard.description} for:item="paragraph" for:index="index">
+                                <p key={paragraph} class="modal-description">{paragraph}</p>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+    <!-- MODAL FINISH -->
+</template>

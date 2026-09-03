@@ -1,0 +1,336 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f31cc3cc-c86e-4d53-b9a9-d312cdbf0791",
+  "label" : "Nuestro Producto",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "962a526b-5578-4d13-8a68-ad66076ca529",
+          "columns" : [ {
+            "UUID" : "5d425a4b-397e-4cac-b57e-415293dd7366",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "962a526b-5578-4d13-8a68-ad66076ca529",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "f56b1d6f-378f-418d-8f15-dd56b6b58e03",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "5d425a4b-397e-4cac-b57e-415293dd7366",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "cbfc7fde-bf80-4fc8-bf20-9d87ebd54106",
+          "columns" : [ {
+            "UUID" : "c17aa697-92e7-441e-9f9f-026da8d48424",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cbfc7fde-bf80-4fc8-bf20-9d87ebd54106",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageE",
+            "textDescription" : "El fosfato es un insumo importante para la elaboración de fertilizantes"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithText",
+          "id" : "da49dbbf-3635-434b-8d48-60c265bd1b8f",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c17aa697-92e7-441e-9f9f-026da8d48424",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f21c59c4-e914-4eed-929e-f45e32684664",
+          "columns" : [ {
+            "UUID" : "59d4f368-7e6b-4ed4-963f-daee0b3f02bd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f21c59c4-e914-4eed-929e-f45e32684664",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Fosfato, elemento natural de origen marino</strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "cdf3f9de-a137-4534-8a46-ad00c5f1434d",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "59d4f368-7e6b-4ed4-963f-daee0b3f02bd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 94,
+        "sectionConfig" : {
+          "UUID" : "9dee7f25-c5d0-487c-8012-99d6c6de308a",
+          "columns" : [ {
+            "UUID" : "b02c4489-94cf-46d1-931e-985f4843e04e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "607132bf-7720-437b-9dfd-f9eed1e5d8f5",
+            "columnKey" : "e4e63",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 326
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9dee7f25-c5d0-487c-8012-99d6c6de308a",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#e32e12",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "275",
+            "cardHeight" : "400",
+            "fontSize" : "20",
+            "iconName" : "fertilizante",
+            "text" : "El fosfato es un insumo importante para elaborar fertilizantes para la agricultura, y a su vez es un elemento natural que está presente desde hace millones de años en la bahía de Sechura.",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "dee7a652-057b-4a65-a86d-76fdd5430f42",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "b02c4489-94cf-46d1-931e-985f4843e04e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#e32e12",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "275",
+            "cardHeight" : "400",
+            "fontSize" : "20",
+            "iconName" : "ola",
+            "text" : "El fosfato es de origen marino, estando presente de manera natural en los sedimentos y aguas marinas desde mucho antes que exista nuestra operación.",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "2eb9fe3b-5e7e-4a97-aa62-d8187373b64a",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "607132bf-7720-437b-9dfd-f9eed1e5d8f5",
+        "regionLabel" : "Column 2",
+        "regionName" : "e4e63",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 93,
+        "sectionConfig" : {
+          "UUID" : "c70d0e5f-77ab-4edb-bd34-dd9f0ab665ec",
+          "columns" : [ {
+            "UUID" : "9fafd83d-971d-47fc-8ccd-0dfcd5571338",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "35ac72cb-a132-4ad9-894b-fdc611e36041",
+            "columnKey" : "e4e63",
+            "columnName" : "Column 2",
+            "columnWidth" : "6",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 326
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c70d0e5f-77ab-4edb-bd34-dd9f0ab665ec",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#e32e12",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "275",
+            "cardHeight" : "400",
+            "fontSize" : "20",
+            "iconName" : "fisherman-1",
+            "text" : "La mejor muestra de que el fosfato no contamina es que durante el proceso operativo en puerto, y durante los 12 años de operación, siempre ha existido presencia constante de los pescadores de la zona realizando su faena diaria muy cerca de nuestro muelle.",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "30b3b862-51b6-4587-8050-29fc7bb0ca13",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9fafd83d-971d-47fc-8ccd-0dfcd5571338",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "#e32e12",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "275",
+            "cardHeight" : "400",
+            "fontSize" : "20",
+            "iconName" : "sea-life",
+            "text" : "El fosfato es un mineral sedimentario y orgánico, hecho de los restos de animales marinos que se han descompuesto.",
+            "textColor" : "white"
+          },
+          "componentName" : "c:miskiMayoReusableTile",
+          "id" : "3f604d4d-934b-4856-b7fe-840e83f0de8e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "35ac72cb-a132-4ad9-894b-fdc611e36041",
+        "regionLabel" : "Column 2",
+        "regionName" : "e4e63",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "449730da-0323-437c-b920-81996fb61d9e",
+          "columns" : [ {
+            "UUID" : "b38b8039-f6aa-4614-8d3b-fb3daa85e07b",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 205
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "449730da-0323-437c-b920-81996fb61d9e",
+      "regions" : [ {
+        "id" : "b38b8039-f6aa-4614-8d3b-fb3daa85e07b",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "74a38bc0-5fd1-4bb2-bb00-2a6b629f1326",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Nuestro Producto"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "0ed880af-1dd5-4127-8662-ba08b9315fa7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ab73dd62-13a7-40df-b1fe-cba386ebaa51",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-nuestro-producto"
+}

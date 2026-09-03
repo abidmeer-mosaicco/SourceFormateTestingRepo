@@ -1,0 +1,42 @@
+<template>
+  <c-pmc_dh_breadcrumb crumbs={crumbs}></c-pmc_dh_breadcrumb>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col">
+      <p class="header-text slds-m-top_medium slds-m-bottom_medium">{labels.pmc_orderHistory_myOrderHistory}</p>
+    </div>
+    <template lwc:if={isOrders}>
+      <div class="slds-col">
+        <c-pmc_dh_export-data-as-csv-xls export-file-type="csv" column-header={columnHeader}
+          column-header-titles={columnHeaderTitles} export-data={exportData}>
+        </c-pmc_dh_export-data-as-csv-xls>
+      </div>
+    </template>
+  </div>
+  <template if:false={isOrders}>
+    <div>
+      <c-pmc_dh_message-banner type="info" message={labels.pmc_orderDetails_shipmentInfoMsg}
+        hyperlink={labels.pmc_orderDetails_getInTouchMsg} show-rebates-banner is-shipment-history
+        oncreatecase={createCaseHandler}>
+      </c-pmc_dh_message-banner>
+      <template lwc:if={isCreateCaseEnabled}>
+        <c-pmc_dh_create-case is-create-case-enabled={isCreateCaseEnabled}
+          onclosecreatecasepopup={closeCreateCaseModal}>
+        </c-pmc_dh_create-case>
+      </template>
+    </div>
+  </template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <lightning-tabset>
+        <lightning-tab label={labels.pmc_orderHistory_orders} value="one" onactive={tabChangeHandler}>
+          <c-pmc_dh_order-history-list></c-pmc_dh_order-history-list>
+        </lightning-tab>
+        <lightning-tab label={labels.pmc_orderHistory_shipments} value="two" onactive={tabChangeHandler}>
+          <template if:false={isOrders}>
+            <c-pmc_dh_order-shipments-list active-tab={shipmentsActiveTabValue}></c-pmc_dh_order-shipments-list>
+          </template>
+        </lightning-tab>
+      </lightning-tabset>
+    </div>
+  </div>
+</template>

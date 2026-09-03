@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>&quot;Los Programas de rebaja no se pueden crear/editar en esta fase. Por favor, modifique el Acuerdo de Venta para hacer revisiones a los Programas de rebaja.&quot;</errorMessage>
+        <name>PMC_SS_RestrictRebateProgramEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Los programas de rebajas inactivos no se pueden actualizar.</errorMessage>
+        <name>PMC_SS_RestrictUpdateOnInactiveRebPrg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>No se puede activar el Programa de rebaja hasta que el Acuerdo de Venta esté Activo</errorMessage>
+        <name>PMC_SS_RestrictUpdateWhenStatusActive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Por favor, añada un Programa de rebaja que tenga una duración dentro de la duración del Acuerdo de Venta.&quot;</errorMessage>
+        <name>PMC_SS_ValidateStartAndEndDates</name>
+    </validationRules>
+</CustomObjectTranslation>

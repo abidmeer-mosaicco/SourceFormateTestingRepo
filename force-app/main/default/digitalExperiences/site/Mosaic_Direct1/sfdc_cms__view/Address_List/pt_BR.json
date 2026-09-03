@@ -1,0 +1,32 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Address List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Gerenciamento de endereços"
+        },
+        "id" : "9cda2e43-58c2-402f-a63e-f578a4f90fa9"
+      }, {
+        "attributes" : {
+          "text" : "Adicionar endereço"
+        },
+        "id" : "29ec41bc-dcdc-4091-b449-a2805231d85b"
+      }, {
+        "attributes" : {
+          "billingTabLabel" : "Cobrança",
+          "cardDefaultLabel" : "Padrão",
+          "footerDeleteLabel" : "Excluir",
+          "footerEditLabel" : "Editar",
+          "noAddressMessageText" : "Você ainda não tem endereço",
+          "noAddressMessageTitle" : "Ainda não há endereço",
+          "shippingTabLabel" : "Envio",
+          "showMoreButtonLabel" : "Mostre mais"
+        },
+        "id" : "92be7705-7a7f-48d3-8b07-3e399b41d98b"
+      } ]
+    }
+  },
+  "urlName" : "address-list"
+}

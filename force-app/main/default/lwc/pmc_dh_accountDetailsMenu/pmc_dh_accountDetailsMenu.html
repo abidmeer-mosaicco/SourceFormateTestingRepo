@@ -1,0 +1,36 @@
+<template>
+  <div class="slds-grid temp-box accounts-menu-container" onclick={userAccountClickHandler}
+    onkeydown={userAccountKeypressHandler} tabindex="0">
+    <div
+      class="slds-col slds-grow-none slds-grid slds-grid_vertical slds-show_large slds-var-p-horizontal_x-small user-account">
+      <lightning-formatted-text value={userName} class="user-name user-account-detail"></lightning-formatted-text>
+      <lightning-formatted-text value={accountName} class="account-name user-account-detail"></lightning-formatted-text>
+    </div>
+    <div class="slds-col slds-grow-none slds-grid slds-show_large">
+      <img class="user-account-img" src={iconUrlObj.newAccountUrl} alt="new Acc" />
+    </div>
+    <div if:true={showAccountMenuOption} class="accounts-menu">
+      <ul>
+        <li class="account-menu-li slds-p-left_medium slds-p-right_x-large slds-var-p-vertical_small slds-show_large"
+          onclick={accountMenuFirstItemClickHandler}>
+          <div class="slds-grid slds-grid_vertical">
+            <lightning-formatted-text value={userName} class="user-name user-account-detail"></lightning-formatted-text>
+            <lightning-formatted-text value={accountName}
+              class="account-name user-account-detail"></lightning-formatted-text>
+          </div>
+        </li>
+        <li for:each={_userAccountOptions} for:item="option" key={option.strRecId} data-id={option.strRecId}
+          onclick={accountMenuClickHandler} ontouchend={accountMenuClickHandler} onkeydown={accountMenuKeydownHandler}
+          tabindex="0"
+          class="slds-grid slds-grid_vertical-align-end slds-p-left_medium slds-p-right_x-large slds-var-p-vertical_small accounts-menu-item">
+          <img if:true={option.logoUrl} src={option.logoUrl} alt="Logout icon"
+            class="accounts-menu-item-img slds-var-m-right_x-small" />
+          <span class="account-option">{option.strLabel}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <c-pmc_dh_switch-account-modal open-switch-account-modal={isShowSwitchAccountModal}
+    oncloseswitchaccount={closeSwitchAccountModal}></c-pmc_dh_switch-account-modal>
+</template>

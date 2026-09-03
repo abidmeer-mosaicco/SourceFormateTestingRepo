@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sc_ext__SI_PlatformEncryptionBatch__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Controls the batch size on the DashboardRefreshPlatformEncryptionBatch in the Security Insights Analysis process.  Defaults to 1 if nothing specified. This cannot be lowered if heap size or CPU errors occur since it is already 1, so contact support if these errors occur.</inlineHelpText>
+    <label>SI Platform Encryption Batch</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

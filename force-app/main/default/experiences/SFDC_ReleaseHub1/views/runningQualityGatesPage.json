@@ -1,0 +1,46 @@
+{
+  "appPageId" : "77fff697-452d-433f-887f-a550757ebd09",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "388fcb38-8d81-467c-9fb4-22319f95b5f4",
+  "label" : "Running Quality Gates Page",
+  "regions" : [ {
+    "id" : "11a27e46-df3a-471d-a092-ae21994a39f6",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:documentRunningQualityGates",
+      "id" : "c69450b7-2255-4de2-9090-62d777c3c8a1",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "26daf0fd-9a83-467a-8be4-c18dc974b483",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cea72b5e-bed2-408c-8ecc-afa484a34e80",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Running Quality Gates Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "1eff99d9-22a4-497d-ae7d-64f388c56c58",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "fa0b9875-00b6-484c-a14a-77e7f8cc1f16",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-running-quality-gates-page"
+}

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Distrito de Ventas</label>
+    <name>PMC_SS_SalesDistrict__c</name>
+    <picklistValues>
+        <masterLabel>BR0001 - Northern Brazil</masterLabel>
+        <translation><!-- BR0001 - Northern Brazil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR0002 - Southern Brazil</masterLabel>
+        <translation><!-- BR0002 - Southern Brazil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR0003 - Southeastern Brazil</masterLabel>
+        <translation><!-- BR0003 - Southeastern Brazil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR0004 - Northeastern Brazil</masterLabel>
+        <translation><!-- BR0004 - Northeastern Brazil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BR0005 - Central West Brazil</masterLabel>
+        <translation><!-- BR0005 - Central West Brazil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0001 - Pacific Canada</masterLabel>
+        <translation><!-- CA0001 - Pacific Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0002 - Alberta</masterLabel>
+        <translation><!-- CA0002 - Alberta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0003 - Southeast Canada</masterLabel>
+        <translation><!-- CA0003 - Southeast Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0004 - Ontario</masterLabel>
+        <translation><!-- CA0004 - Ontario --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0005 - Quebec</masterLabel>
+        <translation><!-- CA0005 - Quebec --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CA0006 - Maritimes</masterLabel>
+        <translation><!-- CA0006 - Maritimes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CENTRE - Lower North Island</masterLabel>
+        <translation><!-- CENTRE - Lower North Island --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CN0001 - Northern China</masterLabel>
+        <translation><!-- CN0001 - Northern China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CN0002 - Southern China</masterLabel>
+        <translation><!-- CN0002 - Southern China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CN0003 - Western China</masterLabel>
+        <translation><!-- CN0003 - Western China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CN0004 - Eastern China</masterLabel>
+        <translation><!-- CN0004 - Eastern China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CN0005 - Middle China</masterLabel>
+        <translation><!-- CN0005 - Middle China --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN0001 - Northern Indian</masterLabel>
+        <translation><!-- IN0001 - Northern Indian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN0002 - Southern Indian</masterLabel>
+        <translation><!-- IN0002 - Southern Indian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN0003 - Western Indian</masterLabel>
+        <translation><!-- IN0003 - Western Indian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN0004 - Eastern Indian</masterLabel>
+        <translation><!-- IN0004 - Eastern Indian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IN0005 - Middle Indian</masterLabel>
+        <translation><!-- IN0005 - Middle Indian --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NORTH - Upper North Island</masterLabel>
+        <translation><!-- NORTH - Upper North Island --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SOUTH - South Island</masterLabel>
+        <translation>Sur</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0001 - Pacific Northwest</masterLabel>
+        <translation><!-- US0001 - Pacific Northwest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0002 - Southwest</masterLabel>
+        <translation><!-- US0002 - Southwest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0003 - Southeast US</masterLabel>
+        <translation><!-- US0003 - Southeast US --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0004 - Northeast</masterLabel>
+        <translation><!-- US0004 - Northeast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0005 - Rockies</masterLabel>
+        <translation><!-- US0005 - Rockies --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>US0006 - Midwest</masterLabel>
+        <translation><!-- US0006 - Midwest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00001 - AG MBP</masterLabel>
+        <translation><!-- Z00001 - AG MBP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00002 - AG Non – MBP</masterLabel>
+        <translation><!-- Z00002 - AG Non – MBP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00003 - Feed Strategic</masterLabel>
+        <translation><!-- Z00003 - Feed Strategic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00004 - Feed Key</masterLabel>
+        <translation><!-- Z00004 - Feed Key --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00005 - Feed Opportunistic</masterLabel>
+        <translation><!-- Z00005 - Feed Opportunistic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00006 - Industrial Tier I</masterLabel>
+        <translation><!-- Z00006 - Industrial Tier I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00007 - Industrial Tier II</masterLabel>
+        <translation><!-- Z00007 - Industrial Tier II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00008 - Industrial Tier III</masterLabel>
+        <translation><!-- Z00008 - Industrial Tier III --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00020 - Other</masterLabel>
+        <translation><!-- Z00020 - Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00021 - India</masterLabel>
+        <translation><!-- Z00021 - India --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00030 - Corn belt</masterLabel>
+        <translation><!-- Z00030 - Corn belt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00031 - Eastern Corn Belt</masterLabel>
+        <translation><!-- Z00031 - Eastern Corn Belt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00032 - Delta</masterLabel>
+        <translation><!-- Z00032 - Delta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00033 - Northern Plains</masterLabel>
+        <translation><!-- Z00033 - Northern Plains --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00034 - Eastern Canada</masterLabel>
+        <translation><!-- Z00034 - Eastern Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00035 - Western Canada</masterLabel>
+        <translation><!-- Z00035 - Western Canada --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00036 - Southeast</masterLabel>
+        <translation><!-- Z00036 - Southeast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00037 - Northwest</masterLabel>
+        <translation><!-- Z00037 - Northwest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00038 - Pacific</masterLabel>
+        <translation><!-- Z00038 - Pacific --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00039 - Southern Plains</masterLabel>
+        <translation><!-- Z00039 - Southern Plains --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00040 - East Coast</masterLabel>
+        <translation><!-- Z00040 - East Coast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00041 - N Latin America</masterLabel>
+        <translation><!-- Z00041 - N Latin America --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00042 - Southern Cone</masterLabel>
+        <translation><!-- Z00042 - Southern Cone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00043 - Asia</masterLabel>
+        <translation><!-- Z00043 - Asia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Z00044 - Australia</masterLabel>
+        <translation><!-- Z00044 - Australia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR001 - Marcio Tortorelli</masterLabel>
+        <translation><!-- ZBR001 - Marcio Tortorelli --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR002 - João Sampaio</masterLabel>
+        <translation><!-- ZBR002 - João Sampaio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR003 - Renato Costa</masterLabel>
+        <translation><!-- ZBR003 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR004 - Fospar BR</masterLabel>
+        <translation><!-- ZBR004 - Fospar BR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR005 - OffShore BR</masterLabel>
+        <translation><!-- ZBR005 - OffShore BR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR006 - Mosaic BR</masterLabel>
+        <translation><!-- ZBR006 - Mosaic BR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR007 - Leandro Dotto</masterLabel>
+        <translation><!-- ZBR007 - Leandro Dotto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR008 - Frederico Seckler</masterLabel>
+        <translation><!-- ZBR008 - Frederico Seckler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR009 - Troy Hobbs</masterLabel>
+        <translation><!-- ZBR009 - Troy Hobbs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR010 - Renato Costa</masterLabel>
+        <translation><!-- ZBR010 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR011 - Renato Costa</masterLabel>
+        <translation><!-- ZBR011 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR012 - Renato Costa</masterLabel>
+        <translation><!-- ZBR012 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR013 - Renato Costa</masterLabel>
+        <translation><!-- ZBR013 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZBR014 - Renato Costa</masterLabel>
+        <translation><!-- ZBR014 - Renato Costa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN001 - NE-DA</masterLabel>
+        <translation><!-- ZCN001 - NE-DA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN002 - NW</masterLabel>
+        <translation><!-- ZCN002 - NW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN003 - HB-HN</masterLabel>
+        <translation><!-- ZCN003 - HB-HN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN004 - SD</masterLabel>
+        <translation><!-- ZCN004 - SD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN005 - ma001</masterLabel>
+        <translation><!-- ZCN005 - ma001 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN006 - NE-B2B</masterLabel>
+        <translation><!-- ZCN006 - NE-B2B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN008 - Export</masterLabel>
+        <translation><!-- ZCN008 - Export --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN009 - Other3</masterLabel>
+        <translation><!-- ZCN009 - Other3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN010 - Bend</masterLabel>
+        <translation><!-- ZCN010 - Bend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN011 - ma005</masterLabel>
+        <translation><!-- ZCN011 - ma005 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN012 - South</masterLabel>
+        <translation><!-- ZCN012 - South --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN013 - JS-AH</masterLabel>
+        <translation><!-- ZCN013 - JS-AH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN014 - Tolling</masterLabel>
+        <translation><!-- ZCN014 - Tolling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN015 - East-B2B</masterLabel>
+        <translation><!-- ZCN015 - East-B2B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN016 - WFSS</masterLabel>
+        <translation><!-- ZCN016 - WFSS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN017 - Strategic</masterLabel>
+        <translation><!-- ZCN017 - Strategic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN018 - ma006</masterLabel>
+        <translation><!-- ZCN018 - ma006 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN019 - ma007</masterLabel>
+        <translation><!-- ZCN019 - ma007 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN020 - ma008</masterLabel>
+        <translation><!-- ZCN020 - ma008 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN021 - ma011</masterLabel>
+        <translation><!-- ZCN021 - ma011 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN022 - ma012</masterLabel>
+        <translation><!-- ZCN022 - ma012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN023 - ma013</masterLabel>
+        <translation><!-- ZCN023 - ma013 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN024 - ma014</masterLabel>
+        <translation><!-- ZCN024 - ma014 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN025 - ma015</masterLabel>
+        <translation><!-- ZCN025 - ma015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN026 - ma016</masterLabel>
+        <translation><!-- ZCN026 - ma016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN027 - ma017</masterLabel>
+        <translation><!-- ZCN027 - ma017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN028 - ma018</masterLabel>
+        <translation><!-- ZCN028 - ma018 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN029 - mb001</masterLabel>
+        <translation><!-- ZCN029 - mb001 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN030 - ma020</masterLabel>
+        <translation><!-- ZCN030 - ma020 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN031 - mb002</masterLabel>
+        <translation><!-- ZCN031 - mb002 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN032 - mb003</masterLabel>
+        <translation><!-- ZCN032 - mb003 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN033 - mb004</masterLabel>
+        <translation><!-- ZCN033 - mb004 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN034 - ma002</masterLabel>
+        <translation><!-- ZCN034 - ma002 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN035 - ma025</masterLabel>
+        <translation><!-- ZCN035 - ma025 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN036 - ma026</masterLabel>
+        <translation><!-- ZCN036 - ma026 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN037 - B2B AG</masterLabel>
+        <translation><!-- ZCN037 - B2B AG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN038 - mc001</masterLabel>
+        <translation><!-- ZCN038 - mc001 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN039 - mc002</masterLabel>
+        <translation><!-- ZCN039 - mc002 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN040 - mc003</masterLabel>
+        <translation><!-- ZCN040 - mc003 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN041 - mc004</masterLabel>
+        <translation><!-- ZCN041 - mc004 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN042 - mc005</masterLabel>
+        <translation><!-- ZCN042 - mc005 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN043 - mc006</masterLabel>
+        <translation><!-- ZCN043 - mc006 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN044 - mc007</masterLabel>
+        <translation><!-- ZCN044 - mc007 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN045 - mc008</masterLabel>
+        <translation><!-- ZCN045 - mc008 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN046 - mc009</masterLabel>
+        <translation><!-- ZCN046 - mc009 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN047 - mc010</masterLabel>
+        <translation><!-- ZCN047 - mc010 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN048 - mc011</masterLabel>
+        <translation><!-- ZCN048 - mc011 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN049 - mc012</masterLabel>
+        <translation><!-- ZCN049 - mc012 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN050 - mc013</masterLabel>
+        <translation><!-- ZCN050 - mc013 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN051 - mc014</masterLabel>
+        <translation><!-- ZCN051 - mc014 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN052 - mc015</masterLabel>
+        <translation><!-- ZCN052 - mc015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN053 - mc016</masterLabel>
+        <translation><!-- ZCN053 - mc016 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN054 - mc017</masterLabel>
+        <translation><!-- ZCN054 - mc017 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN055 - mc018</masterLabel>
+        <translation><!-- ZCN055 - mc018 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN056 - mc019</masterLabel>
+        <translation><!-- ZCN056 - mc019 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN057 - mc020</masterLabel>
+        <translation><!-- ZCN057 - mc020 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN058 - mc021</masterLabel>
+        <translation><!-- ZCN058 - mc021 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN059 - mc022</masterLabel>
+        <translation><!-- ZCN059 - mc022 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN060 - mc023</masterLabel>
+        <translation><!-- ZCN060 - mc023 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN061 - mc024</masterLabel>
+        <translation><!-- ZCN061 - mc024 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN062 - mc025</masterLabel>
+        <translation><!-- ZCN062 - mc025 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN063 - mc026</masterLabel>
+        <translation><!-- ZCN063 - mc026 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN064 - mc027</masterLabel>
+        <translation><!-- ZCN064 - mc027 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN065 - mc028</masterLabel>
+        <translation><!-- ZCN065 - mc028 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN066 - mc029</masterLabel>
+        <translation><!-- ZCN066 - mc029 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN067 - mc030</masterLabel>
+        <translation><!-- ZCN067 - mc030 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN068 - mc031</masterLabel>
+        <translation><!-- ZCN068 - mc031 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN069 - mc032</masterLabel>
+        <translation><!-- ZCN069 - mc032 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN070 - mc033</masterLabel>
+        <translation><!-- ZCN070 - mc033 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN071 - mc034</masterLabel>
+        <translation><!-- ZCN071 - mc034 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN072 - mc035</masterLabel>
+        <translation><!-- ZCN072 - mc035 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN073 - mc036</masterLabel>
+        <translation><!-- ZCN073 - mc036 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN074 - mc037</masterLabel>
+        <translation><!-- ZCN074 - mc037 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN075 - mc038</masterLabel>
+        <translation><!-- ZCN075 - mc038 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN076 - mc039</masterLabel>
+        <translation><!-- ZCN076 - mc039 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN077 - mc040</masterLabel>
+        <translation><!-- ZCN077 - mc040 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN078 - mc041</masterLabel>
+        <translation><!-- ZCN078 - mc041 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN079 - mc042</masterLabel>
+        <translation><!-- ZCN079 - mc042 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN080 - mc043</masterLabel>
+        <translation><!-- ZCN080 - mc043 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN081 - mc044</masterLabel>
+        <translation><!-- ZCN081 - mc044 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN082 - mc045</masterLabel>
+        <translation><!-- ZCN082 - mc045 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN083 - mc046</masterLabel>
+        <translation><!-- ZCN083 - mc046 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN084 - mc047</masterLabel>
+        <translation><!-- ZCN084 - mc047 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN085 - mc048</masterLabel>
+        <translation><!-- ZCN085 - mc048 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN086 - mc049</masterLabel>
+        <translation><!-- ZCN086 - mc049 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN087 - mc050</masterLabel>
+        <translation><!-- ZCN087 - mc050 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN088 - mc051</masterLabel>
+        <translation><!-- ZCN088 - mc051 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN089 - mc052</masterLabel>
+        <translation><!-- ZCN089 - mc052 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN090 - mc053</masterLabel>
+        <translation><!-- ZCN090 - mc053 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN091 - mc054</masterLabel>
+        <translation><!-- ZCN091 - mc054 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN092 - mc055</masterLabel>
+        <translation><!-- ZCN092 - mc055 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZCN093 - B2B</masterLabel>
+        <translation><!-- ZCN093 - B2B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZPY001 - Paraguay General</masterLabel>
+        <translation><!-- ZPY001 - Paraguay General --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

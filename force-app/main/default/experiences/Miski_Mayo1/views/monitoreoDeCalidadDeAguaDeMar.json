@@ -1,0 +1,478 @@
+{
+  "appPageId" : "66553694-485b-43eb-9164-fec47431c7fd",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "f5d8ea0e-c7f7-4188-8c46-a92ea67d4542",
+  "label" : "Monitoreo de calidad de agua de mar",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgb(226,35,26)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "9f3689f7-52a4-4b1e-9d93-b6dfc4abc6e2",
+          "columns" : [ {
+            "UUID" : "d814108b-febb-4359-b959-39a0c2e194e0",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 80
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "9f3689f7-52a4-4b1e-9d93-b6dfc4abc6e2",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "c:miskiMayoNavigationMenuUpdated",
+          "id" : "31617d2e-a126-44ac-a016-5424a09f87ad",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "d814108b-febb-4359-b959-39a0c2e194e0",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "f0036ad4-d7c6-4b1d-9d6c-deb68a46f595",
+          "columns" : [ {
+            "UUID" : "c357759c-ab3c-4cf9-9fd8-443e283f789e",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "f0036ad4-d7c6-4b1d-9d6c-deb68a46f595",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "empty",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "empty",
+            "imageTwo" : "empty",
+            "pageName" : "pageP33"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithTextFlexible",
+          "id" : "dad13f97-f873-4760-bf3e-bf551b0b3a61",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "c357759c-ab3c-4cf9-9fd8-443e283f789e",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 87,
+        "sectionConfig" : {
+          "UUID" : "25ae4d61-e173-46fb-bc05-b6fe3b8ab5ec",
+          "columns" : [ {
+            "UUID" : "64d3c0a4-ec75-4105-82b3-0d24828cbacd",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "1",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e548948a-11ca-4cfe-a433-c748cd42d259",
+            "columnKey" : "8157b",
+            "columnName" : "Column 2",
+            "columnWidth" : "3",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "07882b6c-b90c-44b7-8eaa-fc57b4439587",
+            "columnKey" : "8b786",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "e7f119ae-3d0e-4ba3-b275-9bbafcd2957b",
+            "columnKey" : "36d9f",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "746ae924-8100-4f69-9663-155ae87bbeb0",
+            "columnKey" : "5f8f9",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "111c3d19-9148-4cee-bc23-f8f02909e4a9",
+            "columnKey" : "af1e9",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "25ae4d61-e173-46fb-bc05-b6fe3b8ab5ec",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backgroundColor" : "#E2231A ",
+            "borderColor" : "white",
+            "borderRadius" : "0",
+            "borderThickness" : "4",
+            "fontSize" : "1.2",
+            "label" : "VOLVER",
+            "textColor" : "white",
+            "url" : "https://www.miskimayo.com/s/gestion-ambiental?#programa-de-monitoreo-ambiental"
+          },
+          "componentName" : "c:miskiMayoReusableButton",
+          "id" : "a6cf3115-50b8-4674-8040-032646ff28ec",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "64d3c0a4-ec75-4105-82b3-0d24828cbacd",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e548948a-11ca-4cfe-a433-c748cd42d259",
+        "regionLabel" : "Column 2",
+        "regionName" : "8157b",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "07882b6c-b90c-44b7-8eaa-fc57b4439587",
+        "regionLabel" : "Column 3",
+        "regionName" : "8b786",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "e7f119ae-3d0e-4ba3-b275-9bbafcd2957b",
+        "regionLabel" : "Column 4",
+        "regionName" : "36d9f",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "746ae924-8100-4f69-9663-155ae87bbeb0",
+        "regionLabel" : "Column 5",
+        "regionName" : "5f8f9",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "111c3d19-9148-4cee-bc23-f8f02909e4a9",
+        "regionLabel" : "Column 6",
+        "regionName" : "af1e9",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 85,
+        "sectionConfig" : {
+          "UUID" : "782110ca-2609-4bd0-a360-870ea4a9e023",
+          "columns" : [ {
+            "UUID" : "bd645f04-da73-482d-b6a1-6bb9530045b7",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "782110ca-2609-4bd0-a360-870ea4a9e023",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h1 style=\"text-align: center;\"><strong style=\"font-size: 48px; color: rgb(230, 0, 0);\">Monitoreo de Calidad de Agua de Mar </strong></h1><p>&nbsp;</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "89d4069c-7d65-45f5-a711-647fba3b7404",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "bd645f04-da73-482d-b6a1-6bb9530045b7",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 70,
+        "sectionConfig" : {
+          "UUID" : "cda3979f-2e2f-4e8b-8656-e79491c7609d",
+          "columns" : [ {
+            "UUID" : "add71cc1-d785-4fdf-8e0e-d1571fdd9811",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "f2a94493-b7af-4fea-b4dc-7e2c543687fe",
+            "columnKey" : "b8a53",
+            "columnName" : "Column 2",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "eecc9816-3cd6-486a-9170-75f97cdf1c50",
+            "columnKey" : "20069",
+            "columnName" : "Column 3",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "fd128a02-0c53-4665-af8b-3a9fe32cafea",
+            "columnKey" : "52c98",
+            "columnName" : "Column 4",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "6c745810-55be-4cd0-ac74-96a095cf4a22",
+            "columnKey" : "3042e",
+            "columnName" : "Column 5",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          }, {
+            "UUID" : "0fc297ff-a5a7-4e23-9a83-a8e085cc2b14",
+            "columnKey" : "cd0d8",
+            "columnName" : "Column 6",
+            "columnWidth" : "2",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "cda3979f-2e2f-4e8b-8656-e79491c7609d",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "backGroundBorderColor" : "white",
+            "backGroundColor" : "white",
+            "bottonTextHeight" : "150",
+            "cardHeight" : "125",
+            "fontSize" : "14",
+            "fontSizeHead" : "20",
+            "iconName" : "Target2",
+            "iconSize" : "5",
+            "text" : "0",
+            "textColor" : "white",
+            "textColorHead" : "white",
+            "textHead" : "0"
+          },
+          "componentName" : "c:miskiMayoReusableTileSecondVersion",
+          "id" : "ad1730c8-8bee-4f47-b408-e1a3e791f33b",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "add71cc1-d785-4fdf-8e0e-d1571fdd9811",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "f2a94493-b7af-4fea-b4dc-7e2c543687fe",
+        "regionLabel" : "Column 2",
+        "regionName" : "b8a53",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "eecc9816-3cd6-486a-9170-75f97cdf1c50",
+        "regionLabel" : "Column 3",
+        "regionName" : "20069",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "fd128a02-0c53-4665-af8b-3a9fe32cafea",
+        "regionLabel" : "Column 4",
+        "regionName" : "52c98",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "6c745810-55be-4cd0-ac74-96a095cf4a22",
+        "regionLabel" : "Column 5",
+        "regionName" : "3042e",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "0fc297ff-a5a7-4e23-9a83-a8e085cc2b14",
+        "regionLabel" : "Column 6",
+        "regionName" : "cd0d8",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 65,
+        "sectionConfig" : {
+          "UUID" : "6da703f2-e57b-47d9-a30c-e922a079dbbd",
+          "columns" : [ {
+            "UUID" : "a5086a16-708c-4862-8cae-a965b53d39c3",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "6da703f2-e57b-47d9-a30c-e922a079dbbd",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<h3><strong style=\"font-size: 36px;\">Objetivo:</strong></h3><p><br></p><p><span style=\"font-size: 22px;\">Este monitoreo tiene como objetivo:</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "e571127b-1a6a-4d97-90e6-03dc0d22d9e4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<div style=\"font-family: Arial, sans-serif; font-size: 16pt; line-height: 1.4; margin-top: 20px;\">\n  <div style=\"display: flex; align-items: flex-start; margin-bottom: 12px;\">\n    <span style=\"color: red; font-weight: bold; font-size: 18pt; margin-right: 10px;\">&#10148;</span>\n    <span>Determinar la calidad del Agua de mar y comparar los resultados con la Normativa Vigente (Estándar de Calidad Ambiental para Agua - DS N°004-2017-MINAM)</span>\n  </div>\n</div>"
+          },
+          "componentName" : "forceCommunity:htmlBlock",
+          "id" : "350085dc-86a7-47cc-8bbc-cbcbcfdcf0e0",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "richTextValue" : "<p><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">Nuestro monitoreo de calidad de agua superficial se realiza a 4 estaciones las cuales son monitoreadas en 3 niveles de profundidad (superficie, medio y fondo). Asimismo, este monitoreo se realiza de manera mensual.</span></p><p><br></p><p><strong style=\"color: rgb(72, 72, 72); font-size: 22px;\">Ubicación de estaciones:</strong><span style=\"color: rgb(72, 72, 72); font-size: 22px;\">&nbsp;AS-BA-10 (Corriente arriba del muelle de CMMM), AS-BA-20 (Corriente abajo de muelle), AS-BA-30 (Zona de cría de conchas de abanico), AS-BA-40 (Zona de cría de conchas de abanico).</span></p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "9d078f3e-2cca-4769-bc62-4233bb702f4e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "a5086a16-708c-4862-8cae-a965b53d39c3",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 90,
+        "sectionConfig" : {
+          "UUID" : "866dfaae-7862-4adc-954e-a9c92218dbf1",
+          "columns" : [ {
+            "UUID" : "9e757aca-783c-48a5-8403-fdad71e95744",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "866dfaae-7862-4adc-954e-a9c92218dbf1",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "imageEight" : "empty",
+            "imageFive" : "empty",
+            "imageFour" : "4",
+            "imageNine" : "empty",
+            "imageOne" : "1",
+            "imageSeven" : "empty",
+            "imageSix" : "empty",
+            "imageTen" : "empty",
+            "imageThree" : "3",
+            "imageTwo" : "2",
+            "pageName" : "pageP28"
+          },
+          "componentName" : "c:miskiMayoCustomCarouselWithoutZoom",
+          "id" : "372da867-ede4-49e3-800a-a7a52f7265f4",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "9e757aca-783c-48a5-8403-fdad71e95744",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b34b9baf-a58e-4083-9306-3830c8f87f80",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Monitoreo de calidad de agua de mar"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "665f05c0-8c12-451f-9716-86112afccaca",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "51427b75-ac53-4df5-a38d-a81bda6bbe98",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-monitoreo-de-calidad-de-agua-de-mar"
+}

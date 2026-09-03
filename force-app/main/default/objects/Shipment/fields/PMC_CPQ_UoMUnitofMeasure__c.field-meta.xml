@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_UoMUnitofMeasure__c</fullName>
+    <description>This field captures the uom of Measure.</description>
+    <inlineHelpText>Specify the unit in which the value of this field will be measured</inlineHelpText>
+    <label>UoM Unit of Measure</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PMC_SS_UnitOfMeasure</valueSetName>
+    </valueSet>
+</CustomField>

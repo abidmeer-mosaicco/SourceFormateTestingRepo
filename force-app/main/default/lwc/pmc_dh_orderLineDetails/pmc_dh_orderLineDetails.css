@@ -1,0 +1,381 @@
+:host {
+  --slds-g-color-border-base-1: var(--tertiary-green);
+}
+
+.navigation-flex {
+  justify-content: space-between;
+}
+
+.navigation-item span {
+  font-family: var(--medium-font);
+  font-size: var(--large-font-size);
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--dark-primary-green);
+  cursor: pointer;
+}
+
+.order-line-summary .card-body {
+  padding: 16px 16px 32px;
+}
+
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content-info,
+.badge-info,
+.mobile-button {
+  width: 11%;
+}
+
+.content-info.shipping-info {
+  width: 23%;
+}
+
+.mobile-button {
+  text-align: end;
+}
+
+.list-container .content-info.doc-download-section {
+  flex-direction: row;
+  width: 14%;
+  display: flex;
+    justify-content: space-between;
+    min-width: fit-content;
+}
+
+.content-info.doc-download-section c-pmc_dh_selection-picklist {
+  width: 100%;
+}
+
+.content-info.doc-download-section .download-icon {
+  align-self: center;
+  width: 32px;
+  height: 32px;
+}
+
+.download-icon img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.menu-wrapper {
+  height: 44px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  background: var(--tertiary-green);
+}
+
+.menu-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+  width: fit-content;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu .item {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px;
+  box-sizing: border-box;
+  color: var(--primary-green);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: var(--regular-font-size);
+  line-height: 19px;
+  font-family: var(--medium-font);
+}
+
+.menu .item[data-state="active"] {
+  background-color: var(--white);
+  border-bottom: 3px solid var(--primary-green);
+  pointer-events: none;
+}
+
+.menu-padding {
+  padding: 0 16px;
+}
+
+.arrow {
+  width: 1rem;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.left-arrow {
+  position: absolute;
+  left: 4.2%;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 4.2%;
+}
+
+.list-container {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(9, 53, 50, 0.1);
+  background: white;
+}
+
+.list-container .slds-grid {
+  padding: 16px;
+  column-gap: 20px;
+}
+
+.list-container .slds-grid:nth-child(3n + 0) {
+  border-bottom: none;
+}
+
+.list-container .content-info {
+  width: 9%;
+}
+
+.brazil-shipments .content-info,
+.brazil-shipments .badge-info {
+  width: 13%;
+}
+
+.vehicle-id,
+.vehicle-id a {
+  text-decoration: underline;
+  cursor: pointer;
+  word-break: break-all;
+  color: var(--dark-primary-green);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badge.badge-font {
+  font-family: var(--medium-font);
+  font-weight: 500;
+  text-align: center;
+}
+
+.in-progress.badge {
+  color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+.modal-cta {
+  justify-content: space-between;
+}
+
+.modal-cta .mobile-button {
+  width: 100%;
+}
+
+.modal-cta .mobile-button:first-child {
+  text-align: left;
+}
+
+.confirmation-msg {
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  line-height: 19px;
+  color: #000;
+}
+
+.badge-info {
+  justify-content: center;
+}
+
+.badge-alignment {
+  display: flex;
+  justify-content: end;
+}
+
+@media (max-width: 767px) {
+  .menu .item {
+    line-height: 24px;
+  }
+
+  .menu-wrapper {
+    margin-top: 0;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+
+  .lbl-field-value,
+  .lbl-field-name {
+    width: 50%;
+  }
+
+  .lbl-field-value {
+    text-align: right;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    min-width: 16px;
+  }
+
+  .left-arrow {
+    position: absolute;
+    left: 0;
+  }
+
+  .right-arrow {
+    position: absolute;
+    right: 0;
+  }
+
+  .badge-info {
+    padding: 16px 12px;
+    width: 100%;
+  }
+
+  .badge-info .lbl-field-value {
+    width: 100%;
+  }
+
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .content-info.shipping-info {
+    width: 100%;
+  }
+
+  .order-line-summary .card-body {
+    padding: 16px 16px;
+  }
+
+  .list-container {
+    margin-top: 16px;
+  }
+
+  .list-container .content-info {
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .list-container .lbl-field-value,
+  .list-container .lbl-field-name {
+    text-align: unset;
+    width: fit-content;
+  }
+
+  .list-container .lbl-field-name {
+    line-height: 17px;
+  }
+
+  .list-container .lbl-field-value {
+    font-family: var(--medium-font);
+    font-size: var(--regular-font-size);
+    line-height: 19px;
+    font-weight: 500;
+  }
+
+  .scrollable-container {
+    overflow-x: scroll;
+  }
+
+  .scrollable-content {
+    min-width: calc(91.6 / 100 * 1440px);
+    max-width: calc(91.6 / 100 * 1440px);
+    padding: 2px;
+  }
+
+  .list-container .badge-info {
+    width: fit-content;
+  }
+
+  .order-line-summary .slds-grid {
+    row-gap: 8px;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  .modal-cta {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mobile-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1739px) {
+  .order-line-summary .content-info {
+    width: 20%;
+  }
+
+  .order-line-summary .content-info.shipping-info,
+  .order-line-summary .badge-info {
+    width: 40% !important;
+    padding-top: 0;
+  }
+
+  .order-line-summary .mobile-button {
+    width: fit-content;
+  }
+
+  .scrollable-container {
+    overflow-x: scroll;
+  }
+
+  .scrollable-content {
+    min-width: calc(91.6 / 100 * 1740px);
+    max-width: calc(91.6 / 100 * 1740px);
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .order-line-summary .slds-grid {
+    row-gap: 16px;
+  }
+
+  .badge-info .badge,
+  .badge-info .lbl-field-value {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 1740px) {
+
+  .order-line-summary .content-info,
+  .order-line-summary .badge-info {
+    order: unset;
+  }
+}

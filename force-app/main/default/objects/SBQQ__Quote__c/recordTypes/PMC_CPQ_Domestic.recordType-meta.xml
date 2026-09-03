@@ -1,0 +1,3062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_CPQ_Domestic</fullName>
+    <active>false</active>
+    <compactLayoutAssignment>PMC_CPQ_Quote_Compact_Layout</compactLayoutAssignment>
+    <label>Domestic</label>
+    <picklistValues>
+        <picklist>ApprovalStatus__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Get_Prices_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CLM_CustomerSignatureStatus__c</picklist>
+        <values>
+            <fullName>Done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CLM_DeliveryType__c</picklist>
+        <values>
+            <fullName>Auto Acceptance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CLM_ResendContractDocument__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_CommercialTradingQuote__c</picklist>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trading Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ContractLanguage__c</picklist>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ContractStageName__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Signature</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ContractType__c</picklist>
+        <values>
+            <fullName>CCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priced</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_CropType__c</picklist>
+        <values>
+            <fullName>Alfalfa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artichoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beans Safrinha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cassava</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Castor bean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citrus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cocoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coconut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corn Safrinha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corn silage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corn-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cotton-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cucumber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eucalyptus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frijoles-Riego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fruits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Garlic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grape</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Millet silage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mulberry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Beef cattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Birds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Dairy cattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Other animals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Other industrial purposes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA-Pigs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Papaya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Bov%2E Cutting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Bov%2E Milk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Goats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Horses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture ILP%2FICLF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Seed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture Sheep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pasture silage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pastures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peanut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Persimmon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pineapple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potato-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pumpkin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rice-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safrinha Soybeans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soca Cane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sorghum silage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sorgo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sorgo Safrinha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soybeans-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Straw Pasture%2FAgriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strawberry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sugarcane-Plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunflower</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweet Potato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tomato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vegetable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vegetables-Irrigant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Watermelon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheat silage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheat-Irrigant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Currency__c</picklist>
+        <values>
+            <fullName>BRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>USD</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_CustomerAcceptanceMethod__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text%2FWhatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_DeliveryRegion__c</picklist>
+        <values>
+            <fullName>Alfenas MG06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Almirante Tamandaré PR50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alto Araguaia MT04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alto Parnaíba MA03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alvorada TO02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anápolis GO03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aparecida de Goiania GO06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Araguaina TO03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Araguari MG11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Araucária PR51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Araxá MG14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arraias TO01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Atibaia SP19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Açailândia MA02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baixa Grande do Ribeiro PI51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balsas MA04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barcarena PA01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barra do Garça MT51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barra dos Coqueiros SE01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barreiras BA50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barretos SP11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barueri SP20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Betim MG17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bom Jesus PI52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bom Jesus de Goiás GO01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Camaçari BA04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambé PR05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campinas SP26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Grande MS02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Limpo Paulista SP12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Novo do Parecis MT52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campo Verde MT53</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campos Lindos TO04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canarana MT54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Candeias BA02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canitar SP21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carmo do Rio Claro MG18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cascavel PR02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caseara TO05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catalão GO04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catanduva SP07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caxias MA05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerqueira Cesar SP22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chapadinha MA06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chapadão do Sul MS03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comodoro MT11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conceição do Araguaia PA03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conceição do Jacuipe BA05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confresa MT55</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congonhal MG07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Correntina BA51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cristalina GO08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cubatão SP05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curitiba PR01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deciolandia MT56</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diamantino MT57</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dourados MS01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feira de Santana BA03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formosa GO05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formosa do Rio Preto BA52</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaucha do Norte MT58</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goiatuba GO07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grajaú MA07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarantã do Norte MT05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guaxupé MG19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gurupi TO06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibatiba ES04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibaté SP13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ibiá MG12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Igarapava SP08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iguatama MG20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itacoatiara AM01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itapetininga SP14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itiquira MT06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itumbiara GO09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaboatão dos Guararapes PE01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaciara MT67</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jardinópolis SP15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jataí GO10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jataí GO11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jaú SP09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jundiaí SP16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lagoa da Confusão TO07</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laranjeiras SE02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limeira SP10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lucas do Rio Verde MT08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luis Eduardo Magalhães BA01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luz MG21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maceió AL00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machado MG22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manhuaçú MG03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martins Soares MG08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maruim SE03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matozinhos MG02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mogi das Cruzes SP23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova Mutum MT09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova Santa Rosa PI57</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova Xavantina MT59</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osasco SP51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ourinhos SP01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palmas TO08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palmeira Piaui PI53</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paragominas PA04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paranaguá PR03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paranatinga MT60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patos de Minas MG10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patrocínio MG13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paulínia SP02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pedro Afonso TO09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placas PA51</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ponta Grossa PR04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pouso Alegre MG15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poços de Caldas MG23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primavera Leste MT61</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Querência MT03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recife PE00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redenção PA05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riachão das Neves BA53</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rib Gonçalves PI54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ribeirão Cascalheira MT62</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ribeirão Preto SP17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rio Grande RS00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rio Verde GO02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rondonópolis MT01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosário do Catete SE00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santa Filomena PI55</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santarem PA02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santo Antonio do Leste MT66</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sapezal MT64</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serra ES01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serrana SP24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silvanópolis TO10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sinop MT10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sorriso MT02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sumaré SP03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suzano SP25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Desidério BA54</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Francisco do Sul SC00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Félix do Xingu PA06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Gabriel do Oeste MS04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Joaquim da Barra SP18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São José do Xingu MT63</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Luis MA01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>São Tiago MG24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tasso Fragoso MA08</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Três Corações MG04</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Três Pontas MG16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uberaba MG05</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uberlândia MG01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ubá MG25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruçui PI56</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Varginha MG09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viana ES02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vila Rica MT65</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vitória ES03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Água Boa MT50</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Destination__c</picklist>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guadeloupe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martinique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian Fed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Docusign__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Incoterms__c</picklist>
+        <values>
+            <fullName>CFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB%2FCIFADO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_IntegrationStatus__c</picklist>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Loadport__c</picklist>
+        <values>
+            <fullName>1 - Berth Bayovar%2C Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Berth Donaldsonville%2C LA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Berth Galveston%2C TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1- Berth Ras Al Khair %28RAK%29%2C KSA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-2 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-2 Berth Tampa%2C FL range %28including Port Manatee%29 and%2For 1 Berth Donaldsonville%2C LA at Sellers Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2-3 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3-4 Berth Tampa%2C FL range %28including Port Manatee%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carlsbad%2C New Mexico</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ModeOfTransportation__c</picklist>
+        <values>
+            <fullName>Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Transport  Req</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vessel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_PackType__c</picklist>
+        <values>
+            <fullName>Bulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_PackageType__c</picklist>
+        <values>
+            <fullName>1000 KG Bags</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25KG Bags</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50KG Bags</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bag ONE-Way-Liner Urea 99x99x1%2C40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bag One Way Liner 500kg Liner 90X</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BagOneWay 500Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BagOneWay 90x90x1%2C30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BagOneWay Liner 1%2C40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BagOneWayLiner 750kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Bag 1000 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Bag 1350 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big Bag 1500 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Big BagOneWay Liner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bombona 20 Litros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bombona 20L Paletizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Box 12 litters Palletized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Braided   Valved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk - Mosiac Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caixa 12 Litros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caixa 14 Litros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caixa 20 Litros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caixa 8 Litros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 25 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 25 Kg - Paletizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 30 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 30 Kg - Paletizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 50 Kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saco 50 Kg - Paletizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sifted Bulk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transp%2E Valved NPK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transp%2E Valved Urea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tranç%2E Nitrog%2E Laminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tranç%2E Urea Laminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trançada com Liner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_PriceBookType__c</picklist>
+        <values>
+            <fullName>Alternate 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alternate 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ALT 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ALT 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ALT 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ALT ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ESP 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ESP 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ESP 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT ESP ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT FUT 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT FUT 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT FUT 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT FUT ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT PRE 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT PRE 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT PRE 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FERT PRE ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ALT 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ALT 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ALT 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ALT ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ESP 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ESP 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ESP 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO ESP ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO FUT 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO FUT 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO FUT 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO FUT ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO PRE 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO PRE 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO PRE 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MBIO PRE ADD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Present</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_QuantityQuality__c</picklist>
+        <values>
+            <fullName>Draft survey %2F Hold Cleanliness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft survey %2F Hold Cleanliness %2F No Release</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft survey %2F No Hold Cleanliness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Draft survey %2F No Hold cleanliness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Railcar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_QuoteClassification__c</picklist>
+        <values>
+            <fullName>Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_QuoteRecordSubType__c</picklist>
+        <values>
+            <fullName>Feed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fertilizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_Region__c</picklist>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_RejectedReason__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price not appropriate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product not required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote does not meet the requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment Window not appropriate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_SalesAreaCombination__c</picklist>
+        <values>
+            <fullName>Comp%2E Minera Miski Mayo Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comp%2E Minera Miski Mayo Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comp%2E Minera Miski Mayo Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fospar SA Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fospar SA Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fospar SA Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos Ag Innovation Sol%2CLLC Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos Ag Innovation Sol%2CLLC Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos Ag Innovation Sol%2CLLC Sol Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos%2E Sulphur Partner Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos%2E Sulphur Partner Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mos%2E Sulphur Partner Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic CA Crop Nutrit%2C LP Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic CA Crop Nutrit%2C LP Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic CA Crop Nutrit%2C LP Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Canada ULC %28BP%29 Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Canada ULC %28BP%29 Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Canada ULC %28BP%29 Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Crop Nutrition LLC Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Crop Nutrition LLC Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Crop Nutrition LLC Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes Ltd%2E Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes Ltd%2E Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes Ltd%2E Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes P%26K Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes P%26K Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes P%26K Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes do B Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes do B Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizantes do B Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizer LLC Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizer LLC Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizer LLC Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28BJ%29 Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28BJ%29 Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28BJ%29 Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28HK%29 L Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28HK%29 L Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28HK%29 L Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28QHD%29 Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28QHD%29 Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28QHD%29 Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28YT%29 Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28YT%29 Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertilizers %28YT%29 Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertz Paraguay SRL Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertz Paraguay SRL Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Fertz Paraguay SRL Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Global Sales LLC Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Global Sales LLC Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Global Sales LLC Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic India Private Ltd%2E Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic India Private Ltd%2E Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic India Private Ltd%2E Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Carlsbad In Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Carlsbad In Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Carlsbad In Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Colonsay UL Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Colonsay UL Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Colonsay UL Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Esterhazy Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Esterhazy Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potash Esterhazy Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potássio Mineração Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potássio Mineração Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mosaic Potássio Mineração Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tampa Port Services%2C LLC Domestic Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tampa Port Services%2C LLC Export Common</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tampa Port Services%2C LLC Intercompany Common</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_SalesOffice__c</picklist>
+        <values>
+            <fullName>BR BA B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR Canais MT%C2%A0 B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR Espec Agricolas B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR Espec Industriais</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR FEED B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR FOSPAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR GO B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Mega Farmer B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Retail Norte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Retail Sul B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Trader GO%2BMT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Trader INT B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR KAM Trader MS B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MG Norte B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MG Sul B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MOS OPERAÇÕES B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MS B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MT Norte B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MT Oeste B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR MT SUL B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR Matopipa B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR PR%2FSC 1 B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR PR%2FSC 2 B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR Pastagem B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR RS B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR SP Norte B2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR%C2%A0 Fertilizer B2B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BR%C2%A0 Fertilizer B2B2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA All Canpotex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA All Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Bend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN East-B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Export</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN HB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN HLJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN HN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN JL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN JS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN LN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN LNWN-TSM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN MrM-LN01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN MrM-SD01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN MrM-SX01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN NM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN NW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Northeast B2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN SDW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Strategic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Tolling-N</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN Tolling-S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CN White potassium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HK All Fertilizers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Andhra Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Bihar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Chhattishgarh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Delhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Gujarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Haryana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Himachal Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Karnataka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Kerala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Madyapradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Maharashthra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Orrisa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Punjab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Rajasthan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Tamil Nadu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Telangana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN Uttar Pradesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IN West Bengal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iris Milane PY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE Intermediate Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PE Latam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US All Co-Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US All International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US All Raw Materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US All Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and CA All Feed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and CA All Industrial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and CA East Fertilizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US and CA West Fertilizer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vago PY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_ShippingType__c</picklist>
+        <values>
+            <fullName>100-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>105-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>110-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>112-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25-Car Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>33-Car Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-Car Block</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>64-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>85-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90-Car Unit Train</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backhaul Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bag Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barge - TSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Box Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container-Ocean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container-Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Container-Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Control Dump Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Covered Hopper Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cross Gulf Vessel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dump Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flatbed Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hopper Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inland Waterway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intermodal Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lake Vessel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than Truckload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ocean Vessel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Hopper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pneumatic Rail Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pneumatic Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Port Dump</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rail - TWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rake Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sulfur Barge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tank Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tank Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vessel -TSW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_CPQ_UnitOfMeasure__c</picklist>
+        <values>
+            <fullName>MTN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_DH_PaymentMethod__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boletos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PMC_DH_Summary_Reason__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__BillingFrequency__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semiannual</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__ContractingMethod__c</picklist>
+        <values>
+            <fullName>Single Contract</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__DeliveryMethod__c</picklist>
+        <values>
+            <fullName>Download</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__DocumentStatus__c</picklist>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__GenerateContractedPrice__c</picklist>
+        <values>
+            <fullName>Discount Schedule</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Generate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__OrderBy__c</picklist>
+        <values>
+            <fullName>ProductFamily%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QuantityBasedFormulaField%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__PaperSize__c</picklist>
+        <values>
+            <fullName>A4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__PaymentTerms__c</picklist>
+        <values>
+            <fullName>Confirmed L%2FC At Sight</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due 10th Of Following Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due 1st Of Following Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 10 Days From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 15 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 15 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 20 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30 Days - From Invoicing Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net 30 From First Day Next Month</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__ProrationDayOfMonth__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__QuoteLanguage__c</picklist>
+        <values>
+            <fullName>Chinese %28Simplified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Traditional%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finnish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norwegian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portuguese %28Brazilian%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish %28Mexican%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swedish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thai</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__Status__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SBQQ__Type__c</picklist>
+        <values>
+            <fullName>Amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Re-Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_SS_UOM__c</fullName>
+    <label>UOM</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Each</fullName>
+                <default>false</default>
+                <label>Each</label>
+            </value>
+            <value>
+                <fullName>Item</fullName>
+                <default>false</default>
+                <label>Item</label>
+            </value>
+            <value>
+                <fullName>MTN</fullName>
+                <default>false</default>
+                <label>MTN</label>
+            </value>
+            <value>
+                <fullName>STN</fullName>
+                <default>false</default>
+                <label>STN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

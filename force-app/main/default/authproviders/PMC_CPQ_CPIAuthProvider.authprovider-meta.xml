@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://development-s4hana-i2ijb4jk.authentication.us20.hana.ondemand.com/oauth/authorize</authorizeUrl>
+    <consumerKey>sb-9f2153f4-af5f-4716-a83e-75cd865284f7!b4025|it-rt-development-s4hana-i2ijb4jk!b34</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <friendlyName>CPI Auth Provider</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <isPkceEnabled>false</isPkceEnabled>
+    <providerType>OpenIdConnect</providerType>
+    <requireMfa>false</requireMfa>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>true</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://development-s4hana-i2ijb4jk.authentication.us20.hana.ondemand.com/oauth/token</tokenUrl>
+</AuthProvider>

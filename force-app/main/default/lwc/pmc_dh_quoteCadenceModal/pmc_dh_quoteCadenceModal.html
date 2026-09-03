@@ -1,0 +1,141 @@
+<template>
+    <c-pmc_dh_custom-modal open-modal={isModal} modal-heading="Cadence Suggestion" modal-width="1000px"
+        onclosemodalevent={closeModalHandler}>
+        <div class="modal-wrapper">
+            <div class="table-wrapper">
+                <table class="slds-table slds-m-vertical_medium">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th scope="col">
+                                <div></div>
+                            </th>
+                            <th scope="col">
+                                <div title={labels.pmc_homepage_product}>
+                                    {labels.pmc_homepage_product}
+                                </div>
+                            </th>
+                            <th scope="col">
+                                <div title={labels.pmc_quoteCheckoutFlow_deliveryMode}>
+                                    {labels.pmc_quoteCheckoutFlow_deliveryMode}
+                                </div>
+                            </th>
+                            <th scope="col" class="shipping-info">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipTo}>
+                                    {labels.pmc_quoteCheckoutFlow_shipTo}
+                                </div>
+                            </th>
+                            <th scope="col" class="shipping-info">
+                                <div title={labels.pmc_quoteCheckoutFlow_shipFrom}>
+                                    {labels.pmc_quoteCheckoutFlow_shipFrom}
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={array} for:item="data">
+                            <tr key={data}>
+                                <td scope="row" class="wrap-text">
+                                    <fieldset class="slds-form-element">
+                                        <div class="slds-form-element__control">
+                                            <span class="slds-radio">
+                                                <input type="radio" id={data.id} value={data.id} aria-label="quoteLineRadio" name="quoteLineRadio"
+                                                    data-quote-id={data.strQuoteId} checked={data.isRadioBtnChecked}
+                                                    onclick={handleClick} onchange={handleRadioOptionChange} />
+                                            </span>
+                                        </div>
+                                    </fieldset>
+
+                                </td>
+                                <td scope="row" class="wrap-text">
+                                    {data.strProduct}
+                                </td>
+                                <td scope="row" class="wrap-text">
+                                    {data.strDeliveryMode}
+                                </td>
+                                <td scope="row" class="wrap-text">
+                                    {data.strShipTo}
+                                </td>
+                                <td scope="row" class="wrap-text">
+                                    {data.strShipFrom}
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+
+            <template if:true={showQuantityFields}>
+                <div class="slds-grid slds-wrap info-section">
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_2-of-12">
+                        <div class="lbl-field-name">{labels.pmc_quoteCheckoutFlow_quantity}</div>
+                        <div class="lbl-field-value">{selectedQuoteLineObj.totalAvailableQty}</div>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12">
+                        <div class="lbl-field-name">{labels.pmc_contractDetails_validityPeriod}</div>
+                        <div class="lbl-field-value">{selectedQuoteLineObj.validityPeriod}</div>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_2-of-12">
+                        <div class="lbl-field-name">{labels.pmc_requestToDeliverShippingInformation_frequency}</div>
+                        <div class="lbl-field-value">Monthly</div>
+                    </div>
+                </div>
+                <div class="text-regular-small info-text">
+                    {labels.pmc_cadenceSuggestion_infoText}
+                </div>
+                <div class="monthly-quantity-section">
+                    <div class="slds-grid slds-wrap label-section">
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name requested-qty">{labels.pmc_requestToDeliver_qty}</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name period-contracted">Month</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name requested-qty">{labels.pmc_requestToDeliver_qty}</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name period-contracted">Month</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name requested-qty">{labels.pmc_requestToDeliver_qty}</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12">
+                            <div class="lbl-field-name period-contracted">Month</div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap input-section">
+                        <template for:each={selectedQuoteLineObj.lstQtyPeriod} for:item="lstItem" for:index="index">
+                            <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12" key={lstItem.id}>
+                                <c-pmc_dh_input-element type="text" text-label={labels.pmc_quoteCheckoutFlow_quantity}
+                                    data-id="intQuantity" data-index={index} parent-name="intQuantity"
+                                    default-value={lstItem.qty} oninputdatachange={handleDataChange} is-number>
+                                </c-pmc_dh_input-element>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 slds-medium-size_2-of-12" key={lstItem.id}>
+                                <div class="lbl-field-value">{lstItem.monthContracted}</div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <template if:true={warningMsg}>
+                    <div class="text-regular-small warning-msg">
+                        {warningMsg}
+                    </div>
+                </template>
+            </template>
+
+            <div class="slds-grid slds-wrap slds-m-top--none call-to-action">
+                <div class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_1 slds-order_2 mobile-button">
+                    <lightning-button variant="neutral" label={labels.pmc_addressDetails_cancel}
+                        title={labels.pmc_addressDetails_cancel} onclick={closeModalHandler}></lightning-button>
+                </div>
+                <div
+                    class="slds-medium-size_1-of-2 slds-size_1-of-1 slds-medium-order_2 slds-order_1 mobile-button button-style">
+                    <lightning-button variant="brand" label={labels.pmc_cadenceSuggestion_confirmCadenceSuggestion}
+                        disabled={isConfirmBtnDisabled} title={labels.pmc_cadenceSuggestion_confirmCadenceSuggestion}
+                        onclick={confirmBtnHandler}></lightning-button>
+                </div>
+            </div>
+        </div>
+    </c-pmc_dh_custom-modal>
+</template>

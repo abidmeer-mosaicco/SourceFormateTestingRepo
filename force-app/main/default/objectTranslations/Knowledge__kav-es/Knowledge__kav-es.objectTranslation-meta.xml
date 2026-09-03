@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Knowledge --></value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value><!-- Knowledge --></value>
+    </caseValues>
+    <gender><!-- Feminine --></gender>
+    <nameFieldLabel><!-- Knowledge Name --></nameFieldLabel>
+    <recordTypes>
+        <description>Respuestas rápidas a preguntas generales sobre el funcionamiento cotidiano.</description>
+        <label><!-- FAQ --></label>
+        <name>FAQ</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Documento técnico que informa a los usuarios sobre acontecimientos importantes (por ejemplo, problemas del sistema, periodos de inactividad previstos).</description>
+        <label>Boletín técnico/Aviso</label>
+        <name>PMC_SS_TechnicalBulletinNotice</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Documento para informar a los usuarios sobre los procesos dentro de la plataforma Salesforce.</description>
+        <label>Documento de formación</label>
+        <name>PMC_SS_TrainingDocument</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Documento para informar a los miembros del equipo de las actividades en curso antes de una excedencia.</description>
+        <label>Documento de transición</label>
+        <name>PMC_SS_TransitionDocument</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Puede utilizarse para crear y cargar guías de usuario en la base de datos de gestión de conocimientos, de modo que las partes interesadas puedan acceder a las guías de usuario cuando lo necesiten.</description>
+        <label>Guía del usuario</label>
+        <name>PMC_SS_UserGuide</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Procedimientos estándar relacionados con la gestión de pedidos y clientes.</description>
+        <label>Procedimiento</label>
+        <name>Procedure</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Indique el número de días que debe estar expuesto el boletín</errorMessage>
+        <name>PMC_SS_ValidateEndDateForBulletinNotice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>&quot;Introduzca un valor positivo para &quot;Número de días de visualización&quot;.&quot;</errorMessage>
+        <name>PMC_SS_ValidateNegativeNoOfDisplayDays</name>
+    </validationRules>
+</CustomObjectTranslation>

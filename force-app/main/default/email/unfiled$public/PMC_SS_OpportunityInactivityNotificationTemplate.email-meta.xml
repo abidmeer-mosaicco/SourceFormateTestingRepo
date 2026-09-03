@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification email for opportunity owners about no activity for past 5 days.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>PMC SS Opportunity Inactivity Notification Template</name>
+    <style>none</style>
+    <subject>Opportunity {!Opportunity.Name} has not had activities.</subject>
+    <textOnly>Hello {!Opportunity.OwnerFirstName},
+
+Your Opportunity {!Opportunity.Name} has not seen any activity in the last 5 days. Please review the opportunity to ensure that it does not lose momentum.
+
+Thank you, 
+Salesforce</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

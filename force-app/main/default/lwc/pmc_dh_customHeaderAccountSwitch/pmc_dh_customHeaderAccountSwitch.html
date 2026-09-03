@@ -1,0 +1,107 @@
+<template>
+    <template if:true={pageLodaed}>
+      <template if:true={isGuestUser}>
+        <div class="slds-grid slds-col slds-size_1-of-1 slds-grid_align-center">
+          <a href="/digitalhub/">
+            <img src={iconUrlObj.mosaicLogoUrl} alt="MOSAIC Logo" class="brand-logo" />
+          </a>
+        </div>
+      </template>
+      <template if:false={isGuestUser}>
+        <div class="slds-grid slds-gutters_direct slds-grid_vertical-align-center slds-show_large header-container">
+          <div class="slds-col slds-size_2-of-12 slds-grid slds-grid_align-spread">
+            <a href="/digitalhub/">
+              <img src={iconUrlObj.mosaicLogoUrl} alt="MOSAIC Logo" class="brand-logo" />
+            </a>
+          </div>
+          <div class="slds-col slds-size_4-of-12">
+            <c-pmc_dh_search-bar></c-pmc_dh_search-bar>
+          </div>
+          <div
+            class="slds-col slds-size_6-of-12 slds-grid slds-gutters_direct slds-grid_vertical-align-center slds-grid_align-end">
+            <!-- Nutrivantagens Buttons -->
+            <div class="slds-col slds-grid slds-grid_vertical-align-center slds-grid_align-center vantagens-wrapper"
+              tabindex="0" onclick={vantagensClickHandler}>
+              <svg width="16" height="16">
+                <image xlink:href={iconUrlObj.enrollToNutivanatgensUrl} src="MOSAIC Logo" width="16" height="16" />
+              </svg>
+              <lightning-formatted-text value="Enroll to Nutrivantagens"></lightning-formatted-text>
+            </div>
+            <!-- Language Dropdown -->
+            <div class="slds-col slds-grid slds-grid_vertical-align-center">
+              <c-pmc_dh_language-dropdown></c-pmc_dh_language-dropdown>
+            </div>
+            <!-- User Accounts Menu -->
+            <div class="slds-col slds-p-left_none">
+              <c-pmc_dh_account-details-menu user-account-options={headerDetails.myAccountNavItems}
+                user-data={headerDetails.userData}></c-pmc_dh_account-details-menu>
+            </div>
+            <div class="slds-col slds-grid slds-grid_vertical-align-center slds-p-horizontal_none">
+              <div class="header-icons slds-var-p-right_small">
+                <img src={iconUrlObj.notificationUrl} alt="Notification" tabindex="0" />
+              </div>
+              <div class="header-icons">
+                <img src={iconUrlObj.cartUrl} alt="Cart" tabindex="0" onclick={cartClickHandler} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <template if:true={showMiniCart}>
+          <c-pmc_dh_user-mini-cart-modal onclose={closeMiniCartHandler}></c-pmc_dh_user-mini-cart-modal>
+        </template>
+        <div class="slds-grid slds-wrap page-container slds-hide_large">
+          <div class="slds-col slds-grow-none">
+            <a href="/digitalhub/">
+              <img src={iconUrlObj.mosaicLogoUrl} alt="MOSAIC Logo" tabindex="0" class="brand-logo" />
+            </a>
+          </div>
+          <div class="slds-col slds-grow-none slds-col_bump-left slds-grid">
+            <div class="mobile-icon">
+              <img src={iconUrlObj.searchIconUrl} alt="search icon not found" class="clickable-icon"
+                onclick={notificationClickHandler} />
+            </div>
+            <div class="mobile-icon">
+              <img src={iconUrlObj.notificationUrl} alt="MOSAIC" class="clickable-icon" />
+            </div>
+            <div class="mobile-icon">
+              <img src={iconUrlObj.cartUrl} alt="MOSAIC6" class="clickable-icon" onclick={cartClickHandler} />
+            </div>
+            <div class="mobile-icon">
+              <img src={iconUrlObj.hamburgerUrl} alt="MOSAIC6" class="clickable-icon" onclick={hanburgerClickHandler} />
+            </div>
+          </div>
+          <div class="slds-col slds-size_12-of-12 search-bar-mobile slds-hide">
+            <c-pmc_dh_search-bar></c-pmc_dh_search-bar>
+          </div>
+        </div>
+        <div class="slds-grid slds-grid_align-center">
+          <nav class="mobile-nav slds-show_large">
+            <div class="vantagens-wrapper mosaic-width-fit-content mosaic-m-r-18p slds-hide_large"
+              onclick={vantagensClickHandler}>
+              <img src={iconUrlObj.enrollToNutivanatgensUrl} alt="MOSAIC Logo" />
+              <lightning-formatted-text value="Enroll to Nutrivantagens"></lightning-formatted-text>
+            </div>
+            <!-- <ul class="slds-grid mobile-menu-item">
+              <li for:each={mainMenuList} for:item="menu" key={menu} class="slds-col slds-var-p-around_small">
+                <a href="/" class="main-menu dxp-body" data-id={menu}>
+                  <span class="slds-assistive-text">Current Page:</span>
+                  <span class="slds-truncate" title="Home">{menu}</span>
+                </a>
+              </li>
+            </ul> -->
+            <c-pmc_dh_header-menu-items main-menu-list={headerDetails.navigationMenuItems}></c-pmc_dh_header-menu-items>
+            <div class="slds-hide_large">
+              <c-pmc_dh_account-details-menu user-account-options={headerDetails.myAccountNavItems}
+                user-data={headerDetails.userData}></c-pmc_dh_account-details-menu>
+              <lightning-combobox name="types" value={selectedLanguage} options={languageOptions}
+                onchange={languageChangeHandler}>
+              </lightning-combobox>
+            </div>
+          </nav>
+        </div>
+      </template>
+    </template>
+    <template if:true={isLoading}>
+      <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+    </template>
+  </template>

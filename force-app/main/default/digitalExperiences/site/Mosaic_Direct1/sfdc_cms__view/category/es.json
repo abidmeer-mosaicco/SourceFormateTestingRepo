@@ -1,0 +1,41 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Category",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "{!Search.Results.categoryName}"
+        },
+        "id" : "728904d0-e758-429d-b256-9d7f47d3b3a8"
+      }, {
+        "attributes" : {
+          "text" : "{!Search.Results.description}"
+        },
+        "id" : "0f96c374-bd1c-4747-833f-e2dd717d3a68"
+      }, {
+        "attributes" : {
+          "text" : "{!Label.B2B_Search_Results.sortBy}"
+        },
+        "id" : "fd02e73a-b886-453a-8b9b-01eef1c35d52"
+      }, {
+        "attributes" : {
+          "addToCartButtonProcessingText" : "Añadiendo..",
+          "addToCartButtonText" : "Agregar al carrito de cotizaciones",
+          "incrementValueGuideText" : "La cantidad de incremento es {0}",
+          "maximumValueGuideText" : "La cantidad máxima es {0}",
+          "minimumValueGuideText" : "La cantidad mínima es {0}",
+          "quantitySelectorLabel" : "CANTIDAD",
+          "viewOptionsButtonText" : "Ver opciones"
+        },
+        "id" : "90c2510d-35a8-4b38-a76f-b99132827260"
+      }, {
+        "attributes" : {
+          "pageTitle" : "{!Record._Object}: {!Record._Title}"
+        },
+        "id" : "7525e72e-dea4-402f-ac68-67781808f3fb"
+      } ]
+    }
+  },
+  "urlName" : "category"
+}

@@ -1,0 +1,94 @@
+.delivery-progress-bar{
+    display: flex;
+    justify-content: center;
+}
+li div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.status-icon {
+    position: relative;
+    top: 13.5px;
+    z-index: 2;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #646E6E;
+}
+
+.title[data-status="Completed"], .title[data-status="Active"] {
+    color: #1D625C;
+    font-weight: 400;
+}
+.status-text {
+    font-family: var(--medium-font);
+    font-weight: 500 !important;
+}
+
+hr.border {
+    border: 0;
+    border-bottom: 2px solid #1D625C;
+    margin: 0;
+    z-index: 1;
+}
+
+li:first-child hr.border {
+    position: relative;
+    left: 50%;
+}
+
+.del-prog-steps-list{
+    width: 60%;
+}
+.del-progress-step{
+    width: 20%;
+    word-break: break-word;
+}
+.delivery-progress-details-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 11px;
+}
+li:last-child hr.border{
+    position: relative;
+    right: 50%;
+    z-index: 0;
+}
+hr.border[data-status="Active"] {
+    right: 50%;
+}
+hr.border[data-status="Pending"] {
+    border-bottom: 2px solid #646E6E;
+    position: relative;
+    right: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .del-prog-steps-list{
+        width: 800px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .delivery-progress-bar{
+        justify-content: flex-start;
+        overflow-x: scroll;
+        padding-bottom: 12px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1023px){
+    .del-prog-steps-list{
+        width: 100%;
+    }
+}

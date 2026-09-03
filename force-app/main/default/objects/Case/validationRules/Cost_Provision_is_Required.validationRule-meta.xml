@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Provision_is_Required</fullName>
+    <active>true</active>
+    <description>Cost Provision is mandatory when opening/creating the Quality case.</description>
+    <errorConditionFormula>AND(
+   OR( ISNEW(),
+        ISPICKVAL(Status, &quot;New&quot;)),
+    RecordType.DeveloperName = &quot;Quality&quot;,
+    ISBLANK(PMC_SS_CostProvision__c)
+)</errorConditionFormula>
+    <errorDisplayField>PMC_SS_CostProvision__c</errorDisplayField>
+    <errorMessage>Cost Provision is mandatory when opening/creating the case</errorMessage>
+</ValidationRule>

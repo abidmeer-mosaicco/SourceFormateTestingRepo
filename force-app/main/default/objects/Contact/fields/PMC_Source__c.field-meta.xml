@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMC_Source__c</fullName>
+    <description>Origin / Source of creation of the contact</description>
+    <inlineHelpText>This field will track the source of creation 
+1. Use Case for DH - to track self registration requests</inlineHelpText>
+    <label>Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>true</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Digital Hub</fullName>
+                <default>false</default>
+                <label>Digital Hub</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

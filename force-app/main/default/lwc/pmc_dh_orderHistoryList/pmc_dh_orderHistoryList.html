@@ -1,0 +1,41 @@
+<template>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-1">
+      <ul class="order-menu slds-m-top_x-small">
+        <li class="menu-list con" data-id="Confirmed" onclick={tabChangeHandler}>
+          {labels.pmc_orderHistory_confirmed}
+        </li>
+        <li class="menu-list req" data-id="Requested" onclick={tabChangeHandler}>
+          {labels.pmc_orderHistory_requested}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <c-pmc_dh_search-filters search-input-label={labels.pmc_orderHistory_searchOrders} filters={filters} onsearchev={handleSearch}
+    onapplyfilterev={handleApplyFilter} onclearfilterev={clearFilters} onclearsearchinputsev={clearSearchInputs}>
+  </c-pmc_dh_search-filters>
+
+  <template if:true={pageLoaded}>
+    <template if:false={isResultSetEmpty}>
+      <c-pmc_dh_custom-datatable table-description={labels.pmc_orderHistory_orderHistory} columns={columns}
+        table-data={filteredData} default-sort-order={defaultSortOrder} ondynamiclinkclick={navigateToOrderDetails}>
+      </c-pmc_dh_custom-datatable>
+    </template>
+    <div lwc:if={isResultSetEmpty} class="no-results-msg">
+      {labels.pmc_orderHistory_noResultsMsg}
+    </div>
+  </template>
+
+  <template if:true={orderList.length}>
+    <div class="pagination slds-m-bottom_medium">
+      <c-pmc_dh_pagination generickey="id" genericdata={orderList} class="slds-table_striped"
+        no-of-records-per-page={recordsPerPage} button-limit="2" onpaginationchange={updatePaginatedData} modal-theme>
+      </c-pmc_dh_pagination>
+    </div>
+  </template>
+
+  <template if:true={isSpinner}>
+    <c-pmc_dh_spinner is-spinner></c-pmc_dh_spinner>
+  </template>
+</template>

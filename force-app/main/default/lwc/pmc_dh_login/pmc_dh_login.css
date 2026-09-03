@@ -1,0 +1,43 @@
+.login-widget {
+  width: 342px;
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .login-widget {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .align-center-mobile {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.form-error {
+  font-size: var(--x-small-font-size);
+  color: var(--dxp-g-destructive);
+}
+
+.title {
+  font-family: var(--bold-font);
+  font-size: var(--xx-large-font-size);
+  color: var(--dark-primary-green);
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.label.slds-form-element__label {
+  margin-bottom: 8px;
+}
+
+.account-info-text {
+  color: var(--dark-primary-green);
+  font-size: var(--x-small-font-size);
+  font-family: var(--medium-font) !important;
+  font-weight: 500 !important;
+}

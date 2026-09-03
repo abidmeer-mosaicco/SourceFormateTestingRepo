@@ -1,0 +1,500 @@
+.content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-grid {
+  display: flex;
+}
+
+.product-col {
+  min-width: 360px;
+  display: flex;
+  margin-bottom: 8px;
+  padding-right: 8px;
+}
+
+.product-image {
+  max-width: 104px;
+  height: 104px;
+  background-color: var(--tertiary-grey);
+}
+
+.product-image img {
+  max-width: 104px;
+  height: 104px;
+}
+
+.product-info {
+  padding-left: 16px;
+  padding-right: 8px;
+}
+
+.product-info .product-name {
+  margin-bottom: 3px;
+}
+
+.product-name a,
+.product-name a:link,
+.product-name a:visited {
+  text-decoration: none;
+}
+
+.product-section .product-content {
+  border-bottom: 1px solid var(--tertiary-green);
+  padding-top: 16px;
+}
+
+.product-section .product-content:first-child {
+  padding-top: 0;
+}
+
+.product-section .product-content:last-child {
+  border-bottom: none;
+}
+
+.product-section .card-body {
+  padding-bottom: 0;
+}
+
+.product-section.custom-card,
+.contract-info_section.custom-card {
+  margin-top: 0;
+}
+
+.product-table-wrapper {
+  display: flex;
+}
+
+.product-table-wrapper table.add-to-order{
+  max-width: fit-content;
+}
+
+.icon-wrapper img {
+  cursor: pointer;
+}
+
+.icon-wrapper img[data-active="false"] {
+  pointer-events: none;
+}
+
+td .icon-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+td .icon-wrapper img {
+  height: 32px;
+}
+
+.slds-table thead th {
+  background-color: var(--tertiary-green);
+  padding: 14.5px 10px;
+  color: var(--dark-primary-green);
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.slds-table thead tr {
+  background-color: var(--tertiary-green);
+}
+
+.slds-table tbody td {
+  padding: 14px 10px;
+  white-space: break-spaces;
+  vertical-align: top;
+  color: var(--dark-primary-green);
+}
+
+.slds-table tbody td.shipping-info {
+  min-width: 214.5px;
+  max-width: 214.5px;
+}
+
+.custom-card.payment-info-card {
+  position: relative;
+  z-index: 3;
+}
+
+.custom-card.product-info-card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-card.product-info-card .card-header a{
+  font-family: var(--regular-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #1D625C;
+  text-decoration: underline;
+}
+
+.custom-card.product-info-card,
+.custom-card.contracts-card {
+  position: relative;
+  z-index: 2;
+}
+
+.payment-info-card .btn-style,
+.product-section .btn-style {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-section {
+  border-top: 1px solid #d4dfde;
+}
+
+.product-section:first-child {
+  border-top: none;
+}
+
+.scrollable-wrapper-table {
+  overflow-x: scroll;
+  max-width: calc(91.6vw - 32px);
+}
+
+.button-section {
+  min-width: max-content;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: center;
+  gap: 8px;
+}
+
+.close-save-buttons {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+}
+
+.quote-origin-card .card-body {
+  padding-left: 16px;
+}
+
+.quote-origin-card .card-body a {
+  font-family: var(--medium-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #093532 !important;
+  text-decoration: underline;
+}
+
+.requote-modal-wrapper,
+.request-signature-modal-wrapper {
+  padding: 16px;
+}
+
+.added-to-cart-modal-wrapper {
+  padding: 32px;
+}
+
+.modal-message {
+  font-family: "Barlow-Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #093532;
+}
+
+.requote-button-style {
+  display: flex;
+  justify-content: end;
+}
+
+.added-to-cart-modal-call-to-action,
+.request-signature-modal-call-to-action {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.numeric-info {
+  word-break: break-word;
+}
+
+.dropdown-icon {
+  transform: rotate(270deg);
+  float: right;
+  padding: 0;
+  margin-top: 9px;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.dropdown-icon.down {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.doc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  word-break: break-word;
+  padding: 0 8px;
+}
+
+.download-icon {
+  text-align: right;
+}
+
+.download-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.doc-section {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 8px 32px;
+  margin-bottom: 16px;
+}
+
+.doc-section:last-child {
+  border-bottom: none;
+  padding-bottom: 16px;
+  margin-bottom: 0;
+}
+
+.signature-request-confirmed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contract-doc-section .custom-card .card-body {
+  overflow: auto;
+  min-height: 50px;
+  scrollbar-gutter: auto;
+}
+
+.contract-doc-section .custom-card .card-body:has(> :nth-child(4)) {
+  max-height: 261px;
+}
+
+.doc-name {
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: var(--medium-font);
+  font-size: var(--regular-font-size);
+  line-height: 19px;
+}
+
+::-webkit-scrollbar {
+  width: 42px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: var(--secondary-grey);
+  border-left: 16px solid rgba(0, 0, 0, 0);
+  border-right: 16px solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.text-na {
+  font-size: var(--small-font-size);
+}
+
+.quote-origin-card .card-body .quote {
+    font-family: var(--medium-font);
+    font-weight: 500;
+    font-size: var(--regular-font-size);
+    line-height: 19.2px;
+    color: var(--dark-primary-green) !important;
+}
+
+@media (max-width: 767px) {
+  .badge-info {
+    padding: 8px 16px;
+  }
+
+  .payment-info-card .btn-style {
+    margin-top: 16px;
+  }
+
+  .btn-style {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .scrollable-wrapper-table {
+    max-width: calc(100vw - 32px - 32px);
+    overflow-x: scroll;
+  }
+
+  .product-image {
+    display: none;
+  }
+
+  .product-grid {
+    flex-direction: column;
+  }
+
+  .product-col {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .product-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-grid .content-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+  }
+
+  .lbl-field-name {
+    width: 50%;
+    line-height: 17px;
+  }
+
+  .lbl-field-value {
+    font-size: var(--small-font-size);
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    line-height: 17px;
+    width: 50%;
+    text-align: right;
+  }
+
+  .badge-info .lbl-field-value {
+    width: unset;
+  }
+
+  .button-section {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: end;
+    padding-top: 8px;
+  }
+
+  .status-label {
+    display: none;
+  }
+
+  .added-to-cart-modal-call-to-action {
+    flex-direction: column;
+  }
+
+  .request-signature-modal-call-to-action {
+    flex-direction: column-reverse;
+  }
+
+  .quote-origin-card .card-body a,  .quote-origin-card .card-body .quote {
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+
+  .requote-button-style {
+    padding-bottom: 16px;
+  }
+
+  .doc-section {
+    padding-bottom: 16px;
+  }
+
+  .doc-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 16px;
+  }
+
+  .download-icon {
+    display: flex;
+    justify-content: end;
+  }
+
+  .contract-doc-section .custom-card .card-body:has(> :nth-child(4)) {
+    max-height: 413px;
+  }
+
+  .doc-name {
+    font-family: var(--semibold-font);
+    font-size: var(--small-font-size);
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1899px) {
+  .padding-right-none-medium {
+    padding-right: 0;
+  }
+
+  .quote-origin-section,
+  .contract-summary-section,
+  .contract-doc-section {
+    padding-right: 2px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .badge-info {
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .doc-section {
+    flex-direction: column;
+    row-gap: 16px;
+    padding-bottom: 16px;
+  }
+
+  .doc-info {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .doc-info .lbl-field-name,
+  .doc-info .lbl-field-value {
+    width: 50%;
+    font-size: var(--small-font-size);
+    line-height: 17px;
+  }
+
+  .doc-info .lbl-field-value {
+    font-family: var(--semibold-font);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .download-icon {
+    width: 100%;
+  }
+
+  .contract-doc-section .custom-card .card-body {
+    max-height: 486px;
+  }
+
+  .doc-name {
+    font-family: var(--semibold-font);
+    font-size: var(--small-font-size);
+    line-height: 20px;
+  }
+}

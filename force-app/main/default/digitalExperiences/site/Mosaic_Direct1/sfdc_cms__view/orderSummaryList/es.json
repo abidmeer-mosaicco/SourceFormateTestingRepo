@@ -1,0 +1,25 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Order Summary List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "attributes" : {
+          "text" : "Historial de pedidos"
+        },
+        "id" : "63edaa50-f4d9-480b-8c99-0a49a422b180"
+      }, {
+        "attributes" : {
+          "noOrderMessageText" : "Después de realizar un pedido, aparece aquí.",
+          "noResultsText" : "Para ver pedidos, ajuste sus filtros.",
+          "orderSummaryFieldMapping" : "[{\"entity\": \"OrderSummary\",\"name\": \"Id\",\"label\": \"Order Number\",\"type\": \"Lookup()\"},{\"entity\": \"OrderSummary\",\"name\": \"OrderedDate\",\"label\": \"Ordered Date\",\"type\": \"Date/Time\"},{\"entity\": \"OrderSummary\",\"name\": \"Status\",\"label\": \"Status\",\"type\": \"Picklist\"},{\"entity\": \"OrderSummary\",\"name\": \"GrandTotalAmount\",\"label\": \"Total\",\"type\": \"Formula (Currency)\"}]",
+          "reorderLabel" : "Iniciar reorden",
+          "showMoreLabel" : "Mostrar más",
+          "viewDetailsLinkLabel" : "Ver detalles"
+        },
+        "id" : "6ff145e4-8038-4ff1-8129-07d58c5a1a9a"
+      } ]
+    }
+  },
+  "urlName" : "order-summary-list"
+}

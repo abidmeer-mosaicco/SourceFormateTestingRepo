@@ -1,0 +1,26 @@
+.center {
+    margin: auto;
+    width: 50%;
+  }
+  .slds-modal__container {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 58rem;
+    min-width: 51rem;
+    min-height: 30rem; 
+    max-height: 90vh; 
+}
+.modalHeight{
+  height: 40rem;
+}
+
+.custom-input:hover {
+  cursor: default;
+}
+
+.truncate-text {
+    max-width: 183px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

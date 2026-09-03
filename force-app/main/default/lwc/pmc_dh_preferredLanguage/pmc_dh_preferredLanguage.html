@@ -1,0 +1,28 @@
+<template>
+  <div class="slds-medium-size_1-of-1 slds-size_1-of-1 login-info-container">
+    <div class="custom-card">
+      <div class="card-header">{labels.pmc_userDetails_language}</div>
+      <div class="card-body">
+        <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-size_1-of-1 content-info">
+            <div class="language-selector-container">
+              <div class="text-medium-normal pref-lan-head">{labels.pmc_userDetails_preferredLanguage}</div>
+              <div class="preferred-language-dropdown">
+                <c-pmc_dh_selection-picklist combobox-list-json={languageOptions} oninputdatachange={handleDataChange}
+                  default-value={selectedLanguageOption}>
+                </c-pmc_dh_selection-picklist>
+              </div>
+            </div>
+            <div class="info-text-container">
+              <img src={iconUrl} alt="More Information" class="info-icon">
+              <div class="text-regular-xsmall pref-lan-help">{labels.pmc_userDetails_preferredLanHelptext}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <template lwc:if={isSpinner}>
+    <c-pmc_dh_spinner is-spinner> </c-pmc_dh_spinner>
+  </template>
+</template>

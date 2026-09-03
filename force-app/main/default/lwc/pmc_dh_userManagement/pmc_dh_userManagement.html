@@ -1,0 +1,41 @@
+<template>
+    <div class="container">
+        <div class="slds-tabs_default slds-grid">
+            <div
+                class="showArrowSmall slds-col slds-align_absolute-center">
+                <lightning-button-icon icon-name="utility:chevronleft" alternative-text="Previous" size="small"
+                    disabled={bDisableBackBtn} onclick={scrollLeft}></lightning-button-icon>
+            </div>
+
+            <div class="fullWidth slds-col">
+                <ul class="slds-tabs_default__nav slds-list_horizontal" role="tablist">
+                    <li for:each={items} for:item="item" for:index="index" key={item.id} class="slds-tabs_default__item"
+                        data-state={item.state} data-id={item.id} data-value={item.value} role="presentation"
+                        onclick={handleItemClickEvent}>{item.label}</li>
+                </ul>
+            </div>
+
+            <div
+                class="showArrowSmall slds-align_absolute-center">
+                <lightning-button-icon icon-name="utility:chevronright" alternative-text="Next" size="small"
+                    disabled={bDisableNextBtn} onclick={scrollRight}></lightning-button-icon>
+            </div>
+        </div>
+        <div if:true={isMediumScreen}>Medium</div>
+        <div if:true={isSmallScreen}>Small</div>
+        
+        <div class="slds-tabs_default__content" role="tabpanel">
+            <template if:true={userManagementTabsHandler.accountDetails}>
+                <c-pmc_dh_account-detail>
+                </c-pmc_dh_account-detail>
+            </template>
+            <template if:true={userManagementTabsHandler.userDetails}>
+                second tab selected
+            </template>
+            <template if:true={userManagementTabsHandler.addresses}>
+                third tab selected
+            </template>
+        </div>
+
+    </div>
+</template>

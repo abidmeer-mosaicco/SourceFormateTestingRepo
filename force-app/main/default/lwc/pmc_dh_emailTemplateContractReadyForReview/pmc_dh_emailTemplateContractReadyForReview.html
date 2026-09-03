@@ -1,0 +1,211 @@
+<template>
+  <!-- Body -->
+  <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tbody>
+      <tr>
+        <td>
+          <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td width="40">&nbsp;</td>
+                <td>
+                  <table width="520" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td align="center" colspan="3">
+                          <table width="520" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td width="10">&nbsp;</td>
+                                <td width="500" align="center">
+                                  <p
+                                    style="margin:0;padding:0;font-size:40px;line-height:48px;color:#093532;font-weight:700;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                                    {labels.pmc_emailTemplate_contractReadyTitle}</p>
+                                </td>
+                                <td width="10">&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contractReadyBody}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16px">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contractInformation}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16px">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contractNumber} {contractNumber}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16px">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contractType} {contractType}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16px">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_companyName} {companyName}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center">
+                          <p
+                            style="margin:0;padding:0;font-size:18px;line-height:27px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contractViewText}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="40">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td width="40">&nbsp;</td>
+                <td>
+                  <table width="520" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td width="140">&nbsp;</td>
+                        <td width="240" height="43" align="center"
+                          style="margin:0;padding:0;font-size:14px;line-height:17px;color:#ffffff;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;background-color:#1D625C;display: block;text-align:center;border-radius:8px;">
+                          <a href={copyPasteLlink}
+                            style="width:240px;color:#ffffff;font-weight:600;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: none;padding:0;display:block;width: 240px;border-top: 12px solid #1d625c;border-bottom: 12px solid #1d625c;border-radius: 8px;">{labels.pmc_emailTemplate_viewContract}</a>
+                        </td>
+                        <td width="140">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="40">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td width="40">&nbsp;</td>
+                <td>
+                  <table width="520" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="1" style="border-top:1px solid #C8C8C8">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="28">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_copyPasteLink1}<br /> {labels.pmc_emailTemplate_copyPasteLink2}
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="14">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td><a href={copyPasteLlink}
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: underline;">{copyPasteLlink}</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="14">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_customerService1} <a href={labels.pmc_emailTemplate_contactUsLink}
+                              style="margin:0;padding:0;font-size:14px;line-height:17px;color:#1D625C;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;text-decoration: underline;">{labels.pmc_emailTemplate_customerService2}</a>
+                            {labels.pmc_emailTemplate_customerService3}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_sincerely}<br> {labels.pmc_emailTemplate_teamName}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="14">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p
+                            style="margin:0;padding:0;font-size:14px;line-height:17px;color:#093532;font-weight:500;font-family:Barlow,Helvetica,Arial,sans-serif;">
+                            {labels.pmc_emailTemplate_contactUsAt}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="40">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</template>
