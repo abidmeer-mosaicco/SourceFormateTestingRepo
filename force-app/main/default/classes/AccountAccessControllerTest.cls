@@ -14,7 +14,7 @@ private class AccountAccessControllerTest {
       return p[0].Id;
     return null; // fallback path if org doesn't have shareable licenses
   }
-
+  // please add comments
   private static Id getAnyCommunityProfileId() {
     List<Profile> p = [
       SELECT Id, Name, UserLicense.Name
