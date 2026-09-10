@@ -92,6 +92,8 @@ public without sharing class AccountAccessController {
     }
     return outp;
   }
+    //please add comments
+    //dev2sf
 
   @AuraEnabled(cacheable=true)
   public static Boolean canPlaceOrder() {
